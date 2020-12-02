@@ -173,7 +173,7 @@ def get_patches(site_names, site_coords, rect_width, image):
     """
     patch_dict = {}
     for name, site in zip(site_names, site_coords):
-        print("Processing", name)
+        print("Downloading", name)
         pool = ThreadPool(12)
         roi = create_rect(site[0], site[1], rect_width)
         images = {}
