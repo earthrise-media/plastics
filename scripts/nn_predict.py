@@ -1,15 +1,13 @@
 import argparse
 import os
-import pickle
 
 import matplotlib.pyplot as plt
 from matplotlib import animation
 import numpy as np
-import pandas as pd
 from sklearn.preprocessing import normalize
-from tqdm.notebook import tqdm
 from tensorflow import keras
 from tensorflow.keras import layers
+from tqdm import tqdm
 
 from get_s2_data_ee import get_history
 
@@ -55,7 +53,7 @@ def make_predictions(model_path, data, site_name, threshold):
     rgb_stack = []
     preds_stack = []
     threshold_stack = []
-
+    print("Making Predictions")
     for month in tqdm(list(test_image.keys())):
         test_pixel_vectors, width, height = get_pixel_vectors(test_image, month)
         if width > 0:
@@ -104,23 +102,22 @@ def make_predictions(model_path, data, site_name, threshold):
     plt.suptitle(title, y=1.01)
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, title + '.png'), bbox_inches='tight')
-    plt.show()
+    plt.close()
 
 
     fig, ax = plt.subplots(dpi=200, facecolor=(1,1,1), figsize=(4,4))
     ax.set_axis_off()
     clipped_img = np.moveaxis([channel * (preds_median > 0) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
     img = plt.imshow(clipped_img / (clipped_img.max()))
-    ax.set_title('Threshold 0')
+    ax.set_title('Threshold 0.00', size=10)
     plt.tight_layout()
-    plt.show()
 
     def animate(i):
         i /= 100
         clipped_img = np.moveaxis([channel * (preds_median > i) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
         img.set_data(clipped_img / (clipped_img.max()))
         #img.set_data((preds_stack > i) * 1)
-        ax.set_title(site_name + ' Threshold ' + str(i))
+        ax.set_title(f"{site_name} Threshold {i:.2f}", size=10)
         return img,
 
     ani = animation.FuncAnimation(fig, animate, frames=100, interval=60, blit=True, repeat_delay=500)
@@ -132,18 +129,19 @@ def make_predictions(model_path, data, site_name, threshold):
 
 def main():
     parser = argparse.ArgumentParser(description='Configure patch prediction')
-    parser.add_argument('--lat', type=float, required=True, help='Latitude of patch center')
-    parser.add_argument('--lon', type=float, required=True, help='Longitude of patch center')
+    parser.add_argument('--coords', nargs='+', required=True, type=float, help='Lat Lon of patch center')
     parser.add_argument('--width', type=float, required=False, default=0.002, help='Width of patch in degrees')
     parser.add_argument('--network', type=str, required=True, help='Path to neural network')
+    parser.add_argument('--threshold', type=float, required=False, default=0.95, help='Classifier masking threshold')
     args = parser.parse_args()
 
-    lat = args.lat
-    lon = args.lon
+    coords = args.coords
+    lat = coords[0]
+    lon = coords[1]
     width = args.width
     model_path = args.network
 
-    name = f"Predictions {lat:.2f}, {lon:.2f}, {width} patch"
+    name = f"{lat:.2f}, {lon:.2f}, {width} patch"
 
     patch_history = get_history(lon, lat, width, name)
     rgb_median, preds_median, threshold_median = make_predictions(model_path, patch_history, name, 0.95)
