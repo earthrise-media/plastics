@@ -11,8 +11,8 @@ import json
 import os
 
 
-input_dir = './fires'
-output_file = 'indonesia_fires.geojson'
+input_dir = './fires_v2'
+output_file = './fires_v2/bali_fires.geojson'
 
 input_files = glob.glob(os.path.join(input_dir, '*.json'))
 print('Found {} input files to process'.format(len(input_files)))
