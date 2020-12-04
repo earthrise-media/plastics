@@ -156,7 +156,6 @@ def create_rect(lon, lat, width):
 ## Get Sentinel Data
 def get_sentinel_band(site_name, roi, output_dict, image, band):
     band_img = image.select(band).clipToBoundsAndScale(roi, scale=10)
-    #band_img = image.select(band).clipToCollection(roi)
     image_array = geemap.ee_to_numpy(band_img, region=roi, default_value=-999)
     patch = np.squeeze(image_array)
     if patch.all() != None:
@@ -189,11 +188,53 @@ def get_patches(site_names, site_coords, rect_width, image):
         patch_dict[name] = images
     return patch_dict
 
-def get_history(lon, lat, width, name):
+def get_tpa_patches(site_names, polygons, image):
+    """
+    Multithreaded process to export Sentinel 2 patches as numpy arrays.
+    Input lists of site names and site coordinates along with an Earth Engine image.
+    Exports each band in image to a dictionary organized by [site name][band][band_img]
+    """
+    patch_dict = {}
+    for name, roi in zip(site_names, polygons):
+        print("Processing", name)
+        pool = ThreadPool(12)
+        images = {}
+        bands = list(band_descriptions.keys())
+        get_sentinel_partial = partial(get_sentinel_band,
+                                       name,
+                                       roi,
+                                       images,
+                                       image)
+        pool.map(get_sentinel_partial, bands)
+        pool.close()
+        pool.join()
+        patch_dict[name] = images
+    return patch_dict
+
+def get_history(coords, name, width):
     history = {}
     start = '2019-01-01'
     num_months = 22
-    roi = create_rect(lon, lat, width)
+    roi = create_rect(coords[0][0], coords[0][1], width)
+    date = ee.Date(start)
+    for month in tqdm(range(num_months)):
+        s2_data = get_s2_sr_cld_col(roi, date, date.advance(1, 'month'))
+        s2_sr_median = s2_data.map(add_cld_shdw_mask) \
+                                .map(apply_cld_shdw_mask) \
+                                .median()
+
+        patches = get_patches(name, coords, width, s2_sr_median)
+        date_text = str(datetime.fromtimestamp(date.getInfo()['value'] // 1000 + 86400).date())
+        history[date_text] = patches
+        date = date.advance(1, 'month')
+
+    return history
+
+def get_history_polygon(coords, name, polygons, width):
+    history = {}
+    start = '2019-01-01'
+    num_months = 22
+    roi = create_rect(coords[0][0], coords[0][1], width)
 
     date = ee.Date(start)
     for month in tqdm(range(num_months)):
@@ -202,27 +243,25 @@ def get_history(lon, lat, width, name):
                                 .map(apply_cld_shdw_mask) \
                                 .median() \
 
-        patches = get_patches([name], [[lon, lat]], width, s2_sr_median)
+        patches = get_tpa_patches(name, polygons, s2_sr_median)
         date_text = str(datetime.fromtimestamp(date.getInfo()['value'] // 1000 + 86400).date())
         history[date_text] = patches
         date = date.advance(1, 'month')
 
     return history
 
-
-
-
-def get_pixel_vectors(data_source):
+def get_pixel_vectors(data_source, month):
     pixel_vectors = []
+    width, height = 0, 0
     for site in data_source[list(data_source.keys())[0]]:
-        for month in data_source.keys():
-            if np.shape(data_source[month][site]['B2']) != (0,):
-                width, height = np.shape(data_source[month][site]['B2'])
+        if -999 not in data_source[month][site]['B2']:
+            bands = data_source[month][site]
+            if 0 not in [len(bands[band]) for band in bands]:
+                width, height = np.shape(bands['B2'])
                 for i in range(width):
                     for j in range(height):
                         pixel_vector = []
-                        for band in band_descriptions:
-                            pixel_vector.append(data_source[month][site][band][i][j])
-                        if -999 not in pixel_vector:
-                            pixel_vectors.append(pixel_vector)
-    return pixel_vectors
+                        for band_name in band_descriptions:
+                            pixel_vector.append(bands[band_name][i][j])
+                        pixel_vectors.append(pixel_vector)
+    return pixel_vectors, width, height

@@ -9,42 +9,8 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tqdm import tqdm
 
-from get_s2_data_ee import get_history
+from get_s2_data_ee import get_history, get_pixel_vectors
 
-# Sentinel 2 band descriptions
-band_descriptions = {
-    'B1': 'Aerosols, 442nm',
-    'B2': 'Blue, 492nm',
-    'B3': 'Green, 559nm',
-    'B4': 'Red, 665nm',
-    'B5': 'Red Edge 1, 704nm',
-    'B6': 'Red Edge 2, 739nm',
-    'B7': 'Red Edge 3, 779nm',
-    'B8': 'NIR, 833nm',
-    'B8A': 'Red Edge 4, 864nm',
-    'B9': 'Water Vapor, 943nm',
-    'B11': 'SWIR 1, 1610nm',
-    'B12': 'SWIR 2, 2186nm'
-}
-
-band_wavelengths = [442, 492, 559, 665, 704, 739, 779, 833, 864, 943, 1610, 2186]
-
-
-def get_pixel_vectors(data_source, month):
-    pixel_vectors = []
-    width, height = 0, 0
-    for site in data_source[list(data_source.keys())[0]]:
-        #for month in data_source.keys():
-        if -999 not in data_source[month][site]['B2']:
-            if len(np.shape(data_source[month][site]['B2'])) > 1:
-                width, height = np.shape(data_source[month][site]['B2'])
-                for i in range(width):
-                    for j in range(height):
-                        pixel_vector = []
-                        for band in band_descriptions:
-                            pixel_vector.append(data_source[month][site][band][i][j])
-                        pixel_vectors.append(pixel_vector)
-    return pixel_vectors, width, height
 
 def make_predictions(model_path, data, site_name, threshold):
     test_image = data
@@ -126,7 +92,6 @@ def make_predictions(model_path, data, site_name, threshold):
 
     return rgb_median, preds_median, threshold_median
 
-
 def main():
     parser = argparse.ArgumentParser(description='Configure patch prediction')
     parser.add_argument('--coords', nargs='+', required=True, type=float, help='Lat Lon of patch center')
@@ -136,15 +101,17 @@ def main():
     args = parser.parse_args()
 
     coords = args.coords
+    print(coords)
     lat = coords[0]
     lon = coords[1]
     width = args.width
     model_path = args.network
+    threshold = args.threshold
 
     name = f"{lat:.2f}, {lon:.2f}, {width} patch"
 
-    patch_history = get_history(lon, lat, width, name)
-    rgb_median, preds_median, threshold_median = make_predictions(model_path, patch_history, name, 0.95)
+    patch_history = get_history([[lon, lat]], [name], width)
+    rgb_median, preds_median, threshold_median = make_predictions(model_path, patch_history, name, threshold)
 
 if __name__ == '__main__':
     main()
