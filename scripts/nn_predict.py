@@ -96,10 +96,12 @@ def make_predictions(model_path, data, site_name, threshold):
 def main():
     parser = argparse.ArgumentParser(description='Configure patch prediction')
     parser.add_argument('--coords', nargs='+', required=True, type=float, help='Lat Lon of patch center')
-    parser.add_argument('--width', type=float, required=False, default=0.002, help='Width of patch in degrees')
+    parser.add_argument('--width', type=float, required=False, default=0.002, help='Width of patch in degrees. Max 0.03')
     parser.add_argument('--network', type=str, required=True, help='Path to neural network')
     parser.add_argument('--threshold', type=float, required=False, default=0.95, help='Classifier masking threshold')
     args = parser.parse_args()
+    if args.width and args.width > 0.03:
+        parser.error("Maximum patch width is 0.03")
 
     coords = args.coords
     print(coords)
