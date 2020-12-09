@@ -4,13 +4,14 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib import animation
 import numpy as np
-from sklearn.preprocessing import normalize
 from tensorflow import keras
 from tensorflow.keras import layers
 from tqdm import tqdm
 
 from get_s2_data_ee import get_history, get_pixel_vectors
 
+def normalize(x):
+    return (np.array(x) - 0) / (3000 - 0)
 
 def make_predictions(model_path, data, site_name, threshold):
     test_image = data
@@ -35,7 +36,7 @@ def make_predictions(model_path, data, site_name, threshold):
             preds_img = np.reshape(preds, (width, height, 2))[:,:,1]
             preds_stack.append(preds_img)
 
-            thresh_img = preds_img > threshold
+            thresh_img = preds_img >= threshold
             threshold_stack.append(thresh_img)
 
     output_dir = '../notebooks/figures/neural_network'
@@ -73,14 +74,14 @@ def make_predictions(model_path, data, site_name, threshold):
 
     fig, ax = plt.subplots(dpi=200, facecolor=(1,1,1), figsize=(4,4))
     ax.set_axis_off()
-    clipped_img = np.moveaxis([channel * (preds_median > 0) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
+    clipped_img = np.moveaxis([channel * (preds_median >= 0) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
     img = plt.imshow(clipped_img / (clipped_img.max()))
     ax.set_title('Threshold 0.00', size=10)
     plt.tight_layout()
 
     def animate(i):
         i /= 100
-        clipped_img = np.moveaxis([channel * (preds_median > i) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
+        clipped_img = np.moveaxis([channel * (preds_median >= i) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
         img.set_data(clipped_img / (clipped_img.max()))
         #img.set_data((preds_stack > i) * 1)
         ax.set_title(f"{site_name} Threshold {i:.2f}", size=10)

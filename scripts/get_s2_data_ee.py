@@ -211,17 +211,22 @@ def get_tpa_patches(site_names, polygons, image):
         patch_dict[name] = images
     return patch_dict
 
-def get_history(coords, name, width):
+def get_history(coords, name, width, num_months=22, cloud_mask=True):
     history = {}
     start = '2019-01-01'
-    num_months = 22
-    roi = create_rect(coords[0][0], coords[0][1], width)
+
+    # TODO: This ROI is only set by the first coordinate pair with a huge
+    # rect width. Would be great to find a bounding box around all coords.
+    roi = create_rect(coords[0][0], coords[0][1], 1.5)
     date = ee.Date(start)
     for month in tqdm(range(num_months)):
         s2_data = get_s2_sr_cld_col(roi, date, date.advance(1, 'month'))
-        s2_sr_median = s2_data.map(add_cld_shdw_mask) \
-                                .map(apply_cld_shdw_mask) \
-                                .median()
+        if cloud_mask:
+            s2_sr_median = s2_data.map(add_cld_shdw_mask) \
+                                    .map(apply_cld_shdw_mask) \
+                                    .median()
+        else:
+            s2_sr_median = s2_data.median()
 
         patches = get_patches(name, coords, width, s2_sr_median)
         date_text = str(datetime.fromtimestamp(date.getInfo()['value'] // 1000 + 86400).date())
@@ -230,18 +235,23 @@ def get_history(coords, name, width):
 
     return history
 
-def get_history_polygon(coords, name, polygons, width):
+def get_history_polygon(coords, name, polygons, width, num_months=22, cloud_mask=True):
     history = {}
     start = '2019-01-01'
     num_months = 22
-    roi = create_rect(coords[0][0], coords[0][1], width)
 
+    # TODO: This ROI is only set by the first coordinate pair with a huge
+    # rect width. Would be great to find a bounding box around all coords.
+    roi = create_rect(coords[0][0], coords[0][1], 1.5)
     date = ee.Date(start)
     for month in tqdm(range(num_months)):
         s2_data = get_s2_sr_cld_col(roi, date, date.advance(1, 'month'))
-        s2_sr_median = s2_data.map(add_cld_shdw_mask) \
-                                .map(apply_cld_shdw_mask) \
-                                .median() \
+        if cloud_mask:
+            s2_sr_median = s2_data.map(add_cld_shdw_mask) \
+                                    .map(apply_cld_shdw_mask) \
+                                    .median()
+        else:
+            s2_sr_median = s2_data.median()
 
         patches = get_tpa_patches(name, polygons, s2_sr_median)
         date_text = str(datetime.fromtimestamp(date.getInfo()['value'] // 1000 + 86400).date())
