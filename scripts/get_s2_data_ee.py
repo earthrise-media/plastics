@@ -37,7 +37,8 @@ CLD_PRB_THRESH = 60
 NIR_DRK_THRESH = 0.15
 CLD_PRJ_DIST = 1
 BUFFER = 50
-DATASET = 'COPERNICUS/S2_SR'
+#DATASET = 'COPERNICUS/S2_SR'
+DATASET = 'COPERNICUS/S2'
 
 def get_s2_sr_cld_col(aoi, start_date, end_date):
     """
@@ -46,7 +47,7 @@ def get_s2_sr_cld_col(aoi, start_date, end_date):
     Prefiltering percentage specified by global `CLOUD_FILTER` variable
     """
     # Import and filter S2 SR.
-    s2_sr_col = (ee.ImageCollection('COPERNICUS/S2_SR')
+    s2_sr_col = (ee.ImageCollection(DATASET)
         .filterBounds(aoi)
         .filterDate(start_date, end_date)
         .filter(ee.Filter.lte('CLOUDY_PIXEL_PERCENTAGE', CLOUD_FILTER)))
@@ -86,12 +87,19 @@ def add_shadow_bands(img):
     Cloud shadow thresholds are given by the global `NIR_DRK_THRESH` variable
     CK Note: I don't think this algorithm works over water
     """
+
+    SR_BAND_SCALE = 1e4
+    # CK Note: Removing the not_water condition
+    dark_pixels = img.select('B8').lt(NIR_DRK_THRESH*SR_BAND_SCALE).rename('dark_pixels')
+
     # Identify water pixels from the SCL band.
-    not_water = img.select('SCL').neq(6)
+    #not_water = img.select('SCL').neq(6)
 
     # Identify dark NIR pixels that are not water (potential cloud shadow pixels).
-    SR_BAND_SCALE = 1e4
-    dark_pixels = img.select('B8').lt(NIR_DRK_THRESH*SR_BAND_SCALE).multiply(not_water).rename('dark_pixels')
+
+    #dark_pixels = img.select('B8').lt(NIR_DRK_THRESH*SR_BAND_SCALE).multiply(not_water).rename('dark_pixels')
+
+
 
     # Determine the direction to project cloud shadow from clouds (assumes UTM projection).
     shadow_azimuth = ee.Number(90).subtract(ee.Number(img.get('MEAN_SOLAR_AZIMUTH_ANGLE')));
