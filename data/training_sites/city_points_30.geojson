@@ -1,0 +1,625 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.6198374623975,
+                    -8.361931821454325,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_0",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.2189915773064,
+                    -8.682542635447703,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_1",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.1520991337562,
+                    -8.803351890677076,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_2",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.4482234100242,
+                    -8.676354239123828,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_3",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.5521252514949,
+                    -8.674258048038155,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_4",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.4014090306085,
+                    -8.538239298420237,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_5",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.6121104672279,
+                    -8.445371131588061,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_6",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.3135580204482,
+                    -8.116868687570463,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_7",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.3385706999214,
+                    -8.125140997178228,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_8",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.0848213371847,
+                    -8.116446736800448,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_9",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.5665995191842,
+                    -8.479447188444803,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_10",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.2707743662475,
+                    -8.524372886001233,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_11",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.3212257237299,
+                    -8.543492283694,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_12",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.8212475611857,
+                    -8.419915648919948,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_13",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5b4ed8d0",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin0",
+                    "highlight": "#s_ylw-pushpin_hl0"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.1767886402291,
+                    -8.715171414596252,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_14",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.2334271648384,
+                    -8.651256172192152,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_15",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.1900520144473,
+                    -8.65726873625555,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_16",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.1971544630127,
+                    -8.625681886747383,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_17",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.2619593649867,
+                    -8.6305297409806,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_18",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.2377722194267,
+                    -8.693875555404086,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_19",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.1963677192289,
+                    -8.821411623234093,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_20",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.124251585013,
+                    -8.831537261804662,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_21",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.3562945056779,
+                    -8.452360524836058,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_22",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.5887361455227,
+                    -8.396892858569597,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_23",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9172424766782,
+                    -8.41924192845626,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_24",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.370932273082,
+                    -8.212168765884828,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_25",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.3835927879713,
+                    -8.231051158486935,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_26",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.4355152457932,
+                    -8.171251579503354,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_27",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.151088313608,
+                    -8.248838505575904,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_28",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.3355845961484,
+                    -8.439057457803544,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_29",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.9341531760663,
+                    -8.193097409513378,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "city_30",
+                "styleUrl": "#m_ylw-pushpin0",
+                "styleHash": "22fec70a",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        }
+    ]
+}
