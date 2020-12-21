@@ -245,8 +245,7 @@ def get_history(coords, name, width, num_months=22, cloud_mask=True):
 
 def get_history_polygon(coords, name, polygons, width, num_months=22, cloud_mask=True):
     history = {}
-    start = '2019-01-01'
-    num_months = 22
+    start = '2015-09-01'
 
     # TODO: This ROI is only set by the first coordinate pair with a huge
     # rect width. Would be great to find a bounding box around all coords.
