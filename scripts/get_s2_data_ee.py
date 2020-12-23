@@ -219,14 +219,13 @@ def get_tpa_patches(site_names, polygons, image):
         patch_dict[name] = images
     return patch_dict
 
-def get_history(coords, name, width, num_months=22, cloud_mask=True):
+def get_history(coords, name, width, num_months=22, start_date='2019-01-01', cloud_mask=True):
     history = {}
-    start = '2019-01-01'
 
     # TODO: This ROI is only set by the first coordinate pair with a huge
     # rect width. Would be great to find a bounding box around all coords.
     roi = create_rect(coords[0][0], coords[0][1], 1.5)
-    date = ee.Date(start)
+    date = ee.Date(start_date)
     for month in tqdm(range(num_months)):
         s2_data = get_s2_sr_cld_col(roi, date, date.advance(1, 'month'))
         if cloud_mask:
