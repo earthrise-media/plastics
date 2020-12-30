@@ -33,7 +33,7 @@ band_wavelengths = [442, 492, 559, 665, 704, 739, 779, 833, 864, 943, 1610, 2186
 ## S2 Cloud Filtering Functions
 
 CLOUD_FILTER = 30
-CLD_PRB_THRESH = 60
+CLD_PRB_THRESH = 30
 NIR_DRK_THRESH = 0.15
 CLD_PRJ_DIST = 1
 BUFFER = 50
