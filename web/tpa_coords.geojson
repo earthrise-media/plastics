@@ -1,0 +1,94 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.459414, -8.670958]
+    },
+    "properties": {
+      "name": "TPA Jungut Batu"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.498017, -8.67993]
+    },
+    "properties": {
+      "name": "TPA Biaung"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.45446, -8.530372]
+    },
+    "properties": {
+      "name": "TPA Sente"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.367927, -8.353542]
+    },
+    "properties": {
+      "name": "TPA Regional Bangli"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [114.583295, -8.327938]
+    },
+    "properties": {
+      "name": "TPA Peh"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.350242, -8.562121]
+    },
+    "properties": {
+      "name": "TPA Temesi"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.170153, -8.091409]
+    },
+    "properties": {
+      "name": "TPA Bengkala"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.564212, -8.403448]
+    },
+    "properties": {
+      "name": "TPA Bebandem"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.095133, -8.529953]
+    },
+    "properties": {
+      "name": "TPA Mandung"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [115.221107, -8.720775]
+    },
+    "properties": {
+      "name": "TPA Regional Suwung"
+    }
+  }]
+}
