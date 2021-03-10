@@ -1,3 +1,6 @@
 .ipynb_checkpoints
 .DS_Store
 notebooks/figures/*
+data/training_data/*
+data/model_outputs/heatmaps
+*.pyc

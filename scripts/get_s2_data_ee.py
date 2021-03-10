@@ -162,8 +162,8 @@ def create_rect(lon, lat, width):
     return rect
 
 ## Get Sentinel Data
-def get_sentinel_band(site_name, roi, output_dict, image, band):
-    band_img = image.select(band).clipToBoundsAndScale(roi, scale=10)
+def get_sentinel_band(site_name, roi, output_dict, image, scale, band):
+    band_img = image.select(band).clipToBoundsAndScale(roi, scale=scale)
     image_array = geemap.ee_to_numpy(band_img, region=roi, default_value=-999)
     patch = np.squeeze(image_array)
     if patch.all() != None:
@@ -172,7 +172,7 @@ def get_sentinel_band(site_name, roi, output_dict, image, band):
         output_dict[band] = []
     return patch
 
-def get_patches(site_names, site_coords, rect_width, image):
+def get_patches(site_names, site_coords, rect_width, image, scale):
     """
     Multithreaded process to export Sentinel 2 patches as numpy arrays.
     Input lists of site names and site coordinates along with an Earth Engine image.
@@ -189,7 +189,8 @@ def get_patches(site_names, site_coords, rect_width, image):
                                        name,
                                        roi,
                                        images,
-                                       image)
+                                       image,
+                                       scale)
         pool.map(get_sentinel_partial, bands)
         pool.close()
         pool.join()
@@ -219,12 +220,15 @@ def get_tpa_patches(site_names, polygons, image):
         patch_dict[name] = images
     return patch_dict
 
-def get_history(coords, name, width, num_months=22, start_date='2019-01-01', cloud_mask=True):
+def get_history(coords, name, width, num_months=22, start_date='2019-01-01', cloud_mask=True, scale=10):
     history = {}
 
     # TODO: This ROI is only set by the first coordinate pair with a huge
     # rect width. Would be great to find a bounding box around all coords.
-    roi = create_rect(coords[0][0], coords[0][1], 1.5)
+    lons = [coord[0] for coord in coords]
+    lats = [coord[1] for coord in coords]
+    roi = ee.Geometry.Rectangle((np.min(lons), np.min(lats), np.max(lons), np.max(lats)))
+    #roi = create_rect(np.mean([coord[0] for coord in coords]), np.mean([coord[1] for coord in coords]), 6.5)
     date = ee.Date(start_date)
     for month in tqdm(range(num_months)):
         s2_data = get_s2_sr_cld_col(roi, date, date.advance(1, 'month'))
@@ -235,21 +239,20 @@ def get_history(coords, name, width, num_months=22, start_date='2019-01-01', clo
         else:
             s2_sr_median = s2_data.median()
 
-        patches = get_patches(name, coords, width, s2_sr_median)
+        patches = get_patches(name, coords, width, s2_sr_median, scale)
         date_text = str(datetime.fromtimestamp(date.getInfo()['value'] // 1000 + 86400).date())
         history[date_text] = patches
         date = date.advance(1, 'month')
 
     return history
 
-def get_history_polygon(coords, name, polygons, width, num_months=22, cloud_mask=True):
+def get_history_polygon(coords, name, polygons, width, num_months=22, start_date='2019-01-01', cloud_mask=True):
     history = {}
-    start = '2015-09-01'
 
     # TODO: This ROI is only set by the first coordinate pair with a huge
     # rect width. Would be great to find a bounding box around all coords.
-    roi = create_rect(coords[0][0], coords[0][1], 1.5)
-    date = ee.Date(start)
+    roi = create_rect(coords[0][0], coords[0][1], 5.5)
+    date = ee.Date(start_date)
     for month in tqdm(range(num_months)):
         s2_data = get_s2_sr_cld_col(roi, date, date.advance(1, 'month'))
         if cloud_mask:
