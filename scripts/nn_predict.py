@@ -13,6 +13,11 @@ from get_s2_data_ee import get_history, get_pixel_vectors
 def normalize(x):
     return (np.array(x) - 0) / (3000 - 0)
 
+def stretch_histogram(array, min_val=0.1, max_val=0.75, gamma=1.2):
+    clipped = np.clip(array, min_val, max_val)
+    stretched = (clipped - min_val) / (max_val - min_val) ** gamma
+    return stretched
+
 def make_predictions(model_path, data, site_name, threshold):
     test_image = data
     model = keras.models.load_model(model_path)
@@ -48,10 +53,10 @@ def make_predictions(model_path, data, site_name, threshold):
     preds_median = np.median(preds_stack, axis=0)
     threshold_median = np.median(threshold_stack, axis=0)
 
-    plt.figure(dpi=150, facecolor=(1,1,1), figsize=(15,5))
+    plt.figure(dpi=150, figsize=(15,5))
 
     plt.subplot(1,3,1)
-    plt.imshow(rgb_median / np.max(rgb_median))
+    plt.imshow(stretch_histogram(rgb_median))
     plt.title(f'{site_name} Median', size=8)
     plt.axis('off')
 
@@ -75,14 +80,14 @@ def make_predictions(model_path, data, site_name, threshold):
     fig, ax = plt.subplots(dpi=200, facecolor=(1,1,1), figsize=(4,4))
     ax.set_axis_off()
     clipped_img = np.moveaxis([channel * (preds_median >= 0) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
-    img = plt.imshow(clipped_img / (clipped_img.max()))
+    img = plt.imshow(np.clip(stretch_histogram(clipped_img), 0, 1))
     ax.set_title('Threshold 0.00', size=10)
     plt.tight_layout()
 
     def animate(i):
         i /= 100
         clipped_img = np.moveaxis([channel * (preds_median >= i) for channel in np.moveaxis(rgb_median, -1, 0)], 0, -1)
-        img.set_data(clipped_img / (clipped_img.max()))
+        img.set_data(np.clip(stretch_histogram(clipped_img), 0, 1))
         #img.set_data((preds_stack > i) * 1)
         ax.set_title(f"{site_name} Threshold {i:.2f}", size=10)
         return img,
