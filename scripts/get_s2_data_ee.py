@@ -197,7 +197,7 @@ def get_patches(site_names, site_coords, rect_width, image, scale):
         patch_dict[name] = images
     return patch_dict
 
-def get_tpa_patches(site_names, polygons, image):
+def get_tpa_patches(site_names, polygons, image, scale):
     """
     Multithreaded process to export Sentinel 2 patches as numpy arrays.
     Input lists of site names and site coordinates along with an Earth Engine image.
@@ -213,7 +213,8 @@ def get_tpa_patches(site_names, polygons, image):
                                        name,
                                        roi,
                                        images,
-                                       image)
+                                       image,
+                                       scale)
         pool.map(get_sentinel_partial, bands)
         pool.close()
         pool.join()
@@ -246,7 +247,7 @@ def get_history(coords, name, width, num_months=22, start_date='2019-01-01', clo
 
     return history
 
-def get_history_polygon(coords, name, polygons, width, num_months=22, start_date='2019-01-01', cloud_mask=True):
+def get_history_polygon(coords, name, polygons, width, num_months=22, start_date='2019-01-01', cloud_mask=True, scale=10):
     history = {}
 
     # TODO: This ROI is only set by the first coordinate pair with a huge
@@ -262,7 +263,7 @@ def get_history_polygon(coords, name, polygons, width, num_months=22, start_date
         else:
             s2_sr_median = s2_data.median()
 
-        patches = get_tpa_patches(name, polygons, s2_sr_median)
+        patches = get_tpa_patches(name, polygons, s2_sr_median, scale)
         date_text = str(datetime.fromtimestamp(date.getInfo()['value'] // 1000 + 86400).date())
         history[date_text] = patches
         date = date.advance(1, 'month')
