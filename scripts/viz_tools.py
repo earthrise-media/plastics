@@ -1,0 +1,131 @@
+import os
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from sklearn.manifold import TSNE
+
+# Sentinel 2 band descriptions
+band_descriptions = {
+    'B1': 'Aerosols, 442nm',
+    'B2': 'Blue, 492nm',
+    'B3': 'Green, 559nm',
+    'B4': 'Red, 665nm',
+    'B5': 'Red Edge 1, 704nm',
+    'B6': 'Red Edge 2, 739nm',
+    'B7': 'Red Edge 3, 779nm',
+    'B8': 'NIR, 833nm',
+    'B8A': 'Red Edge 4, 864nm',
+    'B9': 'Water Vapor, 943nm',
+    'B11': 'SWIR 1, 1610nm',
+    'B12': 'SWIR 2, 2186nm'
+}
+
+def stretch_histogram(array, min_val=0.1, max_val=0.75, gamma=1.2):
+    clipped = np.clip(array, min_val, max_val)
+    stretched = np.clip((clipped - min_val) / (max_val - min_val) ** gamma, 0, 1)
+    return stretched
+
+def create_rgb(img_array):
+    """
+    Create three-channel RGB images for visualization from an image stack
+    """
+    rgb_img = []
+    for img in img_array:
+        rgb = np.stack((img[:,:,3],
+                        img[:,:,2],
+                        img[:,:,1]), axis=-1)
+        rgb = stretch_histogram(normalize(rgb), 0.1, 1.0, gamma=1.2)
+        rgb_img.append(rgb)
+    return rgb_img
+
+def plot_similar_images(img_stack, title, save=True):
+    reducer = TSNE(n_components=1)
+    reduced = reducer.fit_transform(normalize(create_img_vectors(img_stack)))
+    input_img = create_rgb(img_stack)
+    num_img = int(np.ceil(np.sqrt(len(input_img))))
+
+    plt.figure(figsize=(num_img, num_img), dpi=100)
+    for img_index, sort_index in enumerate(reduced[:,0].argsort()):
+        plt.subplot(num_img, num_img, img_index + 1)
+        plt.imshow(input_img[sort_index])
+        plt.axis('off')
+    plt.tight_layout()
+    plt.suptitle(title, size = num_img * 12 / 7, y=1.02)
+    if save:
+        plt.savefig('../figures/' + title + ' Similarity.png', bbox_inches='tight')
+    plt.show()
+
+def create_img_stack_mean(patch_history):
+    """
+    Process a dictionary of patches into single images with cloudiness below a threshold and
+    averaged across all time periods in the dataset
+    """
+    mean_stack = []
+    dates = list(patch_history.keys())
+    for site in patch_history[dates[0]]:
+        img_stack = []
+        for date in dates:
+            spectral_stack = []
+            band_shapes = [np.shape(patch_history[date][site][band])[0] for band in band_descriptions]
+            if np.array(band_shapes).all() > 0:
+                for band in band_descriptions:
+                    spectral_stack.append(patch_history[date][site][band])
+                img_stack.append(np.rollaxis(np.array(spectral_stack), 0, 3))
+        min_dim = np.min(np.shape(img_stack)[1:3])
+        img_stack = np.array(img_stack)[:, :min_dim, :min_dim, :]
+
+        masked_img = []
+        for img in img_stack:
+            masked_img.append(np.ma.masked_where(img < 0, img))
+
+        masked_mean = np.ma.mean(masked_img, axis=0)
+
+        num_cloudy_pixels = np.sum(masked_mean.mask)
+        cloud_fraction = num_cloudy_pixels / np.size(masked_mean)
+        if cloud_fraction < 0.2:
+            mean_stack.append(masked_mean.data)
+    return np.array(mean_stack)
+
+def plot_image_grid(rgb_img, file_path=None):
+    num_img = int(np.ceil(np.sqrt(len(rgb_img))))
+    plt.figure(figsize=(num_img,num_img), dpi=100)
+    for index, img in enumerate(rgb_img):
+        plt.subplot(num_img, num_img, index + 1)
+        plt.imshow(img)
+        plt.axis('off')
+    plt.tight_layout()
+    if file_path:
+        title = os.path.basename(file_path[:-4])
+        plt.suptitle(title, size = num_img * 12 / 7, y=1.02)
+        plt.savefig(file_path, bbox_inches='tight')
+    plt.show()
+
+def visualize_history(patch_history, file_path=None):
+    img_stack = create_img_stack_mean(patch_history)
+    rgb_img = create_rgb(img_stack)
+    plot_image_grid(rgb_img, file_path)
+
+def normalize(x):
+    return (np.array(x)) / (3000)
+
+def animate_patch_history(data, file_path):
+    """
+    Used for visualization and debugging. Takes a history dictionary and outputs a video
+    for each timestep at each site in the history.
+    """
+    fig, ax = plt.subplots(dpi=100, facecolor=(1,1,1))
+    ax.set_axis_off()
+    images = []
+    init_date = list(data.keys())[0]
+    for site_name in data[init_date]:
+        for date in data.keys():
+            ax.set_title(os.path.basename(file_path)[:-4])
+            hyperpatch = data[date][site_name]
+            rgb = np.stack((hyperpatch['B4'], hyperpatch['B3'], hyperpatch['B2']), axis=-1)
+            if len(rgb) > 0:
+                im = plt.imshow(np.clip(rgb / 2000, 0, 1), animated=True)
+                images.append([im])
+    fig.tight_layout()
+    ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
+    ani.save(file_path)
