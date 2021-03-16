@@ -109,7 +109,7 @@ def visualize_history(patch_history, file_path=None):
 def normalize(x):
     return (np.array(x)) / (3000)
 
-def animate_patch_history(data, file_path):
+def animate_patch_history(data, file_path, max_cloud=1):
     """
     Used for visualization and debugging. Takes a history dictionary and outputs a video
     for each timestep at each site in the history.
@@ -124,8 +124,10 @@ def animate_patch_history(data, file_path):
             hyperpatch = data[date][site_name]
             rgb = np.stack((hyperpatch['B4'], hyperpatch['B3'], hyperpatch['B2']), axis=-1)
             if len(rgb) > 0:
-                im = plt.imshow(np.clip(rgb / 2000, 0, 1), animated=True)
-                images.append([im])
+                if np.sum(rgb <= 0) / np.size(rgb) <= max_cloud:
+                    rgb_stretch = stretch_histogram(normalize(rgb), 0.1, 1.0, gamma=1.2)
+                    im = plt.imshow(rgb_stretch, animated=True)
+                    images.append([im])
     fig.tight_layout()
     ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
     ani.save(file_path)
