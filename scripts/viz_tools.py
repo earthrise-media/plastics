@@ -56,6 +56,24 @@ def plot_similar_images(img_stack, title, save=True):
         plt.savefig('../figures/' + title + ' Similarity.png', bbox_inches='tight')
     plt.show()
 
+def create_img_stack(patch_history):
+    img_stack = []
+    for date in patch_history:
+        for site in patch_history[date]:
+            spectral_stack = []
+            band_shapes = [np.shape(patch_history[date][site][band])[0] for band in band_descriptions]
+            if np.array(band_shapes).all() > 0:
+                for band in band_descriptions:
+                    spectral_stack.append(patch_history[date][site][band])
+                cloud_percentage = 1 - np.sum(np.array(spectral_stack) > 0) / np.size(spectral_stack)
+                if cloud_percentage < 0.2:
+                    img_stack.append(np.rollaxis(np.array(spectral_stack), 0, 3))
+
+    min_x = np.min([np.shape(img)[0] for img in img_stack])
+    min_y = np.min([np.shape(img)[1] for img in img_stack])
+    img_stack = [img[:min_x, :min_y, :] for img in img_stack]
+    return img_stack
+
 def create_img_stack_mean(patch_history):
     """
     Process a dictionary of patches into single images with cloudiness below a threshold and
