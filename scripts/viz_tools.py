@@ -74,7 +74,7 @@ def create_img_stack(patch_history):
     img_stack = [img[:min_x, :min_y, :] for img in img_stack]
     return img_stack
 
-def create_img_stack_mean(patch_history):
+def create_img_stack_mean(patch_history, cloud_threshold=0.2):
     """
     Process a dictionary of patches into single images with cloudiness below a threshold and
     averaged across all time periods in the dataset
@@ -101,16 +101,18 @@ def create_img_stack_mean(patch_history):
 
         num_cloudy_pixels = np.sum(masked_mean.mask)
         cloud_fraction = num_cloudy_pixels / np.size(masked_mean)
-        if cloud_fraction < 0.2:
+        if cloud_fraction < cloud_threshold:
             mean_stack.append(masked_mean.data)
     return np.array(mean_stack)
 
-def plot_image_grid(rgb_img, file_path=None):
+def plot_image_grid(rgb_img, labels=False, file_path=None):
     num_img = int(np.ceil(np.sqrt(len(rgb_img))))
-    plt.figure(figsize=(num_img,num_img), dpi=100)
+    plt.figure(figsize=(num_img, num_img), dpi=100)
     for index, img in enumerate(rgb_img):
         plt.subplot(num_img, num_img, index + 1)
         plt.imshow(img)
+        if len(np.shape(labels)) > 0:
+            plt.title(labels[index])
         plt.axis('off')
     plt.tight_layout()
     if file_path:
