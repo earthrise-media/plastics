@@ -1,4 +1,8 @@
 .ipynb_checkpoints
 .DS_Store
-notebooks/figures/*
+figures/*
+data/training_data/*
+data/model_outputs/heatmaps
+data/model_outputs/site_contours/monthly_contours
+*.pyc
 .__pycache__

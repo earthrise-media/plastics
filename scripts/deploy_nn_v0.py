@@ -36,12 +36,12 @@ def deploy_tpa_nn(dlkey, product_id, model_name):
 
     month_interval = 4
     month_step = 2
-    
-    
+
+
     def get_imagery(dlkey):
         imagery = dict()
         tile = dl.scenes.DLTile.from_key(dlkey)
-        
+
         s2_scenes, ctx = dl.scenes.search(products=s2_id, start_datetime=start_datetime, aoi=tile, limit=None)
         s2cloud_scenes, _ = dl.scenes.search(products=s2cloud_id, start_datetime=start_datetime, aoi=tile, limit=None)
 
@@ -73,7 +73,7 @@ def deploy_tpa_nn(dlkey, product_id, model_name):
                                                         (i.properties.date <= this_end)))
             s2cloud_scenes_filt = s2cloud_scenes.filter(lambda i: ((i.properties.date >= this_start) &
                                                                    (i.properties.date <= this_end)))
-                                                        
+
             s2_stack, raster_info = s2_scenes_filt.stack(bands=s2_bands,
                                                          ctx=ctx,
                                                          resampler='cubic',
@@ -107,7 +107,7 @@ def deploy_tpa_nn(dlkey, product_id, model_name):
 
         return imagery, raster_info
 
-    
+
     def get_pixel_vectors(image):
         pixel_vectors = list()
         width, height, channels = image.shape
@@ -127,7 +127,7 @@ def deploy_tpa_nn(dlkey, product_id, model_name):
 
     # grab all imagery
     imagery, raster_info = get_imagery(dlkey)
-    
+
     # load model
     dl.Storage().get_file(model_name, model_name)
     model = keras.models.load_model(model_name)
@@ -147,7 +147,7 @@ def deploy_tpa_nn(dlkey, product_id, model_name):
     # take median across all predictions
     preds_stack = np.stack(preds_stack, axis=0)
     preds_stack = np.ma.array(data=preds_stack, mask=np.isnan(preds_stack))
-    
+
     preds_median = np.ma.median(preds_stack, axis=0)
     preds_mean = np.ma.mean(preds_stack, axis=0)
     preds = np.ma.stack([preds_median, preds_mean], axis=0)
@@ -211,7 +211,7 @@ def get_product(create_product, product_id, product_name, product_desc):
         band1.band_index = 0
         band1.nodata = -1
         band1.save()
-        
+
         band_name2 = 'mean'
         band2 = dl.catalog.SpectralBand(name=band_name2, product=product)
         band2.data_type = dl.catalog.DataType.FLOAT32
@@ -226,7 +226,7 @@ def get_product(create_product, product_id, product_name, product_desc):
     else:
         product = dl.catalog.Product.get(id='earthrise:' + product_id)
         print('Got product')
-        
+
     return product
 
 
@@ -265,7 +265,7 @@ def main(args):
     # run this function over every tile
     for dlkey in tqdm(tiles):
         async_func(dlkey, product_id=product.id, model_name=args.model_name)
-        
+
 
 if __name__ == "__main__":
     parser = ArgumentParser('Configure TPA detector deployment')
@@ -285,5 +285,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args)
-    
-
