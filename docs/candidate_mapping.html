@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Network Candidate Sites</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY2xrcnVzZSIsImEiOiJjaXIxY2M2dGcwMnNiZnZtZzN0Znk3MXRuIn0.MyKHSjxjG-ZcI2BkRUSGJA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/clkruse/ckitw8xae02ug19t7tirj9qv5',
+      center: [115.15111744455588, -8.421323822432939],
+      zoom: 9.5
+    });
+
+    map.on('load', function() {
+      map.addSource('tpa-points', {
+        'type': 'geojson',
+        'data': './tpa_coords.geojson',
+        'cluster': false
+      });
+
+      map.addSource('candidate-points', {
+        'type': 'geojson',
+        'data': './candidate_points_v12.geojson',
+        'cluster': false
+      });
+
+      map.addLayer({
+        'id': 'tpa-points',
+        'type': 'circle',
+        'source': 'tpa-points',
+        'paint': {
+          'circle-radius': 10,
+          'circle-opacity': 0.85,
+          'circle-stroke-color': '#000',
+          'circle-stroke-width': 1,
+          'circle-color': '#FFCE00'
+        }
+      });
+      map.addLayer({
+        'id': 'candidate-points',
+        'type': 'circle',
+        'source': 'candidate-points',
+        'paint': {
+          'circle-radius': 5,
+          'circle-opacity': 0.85,
+          'circle-stroke-color': '#FFFFFF',
+          'circle-stroke-width': 1,
+          'circle-color': '#b30000'
+        }
+      });
+
+      map.addSource('tpa', {
+        'type': 'geojson',
+        'data': './tpa_polygons.json'
+      });
+      map.addLayer({
+        'id': 'tpa',
+        'type': 'fill',
+        'source': 'tpa',
+        'layout': {},
+        'paint': {
+          'fill-color': '#FFCE00',
+          'fill-opacity': 0.3
+        }
+      });
+    });
+
+    map.on('click', 'candidate-points', function(e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      console.log(e.features[0].properties)
+      var name = e.features[0].properties.name;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML('<b>' + name + '</b></br><p>' + coordinates[1].toFixed(4) + '</br>' + coordinates[0].toFixed(4) + '</p>')
+        .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'candidate-points', function() {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'candidate-points', function() {
+      map.getCanvas().style.cursor = '';
+    });
+  </script>
+
+</body>
+
+</html>
