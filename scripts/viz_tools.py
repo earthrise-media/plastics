@@ -124,7 +124,7 @@ def plot_image_grid(rgb_img, labels=False, file_path=None):
 def visualize_history(patch_history, file_path=None):
     img_stack = create_img_stack_mean(patch_history)
     rgb_img = create_rgb(img_stack)
-    plot_image_grid(rgb_img, file_path)
+    plot_image_grid(rgb_img, file_path=file_path)
 
 def normalize(x):
     return (np.array(x)) / (3000)
