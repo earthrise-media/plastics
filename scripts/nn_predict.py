@@ -44,7 +44,7 @@ def make_predictions(model_path, data, site_name, threshold):
             thresh_img = preds_img >= threshold
             threshold_stack.append(thresh_img)
 
-    output_dir = '../notebooks/figures/neural_network'
+    output_dir = '../figures/neural_network'
     if not os.path.exists(output_dir):
             os.mkdir(output_dir)
 
@@ -104,6 +104,8 @@ def main():
     parser.add_argument('--width', type=float, required=False, default=0.002, help='Width of patch in degrees. Max 0.03')
     parser.add_argument('--network', type=str, required=True, help='Path to neural network')
     parser.add_argument('--threshold', type=float, required=False, default=0.95, help='Classifier masking threshold')
+    parser.add_argument('--num_months', type=int, required=False, default=22, help='Number of months to use for predictions')
+    parser.add_argument('--start_date', type=str, required=False, default='2019-01-01', help='Start date for predictions')
     args = parser.parse_args()
     if args.width and args.width > 0.03:
         parser.error("Maximum patch width is 0.03")
@@ -115,10 +117,12 @@ def main():
     width = args.width
     model_path = args.network
     threshold = args.threshold
+    num_months = args.num_months
+    start_date = args.start_date
 
     name = f"{lat:.2f}, {lon:.2f}, {width} patch"
 
-    patch_history = get_history([[lon, lat]], [name], width)
+    patch_history = get_history([[lon, lat]], [name], width, num_months=num_months, start_date=start_date)
     rgb_median, preds_median, threshold_median = make_predictions(model_path, patch_history, name, threshold)
 
 if __name__ == '__main__':
