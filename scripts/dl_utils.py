@@ -50,16 +50,25 @@ def download_patch(polygon, start_date, end_date):
         end_datetime=end_date
     )
 
+    # A cloud stack is an array with shape (num_img, data_band, height, width)
+    # A value of 255 means that the pixel is cloud free,  0 means the pixel is cloudy
     cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'],
-                                     ctx=geoctx)
+                                         ctx=geoctx)
 
     img_stack = scenes.stack(bands=sentinel_bands,
                              ctx=geoctx)
-    cloud_masks = np.repeat(cloud_stack, repeats=12, axis=1)
-    masked_img_stack = np.ma.masked_where(cloud_masks == 0, img_stack)
+    cloud_masks = np.repeat(cloud_stack, repeats = 12, axis=1)
+
+    # Add cloud masked pixels to the image mask
+    img_stack.mask[cloud_masks.data == 0] = True
+    
+    # Remove images that are fully masked from the stack
+    img_stack = [img for img in img_stack if np.sum(img) > 0]
+
+    #img_stack = np.ma.masked_where(np.repeat(cloud_stack.data == 1, repeats=12, axis=1), img_stack)
     # Rearrange order to (num_img, height, width, channels)
-    masked_img_stack = np.moveaxis(masked_img_stack, 1, -1)
-    return masked_img_stack
+    img_stack = np.moveaxis(img_stack, 1, -1)
+    return img_stack
 
 def flatten_stack(img_stack):
     return np.ma.median(img_stack, axis=0)
