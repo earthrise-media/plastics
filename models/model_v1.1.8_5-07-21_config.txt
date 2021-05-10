@@ -1,0 +1,24 @@
+Input Data:
+city_points_30_raw_24_months_2016-01-01_pixel_vectors.pkl
+adjacent_north_0.015_raw_24_months_2016-01-01_pixel_vectors.pkl
+bali_bootstrap_raw_24_months_2019-01-01_pixel_vectors.pkl
+java_v12_negatives_raw_24_months_2016-01-01_pixel_vectors.pkl
+w_nusa_tenggara_v1.1_negatives_raw_12_months_2020-01-01_pixel_vectors.pkl
+bali_tpa_sites_2020-01-01_2020-12-31_pixel_vectors.pkl
+sri_lanka_sites_2020-01-01_2020-12-31_pixel_vectors.pkl
+v_1.1.5_negatives_2020-04-01_2020-05-31_pixel_vectors.pkl
+java_v1.0_positive_polygons_2017-01-01_2020-12-31_pixel_vectors.pkl
+lombok_v_1.1.5_negatives_2019-01-01_2020-12-31_pixel_vectors.pkl
+
+Batch Size: 128
+Training Epochs: 15
+
+Classification Report
+              precision    recall  f1-score   support
+
+      No TPA       0.98      1.00      0.99   4624978
+         TPA       0.90      0.26      0.40    143619
+
+    accuracy                           0.98   4768597
+   macro avg       0.94      0.63      0.69   4768597
+weighted avg       0.98      0.98      0.97   4768597
