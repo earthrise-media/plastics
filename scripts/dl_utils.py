@@ -61,13 +61,10 @@ def download_patch(polygon, start_date, end_date):
 
     # Add cloud masked pixels to the image mask
     img_stack.mask[cloud_masks.data == 0] = True
-    
-    # Remove images that are fully masked from the stack
-    img_stack = [img for img in img_stack if np.sum(img) > 0]
 
-    #img_stack = np.ma.masked_where(np.repeat(cloud_stack.data == 1, repeats=12, axis=1), img_stack)
-    # Rearrange order to (num_img, height, width, channels)
-    img_stack = np.moveaxis(img_stack, 1, -1)
+    # Remove fully masked img from the stack and rearrange order to channels last
+    img_stack = [np.moveaxis(img, 0, -1) for img in img_stack if np.sum(img) > 0]
+
     return img_stack
 
 def flatten_stack(img_stack):
