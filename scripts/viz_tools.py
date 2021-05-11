@@ -151,3 +151,23 @@ def animate_patch_history(data, file_path, max_cloud=1):
     fig.tight_layout()
     ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
     ani.save(file_path)
+
+def animate_patch(data, file_path, cloud_threshold=0.1, stretch=True):
+    """
+    Used for visualization and debugging. Takes a history dictionary and outputs a video
+    for each timestep at each site in the history.
+    """
+    fig, ax = plt.subplots(dpi=100, facecolor=(1,1,1))
+    ax.set_axis_off()
+    images = []
+    ax.set_title(os.path.basename(file_path)[:-4])
+    for img in data:
+        if np.sum(img.mask) / np.size(img.mask) < cloud_threshold:
+            rgb = normalize(img[:,:,3:0:-1])
+            if stretch:
+                rgb = stretch_histogram(rgb, 0.1, 1.0, gamma=1.2)
+            im = plt.imshow(np.clip(rgb, 0, 1), animated=True)
+            images.append([im])
+    fig.tight_layout()
+    ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
+    ani.save(file_path)
