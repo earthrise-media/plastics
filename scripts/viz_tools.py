@@ -105,20 +105,22 @@ def create_img_stack_mean(patch_history, cloud_threshold=0.2):
             mean_stack.append(masked_mean.data)
     return np.array(mean_stack)
 
-def plot_image_grid(rgb_img, labels=False, file_path=None):
-    num_img = int(np.ceil(np.sqrt(len(rgb_img))))
+def plot_image_grid(patches, labels=False, file_path=None):
+    num_img = int(np.ceil(np.sqrt(len(patches))))
     plt.figure(figsize=(num_img, num_img), dpi=100)
-    for index, img in enumerate(rgb_img):
+    for index, img in enumerate(patches):
         plt.subplot(num_img, num_img, index + 1)
-        plt.imshow(img)
+        if np.ma.is_masked(img):
+            img[img.mask] = 0
+        plt.imshow(np.clip(normalize(img[:,:,3:0:-1]), 0, 1))
         if len(np.shape(labels)) > 0:
             plt.title(labels[index])
         plt.axis('off')
     plt.tight_layout()
     if file_path:
-        title = os.path.basename(file_path[:-4])
+        title = os.path.basename(file_path)
         plt.suptitle(title, size = num_img * 12 / 7, y=1.02)
-        plt.savefig(file_path, bbox_inches='tight')
+        plt.savefig(file_path + '.png', bbox_inches='tight')
     plt.show()
 
 def visualize_history(patch_history, file_path=None):
