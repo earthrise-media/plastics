@@ -67,5 +67,16 @@ def download_patch(polygon, start_date, end_date):
 
     return img_stack
 
-def flatten_stack(img_stack):
-    return np.ma.median(img_stack, axis=0)
+def pad_patch(patch, width):
+    """
+    Depending on how a polygon falls across pixel boundaries, it can be slightly
+    bigger or smaller than intended.
+    pad_patch trims pixels extending beyond the desired number of pixels if the
+    patch is larger than desired. If the patch is smaller, it will fill the edge by
+    reflecting the values.
+    """
+    h, w, c = patch.shape
+    if h < width or w < width:
+        patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
+    patch = patch[:width, :width, :12]
+    return patch
