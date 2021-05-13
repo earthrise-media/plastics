@@ -20,11 +20,13 @@ def rect_from_point(coord, rect_width):
     Create a geojson polygon from a coordinate pair.
     Inputs:
         - coord: coordinates in the form [lon, lat]
-        - rect_width: the total width/height of the rectangle
+        - rect_width: the height of the rectangle in degrees latitude
     Returns: Geojson formatted polygon
     """
-    w = rect_width / 2
-    rect = shapely.geometry.mapping(shapely.geometry.box(coord[0] - w, coord[1] - w, coord[0] + w, coord[1] + w))
+    lon, lat = coord
+    lat_w = rect_width / 2
+    lon_w = lat_w / np.cos(np.deg2rad(lat))
+    rect = shapely.geometry.mapping(shapely.geometry.box(lon - lon_w, lat - lat_w, lon + lon_w, lat + lat_w))
     return rect
 
 def download_patch(polygon, start_date, end_date):
