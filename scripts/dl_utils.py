@@ -34,7 +34,7 @@ def download_patch(polygon, start_date, end_date):
         - polygon: Geojson polygon enclosing the region of data to be extracted
         - start_date/end_date: The time bounds of the search
     Returns:
-        - A numpy array of image patches of format (num_img, height, width, channels)
+        - A list of images of shape (height, width, channels)
     """
     cloud_scenes, _ = dl.scenes.search(
         polygon,
@@ -51,7 +51,7 @@ def download_patch(polygon, start_date, end_date):
     )
 
     # A cloud stack is an array with shape (num_img, data_band, height, width)
-    # A value of 255 means that the pixel is cloud free,  0 means the pixel is cloudy
+    # A value of 255 means that the pixel is cloud free, 0 means cloudy
     cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'],
                                          ctx=geoctx)
 
