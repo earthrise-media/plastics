@@ -55,7 +55,7 @@ def deploy_tpa_nn(dlkey, product_id, model_name):
         # compute median composites per month
         s2_bands = list(band_descriptions.keys())
 
-        sd = datetime(2016, 1, 1)
+        sd = datetime(2020, 1, 1)
         ed = datetime(2021, 1, 1)
 
         this_start = sd
@@ -246,7 +246,7 @@ def main(args):
     image = 'us.gcr.io/dl-ci-cd/images/tasks/public/py3.8:v2020.09.22-5-ga6b4e5fa'
     name = args.product_name
     cpus = 1
-    memory = '6Gi'
+    memory = '12Gi'
     maximum_concurrency = 60
     retry_count = 0
     task_timeout = 20000
