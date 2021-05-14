@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-from dl_utils import download_patch, rect_from_point
-from viz_tools import normalize
+from scripts.dl_utils import download_patch, rect_from_point
+from scripts.viz_tools import normalize
 
 def make_predictions(patches, model):
     pred_stack = []

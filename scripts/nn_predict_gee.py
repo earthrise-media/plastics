@@ -8,7 +8,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tqdm import tqdm
 
-from get_s2_data_ee import get_history, get_pixel_vectors
+from scripts.get_s2_data_ee import get_history, get_pixel_vectors
 
 def normalize(x):
     return (np.array(x) - 0) / (3000 - 0)
