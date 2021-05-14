@@ -14,6 +14,12 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
+Imports are given relative to the repo base directory, which therefore must be on PYTHONPATH. Either in your .bash_profile or at the end of the file env/bin/activate add:
+
+```
+export PYTHONPATH=/path/to/plastics:$PYTHONPATH
+```
+
 The bulk-processing pipeline runs on Descartes Labs. Authorization on your local is handled via the command line helper function: 
 ```
 $ descarteslabs auth login
