@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "name": "w_nusa_tenggara_v1.1_2020_6" }, "geometry": { "type": "Point", "coordinates": [ 117.452644400000011, -8.483355944 ] } },
+{ "type": "Feature", "properties": { "name": "w_nusa_tenggara_v1.1_2020_17" }, "geometry": { "type": "Point", "coordinates": [ 118.7842389, -8.504524021 ] } },
+{ "type": "Feature", "properties": { "name": "w_nusa_tenggara_v1.1_2020_18" }, "geometry": { "type": "Point", "coordinates": [ 116.8096698, -8.726176905 ] } },
+{ "type": "Feature", "properties": { "name": "w_nusa_tenggara_v1.1_2020_19" }, "geometry": { "type": "Point", "coordinates": [ 116.973575, -8.532445939 ] } },
+{ "type": "Feature", "properties": { "name": "w_nusa_tenggara_v1.1_2020_82" }, "geometry": { "type": "Point", "coordinates": [ 118.668245, -8.618432753 ] } }
+]
+}
