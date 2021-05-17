@@ -1,0 +1,228 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8"/>
+        <title>Nusa Tenggara - Model V1.1.5</title>
+
+        <!--Uber Font-->
+        <link rel="stylesheet" href="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/uber-fonts/4.0.0/superfine.css">
+
+        <!--MapBox css-->
+        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css" rel="stylesheet">
+
+        <!-— facebook open graph tags -->
+        <meta property="og:url" content="http://kepler.gl/" />
+        <meta property="og:title" content="Large-scale WebGL-powered Geospatial Data Visualization Tool" />
+        <meta property="og:description" content="Kepler.gl is a powerful web-based geospatial data analysis tool. Built on a high performance rendering engine and designed for large-scale data sets." />
+        <meta property="og:site_name" content="kepler.gl" />
+        <meta property="og:image" content="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/kepler.gl-meta-tag.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="800" />
+
+        <!-— twitter card tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@uber">
+        <meta name="twitter:creator" content="@uber">
+        <meta name="twitter:title" content="Large-scale WebGL-powered Geospatial Data Visualization Tool">
+        <meta name="twitter:description" content="Kepler.gl is a powerful web-based geospatial data analysis tool. Built on a high performance rendering engine and designed for large-scale data sets.">
+        <meta name="twitter:image" content="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/kepler.gl-meta-tag.png" />
+
+        <!-- Load React/Redux -->
+        <script src="https://unpkg.com/react@16.8.4/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16.8.4/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/redux@3.7.2/dist/redux.js" crossorigin></script>
+        <script src="https://unpkg.com/react-redux@7.1.3/dist/react-redux.min.js" crossorigin></script>
+        <script src="https://unpkg.com/styled-components@4.1.3/dist/styled-components.min.js" crossorigin></script>
+
+        <!-- Load Kepler.gl -->
+        <script src="https://unpkg.com/kepler.gl@2.5.1/umd/keplergl.min.js" crossorigin></script>
+
+        <style type="text/css">
+          body {margin: 0; padding: 0; overflow: hidden;}
+        </style>
+
+        <!--MapBox token-->
+        <script>
+          /**
+           * Provide your MapBox Token
+           **/
+          const MAPBOX_TOKEN = 'pk.eyJ1IjoiZWFydGhyaXNlIiwiYSI6ImNqeDExNmtrZzAwM2E0OW16eHZ1dzg1eWEifQ.8LTFXyY-n7OsZOoWN9ONPQ';
+          const WARNING_MESSAGE = 'Please Provide a Mapbox Token in order to use Kepler.gl. Edit this file and fill out MAPBOX_TOKEN with your access key';
+        </script>
+
+        <!-- GA: Delete this as you wish, However to pat ourselves on the back, we only track anonymous pageview to understand how many people are using kepler.gl. -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-64694404-19', {
+            'storage': 'none',
+            'clientId': localStorage.getItem('ga:clientId')
+          });
+          ga(function(tracker) {
+              localStorage.setItem('ga:clientId', tracker.get('clientId'));
+          });
+          ga('set', 'checkProtocolTask', null); // Disable file protocol checking.
+          ga('set', 'checkStorageTask', null); // Disable cookie storage checking.
+          ga('set', 'historyImportTask', null); // Disable history checking (requires reading from cookies).
+          ga('set', 'page', 'keplergl-html');
+          ga('send', 'pageview');
+        </script>
+      </head>
+      <body>
+        <!-- We will put our React component inside this div. -->
+        <div id="app">
+          <!-- Kepler.gl map will be placed here-->
+        </div>
+
+        <!-- Load our React component. -->
+        <script>
+          /* Validate Mapbox Token */
+          if ((MAPBOX_TOKEN || '') === '' || MAPBOX_TOKEN === 'PROVIDE_MAPBOX_TOKEN') {
+            alert(WARNING_MESSAGE);
+          }
+
+          /** STORE **/
+          const reducers = (function createReducers(redux, keplerGl) {
+            return redux.combineReducers({
+              // mount keplerGl reducer
+              keplerGl: keplerGl.keplerGlReducer.initialState({
+                uiState: {
+                  readOnly: false,
+                  currentModal: null
+                }
+              })
+            });
+          }(Redux, KeplerGl));
+
+          const middleWares = (function createMiddlewares(keplerGl) {
+            return keplerGl.enhanceReduxMiddleware([
+              // Add other middlewares here
+            ]);
+          }(KeplerGl));
+
+          const enhancers = (function craeteEnhancers(redux, middles) {
+            return redux.applyMiddleware(...middles);
+          }(Redux, middleWares));
+
+          const store = (function createStore(redux, enhancers) {
+            const initialState = {};
+
+            return redux.createStore(
+              reducers,
+              initialState,
+              redux.compose(enhancers)
+            );
+          }(Redux, enhancers));
+          /** END STORE **/
+
+          /** COMPONENTS **/
+          var KeplerElement = (function makeKeplerElement(react, keplerGl, mapboxToken) {
+            var LogoSvg = function LogoSvg() {
+              return react.createElement(
+                "div",
+                { className: "logo-container", style: {position: 'fixed', zIndex: 10000, padding: '4px'} },
+                  react.createElement(
+                    "svg",
+                    {
+                      className: "kepler_gl__logo",
+                      width: "107px",
+                      height: "21px",
+                      viewBox: "0 0 124 24"
+                    },
+                    react.createElement(
+                      "g",
+                      { transform: "translate(13.500000, 13.500000) rotate(45.000000) translate(-13.500000, -13.500000) translate(4.000000, 4.000000)" },
+                      react.createElement("rect", { x: "0", y: "6", transform: "matrix(2.535181e-06 1 -1 2.535181e-06 18.1107 6.0369)", fill: "#535C6C", width: "12.1", height: "12.1" }),
+                      react.createElement("rect", { x: "6", y: "0", transform: "matrix(2.535182e-06 1 -1 2.535182e-06 18.1107 -6.0369)", fill:"#1FBAD6", width: "12.1", height: "12.1" })
+                    ),
+                    react.createElement(
+                      "g",
+                      {},
+                      react.createElement("path", { fill:"#1FBAD6", d: "M39,8.7h2.2l-2.8,4.2l2.9,5.1H39l-2.4-4.2h-1.3V18h-2V5l2-0.1v7.3h1.3L39,8.7z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M42.4,13.3c0-1.5,0.4-2.7,1.1-3.5s1.8-1.2,3.1-1.2c1.3,0,2.2,0.4,2.8,1.1c0.6,0.7,0.9,1.8,0.9,3.3 c0,0.4,0,0.8,0,1.1h-5.8c0,1.6,0.8,2.4,2.4,2.4c1,0,2-0.2,2.9-0.6l0.2,1.7c-0.4,0.2-0.9,0.4-1.4,0.5s-1.1,0.2-1.7,0.2 c-1.5,0-2.6-0.4-3.3-1.2C42.8,16.1,42.4,14.9,42.4,13.3z M46.6,10.1c-0.7,0-1.2,0.2-1.5,0.5c-0.4,0.4-0.6,0.9-0.6,1.7h4 c0-0.8-0.2-1.4-0.5-1.7S47.2,10.1,46.6,10.1z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M57.1,18.2c-1,0-1.8-0.3-2.3-0.9l0,0l0,1.3v2.5h-2V8.7h1.5l0.3,0.9h0c0.3-0.3,0.7-0.6,1.2-0.7 c0.4-0.2,0.9-0.3,1.4-0.3c1.2,0,2.1,0.4,2.7,1.1c0.6,0.7,0.9,2,0.9,3.7c0,1.6-0.3,2.8-1,3.7C59.2,17.8,58.3,18.2,57.1,18.2z M56.7,10.3c-0.4,0-0.8,0.1-1.1,0.2c-0.3,0.2-0.6,0.4-0.8,0.7v4.3c0.2,0.3,0.4,0.5,0.7,0.7c0.3,0.2,0.7,0.3,1.1,0.3 c0.7,0,1.2-0.2,1.6-0.7c0.4-0.5,0.5-1.3,0.5-2.5c0-0.8-0.1-1.4-0.2-1.8s-0.4-0.7-0.7-0.9C57.6,10.4,57.2,10.3,56.7,10.3z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M63.2,16V5l2-0.1v10.8c0,0.3,0.1,0.5,0.2,0.6c0.1,0.1,0.3,0.2,0.6,0.2c0.3,0,0.6,0,0.9-0.1V18 c-0.4,0.1-1,0.2-1.6,0.2c-0.8,0-1.3-0.2-1.7-0.5S63.2,16.8,63.2,16z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M68.2,13.3c0-1.5,0.4-2.7,1.1-3.5c0.7-0.8,1.8-1.2,3.1-1.2c1.3,0,2.2,0.4,2.8,1.1c0.6,0.7,0.9,1.8,0.9,3.3 c0,0.4,0,0.8,0,1.1h-5.8c0,1.6,0.8,2.4,2.4,2.4c1,0,2-0.2,2.9-0.6l0.2,1.7c-0.4,0.2-0.9,0.4-1.4,0.5s-1.1,0.2-1.7,0.2 c-1.5,0-2.6-0.4-3.3-1.2C68.6,16.1,68.2,14.9,68.2,13.3z M72.4,10.1c-0.7,0-1.2,0.2-1.5,0.5c-0.4,0.4-0.6,0.9-0.6,1.7h4 c0-0.8-0.2-1.4-0.5-1.7S73,10.1,72.4,10.1z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M80.2,8.7l0.1,1.7h0c0.3-0.6,0.7-1.1,1.1-1.4c0.4-0.3,1-0.5,1.6-0.5c0.4,0,0.7,0,1,0.1l-0.1,2 c-0.3-0.1-0.7-0.2-1-0.2c-0.7,0-1.3,0.3-1.7,0.8c-0.4,0.5-0.7,1.2-0.7,2.1V18h-2V8.7H80.2z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M83.8,17c0-0.8,0.4-1.2,1.2-1.2c0.8,0,1.2,0.4,1.2,1.2c0,0.8-0.4,1.1-1.2,1.1C84.2,18.2,83.8,17.8,83.8,17z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M88.5,18.7c0-0.8,0.4-1.4,1.2-1.8c-0.6-0.3-0.9-0.8-0.9-1.5c0-0.7,0.4-1.2,1.1-1.6c-0.3-0.3-0.6-0.6-0.7-0.9 c-0.2-0.4-0.2-0.8-0.2-1.3c0-1,0.3-1.8,0.9-2.3c0.6-0.5,1.6-0.8,2.8-0.8c0.5,0,1,0,1.4,0.1c0.4,0.1,0.8,0.2,1.1,0.4l2.4-0.2v1.5 h-1.5c0.2,0.4,0.2,0.8,0.2,1.3c0,1-0.3,1.7-0.9,2.2s-1.5,0.8-2.7,0.8c-0.7,0-1.2-0.1-1.6-0.2c-0.1,0.1-0.2,0.2-0.3,0.3 c-0.1,0.1-0.1,0.2-0.1,0.4c0,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.3,0.2,0.6,0.2l2.7,0.2c1,0.1,1.7,0.3,2.2,0.6c0.5,0.3,0.8,0.9,0.8,1.7 c0,0.6-0.2,1.1-0.5,1.5c-0.4,0.4-0.9,0.8-1.5,1c-0.7,0.2-1.5,0.4-2.4,0.4c-1.3,0-2.3-0.2-3-0.6C88.8,20.1,88.5,19.5,88.5,18.7z M95.1,18.4c0-0.3-0.1-0.5-0.3-0.7s-0.6-0.2-1.1-0.3l-2.7-0.3c-0.2,0.1-0.4,0.3-0.5,0.5c-0.1,0.2-0.2,0.4-0.2,0.6 c0,0.4,0.2,0.8,0.5,1c0.4,0.2,1,0.3,1.8,0.3C94.2,19.5,95.1,19.2,95.1,18.4z M94.3,11.5c0-0.6-0.1-1-0.4-1.2 c-0.3-0.2-0.7-0.3-1.3-0.3c-0.7,0-1.1,0.1-1.4,0.3c-0.3,0.2-0.4,0.6-0.4,1.2s0.1,1,0.4,1.2c0.3,0.2,0.7,0.3,1.4,0.3 c0.6,0,1.1-0.1,1.3-0.4S94.3,12,94.3,11.5z" }),
+                      react.createElement("path", { fill:"#1FBAD6", d: "M99.4,16V5l2-0.1v10.8c0,0.3,0.1,0.5,0.2,0.6c0.1,0.1,0.3,0.2,0.6,0.2c0.3,0,0.6,0,0.9-0.1V18 c-0.4,0.1-1,0.2-1.6,0.2c-0.8,0-1.3-0.2-1.7-0.5S99.4,16.8,99.4,16z" })
+                    )
+                  )
+                );
+              };
+
+            return function App() {
+              var rootElm = react.useRef(null);
+              var _useState = react.useState({
+                width: window.innerWidth,
+                height: window.innerHeight
+              });
+              var windowDimension = _useState[0];
+              var setDimension = _useState[1];
+              react.useEffect(function sideEffect(){
+                function handleResize() {
+                  setDimension({width: window.innerWidth, height: window.innerHeight});
+                };
+                window.addEventListener('resize', handleResize);
+                return function() {window.removeEventListener('resize', handleResize);};
+              }, []);
+              return react.createElement(
+                'div',
+                {style: {position: 'absolute', left: 0, width: '100vw', height: '100vh'}},
+
+                react.createElement(keplerGl.KeplerGl, {
+                  mapboxApiAccessToken: mapboxToken,
+                  id: "map",
+                  width: windowDimension.width,
+                  height: windowDimension.height
+                })
+              )
+            }
+          }(React, KeplerGl, MAPBOX_TOKEN));
+
+          const app = (function createReactReduxProvider(react, reactRedux, KeplerElement) {
+            return react.createElement(
+              reactRedux.Provider,
+              {store},
+              react.createElement(KeplerElement, null)
+            )
+          }(React, ReactRedux, KeplerElement));
+          /** END COMPONENTS **/
+
+          /** Render **/
+          (function render(react, reactDOM, app) {
+            reactDOM.render(app, document.getElementById('app'));
+          }(React, ReactDOM, app));
+        </script>
+        <!-- The next script will show how to interact directly with Kepler map store -->
+        <script>
+          /**
+           * Customize map.
+           * In the following section you can use the store object to dispatch Kepler.gl actions
+           * to add new data and customize behavior
+           */
+          (function customize(keplerGl, store) {
+            const datasets = [{"version":"v1","data":{"id":"z37l4jkqq","label":"Nusa_Tenggara_v1.1.5_2020_candidates_pred-thresh_0.8_min-sigma_5_area-thresh_0.0025v1.1.0_200_patch_classifier_thresh_0.1.csv","color":[143,47,191],"allData":[[118.79781438215984,-8.645126943216432,"Nusa_Tenggara_v1.1.5_2020_1",0.781108021736145],[118.5872872272123,-8.599269543128848,"Nusa_Tenggara_v1.1.5_2020_2",0.4922392964363098],[118.83463494846393,-8.689961549795568,"Nusa_Tenggara_v1.1.5_2020_5",0.6118313670158386],[118.66577044554406,-8.690531206939513,"Nusa_Tenggara_v1.1.5_2020_9",0.6823662519454956],[117.71835293464363,-8.609510424966588,"Nusa_Tenggara_v1.1.5_2020_14",0.10501012206077576],[119.00660451437678,-8.54480255211573,"Nusa_Tenggara_v1.1.5_2020_15",0.3903520405292511],[117.18818338817651,-8.785961725303595,"Nusa_Tenggara_v1.1.5_2020_16",0.10256414115428925],[117.70358068916086,-8.675940216002555,"Nusa_Tenggara_v1.1.5_2020_24",0.43164870142936707],[119.116913010042,-8.600538324949452,"Nusa_Tenggara_v1.1.5_2020_26",0.2074500173330307],[117.80308943480546,-8.758365720705434,"Nusa_Tenggara_v1.1.5_2020_29",0.15019920468330383],[117.74943808924843,-8.5621123612397,"Nusa_Tenggara_v1.1.5_2020_32",0.8877859711647034],[118.68049737739035,-8.518973779339127,"Nusa_Tenggara_v1.1.5_2020_33",0.6826844811439514],[117.52984820701089,-8.964406825644406,"Nusa_Tenggara_v1.1.5_2020_39",0.976874053478241],[118.92152060966885,-8.679293425099868,"Nusa_Tenggara_v1.1.5_2020_43",0.8205938339233398],[116.94566480589512,-8.681196597830777,"Nusa_Tenggara_v1.1.5_2020_44",0.3572671711444855],[116.84869362389178,-8.681830988741078,"Nusa_Tenggara_v1.1.5_2020_48",0.16309116780757904],[118.73840820477365,-8.358563506305485,"Nusa_Tenggara_v1.1.5_2020_51",0.23834870755672455],[118.73548094385895,-8.464343659234787,"Nusa_Tenggara_v1.1.5_2020_52",0.7323601841926575],[116.87719590121893,-8.616579352252817,"Nusa_Tenggara_v1.1.5_2020_57",0.9723207950592041],[116.83917776023722,-8.878945307299368,"Nusa_Tenggara_v1.1.5_2020_66",0.9982619881629944],[117.78496398022537,-8.728322779738964,"Nusa_Tenggara_v1.1.5_2020_83",0.7070379853248596],[119.11949588731967,-8.640867461390116,"Nusa_Tenggara_v1.1.5_2020_85",0.16940194368362427],[117.0111883242021,-8.517342488426921,"Nusa_Tenggara_v1.1.5_2020_89",0.8983562588691711],[118.69347218196056,-8.520816533888103,"Nusa_Tenggara_v1.1.5_2020_90",0.9907028675079346],[116.84476040024788,-8.550149561216852,"Nusa_Tenggara_v1.1.5_2020_104",0.12582917511463165],[117.68599899821821,-8.607335370416981,"Nusa_Tenggara_v1.1.5_2020_105",0.242193341255188],[117.4272581340877,-8.572987633987744,"Nusa_Tenggara_v1.1.5_2020_106",0.1691652536392212],[116.80981452381751,-8.726147725189355,"Nusa_Tenggara_v1.1.5_2020_109",0.8664340376853943],[118.71597795473082,-8.543352515749326,"Nusa_Tenggara_v1.1.5_2020_111",0.10478585213422775],[118.99130360980213,-8.663297711432952,"Nusa_Tenggara_v1.1.5_2020_113",0.6995093822479248],[118.72603758202277,-8.533202261184485,"Nusa_Tenggara_v1.1.5_2020_119",0.2041175663471222],[118.99665061890323,-8.641547165936867,"Nusa_Tenggara_v1.1.5_2020_120",0.8522766828536987],[119.02355483531824,-8.616627686798363,"Nusa_Tenggara_v1.1.5_2020_121",0.46125608682632446],[116.90143869671977,-8.780886598021175,"Nusa_Tenggara_v1.1.5_2020_133",0.16862061619758606],[118.78145615940132,-8.622787320446491,"Nusa_Tenggara_v1.1.5_2020_136",0.5899834036827087],[116.99505666962584,-8.77698962528646,"Nusa_Tenggara_v1.1.5_2020_144",0.40136343240737915],[116.81543341473731,-8.7481442589976,"Nusa_Tenggara_v1.1.5_2020_145",0.7448630928993225],[116.92989566041048,-8.751251479782756,"Nusa_Tenggara_v1.1.5_2020_146",0.8277766108512878],[117.3767485339912,-8.726026888825489,"Nusa_Tenggara_v1.1.5_2020_149",0.9539516568183899],[116.84756581782898,-8.75645751312603,"Nusa_Tenggara_v1.1.5_2020_151",0.854692816734314],[118.9633904097488,-8.646305097764136,"Nusa_Tenggara_v1.1.5_2020_161",0.5171463489532471],[118.74996318206844,-8.510454815686494,"Nusa_Tenggara_v1.1.5_2020_162",0.7493974566459656],[119.04191894171696,-8.733126025202683,"Nusa_Tenggara_v1.1.5_2020_163",0.10647747665643692],[119.08039021906315,-8.74227937976562,"Nusa_Tenggara_v1.1.5_2020_166",0.9007235765457153],[118.72939079112007,-8.706390979697076,"Nusa_Tenggara_v1.1.5_2020_172",0.34978148341178894],[118.69193151832123,-8.657301206876047,"Nusa_Tenggara_v1.1.5_2020_173",0.6334852576255798],[116.88929464215113,-8.546071333936336,"Nusa_Tenggara_v1.1.5_2020_174",0.8251392841339111],[117.00774448783189,-8.720098354723254,"Nusa_Tenggara_v1.1.5_2020_186",0.3560612201690674],[116.99913489690636,-8.509367288411688,"Nusa_Tenggara_v1.1.5_2020_189",0.3673695921897888],[118.69468054559923,-8.625913961361555,"Nusa_Tenggara_v1.1.5_2020_193",0.12679338455200195],[118.6913424410474,-8.530634488452309,"Nusa_Tenggara_v1.1.5_2020_196",0.9988831877708435],[117.74454421651184,-8.631215656826226,"Nusa_Tenggara_v1.1.5_2020_201",0.6535965204238892],[116.8122614601858,-8.762851770714002,"Nusa_Tenggara_v1.1.5_2020_204",0.7850899696350098],[118.7485493966112,-8.572153863077059,"Nusa_Tenggara_v1.1.5_2020_205",0.12272631376981735],[117.65980771635,-8.511270461142598,"Nusa_Tenggara_v1.1.5_2020_207",0.6389712691307068],[118.73614252295117,-8.537914879375304,"Nusa_Tenggara_v1.1.5_2020_210",0.9273792505264282],[118.90627257100336,-8.57443767035415,"Nusa_Tenggara_v1.1.5_2020_218",0.5223763585090637],[118.66821738191231,-8.618029388619224,"Nusa_Tenggara_v1.1.5_2020_220",0.5647068023681641],[119.02556071895843,-8.715725588805814,"Nusa_Tenggara_v1.1.5_2020_222",0.29521217942237854],[117.52731064336969,-8.653374025050365,"Nusa_Tenggara_v1.1.5_2020_223",0.17540529370307922],[118.84892816407566,-8.725830529734203,"Nusa_Tenggara_v1.1.5_2020_225",0.8402773141860962],[117.74191602559773,-8.611322970424597,"Nusa_Tenggara_v1.1.5_2020_227",0.5614540576934814],[118.85708461863669,-8.71445680698521,"Nusa_Tenggara_v1.1.5_2020_228",0.36727890372276306],[118.76077803663456,-8.625944170452522,"Nusa_Tenggara_v1.1.5_2020_230",0.9542274475097656],[117.49749427058543,-8.571356343075536,"Nusa_Tenggara_v1.1.5_2020_231",0.34390154480934143],[118.78835893668725,-8.564257206698343,"Nusa_Tenggara_v1.1.5_2020_234",0.9311734437942505],[118.43168019964241,-8.759589188889588,"Nusa_Tenggara_v1.1.5_2020_235",0.36905065178871155],[117.60235002533115,-8.630354697733672,"Nusa_Tenggara_v1.1.5_2020_238",0.9874223470687866]],"fields":[{"name":"lon","type":"real","format":"","analyzerType":"FLOAT"},{"name":"lat","type":"real","format":"","analyzerType":"FLOAT"},{"name":"name","type":"string","format":"","analyzerType":"STRING"},{"name":"patch_prediction","type":"real","format":"","analyzerType":"FLOAT"}]}},{"version":"v1","data":{"id":"mh6k03dab","label":"w_nusa_tenggara_v1.1_positives.csv","color":[0,92,255],"allData":[["w_nusa_tenggara_v1.1_2020_6",117.45264440000001,-8.483355944,"[117.45264440000001, -8.483355944]"],["w_nusa_tenggara_v1.1_2020_17",118.78423889999999,-8.504524021,"[118.78423889999999, -8.504524021]"],["w_nusa_tenggara_v1.1_2020_18",116.80966979999998,-8.726176905,"[116.80966979999998, -8.726176905]"],["w_nusa_tenggara_v1.1_2020_19",116.973575,-8.532445939,"[116.973575, -8.532445939]"],["w_nusa_tenggara_v1.1_2020_82",118.668245,-8.618432752999999,"[118.668245, -8.618432752999999]"]],"fields":[{"name":"name","type":"string","format":"","analyzerType":"STRING"},{"name":"lon","type":"real","format":"","analyzerType":"FLOAT"},{"name":"lat","type":"real","format":"","analyzerType":"FLOAT"},{"name":"coords","type":"geojson","format":"","analyzerType":"PAIR_GEOMETRY_FROM_STRING"}]}},{"version":"v1","data":{"id":"ukpkoxqqf","label":"Lombok_v1.1.5_2020_candidates_pred-thresh_0.8_min-sigma_3.5_area-thresh_0.0025v1.1.0_200_patch_classifier_thresh_0.1.csv","color":[192,108,132],"allData":[[116.245184583113,-8.898863403175916,"Lombok_v1.1.5_2020_2",0.5383339524269104],[116.1118346522973,-8.692539030416466,"Lombok_v1.1.5_2020_3",0.9846978187561035],[115.95440603140365,-8.74745056863486,"Lombok_v1.1.5_2020_4",0.4516749083995819],[116.24542392527408,-8.898705518120913,"Lombok_v1.1.5_2020_5",0.46281442046165466],[116.49819736494223,-8.90105779208231,"Lombok_v1.1.5_2020_6",0.9905712604522705],[116.36045865631374,-8.323353175444948,"Lombok_v1.1.5_2020_7",0.7799310684204102],[116.37859410182112,-8.87675629510243,"Lombok_v1.1.5_2020_8",0.27944469451904297],[115.9817905541198,-8.852001411984867,"Lombok_v1.1.5_2020_11",0.9941731095314026],[116.17674659332405,-8.848918386248613,"Lombok_v1.1.5_2020_12",0.2404942810535431],[115.99108496994232,-8.858484833753751,"Lombok_v1.1.5_2020_16",0.6387358903884888],[116.48396104021894,-8.662939392570504,"Lombok_v1.1.5_2020_17",0.9560659527778625],[116.28746348814656,-8.803670449707719,"Lombok_v1.1.5_2020_18",0.27650192379951477],[116.27096023273485,-8.867960604031355,"Lombok_v1.1.5_2020_19",0.2673419117927551],[116.0995802726902,-8.730131218175321,"Lombok_v1.1.5_2020_22",0.1004079133272171],[116.10337058080124,-8.679134345408588,"Lombok_v1.1.5_2020_27",0.625838041305542],[116.3296283989512,-8.83948795458478,"Lombok_v1.1.5_2020_34",0.9336158037185669],[116.11071090237031,-8.769757166608931,"Lombok_v1.1.5_2020_35",0.3841021656990051],[116.03791975796513,-8.760870798310316,"Lombok_v1.1.5_2020_36",0.5338714718818665],[116.07799909253643,-8.744820929036294,"Lombok_v1.1.5_2020_37",0.21732889115810394],[116.32230054550091,-8.901516845546716,"Lombok_v1.1.5_2020_52",0.2834857106208801],[116.00214759170186,-8.824843582337573,"Lombok_v1.1.5_2020_53",0.7992427945137024],[116.07328387670451,-8.770301229974152,"Lombok_v1.1.5_2020_54",0.6077445149421692],[115.94805862547608,-8.781091820051039,"Lombok_v1.1.5_2020_55",0.8426457047462463],[115.92230629285558,-8.77846218045247,"Lombok_v1.1.5_2020_57",0.16703161597251892],[116.24145990804287,-8.277863432963953,"Lombok_v1.1.5_2020_59",0.9860700964927673],[116.08244227668571,-8.712449158805631,"Lombok_v1.1.5_2020_61",0.5943285822868347],[116.09504641131336,-8.615968588706409,"Lombok_v1.1.5_2020_69",0.41613510251045227],[116.17012715571389,-8.774472382440846,"Lombok_v1.1.5_2020_74",0.9515327215194702]],"fields":[{"name":"lon","type":"real","format":"","analyzerType":"FLOAT"},{"name":"lat","type":"real","format":"","analyzerType":"FLOAT"},{"name":"name","type":"string","format":"","analyzerType":"STRING"},{"name":"patch_prediction","type":"real","format":"","analyzerType":"FLOAT"}]}},{"version":"v1","data":{"id":"60jxy4r5","label":"Bali_v1.1.5_2019-2020_candidates_pred-thresh_0.8_min-sigma_5_area-thresh_0.0025v1.1.0_200_patch_classifier_thresh_0.1.csv","color":[62,172,168],"allData":[[114.58359772916393,-8.327140127494898,"Bali_v1.1.5_2019-2020_1",0.6868148446083069],[115.16969249943615,-8.089982522076157,"Bali_v1.1.5_2019-2020_2",0.7523955702781677],[115.56377663963316,-8.403019682439657,"Bali_v1.1.5_2019-2020_3",0.5702035427093506],[115.21130386827684,-8.806985389529071,"Bali_v1.1.5_2019-2020_4",0.36998000741004944],[115.22354250617116,-8.65105607709779,"Bali_v1.1.5_2019-2020_5",0.8449293375015259],[115.49723471211887,-8.679703555428189,"Bali_v1.1.5_2019-2020_7",0.9973368048667908],[115.10723011788666,-8.830193473239776,"Bali_v1.1.5_2019-2020_8",0.7975661754608154],[115.18428820833236,-8.81577907749758,"Bali_v1.1.5_2019-2020_9",0.9998573064804077],[115.22150273318876,-8.721994848596324,"Bali_v1.1.5_2019-2020_10",0.21211987733840942],[115.34946449161713,-8.563255182278196,"Bali_v1.1.5_2019-2020_12",0.9431525468826294]],"fields":[{"name":"lon","type":"real","format":"","analyzerType":"FLOAT"},{"name":"lat","type":"real","format":"","analyzerType":"FLOAT"},{"name":"name","type":"string","format":"","analyzerType":"STRING"},{"name":"patch_prediction","type":"real","format":"","analyzerType":"FLOAT"}]}}];
+            const config = {"version":"v1","config":{"visState":{"filters":[{"dataId":["z37l4jkqq"],"id":"g6vfmgg1g","name":["patch_prediction"],"type":"range","value":[0.5,0.9989],"enlarged":false,"plotType":"histogram","animationWindow":"free","yAxis":null,"speed":1},{"dataId":["ukpkoxqqf"],"id":"5dd2ez4pq","name":["patch_prediction"],"type":"range","value":[0.5,0.9942],"enlarged":false,"plotType":"histogram","animationWindow":"free","yAxis":null,"speed":1},{"dataId":["60jxy4r5"],"id":"dz4b84g57","name":["patch_prediction"],"type":"range","value":[0.2121,0.9999],"enlarged":false,"plotType":"histogram","animationWindow":"free","yAxis":null,"speed":1}],"layers":[{"id":"k92vvwa","type":"point","config":{"dataId":"60jxy4r5","label":"Bali 2019-20","color":[248,149,112],"columns":{"lat":"lat","lng":"lon","altitude":null},"isVisible":true,"visConfig":{"radius":30,"fixedRadius":false,"opacity":0.8,"outline":true,"thickness":3,"strokeColor":null,"colorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"strokeColorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"radiusRange":[0,50],"filled":false},"hidden":false,"textLabel":[{"field":null,"color":[255,255,255],"size":18,"offset":[0,0],"anchor":"start","alignment":"center"}]},"visualChannels":{"colorField":{"name":"patch_prediction","type":"real"},"colorScale":"quantile","strokeColorField":{"name":"patch_prediction","type":"real"},"strokeColorScale":"quantize","sizeField":null,"sizeScale":"linear"}},{"id":"aasw3g","type":"point","config":{"dataId":"ukpkoxqqf","label":"Lombok 2019-20","color":[23,184,190],"columns":{"lat":"lat","lng":"lon","altitude":null},"isVisible":true,"visConfig":{"radius":30,"fixedRadius":false,"opacity":0.8,"outline":true,"thickness":3,"strokeColor":null,"colorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"strokeColorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"radiusRange":[0,50],"filled":false},"hidden":false,"textLabel":[{"field":null,"color":[255,255,255],"size":18,"offset":[0,0],"anchor":"start","alignment":"center"}]},"visualChannels":{"colorField":null,"colorScale":"quantile","strokeColorField":{"name":"patch_prediction","type":"real"},"strokeColorScale":"quantize","sizeField":null,"sizeScale":"linear"}},{"id":"8mx1u6q","type":"point","config":{"dataId":"mh6k03dab","label":"Known Nusa Tenggara","color":[248,149,112],"columns":{"lat":"lat","lng":"lon","altitude":null},"isVisible":true,"visConfig":{"radius":20,"fixedRadius":false,"opacity":0.8,"outline":true,"thickness":2.6,"strokeColor":[240,237,234],"colorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"strokeColorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"radiusRange":[0,50],"filled":false},"hidden":false,"textLabel":[{"field":null,"color":[255,255,255],"size":18,"offset":[0,0],"anchor":"start","alignment":"center"}]},"visualChannels":{"colorField":null,"colorScale":"quantile","strokeColorField":null,"strokeColorScale":"quantile","sizeField":null,"sizeScale":"linear"}},{"id":"ug7s4di","type":"point","config":{"dataId":"z37l4jkqq","label":"Nusa Tenggara 2020","color":[183,136,94],"columns":{"lat":"lat","lng":"lon","altitude":null},"isVisible":true,"visConfig":{"radius":30,"fixedRadius":false,"opacity":0.8,"outline":true,"thickness":3,"strokeColor":null,"colorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"strokeColorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"radiusRange":[0,50],"filled":false},"hidden":false,"textLabel":[{"field":null,"color":[255,255,255],"size":18,"offset":[0,0],"anchor":"start","alignment":"center"}]},"visualChannels":{"colorField":null,"colorScale":"quantile","strokeColorField":{"name":"patch_prediction","type":"real"},"strokeColorScale":"quantize","sizeField":null,"sizeScale":"linear"}}],"interactionConfig":{"tooltip":{"fieldsToShow":{"z37l4jkqq":[{"name":"name","format":null},{"name":"patch_prediction","format":null}],"mh6k03dab":[{"name":"name","format":null}],"ukpkoxqqf":[{"name":"name","format":null},{"name":"patch_prediction","format":null}],"60jxy4r5":[{"name":"name","format":null},{"name":"patch_prediction","format":null}]},"compareMode":false,"compareType":"absolute","enabled":true},"brush":{"size":0.5,"enabled":false},"geocoder":{"enabled":false},"coordinate":{"enabled":false}},"layerBlending":"normal","splitMaps":[],"animationConfig":{"currentTime":null,"speed":1}},"mapState":{"bearing":0,"dragRotate":false,"latitude":-8.583417954922894,"longitude":116.56309305676065,"pitch":0,"zoom":7.49634942188251,"isSplit":false},"mapStyle":{"styleType":"satellite","topLayerGroups":{},"visibleLayerGroups":{},"threeDBuildingColor":[3.7245996603793508,6.518049405663864,13.036098811327728],"mapStyles":{}}}};
+
+            const loadedData = keplerGl.KeplerGlSchema.load(
+              datasets,
+              config
+            );
+
+            store.dispatch(keplerGl.addDataToMap({
+              datasets: loadedData.datasets,
+              config: loadedData.config,
+              options: {
+                centerMap: false
+              }
+            }));
+          }(KeplerGl, store))
+        </script>
+      </body>
+    </html>

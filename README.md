@@ -6,6 +6,26 @@
 ## Project Structure
 This repo contains the tools for detecting plastics and/or landfills using Sentinel 2 imagery. The pipeline is mostly run through a set of Jupyter notebooks.
 
+### Setup
+
+```
+$ python -m venv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+```
+
+Imports are given relative to the repo base directory, which therefore must be on PYTHONPATH. Either in your .bash_profile or at the end of the file env/bin/activate add:
+
+```
+export PYTHONPATH=/path/to/plastics:$PYTHONPATH
+```
+
+The bulk-processing pipeline runs on Descartes Labs. Authorization on your local is handled via the command line helper function: 
+```
+$ descarteslabs auth login
+``` 
+Follow the link to enter user email and password. If needed, see [further instructions](https://docs.descarteslabs.com/authentication.html) from Descartes.
+
 ### Notebooks
 There are two parallel pipelines. One for the pixelwise spectral classifier, and one for the patch-based spatial classifier. The pixel classifier is responsible for generating candidate sites, while the patch classifier is responsible for validating candidates.
 
