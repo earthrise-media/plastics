@@ -1,4 +1,8 @@
+
+import datetime
+
 import descarteslabs as dl
+from dateutil.relativedelta import relativedelta
 import numpy as np
 import shapely
 
@@ -89,3 +93,94 @@ def pad_patch(patch, width):
         patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
     patch = patch[:width, :width, :12]
     return patch
+
+def download_batches(polygon, start_date, end_date, batch_months):
+    """Download cloud-masked Sentinel imagery in time-interval batches.
+    
+    Args:
+        polygon: A GeoJSON-like polygon
+        start_date: Isoformat start date
+        end_date: Isoformat end start
+        batch_months: Batch length in integer number of months
+    
+    Returns: List of lists of images, one list per batch
+    """
+    batches = []
+    delta = relativedelta(months=batch_months)
+    start = datetime.date.fromisoformat(start_date)
+    end = start + delta
+    while end <= datetime.date.fromisoformat(end_date):
+        try:
+            batch = download_patch(polygon, start.isoformat(), end.isoformat())
+        except IndexError as e:
+            print(f'Failed to retreive month {start.isoformat()}: {repr(e)}')
+            patch = []
+        batches.append(batch)
+        start += delta
+        end += delta
+    return batches
+
+def download_mosaics(polygon, start_date, end_date, mosaic_period=1,
+                     method='median'):
+    """Download cloud-masked Sentinel image mosaics
+    
+    Args:
+        polygon: A GeoJSON-like polygon
+        start_date: Isoformat start date
+        end_date: Isoformat end start
+        mosaic_period: Integer months over which to mosaic image data
+        method: String method to pass to mosaic() 
+    
+    Returns: List of image mosaics
+    """
+    batches = download_batches(polygon, start_date, end_date, mosaic_period)
+    mosaics = [mosaic(batch, method) for batch in batches]
+    return mosaics
+
+def mosaic(arrays, method):
+    """Mosaic masked arrays.
+    
+    Args:
+        arrays: A list of masked arrays
+        method: 
+            'median': return the median of valid pixel values
+            'min_masked': return the array with fewest masked pixels 
+        
+    Returns: A masked array or None if arrays is an empty list
+    """
+    if not arrays:
+        return
+
+    if method == 'median':
+        stack = np.ma.stack(arrays)
+        reduced = np.ma.median(stack, axis=0)
+    elif method == 'min_masked': 
+        mask_sorted = sorted(arrays, key=lambda p:np.sum(p.mask))
+        reduced = next(iter(mask_sorted))
+    else:
+        raise ValueError(f'Method {method} not recognized.')
+    
+    return reduced
+
+def pair(mosaics, gap=6):
+    """Pair image mosaics from a list.
+
+    Args: 
+        mosaics: A list of masked arrays
+        gap: Integer gap between mosaics in number of mosaic periods
+
+    Returns: A list of lists of images.
+    """
+    pairs = [[a, b] for a, b in zip(mosaics, mosaics[gap:])
+                  if a is not None and b is not None]
+    pairs = [p for p in pairs if _masks_match(p)]
+    return pairs
+
+def _masks_match(pair):
+    """Check whether arrays in a pair share the same mask.
+
+    This enforces identical cloud masking on an image pair. Any 
+    residual mask is expected to define a polygon within the raster. 
+    """
+    return (pair[0].mask == pair[1].mask).all()
+
