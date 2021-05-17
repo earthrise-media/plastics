@@ -52,6 +52,13 @@ def download_patch(polygon, start_date, end_date):
         end_datetime=end_date
     )
 
+    # select only scenes that have a cloud mask
+    cloud_dates = [scene.properties.acquired for scene in cloud_scenes]
+    dates = [scene.properties.acquired for scene in scenes]
+    shared_dates = set(cloud_dates) & set(dates)
+    scenes = scenes.filter(lambda x: x.properties.acquired in shared_dates)
+    cloud_scenes = cloud_scenes.filter(lambda x: x.properties.acquired in shared_dates)
+
     # A cloud stack is an array with shape (num_img, data_band, height, width)
     # A value of 255 means that the pixel is cloud free, 0 means cloudy
     cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'],
