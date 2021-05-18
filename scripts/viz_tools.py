@@ -1,9 +1,9 @@
-import os
-
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from sklearn.manifold import TSNE
+from tqdm import tqdm
 
 # Sentinel 2 band descriptions
 band_descriptions = {
@@ -108,7 +108,7 @@ def create_img_stack_mean(patch_history, cloud_threshold=0.2):
 def plot_image_grid(patches, labels=False, file_path=None):
     num_img = int(np.ceil(np.sqrt(len(patches))))
     plt.figure(figsize=(num_img, num_img), dpi=100)
-    for index, img in enumerate(patches):
+    for index, img in enumerate(tqdm(patches)):
         plt.subplot(num_img, num_img, index + 1)
         if np.ma.is_masked(img):
             img[img.mask] = 0
