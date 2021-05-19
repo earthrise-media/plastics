@@ -173,10 +173,9 @@ def pair(mosaics, gap=6):
     """
     pairs = [[a, b] for a, b in zip(mosaics, mosaics[gap:])
                   if a is not None and b is not None]
-    pairs = [p for p in pairs if _masks_match(p)]
     return pairs
 
-def _masks_match(pair):
+def masks_match(pair):
     """Check whether arrays in a pair share the same mask.
 
     This enforces identical cloud masking on an image pair. Any 
@@ -184,3 +183,20 @@ def _masks_match(pair):
     """
     return (pair[0].mask == pair[1].mask).all()
 
+def shape_pair_as_pixels(pair):
+    """Convert a pair of images into a pixel-wise array of data samples.
+
+    Returns: Array of pixel elements, each having shape (channels, len(pair))
+    """
+    height, width, channels = next(iter(pair)).shape
+    pixels = np.moveaxis(np.array(pair), 0, -1)
+    pixels = pixels.reshape(height * width, channels, len(pair))
+    return pixels
+
+def preds_to_image(preds, input_pair):
+    """Reshape and mask spectrogram model predictions."""
+    channel00 = input_pair[0][:,:,0]
+    channel10 = input_pair[1][:,:,0]
+    img = preds.reshape(channel00.shape)
+    img = np.ma.masked_where(channel00.mask | channel10.mask, img)
+    return img

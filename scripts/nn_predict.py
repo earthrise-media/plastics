@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-from scripts.dl_utils import download_patch, rect_from_point
+from scripts import dl_utils
 from scripts.viz_tools import normalize
 
 def make_predictions(patches, model):
@@ -16,6 +16,14 @@ def make_predictions(patches, model):
         preds = np.ma.masked_where(patch.mask[:,:,0], preds)
         pred_stack.append(preds)
     return pred_stack
+
+def predict_spectrogram(image_pair, model):
+    """Run a spectrogram model on a pair of images."""
+    pixels = dl_utils.shape_pair_as_pixels(image_pair)
+    input_array = np.expand_dims(normalize(pixels), -1)
+    preds = model.predict(input_array)[:,1]
+    output_img = dl_utils.preds_to_image(preds, image_pair)
+    return output_img
 
 def visualize_predictions(patches, pred_stack, threshold=0.8, name=None, save=False):
 
@@ -78,7 +86,8 @@ def main():
     name = f"{lat:.2f}, {lon:.2f}, {width} patch, {start_date}:{end_date}"
     model = keras.models.load_model(model_path)
     print("Downloading data")
-    patches = download_patch(rect_from_point([lon, lat], width), start_date, end_date)
+    patches = dl_utils.download_patch(
+        dl_utils.rect_from_point([lon, lat], width), start_date, end_date)
     print("Making Predictions")
     pred_stack = make_predictions(patches, model)
     visualize_predictions(patches, pred_stack, threshold=threshold, name=name, save=True)
