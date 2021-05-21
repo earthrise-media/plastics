@@ -17,14 +17,6 @@ def make_predictions(patches, model):
         pred_stack.append(preds)
     return pred_stack
 
-def predict_spectrogram(image_pair, model):
-    """Run a spectrogram model on a pair of images."""
-    pixels = dl_utils.shape_pair_as_pixels(image_pair)
-    input_array = np.expand_dims(normalize(pixels), -1)
-    preds = model.predict(input_array)[:,1]
-    output_img = dl_utils.preds_to_image(preds, image_pair)
-    return output_img
-
 def visualize_predictions(patches, pred_stack, threshold=0.8, name=None, save=False):
 
     rgb = normalize(np.ma.mean(patches, axis=0))[:,:,3:0:-1]
