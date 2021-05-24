@@ -4,7 +4,7 @@ from dateutil.relativedelta import relativedelta
 import descarteslabs as dl
 from tqdm import tqdm
 
-import dl_utils
+from scripts import dl_utils
 
 SYSTEM_PARAMS = {
     'image': ('us.gcr.io/dl-ci-cd/images/tasks/public/' +
@@ -14,10 +14,11 @@ SYSTEM_PARAMS = {
     'maximum_concurrency': 60,
     'retry_count': 0,
     'task_timeout': 20000,
-    'include_modules': ['dl_utils']
+    'include_modules': ['scripts.dl_utils']
 }
 
 def run_model(dlkey, product_id, model_name, start_date, end_date):
+    """Wrap a call to DescartesRun for us in DL async processing."""
     import dl_utils
     runner = dl_utils.DescartesRun(product_id, model_name)
     runner(dlkey, start_date, end_date)
@@ -37,7 +38,7 @@ def main(*args):
                         default='../data/bali.json')
     parser.add_argument('--product_id',
                         type=str,
-                        help='ID of catalog product (prefix with earthrise)',
+                        help='ID of catalog product',
                         default='earthrise:tpa_nn_toa')
     parser.add_argument('--product_name',
                         type=str,
@@ -53,11 +54,11 @@ def main(*args):
                         default=16)
     parser.add_argument('--model_file',
                         type=str,
-                        help='Model file for prediction',
-                        default='../models/model_filtered_toa-12-09-2020.h5')
+                        help='Local path to model file to upload',
+                        default='')
     parser.add_argument('--model_name',
                         type=str,
-                        help='Model name in DLStorage',
+                        help='Model name in DL Storage',
                         default='model_filtered_toa-12-09-2020.h5')
     parser.add_argument('--mosaic_period',
                         type=int,
@@ -67,44 +68,37 @@ def main(*args):
                         type=int,
                         help=('Spectrogram time interval, in mosaic periods'),
                         default=6)
-""" To delete:
-    parser.add_argument('--spectrogram_steps',
-                        type=int,
-                        help=('Number of time steps in the spectrogram:' +
-                              'Use 1 for no temporal dimension.'),
-                        default=2)
-"""
-    # Note on dates: A number of mosaics will be created within these bounds,
-    # depending on the mosaic_period. Additional data to fill out a spectrogram
-    # for each mosaic will be sought from earlier times, as dictated
-    # by spectrogram_interval and the number of time steps in the spectrogram. 
+    # Note on dates: Date range should be longer than the spectrogram length.
+    # Starting on successive mosaic periods (typically: monthly), as many
+    # spectrograms are created as fit in the date range.
     parser.add_argument('--start_date',
                         type=str,
                         help='Isoformat start date for predictions',
-                        default='2020-09-01')
+                        default='2020-06-01')
     parser.add_argument('--end_date',
                         type=str,
                         help='Isoformat end date for predictions',
-                        default='2021-01-01')
+                        default='2020-10-01'),
+    parser.add_argument('--run_local',
+                        action='store_true',
+                        help='Run model locally rather than async on DL.')
     args = parser.parse_args(*args)
 
     tiles = dl_utils.get_tiles_from_roi(args.roi_file, args.tilesize, args.pad)
     
-    mosaic_starts = dl_utils.get_starts(
-        args.start_date, args.end_date, args.mosaic_period)
-    band_names = mosaic_starts + ['median']
+    # This init handles product creation and model upload.
+    runner = dl_utils.DescartesRun(**vars(args))
 
-    # This first init handles product creation and model upload.
-    dl_utils.DescartesRun(output_band_names=band_names, **vars(args))
+    if args.run_local:
+        for dlkey in tqdm(tiles):
+            runner(dlkey, args.start_date, args.end_date)
+    else:
+        async_func = dl.Tasks().create_function(
+            run_model, name=args.product_name, **SYSTEM_PARAMS)
 
-    async_func = dl.Tasks().create_function(
-        run_model, name=args.product_name, **SYSTEM_PARAMS)
-
-    for dlkey in tqdm(tiles):
-        task = async_func(dlkey, args.product_id, args.model_name,
-                              args.start_date, args.end_date)
-        print(task.result)
-        print(task.log)
+        for dlkey in tqdm(tiles):
+            async_func(dlkey, args.product_id, args.model_name,
+                           args.start_date, args.end_date)
         
 if __name__ == "__main__":
     main()
