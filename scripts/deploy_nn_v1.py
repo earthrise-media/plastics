@@ -10,7 +10,7 @@ SYSTEM_PARAMS = {
     'image': ('us.gcr.io/dl-ci-cd/images/tasks/public/' +
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
-    'memory': '12Gi',
+    'memory': '20Gi',
     'maximum_concurrency': 60,
     'retry_count': 0,
     'task_timeout': 20000,
