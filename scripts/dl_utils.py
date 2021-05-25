@@ -124,13 +124,13 @@ def pad_patch(patch, width):
 
 def download_batches(polygon, start_date, end_date, batch_months):
     """Download cloud-masked Sentinel imagery in time-interval batches.
-    
+
     Args:
         polygon: A GeoJSON-like polygon
         start_date: Isoformat start date
         end_date: Isoformat end start
         batch_months: Batch length in integer number of months
-    
+
     Returns: List of lists of images, one list per batch
     """
     batches, raster_infos = [], []
@@ -160,18 +160,18 @@ def get_starts(start_date, end_date, mosaic_period, spectrogram_length):
         starts.append(start.isoformat())
         start += delta
     return starts
-    
+
 def download_mosaics(polygon, start_date, end_date, mosaic_period=1,
                      method='median'):
     """Download cloud-masked Sentinel image mosaics
-    
+
     Args:
         polygon: A GeoJSON-like polygon
         start_date: Isoformat start date
         end_date: Isoformat end start
         mosaic_period: Integer months over which to mosaic image data
-        method: String method to pass to mosaic() 
-    
+        method: String method to pass to mosaic()
+
     Returns: List of image mosaics and list of meta-datas
     """
     batches, raster_infos = download_batches(polygon, start_date, end_date,
@@ -182,36 +182,36 @@ def download_mosaics(polygon, start_date, end_date, mosaic_period=1,
 
 def mosaic(arrays, method):
     """Mosaic masked arrays.
-    
+
     Args:
         arrays: A list of masked arrays
-        method: 
+        method:
             'median': return the median of valid pixel values
-            'min_masked': return the array with fewest masked pixels 
-        
+            'min_masked': return the array with fewest masked pixels
+
     Returns: A masked array or None if arrays is an empty list
     """
     if not arrays:
         return
 
     if method == 'median':
-        try: 
+        try:
             stack = np.ma.stack(arrays)
             reduced = np.ma.median(stack, axis=0)
         except:
             print(f'Reached exception in mosaic: {[a.shape for a in arrays]}')
-    elif method == 'min_masked': 
+    elif method == 'min_masked':
         mask_sorted = sorted(arrays, key=lambda p:np.sum(p.mask))
         reduced = next(iter(mask_sorted))
     else:
         raise ValueError(f'Method {method} not recognized.')
-    
+
     return reduced
 
 def pair(mosaics, interval=6):
     """Pair image mosaics from a list.
 
-    Args: 
+    Args:
         mosaics: A list of masked arrays
         interval: Integer interval between mosaics, in number of mosaic periods
 
@@ -226,12 +226,12 @@ def pair(mosaics, interval=6):
 def n_gram(mosaics, interval=6, n=2):
     return pair(mosaics, interval=interval)
 
-# WIP: This needs to be generalized from pair to gram. 
+# WIP: This needs to be generalized from pair to gram.
 def masks_match(pair):
     """Check whether arrays in a pair share the same mask.
 
-    This enforces identical cloud masking on an image pair. Any 
-    residual mask is expected to define a polygon within the raster. 
+    This enforces identical cloud masking on an image pair. Any
+    residual mask is expected to define a polygon within the raster.
     """
     return (pair[0].mask == pair[1].mask).all()
 
@@ -282,12 +282,12 @@ class DescartesRun(object):
         spectrogram_length: Total duration of a spectrogram in months
         input_bands: List of DL names identifying Sentinel bands
 
-    External methods: 
+    External methods:
         init_prodcut: Create or get DL catalog product with specified bands.
         reset_bands: Delete existing output bands.
         upload_model: Upload model to DL storage.
         init_model: Instantiate model from DL storage.
-        __call__: Run model on a geographic tile. 
+        __call__: Run model on a geographic tile.
         predict: Predict on image-mosaic spectrograms.
         add_band: Create a band in the DL product.
         upload_raster: Upload a raster to DL storage.
@@ -311,7 +311,7 @@ class DescartesRun(object):
         self.nodata = nodata
         self.band_names = band_names
         self.product = self.init_product()
-        
+
         self.model_name = model_name
         if model_file:
             self.upload_model(model_file)
@@ -319,28 +319,27 @@ class DescartesRun(object):
         self.mosaic_period = mosaic_period
         self.spectrogram_interval = spectrogram_interval
         self.spectrogram_length = self._get_gram_length()
-        
+
         self.input_bands = input_bands
 
     def init_product(self):
         """Create or get DL catalog product."""
         product = dl.catalog.Product.get_or_create(id=self.product_id,
                                                    name=self.product_name)
-            
+
         product.save()
         print(f'Got product {self.product_id}')
         return product
 
-   def reset_bands(self):
-       """Delete existing output bands. 
-
-       It is probably best to avoid reusing product_ids with different
-       input parameters. Calling this function manually would avoid confusion
-       in that case. 
-       """
-       for band in self.product.bands():
+    def reset_bands(self):
+        """Delete existing output bands.
+        It is probably best to avoid reusing product_ids with different
+        input parameters. Calling this function manually would avoid confusion
+        in that case.
+        """
+        for band in self.product.bands():
             band.delete()
-            
+
     def upload_model(self, model_file):
         """Upload model to DL storage."""
         if dl.Storage().exists(self.model_name):
@@ -360,19 +359,19 @@ class DescartesRun(object):
         n_intervals = self.model.input_shape[2]
         last_interval_months = self.mosaic_period
         return interval_months * (n_intervals - 1) + last_interval_months
-    
+
     def __call__(self, dlkey, start_date, end_date):
         """Run model on a geographic tile.
 
-        Args: 
-            dlkey: Key idenifying a DL tile. 
+        Args:
+            dlkey: Key idenifying a DL tile.
             start_date: Isoformat begin date for prediction window.
-            end_date: Isoformat end date for prediction window. 
+            end_date: Isoformat end date for prediction window.
 
         Returns: None. (Uploads raster output to DL storage.)
         """
         tile = dl.scenes.DLTile.from_key(dlkey)
-        
+
         mosaics, raster_info = download_mosaics(
             tile, start_date, end_date, self.mosaic_period)
         image_grams = n_gram(mosaics, self.spectrogram_interval)
@@ -392,12 +391,12 @@ class DescartesRun(object):
     def predict(self, image_gram):
         """Predict on image-mosaic spectrograms."""
         return predict_spectrogram(image_gram, self.model)
-    
+
     def add_band(self, band_name):
         """Create a band in the DL product."""
         if self.product.get_band(band_name):
             return
-        
+
         band = dl.catalog.SpectralBand(name=band_name, product=self.product)
         band.data_type = dl.catalog.DataType.FLOAT32
         band.data_range = (0, 1)
@@ -406,7 +405,7 @@ class DescartesRun(object):
         num_existing = self.product.bands().count()
         band.band_index = num_existing
         band.save()
-        
+
     def upload_raster(self, img, raster_meta, name):
         """Upload a raster to DL storage."""
         image_upload = dl.catalog.Image(product=self.product, name=name)
