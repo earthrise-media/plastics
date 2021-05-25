@@ -1,6 +1,7 @@
 
 import datetime
 import json
+import os
 
 import descarteslabs as dl
 from dateutil.relativedelta import relativedelta
@@ -88,13 +89,14 @@ def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
     cloud_dates = [scene.properties.acquired for scene in cloud_scenes]
     dates = [scene.properties.acquired for scene in scenes]
     shared_dates = set(cloud_dates) & set(dates)
-    scenes = scenes.filter(lambda x: x.properties.acquired in shared_dates)
-    cloud_scenes = cloud_scenes.filter(lambda x: x.properties.acquired in shared_dates)
+    scenes = scenes.filter(
+        lambda x: x.properties.acquired in shared_dates)
+    cloud_scenes = cloud_scenes.filter(
+        lambda x: x.properties.acquired in shared_dates)
 
     # A cloud stack is an array with shape (num_img, data_band, height, width)
     # A value of 255 means that the pixel is cloud free, 0 means cloudy
-    cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'],
-                                         ctx=geoctx)
+    cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'], ctx=geoctx)
 
     img_stack, raster_info = scenes.stack(
         bands=SENTINEL_BANDS, ctx=geoctx, raster_info=True)
@@ -103,8 +105,9 @@ def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
     # Add cloud masked pixels to the image mask
     img_stack.mask[cloud_masks.data == 0] = True
 
-    # Remove fully masked img from the stack and rearrange order to channels last
-    img_stack = [np.moveaxis(img, 0, -1) for img in img_stack if np.sum(img) > 0]
+    # Remove fully masked images and reorder to channels last
+    img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
+                     if np.sum(img) > 0]
 
     return img_stack, raster_info
 
@@ -113,8 +116,8 @@ def pad_patch(patch, width):
     Depending on how a polygon falls across pixel boundaries, it can be slightly
     bigger or smaller than intended.
     pad_patch trims pixels extending beyond the desired number of pixels if the
-    patch is larger than desired. If the patch is smaller, it will fill the edge by
-    reflecting the values.
+    patch is larger than desired. If the patch is smaller, it will fill the 
+    edge by reflecting the values.
     """
     h, w, c = patch.shape
     if h < width or w < width:
@@ -195,11 +198,8 @@ def mosaic(arrays, method):
         return
 
     if method == 'median':
-        try:
-            stack = np.ma.stack(arrays)
-            reduced = np.ma.median(stack, axis=0)
-        except:
-            print(f'Reached exception in mosaic: {[a.shape for a in arrays]}')
+        stack = np.ma.stack(arrays)
+        reduced = np.ma.median(stack, axis=0)
     elif method == 'min_masked':
         mask_sorted = sorted(arrays, key=lambda p:np.sum(p.mask))
         reduced = next(iter(mask_sorted))
@@ -297,7 +297,6 @@ class DescartesRun(object):
                  model_name,
                  product_name='',
                  model_file='',
-                 band_names=[],
                  mosaic_period=1,
                  spectrogram_interval=6,
                  nodata=-1,
@@ -307,9 +306,8 @@ class DescartesRun(object):
             self.product_id = product_id
         else:
             self.product_id = f'earthrise:{product_id}'
-        self.product_name = product_name
+        self.product_name = product_name if product_name else self.product_id
         self.nodata = nodata
-        self.band_names = band_names
         self.product = self.init_product()
 
         self.model_name = model_name
@@ -326,13 +324,13 @@ class DescartesRun(object):
         """Create or get DL catalog product."""
         product = dl.catalog.Product.get_or_create(id=self.product_id,
                                                    name=self.product_name)
-
         product.save()
         print(f'Got product {self.product_id}')
         return product
 
     def reset_bands(self):
         """Delete existing output bands.
+        
         It is probably best to avoid reusing product_ids with different
         input parameters. Calling this function manually would avoid confusion
         in that case.
@@ -350,8 +348,11 @@ class DescartesRun(object):
 
     def init_model(self):
         """Instantiate model from DL storage."""
-        dl.Storage().get_file(self.model_name, self.model_name)
-        return keras.models.load_model(self.model_name)
+        temp_file = 'tmp-' + self.model_name
+        dl.Storage().get_file(self.model_name, temp_file)
+        model = keras.models.load_model(temp_file)
+        os.remove(temp_file)
+        return model
 
     def _get_gram_length(self):
         """Compute the length of the spectrogram in months."""
