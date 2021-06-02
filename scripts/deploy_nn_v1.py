@@ -6,22 +6,32 @@ from tqdm import tqdm
 
 from scripts import dl_utils
 
-SYSTEM_PARAMS = {
+
+DL_SYSTEM_PARAMS = {
     'image': ('us.gcr.io/dl-ci-cd/images/tasks/public/' +
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
-    'memory': '20Gi',
     'maximum_concurrency': 60,
     'retry_count': 2,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
 
-def run_model(dlkey, product_id, model_name, start_date, end_date):
-    """Wrap a call to DescartesRun for us in DL async processing."""
+DL_MEMORY_PER_MOSAIC_MONTH = 20 # In GB
+
+def run_model(dlkey, **kwargs):
+    """Wrap a call to DescartesRun for use in DL async processing.
+
+    Required kwargs:
+        product_id: String ID of a DL catalog product
+        model_name: Model name in DL storage
+        start_date, end_date: Isoformat date strings
+
+    Optional kwargs are passed to the instantiation of DescartesRun.
+    """
     import dl_utils
-    runner = dl_utils.DescartesRun(product_id, model_name)
-    runner(dlkey, start_date, end_date)
+    runner = dl_utils.DescartesRun(**kwargs)
+    runner(dlkey, kwargs['start_date'], kwargs['end_date'])
 
 def main(*args):
     """Deploy a model on the Descartes Labs platform.
@@ -97,12 +107,15 @@ def main(*args):
         for dlkey in tqdm(tiles):
             runner(dlkey, args.start_date, args.end_date)
     else:
+        system_params = DL_SYSTEM_PARAMS.copy()
+        system_params.update({
+            'memory': f'{DL_MEMORY_PER_MOSAIC_MONTH * args.mosaic_period}Gi'
+        })
         async_func = dl.Tasks().create_function(
-            run_model, name=args.product_name, **SYSTEM_PARAMS)
+            run_model, name=args.product_name, **system_params)
 
         for dlkey in tqdm(tiles):
-            async_func(dlkey, args.product_id, args.model_name,
-                           args.start_date, args.end_date)
+            async_func(dlkey, **vars(args))
         
 if __name__ == "__main__":
     main()
