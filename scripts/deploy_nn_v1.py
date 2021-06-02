@@ -12,7 +12,7 @@ DL_SYSTEM_PARAMS = {
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
     'maximum_concurrency': 60,
-    'memory': '24Gi'
+    'memory': '24Gi',
     'retry_count': 2,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
