@@ -64,6 +64,10 @@ def main(*args):
                         type=int,
                         help='Months over which to mosaic image data',
                         default=1)
+    parser.add_argument('--mosaic_method',
+                        type=str,
+                        help='Compositing method: "median"/"min"/"min_masked"',
+                        default='min')
     parser.add_argument('--spectrogram_interval',
                         type=int,
                         help=('Spectrogram time interval, in mosaic periods'),

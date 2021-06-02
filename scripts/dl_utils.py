@@ -190,6 +190,7 @@ def mosaic(arrays, method):
         arrays: A list of masked arrays
         method:
             'median': return the median of valid pixel values
+            'min': return the minimum of valid pixel values
             'min_masked': return the array with fewest masked pixels
 
     Returns: A masked array or None if arrays is an empty list
@@ -200,6 +201,9 @@ def mosaic(arrays, method):
     if method == 'median':
         stack = np.ma.stack(arrays)
         reduced = np.ma.median(stack, axis=0)
+    elif method == 'min':
+        stack = np.ma.stack(arrays)
+        reduced = np.ma.min(stack, axis=0)
     elif method == 'min_masked':
         mask_sorted = sorted(arrays, key=lambda p:np.sum(p.mask))
         reduced = next(iter(mask_sorted))
@@ -277,6 +281,7 @@ class DescartesRun(object):
         model_name: String identifier for learned Keras model
         model: Instantiated Keras model
         mosaic_period: Integer number of months worth of data to mosaic
+        mosaic_method: Compositing method for the mosaic() function
         spectrogram_interval: Integer number of mosaic periods between mosaics
             input to spectrogram
         spectrogram_length: Total duration of a spectrogram in months
@@ -298,6 +303,7 @@ class DescartesRun(object):
                  product_name='',
                  model_file='',
                  mosaic_period=1,
+                 mosaic_method='min',
                  spectrogram_interval=6,
                  nodata=-1,
                  input_bands=SENTINEL_BANDS,
@@ -315,6 +321,7 @@ class DescartesRun(object):
             self.upload_model(model_file)
         self.model = self.init_model()
         self.mosaic_period = mosaic_period
+        self.mosaic_method = mosaic_method
         self.spectrogram_interval = spectrogram_interval
         self.spectrogram_length = self._get_gram_length()
 
@@ -374,7 +381,7 @@ class DescartesRun(object):
         tile = dl.scenes.DLTile.from_key(dlkey)
 
         mosaics, raster_info = download_mosaics(
-            tile, start_date, end_date, self.mosaic_period)
+            tile, start_date, end_date, self.mosaic_period, self.mosaic_method)
         image_grams = n_gram(mosaics, self.spectrogram_interval)
 
         preds = [self.predict(gram) for gram in image_grams]
