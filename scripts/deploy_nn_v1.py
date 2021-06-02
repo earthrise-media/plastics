@@ -12,7 +12,7 @@ SYSTEM_PARAMS = {
     'cpus': 1,
     'memory': '20Gi',
     'maximum_concurrency': 60,
-    'retry_count': 0,
+    'retry_count': 2,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
