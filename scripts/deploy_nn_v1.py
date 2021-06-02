@@ -12,12 +12,11 @@ DL_SYSTEM_PARAMS = {
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
     'maximum_concurrency': 60,
+    'memory': '24Gi'
     'retry_count': 2,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
-
-DL_MEMORY_PER_MOSAIC_MONTH = 20 # In GB
 
 def run_model(dlkey, **kwargs):
     """Wrap a call to DescartesRun for use in DL async processing.
@@ -107,12 +106,8 @@ def main(*args):
         for dlkey in tqdm(tiles):
             runner(dlkey, args.start_date, args.end_date)
     else:
-        system_params = DL_SYSTEM_PARAMS.copy()
-        system_params.update({
-            'memory': f'{DL_MEMORY_PER_MOSAIC_MONTH * args.mosaic_period}Gi'
-        })
         async_func = dl.Tasks().create_function(
-            run_model, name=args.product_name, **system_params)
+            run_model, name=args.product_name, **DL_SYSTEM_PARAMS)
 
         for dlkey in tqdm(tiles):
             async_func(dlkey, **vars(args))
