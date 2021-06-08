@@ -8,7 +8,7 @@ This repo contains the tools for detecting plastics and/or landfills using Senti
 
 ### Setup
 
-The repo is known to work with Python 3.7 but not 3.6. 
+The code is known to run on Python 3.7 but not 3.6. 
 ```
 $ python -m venv env
 $ source env/bin/activate
