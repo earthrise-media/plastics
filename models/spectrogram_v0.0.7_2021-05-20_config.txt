@@ -1,0 +1,20 @@
+Input Data:
+tpa_polygons_2019-01-01_2021-01-01_pixel_arrays.pkl
+java_v1.0_positive_polygons_2019-01-01_2021-01-01_pixel_arrays.pkl
+v_1.1.5_negatives_2019-01-01_2021-01-01_pixel_arrays.pkl
+city_points_30_negatives_2019-01-01_2021-01-01_pixel_arrays.pkl
+bali_bare_earth_negatives_2019-01-01_2021-01-01_pixel_arrays.pkl
+bali_bootstrap_negatives_2019-01-01_2021-01-01_pixel_arrays.pkl
+
+Batch Size: 128
+Training Epochs: 15
+
+Classification Report
+              precision    recall  f1-score   support
+
+      No TPA       0.99      1.00      1.00    956374
+         TPA       0.95      0.81      0.87     35015
+
+    accuracy                           0.99    991389
+   macro avg       0.97      0.90      0.94    991389
+weighted avg       0.99      0.99      0.99    991389

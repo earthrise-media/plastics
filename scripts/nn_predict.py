@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-from scripts.dl_utils import download_patch, rect_from_point
+from scripts import dl_utils
 from scripts.viz_tools import normalize
 
 def make_predictions(patches, model):
@@ -78,7 +78,8 @@ def main():
     name = f"{lat:.2f}, {lon:.2f}, {width} patch, {start_date}:{end_date}"
     model = keras.models.load_model(model_path)
     print("Downloading data")
-    patches = download_patch(rect_from_point([lon, lat], width), start_date, end_date)
+    patches = dl_utils.download_patch(
+        dl_utils.rect_from_point([lon, lat], width), start_date, end_date)
     print("Making Predictions")
     pred_stack = make_predictions(patches, model)
     visualize_predictions(patches, pred_stack, threshold=threshold, name=name, save=True)
