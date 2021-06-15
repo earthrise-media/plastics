@@ -1,0 +1,208 @@
+openapi: 3.0.0
+info:
+  title: Plastic Dump Sites API
+  description: API for finding plastic sites detected via machile learning. See [Global Plastics Watch](https://gpw.earthrise.media/)
+  version: 0.0.1
+servers:
+  - url: http://api.earthrise.com/v1/plastics/
+    description: Production (notional)
+  - url: http://api-dev.earthrise.com/v1/plastics/
+    description: Developement (notional)
+  
+paths:
+  /sites:
+    get:
+      tags: 
+      - Sites
+      summary: Returns a collection of sites.
+      description: Optional extended description in CommonMark or HTML.
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 100
+          description: The maximum number of sites to return
+        - in: query
+          name: offset
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          description: The offset from the start of the collection (sorting is internal currently)
+        - in: query
+          name: bbox
+          description: 'bounding coordinates in decimal degrees in the following order:  minlon,maxlon,minlat,maxlat'
+          style: form
+          explode: false
+          schema:
+            type: array
+            items:
+              type: number
+              minimum: -180
+              maximum: 180
+            default: -180.00,180.00,-90.00,90.00
+          example: '-180.00,180.00,-90.00,90.00'
+      responses:
+        '200':
+          description: 'A geojson formatted feature collection containing centroids of platic sites, metadata about the site and a URL to retrieve more detailed information' 
+          content:
+            application/json:
+              schema: 
+                $ref: 'https://geojson.org/schema/FeatureCollection.json'
+              example: 
+                type: FeatureCollection
+                features:
+                  - type: Feature
+                    properties:
+                      id: site_1
+                      first_detected: 2019-09-07T15:50+00Z
+                      last_detected: 2021-06-14T12:50+00Z
+                      ref: 'http://api.earthrise.com/v1/platics/sites/site_1'
+                    geometry:
+                      type: Point
+                      coordinates:
+                      - -7.159857
+                      - 111.559408
+                  - type: Feature
+                    properties:
+                      id: site_2
+                      first_detected: 2019-10-07T15:50+00Z
+                      last_detected: 2021-06-14T12:50+00Z
+                      ref: 'http://api.earthrise.com/v1/platics/sites/site_2'
+                    geometry:
+                      type: Point
+                      coordinates:
+                      - -7.5767857
+                      - 112.559408
+        '400':
+          description: Bad request, parameters are likely invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Not allowed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404': 
+          description: Probably the wrong path
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500': 
+          description: Internal server error, see error message 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /sites/{site_id}:
+    get:
+      tags: 
+      - Sites
+      summary: Returns details for a given site.
+      description: Optional extended description in CommonMark or HTML.
+      parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
+      responses:
+        '200':  
+          description: 'A geojson formatted featureCollection containing the history of detections for a given site.' 
+          content:
+            application/json:
+              schema: 
+                $ref: 'https://geojson.org/schema/FeatureCollection.json'
+              example: 
+                type: FeatureCollection
+                features:
+                  - type: Feature
+                    properties:
+                      id: site_1
+                      date: 2019-09-07T15:50+00Z
+                    geometry:
+                      type: MultiPolygon
+                      coordinates:
+                      - 
+                        - 
+                          - 
+                            - 0
+                            - 0
+                          -
+                            - 0
+                            - 1
+                          -
+                            - 1
+                            - 1
+                          -
+                            - 1
+                            - 0
+                          -
+                            - 0
+                            - 0
+                  - type: Feature
+                    properties:
+                      id: site_1
+                      date: 2021-06-14T12:50+00Z
+                    geometry:
+                      type: MultiPolygon
+                      coordinates:
+                      - 
+                        - 
+                          - 
+                            - 0
+                            - 0
+                          -
+                            - 0
+                            - 1
+                          -
+                            - 1
+                            - 1
+                          -
+                            - 1
+                            - 0
+                          -
+                            - 0
+                            - 0
+        '400':
+          description: Bad request, parameters are likely invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Not allowed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404': 
+          description: Site_id parameter in the path likely does not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500': 
+          description: Internal server error, see error message 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              
+components: 
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          description: what is wrong 
+        locator:
+          type: string
+          description: what caused the problem
