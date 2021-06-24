@@ -122,7 +122,8 @@ def pad_patch(patch, width):
     h, w, c = patch.shape
     if h < width or w < width:
         patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
-    patch = patch[:width, :width, :12]
+    patch = patch[int(np.floor((h - width) / 2)) : h - int(np.ceil((h - width) / 2)),
+                  int(np.floor((w - width) / 2)) : w - int(np.ceil((w - width) / 2)), :12]
     return patch
 
 def download_batches(polygon, start_date, end_date, batch_months):
@@ -343,6 +344,7 @@ class DescartesRun(object):
     """
     def __init__(self,
                  product_id,
+                 patch_product_id,
                  model_name,
                  product_name='',
                  model_file='',
@@ -356,6 +358,7 @@ class DescartesRun(object):
                  **kwargs):
         if product_id.startswith('earthrise:'):
             self.product_id = product_id
+            self.patch_product_id = patch_product_id
         else:
             self.product_id = f'earthrise:{product_id}'
         self.product_name = product_name if product_name else self.product_id
@@ -393,16 +396,16 @@ class DescartesRun(object):
         fc_ids = [fc.id for fc in dl.vectors.FeatureCollection.list()]
         product_id = None
         for fc in fc_ids:
-            if self.product_id in fc:
+            if self.patch_product_id in fc:
                 product_id = fc
 
         if not product_id:
-            print("Creating product", self.product_id + '_patches')
-            product = dl.vectors.FeatureCollection.create(product_id=self.product_id + '_patches',
+            print("Creating product", self.patch_product_id + '_patches')
+            product = dl.vectors.FeatureCollection.create(product_id=self.patch_product_id + '_patches',
                                                           title=self.product_name + '_patches',
                                                           description=self.patch_model_name)
         else:
-            print(f"Product {self.product_id}_patches already exists...")
+            print(f"Product {self.patch_product_id}_patches already exists...")
             product = dl.vectors.FeatureCollection(product_id)
         #dl.vectors.FeatureCollection(fc).delete()
         return product

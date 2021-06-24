@@ -49,6 +49,10 @@ def main(*args):
                         type=str,
                         help='ID of catalog product',
                         default='earthrise:tpa_nn_toa')
+    parser.add_argument('--patch_product_id',
+                        type=str,
+                        help='ID of catalog product',
+                        default='')
     parser.add_argument('--product_name',
                         type=str,
                         help='Name of catalog product',
