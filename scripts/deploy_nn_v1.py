@@ -36,9 +36,9 @@ def main(*args):
     """Deploy a model on the Descartes Labs platform.
 
     Args:
-        args:list: Can include any pair of form (flag, argument) passed to  
+        args:list: Can include any pair of form (flag, argument) passed to
             the argument parser, e.g. ['--roi_file', '../data/bali.json'].
-            Cannot be None if calling from an interpreter. Give [] instead. 
+            Cannot be None if calling from an interpreter. Give [] instead.
     """
     parser = argparse.ArgumentParser('Configure TPA detector deployment')
     parser.add_argument('--roi_file',
@@ -60,7 +60,7 @@ def main(*args):
     parser.add_argument('--pad',
                         type=int,
                         help='Padding in pixels',
-                        default=16)
+                        default=0)
     parser.add_argument('--model_file',
                         type=str,
                         help='Local path to model file to upload',
@@ -69,6 +69,14 @@ def main(*args):
                         type=str,
                         help='Model name in DL Storage',
                         default='model_filtered_toa-12-09-2020.h5')
+    parser.add_argument('--patch_model_file',
+                        type=str,
+                        help='Local path to model file to upload',
+                        default='')
+    parser.add_argument('--patch_model_name',
+                        type=str,
+                        help='Model name in DL Storage',
+                        default='')
     parser.add_argument('--mosaic_period',
                         type=int,
                         help='Months over which to mosaic image data',
@@ -98,7 +106,7 @@ def main(*args):
     args = parser.parse_args(*args)
 
     tiles = dl_utils.get_tiles_from_roi(args.roi_file, args.tilesize, args.pad)
-    
+
     # This init handles product creation and model upload.
     runner = dl_utils.DescartesRun(**vars(args))
 
@@ -111,8 +119,6 @@ def main(*args):
 
         for dlkey in tqdm(tiles):
             async_func(dlkey, **vars(args))
-        
+
 if __name__ == "__main__":
     main()
-    
-

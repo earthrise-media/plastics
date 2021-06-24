@@ -116,7 +116,7 @@ def pad_patch(patch, width):
     Depending on how a polygon falls across pixel boundaries, it can be slightly
     bigger or smaller than intended.
     pad_patch trims pixels extending beyond the desired number of pixels if the
-    patch is larger than desired. If the patch is smaller, it will fill the 
+    patch is larger than desired. If the patch is smaller, it will fill the
     edge by reflecting the values.
     """
     h, w, c = patch.shape
@@ -269,6 +269,50 @@ def predict_spectrogram(image_gram, model):
     output_img = preds_to_image(preds, image_gram)
     return output_img
 
+def patches_from_tile(tile, raster_info, model):
+    """
+    Break a larger tile of Sentinel data into a set of patches that
+    a model can process.
+    Inputs:
+        - tile: Sentinel data. Typically a numpy masked array
+        - raster_info: Descartes metadata for the tile
+        - model: keras model
+    Outputs:
+        - patches: A list of numpy arrays of the shape the model requires
+        - patch_coords: A list of shapely polygon features describing the patch bounds
+    """
+    patch_coords = raster_info[0]['wgs84Extent']['coordinates'][0]
+    delta_lon = patch_coords[2][0] - patch_coords[0][0]
+    delta_lat = patch_coords[1][1] - patch_coords[0][1]
+    top_left = patch_coords[0]
+
+    # The tile is broken into the number of whole patches
+    # Regions extending beyond will not be padded and processed
+    _, model_l, model_w, _ = model.input_shape
+    num_steps_lon = np.shape(tile)[0] // model_l
+    num_steps_lat = np.shape(tile)[1] // model_w
+
+    patch_coords = []
+    patches = []
+    for i in range(num_steps_lon):
+        for j in range(num_steps_lat):
+            patch = tile[j * model_l : model_l + j * model_l,
+                         i * model_w : model_l + i * model_w]
+            patches.append(patch)
+
+            nw_coord = [top_left[0] + i * delta_lon / num_steps_lon,
+                        top_left[1] + j * delta_lat / num_steps_lat]
+
+            tile_geometry = [nw_coord,
+                             [nw_coord[0], nw_coord[1] + delta_lat / num_steps_lat],
+                             [nw_coord[0] + delta_lon / num_steps_lon,
+                              nw_coord[1] + delta_lat / num_steps_lat],
+                             [nw_coord[0] + delta_lon / num_steps_lon, nw_coord[1]],
+                             nw_coord
+                            ]
+            patch_coords.append(shapely.geometry.Polygon(tile_geometry))
+    return patches, patch_coords
+
 class DescartesRun(object):
     """Class to manage bulk model prediction on the Descartes Labs platform.
 
@@ -288,7 +332,7 @@ class DescartesRun(object):
         input_bands: List of DL names identifying Sentinel bands
 
     External methods:
-        init_prodcut: Create or get DL catalog product with specified bands.
+        init_product: Create or get DL catalog product with specified bands.
         reset_bands: Delete existing output bands.
         upload_model: Upload model to DL storage.
         init_model: Instantiate model from DL storage.
@@ -302,6 +346,8 @@ class DescartesRun(object):
                  model_name,
                  product_name='',
                  model_file='',
+                 patch_model_file='',
+                 patch_model_name='',
                  mosaic_period=1,
                  mosaic_method='min',
                  spectrogram_interval=6,
@@ -320,6 +366,13 @@ class DescartesRun(object):
         if model_file:
             self.upload_model(model_file)
         self.model = self.init_model()
+
+        if patch_model_file:
+            self.patch_model_name = patch_model_name
+            self.upload_patch_model(patch_model_file)
+            self.patch_model = self.init_patch_model()
+            self.patch_product = self.init_patch_product()
+
         self.mosaic_period = mosaic_period
         self.mosaic_method = mosaic_method
         self.spectrogram_interval = spectrogram_interval
@@ -332,12 +385,31 @@ class DescartesRun(object):
         product = dl.catalog.Product.get_or_create(id=self.product_id,
                                                    name=self.product_name)
         product.save()
-        print(f'Got product {self.product_id}')
+        print(f'Got patch product {self.product_id}')
+        return product
+
+    def init_patch_product(self):
+        """Create or get DL catalog product."""
+        fc_ids = [fc.id for fc in dl.vectors.FeatureCollection.list()]
+        product_id = None
+        for fc in fc_ids:
+            if self.product_id in fc:
+                product_id = fc
+
+        if not product_id:
+            print("Creating product", self.product_id + '_patches')
+            product = dl.vectors.FeatureCollection.create(product_id=self.product_id + '_patches',
+                                                          title=self.product_name + '_patches',
+                                                          description=self.patch_model_name)
+        else:
+            print(f"Product {self.product_id}_patches already exists...")
+            product = dl.vectors.FeatureCollection(product_id)
+        #dl.vectors.FeatureCollection(fc).delete()
         return product
 
     def reset_bands(self):
         """Delete existing output bands.
-        
+
         It is probably best to avoid reusing product_ids with different
         input parameters. Calling this function manually would avoid confusion
         in that case.
@@ -353,6 +425,14 @@ class DescartesRun(object):
             dl.Storage().set_file(self.model_name, model_file)
             print(f'Model {model_file} uploaded with key {self.model_name}.')
 
+    def upload_patch_model(self, patch_model_file):
+        """Upload model to DL storage."""
+        if dl.Storage().exists(self.patch_model_name):
+            print(f'Model {self.patch_model_name} found in DLStorage.')
+        else:
+            dl.Storage().set_file(self.patch_model_name, patch_model_file)
+            print(f'Model {patch_model_file} uploaded with key {self.patch_model_name}.')
+
     def init_model(self):
         """Instantiate model from DL storage."""
         temp_file = 'tmp-' + self.model_name
@@ -360,6 +440,14 @@ class DescartesRun(object):
         model = keras.models.load_model(temp_file)
         os.remove(temp_file)
         return model
+
+    def init_patch_model(self):
+        """Instantiate model from DL storage."""
+        temp_file = 'tmp-' + self.patch_model_name
+        dl.Storage().get_file(self.patch_model_name, temp_file)
+        patch_model = keras.models.load_model(temp_file)
+        os.remove(temp_file)
+        return patch_model
 
     def _get_gram_length(self):
         """Compute the length of the spectrogram in months."""
@@ -379,11 +467,10 @@ class DescartesRun(object):
         Returns: None. (Uploads raster output to DL storage.)
         """
         tile = dl.scenes.DLTile.from_key(dlkey)
-
         mosaics, raster_info = download_mosaics(
             tile, start_date, end_date, self.mosaic_period, self.mosaic_method)
+        # Spectrogram pixel classifier prediction
         image_grams = n_gram(mosaics, self.spectrogram_interval)
-
         preds = [self.predict(gram) for gram in image_grams]
         preds.append(mosaic(preds, 'median'))
         preds = np.ma.stack(preds)
@@ -395,6 +482,31 @@ class DescartesRun(object):
             self.add_band(band_name)
         self.upload_raster(
             preds, next(iter(raster_info)), dlkey.replace(':', '_'))
+
+        # Spatial patch classifier prediction
+        preds_stack = []
+        for tile in mosaics:
+            print(raster_info[0]['wgs84Extent']['coordinates'][0])
+            patches, patch_coords = patches_from_tile(tile, raster_info, self.patch_model)
+            patch_preds = self.patch_model.predict(normalize(patches))[:,1]
+            preds_stack.append(patch_preds)
+
+        feature_list = []
+        for coords, preds in zip(patch_coords, np.array(preds_stack).T):
+            geometry = shapely.geometry.mapping(coords)
+            properties = {
+                'mean': np.mean(preds, axis=0).astype('float'),
+                'median': np.median(preds, axis=0).astype('float'),
+                'min': np.min(preds, axis=0).astype('float'),
+                'max': np.max(preds, axis=0).astype('float'),
+                'std': np.std(preds, axis=0).astype('float'),
+                'count': np.shape(preds)[0],
+            }
+            #if properties['mean'] > 0.01:
+            feature_list.append(dl.vectors.Feature(geometry = geometry, properties = properties))
+        print(len(feature_list), 'features generated')
+        if len(feature_list) > 0:
+            self.patch_product.add(feature_list)
 
     def predict(self, image_gram):
         """Predict on image-mosaic spectrograms."""
