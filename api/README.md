@@ -7,8 +7,9 @@ Building requires Go v 1.15+ and a simple:
 
 ### Testing
 
-Testing needs a PostGIS database. Easiest way is:
+Testing needs a PostGIS database. The easiest way is:
 
-`docker run --name test-postgis -e POSTGRES_DB=plastic -e POSTGRES_USER=postgis -e POSTGRES_PASSWORD=password -d mdillon/postgis`
+`docker run -e POSTGRES_DB=plastic -e POSTGRES_USER=postgis -p 5432:5432 -e POSTGRES_PASSWORD=password -d mdillon/postgis
+`
 
 Then: `go test`

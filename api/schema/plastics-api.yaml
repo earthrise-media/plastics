@@ -8,15 +8,27 @@ servers:
     description: Production (notional)
   - url: http://api-dev.earthrise.com/v1/plastics/
     description: Developement (notional)
-  
+
 paths:
   /sites:
     get:
-      tags: 
-      - Sites
+      tags:
+        - Sites
       summary: Returns a collection of sites.
-      description: Optional extended description in CommonMark or HTML.
+      description: This endpoint can be used to find specific sites using a bounding box and times
       parameters:
+        - in: query
+          name: before
+          schema:
+            type: string
+            default: "2022-00-00T00:00Z"
+          description: limits sites to those only first detected before the provided date
+        - in: query
+          name: after
+          schema:
+            type: string
+            default: '2000-00-00T00:00Z'
+          description: limits sites to those only first detected after the provided date
         - in: query
           name: limit
           schema:
@@ -45,66 +57,67 @@ paths:
           example: '-180.00,180.00,-90.00,90.00'
       responses:
         '200':
-          description: 'A geojson formatted feature collection containing centroids of platic sites, metadata about the site and a URL to retrieve more detailed information' 
+          description: 'A geojson formatted feature collection containing centroids of platic sites, metadata about the site and a URL to retrieve more detailed information'
           content:
             application/json:
-              schema: 
+              schema:
                 $ref: 'https://geojson.org/schema/FeatureCollection.json'
-              example: 
+              example:
                 type: FeatureCollection
                 features:
                   - type: Feature
                     properties:
                       id: site_1
-                      first_detected: 2019-09-07T15:50+00Z
-                      last_detected: 2021-06-14T12:50+00Z
+                      first_detected: '2019-09-07T15:50+00Z'
+                      last_detected: '2021-06-14T12:50+00Z'
                       ref: 'http://api.earthrise.com/v1/platics/sites/site_1'
                     geometry:
                       type: Point
                       coordinates:
-                      - -7.159857
-                      - 111.559408
+                        - -7.159857
+                        - 111.559408
                   - type: Feature
                     properties:
                       id: site_2
-                      first_detected: 2019-10-07T15:50+00Z
-                      last_detected: 2021-06-14T12:50+00Z
+                      first_detected: '2019-10-07T15:50+00Z'
+                      last_detected: '2021-06-14T12:50+00Z'
                       ref: 'http://api.earthrise.com/v1/platics/sites/site_2'
                     geometry:
                       type: Point
                       coordinates:
-                      - -7.5767857
-                      - 112.559408
+                        - -7.5767857
+                        - 112.559408
         '400':
           description: Bad request, parameters are likely invalid
           content:
-            application/json:
+            application/problem+json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
         '401':
           description: Not allowed
           content:
-            application/json:
+            application/problem+json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '404': 
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+        '404':
           description: Probably the wrong path
           content:
-            application/json:
+            application/problem+json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500': 
-          description: Internal server error, see error message 
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+        '500':
+          description: Internal server error, see error message
           content:
-            application/json:
+            application/problem+json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+
   /sites/{site_id}:
     get:
-      tags: 
-      - Sites
+      tags:
+        - Sites
       summary: Returns details for a given site.
-      description: Optional extended description in CommonMark or HTML.
+      description: something
       parameters:
         - in: path
           name: site_id
@@ -113,13 +126,13 @@ paths:
             type: string
           description: The site id
       responses:
-        '200':  
-          description: 'A geojson formatted featureCollection containing the history of detections for a given site.' 
+        '200':
+          description: 'A geojson formatted featureCollection containing the history of detections (contours) for a given site.'
           content:
             application/json:
-              schema: 
+              schema:
                 $ref: 'https://geojson.org/schema/FeatureCollection.json'
-              example: 
+              example:
                 type: FeatureCollection
                 features:
                   - type: Feature
@@ -129,23 +142,23 @@ paths:
                     geometry:
                       type: MultiPolygon
                       coordinates:
-                      - 
-                        - 
-                          - 
-                            - 0
-                            - 0
+                        -
                           -
-                            - 0
-                            - 1
-                          -
-                            - 1
-                            - 1
-                          -
-                            - 1
-                            - 0
-                          -
-                            - 0
-                            - 0
+                            -
+                              - 0
+                              - 0
+                            -
+                              - 0
+                              - 1
+                            -
+                              - 1
+                              - 1
+                            -
+                              - 1
+                              - 0
+                            -
+                              - 0
+                              - 0
                   - type: Feature
                     properties:
                       id: site_1
@@ -153,56 +166,128 @@ paths:
                     geometry:
                       type: MultiPolygon
                       coordinates:
-                      - 
-                        - 
-                          - 
-                            - 0
-                            - 0
+                        -
                           -
-                            - 0
-                            - 1
-                          -
-                            - 1
-                            - 1
-                          -
-                            - 1
-                            - 0
-                          -
-                            - 0
-                            - 0
+                            -
+                              - 0
+                              - 0
+                            -
+                              - 0
+                              - 1
+                            -
+                              - 1
+                              - 1
+                            -
+                              - 1
+                              - 0
+                            -
+                              - 0
+                              - 0
         '400':
           description: Bad request, parameters are likely invalid
           content:
-            application/json:
+            application/problem+json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '401':
-          description: Not allowed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '404': 
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+        '404':
           description: Site_id parameter in the path likely does not exist
           content:
-            application/json:
+            application/problem+json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500': 
-          description: Internal server error, see error message 
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+        '500':
+          description: Internal server error
+          content:
+            application/problem+json:
+              schema:
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+
+  /countours:
+    get:
+      tags:
+        - Contours
+      summary: Returns a collection of countours .
+      description: This endpoint allows query using location and time to find contours
+      parameters:
+        - in: query
+          name: before
+          schema:
+            type: string
+            default: "2022-00-00T00:00Z"
+          description: limits contours to those only first detected before the provided date
+        - in: query
+          name: after
+          schema:
+            type: string
+            default: '2000-00-00T00:00Z'
+          description: limits contours to those only first detected after the provided date
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 100
+          description: The maximum number of contours to return
+        - in: query
+          name: offset
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          description: The offset from the start of the collection (sorting is internal currently)
+        - in: query
+          name: bbox
+          description: 'bounding coordinates in decimal degrees in the following order:  minlon,maxlon,minlat,maxlat'
+          style: form
+          explode: false
+          schema:
+            type: array
+            items:
+              type: number
+              minimum: -180
+              maximum: 180
+            default: -180.00,180.00,-90.00,90.00
+          example: '-180.00,180.00,-90.00,90.00'
+      responses:
+        '200':
+          description: 'A geojson formatted feature collection containing multipolygons of contours, metadata about each contour and a URL ref to the site the contour belongs to'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-              
-components: 
-  schemas:
-    Error:
-      type: object
-      properties:
-        message:
-          type: string
-          description: what is wrong 
-        locator:
-          type: string
-          description: what caused the problem
+                $ref: 'https://geojson.org/schema/FeatureCollection.json'
+        '400':
+          description: error
+          content:
+            application/problem+json:
+              schema:
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+
+
+
+  /countours/{contour_id}:
+    get:
+      tags:
+        - Contours
+      summary: Returns a specific contour.
+      description: Returns a single contour as a geojson feature
+      parameters:
+        - in: path
+          name: contour_id
+          required: true
+          schema:
+            type: string
+          description: The contour id
+      responses:
+        '200':
+          description: error
+          content:
+            application/json:
+              schema:
+                $ref: https://geojson.org/schema/Feature.json
+
+        '400':
+          description: error
+          content:
+            application/problem+json:
+              schema:
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+

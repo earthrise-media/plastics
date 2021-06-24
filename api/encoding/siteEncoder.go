@@ -5,10 +5,10 @@ import (
 	"github.com/paulmach/orb/geojson"
 )
 
+
 func ToGeoJson(sites []*database.Site)(*geojson.FeatureCollection, error){
 
 	fc := geojson.NewFeatureCollection()
-
 
 	for _, site :=  range sites {
 
