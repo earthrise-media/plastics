@@ -33,3 +33,8 @@ func(sh *SiteHandler) GetSites(ctx iris.Context) {
 
 	ctx.JSON(fc)
 }
+
+func(sh *SiteHandler) GetSiteById(ctx iris.Context){
+
+
+}
