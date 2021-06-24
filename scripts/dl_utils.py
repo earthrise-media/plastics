@@ -487,15 +487,19 @@ class DescartesRun(object):
             preds, next(iter(raster_info)), dlkey.replace(':', '_'))
 
         # Spatial patch classifier prediction
-        preds_stack = []
+        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model)
+        pred_dict = {tuple(coord.bounds): [] for coord in patch_coords}
+        patch_cloud_threshold = 0.1
         for tile in mosaics:
-            print(raster_info[0]['wgs84Extent']['coordinates'][0])
-            patches, patch_coords = patches_from_tile(tile, raster_info, self.patch_model)
+            patches, _ = patches_from_tile(tile, raster_info, self.patch_model)
             patch_preds = self.patch_model.predict(normalize(patches))[:,1]
-            preds_stack.append(patch_preds)
+            for patch, coord, pred in zip(patches, patch_coords, patch_preds):
+                cloudiness = np.sum(patch.mask) / np.size(patch.mask)
+                if  cloudiness < patch_cloud_threshold:
+                    pred_dict[tuple(coord.bounds)].append(pred)
 
         feature_list = []
-        for coords, preds in zip(patch_coords, np.array(preds_stack).T):
+        for coords, preds in zip(patch_coords, pred_dict.values()):
             geometry = shapely.geometry.mapping(coords)
             properties = {
                 'mean': np.mean(preds, axis=0).astype('float'),
