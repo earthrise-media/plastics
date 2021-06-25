@@ -5,6 +5,7 @@ import os
 
 import descarteslabs as dl
 from dateutil.relativedelta import relativedelta
+import matplotlib.pyplot as plt
 import numpy as np
 import shapely
 from tensorflow import keras
@@ -270,7 +271,7 @@ def predict_spectrogram(image_gram, model):
     output_img = preds_to_image(preds, image_gram)
     return output_img
 
-def patches_from_tile(tile, raster_info, model):
+def patches_from_tile(tile, raster_info, width):
     """
     Break a larger tile of Sentinel data into a set of patches that
     a model can process.
@@ -289,18 +290,15 @@ def patches_from_tile(tile, raster_info, model):
 
     # The tile is broken into the number of whole patches
     # Regions extending beyond will not be padded and processed
-    _, model_l, model_w, _ = model.input_shape
-    num_steps_lon = np.shape(tile)[0] // model_l
-    num_steps_lat = np.shape(tile)[1] // model_w
-
+    num_steps_lon = np.shape(tile)[0] // width
+    num_steps_lat = np.shape(tile)[1] // width
     patch_coords = []
     patches = []
     for i in range(num_steps_lon):
         for j in range(num_steps_lat):
-            patch = tile[j * model_l : model_l + j * model_l,
-                         i * model_w : model_l + i * model_w]
+            patch = tile[j * width : width + j * width,
+                         i * width : width + i * width]
             patches.append(patch)
-
             nw_coord = [top_left[0] + i * delta_lon / num_steps_lon,
                         top_left[1] + j * delta_lat / num_steps_lat]
 
@@ -313,6 +311,15 @@ def patches_from_tile(tile, raster_info, model):
                             ]
             patch_coords.append(shapely.geometry.Polygon(tile_geometry))
     return patches, patch_coords
+
+def unit_norm(samples):
+    means = [1298.7330617049158, 1046.728074661139, 968.1679384402669, 805.7169469984433, 1001.5350089770019, 1721.8117738966116, 2074.660173162641, 1906.273653848785, 2253.9860009889144, 295.4803929281597, 1544.334239964913, 900.2133779561017]
+    deviations = [366.08860308693147, 378.157880474536, 389.7569162648193, 478.7348213604553, 435.20976171883257, 631.4499370533496, 798.0576089639353, 766.4725319841734, 892.286826414747, 131.88545750591763, 726.3113441205015, 601.8741576997301]
+    normalized_samples = np.zeros_like(samples).astype('float32')
+    for i in range(0, 12):
+        #normalize each channel to global unit norm
+        normalized_samples[:,:,:,:,i] = (np.array(samples)[:,:,:,:,i] - means[i]) / deviations[i]
+    return normalized_samples
 
 class DescartesRun(object):
     """Class to manage bulk model prediction on the Descartes Labs platform.
@@ -448,7 +455,10 @@ class DescartesRun(object):
         """Instantiate model from DL storage."""
         temp_file = 'tmp-' + self.patch_model_name
         dl.Storage().get_file(self.patch_model_name, temp_file)
-        patch_model = keras.models.load_model(temp_file)
+        patch_model = keras.models.load_model(temp_file, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
+                                                                         'ELU': keras.layers.ELU,
+                                                                         'ReLU': keras.layers.ReLU
+                                                                         })
         os.remove(temp_file)
         return patch_model
 
@@ -487,28 +497,52 @@ class DescartesRun(object):
             preds, next(iter(raster_info)), dlkey.replace(':', '_'))
 
         # Spatial patch classifier prediction
-        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model)
+        _, patch_coords = patches_from_tile(mosaics[0], raster_info, 48)
         pred_dict = {tuple(coord.bounds): [] for coord in patch_coords}
         patch_cloud_threshold = 0.1
-        for tile in mosaics:
-            patches, _ = patches_from_tile(tile, raster_info, self.patch_model)
-            patch_preds = self.patch_model.predict(normalize(patches))[:,1]
-            for patch, coord, pred in zip(patches, patch_coords, patch_preds):
-                cloudiness = np.sum(patch.mask) / np.size(patch.mask)
-                if  cloudiness < patch_cloud_threshold:
+        for pair in image_grams:
+            patches_0, _ = patches_from_tile(pair[0], raster_info, 48)
+            patches_1, _ = patches_from_tile(pair[1], raster_info, 48)
+
+            patch_pairs = []
+            cloud_free = []
+            for patch_0, patch_1 in zip(patches_0, patches_1):
+                patch_pairs.append([patch_0.filled(0), patch_1.filled(0)])
+                cloudiness_0 = np.sum(patch_0.mask) / np.size(patch_0.mask)
+                cloudiness_1 = np.sum(patch_1.mask) / np.size(patch_1.mask)
+                if cloudiness_0 < patch_cloud_threshold and cloudiness_1 < patch_cloud_threshold:
+                    cloud_free.append(True)
+                else:
+                    cloud_free.append(False)
+
+            patch_pairs = [[patch_0.filled(0), patch_1.filled(0)] for patch_0, patch_1 in zip(patches_0, patches_1)]
+            pairs_norm = unit_norm(patch_pairs)
+            pair_preds = self.patch_model.predict(pairs_norm)[:,1]
+            for coord, pred, cloud_bool in zip(patch_coords, pair_preds, cloud_free):
+                if  cloud_bool == True:
                     pred_dict[tuple(coord.bounds)].append(pred)
 
         feature_list = []
         for coords, preds in zip(patch_coords, pred_dict.values()):
             geometry = shapely.geometry.mapping(coords)
-            properties = {
-                'mean': np.mean(preds, axis=0).astype('float'),
-                'median': np.median(preds, axis=0).astype('float'),
-                'min': np.min(preds, axis=0).astype('float'),
-                'max': np.max(preds, axis=0).astype('float'),
-                'std': np.std(preds, axis=0).astype('float'),
-                'count': np.shape(preds)[0],
-            }
+            if len(preds) > 0:
+                properties = {
+                    'mean': round(np.mean(preds, axis=0).astype('float'), 4),
+                    'median': round(np.median(preds, axis=0).astype('float'), 4),
+                    'min': round(np.min(preds, axis=0).astype('float'), 4),
+                    'max': round(np.max(preds, axis=0).astype('float'), 4),
+                    'std': round(np.std(preds, axis=0).astype('float'), 4),
+                    'count': np.shape(preds)[0],
+                }
+            else:
+                properties = {
+                    'mean': -1,
+                    'median': -1,
+                    'min': -1,
+                    'max': -1,
+                    'std': -1,
+                    'count': np.shape(preds)[0],
+                }
             #if properties['mean'] > 0.01:
             feature_list.append(dl.vectors.Feature(geometry = geometry, properties = properties))
         print(len(feature_list), 'features generated')
