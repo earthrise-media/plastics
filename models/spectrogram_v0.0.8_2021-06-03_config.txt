@@ -1,0 +1,22 @@
+Image mosaic period: 3
+Spectrogram interval, steps: 2, 2
+Input Data:
+tpa_polygons_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+java_v1.0_positive_polygons_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+v_1.1.5_negatives_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+city_points_30_negatives_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+bali_bare_earth_negatives_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+bali_bootstrap_negatives_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+
+Batch Size: 128
+Training Epochs: 15
+
+Classification Report
+              precision    recall  f1-score   support
+
+      No TPA       0.99      1.00      0.99    403542
+         TPA       0.93      0.76      0.84     14110
+
+    accuracy                           0.99    417652
+   macro avg       0.96      0.88      0.92    417652
+weighted avg       0.99      0.99      0.99    417652
