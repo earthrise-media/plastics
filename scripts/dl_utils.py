@@ -497,7 +497,7 @@ class DescartesRun(object):
             preds, next(iter(raster_info)), dlkey.replace(':', '_'))
 
         # Spatial patch classifier prediction
-        _, patch_coords = patches_from_tile(mosaics[0], raster_info, 48)
+        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model.input_shape[2])
         pred_dict = {tuple(coord.bounds): [] for coord in patch_coords}
         patch_cloud_threshold = 0.1
         for pair in image_grams:
