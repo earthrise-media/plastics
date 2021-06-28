@@ -8,6 +8,11 @@ servers:
     description: Production (notional)
   - url: http://api-dev.earthrise.com/v1/plastics/
     description: Developement (notional)
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
 
 paths:
   /sites:
@@ -111,13 +116,42 @@ paths:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-
+    delete:
+      tags:
+        - Sites
+      summary: Deletes all of the sites
+      description: deletes all of the sites in the database including associated countours
+      security:
+        - BasicAuth: []
+      responses:
+        '204':
+          description: Sites were deleted, no response body
+        '401':
+          description: Auth failed, sites were not deleted
   /sites/{site_id}:
+    delete:
+      tags:
+        - Sites
+      summary: Deletes the specified site
+      description: Deletes the specified site including associated countours
+      parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
+      responses:
+        '204':
+          description: Site was deleted, no response body
+        '401':
+          description: Auth failed, site was not deleted
+
     get:
       tags:
         - Sites
       summary: Returns details for a given site.
-      description: something
+      description: Returns details for a given site.
       parameters:
         - in: path
           name: site_id
