@@ -501,8 +501,8 @@ class DescartesRun(object):
         pred_dict = {tuple(coord.bounds): [] for coord in patch_coords}
         patch_cloud_threshold = 0.1
         for pair in image_grams:
-            patches_0, _ = patches_from_tile(pair[0], raster_info, 48)
-            patches_1, _ = patches_from_tile(pair[1], raster_info, 48)
+            patches_0, _ = patches_from_tile(pair[0], raster_info, self.patch_model.input_shape[2])
+            patches_1, _ = patches_from_tile(pair[1], raster_info, self.patch_model.input_shape[2])
 
             patch_pairs = []
             cloud_free = []
