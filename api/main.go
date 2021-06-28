@@ -16,6 +16,13 @@ func main() {
 	config.Preflight()
 	db = config.Db
 	defer db.Close()
+	app := plasticApi()
+	app.Listen(":" + viper.GetString("port"))
+}
+
+func plasticApi() *iris.Application {
+
+
 	app := iris.New()
 
 	//healthcheck endpoint
@@ -28,14 +35,12 @@ func main() {
 	allSiteEndpoint := app.Party("/sites")
 	{
 		allSiteEndpoint.Get("/", sh.GetSites)
-		//allSiteEndpoint.Put("/", sh.GetSites)
+		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
+		allSiteEndpoint.Post("/", sh.CreateSites)
 		//allSiteEndpoint.Post("/", sh.GetSites)
 		//allSiteEndpoint.Delete("/", sh.GetSites)
 
 	}
+	return app
 
-	app.Listen(":" + viper.GetString("port"))
 }
-
-
-

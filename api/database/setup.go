@@ -38,7 +38,7 @@ func SetupSchema(db *pgxpool.Pool) error {
 		zap.L().Info("Found PostGIS: " + version)
 	}
 
-	checkSql := "SELECT name FROM sites LIMIT 1"
+	checkSql := "SELECT cast(count(id) as VARCHAR) FROM sites"
 	row = db.QueryRow(ctx,checkSql)
 	err = row.Scan(&version)
 	if err == nil{

@@ -36,10 +36,10 @@ func (sc *SiteController) FindSiteById(id string) (*Site, error) {
 
 }
 //FindSites returns a site slice based on provided parameters
-func (sc *SiteController) FindSites(start int, limit int, bound orb.Bound) ([]*Site, error) {
+func (sc *SiteController) FindSites(start int, limit int, bound *orb.Bound) ([]*Site, error) {
 
 	sql := "SELECT id, name, first_seen, last_seen, st_asbinary(geom) FROM sites WHERE ST_WITHIN(geom,ST_GeometryFromText($1,4326)) LIMIT $2 OFFSET $3"
-	wkt := wkt.MarshalString(bound)
+	wkt := wkt.MarshalString(bound.Bound())
 	rows, err := sc.db.Query(context.Background(), sql, wkt, limit, start)
 	defer rows.Close()
 
@@ -51,6 +51,25 @@ func (sc *SiteController) FindSites(start int, limit int, bound orb.Bound) ([]*S
 
 
 }
+//AddSite creates a site
+func (sc *SiteController) AddSite(site *Site) error {
+
+	sql := "INSERT INTO sites(name, geom) values($1, ST_GeometryFromText($2,4326) RETURNING *"
+	wkt := wkt.MarshalString(site.Location)
+	row := sc.db.QueryRow(context.Background(),sql, site.Name, wkt)
+	s2, err := scanToSite(row)
+	if err != nil {
+		return err
+	}
+	site.Id = s2.Id
+	site.LastSeen = s2.LastSeen
+	site.FirstSeen = s2.FirstSeen
+	site.Location = s2.Location
+	return nil
+
+}
+
+
 //scanToSite scans a single row into a Site object
 func scanToSite(row pgx.Row)(*Site, error){
 
@@ -76,7 +95,6 @@ func scanToSite(row pgx.Row)(*Site, error){
 	}
 	return &s, nil
 }
-
 //scanToSites does all the nasty geometry stuff
 func scanToSites(rows pgx.Rows)([]*Site, error){
 
