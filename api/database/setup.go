@@ -39,9 +39,9 @@ func SetupSchema(db *pgxpool.Pool) error {
 	}
 
 	checkSql := "SELECT cast(count(id) as VARCHAR) FROM sites"
-	row = db.QueryRow(ctx,checkSql)
+	row = db.QueryRow(ctx, checkSql)
 	err = row.Scan(&version)
-	if err == nil{
+	if err == nil {
 		//table likely exists
 		return nil
 	}

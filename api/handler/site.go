@@ -6,6 +6,7 @@ import (
 	"github.com/kataras/iris/v12"
 	"github.com/paulmach/orb"
 	"github.com/paulmach/orb/geojson"
+	"go.uber.org/zap"
 )
 
 type SiteHandler struct {
@@ -48,12 +49,12 @@ func (sh *SiteHandler) GetSiteById(ctx iris.Context) {
 	id := ctx.URLParam("site_id")
 	site, err := sh.SiteController.FindSiteById(id)
 	if err != nil {
-		ctx.Problem(iris.NewProblem().Type("/sites/"+id).Detail(err.Error()).Status(500))
+		ctx.Problem(iris.NewProblem().Type("/sites/" + id).Detail(err.Error()).Status(500))
 		return
 	}
-	feature, err :=  encoding.SiteToGeoJsonFeature(site)
+	feature, err := encoding.SiteToGeoJsonFeature(site)
 	if err != nil {
-		ctx.Problem(iris.NewProblem().Type("/sites/"+id).Detail(err.Error()).Status(500))
+		ctx.Problem(iris.NewProblem().Type("/sites/" + id).Detail(err.Error()).Status(500))
 		return
 	}
 	ctx.JSON(feature)
@@ -64,8 +65,8 @@ func (sh *SiteHandler) GetSiteById(ctx iris.Context) {
 //It expects a feature collection with points in the POST Body
 func (sh *SiteHandler) CreateSites(ctx iris.Context) {
 
-	payload, err :=ctx.GetBody()
-	if err!= nil {
+	payload, err := ctx.GetBody()
+	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail("unable to ready body of POST").Status(500))
 		return
 	}
@@ -84,9 +85,27 @@ func (sh *SiteHandler) CreateSites(ctx iris.Context) {
 
 	for _, site := range sites {
 
-		sh.SiteController.AddSite(site)
-
+		err = sh.SiteController.AddSite(site)
+		if err != nil {
+			zap.L().Warn(err.Error())
+		}
+	}
+	updatedFc, err := encoding.SitesToFeatureCollection(sites)
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 	}
 
+	ctx.JSON(updatedFc)
+
+}
+
+//DeleteSites truncates all the sites
+func (sh *SiteHandler) DeleteAllSites(ctx iris.Context) {
+
+	err := sh.SiteController.DeleteAllSites()
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail(err.Error()))
+	}
+	ctx.StatusCode(204)
 
 }

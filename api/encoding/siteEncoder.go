@@ -6,37 +6,37 @@ import (
 	"github.com/paulmach/orb/geojson"
 )
 
-func SiteToGeoJsonFeature(site *database.Site) (*geojson.Feature, error){
+func SiteToGeoJsonFeature(site *database.Site) (*geojson.Feature, error) {
 	feat := geojson.Feature{
-		ID:         site.Id,
-		Type:       "Point",
-		Geometry:   site.Location,
+		ID:       site.Id,
+		Type:     "Point",
+		Geometry: site.Location,
 		Properties: map[string]interface{}{
-			"name":site.Name,
-			"first_seen":site.FirstSeen,
-			"last_seen":site.LastSeen,
-			"id":site.Id,
+			"name":       site.Name,
+			"first_seen": site.FirstSeen,
+			"last_seen":  site.LastSeen,
+			"id":         site.Id,
 		},
 	}
 	return &feat, nil
 
 }
 
-func SitesToFeatureCollection(sites []*database.Site)(*geojson.FeatureCollection, error){
+func SitesToFeatureCollection(sites []*database.Site) (*geojson.FeatureCollection, error) {
 
 	fc := geojson.NewFeatureCollection()
 
-	for _, site :=  range sites {
+	for _, site := range sites {
 
 		feat := geojson.Feature{
-			ID:         site.Id,
-			Type:       "Point",
-			Geometry:   site.Location,
+			ID:       site.Id,
+			Type:     "Point",
+			Geometry: site.Location,
 			Properties: map[string]interface{}{
-				"name":site.Name,
-				"first_seen":site.FirstSeen,
-				"last_seen":site.LastSeen,
-				"id":site.Id,
+				"name":       site.Name,
+				"first_seen": site.FirstSeen,
+				"last_seen":  site.LastSeen,
+				"id":         site.Id,
 			},
 		}
 		fc.Append(&feat)
@@ -57,11 +57,10 @@ func FeatureCollectionToSites(fc *geojson.FeatureCollection) ([]*database.Site, 
 		}
 
 		site := database.Site{
-			Location:  feat.Point(),
+			Location: feat.Point(),
 		}
 		sites = append(sites, &site)
 	}
 	return sites, nil
-
 
 }

@@ -25,6 +25,11 @@ func Preflight() {
 	viper.SetDefault("PGPASSWORD", "password") // database password
 	viper.SetDefault("DB_INIT", true)          //flag to initialize database, ideally this is safe even if db is already initialized
 	viper.SetDefault("LOG_LEVEL", "DEBUG")     //log levels as defined by Zap library -- pretty standard
+	//Point matching thresholds
+	viper.SetDefault("SITE_MATCH_DISTANCE_METERS", 1000) //if a point is within Xm of another site an update will treat them as the same site
+	//Security (lol) here
+	viper.SetDefault("ADMIN_USER", "admin")        //an admin user who can perform destructive actions
+	viper.SetDefault("ADMIN_PASSWORD", "plastics") //admin user password
 
 	viper.AutomaticEnv()
 
