@@ -6,6 +6,7 @@ import (
 	"github.com/earthrise-media/plastics/api/handler"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/kataras/iris/v12"
+	"github.com/kataras/iris/v12/middleware/basicauth"
 	"github.com/spf13/viper"
 )
 
@@ -22,8 +23,15 @@ func main() {
 
 func plasticApi() *iris.Application {
 
-
 	app := iris.New()
+
+	//TODO add CORS
+
+	//TODO do we need real auth?
+	//auth
+	auth := basicauth.Default(map[string]string{
+		viper.GetString("ADMIN_USER"): viper.GetString("ADMIN_PASSWORD"),
+	})
 
 	//healthcheck endpoint
 	app.Get("/healthz", handler.Ok)
@@ -38,7 +46,7 @@ func plasticApi() *iris.Application {
 		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
 		allSiteEndpoint.Post("/", sh.CreateSites)
 		//allSiteEndpoint.Post("/", sh.GetSites)
-		//allSiteEndpoint.Delete("/", sh.GetSites)
+		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites)
 
 	}
 	return app

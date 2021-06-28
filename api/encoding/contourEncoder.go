@@ -5,11 +5,11 @@ import (
 	"github.com/paulmach/orb/geojson"
 )
 
-func ContourFeatureCollection(contours []*database.Contour)(*geojson.FeatureCollection, error){
+func ContourFeatureCollection(contours []*database.Contour) (*geojson.FeatureCollection, error) {
 
 	fc := geojson.NewFeatureCollection()
 
-	for _, con :=  range contours {
+	for _, con := range contours {
 		feat := geojson.Feature{
 			ID:         con.Id,
 			Type:       con.Geometry.GeoJSONType(),

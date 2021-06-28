@@ -7,18 +7,18 @@ import (
 	"strings"
 )
 
-func ParseBbox(bbox string) (*orb.Bound, error){
+func ParseBbox(bbox string) (*orb.Bound, error) {
 
-	coords := strings.Split(bbox,",")
+	coords := strings.Split(bbox, ",")
 	if len(coords) != 4 {
 		return nil, errors.New("bbox does not have 4 elements")
 	}
 
 	// minlon,maxlon,minlat,maxlat
-	minlon, err := strconv.ParseFloat(coords[0],32)
-	maxlon,err := strconv.ParseFloat(coords[1],32)
-	minlat, err := strconv.ParseFloat(coords[2],32)
-	maxlat,err:= strconv.ParseFloat(coords[3],32)
+	minlon, err := strconv.ParseFloat(coords[0], 32)
+	maxlon, err := strconv.ParseFloat(coords[1], 32)
+	minlat, err := strconv.ParseFloat(coords[2], 32)
+	maxlat, err := strconv.ParseFloat(coords[3], 32)
 
 	if err != nil {
 
@@ -26,6 +26,5 @@ func ParseBbox(bbox string) (*orb.Bound, error){
 	}
 
 	return &orb.Bound{Max: orb.Point{minlat, minlon}, Min: orb.Point{maxlat, maxlon}}, nil
-
 
 }
