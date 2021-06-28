@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/earthrise-media/plastics/api/config"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/httptest"
 	"github.com/paulmach/orb/geojson"
@@ -68,17 +67,16 @@ func TestDeleteSites(t *testing.T) {
 }
 
 func setup() {
-	config.Preflight()
-	db = config.Db
+	preflight()
 	api = plasticApi()
 
 }
 
 func shutdown() {
-	config.Db.Close()
+	db.Close()
 }
 
 func Test_preflight(t *testing.T) {
 
-	config.Preflight()
+	preflight()
 }
