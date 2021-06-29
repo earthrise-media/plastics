@@ -32,4 +32,5 @@ This service exposes the following configuration options:
 |ADMIN_PASSWORD | plastics | admin user password |	
 
 ### Endpoints
- 
+
+See OpenAPI docs [here](https://app.swaggerhub.com/apis/tingold/Plastics/0.0.1)
