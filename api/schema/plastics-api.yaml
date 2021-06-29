@@ -18,22 +18,10 @@ paths:
   /sites:
     get:
       tags:
-        - Sites
+        - All Sites
       summary: Returns a collection of sites.
       description: This endpoint can be used to find specific sites using a bounding box and times
       parameters:
-        - in: query
-          name: before
-          schema:
-            type: string
-            default: "2022-00-00T00:00Z"
-          description: limits sites to those only first detected before the provided date
-        - in: query
-          name: after
-          schema:
-            type: string
-            default: '2000-00-00T00:00Z'
-          description: limits sites to those only first detected after the provided date
         - in: query
           name: limit
           schema:
@@ -104,21 +92,40 @@ paths:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-        '404':
-          description: Probably the wrong path
+
+    post:
+      tags:
+        - All Sites
+        - Specific Sites
+      summary: Creates 1 or more sites
+      description: Creates 1 or more sites by ingesting a feature collection containing 1 or more features with Point geometries
+      security:
+        - BasicAuth: []
+      requestBody:
+        description: A contour encoded as a geojson feature collectoion. Only a point geometry is allowed
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://geojson.org/schema/FeatureCollection.json'
+      responses:
+        '200':
+          description: The service will echo out sites that have been added to the database and will also include an ID as a property. This ID can be used to identify the site for future requests
+          content:
+            application/json:
+              schema:
+                $ref: 'https://geojson.org/schema/FeatureCollection.json'
+        '401':
+          description: Not Authorized
           content:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-        '500':
-          description: Internal server error, see error message
-          content:
-            application/problem+json:
-              schema:
-                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+
+
     delete:
       tags:
-        - Sites
+        - All Sites
       summary: Deletes all of the sites
       description: deletes all of the sites in the database including associated countours
       security:
@@ -128,12 +135,15 @@ paths:
           description: Sites were deleted, no response body
         '401':
           description: Auth failed, sites were not deleted
+
   /sites/{site_id}:
     delete:
       tags:
-        - Sites
+        - Specific Sites
       summary: Deletes the specified site
       description: Deletes the specified site including associated countours
+      security:
+        - BasicAuth: []
       parameters:
         - in: path
           name: site_id
@@ -149,7 +159,7 @@ paths:
 
     get:
       tags:
-        - Sites
+        - Specific Sites
       summary: Returns details for a given site.
       description: Returns details for a given site.
       parameters:
@@ -223,38 +233,52 @@ paths:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-        '404':
-          description: Site_id parameter in the path likely does not exist
-          content:
-            application/problem+json:
-              schema:
-                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-        '500':
-          description: Internal server error
+    put:
+      tags:
+        - Specific Sites
+      summary: Updates the specified site
+      description: 'Updates the specified site with the provided geojson *TODO: need to figure out update semantics*'
+      security:
+        - BasicAuth: []
+      parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
+      requestBody:
+        description: A contour encoded as a geojson feature collectoion. Only a point geometry is allowed
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://geojson.org/schema/Feature.json'
+      responses:
+        '204':
+          description: Successful updates will not return any content
+        '401':
+          description: Not Authorized
           content:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
 
-  /countours:
+
+
+  /sites/{site_id}/countours:
     get:
       tags:
-        - Contours
+        - All Contours
       summary: Returns a collection of countours .
       description: This endpoint allows query using location and time to find contours
       parameters:
-        - in: query
-          name: before
+        - in: path
+          name: site_id
+          required: true
           schema:
             type: string
-            default: "2022-00-00T00:00Z"
-          description: limits contours to those only first detected before the provided date
-        - in: query
-          name: after
-          schema:
-            type: string
-            default: '2000-00-00T00:00Z'
-          description: limits contours to those only first detected after the provided date
+          description: The site id
         - in: query
           name: limit
           schema:
@@ -268,19 +292,6 @@ paths:
             default: 0
             minimum: 0
           description: The offset from the start of the collection (sorting is internal currently)
-        - in: query
-          name: bbox
-          description: 'bounding coordinates in decimal degrees in the following order:  minlon,maxlon,minlat,maxlat'
-          style: form
-          explode: false
-          schema:
-            type: array
-            items:
-              type: number
-              minimum: -180
-              maximum: 180
-            default: -180.00,180.00,-90.00,90.00
-          example: '-180.00,180.00,-90.00,90.00'
       responses:
         '200':
           description: 'A geojson formatted feature collection containing multipolygons of contours, metadata about each contour and a URL ref to the site the contour belongs to'
@@ -294,16 +305,119 @@ paths:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-
-
-
-  /countours/{contour_id}:
-    get:
+    post:
       tags:
-        - Contours
-      summary: Returns a specific contour.
-      description: Returns a single contour as a geojson feature
+        - All Contours
+      summary: Adds a new contour
+      description: Adds a new contour to the associated site
+      security:
+        - BasicAuth: []
       parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
+      requestBody:
+        description: A contour encoded as a geojson feature. Only a multipolygon geometry is allowed
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://geojson.org/schema/Feature.json'
+      responses:
+        '200':
+          description: 'A geojson formatted feature containing multipolygons of the just submitted contour -- along with an ID in the properties'
+          content:
+            application/json:
+              schema:
+                $ref: 'https://geojson.org/schema/Feature.json'
+        '401':
+          description: Not authorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+    delete:
+      tags:
+        - All Contours
+      summary: Deletes all contours
+      description: Updates a countour by including geojson with an ID  as a property. If an ID is not provided this request will fail (as there is no countour ID to update). Adding new countours should be performed via POST
+      security:
+        - BasicAuth: []
+      parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
+      responses:
+        '204':
+          description: Successful deletion will not return any content
+        '401':
+          description: Not authorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+
+  /sites/{site_id}/countours/{contour_id}:
+    put:
+      tags:
+        - Specific Contours
+      summary: Updates a contour
+      description: Updates a countour by including geojson with an ID  as a property. If an ID is not provided this request will fail (as there is no countour ID to update). Adding new countours should be performed via POST
+      security:
+        - BasicAuth: []
+      parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
+        - in: path
+          name: contour_id
+          required: true
+          schema:
+            type: string
+          description: The contour id
+      requestBody:
+        description: A contour encoded as a geojson feature. Only a multipolygon geometry is allowed
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'https://geojson.org/schema/Feature.json'
+      responses:
+        '200':
+          description: 'A geojson formatted feature containing multipolygons of the just submitted contour -- along with an ID in the properties'
+          content:
+            application/json:
+              schema:
+                $ref: 'https://geojson.org/schema/Feature.json'
+        '401':
+          description: Not authorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
+    delete:
+      tags:
+        - Specific Contours
+      summary: Deletes a specific contours
+      description: Updates a countour by including geojson with an ID  as a property. If an ID is not provided this request will fail (as there is no countour ID to update). Adding new countours should be performed via POST
+      security:
+        - BasicAuth: []
+      parameters:
+        - in: path
+          name: site_id
+          required: true
+          schema:
+            type: string
+          description: The site id
         - in: path
           name: contour_id
           required: true
@@ -312,16 +426,14 @@ paths:
           description: The contour id
       responses:
         '200':
-          description: error
+          description: 'No content sent when a contour is successfully deleted'
           content:
             application/json:
               schema:
-                $ref: https://geojson.org/schema/Feature.json
-
-        '400':
-          description: error
+                $ref: 'https://geojson.org/schema/Feature.json'
+        '401':
+          description: Not authorized
           content:
             application/problem+json:
               schema:
                 $ref: 'https://gist.githubusercontent.com/tingold/8adc09ee326fd67bbbcaaa002b950618/raw/4a5753727d47a124fe9433585a90998bd3eccab3/gistfile1.txt#/definitions/validation'
-
