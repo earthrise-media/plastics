@@ -1,11 +1,11 @@
 package encoding
 
 import (
-	"github.com/earthrise-media/plastics/api/database"
+	"github.com/earthrise-media/plastics/api/model"
 	"github.com/paulmach/orb/geojson"
 )
 
-func ContourFeatureCollection(contours []*database.Contour) (*geojson.FeatureCollection, error) {
+func ContourFeatureCollection(contours []*model.Contour) (*geojson.FeatureCollection, error) {
 
 	fc := geojson.NewFeatureCollection()
 

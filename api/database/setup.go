@@ -20,6 +20,8 @@ func SetupSchema(db *pgxpool.Pool) error {
 
 	ctx := context.Background()
 
+	//this should be idempotent
+	db.QueryRow(ctx, "CREATE EXTENSION HSTORE")
 	//is postgis installed?
 	row := db.QueryRow(ctx, "SELECT postgis_version()")
 	var version string
@@ -47,8 +49,8 @@ func SetupSchema(db *pgxpool.Pool) error {
 	}
 	zap.L().Info("attempting to create tables")
 
-	createSql := `CREATE TABLE IF NOT EXISTS sites(id serial primary key, name varchar(40), first_seen TIMESTAMP NOT NULL DEFAULT NOW(), last_seen TIMESTAMP);
-	 CREATE TABLE IF NOT EXISTS contours(countour_id serial primary key, site_id int, model_run TIMESTAMP NOT NULL DEFAULT NOW());
+	createSql := `CREATE TABLE IF NOT EXISTS sites(id serial primary key, props HSTORE);
+	 CREATE TABLE IF NOT EXISTS contours(countour_id serial primary key, site_id int, props HSTORE);
 	 SELECT AddGeometryColumn('sites', 'geom', 4326, 'POINT', 2, false);
 	SELECT AddGeometryColumn('contours', 'geom', 4326, 'MULTIPOLYGON', 2, false);
 	CREATE INDEX site_geom_index on sites USING GIST(geom);

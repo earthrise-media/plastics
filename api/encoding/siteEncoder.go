@@ -2,27 +2,27 @@ package encoding
 
 import (
 	"errors"
-	"github.com/earthrise-media/plastics/api/database"
+	"github.com/earthrise-media/plastics/api/model"
 	"github.com/paulmach/orb/geojson"
 )
 
-func SiteToGeoJsonFeature(site *database.Site) (*geojson.Feature, error) {
+func SiteToGeoJsonFeature(site *model.Site) (*geojson.Feature, error) {
 	feat := geojson.Feature{
 		ID:       site.Id,
 		Type:     "Point",
 		Geometry: site.Location,
 		Properties: map[string]interface{}{
-			"name":       site.Name,
-			"first_seen": site.FirstSeen,
-			"last_seen":  site.LastSeen,
 			"id":         site.Id,
 		},
+	}
+	for k,v := range site.Properties{
+		feat.Properties[k] = v
 	}
 	return &feat, nil
 
 }
 
-func SitesToFeatureCollection(sites []*database.Site) (*geojson.FeatureCollection, error) {
+func SitesToFeatureCollection(sites []*model.Site) (*geojson.FeatureCollection, error) {
 
 	fc := geojson.NewFeatureCollection()
 
@@ -33,11 +33,11 @@ func SitesToFeatureCollection(sites []*database.Site) (*geojson.FeatureCollectio
 			Type:     "Point",
 			Geometry: site.Location,
 			Properties: map[string]interface{}{
-				"name":       site.Name,
-				"first_seen": site.FirstSeen,
-				"last_seen":  site.LastSeen,
 				"id":         site.Id,
 			},
+		}
+		for k,v := range site.Properties{
+			feat.Properties[k] = v
 		}
 		fc.Append(&feat)
 	}
@@ -46,9 +46,9 @@ func SitesToFeatureCollection(sites []*database.Site) (*geojson.FeatureCollectio
 
 }
 
-func FeatureCollectionToSites(fc *geojson.FeatureCollection) ([]*database.Site, error) {
+func FeatureCollectionToSites(fc *geojson.FeatureCollection) ([]*model.Site, error) {
 
-	var sites []*database.Site
+	var sites []*model.Site
 
 	for _, feat := range fc.Features {
 
@@ -56,9 +56,19 @@ func FeatureCollectionToSites(fc *geojson.FeatureCollection) ([]*database.Site, 
 			return nil, errors.New("Sites must have Point geometries")
 		}
 
-		site := database.Site{
+		site := model.Site{
 			Location: feat.Point(),
+			Properties: make(map[string]string),
 		}
+		if len(feat.Properties) == 0 {
+			site.Properties[model.SiteName] = ""
+		} else {
+			for k, _ := range feat.Properties{
+				site.Properties[k] = feat.Properties.MustString(k,"")
+			}
+
+		}
+
 		sites = append(sites, &site)
 	}
 	return sites, nil
