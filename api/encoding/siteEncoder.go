@@ -46,31 +46,37 @@ func SitesToFeatureCollection(sites []*model.Site) (*geojson.FeatureCollection, 
 
 }
 
+func FeatureToSite(feature *geojson.Feature) (*model.Site, error){
+
+	if feature.Geometry.GeoJSONType() != geojson.TypePoint {
+		return nil, errors.New("sites must have point geometries")
+	}
+
+	site := model.Site{
+		Location: feature.Point(),
+		Properties: make(map[string]string),
+	}
+	if len(feature.Properties) == 0 {
+		site.Properties[model.SiteName] = ""
+	} else {
+		for k, _ := range feature.Properties{
+			site.Properties[k] = feature.Properties.MustString(k,"")
+		}
+	}
+	return &site, nil
+}
+
 func FeatureCollectionToSites(fc *geojson.FeatureCollection) ([]*model.Site, error) {
 
 	var sites []*model.Site
 
 	for _, feat := range fc.Features {
 
-		if feat.Geometry.GeoJSONType() != geojson.TypePoint {
-			return nil, errors.New("Sites must have Point geometries")
+		site, err := FeatureToSite(feat)
+		if err != nil{
+			return nil, err
 		}
-
-		site := model.Site{
-			Location: feat.Point(),
-			Properties: make(map[string]string),
-		}
-		if len(feat.Properties) == 0 {
-			site.Properties[model.SiteName] = ""
-		} else {
-			for k, _ := range feat.Properties{
-				site.Properties[k] = feat.Properties.MustString(k,"")
-			}
-
-		}
-
-		sites = append(sites, &site)
+		sites = append(sites, site)
 	}
 	return sites, nil
-
 }
