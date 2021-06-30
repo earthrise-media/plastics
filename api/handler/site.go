@@ -3,6 +3,7 @@ package handler
 import (
 	"github.com/earthrise-media/plastics/api/database"
 	"github.com/earthrise-media/plastics/api/encoding"
+	"github.com/earthrise-media/plastics/api/model"
 	"github.com/kataras/iris/v12"
 	"github.com/paulmach/orb"
 	"github.com/paulmach/orb/geojson"
@@ -108,4 +109,65 @@ func (sh *SiteHandler) DeleteAllSites(ctx iris.Context) {
 	}
 	ctx.StatusCode(204)
 
+}
+
+//Deletes a single site
+func (sh *SiteHandler) DeleteSiteById(ctx iris.Context) {
+
+	s := model.Site{}
+	id, err:= ctx.URLParamInt64("site_id")
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Status(400).Detail("Invalid Site ID"))
+		return
+	}
+	s.Id = id
+	if err = sh.SiteController.DeleteSiteById(&s); err != nil {
+		ctx.Problem(iris.NewProblem().Status(500).Detail("Error deleting site").Cause(iris.NewProblem().Detail(err.Error())))
+		return
+	}
+	ctx.StatusCode(204)
+}
+
+
+func (sh *SiteHandler) UpdateSite(ctx iris.Context) {
+
+	payload, err := ctx.GetBody()
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail("unable to ready body of POST").Status(500))
+		return
+	}
+	var f geojson.Feature
+	err = f.UnmarshalJSON(payload)
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail("unable to read GeoJson Feature Collection, check for errors").Status(400))
+		return
+	}
+	site, err := encoding.FeatureToSite(&f)
+	if err = sh.SiteController.UpdateSite(site); err != nil {
+		ctx.Problem(iris.NewProblem().Status(500).Detail("error updating site").Cause(iris.NewProblem().Detail(err.Error())))
+		return
+	}
+	ctx.StatusCode(204)
+}
+
+
+
+func (sh *SiteHandler) GetContours(ctx iris.Context) {
+	//TODO: implement
+}
+
+func (sh *SiteHandler) AddContour(ctx iris.Context) {
+	//TODO: implement
+}
+
+func (sh *SiteHandler) DeleteAllContours(ctx iris.Context) {
+	//TODO: implement
+}
+
+func (sh *SiteHandler) UpdateContour(ctx iris.Context) {
+	//TODO: implement
+}
+
+func (sh *SiteHandler) DeleteContour(ctx iris.Context) {
+	//TODO: implement
 }

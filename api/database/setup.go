@@ -50,11 +50,11 @@ func SetupSchema(db *pgxpool.Pool) error {
 	zap.L().Info("attempting to create tables")
 
 	createSql := `CREATE TABLE IF NOT EXISTS sites(id serial primary key, props HSTORE);
-	 CREATE TABLE IF NOT EXISTS contours(countour_id serial primary key, site_id int, props HSTORE);
-	 SELECT AddGeometryColumn('sites', 'geom', 4326, 'POINT', 2, false);
-	SELECT AddGeometryColumn('contours', 'geom', 4326, 'MULTIPOLYGON', 2, false);
-	CREATE INDEX site_geom_index on sites USING GIST(geom);
-	CREATE INDEX contour_geom_index on contours USING GIST(geom);
+CREATE TABLE IF NOT EXISTS contours(id serial primary key, site_id int REFERENCES sites(id), props HSTORE);
+SELECT AddGeometryColumn('sites', 'geom', 4326, 'POINT', 2, false);
+SELECT AddGeometryColumn('contours', 'geom', 4326, 'MULTIPOLYGON', 2, false);
+CREATE INDEX site_geom_index on sites USING GIST(geom);
+CREATE INDEX contour_geom_index on contours USING GIST(geom);
 `
 	_, err = db.Exec(ctx, createSql)
 	return err
