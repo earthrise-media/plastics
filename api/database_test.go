@@ -40,12 +40,26 @@ func TestSiteController_AddSite(t *testing.T) {
 
 func TestSiteController_DeleteAllSites(t *testing.T) {
 
+	sc := database.NewSiteController(db)
+	if err := sc.DeleteAllSites(); err != nil {
+		t.Fail()
+	}
+
 }
 
 func TestSiteController_DeleteSiteById(t *testing.T) {
-}
 
-func TestSiteController_DeleteSites(t *testing.T) {
+	sc :=database.NewSiteController(db)
+	sites, err := sc.FindSites(0,1, &orb.Bound{Max: orb.Point{-90, -180}, Min: orb.Point{90, 180}})
+	if err != nil {
+		t.FailNow()
+	}
+	if len(sites) == 0{
+		return
+	}
+	if 	err = sc.DeleteSiteById(sites[0]); err != nil{
+		t.FailNow()
+	}
 
 }
 
