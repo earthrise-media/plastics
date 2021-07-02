@@ -13,7 +13,7 @@ DL_SYSTEM_PARAMS = {
     'cpus': 1,
     'maximum_concurrency': 60,
     'memory': '24Gi',
-    'retry_count': 2,
+    'retry_count': 4,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
@@ -64,7 +64,7 @@ def main(*args):
     parser.add_argument('--pad',
                         type=int,
                         help='Padding in pixels',
-                        default=0)
+                        default=16)
     parser.add_argument('--model_file',
                         type=str,
                         help='Local path to model file to upload',

@@ -497,17 +497,31 @@ class DescartesRun(object):
             preds, next(iter(raster_info)), dlkey.replace(':', '_'))
 
         # Spatial patch classifier prediction
+
+        # Generate a list of coordinates for the patches within the tile
         _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model.input_shape[2])
+
+        # Initialize a dictionary where the patch coordinate boundaries are the keys
+        # Each value is an empty list where predictions will be appended
         pred_dict = {tuple(coord.bounds): [] for coord in patch_coords}
+
+        # Set a threshold for acceptable cloudiness within a patch for a prediction to be valid
         patch_cloud_threshold = 0.1
+
         for pair in image_grams:
+            # generate patches for first image in pair
             patches_0, _ = patches_from_tile(pair[0], raster_info, self.patch_model.input_shape[2])
+            # generate patches for second image in pair
             patches_1, _ = patches_from_tile(pair[1], raster_info, self.patch_model.input_shape[2])
 
             patch_pairs = []
             cloud_free = []
             for patch_0, patch_1 in zip(patches_0, patches_1):
+                # Create a list of patch pairs.
+                # Shape is (2, model_input_shape, model_input_shape, 12)
                 patch_pairs.append([patch_0.filled(0), patch_1.filled(0)])
+
+                # Evaluate whether both patches in a sample are below cloud limit
                 cloudiness_0 = np.sum(patch_0.mask) / np.size(patch_0.mask)
                 cloudiness_1 = np.sum(patch_1.mask) / np.size(patch_1.mask)
                 if cloudiness_0 < patch_cloud_threshold and cloudiness_1 < patch_cloud_threshold:
@@ -515,23 +529,37 @@ class DescartesRun(object):
                 else:
                     cloud_free.append(False)
 
-            patch_pairs = [[patch_0.filled(0), patch_1.filled(0)] for patch_0, patch_1 in zip(patches_0, patches_1)]
+            # Pairs norm shape is (n, 2, model_input_shape, model_input_shape, 12)
             pairs_norm = unit_norm(patch_pairs)
             pair_preds = self.patch_model.predict(pairs_norm)[:,1]
+            #for index, (pred, pair) in enumerate(zip(pair_preds, pairs_norm)):
+            #    plt.figure(figsize=(4,2), dpi=75)
+            #    plt.subplot(1,2,1)
+            #    plt.imshow(np.clip((pair[0,:,:,3:0:-1] + 1) / 2, 0, 1))
+            #    plt.title(f'Image {index}')
+            #    plt.axis('off')
+            #    plt.subplot(1,2,2)
+            #    plt.imshow(np.clip((pair[1,:,:,3:0:-1] + 1) / 2, 0, 1))
+            #    plt.title(f'{pred:.2f}')
+            #    plt.axis('off')
+            #    plt.show()
+
+            # If patches were cloud free, append the prediction to the dictionary
             for coord, pred, cloud_bool in zip(patch_coords, pair_preds, cloud_free):
                 if  cloud_bool == True:
                     pred_dict[tuple(coord.bounds)].append(pred)
 
         feature_list = []
-        for coords, preds in zip(patch_coords, pred_dict.values()):
+        for coords, key in zip(patch_coords, pred_dict):
+            preds = [round(pred, 4) for pred in pred_dict[key]]
             geometry = shapely.geometry.mapping(coords)
             if len(preds) > 0:
                 properties = {
-                    'mean': round(np.mean(preds, axis=0).astype('float'), 4),
-                    'median': round(np.median(preds, axis=0).astype('float'), 4),
-                    'min': round(np.min(preds, axis=0).astype('float'), 4),
-                    'max': round(np.max(preds, axis=0).astype('float'), 4),
-                    'std': round(np.std(preds, axis=0).astype('float'), 4),
+                    'mean': np.mean(preds, axis=0).astype('float'),
+                    'median': np.median(preds, axis=0).astype('float'),
+                    'min': np.min(preds, axis=0).astype('float'),
+                    'max': np.max(preds, axis=0).astype('float'),
+                    'std': np.std(preds, axis=0).astype('float'),
                     'count': np.shape(preds)[0],
                 }
             else:
