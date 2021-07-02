@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_5", "mean": 0.37746900320053101, "std": 0.37079599499702454, "min": 0.010240999981760979, "max": 0.99658501148223877, "count": 4, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 122.94493604940989, -8.183462886595207 ] } }
+]
+}

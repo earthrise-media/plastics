@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_1", "mean": 0.89035582542419434, "std": 0.09535679966211319, "min": 0.69419395923614502, "max": 0.9789537787437439, "count": 12, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 116.973609165492476, -8.532636537458066 ] } },
+{ "type": "Feature", "properties": { "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_3", "mean": 0.81234639883041382, "std": 0.23251628875732422, "min": 0.098258189857006073, "max": 0.99774491786956787, "count": 12, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 118.668217282825225, -8.618247839301898 ] } },
+{ "type": "Feature", "properties": { "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_4", "mean": 0.69747024774551392, "std": 0.29401811957359314, "min": 0.10083480179309845, "max": 0.96049249172210693, "count": 12, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 116.809767901917084, -8.726327916240155 ] } }
+]
+}
