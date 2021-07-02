@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "lombok_v0.0.7_2019-01-01_2021-06-01mosaic-median_1", "mean": 0.55163699388504028, "std": 0.30095601081848145, "min": 0.1713470071554184, "max": 0.99418401718139648, "count": 4, "dump": true }, "geometry": { "type": "Point", "coordinates": [ 116.090675049634825, -8.64490947451154 ] } },
+{ "type": "Feature", "properties": { "name": "lombok_v0.0.7_2019-01-01_2021-06-01mosaic-median_2", "mean": 4.400000034365803e-05, "std": 2.4999999368446879e-05, "min": 1.2000000424450263e-05, "max": 6.9000001531094313e-05, "count": 4, "dump": true }, "geometry": { "type": "Point", "coordinates": [ 116.033262590678447, -8.348081082101729 ] } },
+{ "type": "Feature", "properties": { "name": "lombok_v0.0.7_2019-01-01_2021-06-01mosaic-median_3", "mean": 0.056460998952388763, "std": 0.0220940001308918, "min": 0.028593000024557114, "max": 0.078864000737667084, "count": 4, "dump": true }, "geometry": { "type": "Point", "coordinates": [ 116.606479204706403, -8.641970768922373 ] } }
+]
+}

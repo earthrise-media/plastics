@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_9", "mean": 0.23892800509929657, "std": 0.23838299512863159, "min": 0.00054500001715496182, "max": 0.47731000185012817, "count": 2, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 128.26466987418948, -3.655085557504663 ] } },
+{ "type": "Feature", "properties": { "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_12", "mean": 0.4624670147895813, "std": 0.41722398996353149, "min": 0.035847000777721405, "max": 0.95885998010635376, "count": 4, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 127.973499928737439, 1.70943017120494 ] } },
+{ "type": "Feature", "properties": { "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_16", "mean": 0.080594003200531006, "std": 0.094598002731800079, "min": 2.5999999706982635e-05, "max": 0.23959599435329437, "count": 4, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 127.326700546815346, 0.85238481343575 ] } },
+{ "type": "Feature", "properties": { "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_20", "mean": 0.71010798215866089, "std": 0.30768999457359314, "min": 0.20233200490474701, "max": 0.98536002635955811, "count": 4, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 127.519032400974254, -0.607373937414324 ] } }
+]
+}
