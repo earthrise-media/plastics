@@ -11,6 +11,7 @@ import (
 	"github.com/paulmach/orb/encoding/wkt"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
+	"strconv"
 )
 
 type SiteController struct {
@@ -32,9 +33,23 @@ func NewSiteController(db *pgxpool.Pool) *SiteController {
 
 //FindSiteById returns a single site based on the site id
 func (sc *SiteController) FindSiteById(id string) (*model.Site, error) {
+	site_id, err := strconv.Atoi(id)
+	if err != nil {
+		zap.L().Error("badly formatted site id")
+		return nil,err
+	}
 	sql := "SELECT id, props, st_asbinary(geom) from sites WHERE id = $1"
-	row := sc.db.QueryRow(context.Background(), sql, id)
-	return scanToSite(row)
+	rows, err:= sc.db.Query(context.Background(), sql, site_id)
+	defer rows.Close()
+
+	if err != nil {
+		return nil, err
+	}
+	sites, err := scanToSites(rows)
+	if sites != nil {
+		return sites[0], nil
+	}
+	return nil, err
 
 }
 
@@ -44,6 +59,7 @@ func (sc *SiteController) FindSites(start int, limit int, bound *orb.Bound) ([]*
 	sql := "SELECT id, props, st_asbinary(geom) FROM sites WHERE ST_WITHIN(geom,ST_GeometryFromText($1,4326)) LIMIT $2 OFFSET $3"
 	wkt := wkt.MarshalString(bound.Bound())
 	rows, err := sc.db.Query(context.Background(), sql, wkt, limit, start)
+
 	defer rows.Close()
 
 	if err != nil {
@@ -188,6 +204,7 @@ func scanToSites(rows pgx.Rows) ([]*model.Site, error) {
 		s := model.Site{
 			Id:       id,
 			Location: scanner.Geometry.(orb.Point),
+			Properties: make(map[string]string,0),
 		}
 		for k, v := range props.Map {
 			s.Properties[k] = v.String

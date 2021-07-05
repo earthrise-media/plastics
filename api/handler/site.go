@@ -20,7 +20,7 @@ func (sh *SiteHandler) GetSites(ctx iris.Context) {
 	offset := ctx.URLParamIntDefault("offset", 0)
 	limit := ctx.URLParamIntDefault("limit", 100)
 
-	var bbox = &orb.Bound{Max: orb.Point{-90, -180}, Min: orb.Point{90, 180}}
+	var bbox = &orb.Bound{Max: orb.Point{-180, -90}, Min: orb.Point{180,90}}
 	if ctx.URLParamExists("bbox") {
 		bnds, err := encoding.ParseBbox(ctx.URLParam("bbox"))
 		if err != nil {
@@ -51,6 +51,10 @@ func (sh *SiteHandler) GetSiteById(ctx iris.Context) {
 	site, err := sh.SiteController.FindSiteById(id)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Type("/sites/" + id).Detail(err.Error()).Status(500))
+		return
+	}
+	if site == nil {
+		ctx.Problem(iris.NewProblem().Detail("site not found").Status(404))
 		return
 	}
 	feature, err := encoding.SiteToGeoJsonFeature(site)
