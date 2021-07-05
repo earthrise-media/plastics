@@ -50,6 +50,7 @@ func (sc *SiteController) FindSites(start int, limit int, bound *orb.Bound) ([]*
 		zap.L().Error(err.Error())
 		return nil, err
 	}
+
 	return scanToSites(rows)
 
 }
@@ -142,9 +143,14 @@ func scanToSite(row pgx.Row) (*model.Site, error) {
 	var p orb.Point
 	scanner := wkb.Scanner(&p)
 	err := row.Scan(&id, &props, &geom)
+
+	if err != nil {
+		zap.S().Warnf("error scanning row: %s",  err.Error())
+		return nil, err
+	}
 	err = scanner.Scan(geom)
 	if err != nil {
-		zap.L().Warn("error scanning row:" + err.Error())
+		zap.S().Warnf("error scanning geometry: %s",  err.Error())
 		return nil, err
 	}
 	s := model.Site{
@@ -164,13 +170,20 @@ func scanToSites(rows pgx.Rows) ([]*model.Site, error) {
 	var p orb.Point
 	scanner := wkb.Scanner(&p)
 	for rows.Next() {
+
 		var id int64
 		var geom []byte
 		var props pgtype.Hstore
 		err := rows.Scan(&id, &props, &geom)
+
+		if err != nil {
+			zap.S().Warnf("error scanning row: %s", err.Error())
+			continue
+		}
 		err = scanner.Scan(geom)
 		if err != nil {
-			zap.L().Warn("error scanning row:" + err.Error())
+			zap.S().Warnf("error scanning geometry from row: %s", err.Error() )
+			continue
 		}
 		s := model.Site{
 			Id:       id,

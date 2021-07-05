@@ -2,7 +2,9 @@ package encoding
 
 import (
 	"github.com/earthrise-media/plastics/api/model"
+	"github.com/paulmach/orb"
 	"github.com/paulmach/orb/geojson"
+	"go.uber.org/zap"
 )
 
 func ContourFeatureCollection(contours []*model.Contour) (*geojson.FeatureCollection, error) {
@@ -20,4 +22,31 @@ func ContourFeatureCollection(contours []*model.Contour) (*geojson.FeatureCollec
 		fc.Append(&feat)
 	}
 	return fc, nil
+}
+func FeatureCollectionToContours(collection *geojson.FeatureCollection)([]*model.Contour, error){
+
+	 	contours := make([]*model.Contour,0)
+		for _,feat := range collection.Features{
+
+			if feat.Geometry.GeoJSONType() != geojson.TypeMultiPolygon {
+				zap.L().Error("ignoring contour with wrong geometry type")
+				continue
+			}
+
+			c := model.Contour{
+				Id:         int64(feat.Properties.MustInt(model.Id,0)),
+				SiteId:     int64(feat.Properties.MustInt(model.SiteId, 0)),
+				Geometry:   feat.Geometry.(orb.MultiPolygon),
+			}
+			if len(feat.Properties) == 0 {
+				c.Properties = make(map[string]string,0)
+			} else {
+				for k, _ := range feat.Properties{
+					c.Properties[k] = feat.Properties.MustString(k,"")
+				}
+			}
+			contours = append(contours, &c)
+		}
+	
+		return contours, nil
 }

@@ -13,6 +13,8 @@ const (
 	SiteMin  = "min"
 	SiteMax  = "max"
 	SiteCount  = "count"
+	SiteId = "site_id"
+	Id = "id"
 )
 
 type ContourProperty string

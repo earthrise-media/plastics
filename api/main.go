@@ -54,7 +54,7 @@ func plasticApi() *iris.Application {
 		allSiteEndpoint.Put("/{site_id}", sh.UpdateSite)
 		//All Contours
 		allSiteEndpoint.Get("/{site_id}/contours", sh.GetContours)
-		allSiteEndpoint.Post("/{site_id}/contours", sh.AddContour)
+		//allSiteEndpoint.Post("/{site_id}/contours", sh.AddContour)
 		allSiteEndpoint.Delete("/{site_id}/contours", sh.DeleteAllContours)
 		//Specific Contours
 		allSiteEndpoint.Put("/{site_id}/contours/{contour_id}", sh.UpdateContour)

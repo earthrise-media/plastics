@@ -66,6 +66,16 @@ func TestDeleteSites(t *testing.T) {
 
 }
 
+
+func TestGetSiteByID(t *testing.T) {
+
+	test := httptest.New(t, api)
+	test.GET("/sites/932180398").Expect().Status(404)
+	TestInsertSites(t)
+	test.GET("/sites/1").Expect().Status(200).JSON()
+
+}
+
 func setup() {
 	preflight()
 	api = plasticApi()
