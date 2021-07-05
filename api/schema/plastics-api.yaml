@@ -309,7 +309,7 @@ paths:
       tags:
         - All Contours
       summary: Adds a new contour
-      description: Adds a new contour to the associated site
+      description: Adds one or more new contours to the associated site
       security:
         - BasicAuth: []
       parameters:
@@ -320,7 +320,7 @@ paths:
             type: string
           description: The site id
       requestBody:
-        description: A contour encoded as a geojson feature. Only a multipolygon geometry is allowed
+        description: A contour encoded as a geojson featurecollection. Only a multipolygon geometry is allowed
         required: true
         content:
           application/json:

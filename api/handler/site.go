@@ -47,7 +47,7 @@ func (sh *SiteHandler) GetSites(ctx iris.Context) {
 //GetSiteById gets a site from a id
 func (sh *SiteHandler) GetSiteById(ctx iris.Context) {
 
-	id := ctx.URLParam("site_id")
+	id := ctx.Params().GetString("site_id")
 	site, err := sh.SiteController.FindSiteById(id)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Type("/sites/" + id).Detail(err.Error()).Status(500))
@@ -105,7 +105,7 @@ func (sh *SiteHandler) DeleteAllSites(ctx iris.Context) {
 
 	err := sh.SiteController.DeleteAllSites()
 	if err != nil {
-		ctx.Problem(iris.NewProblem().Detail(err.Error()))
+		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 	}
 	ctx.StatusCode(204)
 
@@ -156,8 +156,25 @@ func (sh *SiteHandler) GetContours(ctx iris.Context) {
 	//TODO: implement
 }
 
-func (sh *SiteHandler) AddContour(ctx iris.Context) {
-	//TODO: implement
+func (sh *SiteHandler) AddContours(ctx iris.Context) {
+	payload, err := ctx.GetBody()
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail("unable to ready body of POST").Status(500))
+		return
+	}
+	var fc geojson.FeatureCollection
+	err = fc.UnmarshalJSON(payload)
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail("unable to read GeoJson Feature Collection, check for errors").Status(400))
+		return
+	}
+	contours, err := encoding.FeatureCollectionToContours(&fc)
+	zap.S().Infof("%d",len(contours))
+
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(400))
+		return
+	}
 }
 
 func (sh *SiteHandler) DeleteAllContours(ctx iris.Context) {
