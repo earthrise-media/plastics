@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"os"
 	"runtime"
+	"strconv"
 	"testing"
 )
 
@@ -66,14 +67,18 @@ func TestDeleteSites(t *testing.T) {
 
 }
 
-
 func TestGetSiteByID(t *testing.T) {
 
 	test := httptest.New(t, api)
-	test.GET("/sites/932180398").Expect().Status(404)
+	test.GET("/sites/bob").Expect().Status(500)
+	//add some sites
 	TestInsertSites(t)
-	test.GET("/sites/1").Expect().Status(200).JSON()
-
+	//get 100 sites and use the first id in the test
+	id := test.GET("/sites").Expect().JSON().Path("$.features").Array().First().Object().Value("id").Number().Raw()
+	path :=  "/sites/" + strconv.Itoa(int(id))
+	t.Logf("Path: %s", path)
+	//make sure the id we ask for is the id of the object we get
+	test.GET(path).Expect().Status(200).JSON().Object().Value("id").Number().Equal(int(id))
 }
 
 func setup() {
