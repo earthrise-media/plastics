@@ -72,22 +72,39 @@ func (sc *SiteController) FindSites(start int, limit int, bound *orb.Bound) ([]*
 }
 
 //AddSite creates a site
-func (sc *SiteController) AddSite(site *model.Site) error {
+func (sc *SiteController) AddSites(sites []*model.Site) error {
 
 	sql := "INSERT INTO sites(props, geom) values($1, ST_GeometryFromText($2,4326)) RETURNING id"
-	wkt := wkt.MarshalString(site.Location)
-	store :=  pgtype.Hstore{}
-	store.Set(site.Properties)
 
-	row := sc.db.QueryRow(context.Background(), sql, store, wkt)
-	var id int64
-	err := row.Scan(&id)
+	tx, err := sc.db.Begin(context.Background())
 	if err != nil {
+		zap.L().Error("error starting transaction")
 		return err
 	}
-	site.Id = id
+	for _, site := range sites{
+		wkt := wkt.MarshalString(site.Location)
+		store :=  pgtype.Hstore{}
+		store.Set(site.Properties)
+
+		row := sc.db.QueryRow(context.Background(), sql, store, wkt)
+		var id int64
+		err := row.Scan(&id)
+		if err != nil {
+			zap.S().Errorf("error adding site: %s", err.Error())
+			tx.Rollback(context.Background())
+			return err
+		}
+		site.Id = id
+	}
+
+	err = tx.Commit(context.Background())
+	if err != nil {
+		zap.S().Error("error commiting: %s", err.Error())
+		return err
+	}
 	return nil
 }
+
 
 //DeleteAllSites removes all sites from the database -- also removes all contours
 func (sc *SiteController) DeleteAllSites() error {
