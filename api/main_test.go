@@ -46,17 +46,16 @@ func TestInsertSites(t *testing.T) {
 	data, _ := ioutil.ReadAll(file)
 	fc := geojson.FeatureCollection{}
 	fc.UnmarshalJSON(data)
-	startLength := len(fc.Features)
+	//startLength := len(fc.Features)
 
-	//this assertion means that we successfully inserted all of the sites that were sent
-	//ie the number of features sent = the number of features received
-	respData := test.POST("/sites").WithJSON(fc).Expect().Status(200).Body().Raw()
-	fc.UnmarshalJSON([]byte(respData))
-	endLength := len(fc.Features)
-	if startLength != endLength {
-		t.Log("Not all features appear to have been properly inserted")
-		t.Fail()
-	}
+	//changed service signature to only return a 201 on successful creation
+	test.POST("/sites").WithJSON(fc).Expect().Status(201)
+	//fc.UnmarshalJSON([]byte(respData))
+	//endLength := len(fc.Features)
+	//if startLength != endLength {
+	//	t.Log("Not all features appear to have been properly inserted")
+	//	t.Fail()
+	//}
 
 }
 
@@ -98,7 +97,7 @@ func TestInsertContours(t *testing.T) {
 	id := test.GET("/sites").Expect().JSON().Path("$.features").Array().First().Object().Value("id").Number().Raw()
 	path := "/sites/" + strconv.Itoa(int(id)) + "/contours"
 	t.Logf("Path %s", path)
-	test.POST(path).WithJSON(&fc).Expect().Status(200)
+	test.POST(path).WithJSON(&fc).Expect().Status(201)
 
 }
 
