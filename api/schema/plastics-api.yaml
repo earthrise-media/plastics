@@ -4,6 +4,9 @@ info:
   description: API for finding plastic sites detected via machile learning. See [Global Plastics Watch](https://gpw.earthrise.media/)
   version: 0.0.1
 servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/tingold/Plastics/0.0.1
   - url: http://api.earthrise.com/v1/plastics/
     description: Production (notional)
   - url: http://api-dev.earthrise.com/v1/plastics/
@@ -109,12 +112,8 @@ paths:
             schema:
               $ref: 'https://geojson.org/schema/FeatureCollection.json'
       responses:
-        '200':
+        '201':
           description: The service will echo out sites that have been added to the database and will also include an ID as a property. This ID can be used to identify the site for future requests
-          content:
-            application/json:
-              schema:
-                $ref: 'https://geojson.org/schema/FeatureCollection.json'
         '401':
           description: Not Authorized
           content:
@@ -309,7 +308,7 @@ paths:
       tags:
         - All Contours
       summary: Adds a new contour
-      description: Adds one or more new contours to the associated site
+      description: Adds a new contour to the associated site
       security:
         - BasicAuth: []
       parameters:
@@ -320,19 +319,15 @@ paths:
             type: string
           description: The site id
       requestBody:
-        description: A contour encoded as a geojson featurecollection. Only a multipolygon geometry is allowed
+        description: A contour encoded as a geojson feature. Only a multipolygon geometry is allowed
         required: true
         content:
           application/json:
             schema:
               $ref: 'https://geojson.org/schema/Feature.json'
       responses:
-        '200':
-          description: 'A geojson formatted feature containing multipolygons of the just submitted contour -- along with an ID in the properties'
-          content:
-            application/json:
-              schema:
-                $ref: 'https://geojson.org/schema/Feature.json'
+        '201':
+          description: 'No content'
         '401':
           description: Not authorized
           content:
@@ -392,12 +387,8 @@ paths:
             schema:
               $ref: 'https://geojson.org/schema/Feature.json'
       responses:
-        '200':
+        '202':
           description: 'A geojson formatted feature containing multipolygons of the just submitted contour -- along with an ID in the properties'
-          content:
-            application/json:
-              schema:
-                $ref: 'https://geojson.org/schema/Feature.json'
         '401':
           description: Not authorized
           content:
@@ -427,10 +418,6 @@ paths:
       responses:
         '200':
           description: 'No content sent when a contour is successfully deleted'
-          content:
-            application/json:
-              schema:
-                $ref: 'https://geojson.org/schema/Feature.json'
         '401':
           description: Not authorized
           content:
