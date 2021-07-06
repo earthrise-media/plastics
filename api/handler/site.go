@@ -93,12 +93,12 @@ func (sh *SiteHandler) CreateSites(ctx iris.Context) {
 		zap.L().Warn(err.Error())
 	}
 
-	updatedFc, err := encoding.SitesToFeatureCollection(sites)
+	_, err = encoding.SitesToFeatureCollection(sites)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 	}
 
-	ctx.JSON(updatedFc)
+	ctx.StatusCode(201)
 
 }
 
@@ -184,6 +184,8 @@ func (sh *SiteHandler) AddContours(ctx iris.Context) {
 		zap.L().Error(err.Error())
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 		return
+	} else {
+		ctx.StatusCode(201)
 	}
 }
 
