@@ -9,30 +9,26 @@ import (
 
 func TestSiteController_AddSite(t *testing.T) {
 
-	sites := []model.Site{model.Site{
+
+	s1 := model.Site{
+
+		Location: orb.Point{-76.332395, 39.544287},
+	}
+	s2 := model.Site{
 
 		Location: orb.Point{-76.333457, 39.544990},
-	},
-		model.Site{
-
-			Location: orb.Point{-76.332395, 39.544287},
-		},
-		model.Site{
-			Location: orb.Point{-76.334648, 39.544758},
-		},
 	}
+	s3 := model.Site{
+		Location: orb.Point{-76.334648, 39.544758},
+	}
+
+		sites := []*model.Site{&s1, &s2, &s3}
 
 	sc := database.NewSiteController(db)
 
-	for _, site := range sites {
-
-		err := sc.AddSite(&site)
-		if err != nil {
-			t.Fail()
-		}
-		if site.Id == 0 {
-			t.Fail()
-		}
+	err := sc.AddSites(sites)
+	if err != nil {
+		t.Fail()
 	}
 
 }

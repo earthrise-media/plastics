@@ -88,13 +88,11 @@ func (sh *SiteHandler) CreateSites(ctx iris.Context) {
 		return
 	}
 
-	for _, site := range sites {
-
-		err = sh.SiteController.AddSite(site)
-		if err != nil {
-			zap.L().Warn(err.Error())
-		}
+	err = sh.SiteController.AddSites(sites)
+	if err != nil {
+		zap.L().Warn(err.Error())
 	}
+
 	updatedFc, err := encoding.SitesToFeatureCollection(sites)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
@@ -188,7 +186,6 @@ func (sh *SiteHandler) AddContours(ctx iris.Context) {
 		return
 	}
 }
-
 
 func (sh *SiteHandler) DeleteAllContours(ctx iris.Context) {
 	//TODO: implement
