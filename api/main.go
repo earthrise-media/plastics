@@ -65,7 +65,6 @@ func plasticApi() *iris.Application {
 
 }
 
-
 //Preflight sets up all the config and sanity checks
 func preflight() {
 
@@ -128,4 +127,3 @@ func preflight() {
 
 	zap.L().Info("Preflight complete!")
 }
-

@@ -11,20 +11,20 @@ func TestSiteController_AddSite(t *testing.T) {
 
 	sites := []model.Site{model.Site{
 
-		Location:  orb.Point{-76.333457, 39.544990},
+		Location: orb.Point{-76.333457, 39.544990},
 	},
 		model.Site{
 
-			Location:  orb.Point{-76.332395, 39.544287},
+			Location: orb.Point{-76.332395, 39.544287},
 		},
 		model.Site{
-			Location:  orb.Point{-76.334648, 39.544758},
+			Location: orb.Point{-76.334648, 39.544758},
 		},
 	}
 
 	sc := database.NewSiteController(db)
 
-	for _,site := range sites{
+	for _, site := range sites {
 
 		err := sc.AddSite(&site)
 		if err != nil {
@@ -34,7 +34,6 @@ func TestSiteController_AddSite(t *testing.T) {
 			t.Fail()
 		}
 	}
-
 
 }
 
@@ -49,22 +48,21 @@ func TestSiteController_DeleteAllSites(t *testing.T) {
 
 func TestSiteController_DeleteSiteById(t *testing.T) {
 
-	sc :=database.NewSiteController(db)
-	sites, err := sc.FindSites(0,1, &orb.Bound{Max: orb.Point{-90, -180}, Min: orb.Point{90, 180}})
+	sc := database.NewSiteController(db)
+	sites, err := sc.FindSites(0, 1, &orb.Bound{Max: orb.Point{-90, -180}, Min: orb.Point{90, 180}})
 	if err != nil {
 		t.FailNow()
 	}
-	if len(sites) == 0{
+	if len(sites) == 0 {
 		return
 	}
-	if 	err = sc.DeleteSiteById(sites[0]); err != nil{
+	if err = sc.DeleteSiteById(sites[0]); err != nil {
 		t.FailNow()
 	}
 
 }
 
 func TestSiteController_FindSiteById(t *testing.T) {
-
 
 }
 
@@ -74,4 +72,3 @@ func TestSiteController_FindSiteByRadius(t *testing.T) {
 func TestSiteController_FindSites(t *testing.T) {
 
 }
-

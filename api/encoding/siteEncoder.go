@@ -2,6 +2,7 @@ package encoding
 
 import (
 	"errors"
+	"fmt"
 	"github.com/earthrise-media/plastics/api/model"
 	"github.com/paulmach/orb/geojson"
 )
@@ -54,13 +55,13 @@ func FeatureToSite(feature *geojson.Feature) (*model.Site, error){
 
 	site := model.Site{
 		Location: feature.Point(),
-		Properties: make(map[string]string),
+		Properties: make(map[string]string,0),
 	}
 	if len(feature.Properties) == 0 {
 		site.Properties[model.SiteName] = ""
 	} else {
 		for k, _ := range feature.Properties{
-			site.Properties[k] = feature.Properties.MustString(k,"")
+			site.Properties[k] = fmt.Sprintf("%v",feature.Properties[k])
 		}
 	}
 	return &site, nil
