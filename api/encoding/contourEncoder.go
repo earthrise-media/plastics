@@ -1,6 +1,7 @@
 package encoding
 
 import (
+	"fmt"
 	"github.com/earthrise-media/plastics/api/model"
 	"github.com/paulmach/orb"
 	"github.com/paulmach/orb/geojson"
@@ -28,7 +29,7 @@ func FeatureCollectionToContours(collection *geojson.FeatureCollection)([]*model
 	 	contours := make([]*model.Contour,0)
 		for _,feat := range collection.Features{
 
-			if feat.Geometry.GeoJSONType() != geojson.TypeMultiPolygon {
+			if feat.Geometry == nil || feat.Geometry.GeoJSONType() != geojson.TypeMultiPolygon {
 				zap.L().Error("ignoring contour with wrong geometry type")
 				continue
 			}
@@ -41,8 +42,10 @@ func FeatureCollectionToContours(collection *geojson.FeatureCollection)([]*model
 			if len(feat.Properties) == 0 {
 				c.Properties = make(map[string]string,0)
 			} else {
+				c.Properties = make(map[string]string,len(feat.Properties))
+
 				for k, _ := range feat.Properties{
-					c.Properties[k] = feat.Properties.MustString(k,"")
+					c.Properties[k] = fmt.Sprintf("%v",feat.Properties[k])
 				}
 			}
 			contours = append(contours, &c)

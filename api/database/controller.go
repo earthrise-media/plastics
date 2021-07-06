@@ -150,6 +150,42 @@ func (sc *SiteController) UpdateSite(site *model.Site) error {
 	return err
 }
 
+func (sc *SiteController) AddContourToSites(site *model.Site, contours []*model.Contour) error {
+
+	sql := "INSERT INTO contours(site_id, props, geom) VALUES($1, $2, ST_GeometryFromText($3,4326)) RETURNING id"
+
+	tx, err := sc.db.Begin(context.Background())
+	if err != nil {
+		zap.L().Error("error starting transaction")
+		return err
+	}
+	for _, contour := range contours{
+
+		wkt := wkt.MarshalString(contour.Geometry)
+		store :=  pgtype.Hstore{}
+		store.Set(contour.Properties)
+		row := tx.QueryRow(context.Background(),sql,site.Id,store, wkt)
+		var contourId int64
+		err = row.Scan(&contourId)
+		if err != nil {
+			zap.S().Error("error adding contour: %s", err.Error())
+			tx.Rollback(context.Background())
+			return err
+		}
+		contour.Id = contourId
+		contour.SiteId = site.Id
+	}
+	err = tx.Commit(context.Background())
+	if err != nil {
+		zap.S().Error("error commiting: %s", err.Error())
+		return err
+	}
+	return nil
+
+
+
+}
+
 //scanToSite scans a single row into a Site object
 func scanToSite(row pgx.Row) (*model.Site, error) {
 

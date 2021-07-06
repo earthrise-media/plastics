@@ -75,10 +75,31 @@ func TestGetSiteByID(t *testing.T) {
 	TestInsertSites(t)
 	//get 100 sites and use the first id in the test
 	id := test.GET("/sites").Expect().JSON().Path("$.features").Array().First().Object().Value("id").Number().Raw()
-	path :=  "/sites/" + strconv.Itoa(int(id))
+	path := "/sites/" + strconv.Itoa(int(id))
 	t.Logf("Path: %s", path)
 	//make sure the id we ask for is the id of the object we get
 	test.GET(path).Expect().Status(200).JSON().Object().Value("id").Number().Equal(int(id))
+}
+
+func TestInsertContours(t *testing.T) {
+
+	test := httptest.New(t, api)
+	//load the contours
+	file, _ := os.Open("sample_data/v12_java_validated_positives_contours_model_spectrogram_v0.0.8_2021-06-03.geojson")
+	data, _ := ioutil.ReadAll(file)
+	fc := geojson.FeatureCollection{}
+	err := fc.UnmarshalJSON(data)
+	if err != nil {
+		t.Logf("%s", err.Error())
+		t.Fail()
+	}
+	//startLength := len(fc.Features)
+	//pick a random site to associate them to
+	id := test.GET("/sites").Expect().JSON().Path("$.features").Array().First().Object().Value("id").Number().Raw()
+	path := "/sites/" + strconv.Itoa(int(id)) + "/contours"
+	t.Logf("Path %s", path)
+	test.POST(path).WithJSON(&fc).Expect().Status(200)
+
 }
 
 func setup() {

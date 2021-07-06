@@ -20,7 +20,7 @@ func (sh *SiteHandler) GetSites(ctx iris.Context) {
 	offset := ctx.URLParamIntDefault("offset", 0)
 	limit := ctx.URLParamIntDefault("limit", 100)
 
-	var bbox = &orb.Bound{Max: orb.Point{-180, -90}, Min: orb.Point{180,90}}
+	var bbox = &orb.Bound{Max: orb.Point{-180, -90}, Min: orb.Point{180, 90}}
 	if ctx.URLParamExists("bbox") {
 		bnds, err := encoding.ParseBbox(ctx.URLParam("bbox"))
 		if err != nil {
@@ -119,7 +119,7 @@ func (sh *SiteHandler) DeleteAllSites(ctx iris.Context) {
 func (sh *SiteHandler) DeleteSiteById(ctx iris.Context) {
 
 	s := model.Site{}
-	id, err:= ctx.URLParamInt64("site_id")
+	id, err := ctx.URLParamInt64("site_id")
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Status(400).Detail("Invalid Site ID"))
 		return
@@ -131,7 +131,6 @@ func (sh *SiteHandler) DeleteSiteById(ctx iris.Context) {
 	}
 	ctx.StatusCode(204)
 }
-
 
 func (sh *SiteHandler) UpdateSite(ctx iris.Context) {
 
@@ -154,8 +153,6 @@ func (sh *SiteHandler) UpdateSite(ctx iris.Context) {
 	ctx.StatusCode(204)
 }
 
-
-
 func (sh *SiteHandler) GetContours(ctx iris.Context) {
 	//TODO: implement
 }
@@ -166,6 +163,12 @@ func (sh *SiteHandler) AddContours(ctx iris.Context) {
 		ctx.Problem(iris.NewProblem().Detail("unable to ready body of POST").Status(500))
 		return
 	}
+
+	site, err := sh.SiteController.FindSiteById(ctx.Params().GetString("site_id"))
+	if err != nil || site == nil {
+		ctx.Problem(iris.NewProblem().Detail("invalid site id").Status(400))
+		return
+	}
 	var fc geojson.FeatureCollection
 	err = fc.UnmarshalJSON(payload)
 	if err != nil {
@@ -173,13 +176,19 @@ func (sh *SiteHandler) AddContours(ctx iris.Context) {
 		return
 	}
 	contours, err := encoding.FeatureCollectionToContours(&fc)
-	zap.S().Infof("%d",len(contours))
-
+	zap.S().Infof("%d", len(contours))
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(400))
 		return
 	}
+	err = sh.SiteController.AddContourToSites(site, contours)
+	if err != nil {
+		zap.L().Error(err.Error())
+		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
+		return
+	}
 }
+
 
 func (sh *SiteHandler) DeleteAllContours(ctx iris.Context) {
 	//TODO: implement
