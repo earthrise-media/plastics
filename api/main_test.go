@@ -99,7 +99,12 @@ func TestInsertContours(t *testing.T) {
 	t.Logf("Path %s", path)
 	test.POST(path).WithJSON(&fc).Expect().Status(201)
 
+	//now test getting them back
+	test.GET(path).Expect().Status(200).JSON()
+
 }
+
+
 
 func setup() {
 	preflight()

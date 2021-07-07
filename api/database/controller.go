@@ -167,7 +167,7 @@ func (sc *SiteController) UpdateSite(site *model.Site) error {
 	return err
 }
 
-func (sc *SiteController) AddContourToSites(site *model.Site, contours []*model.Contour) error {
+func (sc *SiteController) AddContoursToSite(site *model.Site, contours []*model.Contour) error {
 
 	sql := "INSERT INTO contours(site_id, props, geom) VALUES($1, $2, ST_GeometryFromText($3,4326)) RETURNING id"
 
@@ -201,6 +201,57 @@ func (sc *SiteController) AddContourToSites(site *model.Site, contours []*model.
 
 
 
+}
+
+func (sc *SiteController) GetContoursBySite(site *model.Site) ([]*model.Contour, error) {
+
+	sql := "SELECT id, site_id, props, st_asbinary(geom) FROM contours WHERE site_id = $1"
+	rows, err := sc.db.Query(context.Background(),sql, site.Id)
+	defer rows.Close()
+	if err != nil {
+		zap.S().Errorf("error querying contours for site %v: %s", err.Error())
+		return nil, err
+	}
+	return scanToContours(rows)
+
+}
+
+//func scanToContour(row pgx.Row)(*model.Contour, error){}
+
+func scanToContours(rows pgx.Rows)([]*model.Contour, error){
+
+	var contours []*model.Contour
+	var mp orb.MultiPolygon
+	scanner := wkb.Scanner(&mp)
+
+	for rows.Next(){
+
+		var id int64
+		var site_id int64
+		var geom []byte
+		var props pgtype.Hstore
+		err := rows.Scan(&id,&site_id, &props, &geom)
+		if err != nil {
+			zap.S().Warnf("error scanning row: %s", err.Error())
+			continue
+		}
+		err = scanner.Scan(geom)
+		if err != nil {
+			zap.S().Warnf("error scanning geometry from row: %s", err.Error() )
+			continue
+		}
+		c := model.Contour{
+			Id:       id,
+			SiteId: site_id,
+			Geometry: scanner.Geometry.(orb.MultiPolygon),
+			Properties: make(map[string]string,0),
+		}
+		for k, v := range props.Map {
+			c.Properties[k] = v.String
+		}
+		contours = append(contours, &c)
+	}
+	return contours, nil
 }
 
 //scanToSite scans a single row into a Site object
