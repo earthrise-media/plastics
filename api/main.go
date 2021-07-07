@@ -76,7 +76,9 @@ func preflight() {
 	viper.SetDefault("PGDATABASE", "plastic")  // name of database
 	viper.SetDefault("PGUSER", "postgis")      //database username
 	viper.SetDefault("PGPASSWORD", "password") // database password
-	viper.SetDefault("DB_INIT", true)          //flag to initialize database, ideally this is safe even if db is already initialized
+	viper.SetDefault("DB_USE_LOCAL_SOCKET", false)  //connect via unix socket rather than tcp
+	viper.SetDefault("DB_INIT",true)				//whether to attempt to creata the schema
+
 	viper.SetDefault("LOG_LEVEL", "DEBUG")     //log levels as defined by Zap library -- pretty standard
 	//Point matching thresholds
 	viper.SetDefault("SITE_MATCH_DISTANCE_METERS", 1000) //if a point is within Xm of another site an update will treat them as the same site
@@ -101,11 +103,16 @@ func preflight() {
 
 	//connect to database
 	//postgres://username:password@localhost:5432/database_name
-	connstring := "postgres://" + viper.GetString("PGUSER") + ":" + viper.GetString("PGPASSWORD") + "@" + viper.GetString("PGHOST") + ":" + viper.GetString("PGPORT") + "/" + viper.GetString("PGDATABASE")
+	connstring := "database="+viper.GetString("PGDATABASE")+" host=" +viper.GetString("PGHOST")+" user="+viper.GetString("PGUSER") +" password=" + viper.GetString("PGPASSWORD") + " port=" + viper.GetString("PGPORT")
+	zap.S().Debugf("connection string: %s", connstring)
+
+
 
 	dbLogger := zapadapter.NewLogger(logger)
 
 	poolConfig, err := pgxpool.ParseConfig(connstring)
+
+
 	if err != nil {
 		zap.L().Fatal("Unable to parse connection string")
 	}

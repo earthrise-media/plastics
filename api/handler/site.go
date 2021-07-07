@@ -152,7 +152,23 @@ func (sh *SiteHandler) UpdateSite(ctx iris.Context) {
 }
 
 func (sh *SiteHandler) GetContours(ctx iris.Context) {
-	//TODO: implement
+
+	site, err := sh.SiteController.FindSiteById(ctx.Params().GetString("site_id"))
+	if err != nil || site == nil {
+		ctx.Problem(iris.NewProblem().Detail("invalid site id").Status(400))
+		return
+	}
+	contours, err := sh.SiteController.GetContoursBySite(site)
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
+
+	}
+	fc, err := encoding.ContourFeatureCollection(contours)
+	if err != nil {
+		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
+	}
+	ctx.JSON(fc)
+
 }
 
 func (sh *SiteHandler) AddContours(ctx iris.Context) {
@@ -179,7 +195,7 @@ func (sh *SiteHandler) AddContours(ctx iris.Context) {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(400))
 		return
 	}
-	err = sh.SiteController.AddContourToSites(site, contours)
+	err = sh.SiteController.AddContoursToSite(site, contours)
 	if err != nil {
 		zap.L().Error(err.Error())
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))

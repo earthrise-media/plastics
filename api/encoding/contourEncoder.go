@@ -18,8 +18,12 @@ func ContourFeatureCollection(contours []*model.Contour) (*geojson.FeatureCollec
 			Type:       con.Geometry.GeoJSONType(),
 			BBox:       nil,
 			Geometry:   con.Geometry,
-			Properties: nil,
+			Properties: make(map[string]interface{},len(con.Properties)),
 		}
+		for k,v := range con.Properties {
+			feat.Properties[k] = v
+		}
+
 		fc.Append(&feat)
 	}
 	return fc, nil
