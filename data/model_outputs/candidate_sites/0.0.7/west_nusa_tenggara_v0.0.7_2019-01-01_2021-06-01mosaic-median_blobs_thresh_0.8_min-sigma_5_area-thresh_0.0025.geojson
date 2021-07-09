@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "lon": 116.97360916549248, "lat": -8.5326365374580657, "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_1" }, "geometry": { "type": "Point", "coordinates": [ 116.973609165492476, -8.532636537458066 ] } },
+{ "type": "Feature", "properties": { "lon": 118.52777068587095, "lat": -8.7476290880361045, "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_2" }, "geometry": { "type": "Point", "coordinates": [ 118.527770685870948, -8.747629088036105 ] } },
+{ "type": "Feature", "properties": { "lon": 118.66821728282522, "lat": -8.6182478393018975, "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_3" }, "geometry": { "type": "Point", "coordinates": [ 118.668217282825225, -8.618247839301898 ] } },
+{ "type": "Feature", "properties": { "lon": 116.80976790191708, "lat": -8.7263279162401552, "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_4" }, "geometry": { "type": "Point", "coordinates": [ 116.809767901917084, -8.726327916240155 ] } },
+{ "type": "Feature", "properties": { "lon": 118.86281176457531, "lat": -8.7119356283371925, "name": "west_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_5" }, "geometry": { "type": "Point", "coordinates": [ 118.862811764575312, -8.711935628337192 ] } }
+]
+}

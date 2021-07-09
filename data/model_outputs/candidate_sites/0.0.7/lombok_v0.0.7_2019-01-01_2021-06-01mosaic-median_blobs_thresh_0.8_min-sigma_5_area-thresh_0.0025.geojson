@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "lon": 116.09067504963483, "lat": -8.6449094745115396, "name": "lombok_v0.0.7_2019-01-01_2021-06-01mosaic-median_1" }, "geometry": { "type": "Point", "coordinates": [ 116.090675049634825, -8.64490947451154 ] } },
+{ "type": "Feature", "properties": { "lon": 116.03326259067845, "lat": -8.3480810821017286, "name": "lombok_v0.0.7_2019-01-01_2021-06-01mosaic-median_2" }, "geometry": { "type": "Point", "coordinates": [ 116.033262590678447, -8.348081082101729 ] } },
+{ "type": "Feature", "properties": { "lon": 116.6064792047064, "lat": -8.6419707689223735, "name": "lombok_v0.0.7_2019-01-01_2021-06-01mosaic-median_3" }, "geometry": { "type": "Point", "coordinates": [ 116.606479204706403, -8.641970768922373 ] } }
+]
+}
