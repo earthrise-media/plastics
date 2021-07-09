@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "lon": 124.28862333191843, "lat": -9.8155521705840485, "name": "west_timor_v0.0.7_2019-01-01_2021-06-01mosaic-median_1" }, "geometry": { "type": "Point", "coordinates": [ 124.28862333191843, -9.815552170584048 ] } },
+{ "type": "Feature", "properties": { "lon": 123.54648363264796, "lat": -10.200034739244844, "name": "west_timor_v0.0.7_2019-01-01_2021-06-01mosaic-median_2" }, "geometry": { "type": "Point", "coordinates": [ 123.546483632647963, -10.200034739244844 ] } },
+{ "type": "Feature", "properties": { "lon": 124.5341360119176, "lat": -10.024469489564778, "name": "west_timor_v0.0.7_2019-01-01_2021-06-01mosaic-median_3" }, "geometry": { "type": "Point", "coordinates": [ 124.534136011917596, -10.024469489564778 ] } },
+{ "type": "Feature", "properties": { "lon": 124.89259432186185, "lat": -9.1959669840636913, "name": "west_timor_v0.0.7_2019-01-01_2021-06-01mosaic-median_4" }, "geometry": { "type": "Point", "coordinates": [ 124.89259432186185, -9.195966984063691 ] } }
+]
+}

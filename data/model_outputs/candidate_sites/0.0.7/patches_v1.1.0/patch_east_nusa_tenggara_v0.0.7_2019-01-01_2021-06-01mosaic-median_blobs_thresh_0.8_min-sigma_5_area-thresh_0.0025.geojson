@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "patch_east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_blobs_thresh_0.8_min-sigma_5_area-thresh_0.0025",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_1", "mean": 0.00044699999853037298, "std": 0.00038499999209307134, "min": 4.9999998736893758e-06, "max": 0.00094400002853944898, "count": 3 }, "geometry": { "type": "Point", "coordinates": [ 123.514437712148109, -8.27034521116904 ] } },
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_2", "mean": 0.00014299999747890979, "std": 0.00014200000441633165, "min": 7.0000000960135367e-06, "max": 0.00037799999699927866, "count": 4 }, "geometry": { "type": "Point", "coordinates": [ 124.136701056532019, -8.510155222258728 ] } },
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_3", "mean": 0.072168998420238495, "std": 0.046893000602722168, "min": 0.015021000057458878, "max": 0.14547799527645111, "count": 4 }, "geometry": { "type": "Point", "coordinates": [ 125.048113336494197, -8.158273381151069 ] } },
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_4", "mean": 0.021327000111341476, "std": 0.023391999304294586, "min": 0.00016599999798927456, "max": 0.06080399826169014, "count": 4 }, "geometry": { "type": "Point", "coordinates": [ 124.135683902784677, -8.510604633010963 ] } },
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_5", "mean": 0.37746900320053101, "std": 0.37079599499702454, "min": 0.010240999981760979, "max": 0.99658501148223877, "count": 4, "dump": true }, "geometry": { "type": "Point", "coordinates": [ 122.94493604940989, -8.183462886595207 ] } },
+{ "type": "Feature", "properties": { "name": "east_nusa_tenggara_v0.0.7_2019-01-01_2021-06-01mosaic-median_6", "mean": 0.23861899971961975, "std": 0.16945700347423553, "min": 0.0013660000404343009, "max": 0.46471399068832397, "count": 4 }, "geometry": { "type": "Point", "coordinates": [ 124.127617168610101, -8.485532044909343 ] } }
+]
+}
