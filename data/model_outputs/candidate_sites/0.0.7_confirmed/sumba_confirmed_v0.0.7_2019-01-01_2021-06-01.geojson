@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "sumba_v0.0.7_2019-01-01_2021-06-01mosaic-median_7", "mean": 0.98959600925445557, "std": 0.01127300038933754, "min": 0.97097599506378174, "max": 0.99871200323104858, "count": 4, "dump": "1" }, "geometry": { "type": "Point", "coordinates": [ 120.335349096856035, -9.717151051418734 ] } }
+]
+}
