@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "maluku_v0",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 130.6354347133998, "lat": -3.7931352847044706, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_1" }, "geometry": { "type": "Point", "coordinates": [ 130.635434713399803, -3.793135284704471 ] } },
+{ "type": "Feature", "properties": { "lon": 127.43071557454051, "lat": -1.160983290746292, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_3" }, "geometry": { "type": "Point", "coordinates": [ 127.430715574540514, -1.160983290746292 ] } },
+{ "type": "Feature", "properties": { "lon": 128.64651325571461, "lat": 1.0548482558976788, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_4" }, "geometry": { "type": "Point", "coordinates": [ 128.646513255714609, 1.054848255897679 ] } },
+{ "type": "Feature", "properties": { "lon": 128.23091657450445, "lat": 0.59266334154916189, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_5" }, "geometry": { "type": "Point", "coordinates": [ 128.230916574504448, 0.592663341549162 ] } },
+{ "type": "Feature", "properties": { "lon": 127.02235580545009, "lat": -3.238507122463766, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_7" }, "geometry": { "type": "Point", "coordinates": [ 127.02235580545009, -3.238507122463766 ] } },
+{ "type": "Feature", "properties": { "lon": 127.63207230872715, "lat": 1.5119234806781741, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_8" }, "geometry": { "type": "Point", "coordinates": [ 127.632072308727146, 1.511923480678174 ] } },
+{ "type": "Feature", "properties": { "lon": 127.56874705034197, "lat": -1.5824148632111885, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_11" }, "geometry": { "type": "Point", "coordinates": [ 127.568747050341969, -1.582414863211189 ] } },
+{ "type": "Feature", "properties": { "lon": 130.89941948273741, "lat": -3.8850170296694024, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_13" }, "geometry": { "type": "Point", "coordinates": [ 130.899419482737414, -3.885017029669402 ] } },
+{ "type": "Feature", "properties": { "lon": 128.13624820058314, "lat": 2.3407293763977388, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_14" }, "geometry": { "type": "Point", "coordinates": [ 128.13624820058314, 2.340729376397739 ] } },
+{ "type": "Feature", "properties": { "lon": 128.24328027115226, "lat": -3.6329288168057507, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_22" }, "geometry": { "type": "Point", "coordinates": [ 128.243280271152258, -3.632928816805751 ] } },
+{ "type": "Feature", "properties": { "lon": 127.45319850588876, "lat": -1.555155699595937, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_23" }, "geometry": { "type": "Point", "coordinates": [ 127.453198505888764, -1.555155699595937 ] } },
+{ "type": "Feature", "properties": { "lon": 127.03107312023464, "lat": -3.4614076614140488, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_24" }, "geometry": { "type": "Point", "coordinates": [ 127.031073120234637, -3.461407661414049 ] } },
+{ "type": "Feature", "properties": { "lon": 127.07939238296541, "lat": -3.401037947710229, "name": "maluku_v0.0.7_2019-01-01_2021-06-01mosaic-median_26" }, "geometry": { "type": "Point", "coordinates": [ 127.079392382965409, -3.401037947710229 ] } }
+]
+}
