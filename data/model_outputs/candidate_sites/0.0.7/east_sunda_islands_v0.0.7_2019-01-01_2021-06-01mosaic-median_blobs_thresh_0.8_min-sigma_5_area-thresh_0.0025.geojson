@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "lon": 127.44969562920701, "lat": -7.5946819383650057, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_1" }, "geometry": { "type": "Point", "coordinates": [ 127.449695629207014, -7.594681938365006 ] } },
+{ "type": "Feature", "properties": { "lon": 126.23966303262671, "lat": -7.6983556383331431, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_2" }, "geometry": { "type": "Point", "coordinates": [ 126.239663032626709, -7.698355638333143 ] } },
+{ "type": "Feature", "properties": { "lon": 126.54813470754574, "lat": -7.5988746986023497, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_3" }, "geometry": { "type": "Point", "coordinates": [ 126.548134707545742, -7.59887469860235 ] } },
+{ "type": "Feature", "properties": { "lon": 127.47169376827489, "lat": -7.5839997144555005, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_4" }, "geometry": { "type": "Point", "coordinates": [ 127.471693768274889, -7.5839997144555 ] } },
+{ "type": "Feature", "properties": { "lon": 131.23072435639781, "lat": -8.0030447862085747, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_5" }, "geometry": { "type": "Point", "coordinates": [ 131.230724356397815, -8.003044786208575 ] } },
+{ "type": "Feature", "properties": { "lon": 125.74091189466709, "lat": -8.0517357932700051, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_6" }, "geometry": { "type": "Point", "coordinates": [ 125.740911894667093, -8.051735793270005 ] } },
+{ "type": "Feature", "properties": { "lon": 126.03414306206194, "lat": -7.8843431013410896, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_7" }, "geometry": { "type": "Point", "coordinates": [ 126.034143062061943, -7.88434310134109 ] } },
+{ "type": "Feature", "properties": { "lon": 126.58623009849067, "lat": -7.5849481553675, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_8" }, "geometry": { "type": "Point", "coordinates": [ 126.586230098490674, -7.5849481553675 ] } },
+{ "type": "Feature", "properties": { "lon": 126.58331154041572, "lat": -7.5843007741594688, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_9" }, "geometry": { "type": "Point", "coordinates": [ 126.583311540415721, -7.584300774159469 ] } },
+{ "type": "Feature", "properties": { "lon": 126.57534077877465, "lat": -7.583367579665989, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_10" }, "geometry": { "type": "Point", "coordinates": [ 126.575340778774645, -7.583367579665989 ] } },
+{ "type": "Feature", "properties": { "lon": 130.00731632914813, "lat": -7.7377480886778267, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_11" }, "geometry": { "type": "Point", "coordinates": [ 130.007316329148125, -7.737748088677827 ] } },
+{ "type": "Feature", "properties": { "lon": 126.54559134727583, "lat": -7.5848912435215778, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_12" }, "geometry": { "type": "Point", "coordinates": [ 126.545591347275831, -7.584891243521578 ] } },
+{ "type": "Feature", "properties": { "lon": 126.54683412558953, "lat": -7.5842063960180708, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_13" }, "geometry": { "type": "Point", "coordinates": [ 126.546834125589527, -7.584206396018071 ] } },
+{ "type": "Feature", "properties": { "lon": 131.28142784964035, "lat": -7.484099093493974, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_14" }, "geometry": { "type": "Point", "coordinates": [ 131.281427849640352, -7.484099093493974 ] } },
+{ "type": "Feature", "properties": { "lon": 126.58809399740039, "lat": -7.5848606908555567, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_15" }, "geometry": { "type": "Point", "coordinates": [ 126.588093997400392, -7.584860690855557 ] } },
+{ "type": "Feature", "properties": { "lon": 125.86084091412695, "lat": -7.7768887845001382, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_16" }, "geometry": { "type": "Point", "coordinates": [ 125.860840914126953, -7.776888784500138 ] } },
+{ "type": "Feature", "properties": { "lon": 125.73185106391522, "lat": -7.9722492015494764, "name": "east_sunda_islands_v0.0.7_2019-01-01_2021-06-01mosaic-median_17" }, "geometry": { "type": "Point", "coordinates": [ 125.731851063915215, -7.972249201549476 ] } }
+]
+}

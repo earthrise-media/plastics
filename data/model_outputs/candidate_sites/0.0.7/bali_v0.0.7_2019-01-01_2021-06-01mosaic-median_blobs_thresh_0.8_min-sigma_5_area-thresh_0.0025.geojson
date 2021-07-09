@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "lon": 114.58361506784694, "lat": -8.3270811371662123, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_1" }, "geometry": { "type": "Point", "coordinates": [ 114.583615067846935, -8.327081137166212 ] } },
+{ "type": "Feature", "properties": { "lon": 115.09492437740727, "lat": -8.5297657955555195, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_2" }, "geometry": { "type": "Point", "coordinates": [ 115.094924377407267, -8.52976579555552 ] } },
+{ "type": "Feature", "properties": { "lon": 115.49718658562405, "lat": -8.6795497863888702, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_3" }, "geometry": { "type": "Point", "coordinates": [ 115.49718658562405, -8.67954978638887 ] } },
+{ "type": "Feature", "properties": { "lon": 115.36739785141764, "lat": -8.3538506446431935, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_4" }, "geometry": { "type": "Point", "coordinates": [ 115.367397851417635, -8.353850644643193 ] } },
+{ "type": "Feature", "properties": { "lon": 115.16585708522096, "lat": -8.7952125610894338, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_5" }, "geometry": { "type": "Point", "coordinates": [ 115.165857085220964, -8.795212561089434 ] } },
+{ "type": "Feature", "properties": { "lon": 115.4592564587069, "lat": -8.6705845995804953, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_6" }, "geometry": { "type": "Point", "coordinates": [ 115.459256458706903, -8.670584599580495 ] } },
+{ "type": "Feature", "properties": { "lon": 115.16205013317233, "lat": -8.8167852893650327, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_7" }, "geometry": { "type": "Point", "coordinates": [ 115.162050133172329, -8.816785289365033 ] } },
+{ "type": "Feature", "properties": { "lon": 115.10731499132206, "lat": -8.8302256020783076, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_8" }, "geometry": { "type": "Point", "coordinates": [ 115.107314991322056, -8.830225602078308 ] } },
+{ "type": "Feature", "properties": { "lon": 115.34981103121935, "lat": -8.5634185996247645, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_9" }, "geometry": { "type": "Point", "coordinates": [ 115.349811031219346, -8.563418599624764 ] } },
+{ "type": "Feature", "properties": { "lon": 115.16995943403144, "lat": -8.0901940412562254, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_10" }, "geometry": { "type": "Point", "coordinates": [ 115.169959434031441, -8.090194041256225 ] } },
+{ "type": "Feature", "properties": { "lon": 115.22083362331139, "lat": -8.7235537741839, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_11" }, "geometry": { "type": "Point", "coordinates": [ 115.220833623311393, -8.7235537741839 ] } },
+{ "type": "Feature", "properties": { "lon": 115.56377058090068, "lat": -8.4036990986636386, "name": "bali_v0.0.7_2019-01-01_2021-06-01mosaic-median_12" }, "geometry": { "type": "Point", "coordinates": [ 115.56377058090068, -8.403699098663639 ] } }
+]
+}
