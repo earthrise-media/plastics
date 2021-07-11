@@ -14,6 +14,7 @@ require (
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/paulmach/orb v0.2.2
 	github.com/pkg/errors v0.9.1
+	github.com/rs/cors v1.8.0
 	github.com/sergi/go-diff v1.2.0 // indirect
 	github.com/spf13/viper v1.8.1
 	github.com/valyala/fasthttp v1.27.0 // indirect
