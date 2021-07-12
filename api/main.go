@@ -55,18 +55,18 @@ func plasticApi() *iris.Application {
 		//ALl Sites
 		allSiteEndpoint.Get("/", sh.GetSites)
 		allSiteEndpoint.Post("/", sh.CreateSites)
-		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites,auth)
+		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites)
 		//Specific Sites
 		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
-		allSiteEndpoint.Delete("/{site_id}", sh.DeleteSiteById, auth)
+		allSiteEndpoint.Delete("/{site_id}", auth,sh.DeleteSiteById)
 		allSiteEndpoint.Put("/{site_id}", sh.UpdateSite)
 		//All Contours
 		allSiteEndpoint.Get("/{site_id}/contours", sh.GetContours)
 		allSiteEndpoint.Post("/{site_id}/contours", sh.AddContours)
-		allSiteEndpoint.Delete("/{site_id}/contours", sh.DeleteAllContours, auth)
+		allSiteEndpoint.Delete("/{site_id}/contours", auth, sh.DeleteAllContours)
 		//Specific Contours
 		allSiteEndpoint.Put("/{site_id}/contours/{contour_id}", sh.UpdateContour)
-		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", sh.DeleteContour, auth)
+		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", auth,sh.DeleteContour)
 
 	}
 	return app
@@ -85,7 +85,7 @@ func preflight() {
 	viper.SetDefault("PGUSER", "postgis")          //database username
 	viper.SetDefault("PGPASSWORD", "password")     // database password
 	viper.SetDefault("DB_USE_LOCAL_SOCKET", false) //connect via unix socket rather than tcp
-	viper.SetDefault("DB_INIT", true)              //whether to attempt to creata the schema
+	viper.SetDefault("DB_INIT", true)              //whether to attempt to create the schema
 
 	viper.SetDefault("LOG_LEVEL", "DEBUG") //log levels as defined by Zap library -- pretty standard
 	//Point matching thresholds
