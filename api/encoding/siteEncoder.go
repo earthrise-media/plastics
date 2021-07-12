@@ -40,6 +40,7 @@ func SitesToFeatureCollection(sites []*model.Site) (*geojson.FeatureCollection, 
 		for k,v := range site.Properties{
 			feat.Properties[k] = v
 		}
+
 		fc.Append(&feat)
 	}
 

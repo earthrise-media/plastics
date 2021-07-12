@@ -47,18 +47,18 @@ func plasticApi() *iris.Application {
 		//ALl Sites
 		allSiteEndpoint.Get("/", sh.GetSites)
 		allSiteEndpoint.Post("/", sh.CreateSites)
-		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites)
+		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites,auth)
 		//Specific Sites
 		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
-		allSiteEndpoint.Delete("/{site_id}", sh.DeleteSiteById)
+		allSiteEndpoint.Delete("/{site_id}", sh.DeleteSiteById, auth)
 		allSiteEndpoint.Put("/{site_id}", sh.UpdateSite)
 		//All Contours
 		allSiteEndpoint.Get("/{site_id}/contours", sh.GetContours)
 		allSiteEndpoint.Post("/{site_id}/contours", sh.AddContours)
-		allSiteEndpoint.Delete("/{site_id}/contours", sh.DeleteAllContours)
+		allSiteEndpoint.Delete("/{site_id}/contours", sh.DeleteAllContours, auth)
 		//Specific Contours
 		allSiteEndpoint.Put("/{site_id}/contours/{contour_id}", sh.UpdateContour)
-		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", sh.DeleteContour)
+		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", sh.DeleteContour, auth)
 
 	}
 	return app
