@@ -2,6 +2,7 @@ import requests
 import itertools
 import json
 import glob
+from geopy.geocoders import Nominatim
 
 auth = ("admin", "plastics")
 API = "https://plastic-api-dorvc455lq-uc.a.run.app"
@@ -24,6 +25,8 @@ site_map = {}
 
 index = json.load(open("./v12_java_bali_validated_positives.geojson"))
 
+locator = Nominatim(user_agent="Earthrise GPW")
+
 # Some sites are anonymous, like this. They are not usable
 # because there needs to be something to link a site to contours.
 # Ignore them.
@@ -37,6 +40,9 @@ index = json.load(open("./v12_java_bali_validated_positives.geojson"))
 # },
 for feature in index["features"]:
     if "name" in feature["properties"]:
+        print(f"Locating {feature['properties']['name']} on Nominatim")
+        results = locator.reverse(tuple(reversed(feature["geometry"]["coordinates"])))
+        feature["properties"]["place_name"] = str(results.address)
         site_map[feature["properties"]["name"]] = {"point": feature}
 
 skips = []
@@ -81,6 +87,7 @@ for name, record in site_map.items():
     # TODO: this API should return the created ID, but it does not
     # https://github.com/earthrise-media/plastics/issues/31
     new_id = requests.get(f"{API}/sites").json()["features"][-1]["id"]
+    print(f"Creating contours for {name}, id {new_id}")
     resp = requests.post(
         f"{API}/sites/{new_id}/contours",
         json=feature_collection(record["contours"]),
