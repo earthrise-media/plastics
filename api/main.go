@@ -26,10 +26,9 @@ func main() {
 
 func plasticApi() *iris.Application {
 
-	app := iris.New()
-
-	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"*"},
+	app, c := iris.New(), cors.New(cors.Options{
+		AllowedOrigins: []string{"*"},
+		AllowedMethods:   []string{"GET", "PUT", "POST"},
 		AllowCredentials: true,
 		// Enable Debugging for testing, consider disabling in production
 		Debug: true,
@@ -58,15 +57,15 @@ func plasticApi() *iris.Application {
 		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites)
 		//Specific Sites
 		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
-		allSiteEndpoint.Delete("/{site_id}", sh.DeleteSiteById)
+		allSiteEndpoint.Delete("/{site_id}", auth,sh.DeleteSiteById)
 		allSiteEndpoint.Put("/{site_id}", sh.UpdateSite)
 		//All Contours
 		allSiteEndpoint.Get("/{site_id}/contours", sh.GetContours)
 		allSiteEndpoint.Post("/{site_id}/contours", sh.AddContours)
-		allSiteEndpoint.Delete("/{site_id}/contours", sh.DeleteAllContours)
+		allSiteEndpoint.Delete("/{site_id}/contours", auth, sh.DeleteAllContours)
 		//Specific Contours
 		allSiteEndpoint.Put("/{site_id}/contours/{contour_id}", sh.UpdateContour)
-		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", sh.DeleteContour)
+		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", auth,sh.DeleteContour)
 
 	}
 	return app
@@ -85,7 +84,7 @@ func preflight() {
 	viper.SetDefault("PGUSER", "postgis")          //database username
 	viper.SetDefault("PGPASSWORD", "password")     // database password
 	viper.SetDefault("DB_USE_LOCAL_SOCKET", false) //connect via unix socket rather than tcp
-	viper.SetDefault("DB_INIT", true)              //whether to attempt to creata the schema
+	viper.SetDefault("DB_INIT", true)              //whether to attempt to create the schema
 
 	viper.SetDefault("LOG_LEVEL", "DEBUG") //log levels as defined by Zap library -- pretty standard
 	//Point matching thresholds

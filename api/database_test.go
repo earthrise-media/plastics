@@ -9,7 +9,6 @@ import (
 
 func TestSiteController_AddSite(t *testing.T) {
 
-
 	s1 := model.Site{
 
 		Location: orb.Point{-76.332395, 39.544287},
@@ -22,7 +21,7 @@ func TestSiteController_AddSite(t *testing.T) {
 		Location: orb.Point{-76.334648, 39.544758},
 	}
 
-		sites := []*model.Site{&s1, &s2, &s3}
+	sites := []*model.Site{&s1, &s2, &s3}
 
 	sc := database.NewSiteController(db)
 
