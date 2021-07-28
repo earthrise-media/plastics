@@ -58,8 +58,10 @@ func FeatureToSite(feature *geojson.Feature) (*model.Site, error){
 		Location: feature.Point(),
 		Properties: make(map[string]string,0),
 	}
+	if feature.ID != nil{
+		site.Id = int64(feature.ID.(float64))
+	}
 
-	site.Id = int64(feature.ID.(float64))
 	if len(feature.Properties) == 0 {
 		site.Properties[model.SiteName] = ""
 	} else {
