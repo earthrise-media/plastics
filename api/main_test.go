@@ -104,8 +104,6 @@ func TestInsertContours(t *testing.T) {
 
 }
 
-
-
 func setup() {
 	preflight()
 	api = plasticApi()

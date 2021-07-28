@@ -40,6 +40,7 @@ func SitesToFeatureCollection(sites []*model.Site) (*geojson.FeatureCollection, 
 		for k,v := range site.Properties{
 			feat.Properties[k] = v
 		}
+
 		fc.Append(&feat)
 	}
 
@@ -57,6 +58,8 @@ func FeatureToSite(feature *geojson.Feature) (*model.Site, error){
 		Location: feature.Point(),
 		Properties: make(map[string]string,0),
 	}
+
+	site.Id = int64(feature.ID.(float64))
 	if len(feature.Properties) == 0 {
 		site.Properties[model.SiteName] = ""
 	} else {
