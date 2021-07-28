@@ -271,7 +271,7 @@ def predict_spectrogram(image_gram, model):
     output_img = preds_to_image(preds, image_gram)
     return output_img
 
-def patches_from_tile(tile, raster_info, width):
+def patches_from_tile(tile, raster_info, width, stride):
     """
     Break a larger tile of Sentinel data into a set of patches that
     a model can process.
@@ -279,6 +279,7 @@ def patches_from_tile(tile, raster_info, width):
         - tile: Sentinel data. Typically a numpy masked array
         - raster_info: Descartes metadata for the tile
         - model: keras model
+        - stride: number of pixels between each patch
     Outputs:
         - patches: A list of numpy arrays of the shape the model requires
         - patch_coords: A list of shapely polygon features describing the patch bounds
@@ -286,39 +287,48 @@ def patches_from_tile(tile, raster_info, width):
     patch_coords = raster_info[0]['wgs84Extent']['coordinates'][0]
     delta_lon = patch_coords[2][0] - patch_coords[0][0]
     delta_lat = patch_coords[1][1] - patch_coords[0][1]
+    lon_degrees_per_pixel = delta_lon / np.shape(tile)[0]
+    lat_degrees_per_pixel = delta_lat / np.shape(tile)[1]
     top_left = patch_coords[0]
 
     # The tile is broken into the number of whole patches
     # Regions extending beyond will not be padded and processed
-    num_steps_lon = np.shape(tile)[0] // width
-    num_steps_lat = np.shape(tile)[1] // width
     patch_coords = []
     patches = []
-    for i in range(num_steps_lon):
-        for j in range(num_steps_lat):
-            patch = tile[j * width : width + j * width,
-                         i * width : width + i * width]
-            patches.append(patch)
-            nw_coord = [top_left[0] + i * delta_lon / num_steps_lon,
-                        top_left[1] + j * delta_lat / num_steps_lat]
 
-            tile_geometry = [nw_coord,
-                             [nw_coord[0], nw_coord[1] + delta_lat / num_steps_lat],
-                             [nw_coord[0] + delta_lon / num_steps_lon,
-                              nw_coord[1] + delta_lat / num_steps_lat],
-                             [nw_coord[0] + delta_lon / num_steps_lon, nw_coord[1]],
-                             nw_coord
-                            ]
+    # Extract patches and create a shapely polygon for each patch
+    for i in range(0, np.shape(tile)[0] - width, stride):
+        for j in range(0, np.shape(tile)[1] - width, stride):
+            patch = tile[j : j + width,
+                         i : i + width]
+            patches.append(patch)
+
+            nw_coord = [top_left[0] + i * lon_degrees_per_pixel,
+                        top_left[1] + j * lat_degrees_per_pixel]
+            ne_coord = [top_left[0] + (i + width) * lon_degrees_per_pixel,
+                        top_left[1] + j * lat_degrees_per_pixel]
+            sw_coord = [top_left[0] + i * lon_degrees_per_pixel,
+                        top_left[1] + (j + width) * lat_degrees_per_pixel]
+            se_coord = [top_left[0] + (i + width) * lon_degrees_per_pixel,
+                        top_left[1] + (j + width) * lat_degrees_per_pixel]
+            tile_geometry = [nw_coord, sw_coord, se_coord, ne_coord, nw_coord]
             patch_coords.append(shapely.geometry.Polygon(tile_geometry))
     return patches, patch_coords
 
 def unit_norm(samples):
-    means = [1298.7330617049158, 1046.728074661139, 968.1679384402669, 805.7169469984433, 1001.5350089770019, 1721.8117738966116, 2074.660173162641, 1906.273653848785, 2253.9860009889144, 295.4803929281597, 1544.334239964913, 900.2133779561017]
-    deviations = [366.08860308693147, 378.157880474536, 389.7569162648193, 478.7348213604553, 435.20976171883257, 631.4499370533496, 798.0576089639353, 766.4725319841734, 892.286826414747, 131.88545750591763, 726.3113441205015, 601.8741576997301]
+    """
+    Channel-wise normalization of pixels in a patch.
+    Means and deviations are constants generated from an earlier dataset.
+    If changed, models will need to be retrained
+    Input: (n,n,12) numpy array or list.
+    Returns: normalized numpy array
+    """
+    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
+    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
     normalized_samples = np.zeros_like(samples).astype('float32')
     for i in range(0, 12):
         #normalize each channel to global unit norm
-        normalized_samples[:,:,:,:,i] = (np.array(samples)[:,:,:,:,i] - means[i]) / deviations[i]
+        normalized_samples[:,:,i] = (np.array(samples)[:,:,i] - means[i]) / deviations[i]
     return normalized_samples
 
 class DescartesRun(object):
@@ -357,6 +367,7 @@ class DescartesRun(object):
                  model_file='',
                  patch_model_file='',
                  patch_model_name='',
+                 patch_stride=None,
                  mosaic_period=1,
                  mosaic_method='min',
                  spectrogram_interval=6,
@@ -382,6 +393,10 @@ class DescartesRun(object):
             self.upload_patch_model(patch_model_file)
             self.patch_model = self.init_patch_model()
             self.patch_product = self.init_patch_product()
+            if patch_stride:
+                self.patch_stride = patch_stride
+            else:
+                self.patch_stride = self.patch_model.input_shape[2]
 
         self.mosaic_period = mosaic_period
         self.mosaic_method = mosaic_method
@@ -414,12 +429,10 @@ class DescartesRun(object):
         else:
             print(f"Product {self.patch_product_id}_patches already exists...")
             product = dl.vectors.FeatureCollection(product_id)
-        #dl.vectors.FeatureCollection(fc).delete()
         return product
 
     def reset_bands(self):
         """Delete existing output bands.
-
         It is probably best to avoid reusing product_ids with different
         input parameters. Calling this function manually would avoid confusion
         in that case.
@@ -447,7 +460,10 @@ class DescartesRun(object):
         """Instantiate model from DL storage."""
         temp_file = 'tmp-' + self.model_name
         dl.Storage().get_file(self.model_name, temp_file)
-        model = keras.models.load_model(temp_file)
+        model = keras.models.load_model(temp_file, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
+                                                                         'ELU': keras.layers.ELU,
+                                                                         'ReLU': keras.layers.ReLU
+                                                                         })
         os.remove(temp_file)
         return model
 
@@ -499,7 +515,7 @@ class DescartesRun(object):
         # Spatial patch classifier prediction
 
         # Generate a list of coordinates for the patches within the tile
-        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model.input_shape[2])
+        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
 
         # Initialize a dictionary where the patch coordinate boundaries are the keys
         # Each value is an empty list where predictions will be appended
@@ -510,16 +526,22 @@ class DescartesRun(object):
 
         for pair in image_grams:
             # generate patches for first image in pair
-            patches_0, _ = patches_from_tile(pair[0], raster_info, self.patch_model.input_shape[2])
+            patches_0, _ = patches_from_tile(pair[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
             # generate patches for second image in pair
-            patches_1, _ = patches_from_tile(pair[1], raster_info, self.patch_model.input_shape[2])
+            patches_1, _ = patches_from_tile(pair[1], raster_info, self.patch_model.input_shape[2], self.patch_stride)
 
             patch_pairs = []
             cloud_free = []
             for patch_0, patch_1 in zip(patches_0, patches_1):
+
+                model_input = np.zeros((self.patch_model.input_shape[2],
+                                        self.patch_model.input_shape[2],
+                                        24))
+                model_input[:,:,:12] = pad_patch(unit_norm(patch_0.filled(0)), 28)
+                model_input[:,:,12:] = pad_patch(unit_norm(patch_1.filled(0)), 28)
                 # Create a list of patch pairs.
-                # Shape is (2, model_input_shape, model_input_shape, 12)
-                patch_pairs.append([patch_0.filled(0), patch_1.filled(0)])
+                # Shape is (model_input_shape, model_input_shape, 24)
+                patch_pairs.append(model_input)
 
                 # Evaluate whether both patches in a sample are below cloud limit
                 cloudiness_0 = np.sum(patch_0.mask) / np.size(patch_0.mask)
@@ -529,26 +551,15 @@ class DescartesRun(object):
                 else:
                     cloud_free.append(False)
 
-            # Pairs norm shape is (n, 2, model_input_shape, model_input_shape, 12)
-            pairs_norm = unit_norm(patch_pairs)
-            pair_preds = self.patch_model.predict(pairs_norm)[:,1]
-            #for index, (pred, pair) in enumerate(zip(pair_preds, pairs_norm)):
-            #    plt.figure(figsize=(4,2), dpi=75)
-            #    plt.subplot(1,2,1)
-            #    plt.imshow(np.clip((pair[0,:,:,3:0:-1] + 1) / 2, 0, 1))
-            #    plt.title(f'Image {index}')
-            #    plt.axis('off')
-            #    plt.subplot(1,2,2)
-            #    plt.imshow(np.clip((pair[1,:,:,3:0:-1] + 1) / 2, 0, 1))
-            #    plt.title(f'{pred:.2f}')
-            #    plt.axis('off')
-            #    plt.show()
+            pair_preds = self.patch_model.predict(np.array(patch_pairs))[:,1]
 
             # If patches were cloud free, append the prediction to the dictionary
             for coord, pred, cloud_bool in zip(patch_coords, pair_preds, cloud_free):
                 if  cloud_bool == True:
                     pred_dict[tuple(coord.bounds)].append(pred)
 
+        # Create dictionary for outputs.
+        # In the future, patch classifier outputs should be a geotiff instead of geojson
         feature_list = []
         for coords, key in zip(patch_coords, pred_dict):
             preds = [round(pred, 4) for pred in pred_dict[key]]
@@ -571,8 +582,9 @@ class DescartesRun(object):
                     'std': -1,
                     'count': np.shape(preds)[0],
                 }
-            #if properties['mean'] > 0.01:
-            feature_list.append(dl.vectors.Feature(geometry = geometry, properties = properties))
+            # only save outputs that are above a threshold
+            if properties['mean'] > 0.3:
+                feature_list.append(dl.vectors.Feature(geometry = geometry, properties = properties))
         print(len(feature_list), 'features generated')
         if len(feature_list) > 0:
             self.patch_product.add(feature_list)
