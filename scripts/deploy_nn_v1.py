@@ -81,6 +81,10 @@ def main(*args):
                         type=str,
                         help='Model name in DL Storage',
                         default='')
+    parser.add_argument('--patch_stride',
+                        type=int,
+                        help='Stride width in pixels for patch classifier',
+                        default=None)
     parser.add_argument('--mosaic_period',
                         type=int,
                         help='Months over which to mosaic image data',
