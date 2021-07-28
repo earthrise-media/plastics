@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from sklearn.manifold import TSNE
 from tqdm import tqdm
+from scripts import dl_utils
 
 # Sentinel 2 band descriptions
 band_descriptions = {
@@ -173,3 +174,48 @@ def animate_patch(data, file_path, cloud_threshold=0.1, stretch=True):
     fig.tight_layout()
     ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
     ani.save(file_path)
+
+def compare_networks(pairs, models, names=None, threshold=0.8, plot=True):
+    """
+    Compare predictions on a spectrogram pair patch for a list of networks
+    """
+    rgb = normalize(np.ma.mean(pairs[:][0], axis=0))[:,:,3:0:-1]
+    overlays = []
+    preds = []
+    for model in models:
+        pred_stack = [dl_utils.predict_spectrogram(pair, model) for pair in pairs]
+        pred = np.ma.mean(pred_stack, axis=0)
+        preds.append(pred)
+        overlay = np.copy(rgb)
+        overlay[pred > threshold, 0] = .9
+        overlay[pred > threshold, 1] = 0
+        overlay[pred > threshold, 2] = .1
+        overlays.append(overlay)
+
+    if plot:
+        num_plots = len(models) + 1
+        plt.figure(figsize=(num_plots * 5, 10), dpi=100)
+
+        plt.subplot(2, num_plots, 1)
+        plt.title('RGB Mean')
+        plt.imshow(np.clip(rgb, 0, 1))
+        plt.axis('off')
+
+        for num in range(len(models)):
+            plt.subplot(2, num_plots, num + 2)
+            plt.imshow(preds[num], vmin=0, vmax=1, cmap='RdBu_r')
+            plt.axis('off')
+            if names:
+                plt.title(f'{names[num]} Preds')
+        for num in range(len(models)):
+            plt.subplot(2, num_plots,  num_plots + num + 2)
+            plt.imshow(np.clip(overlays[num], 0, 1))
+            plt.axis('off')
+            if names:
+                plt.title(f'{names[num]} Thresh {threshold}')
+            else:
+                plt.title(f'Thresh {threshold}')
+    plt.tight_layout()
+    plt.show()
+
+    return rgb, preds, overlays
