@@ -30,6 +30,7 @@ func plasticApi() *iris.Application {
 
 	c := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},
+		AllowedMethods:   ["GET", "PUT", "POST"],
 		AllowCredentials: true,
 		// Enable Debugging for testing, consider disabling in production
 		Debug: true,
