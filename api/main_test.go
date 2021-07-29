@@ -1,11 +1,13 @@
 package main
 
 import (
+	"github.com/stretchr/testify/assert"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/httptest"
 	"github.com/paulmach/orb/geojson"
 	"github.com/spf13/viper"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"runtime"
 	"strconv"
@@ -58,6 +60,24 @@ func TestInsertSites(t *testing.T) {
 	//}
 
 }
+
+func TestLimitSites(t *testing.T) {
+
+	test := httptest.New(t, api)
+
+	//how many sites do we have?
+	feats := test.GET("/sites").WithQuery("limit", 500).Expect().Status(200).JSON().Path("$.features").Array()
+	totalSites := len(feats.Raw())
+
+	//lets do this randomly 10 times
+	for i := 0; i < 10; i++ {
+		//this should be a number between 0 and total number of sites, so the return count should always be the right size
+		limit := rand.Intn(totalSites)
+		feats = test.GET("/sites").WithQuery("limit", limit).Expect().Status(200).JSON().Path("$.features").Array()
+		assert.Equal(t, len(feats.Raw()), limit)
+	}
+}
+
 
 func TestDeleteSites(t *testing.T) {
 
