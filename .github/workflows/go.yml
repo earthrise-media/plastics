@@ -1,5 +1,15 @@
 name: Go
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    branches: [ main, branches ]
+  push:
+    branches: [ main , branches ]
+    paths: 
+      - api/** 
+  pull_request:
+    branches: [ main ]
+
+  
 jobs:
   Lint:
     name: Lint
