@@ -1,4 +1,5 @@
 import requests
+import pickle
 import itertools
 import json
 from geopy.geocoders import Nominatim
@@ -20,7 +21,7 @@ def feature_collection(features):
 
 locator = Nominatim(user_agent="Earthrise GPW")
 
-print("Deleting current data")
+# print("Deleting current data")
 
 requests.delete(f"{API}/sites", auth=auth)
 
@@ -29,6 +30,11 @@ def keyfunc(feature):
     if "name" not in feature["properties"]:
         return None
     return feature["properties"]["name"]
+
+
+def idfunc(feature):
+    print(feature["id"])
+    return int(feature["id"])
 
 
 def require_positive_area(feature):
@@ -40,48 +46,66 @@ site_map = {}
 
 index = json.load(open(source_data))
 
+cache_map = pickle.load(open("./nominatim_cache", "rb"))
+
 # set to infinity after dev. just here to make testing faster.
-# limit = 0
 features = sorted(index["features"], key=keyfunc)
 for name, contours in itertools.groupby(features, keyfunc):
     contours = list(filter(require_positive_area, list(contours)))
     if len(contours) == 0:
         continue
     centroid = mapping(shape(contours[0]["geometry"]).centroid)
-    results = locator.reverse(tuple(reversed(centroid["coordinates"])))
-    print(f"Nominatim: {str(results.address)}")
-    print(f"Area: {contours[0]['properties'][area_key]}")
+    pair = tuple(reversed(centroid["coordinates"]))
+    results = None
+    if pair in cache_map:
+        results = cache_map[pair]
+        # print("(using cached nominatim)")
+    else:
+        results = locator.reverse(pair)
+        cache_map[pair] = results
+    pickle.dump(cache_map, open("./nominatim_cache", "wb"))
+    # print(f"Nominatim: {str(results.address)}")
+    # print(f"Area: {contours[0]['properties'][area_key]}")
     site_map[name] = {
         "centroid": {
             "type": "Feature",
             "properties": {
                 # TODO: calculate area
+                "name": name,
                 "place_name": str(results.address),
-                "area": contours[0]["properties"][area_key] * 1000000,
+                "area": str(contours[0]["properties"][area_key] * 1000000),
             },
             "geometry": centroid,
         },
         "contours": contours,
     }
-    # if limit > 5:
-    #     break
-    # limit = limit + 1
 
+count = 0
 for name, record in site_map.items():
+    print(f"{count} {name}")
+    count = count + 1
     print(f"Creating site for {name}")
     resp = requests.post(
-        f"{API}/sites", json=feature_collection([record["centroid"]]), headers=headers
+        f"{API}/sites?limit=1000",
+        json=feature_collection([record["centroid"]]),
+        headers=headers,
     ).raise_for_status()
     # TODO: this API should return the created ID, but it does not
     # https://github.com/earthrise-media/plastics/issues/31
-    new_id = requests.get(f"{API}/sites").json()["features"][-1]["id"]
-    print(f"Creating contours for {name}, id {new_id}")
+    set_features = requests.get(f"{API}/sites?limit=1000").json()["features"]
+    new_id = None
+    for feature in set_features:
+        if feature["properties"]["name"] == name:
+            new_id = feature["id"]
+            break
+    contour_count = len(record["contours"])
+    print(f"Creating {contour_count} contours for {name}, id {new_id}")
     resp = requests.post(
         f"{API}/sites/{new_id}/contours",
         json=feature_collection(record["contours"]),
         headers=headers,
     ).raise_for_status()
 
-print(f"In site map list: {len(site_map)}")
-print(f"Skipped names because they were not in positives: {skips}")
+# print(f"In site map list: {len(site_map)}")
+# print(f"Skipped names because they were not in positives: {skips}")
 print(f"Removed names because they had no contours: {zero_sites}")
