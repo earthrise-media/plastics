@@ -13,10 +13,6 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.16
-          
-      - name: Lint
-        uses: golangci/golangci-lint-action@v2
-        working-directory: ./api
         
       - name: Vet
         working-directory: ./api
