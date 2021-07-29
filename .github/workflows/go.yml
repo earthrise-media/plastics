@@ -57,5 +57,7 @@ jobs:
         working-directory: ./api
         run:  go test .
         env:
-          PGHOST: postgres
+          PGHOST: localhost
+          PGPORT: 5432
+
         
