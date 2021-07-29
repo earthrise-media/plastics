@@ -1,29 +1,23 @@
 name: Go
 
-on:
-  push:
-    branches: [ main , branches ]
-    paths: 
-      - api/** 
-  pull_request:
-    branches: [ main ]
+on: workflow_dispatch
+
 
 jobs:
-
-  build:
+  golangci:
+    name: lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.16
-    - name: Lint
-      run: cd api && go vet -v ./...
-
-    - name: Build
-      run: cd api && go build -v ./...
-
-    - name: Test
-      run: cd api && go test -v ./...
+      - uses: actions/checkout@v2
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+      - name: Lint
+        uses: golangci/golangci-lint-action@v2
+      - name: Vet
+        run: cd api && go vet -v ./...
+      - name: Build
+        run: cd api && go build -v ./...
+      - name: Test
+        run: cd api && go test -v ./...
