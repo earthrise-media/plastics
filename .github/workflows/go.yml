@@ -53,5 +53,5 @@ jobs:
           go-version: 1.15
       - name: Test
         working-directory: ./api
-        run: go test .
+        run: env PGHOST=postgres go test .
         
