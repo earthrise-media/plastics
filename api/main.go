@@ -23,7 +23,7 @@ func main() {
 	app := plasticApi()
 	app.Listen(":" + viper.GetString("port"))
 }
-//
+//plasticApi
 func plasticApi() *iris.Application {
 
 	app, c := iris.New(), cors.New(cors.Options{
