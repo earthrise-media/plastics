@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/stretchr/testify/assert"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/httptest"
 	"github.com/paulmach/orb/geojson"
 	"github.com/spf13/viper"
+	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"math/rand"
 	"os"
@@ -78,7 +78,6 @@ func TestLimitSites(t *testing.T) {
 	}
 }
 
-
 func TestDeleteSites(t *testing.T) {
 
 	test := httptest.New(t, api)
@@ -120,7 +119,9 @@ func TestInsertContours(t *testing.T) {
 	test.POST(path).WithJSON(&fc).Expect().Status(201)
 
 	//now test getting them back
-	test.GET(path).Expect().Status(200).JSON()
+	contourBody := test.GET(path).Expect().Status(200).Body()
+	_ = fc.UnmarshalJSON([]byte(contourBody.Raw()))
+	print("is sorted?")
 
 }
 
