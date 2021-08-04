@@ -51,7 +51,7 @@ func TestInsertSites(t *testing.T) {
 	//startLength := len(fc.Features)
 
 	//changed service signature to only return a 201 on successful creation
-	test.POST("/sites").WithJSON(fc).Expect().Status(201)
+	test.POST("/sites").WithJSON(fc).Expect().Status(200).JSON()
 	//fc.UnmarshalJSON([]byte(respData))
 	//endLength := len(fc.Features)
 	//if startLength != endLength {
