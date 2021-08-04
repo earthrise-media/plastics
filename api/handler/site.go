@@ -94,12 +94,12 @@ func (sh *SiteHandler) CreateSites(ctx iris.Context) {
 		zap.L().Warn(err.Error())
 	}
 
-	_, err = encoding.SitesToFeatureCollection(sites)
+	jsonSites, err := encoding.SitesToFeatureCollection(sites)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 	}
 
-	ctx.StatusCode(201)
+	ctx.JSON(jsonSites)
 
 }
 
