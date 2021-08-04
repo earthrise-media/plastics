@@ -37,10 +37,12 @@ type Contour struct {
 // implement sorting for Contours
 type ByDate []*Contour
 
+const byDateTimeFormat = "2006-01-02T15:04:05"
+
 func (bd ByDate) Len() int {
 	return len(bd)
 }
-const byDateTimeFormat = "2006-01-02T15:04:05"
+
 func (bd ByDate)  Less(i,j int) bool{
 	dateStringI, existI := bd[i].Properties[SiteDate]
 	dateStringJ, existJ := bd[j].Properties[SiteDate]
@@ -62,6 +64,7 @@ func (bd ByDate)  Less(i,j int) bool{
 	// actually compare dates
 	return dateI.Before(dateJ)
 }
+
 func (bd ByDate)  Swap(i,j int) {
 	bd[i], bd[j] = bd[j], bd[i]
 }

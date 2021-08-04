@@ -164,7 +164,9 @@ func (sh *SiteHandler) GetContours(ctx iris.Context) {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 
 	}
-	sort.Sort(model.ByDate(contours))
+	//sort from newest to olders
+	sort.Sort(sort.Reverse(model.ByDate(contours)))
+
 	fc, err := encoding.ContourFeatureCollection(contours)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
