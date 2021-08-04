@@ -23,11 +23,12 @@ func main() {
 	app := plasticApi()
 	app.Listen(":" + viper.GetString("port"))
 }
+
 //plasticApi..
 func plasticApi() *iris.Application {
 
 	app, c := iris.New(), cors.New(cors.Options{
-		AllowedOrigins: []string{"*"},
+		AllowedOrigins:   []string{"*"},
 		AllowedMethods:   []string{"GET", "PUT", "POST"},
 		AllowCredentials: true,
 		// Enable Debugging for testing, consider disabling in production
@@ -57,7 +58,7 @@ func plasticApi() *iris.Application {
 		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites)
 		//Specific Sites
 		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
-		allSiteEndpoint.Delete("/{site_id}", auth,sh.DeleteSiteById)
+		allSiteEndpoint.Delete("/{site_id}", auth, sh.DeleteSiteById)
 		allSiteEndpoint.Put("/{site_id}", sh.UpdateSite)
 		//All Contours
 		allSiteEndpoint.Get("/{site_id}/contours", sh.GetContours)
@@ -65,7 +66,7 @@ func plasticApi() *iris.Application {
 		allSiteEndpoint.Delete("/{site_id}/contours", auth, sh.DeleteAllContours)
 		//Specific Contours
 		allSiteEndpoint.Put("/{site_id}/contours/{contour_id}", sh.UpdateContour)
-		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", auth,sh.DeleteContour)
+		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", auth, sh.DeleteContour)
 
 	}
 	return app
