@@ -8,7 +8,7 @@ from shapely.geometry import mapping, shape
 auth = ("admin", "plastics")
 headers = {"Content-type": "application/json", "Accept": "application/json"}
 API = "https://plastic-api-dorvc455lq-uc.a.run.app"
-source_data = "../../data/model_outputs/site_contours/indonesia_v0_contours_model_spectrogram_v0.0.11_2021-07-13_de-duped.geojson"
+source_data = "../data/model_outputs/site_contours/indonesia_v0_contours_model_spectrogram_v0.0.11_2021-07-13_de-duped.geojson"
 area_key = "area (km^2)"
 
 skips = []
@@ -59,13 +59,10 @@ for name, contours in itertools.groupby(features, keyfunc):
     results = None
     if pair in cache_map:
         results = cache_map[pair]
-        # print("(using cached nominatim)")
     else:
         results = locator.reverse(pair)
         cache_map[pair] = results
     pickle.dump(cache_map, open("./nominatim_cache", "wb"))
-    # print(f"Nominatim: {str(results.address)}")
-    # print(f"Area: {contours[0]['properties'][area_key]}")
     site_map[name] = {
         "centroid": {
             "type": "Feature",
