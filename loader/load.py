@@ -16,6 +16,11 @@ AREA_KEY = "area (km^2)"
 
 skips = []
 zero_sites = []
+site_map = {}
+index = json.load(open(SOURCE_DATA))
+
+nominatim_calls = 0
+cached_addresses = 0
 
 # CACHE MAP
 # ---------
@@ -48,61 +53,98 @@ def require_positive_area(feature):
 # Use nominatim to get the address for a point,
 # but check the cache first to see if it's already cached.
 def geocode_centroid(centroid):
+    global cached_addresses
+    global nominatim_calls
     pair = tuple(reversed(centroid["coordinates"]))
     if pair not in cache_map:
         cache_map[pair] = locator.reverse(pair)
+        nominatim_calls = nominatim_calls + 1
         pickle.dump(cache_map, open("./nominatim_cache", "wb"))
+    else:
+        cached_addresses = cached_addresses + 1
     return cache_map[pair]
+
+
+def find_old_site(centroid_shape, existing_shapes):
+    for item in existing_shapes:
+        if item["shape"].distance(centroid_shape) < 0.0001:
+            return item
+
+
+def transfer_streetview(old, new):
+    if "heading" in old:
+        for key in ["heading", "pitch", "zoom", "lat", "lng"]:
+            new[key] = old[key]
+    return new
 
 
 locator = Nominatim(user_agent="Earthrise GPW")
 
-
-requests.delete(f"{API}/sites", auth=AUTH)
-
-site_map = {}
-
-index = json.load(open(SOURCE_DATA))
+existing_sites = requests.get(f"{API}/sites?limit=1000").json()
 
 
-features = sorted(index["features"], key=keyfunc)
-for name, contours in itertools.groupby(features, keyfunc):
+existing_shapes = list(
+    map(
+        lambda feature: {"shape": shape(
+            feature["geometry"]), "feature": feature},
+        existing_sites["features"],
+    )
+)
+
+
+# requests.delete(f"{API}/sites", auth=AUTH)
+
+
+for name, contours in itertools.groupby(
+    sorted(index["features"], key=keyfunc), keyfunc
+):
     contours = list(filter(require_positive_area, list(contours)))
     if len(contours) == 0:
         continue
     first_contour = contours[0]
-    centroid = mapping(shape(first_contour["geometry"]).centroid)
-    geocoded = geocode_centroid(centroid)
+    centroid_shape = shape(first_contour["geometry"]).centroid
+    centroid_geojson = mapping(centroid_shape)
+    geocoded = geocode_centroid(centroid_geojson)
+    old_site = find_old_site(centroid_shape, existing_shapes)
+    properties = {
+        "name": name,
+        "place_name": str(geocoded.address),
+        "area": str(first_contour["properties"][AREA_KEY] * 1000000),
+    }
+    if old_site:
+        properties = transfer_streetview(
+            old_site,
+            properties,
+        )
     site_map[name] = {
+        "old_id": old_site['feature']["id"] if old_site else None,
         "centroid": {
             "type": "Feature",
-            "properties": {
-                "name": name,
-                "place_name": str(geocoded.address),
-                "area": str(first_contour["properties"][AREA_KEY] * 1000000),
-            },
-            "geometry": centroid,
+            "properties": properties,
+            "geometry": centroid_geojson,
         },
         "contours": contours,
     }
 
+print(
+    f"Transformed sites. Addresses: cached={cached_addresses} called={nominatim_calls}"
+)
+
+
 count = 0
 for name, record in site_map.items():
     count = count + 1
-    print(f"{count} / Creating site for {name}")
-    resp = requests.post(
-        f"{API}/sites?limit=1000",
+
+    old_id = record['old_id']
+
+    print("POST (new feature)")
+    new_feature = requests.post(
+        f"{API}/sites",
         json=feature_collection([record["centroid"]]),
         headers=HEADERS,
-    ).raise_for_status()
-    # TODO: this API should return the created ID, but it does not
-    # https://github.com/earthrise-media/plastics/issues/31
-    set_features = requests.get(f"{API}/sites?limit=1000").json()["features"]
-    new_id = None
-    for feature in set_features:
-        if feature["properties"]["name"] == name:
-            new_id = feature["id"]
-            break
+    )
+    new_id = new_feature.json()['features'][0]['id']
+    print(f"POST (new contours for {new_id})")
     contour_count = len(record["contours"])
     print(f"{count} / Creating {contour_count} contours for {name}")
     resp = requests.post(
@@ -110,5 +152,14 @@ for name, record in site_map.items():
         json=feature_collection(record["contours"]),
         headers=HEADERS,
     ).raise_for_status()
+
+    if old_id:  
+        print(f"DELETE (old feature {old_id})")
+        requests.delete(
+            f"{API}/sites/{old_id}?site_id={old_id}",
+            headers=HEADERS,
+            auth=AUTH
+        ).raise_for_status()
+
 
 print(f"Removed names because they had no contours: {zero_sites}")
