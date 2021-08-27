@@ -118,7 +118,7 @@ func (sh *SiteHandler) DeleteAllSites(ctx iris.Context) {
 func (sh *SiteHandler) DeleteSiteById(ctx iris.Context) {
 
 	s := model.Site{}
-	id, err := ctx.URLParamInt64("site_id")
+	id, err := ctx.Params().GetInt64("site_id")
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Status(400).Detail("Invalid Site ID"))
 		return
