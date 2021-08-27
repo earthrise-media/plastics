@@ -11,7 +11,7 @@ from shapely.geometry import mapping, shape
 AUTH = ("admin", "plastics")
 HEADERS = {"Content-type": "application/json", "Accept": "application/json"}
 API = "https://plastic-api-dorvc455lq-uc.a.run.app"
-SOURCE_DATA = "../data/model_outputs/site_contours/indonesia_v0_contours_model_spectrogram_v0.0.11_2021-07-13_de-duped.geojson"
+SOURCE_DATA = "./indonesia_v0_masked_upsampled_4_contours_spectrogram_v0.0.11_2021-07-13_de_duped.geojson"
 AREA_KEY = "area (km^2)"
 
 skips = []
@@ -67,7 +67,8 @@ def geocode_centroid(centroid):
 
 def find_old_site(centroid_shape, existing_shapes):
     for item in existing_shapes:
-        if item["shape"].distance(centroid_shape) < 0.0001:
+        if item["shape"].distance(centroid_shape) < 0.0005:
+            existing_shapes.remove(item)
             return item
 
 
@@ -85,12 +86,13 @@ existing_sites = requests.get(f"{API}/sites?limit=1000").json()
 
 existing_shapes = list(
     map(
-        lambda feature: {"shape": shape(
-            feature["geometry"]), "feature": feature},
+        lambda feature: {"shape": shape(feature["geometry"]), "feature": feature},
         existing_sites["features"],
     )
 )
 
+
+old_ids_to_remove = map(lambda site: site['id'], existing_sites)
 
 # requests.delete(f"{API}/sites", auth=AUTH)
 
@@ -117,7 +119,7 @@ for name, contours in itertools.groupby(
             properties,
         )
     site_map[name] = {
-        "old_id": old_site['feature']["id"] if old_site else None,
+        "old_id": old_site["feature"]["id"] if old_site else None,
         "centroid": {
             "type": "Feature",
             "properties": properties,
@@ -130,12 +132,16 @@ print(
     f"Transformed sites. Addresses: cached={cached_addresses} called={nominatim_calls}"
 )
 
+print(f"DELETE (old features)")
+requests.delete(
+    f"{API}/sites", headers=HEADERS, auth=AUTH
+).raise_for_status()
 
 count = 0
 for name, record in site_map.items():
     count = count + 1
 
-    old_id = record['old_id']
+    old_id = record["old_id"]
 
     print("POST (new feature)")
     new_feature = requests.post(
@@ -143,7 +149,7 @@ for name, record in site_map.items():
         json=feature_collection([record["centroid"]]),
         headers=HEADERS,
     )
-    new_id = new_feature.json()['features'][0]['id']
+    new_id = new_feature.json()["features"][0]["id"]
     print(f"POST (new contours for {new_id})")
     contour_count = len(record["contours"])
     print(f"{count} / Creating {contour_count} contours for {name}")
@@ -153,13 +159,7 @@ for name, record in site_map.items():
         headers=HEADERS,
     ).raise_for_status()
 
-    if old_id:  
-        print(f"DELETE (old feature {old_id})")
-        requests.delete(
-            f"{API}/sites/{old_id}?site_id={old_id}",
-            headers=HEADERS,
-            auth=AUTH
-        ).raise_for_status()
+
 
 
 print(f"Removed names because they had no contours: {zero_sites}")
