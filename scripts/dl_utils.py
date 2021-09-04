@@ -116,7 +116,7 @@ def pad_patch(patch, width):
     Depending on how a polygon falls across pixel boundaries, it can be slightly
     bigger or smaller than intended.
     pad_patch trims pixels extending beyond the desired number of pixels if the
-    patch is larger than desired. If the patch is smaller, it will fill the 
+    patch is larger than desired. If the patch is smaller, it will fill the
     edge by reflecting the values.
     """
     h, w, c = patch.shape
@@ -212,7 +212,7 @@ def mosaic(arrays, method):
 
     return reduced
 
-def pair(mosaics, interval=6):
+def pair(mosaics, interval=6, dates=None):
     """Pair image mosaics from a list.
 
     Args:
@@ -223,7 +223,14 @@ def pair(mosaics, interval=6):
     """
     pairs = [[a, b] for a, b in zip(mosaics, mosaics[interval:])
                   if a is not None and b is not None]
-    return pairs
+    if dates:
+        date_list = []
+        for date, a,b in zip(dates, mosaics, mosaics[interval:]):
+            if a is not None and b is not None:
+                date_list.append(date)
+        return pairs, date_list
+    else:
+        return pairs
 
 # WIP: Eventually we want to generalize from pairs to n-grams.
 # This is a placeholder in the name-space for an eventual maker of n_grams.
@@ -261,13 +268,82 @@ def preds_to_image(preds, input_pair):
     mask = channel00.mask | channel10.mask | np.isnan(img)
     return np.ma.array(img, mask=mask)
 
-def predict_spectrogram(image_gram, model):
+def predict_spectrogram(image_gram, model, unit_norm = False):
     """Run a spectrogram model on a pair of images."""
     pixels = shape_gram_as_pixels(image_gram)
-    input_array = np.expand_dims(normalize(pixels), -1)
+    if unit_norm:
+        input_array = np.expand_dims(unit_norm_pixel(pixels), -1)
+    else:
+        input_array = np.expand_dims(normalize(pixels), -1)
     preds = model.predict(input_array)[:,1]
     output_img = preds_to_image(preds, image_gram)
     return output_img
+
+def patches_from_tile(tile, raster_info, width, stride):
+    """
+    Break a larger tile of Sentinel data into a set of patches that
+    a model can process.
+    Inputs:
+        - tile: Sentinel data. Typically a numpy masked array
+        - raster_info: Descartes metadata for the tile
+        - model: keras model
+        - stride: number of pixels between each patch
+    Outputs:
+        - patches: A list of numpy arrays of the shape the model requires
+        - patch_coords: A list of shapely polygon features describing the patch bounds
+    """
+    patch_coords = raster_info[0]['wgs84Extent']['coordinates'][0]
+    delta_lon = patch_coords[2][0] - patch_coords[0][0]
+    delta_lat = patch_coords[1][1] - patch_coords[0][1]
+    lon_degrees_per_pixel = delta_lon / np.shape(tile)[0]
+    lat_degrees_per_pixel = delta_lat / np.shape(tile)[1]
+    top_left = patch_coords[0]
+
+    # The tile is broken into the number of whole patches
+    # Regions extending beyond will not be padded and processed
+    patch_coords = []
+    patches = []
+
+    # Extract patches and create a shapely polygon for each patch
+    for i in range(0, np.shape(tile)[0] - width, stride):
+        for j in range(0, np.shape(tile)[1] - width, stride):
+            patch = tile[j : j + width,
+                         i : i + width]
+            patches.append(patch)
+
+            nw_coord = [top_left[0] + i * lon_degrees_per_pixel,
+                        top_left[1] + j * lat_degrees_per_pixel]
+            ne_coord = [top_left[0] + (i + width) * lon_degrees_per_pixel,
+                        top_left[1] + j * lat_degrees_per_pixel]
+            sw_coord = [top_left[0] + i * lon_degrees_per_pixel,
+                        top_left[1] + (j + width) * lat_degrees_per_pixel]
+            se_coord = [top_left[0] + (i + width) * lon_degrees_per_pixel,
+                        top_left[1] + (j + width) * lat_degrees_per_pixel]
+            tile_geometry = [nw_coord, sw_coord, se_coord, ne_coord, nw_coord]
+            patch_coords.append(shapely.geometry.Polygon(tile_geometry))
+    return patches, patch_coords
+
+def unit_norm(samples):
+    """
+    Channel-wise normalization of pixels in a patch.
+    Means and deviations are constants generated from an earlier dataset.
+    If changed, models will need to be retrained
+    Input: (n,n,12) numpy array or list.
+    Returns: normalized numpy array
+    """
+    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
+    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
+    normalized_samples = np.zeros_like(samples).astype('float32')
+    for i in range(0, 12):
+        #normalize each channel to global unit norm
+        normalized_samples[:,:,i] = (np.array(samples)[:,:,i] - means[i]) / deviations[i]
+    return normalized_samples
+
+def unit_norm_pixel(samples):
+    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
+    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
+    normalized_samples = ((samples - np.reshape(means, (1, 12, 1))) / (np.reshape(deviations, (1, 12, 1))))
+    return normalized_samples
 
 class DescartesRun(object):
     """Class to manage bulk model prediction on the Descartes Labs platform.
@@ -337,7 +413,7 @@ class DescartesRun(object):
 
     def reset_bands(self):
         """Delete existing output bands.
-        
+
         It is probably best to avoid reusing product_ids with different
         input parameters. Calling this function manually would avoid confusion
         in that case.
@@ -398,7 +474,7 @@ class DescartesRun(object):
 
     def predict(self, image_gram):
         """Predict on image-mosaic spectrograms."""
-        return predict_spectrogram(image_gram, self.model)
+        return predict_spectrogram(image_gram, self.model, unit_norm=False)
 
     def add_band(self, band_name):
         """Create a band in the DL product."""
