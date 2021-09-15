@@ -62,7 +62,7 @@ def get_tiles_from_roi(roi_file, tilesize, pad):
     return all_keys
 
 def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
-                   s2cloud_id='sentinel-2:L1C:dlcloud:v1',):
+                   s2cloud_id='sentinel-2:L1C:dlcloud:v1'):
     """
     Download a stack of cloud-masked Sentinel data
     Inputs:
@@ -76,13 +76,15 @@ def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
         products=[s2cloud_id],
         start_datetime=start_date,
         end_datetime=end_date,
+        limit=None
     )
 
     scenes, geoctx = dl.scenes.search(
         polygon,
         products=[s2_id],
         start_datetime=start_date,
-        end_datetime=end_date
+        end_datetime=end_date,
+        limit=None
     )
 
     # select only scenes that have a cloud mask
@@ -106,6 +108,7 @@ def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
     img_stack.mask[cloud_masks.data == 0] = True
 
     # Remove fully masked images and reorder to channels last
+    # TODO: remove raster infor for fully masked images too
     img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
                      if np.sum(img) > 0]
 
