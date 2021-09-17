@@ -6,6 +6,7 @@ import os
 import descarteslabs as dl
 from dateutil.relativedelta import relativedelta
 import numpy as np
+from scipy.stats import mode
 import shapely
 from tensorflow import keras
 
@@ -114,7 +115,7 @@ def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
 
     return img_stack, raster_info
 
-def pad_patch(patch, width):
+def pad_patch(patch, height, width=None):
     """
     Depending on how a polygon falls across pixel boundaries, it can be slightly
     bigger or smaller than intended.
@@ -123,9 +124,16 @@ def pad_patch(patch, width):
     edge by reflecting the values.
     """
     h, w, c = patch.shape
-    if h < width or w < width:
-        patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
-    patch = patch[:width, :width, :12]
+    if width:
+        if h < height:
+            patch = np.pad(patch, (height - h, 0), mode='reflect')
+        if w < width:
+            patch = np.pad(patch, (0, width - w), mode='reflect')
+        patch = patch[:height, :width, :12]
+    else:
+        if h < height or w < height:
+            patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
+        patch = patch[:height, :height, :12]
     return patch
 
 def download_batches(polygon, start_date, end_date, batch_months):
@@ -150,8 +158,10 @@ def download_batches(polygon, start_date, end_date, batch_months):
         except IndexError as e:
             print(f'Failed to retreive month {start.isoformat()}: {repr(e)}')
             batch, raster_info = [], []
-        batches.append(batch)
-        raster_infos.append(raster_info)
+        # Sometimes there are patches with no data. Ignore those
+        if len(np.shape(batch)) > 1:
+            batches.append(batch)
+            raster_infos.append(raster_info)
         start += delta
         end += delta
     return batches, raster_infos
@@ -183,6 +193,15 @@ def download_mosaics(polygon, start_date, end_date, mosaic_period=1,
     batches, raster_infos = download_batches(polygon, start_date, end_date,
                                                  mosaic_period)
     mosaics = [mosaic(batch, method) for batch in batches]
+    # There are cases where some patches are sized differently
+    # If that is the case, pad/clip them to the same shape
+    heights = [np.shape(img)[0] for img in mosaics]
+    widths = [np.shape(img)[1] for img in mosaics]
+    if len(np.unique(heights)) > 1 or len(np.unique(widths)) > 1:
+        h = mode(heights).mode[0]
+        w = mode(widths).mode[0]
+        mosaics = [np.ma.masked_array(pad_patch(img.data, h, w),
+                                        pad_patch(img.mask, h, w)) for img in mosaics]
     mosaic_info = [next(iter(r)) for r in raster_infos]
     return mosaics, mosaic_info
 
