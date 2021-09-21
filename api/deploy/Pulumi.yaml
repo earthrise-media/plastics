@@ -1,0 +1,3 @@
+name: GPW-API
+runtime: go
+description: Global Plastic Watch API
