@@ -5,9 +5,7 @@ import (
 	"github.com/kataras/iris/v12/httptest"
 	"github.com/paulmach/orb/geojson"
 	"github.com/spf13/viper"
-	"github.com/stretchr/testify/assert"
 	"io/ioutil"
-	"math/rand"
 	"os"
 	"runtime"
 	"strconv"
@@ -51,7 +49,7 @@ func TestInsertSites(t *testing.T) {
 	//startLength := len(fc.Features)
 
 	//changed service signature to only return a 201 on successful creation
-	test.POST("/sites").WithJSON(fc).Expect().Status(200).JSON()
+	test.POST("/sites").WithJSON(fc).Expect().Status(201)
 	//fc.UnmarshalJSON([]byte(respData))
 	//endLength := len(fc.Features)
 	//if startLength != endLength {
@@ -59,23 +57,6 @@ func TestInsertSites(t *testing.T) {
 	//	t.Fail()
 	//}
 
-}
-
-func TestLimitSites(t *testing.T) {
-
-	test := httptest.New(t, api)
-
-	//how many sites do we have?
-	feats := test.GET("/sites").WithQuery("limit", 500).Expect().Status(200).JSON().Path("$.features").Array()
-	totalSites := len(feats.Raw())
-
-	//lets do this randomly 10 times
-	for i := 0; i < 10; i++ {
-		//this should be a number between 0 and total number of sites, so the return count should always be the right size
-		limit := rand.Intn(totalSites)
-		feats = test.GET("/sites").WithQuery("limit", limit).Expect().Status(200).JSON().Path("$.features").Array()
-		assert.Equal(t, len(feats.Raw()), limit)
-	}
 }
 
 func TestDeleteSites(t *testing.T) {
@@ -119,11 +100,11 @@ func TestInsertContours(t *testing.T) {
 	test.POST(path).WithJSON(&fc).Expect().Status(201)
 
 	//now test getting them back
-	contourBody := test.GET(path).Expect().Status(200).Body()
-	_ = fc.UnmarshalJSON([]byte(contourBody.Raw()))
-	print("is sorted?")
+	test.GET(path).Expect().Status(200).JSON()
 
 }
+
+
 
 func setup() {
 	preflight()

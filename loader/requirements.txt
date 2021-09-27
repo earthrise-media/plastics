@@ -1,3 +1,0 @@
-requests == 2.*
-geopy == 2.*
-shapely == 1.*
