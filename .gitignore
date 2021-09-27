@@ -6,3 +6,6 @@ data/model_outputs/heatmaps
 data/model_outputs/site_contours/monthly_contours
 *.pyc
 .__pycache__
+data/model_outputs/patch_classifier/malaysia_patch_v1.2_weak_labels_28x28x24_2019-01-01_2021-06-01_stride_8.geojson
+data/model_outputs/patch_classifier/myanmar_patch_v1.2_weak_labels_28x28x24_2019-01-01_2021-06-01_stride_8.geojson
+data/model_outputs/patch_classifier/thailand_patch_v1.2_weak_labels_28x28x24_2019-01-01_2021-06-01_stride_8.geojson
