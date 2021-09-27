@@ -1,9 +1,7 @@
-# Detecting Plastic Waste using Satellite Imagery
-[Overview of project](https://gpw.earthrise.media/)
+# Detecting Plastics from Satellite Imagery
+[Overview of project](http://minderoo.earthrise.media/)
 
-![Indonesia V0 Overview copy](https://user-images.githubusercontent.com/13071901/126748336-1587fe8f-4286-4bc5-802d-167e07785411.png)
 ![Temesi Contours through Time](./assets/Temesi%202019-2020%20Preds%20Transparent.png)
-
 
 ## Project Structure
 This repo contains the tools for detecting plastics and/or landfills using Sentinel 2 imagery. The pipeline is mostly run through a set of Jupyter notebooks.
