@@ -159,11 +159,11 @@ func (sc *SiteController) FindSiteByRadius(point *orb.Point) (*model.Site, error
 
 func (sc *SiteController) UpdateSite(site *model.Site) error {
 
-	sql := "UPDATE sites SET geom = ST_GeometryFromText($1,4326)), props = $2 WHERE sites.id = $3"
+	sql := "UPDATE sites SET geom = ST_GeometryFromText($1,4326), props = $2 WHERE sites.id = $3"
 	wkt := wkt.MarshalString(site.Location)
 	store :=  pgtype.Hstore{}
 	store.Set(site.Properties)
-	_, err := sc.db.Exec(context.Background(), sql, wkt,store)
+	_, err := sc.db.Exec(context.Background(), sql, wkt,store, site.Id)
 	return err
 }
 
