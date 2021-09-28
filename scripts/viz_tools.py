@@ -155,12 +155,12 @@ def animate_patch_history(data, file_path, max_cloud=1):
     ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
     ani.save(file_path)
 
-def animate_patch(data, file_path, cloud_threshold=0.1, stretch=True):
+def animate_patch(data, file_path, cloud_threshold=0.1, stretch=True, interval=100, size=4):
     """
     Used for visualization and debugging. Takes a history dictionary and outputs a video
     for each timestep at each site in the history.
     """
-    fig, ax = plt.subplots(dpi=100, facecolor=(1,1,1))
+    fig, ax = plt.subplots(dpi=100, facecolor=(1,1,1), figsize=(size, size))
     ax.set_axis_off()
     images = []
     ax.set_title(os.path.basename(file_path)[:-4])
@@ -172,7 +172,7 @@ def animate_patch(data, file_path, cloud_threshold=0.1, stretch=True):
             im = plt.imshow(np.clip(rgb, 0, 1), animated=True)
             images.append([im])
     fig.tight_layout()
-    ani = animation.ArtistAnimation(fig, images, interval=100, blit=True, repeat_delay=500)
+    ani = animation.ArtistAnimation(fig, images, interval=interval, blit=True, repeat_delay=500)
     ani.save(file_path)
 
 def compare_networks(pairs, models, names=None, threshold=0.8, plot=True):
