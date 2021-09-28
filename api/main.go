@@ -8,6 +8,7 @@ import (
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/basicauth"
+	"github.com/rs/cors"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -23,11 +24,18 @@ func main() {
 	app.Listen(":" + viper.GetString("port"))
 }
 
+//plasticApi..
 func plasticApi() *iris.Application {
 
-	app := iris.New()
+	app, c := iris.New(), cors.New(cors.Options{
+		AllowedOrigins:   []string{"*"},
+		AllowedMethods:   []string{"GET", "PUT", "POST"},
+		AllowCredentials: true,
+		// Enable Debugging for testing, consider disabling in production
+		Debug: true,
+	})
 
-	//TODO add CORS
+	app.WrapRouter(c.ServeHTTP)
 
 	//TODO do we need real auth?
 	//auth
@@ -50,15 +58,15 @@ func plasticApi() *iris.Application {
 		allSiteEndpoint.Delete("/", auth, sh.DeleteAllSites)
 		//Specific Sites
 		allSiteEndpoint.Get("/{site_id}", sh.GetSiteById)
-		allSiteEndpoint.Delete("/{site_id}", sh.DeleteSiteById)
+		allSiteEndpoint.Delete("/{site_id}", auth, sh.DeleteSiteById)
 		allSiteEndpoint.Put("/{site_id}", sh.UpdateSite)
 		//All Contours
 		allSiteEndpoint.Get("/{site_id}/contours", sh.GetContours)
 		allSiteEndpoint.Post("/{site_id}/contours", sh.AddContours)
-		allSiteEndpoint.Delete("/{site_id}/contours", sh.DeleteAllContours)
+		allSiteEndpoint.Delete("/{site_id}/contours", auth, sh.DeleteAllContours)
 		//Specific Contours
 		allSiteEndpoint.Put("/{site_id}/contours/{contour_id}", sh.UpdateContour)
-		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", sh.DeleteContour)
+		allSiteEndpoint.Delete("/{site_id}/contours/{contour_id}", auth, sh.DeleteContour)
 
 	}
 	return app
@@ -70,16 +78,16 @@ func preflight() {
 
 	//setup configuration and defaults
 	viper.New()
-	viper.SetDefault("PORT", "8080")           //web service port
-	viper.SetDefault("PGHOST", "localhost")    //database hostname or ip
-	viper.SetDefault("PGPORT", "5432")         //  database port
-	viper.SetDefault("PGDATABASE", "plastic")  // name of database
-	viper.SetDefault("PGUSER", "postgis")      //database username
-	viper.SetDefault("PGPASSWORD", "password") // database password
-	viper.SetDefault("DB_USE_LOCAL_SOCKET", false)  //connect via unix socket rather than tcp
-	viper.SetDefault("DB_INIT",true)				//whether to attempt to creata the schema
+	viper.SetDefault("PORT", "8080")               //web service port
+	viper.SetDefault("PGHOST", "localhost")        //database hostname or ip
+	viper.SetDefault("PGPORT", "5432")             //  database port
+	viper.SetDefault("PGDATABASE", "plastic")      // name of database
+	viper.SetDefault("PGUSER", "postgis")          //database username
+	viper.SetDefault("PGPASSWORD", "password")     // database password
+	viper.SetDefault("DB_USE_LOCAL_SOCKET", false) //connect via unix socket rather than tcp
+	viper.SetDefault("DB_INIT", true)              //whether to attempt to create the schema
 
-	viper.SetDefault("LOG_LEVEL", "DEBUG")     //log levels as defined by Zap library -- pretty standard
+	viper.SetDefault("LOG_LEVEL", "DEBUG") //log levels as defined by Zap library -- pretty standard
 	//Point matching thresholds
 	viper.SetDefault("SITE_MATCH_DISTANCE_METERS", 1000) //if a point is within Xm of another site an update will treat them as the same site
 	//Security (lol) here
@@ -103,15 +111,12 @@ func preflight() {
 
 	//connect to database
 	//postgres://username:password@localhost:5432/database_name
-	connstring := "database="+viper.GetString("PGDATABASE")+" host=" +viper.GetString("PGHOST")+" user="+viper.GetString("PGUSER") +" password=" + viper.GetString("PGPASSWORD") + " port=" + viper.GetString("PGPORT")
+	connstring := "database=" + viper.GetString("PGDATABASE") + " host=" + viper.GetString("PGHOST") + " user=" + viper.GetString("PGUSER") + " password=" + viper.GetString("PGPASSWORD") + " port=" + viper.GetString("PGPORT")
 	zap.S().Debugf("connection string: %s", connstring)
-
-
 
 	dbLogger := zapadapter.NewLogger(logger)
 
 	poolConfig, err := pgxpool.ParseConfig(connstring)
-
 
 	if err != nil {
 		zap.L().Fatal("Unable to parse connection string")

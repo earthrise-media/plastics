@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "laos_union_v0",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 104.29782126592849, "lat": 18.105502247914686, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_33" }, "geometry": { "type": "Point", "coordinates": [ 104.297821265928491, 18.105502247914686 ] } },
+{ "type": "Feature", "properties": { "lon": 104.49627333031626, "lat": 18.114785792779635, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_60" }, "geometry": { "type": "Point", "coordinates": [ 104.496273330316257, 18.114785792779635 ] } },
+{ "type": "Feature", "properties": { "lon": 101.3847737086404, "lat": 20.085527912851607, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_129" }, "geometry": { "type": "Point", "coordinates": [ 101.384773708640395, 20.085527912851607 ] } },
+{ "type": "Feature", "properties": { "lon": 104.88963998876959, "lat": 17.352579924805642, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_146" }, "geometry": { "type": "Point", "coordinates": [ 104.889639988769588, 17.352579924805642 ] } },
+{ "type": "Feature", "properties": { "lon": 102.08694703471109, "lat": 19.848924627429927, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_198" }, "geometry": { "type": "Point", "coordinates": [ 102.086947034711088, 19.848924627429927 ] } },
+{ "type": "Feature", "properties": { "lon": 103.7154192245568, "lat": 18.370545730867175, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_250" }, "geometry": { "type": "Point", "coordinates": [ 103.715419224556797, 18.370545730867175 ] } },
+{ "type": "Feature", "properties": { "lon": 100.12043772596394, "lat": 20.291174440937553, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_259" }, "geometry": { "type": "Point", "coordinates": [ 100.120437725963939, 20.291174440937553 ] } },
+{ "type": "Feature", "properties": { "lon": 105.72077208339005, "lat": 15.234695027587694, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_449" }, "geometry": { "type": "Point", "coordinates": [ 105.720772083390045, 15.234695027587694 ] } },
+{ "type": "Feature", "properties": { "lon": 101.6664606965474, "lat": 19.199924881652048, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_516" }, "geometry": { "type": "Point", "coordinates": [ 101.666460696547404, 19.199924881652048 ] } },
+{ "type": "Feature", "properties": { "lon": 103.7111873581962, "lat": 18.570996147161772, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_528" }, "geometry": { "type": "Point", "coordinates": [ 103.711187358196199, 18.570996147161772 ] } },
+{ "type": "Feature", "properties": { "lon": 104.82499805954363, "lat": 16.540196517707543, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_542" }, "geometry": { "type": "Point", "coordinates": [ 104.824998059543631, 16.540196517707543 ] } },
+{ "type": "Feature", "properties": { "lon": 106.77050705724005, "lat": 14.810221918238886, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_598" }, "geometry": { "type": "Point", "coordinates": [ 106.770507057240053, 14.810221918238886 ] } },
+{ "type": "Feature", "properties": { "lon": 105.53148356385137, "lat": 14.697925011414082, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_646" }, "geometry": { "type": "Point", "coordinates": [ 105.531483563851367, 14.697925011414082 ] } },
+{ "type": "Feature", "properties": { "lon": 102.84626605369658, "lat": 18.07797566275881, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_648" }, "geometry": { "type": "Point", "coordinates": [ 102.846266053696581, 18.07797566275881 ] } },
+{ "type": "Feature", "properties": { "lon": 102.59559951303196, "lat": 18.311142241559377, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_655" }, "geometry": { "type": "Point", "coordinates": [ 102.595599513031956, 18.311142241559377 ] } },
+{ "type": "Feature", "properties": { "lon": 100.44308656539205, "lat": 20.268025794357317, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_713" }, "geometry": { "type": "Point", "coordinates": [ 100.443086565392051, 20.268025794357317 ] } },
+{ "type": "Feature", "properties": { "lon": 105.80695176522542, "lat": 16.559104623207151, "name": "laos_v0.0.11_2019-01-01_2021-06-01mosaic-median_853" }, "geometry": { "type": "Point", "coordinates": [ 105.806951765225421, 16.559104623207151 ] } }
+]
+}
