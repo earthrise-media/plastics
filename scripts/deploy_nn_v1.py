@@ -13,7 +13,7 @@ DL_SYSTEM_PARAMS = {
     'cpus': 1,
     'maximum_concurrency': 60,
     'memory': '24Gi',
-    'retry_count': 2,
+    'retry_count': 4,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
@@ -36,9 +36,9 @@ def main(*args):
     """Deploy a model on the Descartes Labs platform.
 
     Args:
-        args:list: Can include any pair of form (flag, argument) passed to  
+        args:list: Can include any pair of form (flag, argument) passed to
             the argument parser, e.g. ['--roi_file', '../data/bali.json'].
-            Cannot be None if calling from an interpreter. Give [] instead. 
+            Cannot be None if calling from an interpreter. Give [] instead.
     """
     parser = argparse.ArgumentParser('Configure TPA detector deployment')
     parser.add_argument('--roi_file',
@@ -49,6 +49,10 @@ def main(*args):
                         type=str,
                         help='ID of catalog product',
                         default='earthrise:tpa_nn_toa')
+    parser.add_argument('--patch_product_id',
+                        type=str,
+                        help='ID of catalog product',
+                        default='')
     parser.add_argument('--product_name',
                         type=str,
                         help='Name of catalog product',
@@ -69,6 +73,18 @@ def main(*args):
                         type=str,
                         help='Model name in DL Storage',
                         default='model_filtered_toa-12-09-2020.h5')
+    parser.add_argument('--patch_model_file',
+                        type=str,
+                        help='Local path to model file to upload',
+                        default='')
+    parser.add_argument('--patch_model_name',
+                        type=str,
+                        help='Model name in DL Storage',
+                        default='')
+    parser.add_argument('--patch_stride',
+                        type=int,
+                        help='Stride width in pixels for patch classifier',
+                        default=None)
     parser.add_argument('--mosaic_period',
                         type=int,
                         help='Months over which to mosaic image data',
@@ -98,7 +114,7 @@ def main(*args):
     args = parser.parse_args(*args)
 
     tiles = dl_utils.get_tiles_from_roi(args.roi_file, args.tilesize, args.pad)
-    
+
     # This init handles product creation and model upload.
     runner = dl_utils.DescartesRun(**vars(args))
 
@@ -111,8 +127,6 @@ def main(*args):
 
         for dlkey in tqdm(tiles):
             async_func(dlkey, **vars(args))
-        
+
 if __name__ == "__main__":
     main()
-    
-

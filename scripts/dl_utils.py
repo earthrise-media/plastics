@@ -240,6 +240,7 @@ def pair(mosaics, interval=6, dates=None):
     Args:
         mosaics: A list of masked arrays
         interval: Integer interval between mosaics, in number of mosaic periods
+        dates: Optional arg to return the dates of the pairs
 
     Returns: A list of lists of images.
     """
@@ -281,6 +282,35 @@ def shape_gram_as_pixels(gram):
 def normalize(x):
     return np.array(x) / NORMALIZATION
 
+def unit_norm_pixel(samples):
+    """
+    Channel-wise normalization of pixels in a vector.
+    Means and deviations are constants generated from an earlier dataset.
+    If changed, models will need to be retrained
+    Input: (12) numpy array or list.
+    Returns: normalized numpy array
+    """
+    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
+    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
+    normalized_samples = ((samples - np.reshape(means, (1, 12, 1))) / (np.reshape(deviations, (1, 12, 1))))
+    return normalized_samples
+
+def unit_norm(samples):
+    """
+    Channel-wise normalization of pixels in a patch.
+    Means and deviations are constants generated from an earlier dataset.
+    If changed, models will need to be retrained
+    Input: (n,n,12) numpy array or list.
+    Returns: normalized numpy array
+    """
+    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
+    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
+    normalized_samples = np.zeros_like(samples).astype('float32')
+    for i in range(0, 12):
+        #normalize each channel to global unit norm
+        normalized_samples[:,:,i] = (np.array(samples)[:,:,i] - means[i]) / deviations[i]
+    return normalized_samples
+
 # WIP: needs to be generalized pairs -> grams
 def preds_to_image(preds, input_pair):
     """Reshape and mask spectrogram model predictions."""
@@ -290,7 +320,7 @@ def preds_to_image(preds, input_pair):
     mask = channel00.mask | channel10.mask | np.isnan(img)
     return np.ma.array(img, mask=mask)
 
-def predict_spectrogram(image_gram, model, unit_norm = False):
+def predict_spectrogram(image_gram, model, unit_norm=False):
     """Run a spectrogram model on a pair of images."""
     pixels = shape_gram_as_pixels(image_gram)
     if unit_norm:
@@ -345,28 +375,6 @@ def patches_from_tile(tile, raster_info, width, stride):
             patch_coords.append(shapely.geometry.Polygon(tile_geometry))
     return patches, patch_coords
 
-def unit_norm(samples):
-    """
-    Channel-wise normalization of pixels in a patch.
-    Means and deviations are constants generated from an earlier dataset.
-    If changed, models will need to be retrained
-    Input: (n,n,12) numpy array or list.
-    Returns: normalized numpy array
-    """
-    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
-    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
-    normalized_samples = np.zeros_like(samples).astype('float32')
-    for i in range(0, 12):
-        #normalize each channel to global unit norm
-        normalized_samples[:,:,i] = (np.array(samples)[:,:,i] - means[i]) / deviations[i]
-    return normalized_samples
-
-def unit_norm_pixel(samples):
-    means = [1367.8407, 1104.4116, 1026.8099, 856.1295, 1072.1476, 1880.3287, 2288.875, 2104.5999, 2508.7764, 305.3795, 1686.0194, 946.1319]
-    deviations = [249.14418, 317.69983, 340.8048, 467.8019, 390.11594, 529.972, 699.90826, 680.56006, 798.34937, 108.10846, 651.8683, 568.5347]
-    normalized_samples = ((samples - np.reshape(means, (1, 12, 1))) / (np.reshape(deviations, (1, 12, 1))))
-    return normalized_samples
-
 class DescartesRun(object):
     """Class to manage bulk model prediction on the Descartes Labs platform.
 
@@ -386,7 +394,7 @@ class DescartesRun(object):
         input_bands: List of DL names identifying Sentinel bands
 
     External methods:
-        init_prodcut: Create or get DL catalog product with specified bands.
+        init_product: Create or get DL catalog product with specified bands.
         reset_bands: Delete existing output bands.
         upload_model: Upload model to DL storage.
         init_model: Instantiate model from DL storage.
@@ -397,9 +405,13 @@ class DescartesRun(object):
     """
     def __init__(self,
                  product_id,
+                 patch_product_id,
                  model_name,
                  product_name='',
                  model_file='',
+                 patch_model_file='',
+                 patch_model_name='',
+                 patch_stride=None,
                  mosaic_period=1,
                  mosaic_method='min',
                  spectrogram_interval=6,
@@ -408,6 +420,7 @@ class DescartesRun(object):
                  **kwargs):
         if product_id.startswith('earthrise:'):
             self.product_id = product_id
+            self.patch_product_id = patch_product_id
         else:
             self.product_id = f'earthrise:{product_id}'
         self.product_name = product_name if product_name else self.product_id
@@ -418,6 +431,17 @@ class DescartesRun(object):
         if model_file:
             self.upload_model(model_file)
         self.model = self.init_model()
+
+        if patch_model_file:
+            self.patch_model_name = patch_model_name
+            self.upload_patch_model(patch_model_file)
+            self.patch_model = self.init_patch_model()
+            self.patch_product = self.init_patch_product()
+            if patch_stride:
+                self.patch_stride = patch_stride
+            else:
+                self.patch_stride = self.patch_model.input_shape[2]
+
         self.mosaic_period = mosaic_period
         self.mosaic_method = mosaic_method
         self.spectrogram_interval = spectrogram_interval
@@ -430,12 +454,29 @@ class DescartesRun(object):
         product = dl.catalog.Product.get_or_create(id=self.product_id,
                                                    name=self.product_name)
         product.save()
-        print(f'Got product {self.product_id}')
+        print(f'Got patch product {self.product_id}')
+        return product
+
+    def init_patch_product(self):
+        """Create or get DL catalog product."""
+        fc_ids = [fc.id for fc in dl.vectors.FeatureCollection.list()]
+        product_id = None
+        for fc in fc_ids:
+            if self.patch_product_id in fc:
+                product_id = fc
+
+        if not product_id:
+            print("Creating product", self.patch_product_id + '_patches')
+            product = dl.vectors.FeatureCollection.create(product_id=self.patch_product_id + '_patches',
+                                                          title=self.product_name + '_patches',
+                                                          description=self.patch_model_name)
+        else:
+            print(f"Product {self.patch_product_id}_patches already exists...")
+            product = dl.vectors.FeatureCollection(product_id)
         return product
 
     def reset_bands(self):
         """Delete existing output bands.
-
         It is probably best to avoid reusing product_ids with different
         input parameters. Calling this function manually would avoid confusion
         in that case.
@@ -451,13 +492,35 @@ class DescartesRun(object):
             dl.Storage().set_file(self.model_name, model_file)
             print(f'Model {model_file} uploaded with key {self.model_name}.')
 
+    def upload_patch_model(self, patch_model_file):
+        """Upload model to DL storage."""
+        if dl.Storage().exists(self.patch_model_name):
+            print(f'Model {self.patch_model_name} found in DLStorage.')
+        else:
+            dl.Storage().set_file(self.patch_model_name, patch_model_file)
+            print(f'Model {patch_model_file} uploaded with key {self.patch_model_name}.')
+
     def init_model(self):
         """Instantiate model from DL storage."""
         temp_file = 'tmp-' + self.model_name
         dl.Storage().get_file(self.model_name, temp_file)
-        model = keras.models.load_model(temp_file)
+        model = keras.models.load_model(temp_file, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
+                                                                         'ELU': keras.layers.ELU,
+                                                                         'ReLU': keras.layers.ReLU
+                                                                         })
         os.remove(temp_file)
         return model
+
+    def init_patch_model(self):
+        """Instantiate model from DL storage."""
+        temp_file = 'tmp-' + self.patch_model_name
+        dl.Storage().get_file(self.patch_model_name, temp_file)
+        patch_model = keras.models.load_model(temp_file, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
+                                                                         'ELU': keras.layers.ELU,
+                                                                         'ReLU': keras.layers.ReLU
+                                                                         })
+        os.remove(temp_file)
+        return patch_model
 
     def _get_gram_length(self):
         """Compute the length of the spectrogram in months."""
@@ -477,11 +540,10 @@ class DescartesRun(object):
         Returns: None. (Uploads raster output to DL storage.)
         """
         tile = dl.scenes.DLTile.from_key(dlkey)
-
         mosaics, raster_info = download_mosaics(
             tile, start_date, end_date, self.mosaic_period, self.mosaic_method)
+        # Spectrogram pixel classifier prediction
         image_grams = n_gram(mosaics, self.spectrogram_interval)
-
         preds = [self.predict(gram) for gram in image_grams]
         preds.append(mosaic(preds, 'median'))
         preds = np.ma.stack(preds)
@@ -493,6 +555,83 @@ class DescartesRun(object):
             self.add_band(band_name)
         self.upload_raster(
             preds, next(iter(raster_info)), dlkey.replace(':', '_'))
+
+        # Spatial patch classifier prediction
+
+        # Generate a list of coordinates for the patches within the tile
+        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
+
+        # Initialize a dictionary where the patch coordinate boundaries are the keys
+        # Each value is an empty list where predictions will be appended
+        pred_dict = {tuple(coord.bounds): [] for coord in patch_coords}
+
+        # Set a threshold for acceptable cloudiness within a patch for a prediction to be valid
+        patch_cloud_threshold = 0.1
+
+        for pair in image_grams:
+            # generate patches for first image in pair
+            patches_0, _ = patches_from_tile(pair[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
+            # generate patches for second image in pair
+            patches_1, _ = patches_from_tile(pair[1], raster_info, self.patch_model.input_shape[2], self.patch_stride)
+
+            patch_pairs = []
+            cloud_free = []
+            for patch_0, patch_1 in zip(patches_0, patches_1):
+
+                model_input = np.zeros((self.patch_model.input_shape[2],
+                                        self.patch_model.input_shape[2],
+                                        24))
+                model_input[:,:,:12] = pad_patch(unit_norm(patch_0.filled(0)), 28)
+                model_input[:,:,12:] = pad_patch(unit_norm(patch_1.filled(0)), 28)
+                # Create a list of patch pairs.
+                # Shape is (model_input_shape, model_input_shape, 24)
+                patch_pairs.append(model_input)
+
+                # Evaluate whether both patches in a sample are below cloud limit
+                cloudiness_0 = np.sum(patch_0.mask) / np.size(patch_0.mask)
+                cloudiness_1 = np.sum(patch_1.mask) / np.size(patch_1.mask)
+                if cloudiness_0 < patch_cloud_threshold and cloudiness_1 < patch_cloud_threshold:
+                    cloud_free.append(True)
+                else:
+                    cloud_free.append(False)
+
+            pair_preds = self.patch_model.predict(np.array(patch_pairs))[:,1]
+
+            # If patches were cloud free, append the prediction to the dictionary
+            for coord, pred, cloud_bool in zip(patch_coords, pair_preds, cloud_free):
+                if  cloud_bool == True:
+                    pred_dict[tuple(coord.bounds)].append(pred)
+
+        # Create dictionary for outputs.
+        # In the future, patch classifier outputs should be a geotiff instead of geojson
+        feature_list = []
+        for coords, key in zip(patch_coords, pred_dict):
+            preds = [round(pred, 4) for pred in pred_dict[key]]
+            geometry = shapely.geometry.mapping(coords)
+            if len(preds) > 0:
+                properties = {
+                    'mean': np.mean(preds, axis=0).astype('float'),
+                    'median': np.median(preds, axis=0).astype('float'),
+                    'min': np.min(preds, axis=0).astype('float'),
+                    'max': np.max(preds, axis=0).astype('float'),
+                    'std': np.std(preds, axis=0).astype('float'),
+                    'count': np.shape(preds)[0],
+                }
+            else:
+                properties = {
+                    'mean': -1,
+                    'median': -1,
+                    'min': -1,
+                    'max': -1,
+                    'std': -1,
+                    'count': np.shape(preds)[0],
+                }
+            # only save outputs that are above a threshold
+            if properties['mean'] > 0.3:
+                feature_list.append(dl.vectors.Feature(geometry = geometry, properties = properties))
+        print(len(feature_list), 'features generated')
+        if len(feature_list) > 0:
+            self.patch_product.add(feature_list)
 
     def predict(self, image_gram):
         """Predict on image-mosaic spectrograms."""
