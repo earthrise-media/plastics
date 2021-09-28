@@ -8,6 +8,7 @@ import (
 	"github.com/paulmach/orb"
 	"github.com/paulmach/orb/geojson"
 	"go.uber.org/zap"
+	"sort"
 )
 
 type SiteHandler struct {
@@ -93,12 +94,12 @@ func (sh *SiteHandler) CreateSites(ctx iris.Context) {
 		zap.L().Warn(err.Error())
 	}
 
-	_, err = encoding.SitesToFeatureCollection(sites)
+	jsonSites, err := encoding.SitesToFeatureCollection(sites)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 	}
 
-	ctx.StatusCode(201)
+	ctx.JSON(jsonSites)
 
 }
 
@@ -163,6 +164,9 @@ func (sh *SiteHandler) GetContours(ctx iris.Context) {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
 
 	}
+	//sort from newest to olders
+	sort.Sort(sort.Reverse(model.ByDate(contours)))
+
 	fc, err := encoding.ContourFeatureCollection(contours)
 	if err != nil {
 		ctx.Problem(iris.NewProblem().Detail(err.Error()).Status(500))
