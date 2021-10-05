@@ -331,6 +331,28 @@ def predict_spectrogram(image_gram, model, unit_norm=False):
     output_img = preds_to_image(preds, image_gram)
     return output_img
 
+def load_ensemble(folder_path):
+    """Load all models in a directory. Outputs a list of models"""
+    model_files = [file for file in os.listdir(folder_path) if '.h5' in file]
+    model_list = []
+    for file in model_files:
+        model_list.append(keras.models.load_model(os.path.join(folder_path,file)))
+    return model_list
+
+def predict_ensemble(pairs, model_list, method='median'):
+    """Given a list of models and list of pairs, output a combined prediction output"""
+    ensemble_preds = []
+    for pair in pairs:
+        pred_stack = []
+        for ensemble_model in model_list:
+            pred_stack.append(predict_spectrogram(pair, ensemble_model, unit_norm=True))
+        if method == 'median':
+            ensemble_preds.append(np.median(pred_stack, axis=0))
+        if method == 'mean':
+            ensemble_preds.append(np.mean(pred_stack, axis=0))
+    return ensemble_preds
+
+
 def patches_from_tile(tile, raster_info, width, stride):
     """
     Break a larger tile of Sentinel data into a set of patches that
