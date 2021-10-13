@@ -1,0 +1,18 @@
+Image mosaic period: 3
+Spectrogram interval, steps: 2, 2
+Input Data:
+seagrass_negative_2019-06-01_2021-06-01_pixel_arrays.pkl
+swan_canning_2019-06-01_2021-06-01_pixel_arrays.pkl
+
+Batch Size: 128
+Training Epochs: 15
+
+Classification Report
+              precision    recall  f1-score   support
+
+      No TPA       1.00      1.00      1.00    238217
+         TPA       1.00      1.00      1.00     46069
+
+    accuracy                           1.00    284286
+   macro avg       1.00      1.00      1.00    284286
+weighted avg       1.00      1.00      1.00    284286
