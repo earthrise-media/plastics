@@ -1,0 +1,22 @@
+Image mosaic period: 3
+Spectrogram interval, steps: 2, 2
+Input Data:
+seagrass_negative_2019-06-01_2021-06-01_pixel_arrays.pkl
+swan_canning_2019-06-01_2021-06-01_pixel_arrays.pkl
+wellstead_2019-06-01_2021-06-01_pixel_arrays.pkl
+nt_2019-06-01_2021-06-01_pixel_arrays.pkl
+bali_bare_earth_negatives_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+city_points_30_negatives_2019-01-01_2021-01-01_period_3_interval_2_method_min_pixel_arrays.pkl
+
+Batch Size: 128
+Training Epochs: 8
+
+Classification Report
+              precision    recall  f1-score   support
+
+      No TPA       0.99      0.99      0.99    359197
+         TPA       1.00      1.00      1.00   1246946
+
+    accuracy                           1.00   1606143
+   macro avg       0.99      1.00      1.00   1606143
+weighted avg       1.00      1.00      1.00   1606143
