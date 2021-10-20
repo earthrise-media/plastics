@@ -1,0 +1,17 @@
+tensorflow
+tensorboard
+descarteslabs==1.7.1
+pandas
+geopandas
+matplotlib
+seaborn
+tqdm
+ipython_genutils
+sklearn
+scikit-image
+ipywidgets
+jupyterlab_widgets
+rasterio
+keplergl
+pygeos
+flytekit
