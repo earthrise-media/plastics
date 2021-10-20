@@ -132,7 +132,7 @@ def pad_patch(patch, height, width=None):
         patch = patch[:height, :width, :12]
     else:
         if h < height or w < height:
-            patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
+            patch = np.pad(patch, height - np.min([h, w]), mode='reflect')
         patch = patch[:height, :height, :12]
     return patch
 
