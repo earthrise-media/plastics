@@ -168,13 +168,14 @@ class LaunchDescartes(luigi.Task):
 
 class DownloadPatchGeojson(luigi.Task):
     run_id = luigi.Parameter()
-    patch_product_id = luigi.Parameter()
-    product_id = luigi.Parameter()
     start_date = luigi.DateParameter()
     end_date = luigi.DateParameter()
     model = luigi.Parameter()
     roi = luigi.Parameter()
     patch_model = luigi.Parameter()
+    patch_product_id = luigi.Parameter(default=f'patch_product_{run_id}')
+    product_id = luigi.Parameter(default=f'earthrise:product_{run_id}')
+
     dl_run = {}
 
     def requires(self):
@@ -249,14 +250,15 @@ class DownloadPatchGeojson(luigi.Task):
 
 class DownloadHeatmaps(luigi.Task):
     run_id = luigi.Parameter()
-    patch_product_id = luigi.Parameter()
-    product_id = luigi.Parameter()
     start_date = luigi.DateParameter()
     end_date = luigi.DateParameter()
     model = luigi.Parameter()
     roi = luigi.Parameter()
     patch_model = luigi.Parameter()
+    patch_product_id = luigi.Parameter(default=f'patch_product_{run_id}')
+    product_id = luigi.Parameter(default=f'earthrise:product_{run_id}')
     dl_run = {}
+
 
     def requires(self):
         return {'dg': DownloadPatchGeojson(run_id=self.run_id,
@@ -641,7 +643,9 @@ class SpectrogramRun(luigi.Task):
     model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
     roi = luigi.Parameter(default="test_patch")
     patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
-    run_id = ""
+    run_id = luigi.Parameter()
+    patch_product_id = luigi.Parameter(default=f'patch_product_{run_id}')
+    product_id = luigi.Parameter(default=f'earthrise:product_{run_id}')
 
     def output(self):
         return S3Target(f'{GlobalConfig().s3_base_url}/{self.run_id}/run.id')
@@ -649,16 +653,16 @@ class SpectrogramRun(luigi.Task):
     def requires(self):
         # task id is a long string created from all the parameters
         # we're going to hash it to make it more usable and it should still be idempotent
-        self.run_id = sha256(self.task_id.encode('utf-8')).hexdigest()[:20]
+        #self.run_id = sha256(self.task_id.encode('utf-8')).hexdigest()[:20]
 
-        patch_product_id = f'patch_product_{self.run_id}'
-        product_id = f'earthrise:product_{self.run_id}'
+        # patch_product_id = f'patch_product_{self.run_id}'
+        # product_id = f'earthrise:product_{self.run_id}'
 
-        print(self.run_id)
+        # print(self.run_id)
 
         return DownloadHeatmaps(run_id=self.run_id,
-                         patch_product_id=patch_product_id,
-                         product_id=product_id,
+                         patch_product_id=self.patch_product_id,
+                         product_id=self.product_id,
                          start_date=self.start_date,
                          end_date=self.end_date,
                          model=self.model,
@@ -679,7 +683,7 @@ class DetectCandidates(luigi.Task):
     model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
     roi = luigi.Parameter(default="test_patch")
     patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
-    run_id = "9e4b2a4463f49486e40b"
+    run_id = luigi.Parameter()
 
     def requires(self):
         return { 'sr': SpectrogramRun(start_date=self.start_date,
@@ -690,8 +694,90 @@ class DetectCandidates(luigi.Task):
                  }
 
     def output(self):
-        pass
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/candidates/candidates.geojson")
 
     def run(self):
-        self.run_id = S3Client().get_as_string(self.input()['sr'].path)
+        # self.run_id = S3Client().get_as_string(self.input()['sr'].path)
         yield DetectBlobsTiled(run_id=self.run_id)
+
+class ComparePatchClassifier(luigi.Task):
+
+    """
+    Compares candidate point sites with patch polygons and outputs a final geojson
+    """
+
+    #intenal params
+    gpd.options.use_pygeos = True
+
+    start_date = luigi.DateParameter(default=date(2019, 1, 1))
+    end_date = luigi.DateParameter(default=date(2021, 6, 1))
+    model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
+    roi = luigi.Parameter(default="test_patch")
+    patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
+    run_id = "9e4b2a4463f49486e40b"
+
+    def requires(self):
+        return {'sr': SpectrogramRun(start_date=self.start_date,
+                                     end_date=self.end_date,
+                                     model=self.model,
+                                     roi=self.roi,
+                                     patch_model=self.patch_model,
+                                     run_id=self.run_id),
+                'dc': DetectCandidates(start_date=self.start_date,
+                                     end_date=self.end_date,
+                                     model=self.model,
+                                     roi=self.roi,
+                                     patch_model=self.patch_model,
+                                     run_id=self.run_id),
+                'pgt': DownloadPatchGeojson(run_id=self.run_id,
+                             # patch_product_id=self.patch_product_id,
+                             # product_id=self.product_id,
+                             start_date=self.start_date,
+                             end_date=self.end_date,
+                             model=self.model,
+                             patch_model=self.patch_model,
+                             roi=self.roi),
+                'dbt': DetectBlobsTiled(run_id=self.run_id)
+                }
+
+    def output(self):
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/output/sites.geojson")
+
+    def run(self):
+
+        # get run_id
+        #self.run_id = S3Client().get_as_string(self.input()['sr'].path)
+
+        # pg_target = yield DownloadPatchGeojson(run_id=self.run_id,
+        #                      patch_product_id=self.patch_product_id,
+        #                      product_id=self.product_id,
+        #                      start_date=self.start_date,
+        #                      end_date=self.end_date,
+        #                      model=self.model,
+        #                      patch_model=self.patch_model,
+        #                      roi=self.roi)
+
+
+        # These are both S3Targets
+        patch = gpd.read_file(self.input()['pgt'].path)
+        pixel = gpd.read_file(self.input()['dc'].path)
+
+        threshold = 0.3
+        patch_threshold = patch[patch['mean'] > threshold]
+        patch_index = patch_threshold['geometry'].sindex
+
+        overlap = []
+        for candidate in pixel['geometry']:
+            if len(patch_index.query(candidate)) > 0:
+                overlap.append(True)
+            else:
+                overlap.append(False)
+        union = pixel[overlap]
+        print(f"{len(union)} candidate points intersect with patch classifier predictions greater than {threshold}")
+
+        tmp = AtomicS3File(self.output().path, S3Client())
+
+        union.to_file(tmp, driver='GeoJSON')
+        # I don't think this should be required but was getting 0 length files in S3 without it
+        tmp.flush()
+        tmp.move_to_final_destination()
