@@ -1,13 +1,10 @@
-import glob
 import os
-import pickle
-from os.path import exists
 from hashlib import sha256
 from datetime import date
-import json, functools, time
+import json, time
 import numpy as np
 import luigi
-from luigi.contrib.s3 import S3Target, S3Client
+from luigi.contrib.s3 import S3Target, S3Client, AtomicS3File
 from skimage.feature import blob_doh
 from skimage.feature.peak import peak_local_max
 from sklearn.neighbors import KDTree
@@ -15,44 +12,68 @@ import descarteslabs as dl
 from descarteslabs.catalog import Image, properties
 import geopandas as gpd
 import rasterio as rs
-from rasterio.merge import merge
 
 from tensorflow.keras.models import load_model
 from tensorflow import keras
 
 from scripts import deploy_nn_v1
 
+## config and globals
+
+
+class GlobalConfig(luigi.Config):
+    s3_base_url = luigi.Parameter(default="s3://flyte-plastic-artifacts/runs")
+    s3_bucket = luigi.Parameter(default="flyte-plastic-artifacts")
+    s3_base_folder = luigi.Parameter(default="runs")
+
+    local_temp_dir = luigi.Parameter(default="/tmp")
+    # we should expect run_id to be set by the pipeline entrypoint
+
 
 class ModelFile(luigi.Task):
+
     model: str = luigi.Parameter()
 
-    def output(self):
-        s3file = f's3://flyte-plastic-artifacts/models/{self.model}'
-        dest = f'/tmp/{self.model}'
-        S3Client().get(s3_path=s3file, destination_local_path=dest)
-        return luigi.LocalTarget(dest)
+    def requires(self):
+        pass
 
+    def output(self):
+        return luigi.LocalTarget(f'{GlobalConfig().local_temp_dir}/{self.model}')
+
+    def run(self):
+        s3file = f's3://{GlobalConfig().s3_bucket}/models/{self.model}'
+        dest = f'{GlobalConfig().local_temp_dir}/{self.model}'
+        S3Client().get(s3_path=s3file, destination_local_path=dest)
 
 class ROIFile(luigi.Task):
     # test_patch
     roi: str = luigi.Parameter()
 
+    def requires(self):
+        pass
+
     def output(self):
-        s3file = f's3://flyte-plastic-artifacts/boundaries/{self.roi}.geojson'
-        dest = f'/tmp/{self.roi}.geojson'
+        return luigi.LocalTarget(f'{GlobalConfig().local_temp_dir}/{self.roi}.geojson')
+
+    def run(self):
+        s3file = f's3://{GlobalConfig().s3_bucket}/boundaries/{self.roi}.geojson'
+        dest = f'{GlobalConfig().local_temp_dir}/{self.roi}.geojson'
         S3Client().get(s3_path=s3file, destination_local_path=dest)
-        return luigi.LocalTarget(dest)
 
 
 class PatchModelFile(luigi.Task):
     model: str = luigi.Parameter()
 
-    def output(self):
-        s3file = f's3://flyte-plastic-artifacts/models/{self.model}'
-        dest = f'/tmp/{self.model}'
-        S3Client().get(s3_path=s3file, destination_local_path=dest)
-        return luigi.LocalTarget(dest)
+    def requires(self):
+        pass
 
+    def output(self):
+        return luigi.LocalTarget(f'{GlobalConfig().local_temp_dir}/{self.model}')
+
+    def run(self):
+        s3file = f's3://{GlobalConfig().s3_bucket}/models/{self.model}'
+        dest = f'{GlobalConfig().local_temp_dir}/{self.model}'
+        S3Client().get(s3_path=s3file, destination_local_path=dest)
 
 class LaunchDescartes(luigi.Task):
     # parameters
@@ -68,7 +89,7 @@ class LaunchDescartes(luigi.Task):
     dl_task_id: str
 
     def output(self):
-        return luigi.LocalTarget(f'/tmp/{self.run_id}/{self.run_id}.json')
+        return S3Target(f'{GlobalConfig().s3_base_url}/{self.run_id}/{self.run_id}.json')
 
     def requires(self):
         return {'mf': ModelFile(self.model), 'rf': ROIFile(self.roi), 'pmf': PatchModelFile(self.patch_model), }
@@ -127,7 +148,7 @@ class LaunchDescartes(luigi.Task):
             '--tilesize',
             str((tilesize // patch_input_shape) * patch_input_shape - padding)
         ]
-        anticipated_results = deploy_nn_v1.main(args)
+        deploy_nn_v1.main(args)
 
         while True:
             groups = dl.tasks.list_groups(sort_order="desc", sort_field="created", limit=10)
@@ -138,7 +159,6 @@ class LaunchDescartes(luigi.Task):
                     print(f'Found task id: {group.get("id")}')
                     # add run args to metadata file so we have it
                     group['run_args'] = args
-                    group['anticipated_results'] = anticipated_results
                     with self.output().open('w') as outfile:
                         json.dump(group, outfile)
                     return
@@ -168,7 +188,7 @@ class DownloadPatchGeojson(luigi.Task):
                                       roi=self.roi), 'rf': ROIFile(roi=self.roi)}
 
     def output(self):
-        return luigi.LocalTarget(f"/tmp/{self.run_id}/{self.run_id}_patch.geojson")
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/{self.run_id}_patch.geojson")
 
     def run(self):
 
@@ -185,20 +205,20 @@ class DownloadPatchGeojson(luigi.Task):
                     time.sleep(100)
                     continue
                     # think "-1" means no more jobs will will be scheduled
-                if group['queue']['pending'] == -1:
+                if group['queue']['pending'] <= 0:
                     if group['queue']['successes'] > 0:
                         # at least partial success (I think)
                         print('Task appears to be complete:')
                         print(
-                            f"{group['queue']['successes']} successful jobs and +"
+                            f"{group['queue']['successes']} successful jobs and "
                             f"{group['queue']['failures']} failed jobs")
                         break
                     if group['queue']['successes'] == 0 and group['queue']['failures'] > 0:
-                        print("All jobs appear to have failed")
+                        print("All Descartes Labs jobs appear to have failed")
                         raise Exception("All Descartes Labs jobs appear to have failed")
                 elif group['status'] == 'running':
                     print(
-                        f"Task still running with {group['queue']['pending']} pending jobs, +"
+                        f"Descartes task still running with {group['queue']['pending']} pending jobs, "
                         f"{group['queue']['successes']} successful jobs and {group['queue']['failures']} failed jobs")
                     time.sleep(100)
             except dl.client.exceptions.BadRequestError as e:
@@ -207,20 +227,6 @@ class DownloadPatchGeojson(luigi.Task):
             except dl.client.exceptions.ServerError as e:
                 print("API error....waiting to try again")
                 time.sleep(100)
-            ## old way of checking
-            # results = dl.tasks.get_task_results(self.dl_run['id'])
-            # # descartes breaks the job into tiles, each tile should be a result
-            # if len(results["results"]) != self.dl_run['anticipated_results']:
-            #     print("Results not yet ready....waiting to check again")
-            #     time.sleep(100)
-            #     continue
-            #
-            # for res in results["results"]:
-            #     print(f"Result status: {res['status']}")
-            #     if res["status"] == 'FAILURE':
-            #         # task failed, error out
-            #         raise Exception("At least 1 Descartes Task Failed")
-            # break
 
         # get the first file that contains our patch_product_id -- naming really needs to be cleaned up
         fc_id = [fc.id for fc in dl.vectors.FeatureCollection.list() if self.patch_product_id in fc.id][0]
@@ -231,10 +237,14 @@ class DownloadPatchGeojson(luigi.Task):
         # add matching features to temp collection
         for f in fc.filter(region).features():
             filtered_features.append(f.geojson)
-
+        print(f"Found {len(filtered_features)} after filtering")
         results = gpd.GeoDataFrame.from_features(filtered_features)
-        outfile = self.output().path
-        results.to_file(outfile, driver='GeoJSON')
+        tmp = AtomicS3File(self.output().path, S3Client())
+
+        results.to_file(tmp, driver='GeoJSON')
+        # I don't think this should be required but was getting 0 length files in S3 without it
+        tmp.flush()
+        tmp.move_to_final_destination()
 
 
 class DownloadHeatmaps(luigi.Task):
@@ -256,10 +266,11 @@ class DownloadHeatmaps(luigi.Task):
                                            end_date=self.end_date,
                                            model=self.model,
                                            patch_model=self.patch_model,
-                                           roi=self.roi), 'rf': ROIFile(roi=self.roi)}
+                                           roi=self.roi),
+                'rf': ROIFile(roi=self.roi)}
 
     def output(self):
-        return luigi.LocalTarget(f"/tmp/{self.run_id}/heatmaps/")
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/heatmaps/")
 
     def run(self):
 
@@ -267,37 +278,43 @@ class DownloadHeatmaps(luigi.Task):
 
         band = 'median'
 
-        basepath = f"/tmp/{self.run_id}/heatmaps/"
-
-        print("Saving to", basepath)
-        if not os.path.exists(basepath):
-            os.makedirs(basepath)
-
         image_list = [image.id for image in search]
-        raster_client = dl.Raster()
+
+        dl_tasks = []
         for image in image_list:
-            try:
-                print(f"Saving {image}")
-                raster_client.raster(inputs=image,
-                                     bands=[band],
-                                     save=True,
-                                     outfile_basename=os.path.join(basepath, image),
-                                     srs='WGS84')
-            except dl.client.exceptions.BadRequestError as e:
-                print(f'Warning: {repr(e)}\nContinuing...')
-            except dl.client.exceptions.ServerError as e:
-                print(f'Warning: {repr(e)}\nContinuing...')
 
+            dl_tasks.append(DownloadHeatmap(
+                image=image,
+                run_id=self.run_id,
+                band=band,
+            ))
+        yield dl_tasks
 
-# class MergeSimilarSites(luigi.Task):
-#
-#     search_radius = luigi.FloatParameter(default=0.0025)
-#
-#     def output(self):
-#         pass
-#     def requires(self):
-#         pass
-#     def run(self):
+class DownloadHeatmap(luigi.Task):
+
+    """
+    This downloads heatmaps from Descartes and saves them on S3 (not locally)
+    """
+
+    image = luigi.Parameter()
+
+    run_id = luigi.Parameter()
+    band = luigi.Parameter()
+
+    def output(self):
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/heatmaps/{self.image}_{self.band}.tif")
+
+    def run(self):
+        tmp = AtomicS3File(f"{GlobalConfig().s3_base_url}/{self.run_id}/heatmaps/{self.image}_{self.band}.tif", S3Client())
+        print(f"image name is {self.image}")
+        response = dl.Raster().raster(inputs=self.image,
+                           bands=[self.band],
+                           save=False,
+                           srs='WGS84')
+
+        tmp.write(response['files'][f"{self.image}_{self.band}.tif"])
+        tmp.flush()
+        tmp.move_to_final_destination()
 
 def merge_similar_sites(candidate_sites, search_radius=0.0025):
     """
@@ -382,7 +399,6 @@ def detect_blobs(source, name, pred_threshold=0.75, min_sigma=3.5, max_sigma=100
     return candidate_gdf
 
 
-
 class BlobDetect(luigi.Task):
     """
         Identify candidates using blob detection on the heatmap.
@@ -403,7 +419,7 @@ class BlobDetect(luigi.Task):
 
     def output(self):
 
-        return luigi.LocalTarget(self.file+".json")
+        return S3Target(self.file+".json")
 
     def run(self):
 
@@ -441,35 +457,32 @@ class DetectBlobsTiled(luigi.Task):
     """
 
     # parameters
-    source_dir = luigi.Parameter()
-    candidate_dir = luigi.Parameter()
+
     pred_threshold = luigi.FloatParameter(default=0.75)
     min_sigma = luigi.FloatParameter(default=3.5)
     max_sigma = luigi.IntParameter(default=100)
     area_threshold = luigi.FloatParameter(0.0025)
     merge_radius = luigi.FloatParameter(default=0.005)
+    run_id = luigi.Parameter()
 
     def requires(self):
         pass
 
     def output(self):
-        return luigi.LocalTarget(self.candidate_dir+"/candidates.geojson")
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/candidates/candidates.geojson")
 
     def run(self):
-        # files = os.listdir(self.source_dir)
-        # file_paths = [os.path.join(self.source_dir, file) for file in files]
 
         # this should produce absolute paths
-        files = glob.glob(self.source_dir+"**.tif")
+        print(f"{GlobalConfig().s3_base_url}/{self.run_id}/heatmaps/")
+        s3_file_list = S3Client().listdir(f"{GlobalConfig().s3_base_url}/{self.run_id}/heatmaps/")
 
+        # instead of file paths, these are s3 paths
+        files = []
 
-        # blob_detect_partial = functools.partial(blob_detect,
-        #                                     pred_threshold=self.pred_threshold,
-        #                                     min_sigma=self.min_sigma,
-        #                                     max_sigma=self.max_sigma,
-        #                                     area_threshold=self.area_threshold)
-        #
-        # site_list = process_map(blob_detect_partial, file_paths)
+        for s3_file in s3_file_list:
+            if str(s3_file).endswith('.tif'):
+                files.append(s3_file)
 
         # instead of the above we'll yield a list of tasks
         detection_tasks = [BlobDetect(file=file,
@@ -481,13 +494,20 @@ class DetectBlobsTiled(luigi.Task):
         # this will run all the detection tasks in luigi
         task_result = yield detection_tasks
 
-        # result files should be in the same dir
-        json_files = glob.glob(self.source_dir+"**.json")
+        # look for json files this time
+        s3_file_list = S3Client().listdir(f"{GlobalConfig().s3_base_url}/{self.run_id}/heatmaps/")
+
+        json_files = []
+
+        for s3_file in s3_file_list:
+            if str(s3_file).endswith('.json'):
+                # add the absolute s3 path as an S3 Target
+                json_files.append(S3Target(s3_file))
 
         candidate_sites = []
 
         for jf in json_files:
-            with open(jf, 'r') as json_file:
+            with jf.open('r') as json_file:
                 more_sites = json.load(json_file)
                 if isinstance(more_sites, list):
                     candidate_sites.extend(more_sites)
@@ -496,14 +516,15 @@ class DetectBlobsTiled(luigi.Task):
 
         print(len(candidate_sites), "sites detected overall")
 
-        # todo: make this into a task (maybe?)
         candidate_gdf = merge_similar_sites(candidate_sites, search_radius=self.merge_radius)
 
         print(len(candidate_sites) - len(candidate_gdf), "sites merged")
 
-        candidate_gdf.to_file(self.candidate_dir+'/candidates.geojson', driver='GeoJSON')
+        tmp = AtomicS3File(self.output().path, S3Client())
+        candidate_gdf.to_file(tmp, driver='GeoJSON')
+        tmp.flush()
+        tmp.move_to_final_destination()
 
-        return candidate_gdf
 
 def detect_peaks(source, name, threshold_abs=0.85, min_distance=100, window_size=5000, save=True):
     """
@@ -607,41 +628,47 @@ class SyncToS3(luigi.Task):
             if S3Client().exists(s3file):
                 # only overwrite if asked
                 if not self.clobber:
+                    print(f"Skipping existing file {s3file}")
                     continue
             # upload file
             S3Client().put(filename, s3file)
 
-class SpectrogramRun(luigi.WrapperTask):
+
+class SpectrogramRun(luigi.Task):
     # input params
     start_date = luigi.DateParameter(default=date(2019, 1, 1))
     end_date = luigi.DateParameter(default=date(2021, 6, 1))
     model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
     roi = luigi.Parameter(default="test_patch")
     patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
+    run_id = ""
 
     def output(self):
-        pass
+        return S3Target(f'{GlobalConfig().s3_base_url}/{self.run_id}/run.id')
 
     def requires(self):
         # task id is a long string created from all the parameters
-        # we're going to hash it to make it more usable and it will still be idempotent
-        run_id = sha256(self.task_id.encode('utf-8')).hexdigest()[:20]
-        # setup a dir to store all our files (even if they end up in s3)
-        if not exists(f'/tmp/{run_id}/'):
-            os.mkdir(f"/tmp/{run_id}/")
+        # we're going to hash it to make it more usable and it should still be idempotent
+        self.run_id = sha256(self.task_id.encode('utf-8')).hexdigest()[:20]
 
-        patch_product_id = f'patch_product_{run_id}'
-        product_id = f'earthrise:product_{run_id}'
+        patch_product_id = f'patch_product_{self.run_id}'
+        product_id = f'earthrise:product_{self.run_id}'
 
-        yield DownloadHeatmaps(run_id=run_id,
-                               patch_product_id=patch_product_id,
-                               product_id=product_id,
-                               start_date=self.start_date,
-                               end_date=self.end_date,
-                               model=self.model,
-                               patch_model=self.patch_model,
-                               roi=self.roi)
-        yield SyncToS3(source_dir=f"/tmp/{run_id}/", dest_dir=f"s3://flyte-plastic-artifacts/runs/{run_id}/")
+        print(self.run_id)
+
+        return DownloadHeatmaps(run_id=self.run_id,
+                         patch_product_id=patch_product_id,
+                         product_id=product_id,
+                         start_date=self.start_date,
+                         end_date=self.end_date,
+                         model=self.model,
+                         patch_model=self.patch_model,
+                         roi=self.roi)
+
+    def run(self):
+
+        with self.output().open('w') as outfile:
+            outfile.write(self.run_id)
 
 
 class DetectCandidates(luigi.Task):
@@ -652,22 +679,19 @@ class DetectCandidates(luigi.Task):
     model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
     roi = luigi.Parameter(default="test_patch")
     patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
+    run_id = "9e4b2a4463f49486e40b"
 
     def requires(self):
-        pass
-        # SpectrogramRun(start_date=self.start_date,
-        #                end_date=self.end_date,
-        #                model=self.model,
-        #                roi=self.roi,
-        #                patch_model=self.patch_model)
+        return { 'sr': SpectrogramRun(start_date=self.start_date,
+                       end_date=self.end_date,
+                       model=self.model,
+                       roi=self.roi,
+                       patch_model=self.patch_model)
+                 }
 
     def output(self):
         pass
 
     def run(self):
-        sd = "/tmp/9e4b2a4463f49486e40b/heatmaps/"
-        parent_dir = os.path.abspath(os.path.join(sd,os.pardir))
-        candidate_dir= os.path.join(parent_dir,"candidates")
-        if not os.path.exists(candidate_dir):
-            os.mkdir(candidate_dir)
-        yield DetectBlobsTiled(source_dir="/tmp/9e4b2a4463f49486e40b/heatmaps/", candidate_dir=candidate_dir)
+        self.run_id = S3Client().get_as_string(self.input()['sr'].path)
+        yield DetectBlobsTiled(run_id=self.run_id)
