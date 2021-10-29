@@ -181,8 +181,6 @@ def detect_blobs_tiled(source_dir, pred_threshold=0.75, min_sigma=3.5, max_sigma
         candidate_gdf.to_file(file_path + '.geojson', driver='GeoJSON')    
     return candidate_gdf
 
-
-
 def detect_peaks(source, name, threshold_abs=0.85, min_distance=100, window_size=5000, save=True):
     """
     Identify candidates using heatmap peak detection.

@@ -9,9 +9,8 @@ tqdm
 ipython_genutils
 sklearn
 scikit-image
-ipywidgets
-jupyterlab_widgets
-rasterio
+rasterio[s3]
 keplergl
 pygeos
-flytekit
+luigi
+boto3
