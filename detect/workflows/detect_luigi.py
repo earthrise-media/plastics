@@ -1,7 +1,12 @@
 import os
 from hashlib import sha256
+from urllib.parse import urlparse
 from datetime import date
 import json, time
+from io import BytesIO
+import numpy
+import skimage.io
+from dateutil.relativedelta import relativedelta
 import numpy as np
 import luigi
 from luigi.contrib.s3 import S3Target, S3Client, AtomicS3File
@@ -12,14 +17,29 @@ import descarteslabs as dl
 from descarteslabs.catalog import Image, properties
 import geopandas as gpd
 import rasterio as rs
+import boto3
 
 from tensorflow.keras.models import load_model
 from tensorflow import keras
-
-from scripts import deploy_nn_v1
+import h3
+from scripts import deploy_nn_v1, dl_utils
 
 ## config and globals
 
+SENTINEL_BANDS = ['coastal-aerosol',
+                  'blue',
+                  'green',
+                  'red',
+                  'red-edge',
+                  'red-edge-2',
+                  'red-edge-3',
+                  'nir',
+                  'red-edge-4',
+                  'water-vapor',
+                  'swir1',
+                  'swir2']
+
+NORMALIZATION = 3000
 
 class GlobalConfig(luigi.Config):
     s3_base_url = luigi.Parameter(default="s3://flyte-plastic-artifacts/runs")
@@ -29,6 +49,67 @@ class GlobalConfig(luigi.Config):
     local_temp_dir = luigi.Parameter(default="/tmp")
     # we should expect run_id to be set by the pipeline entrypoint
 
+
+# Helper methods
+
+def numpy_to_s3(data: np.array, dest: str):
+    # s3_uri looks like f"s3://{BUCKET_NAME}/{KEY}"
+    bytes_ = BytesIO()
+    np.save(bytes_, data, allow_pickle=True)
+    bytes_.seek(0)
+    parsed_s3 = urlparse(dest)
+    boto3.s3
+    boto3.client("s3").upload_fileobj(
+        Fileobj=bytes_, Bucket=parsed_s3.netloc, Key=parsed_s3.path[1:]
+    )
+
+def s3_to_numpy(s3_uri: str) -> np.array:
+
+    bytes_ = BytesIO()
+    parsed_s3 = urlparse(s3_uri)
+    boto3.client("s3").download_fileobj(
+        Fileobj=bytes_, Bucket=parsed_s3.netloc, Key=parsed_s3.path[1:]
+    )
+    bytes_.seek(0)
+    return np.load(bytes_, allow_pickle=True)
+
+def merge_similar_sites(candidate_sites, search_radius=0.0025):
+    """
+    This process iteratively moves points closer together by taking the mean position of all
+    matched points. It then searches the KD tree using the unique clusters in these new points.
+    The algorithm stops once the number of unique sites is the same as in the previous round.
+
+    search_radius is given in degrees
+    """
+    coords = np.array(candidate_sites)
+
+    # Create a KD tree for efficient lookup of points within a radius
+    tree = KDTree(coords, leaf_size=2)
+
+    # Initialize a mean_coords array for the search
+    mean_coords = []
+    for elem in tree.query_radius(coords, search_radius):
+        mean_coords.append(np.mean(coords[elem], axis=0))
+    mean_coords = np.array(mean_coords)
+
+    num_coords = len(mean_coords)
+    while True:
+        search = tree.query_radius(mean_coords, search_radius)
+        uniques = [list(x) for x in set(tuple(elem) for elem in search)]
+        mean_coords = []
+        for elem in uniques:
+            mean_coords.append(np.mean(coords[elem], axis=0))
+        if len(mean_coords) == num_coords:
+            print(len(mean_coords), "unique sites detected")
+            mean_coords = np.array(mean_coords)
+            break
+        num_coords = len(mean_coords)
+
+    unique_sites = gpd.GeoDataFrame(mean_coords, columns=['lon', 'lat'], geometry=gpd.points_from_xy(*mean_coords.T))
+    unique_sites['name'] = [f"site_{i + 1}" for i in unique_sites.index]
+    return unique_sites
+
+# Tasks
 
 class ModelFile(luigi.Task):
 
@@ -44,6 +125,7 @@ class ModelFile(luigi.Task):
         s3file = f's3://{GlobalConfig().s3_bucket}/models/{self.model}'
         dest = f'{GlobalConfig().local_temp_dir}/{self.model}'
         S3Client().get(s3_path=s3file, destination_local_path=dest)
+
 
 class ROIFile(luigi.Task):
     # test_patch
@@ -74,6 +156,7 @@ class PatchModelFile(luigi.Task):
         s3file = f's3://{GlobalConfig().s3_bucket}/models/{self.model}'
         dest = f'{GlobalConfig().local_temp_dir}/{self.model}'
         S3Client().get(s3_path=s3file, destination_local_path=dest)
+
 
 class LaunchDescartes(luigi.Task):
     # parameters
@@ -292,6 +375,7 @@ class DownloadHeatmaps(luigi.Task):
             ))
         yield dl_tasks
 
+
 class DownloadHeatmap(luigi.Task):
 
     """
@@ -317,88 +401,6 @@ class DownloadHeatmap(luigi.Task):
         tmp.write(response['files'][f"{self.image}_{self.band}.tif"])
         tmp.flush()
         tmp.move_to_final_destination()
-
-def merge_similar_sites(candidate_sites, search_radius=0.0025):
-    """
-    This process iteratively moves points closer together by taking the mean position of all
-    matched points. It then searches the KD tree using the unique clusters in these new points.
-    The algorithm stops once the number of unique sites is the same as in the previous round.
-
-    search_radius is given in degrees
-    """
-    coords = np.array(candidate_sites)
-
-    # Create a KD tree for efficient lookup of points within a radius
-    tree = KDTree(coords, leaf_size=2)
-
-    # Initialize a mean_coords array for the search
-    mean_coords = []
-    for elem in tree.query_radius(coords, search_radius):
-        mean_coords.append(np.mean(coords[elem], axis=0))
-    mean_coords = np.array(mean_coords)
-
-    num_coords = len(mean_coords)
-    while True:
-        search = tree.query_radius(mean_coords, search_radius)
-        uniques = [list(x) for x in set(tuple(elem) for elem in search)]
-        mean_coords = []
-        for elem in uniques:
-            mean_coords.append(np.mean(coords[elem], axis=0))
-        if len(mean_coords) == num_coords:
-            print(len(mean_coords), "unique sites detected")
-            mean_coords = np.array(mean_coords)
-            break
-        num_coords = len(mean_coords)
-
-    unique_sites = gpd.GeoDataFrame(mean_coords, columns=['lon', 'lat'], geometry=gpd.points_from_xy(*mean_coords.T))
-    unique_sites['name'] = [f"site_{i + 1}" for i in unique_sites.index]
-    return unique_sites
-
-
-def detect_blobs(source, name, pred_threshold=0.75, min_sigma=3.5, max_sigma=100, area_threshold=0.0025,
-                 window_size=5000, save=True):
-    """
-    Identify candidates using blob detection on the heatmap.
-    prediction_threshold masks any prediction below a 0-1 threshold.
-    min_sigma and area_threshold control the size sensitivity of the blob detection.
-    Keep min_sigma low to detect smaller blobs
-    area_threshold establishes a lower bound on candidate blob size. Reduce to detect smaller blobs
-    """
-    candidate_sites = []
-    max_val = source.read(1).max()
-    for x in range(0, source.shape[0], window_size):
-        for y in range(0, source.shape[1], window_size):
-            print(
-                f"Processing row {(x // window_size) + 1} of {int(source.shape[0] / window_size) + 1}, column {(y // window_size) + 1} of {int(source.shape[1] / window_size) + 1}")
-            # Set min and max to analyze a subset of the image
-            window = Window.from_slices((x, x + window_size), (y, y + window_size))
-            window_median = (source.read(1, window=window) / max_val).astype('float')
-            # mask predictions below a threshold
-            mask = np.ma.masked_where(window_median < pred_threshold, window_median).mask
-            window_median[mask] = 0
-
-            blobs = blob_doh(window_median, min_sigma=min_sigma, max_sigma=max_sigma, threshold=area_threshold)
-            print(len(blobs), "candidates detected in window")
-
-            overlap_threshold = 0.01
-            transform = source.window_transform(window)
-            for candidate in blobs:
-                lon, lat = (transform * [candidate[1], candidate[0]])
-                # Size doesn't mean anything at the moment. Should look into this later
-                # size = candidate[2]
-                candidate_sites.append([lon, lat])
-
-    print(len(candidate_sites), "candidate sites detected in total")
-
-    candidate_gdf = merge_similar_sites(candidate_sites, search_radius=0.01)
-    display(candidate_gdf)
-
-    if save:
-        file_path = f"../data/model_outputs/candidate_sites/{name}_blobs_thresh_{pred_threshold}_min-sigma_{min_sigma}_area-thresh_{area_threshold}"
-        # candidate_gdf.loc[:, ['lon', 'lat', 'name']].to_csv(file_path + '.csv', index=False)
-        candidate_gdf.to_file(file_path + '.geojson', driver='GeoJSON')
-
-    return candidate_gdf
 
 
 class BlobDetect(luigi.Task):
@@ -528,83 +530,6 @@ class DetectBlobsTiled(luigi.Task):
         tmp.move_to_final_destination()
 
 
-def detect_peaks(source, name, threshold_abs=0.85, min_distance=100, window_size=5000, save=True):
-    """
-    Identify candidates using heatmap peak detection.
-    Inputs:
-      source: rasterio geotiff object
-      name: file name
-      threshold_abs: threshold for minimum prediction value
-      min_distance: candidates within this distance will be merged by default. Distance in pixel space
-      window_size: chunk the image into windows to reduce memory load
-      save: boolean to write outputs to disk
-    """
-    candidate_peaks = []
-    for x in range(0, source.shape[0], window_size):
-        for y in range(0, source.shape[1], window_size):
-            window = Window.from_slices((x, x + window_size), (y, y + window_size))
-            transform = source.window_transform(window)
-            subset = source.read(1, window=window)
-            peaks = peak_local_max(subset, threshold_abs=threshold_abs, min_distance=min_distance)
-            for candidate in peaks:
-                lon, lat = (transform * [candidate[1], candidate[0]])
-                candidate_peaks.append([lon, lat])
-    print(len(candidate_peaks), "peaks detected")
-    candidate_peaks = np.array(candidate_peaks)
-
-    candidate_gdf = gpd.GeoDataFrame(candidate_peaks, columns=['lon', 'lat'],
-                                     geometry=gpd.points_from_xy(*candidate_peaks.T))
-    candidate_gdf['name'] = [f"{name}_{i + 1}" for i in candidate_gdf.index]
-
-    if save:
-        file_path = f"../data/model_outputs/candidate_sites/{name}_peaks_thresh_{threshold_abs}_min_dist_{min_distance}"
-        # candidate_gdf.loc[:, ['lon', 'lat', 'name']].to_csv(file_path + '.csv', index=False)
-        candidate_gdf.to_file(file_path + '.geojson', driver='GeoJSON')
-
-    return candidate_gdf
-
-
-def setup():
-    # User inputs
-    model_version = '0.0.11'
-    model_name = 'spectrogram_v0.0.11_2021-07-13'
-    model_file = '../models/' + model_name + '.h5'
-
-    patch_model_version = 'weak_labels_1.1'
-    patch_model_name = 'v1.1_weak_labels_28x28x24'
-    patch_model_file = '../models/' + patch_model_name + '.h5'
-    patch_model = load_model(patch_model_file, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
-                                                               'ELU': keras.layers.ELU,
-                                                               'ReLU': keras.layers.ReLU})
-    patch_stride = 8
-    patch_input_shape = patch_model.input_shape[2]
-
-    # Note on dates: The date range should be longer than the spectrogram length.
-    # Starting on successive mosaic periods (typically: monthly), as many
-    # spectrograms are created as fit in the date range.
-    start_date = '2019-01-01'
-    end_date = '2021-06-01'
-
-    mosaic_period = 3
-    mosaic_method = 'min'
-    spectrogram_interval = 2
-
-    roi = 'bali_foot'
-    roi_file = f'../data/boundaries/{roi}.geojson'
-    product_id = f'earthrise:{roi}_v{model_version}_{start_date}_{end_date}'
-    patch_product_id = f'earthrise:{roi}_patch_{patch_model_version}_{start_date}_{end_date}_stride_{patch_stride}'
-    product_name = product_id.split(':')[-1]  # Arbitrary string - optionally set this to something more human readable.
-
-    run_local = False  # If False, the model prediction tasks are async queued and sent to DL for processing.
-
-    # If running locally, get results faster by setting small tile size (100?)
-    # If running on Descartes, use tile size 900
-
-    if run_local:
-        tilesize = 100
-    else:
-        tilesize = 900
-
 class SyncToS3(luigi.Task):
 
     source_dir = luigi.Parameter()
@@ -700,6 +625,7 @@ class DetectCandidates(luigi.Task):
         # self.run_id = S3Client().get_as_string(self.input()['sr'].path)
         yield DetectBlobsTiled(run_id=self.run_id)
 
+
 class ComparePatchClassifier(luigi.Task):
 
     """
@@ -714,7 +640,7 @@ class ComparePatchClassifier(luigi.Task):
     model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
     roi = luigi.Parameter(default="test_patch")
     patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
-    run_id = "9e4b2a4463f49486e40b"
+    run_id = luigi.Parameter()
 
     def requires(self):
         return {'sr': SpectrogramRun(start_date=self.start_date,
@@ -745,19 +671,6 @@ class ComparePatchClassifier(luigi.Task):
 
     def run(self):
 
-        # get run_id
-        #self.run_id = S3Client().get_as_string(self.input()['sr'].path)
-
-        # pg_target = yield DownloadPatchGeojson(run_id=self.run_id,
-        #                      patch_product_id=self.patch_product_id,
-        #                      product_id=self.product_id,
-        #                      start_date=self.start_date,
-        #                      end_date=self.end_date,
-        #                      model=self.model,
-        #                      patch_model=self.patch_model,
-        #                      roi=self.roi)
-
-
         # These are both S3Targets
         patch = gpd.read_file(self.input()['pgt'].path)
         pixel = gpd.read_file(self.input()['dc'].path)
@@ -781,3 +694,191 @@ class ComparePatchClassifier(luigi.Task):
         # I don't think this should be required but was getting 0 length files in S3 without it
         tmp.flush()
         tmp.move_to_final_destination()
+
+
+class DownloadPatches(luigi.Task):
+    """
+    Downloads all of the patches for a given site
+    """
+
+    #params
+    polygon_string = luigi.Parameter()
+    start_date = luigi.DateParameter()
+    end_date = luigi.DateParameter()
+
+    location_name = luigi.Parameter()
+
+    rect_width = luigi.FloatParameter(default=0.008)
+    mosaic_period = luigi.IntParameter(default=1)
+    spectrogram_interval = luigi.IntParameter(2)
+
+
+    def output(self):
+        # this is a directory containing patches for the given polygon
+        return S3Target(f"{GlobalConfig().s3_base_url}/patches/{self.location_name}/")
+
+    def requires(self):
+        pass
+
+    def run(self):
+        batches, raster_infos = [], []
+        delta = relativedelta(months=self.mosaic_period)
+        start = self.start_date
+        end = start + delta
+        sub_tasks = []
+        while end <= self.end_date:
+            sub_tasks.append(DownloadPatch(polygon_string=self.polygon_string,
+                                           start_date=start,
+                                           end_date=end,
+                                           location_name=self.location_name))
+            start += delta
+            end += delta
+        yield sub_tasks
+
+
+class DownloadPatch(luigi.Task):
+
+    s2_id = luigi.Parameter(default='sentinel-2:L1C')
+    s2cloud_id = luigi.Parameter(default='sentinel-2:L1C:dlcloud:v1')
+    start_date = luigi.DateParameter()
+    end_date = luigi.DateParameter()
+    location_name = luigi.Parameter()
+    polygon_string = luigi.Parameter()
+
+    def output(self):
+        # this is a directory containing patches for the given polygon
+        start_str = self.start_date.isoformat()
+        end_str = self.end_date.isoformat()
+        return S3Target(f"{GlobalConfig().s3_base_url}/patches/{self.location_name}/{start_str}-{end_str}.npy")
+
+    def requires(self):
+        pass
+
+    def run(self):
+        polygon = json.loads(self.polygon_string)
+
+        cloud_scenes, _ = dl.scenes.search(
+            polygon,
+            products=[self.s2cloud_id],
+            start_datetime=self.start_date.isoformat(),
+            end_datetime=self.end_date.isoformat(),
+            limit=None
+        )
+
+        scenes, geoctx = dl.scenes.search(
+            polygon,
+            products=[self.s2_id],
+            start_datetime=self.start_date.isoformat(),
+            end_datetime=self.end_date.isoformat(),
+            limit=None
+        )
+
+        # select only scenes that have a cloud mask
+        cloud_dates = [scene.properties.acquired for scene in cloud_scenes]
+        dates = [scene.properties.acquired for scene in scenes]
+        shared_dates = set(cloud_dates) & set(dates)
+        scenes = scenes.filter(
+            lambda x: x.properties.acquired in shared_dates)
+        cloud_scenes = cloud_scenes.filter(
+            lambda x: x.properties.acquired in shared_dates)
+
+        # A cloud stack is an array with shape (num_img, data_band, height, width)
+        # A value of 255 means that the pixel is cloud free, 0 means cloudy
+        cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'], ctx=geoctx)
+
+        img_stack, raster_info = scenes.stack(
+            bands=SENTINEL_BANDS, ctx=geoctx, raster_info=True)
+        cloud_masks = np.repeat(cloud_stack, repeats=12, axis=1)
+
+        # Add cloud masked pixels to the image mask
+        img_stack.mask[cloud_masks.data == 0] = True
+
+        # Remove fully masked images and reorder to channels last
+        # TODO: remove raster info for fully masked images too
+        img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
+                     if np.sum(img) > 0]
+
+        numpy_to_s3(img_stack, self.output().path)
+
+        print(f"Saved array stack to {self.output().path}")
+
+
+class GenerateContoursForSite(luigi.Task):
+
+    site_name = luigi.Parameter()
+    polygon_string = luigi.Parameter()
+    run_id = luigi.Parameter()
+    start_date = luigi.DateParameter()
+    end_date = luigi.DateParameter()
+    location_name = luigi.Parameter()
+
+    def requires(self):
+
+        return DownloadPatches(polygon_string=self.polygon_string,
+                               start_date=self.start_date,
+                               end_date=self.end_date,
+                               location_name=self.location_name)
+
+    def output(self):
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/output/{self.site_name}.geojson")
+
+    def run(self):
+        raise Exception("not implemented yet")
+
+
+class GenerateContourForSites(luigi.Task):
+    # intenal params
+    gpd.options.use_pygeos = True
+
+    start_date = luigi.DateParameter(default=date(2019, 1, 1))
+    end_date = luigi.DateParameter(default=date(2021, 6, 1))
+    model = luigi.Parameter(default="spectrogram_v0.0.11_2021-07-13.h5")
+    roi = luigi.Parameter(default="test_patch")
+    patch_model = luigi.Parameter(default="v1.1_weak_labels_28x28x24.h5")
+    # fine tuning params
+    rect_width = luigi.FloatParameter(default=0.008)
+    mosaic_period = luigi.IntParameter(default=3)
+    spectrogram_interval = luigi.IntParameter(2)
+
+    # for debugging
+    run_id = "9e4b2a4463f49486e40b"
+
+
+    def requires(self):
+        return ComparePatchClassifier(start_date=self.start_date,
+                                     end_date=self.end_date,
+                                     model=self.model,
+                                     roi=self.roi,
+                                     patch_model=self.patch_model,
+                                     run_id=self.run_id)
+    def output(self):
+        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/output/contours.geojson")
+
+    def run(self):
+        # Load sites from previous step
+        sites = gpd.read_file(self.input().path)
+        coords = [[site.x, site.y] for site in sites['geometry']]
+        names = sites['name']
+        subtasks = []
+        # "download" data to S3
+        for coord, name in zip(coords, names):
+            location_name = h3.geo_to_h3(coord[0], coord[1], 7)
+            poly = dl_utils.rect_from_point(coord, self.rect_width)
+            subtasks.append(GenerateContoursForSite(
+                site_name=name,
+                polygon_string=json.dumps(poly),
+                run_id=self.run_id,
+                location_name=location_name,
+                start_date=self.start_date,
+                end_date=self.end_date,
+            ))
+        yield subtasks
+
+
+class GenerateContourFromImage(luigi.Task):
+    def output(self):
+        pass
+    def requires(self):
+        pass
+    def run(self):
+        pass
