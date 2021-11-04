@@ -4,6 +4,8 @@ from urllib.parse import urlparse
 from datetime import date
 import json, time
 from io import BytesIO
+
+import fiona.errors
 from scipy.stats import mode
 from dateutil.relativedelta import relativedelta
 import numpy as np
@@ -18,8 +20,7 @@ import geopandas as gpd
 import rasterio as rs
 import boto3
 import keras.models
-from tensorflow.keras.models import load_model
-from tensorflow import keras
+import keras
 import h3
 import cv2
 import shapely
@@ -290,7 +291,7 @@ class LaunchDescartes(luigi.Task):
 
     def run(self):
 
-        patch_model = load_model(self.input()['mf'].path, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
+        patch_model = keras.models.load_model(self.input()['mf'].path, custom_objects={'LeakyReLU': keras.layers.LeakyReLU,
                                                                           'ELU': keras.layers.ELU,
                                                                           'ReLU': keras.layers.ReLU})
         df = gpd.read_file(self.input()['rf'].path)['geometry']
@@ -724,7 +725,12 @@ class DetectCandidates(luigi.Task):
 
     def run(self):
         # self.run_id = S3Client().get_as_string(self.input()['sr'].path)
-        yield DetectBlobsTiled(run_id=self.run_id)
+        yield DetectBlobsTiled(run_id=self.run_id,
+                         start_date=self.start_date,
+                         end_date=self.end_date,
+                         model=self.model,
+                         patch_model=self.patch_model,
+                         roi=self.roi)
 
 
 class ComparePatchClassifier(luigi.Task):
@@ -1065,10 +1071,26 @@ class GenerateContourForSites(luigi.Task):
             ))
         #should be a list of S3 Targets
         jsons = yield subtasks
+
+        retries = []
+
         contour_gdf = gpd.GeoDataFrame(columns=['geometry', 'area (km^2)', 'date', 'name']).set_crs('EPSG:4326')
         for js in jsons:
-            contour = gpd.read_file(js.path)
-            contour_gdf = contour_gdf.append(contour)
+            try:
+                contour = gpd.read_file(js.path)
+                contour_gdf = contour_gdf.append(contour)
+            except fiona.errors.DriverError:
+                # this usually means that S3 doesn't have the file available for reading yet
+                retries.append(js)
+        if len(retries) > 0:
+            print(f"Waiting a few seconds to retry loading {len(retries)} files from S3")
+            time.sleep(10)
+            # if it blows up this time something might be wrong....
+            for js in retries:
+                contour = gpd.read_file(js.path)
+                contour_gdf = contour_gdf.append(contour)
+
+
         S3Client().put_string(contour_gdf.to_json(), self.output().path)
 
 

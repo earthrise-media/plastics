@@ -22,5 +22,6 @@ if (( $missing_length > 0  )); then
 else
   echo "Preflight checks passed...starting now"
   echo " "
-  luigi $@
+
+  luigi "$@"
 fi
