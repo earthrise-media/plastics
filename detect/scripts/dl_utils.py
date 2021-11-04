@@ -217,7 +217,7 @@ def mosaic(arrays, method):
 
     Returns: A masked array or None if arrays is an empty list
     """
-    if not arrays:
+    if not np.any(arrays):
         return
 
     if method == 'median':
