@@ -10,6 +10,12 @@ from scipy.stats import mode
 import shapely
 from tensorflow import keras
 
+try:
+    from backports.datetime_fromisoformat import MonkeyPatch
+    MonkeyPatch.patch_fromisoformat()
+except ImportError:
+    pass
+
 SENTINEL_BANDS = ['coastal-aerosol',
                   'blue',
                   'green',
