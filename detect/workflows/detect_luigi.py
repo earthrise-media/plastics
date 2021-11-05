@@ -467,15 +467,14 @@ class DownloadHeatmaps(luigi.Task):
 
         image_list = [image.id for image in search]
 
-        dl_tasks = []
         for image in image_list:
 
-            dl_tasks.append(DownloadHeatmap(
+            yield DownloadHeatmap(
                 image=image,
                 run_id=self.run_id,
                 band=band,
-            ))
-        yield dl_tasks
+            )
+
 
 
 class DownloadHeatmap(luigi.Task):
@@ -672,7 +671,6 @@ class DetectBlobsTiled(luigi.Task):
 #                     continue
 #             # upload file
 #             S3Client().put(filename, s3file)
-
 
 class SpectrogramRun(luigi.Task):
     # input params
@@ -925,7 +923,6 @@ class GenerateContoursForSite(luigi.Task):
     mosaic_method = luigi.Parameter(default='median')
     mosaic_period = luigi.IntParameter(default=1)
 
-
     def requires(self):
 
         return DownloadPatches(polygon_string=self.polygon_string,
@@ -969,14 +966,13 @@ class GenerateContoursForSite(luigi.Task):
                     continue
             batches.append(tmp)
 
-
         stoptime = time.time()
         print(f"loaded patches in {stoptime-starttime} seconds")
 
         # load all of the metadata from S3
         raster_infos = [json.loads(S3Client().get_as_string(item)) for item in metadata_list]
 
-        #execute mosaic
+        # execute mosaic
         mosaics = [dl_utils.mosaic(batch, self.mosaic_method) for batch in batches]
         # There are cases where some patches are sized differently
         # If that is the case, pad/clip them to the same shape
@@ -989,7 +985,7 @@ class GenerateContoursForSite(luigi.Task):
                                           dl_utils.pad_patch(img.mask, h, w)) for img in mosaics]
         mosaic_info = [next(iter(r)) for r in raster_infos]
 
-        #load ensemble
+        # load ensemble
         s3_model_files = S3Client().listdir(f's3://{GlobalConfig().s3_bucket}/models/{self.ensemble_model}/')
         model_files = [file for file in s3_model_files if file.endswith('.h5')]
         model_list = []
@@ -1017,6 +1013,7 @@ class GenerateContoursForSite(luigi.Task):
         gdf = gpd.GeoDataFrame(geometry=polygons).set_crs('EPSG:4326')
         gdf['date'] = [date for date in contour_dates]
 
+        # todo: we can do this in postgis easily if not sure this is correct
         # Calculate contour area. I'm not certain this is a valid technique for calculating area
         gdf['area (km^2)'] = gdf['geometry'].to_crs('epsg:3395').map(lambda a: a.area / 10 ** 6)
         gdf['name'] = [self.site_name for _ in range(len(contour_dates))]
@@ -1083,13 +1080,12 @@ class GenerateContourForSites(luigi.Task):
                 # this usually means that S3 doesn't have the file available for reading yet
                 retries.append(js)
         if len(retries) > 0:
-            print(f"Waiting a few seconds to retry loading {len(retries)} files from S3")
-            time.sleep(10)
+            print(f"Waiting 20 seconds to retry loading {len(retries)} files from S3")
+            time.sleep(20)
             # if it blows up this time something might be wrong....
             for js in retries:
                 contour = gpd.read_file(js.path)
                 contour_gdf = contour_gdf.append(contour)
-
 
         S3Client().put_string(contour_gdf.to_json(), self.output().path)
 

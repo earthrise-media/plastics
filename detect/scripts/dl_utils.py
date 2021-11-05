@@ -11,6 +11,8 @@ import shapely
 from tensorflow import keras
 
 try:
+    # the tensorflow 2.6.0 docker image uses an older version of python that requires this
+    # the dockerfile installs it separately (not from requirements.txt)
     from backports.datetime_fromisoformat import MonkeyPatch
     MonkeyPatch.patch_fromisoformat()
 except ImportError:
