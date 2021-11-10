@@ -46,7 +46,7 @@ anywhere -- and eventually in an automated or batch fashion.
 
 ## Building 
 
-You should be able to build the docker container only using docker, python not required 
+You should be able to build the docker container only using docker, python not required.  
 The docker container is based on the `tensorflow:2.6.0-gpu` image and seems to work well on both CPU and GPU machines 
 
 ## Running 
@@ -56,18 +56,26 @@ The `Detect` task exposes the following parameters and defaults:
 
 
 - `run_id`: a unique id for this run, used as the directory on S3 to hold the output structure. You ***rarely*** should need to set this 
-- `start_date`: start date  
-- `end_date`: end date 
-- `model`: = the ***file name*** of the model not the absolute path, default is `spectrogram_v0.0.11_2021-07-13.h5`  
-- `roi`: = the name of the roi ***not*** the file name or path, default is `test_patch`
+- `start_date`: start date, default is `2019-1-1`
+- `end_date`: end date default is `2021-6-1`
+- `model`: the ***file name*** of the model not the absolute path, default is `spectrogram_v0.0.11_2021-07-13.h5`  
+- `roi`: the name of the roi ***not*** the file name or path, default is `test_patch`
 - `patch_model`: the file name of the patch model (not the path), default is  `v1.1_weak_labels_28x28x24.h5`
-- `ensemble_model` = the name (folder name) of the ensemble model -- all h5 files in the folder will be loaded, default is `v0.0.11_ensemble-8-25-21`
+- `ensemble_model` the name (folder name) of the ensemble model -- all h5 files in the folder will be loaded, default is `v0.0.11_ensemble-8-25-21`
 - `rect_width`: rectangle width (for windowing *I think*) default is `0.008`
-- `mosaic_period` = number of months to mosaic, default is `3`
+- `mosaic_period` number of months to mosaic, default is `3`
 
-For example, a very simple detection run over Balie could look like this:
+For example, a very simple detection run over Bali could look like this:
 
-`luigi --module workflows.detect_luigi Detect --roi bali`
+`luigi --module workflows.detect_luigi Detect --local-scheduler --roi bali`
+
+### Luigi Scheduler and Workers
+See this to understand a little about [schedulers and workers](https://luigi.readthedocs.io/en/stable/central_scheduler.html). 
+- Basically workers are python processes (which can be distributed - but don't have to be) that execute tasks.
+- The Scheduler coordinates all the workers 
+
+For right now running a local scheduler is fine so add `--local-scheduler` to any model run. 
+If you don't it may try to connect to a remote scheduler that (likely) doesn't exist. 
 
 ### Environment
 
@@ -89,10 +97,10 @@ Descartes: (run `descarteslabs auth env` to generate these)
 ### Locally 
 - Recommend a fresh Python 3.7 (conda, venv etc.)
 - `pip install -r requirements`
-- setup ENV credentials as per above
+- setup environment with credentials, as per above
 - add this directory to python path: ```export PYTHONPATH=`pwd` ```
 - cross fingers 
-- `luigi --module workflows.detect_luigi Detect --roi bali --log-level INFO`
+- `luigi --module workflows.detect_luigi Detect --roi bali --local-scheduler --log-level INFO`
 
 ### Docker
 
@@ -103,6 +111,6 @@ If you want to also build docker containers and push back up you will need `writ
 3. If auth was successful you should be able to execute `docker pull ghcr.io/earthrise-media/plastics` and pull the container down
 4. Create an env file for the required credentials mentioned above
 5. Kick off a model run:
-   `docker run --env-file docker.env ghcr.io/earthrise-media/plastics --module workflows.detect_luigi Detect --roi bali`
+   `docker run --env-file docker.env ghcr.io/earthrise-media/plastics --module workflows.detect_luigi Detect --local-scheduler --roi bali`
 6. Profit!
  
