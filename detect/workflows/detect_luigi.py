@@ -1,11 +1,14 @@
 import os
 from hashlib import sha256
 from urllib.parse import urlparse
+from urllib.request import urlopen
 from datetime import date
 import json, time
 from io import BytesIO
 
 import fiona.errors
+import geopandas
+import pandas
 from scipy.stats import mode
 from dateutil.relativedelta import relativedelta
 import numpy as np
@@ -53,6 +56,33 @@ class GlobalConfig(luigi.Config):
 
 
 # Helper methods
+
+def insert_address_data(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+
+    if gdf.size == 0:
+        print('Empty geodataframe, skipping reverse geocoding')
+        return
+
+    metadata_gdf = pandas.DataFrame()
+    # try:
+    for index, row in gdf.iterrows():
+        lon, lat = row.geometry.x, row.geometry.y
+        site_id = h3.geo_to_h3(lat, lon, 7)
+        row['id'] = site_id
+        url = f'https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json'
+
+        print(url)
+        with urlopen(url) as data:
+            data = json.loads(data.read().decode())
+            row['address'] = data['display_name']
+            for part in data['address'].keys():
+                row[part] = data['address'][part]
+            metadata_gdf = metadata_gdf.append(row)
+
+    return gpd.GeoDataFrame(geometry=gdf.geometry.name,data=metadata_gdf).set_crs("EPSG:4326")
+    # except Exception as ex:
+    #     print(f'Error talking to mapbox: {ex.}')
+
 
 def numpy_to_s3(data: np.array, dest: str):
     # s3_uri looks like f"s3://{BUCKET_NAME}/{KEY}"
@@ -475,8 +505,6 @@ class DownloadHeatmaps(luigi.Task):
                 band=band,
             )
 
-
-
 class DownloadHeatmap(luigi.Task):
 
     """
@@ -641,37 +669,6 @@ class DetectBlobsTiled(luigi.Task):
         S3Client().put_string(gj, self.output().path)
 
 
-# Going to do everything directly on S3 now...
-# class SyncToS3(luigi.Task):
-#
-#     source_dir = luigi.Parameter()
-#     dest_dir = luigi.Parameter()
-#     clobber = luigi.BoolParameter(default=False)
-#
-#     def requires(self):
-#         pass
-#
-#     def output(self):
-#         return S3Target(self.dest_dir)
-#
-#     def run(self):
-#         if not os.path.exists(self.source_dir):
-#             raise Exception("source directory doesn't exist")
-#         import glob
-#         for filename in glob.iglob(self.source_dir+'**/**', recursive=True):
-#             if os.path.isdir(filename):
-#                 continue
-#             s3file = self.dest_dir+os.path.relpath(filename, self.source_dir)
-#
-#             # check if exists
-#             if S3Client().exists(s3file):
-#                 # only overwrite if asked
-#                 if not self.clobber:
-#                     print(f"Skipping existing file {s3file}")
-#                     continue
-#             # upload file
-#             S3Client().put(filename, s3file)
-
 class SpectrogramRun(luigi.Task):
     # input params
     start_date = luigi.DateParameter(default=date(2019, 1, 1))
@@ -796,12 +793,14 @@ class ComparePatchClassifier(luigi.Task):
         union = pixel[overlap]
         print(f"{len(union)} candidate points intersect with patch classifier predictions greater than {threshold}")
 
-        tmp = AtomicS3File(self.output().path, S3Client())
-
-        union.to_file(tmp, driver='GeoJSON')
-        # I don't think this should be required but was getting 0 length files in S3 without it
-        tmp.flush()
-        tmp.move_to_final_destination()
+        # todo: fix this
+        S3Client().put_string(union.to_json(), self.output().path)
+        # tmp = AtomicS3File(self.output().path, S3Client())
+        #
+        # union.to_file(tmp, driver='GeoJSON')
+        # # I don't think this should be required but was getting 0 length files in S3 without it
+        # tmp.flush()
+        # tmp.move_to_final_destination()
 
 
 class DownloadPatches(luigi.Task):
@@ -923,6 +922,8 @@ class GenerateContoursForSite(luigi.Task):
     mosaic_method = luigi.Parameter(default='median')
     mosaic_period = luigi.IntParameter(default=1)
 
+
+
     def requires(self):
 
         return DownloadPatches(polygon_string=self.polygon_string,
@@ -1017,7 +1018,12 @@ class GenerateContoursForSite(luigi.Task):
         # Calculate contour area. I'm not certain this is a valid technique for calculating area
         gdf['area (km^2)'] = gdf['geometry'].to_crs('epsg:3395').map(lambda a: a.area / 10 ** 6)
         gdf['name'] = [self.site_name for _ in range(len(contour_dates))]
-        S3Client().put_string(gdf.to_json(),self.output().path)
+        # add the h3 grid cell id as the site id
+        gdf['site_id'] = [self.location_name for _ in range(len(contour_dates))]
+
+
+        # save to s3
+        S3Client().put_string(gdf.to_json(), self.output().path)
 
 
 class GenerateContourForSites(luigi.Task):
@@ -1045,11 +1051,20 @@ class GenerateContourForSites(luigi.Task):
                                      patch_model=self.patch_model,
                                      run_id=self.run_id)
     def output(self):
-        return S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/output/contours.geojson")
+        return {
+                'countours': S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/output/contours.geojson"),
+                'sites':  S3Target(f"{GlobalConfig().s3_base_url}/{self.run_id}/output/sites_with_metadata.geojson")
+        }
 
     def run(self):
         # Load sites from previous step
         sites = gpd.read_file(self.input().path)
+        # update metadata for sites all at once
+        updated_sites = insert_address_data(sites)
+        #save sites back to S3
+        S3Client().put_string(updated_sites.to_json(), self.output()['sites'].path)
+
+        #generate contours for each site
         coords = [[site.x, site.y] for site in sites['geometry']]
         names = sites['name']
         subtasks = []
@@ -1069,9 +1084,12 @@ class GenerateContourForSites(luigi.Task):
         #should be a list of S3 Targets
         jsons = yield subtasks
 
+
+
+        # todo: do we even need to combine them? probably not....
         retries = []
 
-        contour_gdf = gpd.GeoDataFrame(columns=['geometry', 'area (km^2)', 'date', 'name']).set_crs('EPSG:4326')
+        contour_gdf = gpd.GeoDataFrame(columns=['geometry', 'area (km^2)', 'date', 'name', 'site_id']).set_crs('EPSG:4326')
         for js in jsons:
             try:
                 contour = gpd.read_file(js.path)
@@ -1087,12 +1105,11 @@ class GenerateContourForSites(luigi.Task):
                 contour = gpd.read_file(js.path)
                 contour_gdf = contour_gdf.append(contour)
 
-        S3Client().put_string(contour_gdf.to_json(), self.output().path)
+        S3Client().put_string(contour_gdf.to_json(), self.output()['countours'].path)
 
 
 class Detect(luigi.WrapperTask):
 
-    # for debugging
     run_id = luigi.Parameter(default="!not_provided")
     start_date = luigi.DateParameter(default=date(2019, 1, 1))
     end_date = luigi.DateParameter(default=date(2021, 6, 1))
