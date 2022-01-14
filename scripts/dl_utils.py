@@ -109,11 +109,15 @@ def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
     img_stack.mask[cloud_masks.data == 0] = True
 
     # Remove fully masked images and reorder to channels last
-    # TODO: remove raster infor for fully masked images too
+    metadata = []
+    for img, info in zip(img_stack, raster_info):
+        if np.sum(img) > 0:
+            metadata.append(info)
+
     img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
                      if np.sum(img) > 0]
 
-    return img_stack, raster_info
+    return img_stack, metadata
 
 def pad_patch(patch, height, width=None):
     """
@@ -132,7 +136,7 @@ def pad_patch(patch, height, width=None):
         patch = patch[:height, :width, :12]
     else:
         if h < height or w < height:
-            patch = np.pad(patch, width - np.min([h, w]), mode='reflect')
+            patch = np.pad(patch, height - np.min([h, w]), mode='reflect')
         patch = patch[:height, :height, :12]
     return patch
 
