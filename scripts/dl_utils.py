@@ -126,18 +126,26 @@ def pad_patch(patch, height, width=None):
     pad_patch trims pixels extending beyond the desired number of pixels if the
     patch is larger than desired. If the patch is smaller, it will fill the
     edge by reflecting the values.
+    Note: this function does not support padding along one axis, and trimming on another (or visa versa)
     """
+
     h, w, c = patch.shape
     if width:
-        if h < height:
-            patch = np.pad(patch, (height - h, 0), mode='reflect')
-        if w < width:
-            patch = np.pad(patch, (0, width - w), mode='reflect')
-        patch = patch[:height, :width, :12]
+        if h < height or w < width:
+            padding_amount = ((0, height - h), (0, width - w), (0,0))
+            patch = np.pad(patch, padding_amount, mode='reflect')
+        else:
+            margin_h = int(np.floor((h - height) / 2))
+            margin_w = int(np.floor((w - width) / 2))
+            patch = patch[margin_h:margin_h+height, margin_w:margin_w+width]
+
     else:
         if h < height or w < height:
-            patch = np.pad(patch, height - np.min([h, w]), mode='reflect')
-        patch = patch[:height, :height, :12]
+            padding_amount = ((0, height - h), (0, height - w), (0, 0))
+            patch = np.pad(patch, padding_amount, mode='reflect')
+        else:
+            margin = int(np.floor((h - height) / 2))
+            patch = patch[margin:margin+height, margin:margin+height]
     return patch
 
 def download_batches(polygon, start_date, end_date, batch_months):
