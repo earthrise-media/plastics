@@ -29,6 +29,7 @@
 { "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_80" }, "geometry": { "type": "Point", "coordinates": [ 81.600774518365782, 7.77160669814833 ] } },
 { "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_85" }, "geometry": { "type": "Point", "coordinates": [ 80.814390700434771, 6.067892638779644 ] } },
 { "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_90" }, "geometry": { "type": "Point", "coordinates": [ 81.68840371552163, 7.309731197845678 ] } },
-{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_97" }, "geometry": { "type": "Point", "coordinates": [ 80.98140242605912, 6.119578975971737 ] } }
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_97" }, "geometry": { "type": "Point", "coordinates": [ 80.98140242605912, 6.119578975971737 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_manual_1" }, "geometry": { "type": "Point", "coordinates": [ 80.06246056, 6.23692970 ] } }
 ]
 }
