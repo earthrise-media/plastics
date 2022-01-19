@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "sri_lanka_intersection_v0",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_6" }, "geometry": { "type": "Point", "coordinates": [ 79.973118809180164, 8.95936363381151 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_17" }, "geometry": { "type": "Point", "coordinates": [ 80.028814348107261, 7.27091930526598 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_21" }, "geometry": { "type": "Point", "coordinates": [ 80.102918919705729, 6.954741951994639 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_22" }, "geometry": { "type": "Point", "coordinates": [ 80.228044813184269, 8.397726313154138 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_28" }, "geometry": { "type": "Point", "coordinates": [ 81.194473577538034, 8.575395205960547 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_29" }, "geometry": { "type": "Point", "coordinates": [ 80.229031918047141, 6.036167895944548 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_46" }, "geometry": { "type": "Point", "coordinates": [ 79.963057134536783, 6.966502560513077 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_47" }, "geometry": { "type": "Point", "coordinates": [ 80.232559525460374, 9.657932460383588 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_48" }, "geometry": { "type": "Point", "coordinates": [ 80.332040545478506, 8.26688290166768 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_55" }, "geometry": { "type": "Point", "coordinates": [ 79.865201386480422, 7.009176508022682 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_67" }, "geometry": { "type": "Point", "coordinates": [ 80.201109581381814, 9.343442272986097 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_71" }, "geometry": { "type": "Point", "coordinates": [ 80.471339216310795, 9.424928319252416 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_78" }, "geometry": { "type": "Point", "coordinates": [ 80.356067220836167, 9.291361726142544 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_81" }, "geometry": { "type": "Point", "coordinates": [ 81.085343111314415, 6.289358426729486 ] } },
+{ "type": "Feature", "properties": { "name": "sri_lanka_v0.0.11_2021-01-01_2022-01-15mosaic-median_83" }, "geometry": { "type": "Point", "coordinates": [ 81.343480986136257, 8.410766140102826 ] } }
+]
+}
