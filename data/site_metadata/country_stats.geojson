@@ -1,0 +1,164 @@
+{
+    "BN": {
+        "totalSites": 4,
+        "name": "Brunei",
+        "surface": {
+            "total (ha)": 2.74489462162096,
+            "above 1 ha": 1,
+            "above 2 ha": 0
+        },
+        "water": {
+            "under 0.5 km": 2,
+            "under 1.0 km": 2,
+            "under 2.0 km": 4
+        },
+        "population": {
+            "within 1 km": 2172.77,
+            "within 5 km": 34035.869999999995
+        }
+    },
+    "ID": {
+        "totalSites": 365,
+        "name": "Indonesia",
+        "surface": {
+            "total (ha)": 498.59091254000367,
+            "above 1 ha": 123,
+            "above 2 ha": 52
+        },
+        "water": {
+            "under 0.5 km": 143,
+            "under 1.0 km": 208,
+            "under 2.0 km": 294
+        },
+        "population": {
+            "within 1 km": 888031.4500000001,
+            "within 5 km": 28377806.889999993
+        }
+    },
+    "KH": {
+        "totalSites": 39,
+        "name": "Cambodia",
+        "surface": {
+            "total (ha)": 36.469034786695104,
+            "above 1 ha": 14,
+            "above 2 ha": 5
+        },
+        "water": {
+            "under 0.5 km": 6,
+            "under 1.0 km": 16,
+            "under 2.0 km": 23
+        },
+        "population": {
+            "within 1 km": 11565.759999999998,
+            "within 5 km": 460595.62999999995
+        }
+    },
+    "LA": {
+        "totalSites": 17,
+        "name": "Laos",
+        "surface": {
+            "total (ha)": 26.80834349691027,
+            "above 1 ha": 7,
+            "above 2 ha": 4
+        },
+        "water": {
+            "under 0.5 km": 2,
+            "under 1.0 km": 2,
+            "under 2.0 km": 8
+        },
+        "population": {
+            "within 1 km": 1415.37,
+            "within 5 km": 61606.43000000001
+        }
+    },
+    "MM": {
+        "totalSites": 45,
+        "name": "Myanmar",
+        "surface": {
+            "total (ha)": 61.20967365488015,
+            "above 1 ha": 10,
+            "above 2 ha": 5
+        },
+        "water": {
+            "under 0.5 km": 14,
+            "under 1.0 km": 23,
+            "under 2.0 km": 33
+        },
+        "population": {
+            "within 1 km": 53978.84,
+            "within 5 km": 1591127.94
+        }
+    },
+    "MY": {
+        "totalSites": 97,
+        "name": "Malaysia",
+        "surface": {
+            "total (ha)": 121.75933275345973,
+            "above 1 ha": 39,
+            "above 2 ha": 18
+        },
+        "water": {
+            "under 0.5 km": 36,
+            "under 1.0 km": 53,
+            "under 2.0 km": 79
+        },
+        "population": {
+            "within 1 km": 25217.54,
+            "within 5 km": 728845.0500000004
+        }
+    },
+    "PH": {
+        "totalSites": 110,
+        "name": "Philippines",
+        "surface": {
+            "total (ha)": 99.26350790183315,
+            "above 1 ha": 31,
+            "above 2 ha": 13
+        },
+        "water": {
+            "under 0.5 km": 52,
+            "under 1.0 km": 83,
+            "under 2.0 km": 103
+        },
+        "population": {
+            "within 1 km": 114340.61000000002,
+            "within 5 km": 3797150.8600000013
+        }
+    },
+    "TH": {
+        "totalSites": 298,
+        "name": "Thailand",
+        "surface": {
+            "total (ha)": 156.36930651258635,
+            "above 1 ha": 43,
+            "above 2 ha": 18
+        },
+        "water": {
+            "under 0.5 km": 144,
+            "under 1.0 km": 191,
+            "under 2.0 km": 229
+        },
+        "population": {
+            "within 1 km": NaN,
+            "within 5 km": NaN
+        }
+    },
+    "VN": {
+        "totalSites": 102,
+        "name": "Vietnam",
+        "surface": {
+            "total (ha)": 96.39569863311429,
+            "above 1 ha": 32,
+            "above 2 ha": 9
+        },
+        "water": {
+            "under 0.5 km": 24,
+            "under 1.0 km": 42,
+            "under 2.0 km": 71
+        },
+        "population": {
+            "within 1 km": 48528.29,
+            "within 5 km": 1542401.6599999997
+        }
+    }
+}
