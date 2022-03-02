@@ -172,6 +172,12 @@ class Validator:
 
         def update_feature():
             self.map.center = (self.gdf.iloc[self.fctr]['lat'], self.gdf.iloc[self.fctr]['lon'])
+            marker = ipyl.CircleMarker(location=(self.gdf.iloc[self.fctr]['lat'], self.gdf.iloc[self.fctr]['lon']),
+                radius=25, 
+                color='#ffce00', 
+                fill_opacity=0,
+                weight=3)
+            self.map.add_layer(marker)
             feature_progress.value = self.fctr
             
             for option in dump_selector.options:
