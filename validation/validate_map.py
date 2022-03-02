@@ -11,7 +11,7 @@ import ipywidgets as ipyw
 tile_layers = {
     "google": "http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}",
     "esri": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-    "planet": "https://tiles.planet.com/basemaps/v1/planet-tiles/global_monthly_2016_01_mosaic/gmap/{z}/{x}/{y}.png?api_key=73112b15212f4e7bb15e35f1b144f049"
+    "planet": "https://tiles.planet.com/basemaps/v1/planet-tiles/global_monthly_2020_06_mosaic/gmap/{z}/{x}/{y}.png?api_key=73112b15212f4e7bb15e35f1b144f049"
 }
 
 class Validator:
