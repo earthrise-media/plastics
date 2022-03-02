@@ -11,13 +11,14 @@ import ipywidgets as ipyw
 tile_layers = {
     "google": "http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}",
     "esri": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    "planet": "https://tiles.planet.com/basemaps/v1/planet-tiles/global_monthly_2016_01_mosaic/gmap/{z}/{x}/{y}.png?api_key=73112b15212f4e7bb15e35f1b144f049"
 }
-
 
 class Validator:
     def __init__(self, tpa_in, tpa_out):
         # read input data
         self.gdf = self.read_geojson(tpa_in)
+        print(tile_layers['planet'])
 
         # build map
         self.map = self.create_map()
