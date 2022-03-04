@@ -3,7 +3,7 @@ import argparse
 from dateutil.relativedelta import relativedelta
 import descarteslabs as dl
 from tqdm import tqdm
-
+import os
 from scripts import dl_utils
 
 
@@ -11,9 +11,9 @@ DL_SYSTEM_PARAMS = {
     'image': ('us.gcr.io/dl-ci-cd/images/tasks/public/' +
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
-    'maximum_concurrency': 200,
+    'maximum_concurrency': 60,
     'memory': '24Gi',
-    'retry_count': 3,
+    'retry_count': 4,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
@@ -124,7 +124,7 @@ def main(*args):
     if not os.path.isfile(args.dlkeys_file):
         dlkeys = dl_utils.get_tiles_from_roi(args.roi_file, args.tilesize, args.pad)
         dlkeys = dl_utils.filt_tiles_by_pop(dlkeys, args.pop_thresh)
-        write_dlkeys(dlkeys, args.dlkeys_file)
+        dl_utils.write_dlkeys(dlkeys, args.dlkeys_file)
     else:
         dlkeys = dl_utils.read_dlkeys(args.dlkeys_file)
 

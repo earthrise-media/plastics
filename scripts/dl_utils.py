@@ -64,7 +64,7 @@ def get_tiles_from_roi(roi_file, tilesize, pad):
     return all_keys
 
 def write_dlkeys(dlkeys, dlkeys_file):
-    with open(args.dlkeys_file, 'w') as f:
+    with open(dlkeys_file, 'w') as f:
         for dlkey in dlkeys:
             f.write(f"{dlkey}\n")
 
