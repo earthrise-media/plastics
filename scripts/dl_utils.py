@@ -9,7 +9,6 @@ import numpy as np
 from scipy.stats import mode
 import shapely
 from tensorflow import keras
-from tqdm import tqdm
 
 SENTINEL_BANDS = ['coastal-aerosol',
                   'blue',
@@ -90,8 +89,9 @@ def filt_tiles_by_pop(all_keys, pop_thresh):
     resolution = 1000 # resolution to rasterize population data at
 
     keys_filt = list()
+    ctr = 0
     print(f"Filtering keys by population threshold of {pop_thresh}")
-    for dlkey in tqdm(all_keys):
+    for dlkey in all_keys:
         tile = dl.scenes.DLTile.from_key(dlkey)
 
         # make this an AOI so we can operate at a lower resolution
@@ -110,6 +110,8 @@ def filt_tiles_by_pop(all_keys, pop_thresh):
         pop = scenes.mosaic(bands=pop_bands, ctx=ctx)
         if np.any(pop > pop_thresh):
             keys_filt.append(dlkey)
+            ctr += 1
+            print(ctr, end='\r')
 
     print(f"Filtered to {len(keys_filt)}")
     return keys_filt
