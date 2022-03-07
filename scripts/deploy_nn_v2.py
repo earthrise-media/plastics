@@ -3,7 +3,7 @@ import argparse
 from dateutil.relativedelta import relativedelta
 import descarteslabs as dl
 from tqdm import tqdm
-
+import os
 from scripts import dl_utils
 
 
@@ -11,9 +11,9 @@ DL_SYSTEM_PARAMS = {
     'image': ('us.gcr.io/dl-ci-cd/images/tasks/public/' +
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
-    'maximum_concurrency': 200,
+    'maximum_concurrency': 60,
     'memory': '24Gi',
-    'retry_count': 3,
+    'retry_count': 4,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils']
 }
@@ -45,6 +45,10 @@ def main(*args):
                         type=str,
                         help='GeoJSON file with ROI to deploy over',
                         default='../data/bali.json')
+    parser.add_argument('--dlkeys_file',
+                        type=str,
+                        help='Text file that contains dlkeys corresponding to ROI',
+                        default='../data/bali.txt')
     parser.add_argument('--product_id',
                         type=str,
                         help='ID of catalog product',
@@ -65,6 +69,10 @@ def main(*args):
                         type=int,
                         help='Padding in pixels',
                         default=16)
+    parser.add_argument('--pop_thresh',
+                        type=int,
+                        help='Population threshold for filtering dlkeys',
+                        default=10)
     parser.add_argument('--model_file',
                         type=str,
                         help='Local path to model file to upload',
@@ -113,19 +121,24 @@ def main(*args):
                         help='Run model locally rather than async on DL.')
     args = parser.parse_args(*args)
 
-    tiles = dl_utils.get_tiles_from_roi(args.roi_file, args.tilesize, args.pad)
+    if not os.path.isfile(args.dlkeys_file):
+        dlkeys = dl_utils.get_tiles_from_roi(args.roi_file, args.tilesize, args.pad)
+        dlkeys = dl_utils.filt_tiles_by_pop(dlkeys, args.pop_thresh)
+        dl_utils.write_dlkeys(dlkeys, args.dlkeys_file)
+    else:
+        dlkeys = dl_utils.read_dlkeys(args.dlkeys_file)
 
     # This init handles product creation and model upload.
     runner = dl_utils.DescartesRun(**vars(args))
 
     if args.run_local:
-        for dlkey in tqdm(tiles):
+        for dlkey in tqdm(dlkeys):
             runner(dlkey, args.start_date, args.end_date)
     else:
         async_func = dl.Tasks().create_function(
             run_model, name=args.product_name, **DL_SYSTEM_PARAMS)
 
-        for dlkey in tqdm(tiles):
+        for dlkey in tqdm(dlkeys):
             async_func(dlkey, **vars(args))
 
 if __name__ == "__main__":
