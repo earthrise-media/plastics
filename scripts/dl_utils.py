@@ -62,6 +62,60 @@ def get_tiles_from_roi(roi_file, tilesize, pad):
     print('Split ROI into {} tiles'.format(len(all_keys)))
     return all_keys
 
+def write_dlkeys(dlkeys, dlkeys_file):
+    with open(dlkeys_file, 'w') as f:
+        for dlkey in dlkeys:
+            f.write(f"{dlkey}\n")
+
+    print(f"Wrote dlkeys to {dlkeys_file}")
+    return True
+
+def read_dlkeys(dlkeys_file):
+    with open(dlkeys_file, 'r') as f:
+        dlkeys = [l.rstrip() for l in f]
+
+    print(f"Read {len(dlkeys)} dlkeys from {dlkeys_file}")
+    return dlkeys
+
+def filt_tiles_by_pop(all_keys, pop_thresh):
+    """Filter keys by a population threshold."""
+    if pop_thresh == 0:
+        return all_keys
+
+    pop_id = "d15c019579fa0985f7006094bba7c7288f830e1f:GPW_Population_Density_V4_0"
+    pop_bands = ['population']
+    start_datetime = '2019-01-01'
+    end_datetime = '2021-01-01'
+    resolution = 1000 # resolution to rasterize population data at
+
+    keys_filt = list()
+    ctr = 0
+    print(f"Filtering keys by population threshold of {pop_thresh}")
+    for dlkey in all_keys:
+        tile = dl.scenes.DLTile.from_key(dlkey)
+
+        # make this an AOI so we can operate at a lower resolution
+        aoi = dl.scenes.AOI(geometry=tile.geometry,
+                            resolution=resolution,
+                            crs=tile.crs)
+
+        scenes, ctx = dl.scenes.search(products=pop_id,
+                                       aoi=aoi,
+                                       start_datetime=start_datetime,
+                                       end_datetime=end_datetime)
+
+        if not scenes:
+            continue
+
+        pop = scenes.mosaic(bands=pop_bands, ctx=ctx)
+        if np.any(pop > pop_thresh):
+            keys_filt.append(dlkey)
+            ctr += 1
+            print(ctr, end='\r')
+
+    print(f"Filtered to {len(keys_filt)}")
+    return keys_filt
+
 def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
                    s2cloud_id='sentinel-2:L1C:dlcloud:v1'):
     """
