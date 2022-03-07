@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": -69.627818823051854, "lat": 18.797597060001557, "name": "dominican_republic_v0.0.11_2019-01-01_2021-06-01mosaic-median_14" }, "geometry": { "type": "Point", "coordinates": [ -69.627818823051854, 18.797597060001557 ] } },
+{ "type": "Feature", "properties": { "lon": -71.384585484963637, "lat": 18.398196717279291, "name": "dominican_republic_v0.0.11_2019-01-01_2021-06-01mosaic-median_111" }, "geometry": { "type": "Point", "coordinates": [ -71.384585484963637, 18.398196717279291 ] } }
+]
+}

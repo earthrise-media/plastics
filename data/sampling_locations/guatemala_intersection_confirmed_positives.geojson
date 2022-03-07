@@ -1,0 +1,26 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": -89.912355195880423, "lat": 16.888695031574631, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_11" }, "geometry": { "type": "Point", "coordinates": [ -89.912355195880423, 16.888695031574631 ] } },
+{ "type": "Feature", "properties": { "lon": -89.034912241965273, "lat": 15.364119398157619, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_14" }, "geometry": { "type": "Point", "coordinates": [ -89.034912241965273, 15.364119398157619 ] } },
+{ "type": "Feature", "properties": { "lon": -92.054854698847635, "lat": 14.70795233664534, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_22" }, "geometry": { "type": "Point", "coordinates": [ -92.054854698847635, 14.70795233664534 ] } },
+{ "type": "Feature", "properties": { "lon": -89.529042670007698, "lat": 14.840003031559425, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_26" }, "geometry": { "type": "Point", "coordinates": [ -89.529042670007698, 14.840003031559425 ] } },
+{ "type": "Feature", "properties": { "lon": -90.533255565927718, "lat": 14.631854799314533, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_27" }, "geometry": { "type": "Point", "coordinates": [ -90.533255565927718, 14.631854799314533 ] } },
+{ "type": "Feature", "properties": { "lon": -92.1458201797182, "lat": 14.667379641096881, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_40" }, "geometry": { "type": "Point", "coordinates": [ -92.1458201797182, 14.667379641096881 ] } },
+{ "type": "Feature", "properties": { "lon": -90.836497960900871, "lat": 15.99262012725011, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_45" }, "geometry": { "type": "Point", "coordinates": [ -90.836497960900871, 15.99262012725011 ] } },
+{ "type": "Feature", "properties": { "lon": -90.482523875718897, "lat": 15.096918169364308, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_47" }, "geometry": { "type": "Point", "coordinates": [ -90.482523875718897, 15.096918169364308 ] } },
+{ "type": "Feature", "properties": { "lon": -88.825518223864506, "lat": 15.515163849032017, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_53" }, "geometry": { "type": "Point", "coordinates": [ -88.825518223864506, 15.515163849032017 ] } },
+{ "type": "Feature", "properties": { "lon": -90.572413459321979, "lat": 14.479700511536594, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_60" }, "geometry": { "type": "Point", "coordinates": [ -90.572413459321979, 14.479700511536594 ] } },
+{ "type": "Feature", "properties": { "lon": -90.195005577395648, "lat": 14.518436651899046, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_65" }, "geometry": { "type": "Point", "coordinates": [ -90.195005577395648, 14.518436651899046 ] } },
+{ "type": "Feature", "properties": { "lon": -91.018817804331633, "lat": 14.315907992045908, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_77" }, "geometry": { "type": "Point", "coordinates": [ -91.018817804331633, 14.315907992045908 ] } },
+{ "type": "Feature", "properties": { "lon": -90.341320453740863, "lat": 15.11649417688969, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_79" }, "geometry": { "type": "Point", "coordinates": [ -90.341320453740863, 15.11649417688969 ] } },
+{ "type": "Feature", "properties": { "lon": -90.865999745949978, "lat": 13.953351457744722, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_87" }, "geometry": { "type": "Point", "coordinates": [ -90.865999745949978, 13.953351457744722 ] } },
+{ "type": "Feature", "properties": { "lon": -90.39585656905146, "lat": 15.454603933284762, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_102" }, "geometry": { "type": "Point", "coordinates": [ -90.39585656905146, 15.454603933284762 ] } },
+{ "type": "Feature", "properties": { "lon": -90.732291379016189, "lat": 14.20974733199885, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_107" }, "geometry": { "type": "Point", "coordinates": [ -90.732291379016189, 14.20974733199885 ] } },
+{ "type": "Feature", "properties": { "lon": -89.931205768624778, "lat": 16.895203698385387, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_111" }, "geometry": { "type": "Point", "coordinates": [ -89.931205768624778, 16.895203698385387 ] } },
+{ "type": "Feature", "properties": { "lon": -90.36252751468264, "lat": 14.098902379260229, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_122" }, "geometry": { "type": "Point", "coordinates": [ -90.36252751468264, 14.098902379260229 ] } },
+{ "type": "Feature", "properties": { "lon": -88.546200791488815, "lat": 15.656716878473551, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_136" }, "geometry": { "type": "Point", "coordinates": [ -88.546200791488815, 15.656716878473551 ] } },
+{ "type": "Feature", "properties": { "lon": -91.161085529328531, "lat": 14.401701051850043, "name": "guatemala_v0.0.11_2019-01-01_2021-06-01mosaic-median_138" }, "geometry": { "type": "Point", "coordinates": [ -91.161085529328531, 14.401701051850043 ] } }
+]
+}

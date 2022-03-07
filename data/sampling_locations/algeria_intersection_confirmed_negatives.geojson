@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 5.4310211618451492, "lat": 34.703916029419474, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_60" }, "geometry": { "type": "Point", "coordinates": [ 5.431021161845149, 34.703916029419474 ] } },
+{ "type": "Feature", "properties": { "lon": 5.9904958320531172, "lat": 33.914946004744138, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_171" }, "geometry": { "type": "Point", "coordinates": [ 5.990495832053117, 33.914946004744138 ] } },
+{ "type": "Feature", "properties": { "lon": 6.0037540189131366, "lat": 33.591866565101682, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_335" }, "geometry": { "type": "Point", "coordinates": [ 6.003754018913137, 33.591866565101682 ] } },
+{ "type": "Feature", "properties": { "lon": 8.1306626530676631, "lat": 36.854854708518424, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_578" }, "geometry": { "type": "Point", "coordinates": [ 8.130662653067663, 36.854854708518424 ] } },
+{ "type": "Feature", "properties": { "lon": -0.54593370507285588, "lat": 35.658324744486094, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_592" }, "geometry": { "type": "Point", "coordinates": [ -0.545933705072856, 35.658324744486094 ] } },
+{ "type": "Feature", "properties": { "lon": 6.0048528647183508, "lat": 33.587848045751421, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_828" }, "geometry": { "type": "Point", "coordinates": [ 6.004852864718351, 33.587848045751421 ] } },
+{ "type": "Feature", "properties": { "lon": 4.593660255501173, "lat": 35.348556453573103, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_865" }, "geometry": { "type": "Point", "coordinates": [ 4.593660255501173, 35.348556453573103 ] } },
+{ "type": "Feature", "properties": { "lon": -0.81093905611901251, "lat": 35.378063177621613, "name": "algeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_1218" }, "geometry": { "type": "Point", "coordinates": [ -0.810939056119013, 35.378063177621613 ] } }
+]
+}

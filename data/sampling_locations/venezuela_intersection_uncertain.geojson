@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": -67.604699302017991, "lat": 7.8329432937579764, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_73" }, "geometry": { "type": "Point", "coordinates": [ -67.604699302017991, 7.832943293757976 ] } },
+{ "type": "Feature", "properties": { "lon": -67.458146234201337, "lat": 10.21111755894634, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_124" }, "geometry": { "type": "Point", "coordinates": [ -67.458146234201337, 10.21111755894634 ] } },
+{ "type": "Feature", "properties": { "lon": -63.919380019264679, "lat": 11.113009405868191, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_133" }, "geometry": { "type": "Point", "coordinates": [ -63.919380019264679, 11.113009405868191 ] } },
+{ "type": "Feature", "properties": { "lon": -63.249676899339235, "lat": 10.515466265022454, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_239" }, "geometry": { "type": "Point", "coordinates": [ -63.249676899339235, 10.515466265022454 ] } },
+{ "type": "Feature", "properties": { "lon": -71.166553903608857, "lat": 10.060242613505903, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_264" }, "geometry": { "type": "Point", "coordinates": [ -71.166553903608857, 10.060242613505903 ] } },
+{ "type": "Feature", "properties": { "lon": -72.10201527753614, "lat": 8.3351183421876573, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_303" }, "geometry": { "type": "Point", "coordinates": [ -72.10201527753614, 8.335118342187657 ] } },
+{ "type": "Feature", "properties": { "lon": -69.16633034918955, "lat": 9.5331115904085628, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_323" }, "geometry": { "type": "Point", "coordinates": [ -69.16633034918955, 9.533111590408563 ] } },
+{ "type": "Feature", "properties": { "lon": -68.571314793195469, "lat": 10.439780012550306, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_332" }, "geometry": { "type": "Point", "coordinates": [ -68.571314793195469, 10.439780012550306 ] } },
+{ "type": "Feature", "properties": { "lon": -63.400324699989731, "lat": 9.7492488341928922, "name": "venezuela_v0.0.11_2019-01-01_2021-06-01mosaic-median_354" }, "geometry": { "type": "Point", "coordinates": [ -63.400324699989731, 9.749248834192892 ] } }
+]
+}

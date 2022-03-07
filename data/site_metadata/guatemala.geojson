@@ -1,0 +1,605 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f452c720c462c5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.91235519588042,
+                    16.88869503157463
+                ]
+            },
+            "properties": {
+                "id": "8f452c720c462c5",
+                "Soil Clay Fraction": 0.41,
+                "Elevation": 181,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.19646839797496796,
+                "Height Above Nearest Drainage (m)": 12.899993896484375,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 3.5770808473973315,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 3570.347194534364,
+                "Nearest Water Type": "stream",
+                "place_name": "Carretera San Benito - San Francisco, San Benito, Pet\u00e9n, Guatemala",
+                "Population - 1 km": 1169,
+                "Population - 5 km": 66388,
+                "Population - 10 km": 106343
+            }
+        },
+        {
+            "id": "8f45256948da769",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.03491224196527,
+                    15.36411939815762
+                ]
+            },
+            "properties": {
+                "id": "8f45256948da769",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 107,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.016496332362294197,
+                "Height Above Nearest Drainage (m)": 44.099998474121094,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 7.75251853365671,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Carretera Presidente Coronel Jacobo \u00c1rbenz Guzm\u00e1n, Los Amates, Izabal, Guatemala",
+                "Population - 1 km": 176,
+                "Population - 5 km": 5224,
+                "Population - 10 km": 21736
+            }
+        },
+        {
+            "id": "8f6d2aaf2784541",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.05485469884763,
+                    14.70795233664534
+                ]
+            },
+            "properties": {
+                "id": "8f6d2aaf2784541",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 67,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008273097686469555,
+                "Height Above Nearest Drainage (m)": 6.399993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.2364626041759954,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 228.28823087412826,
+                "Nearest Water Type": "river",
+                "place_name": "Pajapita, San Marcos, Guatemala",
+                "Population - 1 km": 733,
+                "Population - 5 km": 25557,
+                "Population - 10 km": 92061
+            }
+        },
+        {
+            "id": "8f452510d99e800",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.5290426700077,
+                    14.840003031559425
+                ]
+            },
+            "properties": {
+                "id": "8f452510d99e800",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 391,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.03307262808084488,
+                "Height Above Nearest Drainage (m)": 28.5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 4.427047741771359,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 243.4453007721629,
+                "Nearest Water Type": "stream",
+                "place_name": "Municipio de Chiquimula, Chiquimula, 20001, Guatemala",
+                "Population - 1 km": 1105,
+                "Population - 5 km": 34618,
+                "Population - 10 km": 83615
+            }
+        },
+        {
+            "id": "8f6d291a9760cd8",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.53325556592772,
+                    14.631854799314533
+                ]
+            },
+            "properties": {
+                "id": "8f6d291a9760cd8",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 1509,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008275949396193027,
+                "Height Above Nearest Drainage (m)": 87.2999267578125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 8.278213014762855,
+                "Fine Earth Density (kg / m^3)": 112,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 134.28291028767077,
+                "Nearest Water Type": "stream",
+                "place_name": "17 Calle D, Colonia 6 de Octubre, Zone 7, Guatemala City, Guatemala Department, 01003, Guatemala",
+                "Population - 1 km": 22224,
+                "Population - 5 km": 473057,
+                "Population - 10 km": 1420330
+            }
+        },
+        {
+            "id": "8f6d2a335a5e6ea",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.1458201797182,
+                    14.66737964109688
+                ]
+            },
+            "properties": {
+                "id": "8f6d2a335a5e6ea",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 27,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.47164544463157654,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 1.6722692574038585,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 110.68438132371266,
+                "Nearest Water Type": "river",
+                "place_name": "Zona 2, Ciudad Tec\u00fan Um\u00e1n, Ayutla Tec\u00fan Um\u00e1n, San Marcos, Guatemala",
+                "Population - 1 km": 3916,
+                "Population - 5 km": 46186,
+                "Population - 10 km": 87902
+            }
+        },
+        {
+            "id": "8f6d2c22dd33646",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.83649796090087,
+                    15.99262012725011
+                ]
+            },
+            "properties": {
+                "id": "8f6d2c22dd33646",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 226,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008223301731050014,
+                "Height Above Nearest Drainage (m)": 22.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.8921521499339886,
+                "Fine Earth Density (kg / m^3)": 110,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Franja Transversal del Norte, Santa Rosa, San Lucas, Ixc\u00e1n, Quich\u00e9, Guatemala",
+                "Population - 1 km": 563,
+                "Population - 5 km": 11053,
+                "Population - 10 km": 43274
+            }
+        },
+        {
+            "id": "8f6d2d6cc91299a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.4825238757189,
+                    15.096918169364308
+                ]
+            },
+            "properties": {
+                "id": "8f6d2d6cc91299a",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 968,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 13.617647171020508,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 1.5782368474325172,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 894.6543152513461,
+                "Nearest Water Type": "stream",
+                "place_name": "RN-5, San Miguel Chicaj, Baja Verapaz, Guatemala",
+                "Population - 1 km": 1964,
+                "Population - 5 km": 18488,
+                "Population - 10 km": 42199
+            }
+        },
+        {
+            "id": "8f4520aea675c58",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -88.8255182238645,
+                    15.515163849032017
+                ]
+            },
+            "properties": {
+                "id": "8f4520aea675c58",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 60,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.7665218710899353,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.367125803297916,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 2350.8020900598885,
+                "Nearest Water Type": "river",
+                "place_name": "CA-13, La Ruidosa, Morales, Izabal, Guatemala",
+                "Population - 1 km": 665,
+                "Population - 5 km": 20407,
+                "Population - 10 km": 48565
+            }
+        },
+        {
+            "id": "8f6d290a94f6c71",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.57241345932198,
+                    14.479700511536594
+                ]
+            },
+            "properties": {
+                "id": "8f6d290a94f6c71",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 1192,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 312.62750244140625,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 102,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 114.8510836979103,
+                "Nearest Water Type": "river",
+                "place_name": "Playa de Oro, San Miguel Petapa, Guatemala Department, 01064, Guatemala",
+                "Population - 1 km": 1724,
+                "Population - 5 km": 299028,
+                "Population - 10 km": 955491
+            }
+        },
+        {
+            "id": "8f6d29a8530e74b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.19500557739565,
+                    14.518436651899046
+                ]
+            },
+            "properties": {
+                "id": "8f6d29a8530e74b",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 1639,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.07452064752578735,
+                "Height Above Nearest Drainage (m)": 17.300048828125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 12.451482577939506,
+                "Fine Earth Density (kg / m^3)": 107,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 797.8500459310566,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera a Mataquescuintla, San Jos\u00e9 La Sierra, Mataquescuintla, Jalapa, Guatemala",
+                "Population - 1 km": 1984,
+                "Population - 5 km": 23341,
+                "Population - 10 km": 62895
+            }
+        },
+        {
+            "id": "8f6d2bb28ae4b41",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.01881780433163,
+                    14.315907992045908
+                ]
+            },
+            "properties": {
+                "id": "8f6d2bb28ae4b41",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 338,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008287507109344006,
+                "Height Above Nearest Drainage (m)": 13,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 1.8175808595917937,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 88.56601023609768,
+                "Nearest Water Type": "river",
+                "place_name": "5a Avenida, Santa Luc\u00eda Cotzumalguapa, Escuintla, Guatemala",
+                "Population - 1 km": 3495,
+                "Population - 5 km": 68251,
+                "Population - 10 km": 125218
+            }
+        },
+        {
+            "id": "8f6d2d648740233",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.34132045374086,
+                    15.11649417688969
+                ]
+            },
+            "properties": {
+                "id": "8f6d2d648740233",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 955,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.1486373096704483,
+                "Height Above Nearest Drainage (m)": 4.79998779296875,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.2617546840142184,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 831.986495485318,
+                "Nearest Water Type": "stream",
+                "place_name": "Salam\u00e1, Baja Verapaz, Guatemala",
+                "Population - 1 km": 420,
+                "Population - 5 km": 19600,
+                "Population - 10 km": 49618
+            }
+        },
+        {
+            "id": "8f6d76d0155b411",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.86599974594998,
+                    13.953351457744722
+                ]
+            },
+            "properties": {
+                "id": "8f6d76d0155b411",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 16,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008300474844872952,
+                "Height Above Nearest Drainage (m)": 2.40000057220459,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.9354909217311258,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 3640.610276071809,
+                "Nearest Water Type": "pond",
+                "place_name": "San Jos\u00e9, Escuintla, Guatemala",
+                "Population - 1 km": 231,
+                "Population - 5 km": 9764,
+                "Population - 10 km": 38967
+            }
+        },
+        {
+            "id": "8f6d2d72c130444",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.39585656905146,
+                    15.454603933284762
+                ]
+            },
+            "properties": {
+                "id": "8f6d2d72c130444",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 1389,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008244632743299007,
+                "Height Above Nearest Drainage (m)": 41.0999755859375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 4.025271334656829,
+                "Fine Earth Density (kg / m^3)": 105,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 281.083081980554,
+                "Nearest Water Type": "river",
+                "place_name": "Residenciales Bouganvilas de Cacic, Zona 6, Cob\u00e1n, Alta Verapaz, 16001, Guatemala",
+                "Population - 1 km": 7222,
+                "Population - 5 km": 98575,
+                "Population - 10 km": 222437
+            }
+        },
+        {
+            "id": "8f6d29633000965",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.73229137901619,
+                    14.20974733199885
+                ]
+            },
+            "properties": {
+                "id": "8f6d29633000965",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 148,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008291340433061123,
+                "Height Above Nearest Drainage (m)": 13,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 2.45839710419472,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 797.8983944085367,
+                "Nearest Water Type": "stream",
+                "place_name": "Municipio de Escuintla, Escuintla, Guatemala",
+                "Population - 1 km": 569,
+                "Population - 5 km": 10329,
+                "Population - 10 km": 58081
+            }
+        },
+        {
+            "id": "8f452c7256e64c1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.93120576862478,
+                    16.895203698385387
+                ]
+            },
+            "properties": {
+                "id": "8f452c7256e64c1",
+                "Soil Clay Fraction": 0.42,
+                "Elevation": 157,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 41.849090576171875,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 10.283830514002766,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 2159.7731760884562,
+                "Nearest Water Type": "water",
+                "place_name": "Carretera San Benito - La Libertad, San Antonio, San Benito, Pet\u00e9n, 17002, Guatemala",
+                "Population - 1 km": 3857,
+                "Population - 5 km": 71932,
+                "Population - 10 km": 106280
+            }
+        },
+        {
+            "id": "8f6d292f2d4836b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.36252751468264,
+                    14.09890237926023
+                ]
+            },
+            "properties": {
+                "id": "8f6d292f2d4836b",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 309,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008295280858874321,
+                "Height Above Nearest Drainage (m)": 88.10000610351562,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 2.3646721469736085,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 311.69024925900766,
+                "Nearest Water Type": "river",
+                "place_name": "Chiquimulilla, Santa Rosa, 06008, Guatemala",
+                "Population - 1 km": 569,
+                "Population - 5 km": 14364,
+                "Population - 10 km": 39165
+            }
+        },
+        {
+            "id": "8f452038d148c14",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -88.54620079148881,
+                    15.656716878473551
+                ]
+            },
+            "properties": {
+                "id": "8f452038d148c14",
+                "Soil Clay Fraction": 0.44,
+                "Elevation": 60,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008236734196543694,
+                "Height Above Nearest Drainage (m)": 28.10000228881836,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.28,
+                "Slope (degrees)": 2.9037003423173675,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1422.0174550378983,
+                "Nearest Water Type": "stream",
+                "place_name": "Puerto Barrios, Izabal, Guatemala",
+                "Population - 1 km": 687,
+                "Population - 5 km": 15939,
+                "Population - 10 km": 68179
+            }
+        },
+        {
+            "id": "8f6d2b86aac5853",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.16108552932853,
+                    14.401701051850043
+                ]
+            },
+            "properties": {
+                "id": "8f6d2b86aac5853",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 347,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008284397423267365,
+                "Height Above Nearest Drainage (m)": 63.600006103515625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 8.338976965831625,
+                "Fine Earth Density (kg / m^3)": 112,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 2062.1053606476207,
+                "Nearest Water Type": "river",
+                "place_name": "1a Calle, Patulul, Suchitep\u00e9quez, 10014, Guatemala",
+                "Population - 1 km": 746,
+                "Population - 5 km": 33358,
+                "Population - 10 km": 73331
+            }
+        }
+    ]
+}

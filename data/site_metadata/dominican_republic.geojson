@@ -1,0 +1,1895 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f4cd585aaa68f5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.10379275063562,
+                    18.465839416048833
+                ]
+            },
+            "properties": {
+                "id": "8f4cd585aaa68f5",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 69,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.040579743683338165,
+                "Height Above Nearest Drainage (m)": 27.299999237060547,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 0.9777445844164212,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 786.6421820659409,
+                "Nearest Water Type": "stream",
+                "place_name": "Villa Hermosa, La Romana, Dominican Republic",
+                "Population - 1 km": 172,
+                "Population - 5 km": 2949,
+                "Population - 10 km": 62357
+            }
+        },
+        {
+            "id": "8f4cf272c39dc18",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.20344042462705,
+                    19.60942169132468
+                ]
+            },
+            "properties": {
+                "id": "8f4cf272c39dc18",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 42,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.016122376546263695,
+                "Height Above Nearest Drainage (m)": 20.30000114440918,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 4.919506962932616,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1209.846438037323,
+                "Nearest Water Type": "water",
+                "place_name": "Gaspar Hern\u00e1ndez, Espaillat, Dominican Republic",
+                "Population - 1 km": 139,
+                "Population - 5 km": 4734,
+                "Population - 10 km": 31368
+            }
+        },
+        {
+            "id": "8f4cf23313b524d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.88984962473978,
+                    19.617971264790942
+                ]
+            },
+            "properties": {
+                "id": "8f4cf23313b524d",
+                "Soil Clay Fraction": 0.42,
+                "Elevation": 23,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 1.620226263999939,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 1.1361352505711106,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 321.2555929048389,
+                "Nearest Water Type": "coastline",
+                "place_name": "Cabrera, Mar\u00eda Trinidad S\u00e1nchez, Dominican Republic",
+                "Population - 1 km": 353,
+                "Population - 5 km": 13354,
+                "Population - 10 km": 19238
+            }
+        },
+        {
+            "id": "8f4cd4d054add42",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.40701759149809,
+                    19.318172957270587
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4d054add42",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 120,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008075432851910591,
+                "Height Above Nearest Drainage (m)": 3.6999969482421875,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 0.9008357538800762,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 584.4270550309072,
+                "Nearest Water Type": "stream",
+                "place_name": "Villa Tapia, Hermanas Mirabal, Dominican Republic",
+                "Population - 1 km": 942,
+                "Population - 5 km": 20174,
+                "Population - 10 km": 96384
+            }
+        },
+        {
+            "id": "8f4cd58d5166b8b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.23339647411994,
+                    18.481105165822825
+                ]
+            },
+            "properties": {
+                "id": "8f4cd58d5166b8b",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 28,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008115222677588463,
+                "Height Above Nearest Drainage (m)": 3.9000015258789062,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.2786833940159306,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 3730.3568890998545,
+                "Nearest Water Type": "coastline",
+                "place_name": "Batey Alem\u00e1n, San Pedro de Macor\u00eds, Dominican Republic",
+                "Population - 1 km": 1041,
+                "Population - 5 km": 43547,
+                "Population - 10 km": 231562
+            }
+        },
+        {
+            "id": "8f4cd0db646995e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.68203342726474,
+                    18.455756032143665
+                ]
+            },
+            "properties": {
+                "id": "8f4cd0db646995e",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 36,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.04869786649942398,
+                "Height Above Nearest Drainage (m)": 26.700000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.8983914377792384,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1873.219686416038,
+                "Nearest Water Type": "stream",
+                "place_name": "Camino del Vertedero, Azua, 71000, Dominican Republic",
+                "Population - 1 km": 54,
+                "Population - 5 km": 25958,
+                "Population - 10 km": 77103
+            }
+        },
+        {
+            "id": "8f4cc64da04c4c9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.85352741546075,
+                    18.418108808963957
+                ]
+            },
+            "properties": {
+                "id": "8f4cc64da04c4c9",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 56,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.44648832082748413,
+                "Height Above Nearest Drainage (m)": 0.8999977111816406,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.46,
+                "Slope (degrees)": 0.9829705899755803,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1953.7564482321527,
+                "Nearest Water Type": "water",
+                "place_name": "El Lim\u00f3n, San Rafael del Yuma, La Altagracia, 22000, Dominican Republic",
+                "Population - 1 km": 50,
+                "Population - 5 km": 12403,
+                "Population - 10 km": 54945
+            }
+        },
+        {
+            "id": "8f4cd670948091c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.23453323616593,
+                    18.39348641323552
+                ]
+            },
+            "properties": {
+                "id": "8f4cd670948091c",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 19,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008119268342852592,
+                "Height Above Nearest Drainage (m)": 1.8000001907348633,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 1.2786411337750498,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1041.2643962784748,
+                "Nearest Water Type": "canal",
+                "place_name": "Tamayo - Batey 4, Santa Maria, Neiba, Tamayo, Baoruco, Dominican Republic",
+                "Population - 1 km": 700,
+                "Population - 5 km": 34116,
+                "Population - 10 km": 73858
+            }
+        },
+        {
+            "id": "8f4cd6133706a31",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.15608523939491,
+                    18.760679874854738
+                ]
+            },
+            "properties": {
+                "id": "8f4cd6133706a31",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 379,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008102108724415302,
+                "Height Above Nearest Drainage (m)": 5.100006103515625,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 1.0270534316349527,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1716.387562656519,
+                "Nearest Water Type": "stream",
+                "place_name": "El Cruce - San Juan de la Mag., Juan Alvarez, San Juan de la Maguana, San Juan, Dominican Republic",
+                "Population - 1 km": 150,
+                "Population - 5 km": 4588,
+                "Population - 10 km": 52051
+            }
+        },
+        {
+            "id": "8f4cf3cd83352c1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.52924243320663,
+                    19.29859812910703
+                ]
+            },
+            "properties": {
+                "id": "8f4cf3cd83352c1",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 76,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008076393976807594,
+                "Height Above Nearest Drainage (m)": 43.900001525878906,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 3.914756734424823,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1645.3887685660334,
+                "Nearest Water Type": "river",
+                "place_name": "Come Pan, Las Terrenas, Saman\u00e1, 3400, Dominican Republic",
+                "Population - 1 km": 857,
+                "Population - 5 km": 20575,
+                "Population - 10 km": 32662
+            }
+        },
+        {
+            "id": "8f4cd4332b41888",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.99206757120409,
+                    18.767352989910705
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4332b41888",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 60,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.03240734338760376,
+                "Height Above Nearest Drainage (m)": 17.400001525878906,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 2.526089727960492,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 440.53741370465025,
+                "Nearest Water Type": "river",
+                "place_name": "La Cueva del Lobo, Yamas\u00e1, Monte Plata, Dominican Republic",
+                "Population - 1 km": 811,
+                "Population - 5 km": 28584,
+                "Population - 10 km": 63231
+            }
+        },
+        {
+            "id": "8f4cd5da595ba18",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.6503567237828,
+                    18.73864356463891
+                ]
+            },
+            "properties": {
+                "id": "8f4cd5da595ba18",
+                "Soil Clay Fraction": 0.4,
+                "Elevation": 40,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 4.448230743408203,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.4496172505183207,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 1458.9820440633134,
+                "Nearest Water Type": "river",
+                "place_name": "Bayaguana, Monte Plata, Dominican Republic",
+                "Population - 1 km": 464,
+                "Population - 5 km": 11381,
+                "Population - 10 km": 19399
+            }
+        },
+        {
+            "id": "8f4cd476b38c7ac",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.15958862403288,
+                    18.6273132761746
+                ]
+            },
+            "properties": {
+                "id": "8f4cd476b38c7ac",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 172,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0162166990339756,
+                "Height Above Nearest Drainage (m)": 55,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 5.894448904886783,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1065.9845781833476,
+                "Nearest Water Type": "river",
+                "place_name": "Villa Altagracia, San Crist\u00f3bal, 90001, Dominican Republic",
+                "Population - 1 km": 1236,
+                "Population - 5 km": 27981,
+                "Population - 10 km": 91418
+            }
+        },
+        {
+            "id": "8f4cc6c4a4ee6c5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.52750261346652,
+                    18.742609429741623
+                ]
+            },
+            "properties": {
+                "id": "8f4cc6c4a4ee6c5",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 8,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.07292775809764862,
+                "Height Above Nearest Drainage (m)": 2,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 0.979334876949354,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 2204.718556784509,
+                "Nearest Water Type": "pond",
+                "place_name": "Hig\u00fcey, La Altagracia, Dominican Republic",
+                "Population - 1 km": 178,
+                "Population - 5 km": 3184,
+                "Population - 10 km": 18845
+            }
+        },
+        {
+            "id": "8f4cf30327a571c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.32660880489007,
+                    19.206962664580445
+                ]
+            },
+            "properties": {
+                "id": "8f4cf30327a571c",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 71,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.01616174355149269,
+                "Height Above Nearest Drainage (m)": 48.70000076293945,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 7.821494022489501,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 555.1593794984336,
+                "Nearest Water Type": "coastline",
+                "place_name": "Avenida Circunvalaci\u00f3n, Saman\u00e1, Dominican Republic",
+                "Population - 1 km": 4344,
+                "Population - 5 km": 21678,
+                "Population - 10 km": 34203
+            }
+        },
+        {
+            "id": "8f4cc619e730aa9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.58667478857683,
+                    18.63773554153566
+                ]
+            },
+            "properties": {
+                "id": "8f4cc619e730aa9",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 84,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 2.6432442665100098,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.53,
+                "Slope (degrees)": 2.3035090373317626,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 3172.6558417926904,
+                "Nearest Water Type": "canal",
+                "place_name": "La Otra Banda - Ver\u00f3n, Las Dos Jardas, La Otra Banda, Hig\u00fcey, La Altagracia, 23000, Dominican Republic",
+                "Population - 1 km": 176,
+                "Population - 5 km": 5156,
+                "Population - 10 km": 40982
+            }
+        },
+        {
+            "id": "8f4cd4822008046",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.03666696836468,
+                    19.219715368053937
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4822008046",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 88,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.605998694896698,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 0.699627625378722,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 722.2205597140064,
+                "Nearest Water Type": "river",
+                "place_name": "Castillo, Duarte, Dominican Republic",
+                "Population - 1 km": 878,
+                "Population - 5 km": 10765,
+                "Population - 10 km": 35598
+            }
+        },
+        {
+            "id": "8f4c89aa1af3586",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.74768126388742,
+                    19.46672802421369
+                ]
+            },
+            "properties": {
+                "id": "8f4c89aa1af3586",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 163,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.18556684255599976,
+                "Height Above Nearest Drainage (m)": 13.5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.5454433277795698,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 724.0418997449575,
+                "Nearest Water Type": "canal",
+                "place_name": "Cien Fuegos, Santiago de los Caballeros, Santiago, 51072, Dominican Republic",
+                "Population - 1 km": 6410,
+                "Population - 5 km": 237772,
+                "Population - 10 km": 620166
+            }
+        },
+        {
+            "id": "8f4c89b91664669",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.82125908656411,
+                    19.5448393512597
+                ]
+            },
+            "properties": {
+                "id": "8f4c89b91664669",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 149,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008064381778240204,
+                "Height Above Nearest Drainage (m)": 11.100006103515625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.2792177826253375,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 134.84271702680402,
+                "Nearest Water Type": "canal",
+                "place_name": "Villa Gonz\u00e1lez, Santiago, Dominican Republic",
+                "Population - 1 km": 1778,
+                "Population - 5 km": 34868,
+                "Population - 10 km": 116976
+            }
+        },
+        {
+            "id": "8f4cc611240aa12",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.49452723840665,
+                    18.702351720753548
+                ]
+            },
+            "properties": {
+                "id": "8f4cc611240aa12",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 13,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008104848675429821,
+                "Height Above Nearest Drainage (m)": 7,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.54,
+                "Slope (degrees)": 0.32639437555285433,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 3477.157133856047,
+                "Nearest Water Type": "water",
+                "place_name": "Hig\u00fcey, La Altagracia, 23302, Dominican Republic",
+                "Population - 1 km": 153,
+                "Population - 5 km": 13133,
+                "Population - 10 km": 31732
+            }
+        },
+        {
+            "id": "8f4cc640bd16989",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.78041893133062,
+                    18.540361504050452
+                ]
+            },
+            "properties": {
+                "id": "8f4cc640bd16989",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 76,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008112452924251556,
+                "Height Above Nearest Drainage (m)": 6.099998474121094,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.51,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 3056.9609963593603,
+                "Nearest Water Type": "stream",
+                "place_name": "Vertedero de Hig\u00fcey, Autopista del Coral, Hig\u00fcey, San Rafael del Yuma, La Altagracia, Dominican Republic",
+                "Population - 1 km": 1920,
+                "Population - 5 km": 12734,
+                "Population - 10 km": 107286
+            }
+        },
+        {
+            "id": "8f4cd0da402c535",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.60240040407238,
+                    18.463501068216384
+                ]
+            },
+            "properties": {
+                "id": "8f4cd0da402c535",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 125,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008116025477647781,
+                "Height Above Nearest Drainage (m)": 16.20000457763672,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 3.0736565638830657,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 111.63369622931216,
+                "Nearest Water Type": "river",
+                "place_name": "Las Charcas, Azua, Dominican Republic",
+                "Population - 1 km": 291,
+                "Population - 5 km": 7864,
+                "Population - 10 km": 13687
+            }
+        },
+        {
+            "id": "8f4cd585aaa4cae",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.10359611690569,
+                    18.465976089717607
+                ]
+            },
+            "properties": {
+                "id": "8f4cd585aaa4cae",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 69,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00811589602380991,
+                "Height Above Nearest Drainage (m)": 28.10000228881836,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 0.9777445844164212,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 810.5444870704242,
+                "Nearest Water Type": "stream",
+                "place_name": "Villa Hermosa, La Romana, Dominican Republic",
+                "Population - 1 km": 173,
+                "Population - 5 km": 2957,
+                "Population - 10 km": 62879
+            }
+        },
+        {
+            "id": "8f4cd622318ad48",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.87640050628004,
+                    18.34587588515785
+                ]
+            },
+            "properties": {
+                "id": "8f4cd622318ad48",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 48,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.1624273806810379,
+                "Height Above Nearest Drainage (m)": 11.900001525878906,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 2.048926484917048,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2236.145870896963,
+                "Nearest Water Type": "coastline",
+                "place_name": "Camino Los Negros - Barrera, Los Negros, Azua, Dominican Republic",
+                "Population - 1 km": 53,
+                "Population - 5 km": 2750,
+                "Population - 10 km": 11160
+            }
+        },
+        {
+            "id": "8f4cf241e52bda4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.55211932095567,
+                    19.73730808048864
+                ]
+            },
+            "properties": {
+                "id": "8f4cf241e52bda4",
+                "Soil Clay Fraction": 0.4,
+                "Elevation": 89,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008054880425333977,
+                "Height Above Nearest Drainage (m)": 40.30000305175781,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 3.2275727825986698,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1866.8001732038422,
+                "Nearest Water Type": "coastline",
+                "place_name": "Villa Liberaci\u00f3n, Sos\u00faa, Puerto Plata, 11211, Dominican Republic",
+                "Population - 1 km": 838,
+                "Population - 5 km": 21794,
+                "Population - 10 km": 54929
+            }
+        },
+        {
+            "id": "8f4c8905a1514a5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.96719680612473,
+                    19.354034455861875
+                ]
+            },
+            "properties": {
+                "id": "8f4c8905a1514a5",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 461,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.016147363930940628,
+                "Height Above Nearest Drainage (m)": 32.100006103515625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 7.600784042147481,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1170.9215865931785,
+                "Nearest Water Type": "river",
+                "place_name": "Pueblo Nuevo, Urbanizaci\u00f3n Ofelia, San Jos\u00e9 De Las Matas, Santiago, 51100, Dominican Republic",
+                "Population - 1 km": 267,
+                "Population - 5 km": 10380,
+                "Population - 10 km": 19275
+            }
+        },
+        {
+            "id": "8f4cc64e8c5a4ae",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.76477137904767,
+                    18.46953949431399
+                ]
+            },
+            "properties": {
+                "id": "8f4cc64e8c5a4ae",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 80,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.016231579706072807,
+                "Height Above Nearest Drainage (m)": 15.799995422363281,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 0.6989459355752933,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "La Romana - Hig\u00fcey, Cuesta Caribe, Benedicto, San Rafael del Yuma, La Altagracia, Dominican Republic",
+                "Population - 1 km": 121,
+                "Population - 5 km": 3771,
+                "Population - 10 km": 27146
+            }
+        },
+        {
+            "id": "8f4cf364548006e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.29250748332024,
+                    18.809923927604103
+                ]
+            },
+            "properties": {
+                "id": "8f4cf364548006e",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 187,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.040498632937669754,
+                "Height Above Nearest Drainage (m)": 30.79998779296875,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 5.611226173893058,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 950.1299185705581,
+                "Nearest Water Type": "river",
+                "place_name": "Hato Mayor - El Valle, Hato Mayor del Rey, \u30a2\u30c8\u30fb\u30de\u30b8\u30e7\u30fc\u30eb\u5dde, Hato Mayor, Dominican Republic",
+                "Population - 1 km": 20,
+                "Population - 5 km": 1180,
+                "Population - 10 km": 10957
+            }
+        },
+        {
+            "id": "8f4cc61ac8d4135",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.48679516638796,
+                    18.68932334957293
+                ]
+            },
+            "properties": {
+                "id": "8f4cc61ac8d4135",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 23,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.7457242012023926,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.53,
+                "Slope (degrees)": 0.722223205497733,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 3619.485293392953,
+                "Nearest Water Type": "water",
+                "place_name": "Friusa, Hig\u00fcey, La Altagracia, 23302, Dominican Republic",
+                "Population - 1 km": 89,
+                "Population - 5 km": 14613,
+                "Population - 10 km": 33970
+            }
+        },
+        {
+            "id": "8f4cd4d2468e34c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.39855471094484,
+                    19.3639850284677
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4d2468e34c",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 173,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008073222823441029,
+                "Height Above Nearest Drainage (m)": 13.699996948242188,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 2.2514499904837826,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1215.2715963957448,
+                "Nearest Water Type": "pond",
+                "place_name": "Carretera Los Limones, Villa Tapia, Hermanas Mirabal, Dominican Republic",
+                "Population - 1 km": 1109,
+                "Population - 5 km": 36427,
+                "Population - 10 km": 104889
+            }
+        },
+        {
+            "id": "8f4cd4202a8c119",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.97456437753308,
+                    18.599338323235823
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4202a8c119",
+                "Soil Clay Fraction": 0.4,
+                "Elevation": 66,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008109699003398418,
+                "Height Above Nearest Drainage (m)": 17.299999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 2.4931527513995295,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1984.9486988562253,
+                "Nearest Water Type": "river",
+                "place_name": "Santo Domingo Norte, Santo Domingo, Dominican Republic",
+                "Population - 1 km": 1710,
+                "Population - 5 km": 76211,
+                "Population - 10 km": 613766
+            }
+        },
+        {
+            "id": "8f4cd090ac868ec",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.09845763119401,
+                    18.399141304492826
+                ]
+            },
+            "properties": {
+                "id": "8f4cd090ac868ec",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 30,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 190.55345153808594,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.3030494828939803,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 47.916046815007384,
+                "Nearest Water Type": "river",
+                "place_name": "PTAR, San Crist\u00f3bal, RD, Calle 1\u00aa, San Crist\u00f3bal, San Gregorio de Nigua, San Crist\u00f3bal, 91000, Dominican Republic",
+                "Population - 1 km": 6414,
+                "Population - 5 km": 143394,
+                "Population - 10 km": 406574
+            }
+        },
+        {
+            "id": "8f4cf23900a5a48",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.06510186310683,
+                    19.554137114700517
+                ]
+            },
+            "properties": {
+                "id": "8f4cf23900a5a48",
+                "Soil Clay Fraction": 0.42,
+                "Elevation": 59,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.01612788811326027,
+                "Height Above Nearest Drainage (m)": 20.699996948242188,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 2.295366148605468,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 4191.905919932544,
+                "Nearest Water Type": "stream",
+                "place_name": "Vertedero Municipal de R\u00edo San Juan, Camino al Vertedero Municipal, S\u00e1bana La Puerta, R\u00edo San Juan, Mar\u00eda Trinidad S\u00e1nchez, Dominican Republic",
+                "Population - 1 km": 126,
+                "Population - 5 km": 3749,
+                "Population - 10 km": 19229
+            }
+        },
+        {
+            "id": "8f4cd0925552d53",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.0708035931641,
+                    18.48957537372313
+                ]
+            },
+            "properties": {
+                "id": "8f4cd0925552d53",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 23,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008114835247397423,
+                "Height Above Nearest Drainage (m)": 1.7999992370605469,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.4492704399791893,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 165.0755479696128,
+                "Nearest Water Type": "stream",
+                "place_name": "San Crist\u00f3bal, 11809, Dominican Republic",
+                "Population - 1 km": 2544,
+                "Population - 5 km": 178633,
+                "Population - 10 km": 1021546
+            }
+        },
+        {
+            "id": "8f4c898842ad09e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0222668061411,
+                    19.7392678504925
+                ]
+            },
+            "properties": {
+                "id": "8f4c898842ad09e",
+                "Soil Clay Fraction": 0.41,
+                "Elevation": 210,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008054793812334538,
+                "Height Above Nearest Drainage (m)": 56.79998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 9.376415631719773,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 978.8284535984887,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Los Hidalgos - Guananico, El Mamey Arriba, Los Hidalgos, Puerto Plata, Dominican Republic",
+                "Population - 1 km": 1362,
+                "Population - 5 km": 8004,
+                "Population - 10 km": 27176
+            }
+        },
+        {
+            "id": "8f4cd4219d92174",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.97484222427734,
+                    18.56071762578473
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4219d92174",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 32,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.008111492730677128,
+                "Height Above Nearest Drainage (m)": 19.400001525878906,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 427.9248394386766,
+                "Nearest Water Type": "stream",
+                "place_name": "Batey Duquesa, Santo Domingo Norte, Santo Domingo, 201, Dominican Republic",
+                "Population - 1 km": 6760,
+                "Population - 5 km": 232519,
+                "Population - 10 km": 1431723
+            }
+        },
+        {
+            "id": "8f4cd5ca4c28708",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.68745511976064,
+                    18.627017789348557
+                ]
+            },
+            "properties": {
+                "id": "8f4cd5ca4c28708",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 23,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.00810842216014862,
+                "Height Above Nearest Drainage (m)": 3.200000762939453,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.6308275219667823,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 8,
+                "Distance to Waterway (m)": 497.9096618534172,
+                "Nearest Water Type": "canal",
+                "place_name": "La Reforma, San Antonio de Guerra, Santo Domingo, Dominican Republic",
+                "Population - 1 km": 229,
+                "Population - 5 km": 8366,
+                "Population - 10 km": 38005
+            }
+        },
+        {
+            "id": "8f4cd4d8e956061",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.52952125015258,
+                    19.25069917026958
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4d8e956061",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 104,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016157381236553192,
+                "Height Above Nearest Drainage (m)": 5.299995422363281,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.3096671091834393,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1424.7571046939152,
+                "Nearest Water Type": "river",
+                "place_name": "Cruce Los Soto, La Vega, 48000, Dominican Republic",
+                "Population - 1 km": 2949,
+                "Population - 5 km": 95157,
+                "Population - 10 km": 168302
+            }
+        },
+        {
+            "id": "8f4cd421d763c28",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.96468229499585,
+                    18.566385699367476
+                ]
+            },
+            "properties": {
+                "id": "8f4cd421d763c28",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 42,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.024333558976650238,
+                "Height Above Nearest Drainage (m)": 19.999998092651367,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 2.187518505519231,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 954.7481265183784,
+                "Nearest Water Type": "stream",
+                "place_name": "Los Cazabes, Santo Domingo Norte, Santo Domingo, 201, Dominican Republic",
+                "Population - 1 km": 6762,
+                "Population - 5 km": 239117,
+                "Population - 10 km": 1346717
+            }
+        },
+        {
+            "id": "8f4cd421d762ca9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.96508390983527,
+                    18.5666113446022
+                ]
+            },
+            "properties": {
+                "id": "8f4cd421d762ca9",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 44,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.024333558976650238,
+                "Height Above Nearest Drainage (m)": 19.999998092651367,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 3.594451847573219,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 993.0495391615037,
+                "Nearest Water Type": "stream",
+                "place_name": "Batey Duquesa, Santo Domingo Norte, Santo Domingo, 201, Dominican Republic",
+                "Population - 1 km": 6727,
+                "Population - 5 km": 236157,
+                "Population - 10 km": 1339673
+            }
+        },
+        {
+            "id": "8f4c89a400d99ae",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.53912970767286,
+                    19.39291483101642
+                ]
+            },
+            "properties": {
+                "id": "8f4c89a400d99ae",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 161,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008071830496191978,
+                "Height Above Nearest Drainage (m)": 8.400009155273438,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.115853724172211,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 125.82494320614771,
+                "Nearest Water Type": "stream",
+                "place_name": "Vertedero Municipal, La Zona, Moca, Espaillat, 53031, Dominican Republic",
+                "Population - 1 km": 13697,
+                "Population - 5 km": 122532,
+                "Population - 10 km": 258903
+            }
+        },
+        {
+            "id": "8f4cd424442aa45",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.84504029257894,
+                    18.53979983577121
+                ]
+            },
+            "properties": {
+                "id": "8f4cd424442aa45",
+                "Soil Clay Fraction": 0.41,
+                "Elevation": 10,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.14602716267108917,
+                "Height Above Nearest Drainage (m)": 6,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 3.3617771833095285,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 104.3261681196837,
+                "Nearest Water Type": "river",
+                "place_name": "Calle 3ra, Urbanizacion Altos De Fronterra, Santo Domingo Este, Santo Domingo, 11517, Dominican Republic",
+                "Population - 1 km": 17131,
+                "Population - 5 km": 568050,
+                "Population - 10 km": 1761774
+            }
+        },
+        {
+            "id": "8f4cd5881cd1569",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.3099906648139,
+                    18.54850364631754
+                ]
+            },
+            "properties": {
+                "id": "8f4cd5881cd1569",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 35,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008112095296382904,
+                "Height Above Nearest Drainage (m)": 8.000001907348633,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.1337011238016714,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1339.024432698877,
+                "Nearest Water Type": "river",
+                "place_name": "Consuelo, San Pedro de Macor\u00eds, Dominican Republic",
+                "Population - 1 km": 2225,
+                "Population - 5 km": 24064,
+                "Population - 10 km": 183610
+            }
+        },
+        {
+            "id": "8f4cd48d40c0189",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.1051882081736,
+                    19.07798365238649
+                ]
+            },
+            "properties": {
+                "id": "8f4cd48d40c0189",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 73,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.04852233827114105,
+                "Height Above Nearest Drainage (m)": 12.10000228881836,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 6.77767093657218,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 1292.7964695443586,
+                "Nearest Water Type": "river",
+                "place_name": "Chacuey Abajo, Cotu\u00ed, S\u00e1nchez Ram\u00edrez, 43002, Dominican Republic",
+                "Population - 1 km": 150,
+                "Population - 5 km": 12029,
+                "Population - 10 km": 54920
+            }
+        },
+        {
+            "id": "8f4cd428845346b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.06760913283975,
+                    18.522260721389713
+                ]
+            },
+            "properties": {
+                "id": "8f4cd428845346b",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 39,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008113300427794456,
+                "Height Above Nearest Drainage (m)": 3.0999984741210938,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.0257440835988467,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 828.4360330727283,
+                "Nearest Water Type": "river",
+                "place_name": "Los Alcarrizos, Santo Domingo, 11809, Dominican Republic",
+                "Population - 1 km": 12553,
+                "Population - 5 km": 265549,
+                "Population - 10 km": 788886
+            }
+        },
+        {
+            "id": "8f4cd51b16d41b2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.4842326627349,
+                    18.4149866847184
+                ]
+            },
+            "properties": {
+                "id": "8f4cd51b16d41b2",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 9,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 2.638178825378418,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.49,
+                "Slope (degrees)": 0.32584499780664333,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 368.2203521141017,
+                "Nearest Water Type": "coastline",
+                "place_name": "Autov\u00eda del Este, Los Barcos de Arena, Guayacanes, San Pedro de Macor\u00eds, 15700, Dominican Republic",
+                "Population - 1 km": 285,
+                "Population - 5 km": 6363,
+                "Population - 10 km": 22598
+            }
+        },
+        {
+            "id": "8f4cf246a05c519",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.34582270730041,
+                    19.67215068143048
+                ]
+            },
+            "properties": {
+                "id": "8f4cf246a05c519",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 6,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008058110252022743,
+                "Height Above Nearest Drainage (m)": 1.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.4512754398236833,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 340.0367442855579,
+                "Nearest Water Type": "stream",
+                "place_name": "Gaspar Hern\u00e1ndez, Espaillat, Dominican Republic",
+                "Population - 1 km": 387,
+                "Population - 5 km": 16296,
+                "Population - 10 km": 42644
+            }
+        },
+        {
+            "id": "8f4cd58d5bb6796",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.2320925403165,
+                    18.48184586194786
+                ]
+            },
+            "properties": {
+                "id": "8f4cd58d5bb6796",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 33,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.00811517983675003,
+                "Height Above Nearest Drainage (m)": 2.999998092651367,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 1.5454433277795698,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 3778.1928451373606,
+                "Nearest Water Type": "coastline",
+                "place_name": "Batey Alem\u00e1n, San Pedro de Macor\u00eds, Dominican Republic",
+                "Population - 1 km": 1043,
+                "Population - 5 km": 40638,
+                "Population - 10 km": 228645
+            }
+        },
+        {
+            "id": "8f4cd6ad6d1d530",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.82786375963909,
+                    18.508019589611493
+                ]
+            },
+            "properties": {
+                "id": "8f4cd6ad6d1d530",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 225,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.01622791960835457,
+                "Height Above Nearest Drainage (m)": 8.300003051757812,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.7429209923088562,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1392.4449109228003,
+                "Nearest Water Type": "river",
+                "place_name": "Azua, 71002, Dominican Republic",
+                "Population - 1 km": 143,
+                "Population - 5 km": 6389,
+                "Population - 10 km": 47185
+            }
+        },
+        {
+            "id": "8f4cd08300b6641",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.15299582519872,
+                    18.358483082940914
+                ]
+            },
+            "properties": {
+                "id": "8f4cd08300b6641",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 75,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.048725150525569916,
+                "Height Above Nearest Drainage (m)": 11.900001525878906,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.8543341688374633,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2441.5817049846028,
+                "Nearest Water Type": "stream",
+                "place_name": "Do\u00f1a Ana, San Crist\u00f3bal, Yaguate, San Crist\u00f3bal, Dominican Republic",
+                "Population - 1 km": 1527,
+                "Population - 5 km": 49546,
+                "Population - 10 km": 219571
+            }
+        },
+        {
+            "id": "8f4cf220a81d0c3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.86941794788682,
+                    19.428097470240782
+                ]
+            },
+            "properties": {
+                "id": "8f4cf220a81d0c3",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 9,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008070094510912895,
+                "Height Above Nearest Drainage (m)": 9.399999618530273,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.9639772789586516,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 208.86872738690994,
+                "Nearest Water Type": "coastline",
+                "place_name": "Cabrera - Nagua, El Juncal, Nagua, Matancitas, Nagua, Mar\u00eda Trinidad S\u00e1nchez, Dominican Republic",
+                "Population - 1 km": 415,
+                "Population - 5 km": 12849,
+                "Population - 10 km": 71134
+            }
+        },
+        {
+            "id": "8f4cd4d81303151",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.52741737259568,
+                    19.25766052983289
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4d81303151",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 101,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.05654790252447128,
+                "Height Above Nearest Drainage (m)": 0.40000152587890625,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 0.3274852201531349,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1805.6697189057927,
+                "Nearest Water Type": "river",
+                "place_name": "La Vega, 48000, Dominican Republic",
+                "Population - 1 km": 1812,
+                "Population - 5 km": 83325,
+                "Population - 10 km": 171457
+            }
+        },
+        {
+            "id": "8f4cd497594c729",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.91590782250017,
+                    19.27787324879622
+                ]
+            },
+            "properties": {
+                "id": "8f4cd497594c729",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 30,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.00807739794254303,
+                "Height Above Nearest Drainage (m)": 7.80000114440918,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.604772042577618,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 1205.3274676500096,
+                "Nearest Water Type": "river",
+                "place_name": "Los Limones, El Factor, Mar\u00eda Trinidad S\u00e1nchez, Dominican Republic",
+                "Population - 1 km": 235,
+                "Population - 5 km": 16954,
+                "Population - 10 km": 48899
+            }
+        },
+        {
+            "id": "8f4cd4c09cf641c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.3832429596559,
+                    19.1409127485888
+                ]
+            },
+            "properties": {
+                "id": "8f4cd4c09cf641c",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 65,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 180.564453125,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 13.259582397251588,
+                "Nearest Water Type": "river",
+                "place_name": "Jima Abajo, La Vega, 11000, Dominican Republic",
+                "Population - 1 km": 3070,
+                "Population - 5 km": 49633,
+                "Population - 10 km": 99835
+            }
+        },
+        {
+            "id": "8f4c899636d0d9c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.74482677381936,
+                    19.82209615097264
+                ]
+            },
+            "properties": {
+                "id": "8f4c899636d0d9c",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 29,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.04830458015203476,
+                "Height Above Nearest Drainage (m)": 5.100000381469727,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 8.923950231957038,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1216.724289739796,
+                "Nearest Water Type": "coastline",
+                "place_name": "Navarrete - Pto. Plata, Barrio Los Rieles, Cofres\u00ed, Puerto Plata, Dominican Republic",
+                "Population - 1 km": 1480,
+                "Population - 5 km": 33314,
+                "Population - 10 km": 113909
+            }
+        },
+        {
+            "id": "8f4c8826884b58e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.48931285533583,
+                    19.694199715179405
+                ]
+            },
+            "properties": {
+                "id": "8f4c8826884b58e",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 21,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008057018741965294,
+                "Height Above Nearest Drainage (m)": 1.3999996185302734,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.3283690602182701,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 913.3751434810815,
+                "Nearest Water Type": "canal",
+                "place_name": "Carretera Casta\u00f1uelas - Las Matas de Santa Cruz, Loma de Castanuelas, Casta\u00f1uelas, Las Matas de Santa Cruz, Monte Cristi, Dominican Republic",
+                "Population - 1 km": 1221,
+                "Population - 5 km": 14305,
+                "Population - 10 km": 66659
+            }
+        },
+        {
+            "id": "8f4cd42d4534465",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.03450711643521,
+                    18.504019889972387
+                ]
+            },
+            "properties": {
+                "id": "8f4cd42d4534465",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 32,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016228221356868744,
+                "Height Above Nearest Drainage (m)": 18.200000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.5794231045771288,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 509.2487041756261,
+                "Nearest Water Type": "stream",
+                "place_name": "Puente Blanco, Los Alcarrizos, Santo Domingo, 11809, Dominican Republic",
+                "Population - 1 km": 19892,
+                "Population - 5 km": 486146,
+                "Population - 10 km": 1356758
+            }
+        },
+        {
+            "id": "8f4cd5ceb12446c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.53125664186334,
+                    18.46297582536478
+                ]
+            },
+            "properties": {
+                "id": "8f4cd5ceb12446c",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 48,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008116025477647781,
+                "Height Above Nearest Drainage (m)": 1.4000015258789062,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.55,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 4924.54773735871,
+                "Nearest Water Type": "water",
+                "place_name": "Los Llanos, San Pedro de Macor\u00eds, Dominican Republic",
+                "Population - 1 km": 472,
+                "Population - 5 km": 7910,
+                "Population - 10 km": 56363
+            }
+        },
+        {
+            "id": "8f4cd081445c44d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.17573426856441,
+                    18.33247796453703
+                ]
+            },
+            "properties": {
+                "id": "8f4cd081445c44d",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 46,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01624411717057228,
+                "Height Above Nearest Drainage (m)": 3.5999984741210938,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.32568920443683547,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 51.12695892927967,
+                "Nearest Water Type": "stream",
+                "place_name": "Autopista San Crist\u00f3bal - Ban\u00ed, Yaguate, San Crist\u00f3bal, Dominican Republic",
+                "Population - 1 km": 3423,
+                "Population - 5 km": 32677,
+                "Population - 10 km": 153813
+            }
+        },
+        {
+            "id": "8f4c89a216a480a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.62660072841177,
+                    19.503043047241842
+                ]
+            },
+            "properties": {
+                "id": "8f4c89a216a480a",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 352,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016132798045873642,
+                "Height Above Nearest Drainage (m)": 46.9000244140625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 11.643457867069149,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2181.58676162052,
+                "Nearest Water Type": "stream",
+                "place_name": "Tamboril, Santiago, 52000, Dominican Republic",
+                "Population - 1 km": 2103,
+                "Population - 5 km": 93887,
+                "Population - 10 km": 433978
+            }
+        },
+        {
+            "id": "8f4cd2880b2b472",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.17696831946085,
+                    17.98750708696707
+                ]
+            },
+            "properties": {
+                "id": "8f4cd2880b2b472",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 118,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 2.5471653938293457,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 8.714022517096904,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 410.8826277588956,
+                "Nearest Water Type": "canal",
+                "place_name": "Las Cayas, Para\u00edso, Barahona, Dominican Republic",
+                "Population - 1 km": 1007,
+                "Population - 5 km": 10946,
+                "Population - 10 km": 17644
+            }
+        },
+        {
+            "id": "8f4cd092b2704ed",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.04475989590972,
+                    18.41616407919216
+                ]
+            },
+            "properties": {
+                "id": "8f4cd092b2704ed",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 66,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.02435479313135147,
+                "Height Above Nearest Drainage (m)": 40.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 10.439831160232819,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 1346.420689577293,
+                "Nearest Water Type": "stream",
+                "place_name": "Bajos de Haina, San Crist\u00f3bal, 91000, Dominican Republic",
+                "Population - 1 km": 20266,
+                "Population - 5 km": 216364,
+                "Population - 10 km": 821327
+            }
+        },
+        {
+            "id": "8f4cd091a1096b3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.14502054362708,
+                    18.395438488394767
+                ]
+            },
+            "properties": {
+                "id": "8f4cd091a1096b3",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 89,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.14614249765872955,
+                "Height Above Nearest Drainage (m)": 7.3000030517578125,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.3391738793064631,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 2727.537035203534,
+                "Nearest Water Type": "river",
+                "place_name": "Autopista San Crist\u00f3bal - Ban\u00ed, Do\u00f1a Ana, Yaguate, San Crist\u00f3bal, 9001, Dominican Republic",
+                "Population - 1 km": 5292,
+                "Population - 5 km": 112083,
+                "Population - 10 km": 256093
+            }
+        }
+    ]
+}

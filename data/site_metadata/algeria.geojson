@@ -1,0 +1,2225 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f3874d006c1dab",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.651057764986257,
+                    36.55509287408974
+                ]
+            },
+            "properties": {
+                "id": "8f3874d006c1dab",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 181,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.013781582936644554,
+                "Height Above Nearest Drainage (m)": 40,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 10.186151714736798,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 514.0777436589336,
+                "Nearest Water Type": "river",
+                "place_name": "RN 5, Taliouine, Kadiria, Kadiria District, Bouira, 10002, Algeria",
+                "Population - 1 km": 1722,
+                "Population - 5 km": 41916,
+                "Population - 10 km": 110516
+            }
+        },
+        {
+            "id": "8f382e129b2d70e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.31916833245458,
+                    35.97291023255564
+                ]
+            },
+            "properties": {
+                "id": "8f382e129b2d70e",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 246,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.02082512527704239,
+                "Height Above Nearest Drainage (m)": 13,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 2.7425725445083966,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3697.6920138631785,
+                "Nearest Water Type": "water",
+                "place_name": "CW 3, Sour, A\u00efn Tedles District, Mostaganem, 27001, Algeria",
+                "Population - 1 km": 511,
+                "Population - 5 km": 39520,
+                "Population - 10 km": 87877
+            }
+        },
+        {
+            "id": "8f3829b0e483c21",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.187146523164499,
+                    36.61208429238533
+                ]
+            },
+            "properties": {
+                "id": "8f3829b0e483c21",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 55,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006885759998112917,
+                "Height Above Nearest Drainage (m)": 2.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 0.7284357429137533,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 70.82730524771752,
+                "Nearest Water Type": "stream",
+                "place_name": "El Bor, Meftah, Meftah District, Blida, Algeria",
+                "Population - 1 km": 1284,
+                "Population - 5 km": 145101,
+                "Population - 10 km": 911833
+            }
+        },
+        {
+            "id": "8f3874324541a91",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.592542792011184,
+                    36.489415298020084
+                ]
+            },
+            "properties": {
+                "id": "8f3874324541a91",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 137,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.013793294318020344,
+                "Height Above Nearest Drainage (m)": 2.70001220703125,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.308675570389769,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 28.096062330791526,
+                "Nearest Water Type": "stream",
+                "place_name": "Laazib, Akbou, Akbou District, Bejaia, 06001, Algeria",
+                "Population - 1 km": 1613,
+                "Population - 5 km": 32491,
+                "Population - 10 km": 107153
+            }
+        },
+        {
+            "id": "8f395a6b4a60c49",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.452508196283441,
+                    36.72436553438207
+                ]
+            },
+            "properties": {
+                "id": "8f395a6b4a60c49",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 37,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.4469454288482666,
+                "Height Above Nearest Drainage (m)": 15,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 3.6143540571761896,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 404.01641494316885,
+                "Nearest Water Type": "stream",
+                "place_name": "Corso, Boumerdes District, Boumerdes, 35014, Algeria",
+                "Population - 1 km": 3395,
+                "Population - 5 km": 138057,
+                "Population - 10 km": 372663
+            }
+        },
+        {
+            "id": "8f3829953252493",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.829402050451657,
+                    36.66457481425227
+                ]
+            },
+            "properties": {
+                "id": "8f3829953252493",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 17,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 1.6996043920516968,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.173222635689633,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 688.7010122479611,
+                "Nearest Water Type": "river",
+                "place_name": "Zeralda, Zeralda District, Algiers, 42300, Algeria",
+                "Population - 1 km": 1210,
+                "Population - 5 km": 100788,
+                "Population - 10 km": 367041
+            }
+        },
+        {
+            "id": "8f382e31e88c66a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.715763762127019,
+                    35.79749568851587
+                ]
+            },
+            "properties": {
+                "id": "8f382e31e88c66a",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 165,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006956914439797401,
+                "Height Above Nearest Drainage (m)": 34.30000305175781,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.399760753449054,
+                "Fine Earth Density (kg / m^3)": 161,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Oued El Djemaa, El Hamadna District, Relizane, 480021, Algeria",
+                "Population - 1 km": 333,
+                "Population - 5 km": 15875,
+                "Population - 10 km": 58167
+            }
+        },
+        {
+            "id": "8f382e1aab0ed53",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.218092683433305,
+                    35.797237190170996
+                ]
+            },
+            "properties": {
+                "id": "8f382e1aab0ed53",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 125,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.013913886621594429,
+                "Height Above Nearest Drainage (m)": 45.69999694824219,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 6.0835682228958055,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Douar Hamaymia, Touahria, Mesra District, Mostaganem, 27013, Algeria",
+                "Population - 1 km": 571,
+                "Population - 5 km": 29484,
+                "Population - 10 km": 127536
+            }
+        },
+        {
+            "id": "8f395a793861645",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.38307345827264,
+                    36.75693879096567
+                ]
+            },
+            "properties": {
+                "id": "8f395a793861645",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 28,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.006873035337775946,
+                "Height Above Nearest Drainage (m)": 2.8999996185302734,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 0.9888199018246404,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2178.631376563807,
+                "Nearest Water Type": "coastline",
+                "place_name": "Belgourari Ali, Reghaia, Rouiba District, Algiers, 3555, Algeria",
+                "Population - 1 km": 4234,
+                "Population - 5 km": 172177,
+                "Population - 10 km": 509187
+            }
+        },
+        {
+            "id": "8f382889b46ca9c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.443032279737638,
+                    36.15972533619455
+                ]
+            },
+            "properties": {
+                "id": "8f382889b46ca9c",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 350,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.11773254722356796,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 7.668314723553207,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 35.30010901165454,
+                "Nearest Water Type": "pond",
+                "place_name": "Menasria, Oum Drou, Chlef District, Chlef, Algeria",
+                "Population - 1 km": 246,
+                "Population - 5 km": 19329,
+                "Population - 10 km": 184692
+            }
+        },
+        {
+            "id": "8f382d49562c303",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.695269187451638,
+                    36.53148171539359
+                ]
+            },
+            "properties": {
+                "id": "8f382d49562c303",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 47,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.048251673579216,
+                "Height Above Nearest Drainage (m)": 8.600000381469727,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 6.7806404432735885,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 961.8889467009884,
+                "Nearest Water Type": "river",
+                "place_name": "Sidi El Kassadi, Damous, Damous District, Tipaza, 42014, Algeria",
+                "Population - 1 km": 2095,
+                "Population - 5 km": 19188,
+                "Population - 10 km": 35043
+            }
+        },
+        {
+            "id": "8f395a4d89368ac",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.2395826624347,
+                    36.73915841529886
+                ]
+            },
+            "properties": {
+                "id": "8f395a4d89368ac",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 15,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006874567829072475,
+                "Height Above Nearest Drainage (m)": 2.8000011444091797,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.4943748338699589,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 395.1886541321914,
+                "Nearest Water Type": "river",
+                "place_name": "Masjid El Bachir el ibrahimi, Rue Hamiz 5, Hamiz 5, Si Smail, Burj Al Kifan, Dar El Beida District, Algiers, 16017, Algeria",
+                "Population - 1 km": 11340,
+                "Population - 5 km": 379013,
+                "Population - 10 km": 1130403
+            }
+        },
+        {
+            "id": "8f3829812ace69d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.728487958639969,
+                    36.517886699353994
+                ]
+            },
+            "properties": {
+                "id": "8f3829812ace69d",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 49,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.041364990174770355,
+                "Height Above Nearest Drainage (m)": 0.7999992370605469,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.327468781892834,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 108.42241198855186,
+                "Nearest Water Type": "river",
+                "place_name": "RN 4, Hawsh Qastun, Chiffa, Mouza\u00efa District, Blida, Algeria",
+                "Population - 1 km": 1269,
+                "Population - 5 km": 27204,
+                "Population - 10 km": 316138
+            }
+        },
+        {
+            "id": "8f38226153309a8",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.014193968295113,
+                    34.97333377147631
+                ]
+            },
+            "properties": {
+                "id": "8f38226153309a8",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 354,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007027374114841223,
+                "Height Above Nearest Drainage (m)": 122.50001525878906,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 12.935485852941733,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "\u0628\u0627\u0628 \u0627\u0644\u0639\u0633\u0629, Bab El Assa, Bab El Assa District, Tilimsen, Algeria",
+                "Population - 1 km": 374,
+                "Population - 5 km": 9047,
+                "Population - 10 km": 43765
+            }
+        },
+        {
+            "id": "8f382e4a962605e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.056130134920795,
+                    35.36095558351532
+                ]
+            },
+            "properties": {
+                "id": "8f382e4a962605e",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 583,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.0069944304414093494,
+                "Height Above Nearest Drainage (m)": 13.70001220703125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 11.371589958892104,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3234.7122558652613,
+                "Nearest Water Type": "river",
+                "place_name": "Hadjadjra, Tizi, Tizi District, Mascara, 29500, Algeria",
+                "Population - 1 km": 803,
+                "Population - 5 km": 9790,
+                "Population - 10 km": 134169
+            }
+        },
+        {
+            "id": "8f3862c43b8a866",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.66402769480345,
+                    36.7834725835474
+                ]
+            },
+            "properties": {
+                "id": "8f3862c43b8a866",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 82,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.013741268776357174,
+                "Height Above Nearest Drainage (m)": 16.5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 8.173283484210438,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 143.24652369125388,
+                "Nearest Water Type": "river",
+                "place_name": "RN 85, Kahouet Aibouche, Sidi Mezghiche, Sidi Mezghiche District, Skikda, Algeria",
+                "Population - 1 km": 758,
+                "Population - 5 km": 13523,
+                "Population - 10 km": 77731
+            }
+        },
+        {
+            "id": "8f382366321e734",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.549286060877352,
+                    35.26670888146875
+                ]
+            },
+            "properties": {
+                "id": "8f382366321e734",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 408,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007002464961260557,
+                "Height Above Nearest Drainage (m)": 1.899993896484375,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 1.0017073975611006,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 163.2965184919503,
+                "Nearest Water Type": "river",
+                "place_name": "Boubernas, Sidi Brahim, A\u00efn El Berd District, Sidi Bel Abb\u00e8s, 22068, Algeria",
+                "Population - 1 km": 541,
+                "Population - 5 km": 19522,
+                "Population - 10 km": 113594
+            }
+        },
+        {
+            "id": "8f38048e43b2995",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.428117389460505,
+                    34.888571795646214
+                ]
+            },
+            "properties": {
+                "id": "8f38048e43b2995",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 590,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.007034568581730127,
+                "Height Above Nearest Drainage (m)": 97.10003662109375,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 7.124295745279859,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3828.0751149530383,
+                "Nearest Water Type": "river",
+                "place_name": "CW 45, Beni Mester, Mansourah District, Tilimsen, 13061, Algeria",
+                "Population - 1 km": 207,
+                "Population - 5 km": 12004,
+                "Population - 10 km": 167806
+            }
+        },
+        {
+            "id": "8f38230a0d25146",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.998917556184251,
+                    35.50512916930957
+                ]
+            },
+            "properties": {
+                "id": "8f38230a0d25146",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 80,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.5096824169158936,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.29,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "El Amria, El Amria District, A\u00efn T\u00e9mouchent, 46006, Algeria",
+                "Population - 1 km": 229,
+                "Population - 5 km": 18842,
+                "Population - 10 km": 39413
+            }
+        },
+        {
+            "id": "8f38231ab598d33",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.028290401103634,
+                    35.58572162409115
+                ]
+            },
+            "properties": {
+                "id": "8f38231ab598d33",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 292,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.006975152995437384,
+                "Height Above Nearest Drainage (m)": 68.80000305175781,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 4.8686491476749545,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1501.1363963368176,
+                "Nearest Water Type": "stream",
+                "place_name": "Sidi Mediouni, El Amria, El Amria District, A\u00efn T\u00e9mouchent, 46006, Algeria",
+                "Population - 1 km": 209,
+                "Population - 5 km": 3093,
+                "Population - 10 km": 28405
+            }
+        },
+        {
+            "id": "8f38740550f2d76",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4078147697431,
+                    36.366268041818046
+                ]
+            },
+            "properties": {
+                "id": "8f38740550f2d76",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 237,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006907360628247261,
+                "Height Above Nearest Drainage (m)": 0.8000030517578125,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 1.1924129017551512,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 88.37775513470243,
+                "Nearest Water Type": "river",
+                "place_name": "Tiqintocht, Boudjellil, Tazmalt District, Bejaia, 06000, Algeria",
+                "Population - 1 km": 962,
+                "Population - 5 km": 35765,
+                "Population - 10 km": 94261
+            }
+        },
+        {
+            "id": "8f38236a6baa66c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.839120107056593,
+                    35.11214508178332
+                ]
+            },
+            "properties": {
+                "id": "8f38236a6baa66c",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 625,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.028061963617801666,
+                "Height Above Nearest Drainage (m)": 6,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.9274099368650546,
+                "Fine Earth Density (kg / m^3)": 153,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1805.2602142725077,
+                "Nearest Water Type": "river",
+                "place_name": "CW 78, Sidi Ali Boussidi, Sidi Ali Boussidi District, Sidi Bel Abb\u00e8s, Algeria",
+                "Population - 1 km": 1421,
+                "Population - 5 km": 12761,
+                "Population - 10 km": 32894
+            }
+        },
+        {
+            "id": "8f3844b23a983a8",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.996529281006817,
+                    36.27693414180258
+                ]
+            },
+            "properties": {
+                "id": "8f3844b23a983a8",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 576,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.01383056677877903,
+                "Height Above Nearest Drainage (m)": 45.300048828125,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 5.164977054586058,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 483.9166578828626,
+                "Nearest Water Type": "river",
+                "place_name": "Souk Ahras, Souk Ahras District, Souk Ahras, 41000, Algeria",
+                "Population - 1 km": 3928,
+                "Population - 5 km": 116559,
+                "Population - 10 km": 213507
+            }
+        },
+        {
+            "id": "8f386352c322062",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.893629550015869,
+                    36.7074881829131
+                ]
+            },
+            "properties": {
+                "id": "8f386352c322062",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 73,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006877372972667217,
+                "Height Above Nearest Drainage (m)": 23.60000228881836,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 11.969323744641121,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3435.398630337927,
+                "Nearest Water Type": "stream",
+                "place_name": "Zerizer, Besbes District, El Tarf, Algeria",
+                "Population - 1 km": 430,
+                "Population - 5 km": 25439,
+                "Population - 10 km": 82755
+            }
+        },
+        {
+            "id": "8f3862d6c8b4a12",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.556501790213589,
+                    36.99270967064873
+                ]
+            },
+            "properties": {
+                "id": "8f3862d6c8b4a12",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 51,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.6098076701164246,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 10.126788103992222,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 723.8117841630273,
+                "Nearest Water Type": "coastline",
+                "place_name": "\u0645\u0641\u0631\u063a\u0629 \u0639\u0645\u0648\u0645\u064a\u0629, Voie Rapide Collo - Kerkera, Boumehadjer, Collo, Collo District, Skikda, 21210, Algeria",
+                "Population - 1 km": 6347,
+                "Population - 5 km": 57819,
+                "Population - 10 km": 101253
+            }
+        },
+        {
+            "id": "8f386319955c319",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.174185429002563,
+                    36.750404246384875
+                ]
+            },
+            "properties": {
+                "id": "8f386319955c319",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 50,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.020620638504624367,
+                "Height Above Nearest Drainage (m)": 22.000001907348633,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 9.255450097170947,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2157.1285296283536,
+                "Nearest Water Type": "river",
+                "place_name": "Bouteldja, Bouteldja District, El Tarf, Algeria",
+                "Population - 1 km": 200,
+                "Population - 5 km": 13672,
+                "Population - 10 km": 34180
+            }
+        },
+        {
+            "id": "8f386236a233666",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.58942604537378,
+                    36.773292453898044
+                ]
+            },
+            "properties": {
+                "id": "8f386236a233666",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 19,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.013743061572313309,
+                "Height Above Nearest Drainage (m)": 4.799999237060547,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.7288624080838647,
+                "Fine Earth Density (kg / m^3)": 166,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1438.452928727395,
+                "Nearest Water Type": "stream",
+                "place_name": "CW 120, Zourami ali 2, El Heraicha, El Hadjar, El Hadjar District, Annaba, 36049, Algeria",
+                "Population - 1 km": 179,
+                "Population - 5 km": 27800,
+                "Population - 10 km": 110666
+            }
+        },
+        {
+            "id": "8f3863d9acd3866",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.623012362898076,
+                    36.8187231504321
+                ]
+            },
+            "properties": {
+                "id": "8f3863d9acd3866",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 42,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00686756893992424,
+                "Height Above Nearest Drainage (m)": 8.299999237060547,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 5.903690679218636,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3739.48272636099,
+                "Nearest Water Type": "stream",
+                "place_name": "Oued Ennil, El Bouni, El Bouni District, Annaba, 23204, Algeria",
+                "Population - 1 km": 2168,
+                "Population - 5 km": 49152,
+                "Population - 10 km": 144892
+            }
+        },
+        {
+            "id": "8f387184845c9b2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.505867974918271,
+                    36.05445315469655
+                ]
+            },
+            "properties": {
+                "id": "8f387184845c9b2",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 887,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00693465443328023,
+                "Height Above Nearest Drainage (m)": 61.20001220703125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 5.347111351620164,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Ouled Hamla, A\u00efn M'Lila District, Oum El Bouaghi, Algeria",
+                "Population - 1 km": 329,
+                "Population - 5 km": 19133,
+                "Population - 10 km": 105707
+            }
+        },
+        {
+            "id": "8f3871919016428",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.177898186734621,
+                    36.12346750558638
+                ]
+            },
+            "properties": {
+                "id": "8f3871919016428",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 824,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.020785922184586525,
+                "Height Above Nearest Drainage (m)": 18.10003662109375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 5.048334888518945,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Chelghoum La\u00efd, Chelghoum Laid District, Mila, 43200, Algeria",
+                "Population - 1 km": 309,
+                "Population - 5 km": 46658,
+                "Population - 10 km": 94802
+            }
+        },
+        {
+            "id": "8f38233763a02e3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.448161331980125,
+                    35.680625619731735
+                ]
+            },
+            "properties": {
+                "id": "8f38233763a02e3",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 169,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.0069669438526034355,
+                "Height Above Nearest Drainage (m)": 50.100006103515625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 2.500834040817026,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3224.000446362807,
+                "Nearest Water Type": "canal",
+                "place_name": "Hassi Bounif, Bir El Djir District, Oran, Algeria",
+                "Population - 1 km": 1151,
+                "Population - 5 km": 75593,
+                "Population - 10 km": 262845
+            }
+        },
+        {
+            "id": "8f3862029609af4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.036970442809461,
+                    36.72988444286297
+                ]
+            },
+            "properties": {
+                "id": "8f3862029609af4",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 145,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.013750698417425156,
+                "Height Above Nearest Drainage (m)": 7.4000091552734375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 5.462912599528239,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1443.8121473892306,
+                "Nearest Water Type": "pond",
+                "place_name": "Fr\u00e8res Souici, Azzaba, Azzaba District, Skikda, 21001, Algeria",
+                "Population - 1 km": 292,
+                "Population - 5 km": 16252,
+                "Population - 10 km": 80531
+            }
+        },
+        {
+            "id": "8f38630a80e2c42",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.298225506969573,
+                    36.72391588588586
+                ]
+            },
+            "properties": {
+                "id": "8f38630a80e2c42",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 66,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.0068758693523705006,
+                "Height Above Nearest Drainage (m)": 6.200000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 1.4572274034283728,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2076.969610430278,
+                "Nearest Water Type": "drain",
+                "place_name": "El Matrouha, El Tarf, El Tarf District, El Tarf, 36000, Algeria",
+                "Population - 1 km": 381,
+                "Population - 5 km": 16670,
+                "Population - 10 km": 49611
+            }
+        },
+        {
+            "id": "8f386212b6acd0c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.907603090458673,
+                    36.83478618649724
+                ]
+            },
+            "properties": {
+                "id": "8f386212b6acd0c",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 135,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.02059854194521904,
+                "Height Above Nearest Drainage (m)": 84.30000305175781,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 4.365928708986879,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1538.0529800238558,
+                "Nearest Water Type": "river",
+                "place_name": "Hamadi Krouma, Skikda District, Skikda, 21015, Algeria",
+                "Population - 1 km": 2267,
+                "Population - 5 km": 127101,
+                "Population - 10 km": 250929
+            }
+        },
+        {
+            "id": "8f3844dac656440",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.091537587127369,
+                    35.91351309809035
+                ]
+            },
+            "properties": {
+                "id": "8f3844dac656440",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 985,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006946853827685118,
+                "Height Above Nearest Drainage (m)": 38.89996337890625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 4.793964141495585,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2898.96092823618,
+                "Nearest Water Type": "stream",
+                "place_name": "Oum El Bouaghi, Oum El Bouaghi District, Oum El Bouaghi, 04000, Algeria",
+                "Population - 1 km": 135,
+                "Population - 5 km": 32710,
+                "Population - 10 km": 101070
+            }
+        },
+        {
+            "id": "8f382d4c36a466a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.930961704531239,
+                    36.56510161390395
+                ]
+            },
+            "properties": {
+                "id": "8f382d4c36a466a",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 119,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006889952812343836,
+                "Height Above Nearest Drainage (m)": 118.70000457763672,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 10.561017593212846,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 815.0870145583051,
+                "Nearest Water Type": "coastline",
+                "place_name": "Gouraya, Gouraya District, Tipaza, 42007, Algeria",
+                "Population - 1 km": 927,
+                "Population - 5 km": 18520,
+                "Population - 10 km": 31365
+            }
+        },
+        {
+            "id": "8f3862d8815ac0e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.327371434689935,
+                    36.74216268750096
+                ]
+            },
+            "properties": {
+                "id": "8f3862d8815ac0e",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 257,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.04812024161219597,
+                "Height Above Nearest Drainage (m)": 101.69999694824219,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 8.959593579467935,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 4709.557325234041,
+                "Nearest Water Type": "river",
+                "place_name": "El Milia, El Milia District, Jijel, 18001, Algeria",
+                "Population - 1 km": 657,
+                "Population - 5 km": 31163,
+                "Population - 10 km": 110223
+            }
+        },
+        {
+            "id": "8f3862a31bac214",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.271579715896595,
+                    37.030341916823694
+                ]
+            },
+            "properties": {
+                "id": "8f3862a31bac214",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 95,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006848768796771765,
+                "Height Above Nearest Drainage (m)": 64.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.6303585478633624,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 405.64710795199176,
+                "Nearest Water Type": "stream",
+                "place_name": "El Marsa, Daira Ben Azzouz, Skikda, Algeria",
+                "Population - 1 km": 657,
+                "Population - 5 km": 3881,
+                "Population - 10 km": 10293
+            }
+        },
+        {
+            "id": "8f3862ac3d4e656",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.434795046424608,
+                    36.86563503971236
+                ]
+            },
+            "properties": {
+                "id": "8f3862ac3d4e656",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 48,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.020589865744113922,
+                "Height Above Nearest Drainage (m)": 14,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 2.027839345031339,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2548.4784307468367,
+                "Nearest Water Type": "pond",
+                "place_name": "Treat, Berrahal District, Annaba, Algeria",
+                "Population - 1 km": 250,
+                "Population - 5 km": 23673,
+                "Population - 10 km": 44584
+            }
+        },
+        {
+            "id": "8f380516019d348",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.056100731744586,
+                    34.95446472903872
+                ]
+            },
+            "properties": {
+                "id": "8f380516019d348",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 707,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.014058100059628487,
+                "Height Above Nearest Drainage (m)": 29.4000244140625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.819133556433429,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 5532.238495204522,
+                "Nearest Water Type": "stream",
+                "place_name": "Doui Thabet, Youb District, Sa\u00efda, Algeria",
+                "Population - 1 km": 38,
+                "Population - 5 km": 1404,
+                "Population - 10 km": 7273
+            }
+        },
+        {
+            "id": "8f38622f610c24d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.47087467092445,
+                    36.48656548776714
+                ]
+            },
+            "properties": {
+                "id": "8f38622f610c24d",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 231,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.020690448582172394,
+                "Height Above Nearest Drainage (m)": 2.399993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 3.2654564961325874,
+                "Fine Earth Density (kg / m^3)": 165,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 791.4467687509364,
+                "Nearest Water Type": "river",
+                "place_name": "Heliopolis, Heliopolis District, Guelma, 24008, Algeria",
+                "Population - 1 km": 679,
+                "Population - 5 km": 96345,
+                "Population - 10 km": 192518
+            }
+        },
+        {
+            "id": "8f3875252440703",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.224053647195769,
+                    36.40375836151719
+                ]
+            },
+            "properties": {
+                "id": "8f3875252440703",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 626,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.10356874018907547,
+                "Height Above Nearest Drainage (m)": 89.800048828125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.29,
+                "Slope (degrees)": 5.52230546477513,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "\u0645\u062d\u0637\u0629 \u0627\u0639\u0627\u062f\u0629 \u0631\u0633\u0643\u0644\u0629 \u0627\u0644\u0646\u0641\u0627\u064a\u0627\u062a MILANET, Evitement Ouest de Mila, Baba Rabah, Mila, Mila District, Mila, 43000, Algeria",
+                "Population - 1 km": 483,
+                "Population - 5 km": 18044,
+                "Population - 10 km": 120897
+            }
+        },
+        {
+            "id": "8f3862265091410",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.642890184620109,
+                    36.69780088568429
+                ]
+            },
+            "properties": {
+                "id": "8f3862265091410",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 93,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.020635012537240982,
+                "Height Above Nearest Drainage (m)": 28.199996948242188,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.46,
+                "Slope (degrees)": 6.43732542610539,
+                "Fine Earth Density (kg / m^3)": 163,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2693.8175523199698,
+                "Nearest Water Type": "reservoir",
+                "place_name": "A\u00efn Sayd, Ain Berda, Ain Berda District, Annaba, Algeria",
+                "Population - 1 km": 321,
+                "Population - 5 km": 12570,
+                "Population - 10 km": 79503
+            }
+        },
+        {
+            "id": "8f3804980354360",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.677585258864456,
+                    34.90915383686982
+                ]
+            },
+            "properties": {
+                "id": "8f3804980354360",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 379,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.09142816066741943,
+                "Height Above Nearest Drainage (m)": 25.800018310546875,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 4.770166263088087,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1746.6704689615851,
+                "Nearest Water Type": "river",
+                "place_name": "Hammam Boughrara, Maghnia District, Tilimsen, 13036, Algeria",
+                "Population - 1 km": 142,
+                "Population - 5 km": 8934,
+                "Population - 10 km": 90802
+            }
+        },
+        {
+            "id": "8f3828c753158b0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.284510199221101,
+                    36.11924800391205
+                ]
+            },
+            "properties": {
+                "id": "8f3828c753158b0",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 158,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0762188658118248,
+                "Height Above Nearest Drainage (m)": 21.199996948242188,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 7.388576596851013,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1206.8381290094292,
+                "Nearest Water Type": "ditch",
+                "place_name": "Maameria, Oued Sly, Boukadir District, Chlef, 02011, Algeria",
+                "Population - 1 km": 1180,
+                "Population - 5 km": 70402,
+                "Population - 10 km": 309904
+            }
+        },
+        {
+            "id": "8f387489287006c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.964743702471275,
+                    36.55816157040722
+                ]
+            },
+            "properties": {
+                "id": "8f387489287006c",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 426,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.013780975714325905,
+                "Height Above Nearest Drainage (m)": 156,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 20.40417543562616,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1510.2650868025412,
+                "Nearest Water Type": "stream",
+                "place_name": "Boghni, Boghni District, Tizi Ouzou, 15003, Algeria",
+                "Population - 1 km": 703,
+                "Population - 5 km": 48196,
+                "Population - 10 km": 150867
+            }
+        },
+        {
+            "id": "8f395a6184c321e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.621694625385637,
+                    36.771454431408536
+                ]
+            },
+            "properties": {
+                "id": "8f395a6184c321e",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 54,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.0068717049434781075,
+                "Height Above Nearest Drainage (m)": 31.900001525878906,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 6.74507043975641,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3752.5880225886863,
+                "Nearest Water Type": "pond",
+                "place_name": "Zaatra, Zemmouri, Bordj Menaiel District, Boumerdes, 350, Algeria",
+                "Population - 1 km": 645,
+                "Population - 5 km": 31377,
+                "Population - 10 km": 162187
+            }
+        },
+        {
+            "id": "8f3862a8634e44c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.214701772211015,
+                    36.85706607618272
+                ]
+            },
+            "properties": {
+                "id": "8f3862a8634e44c",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 79,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 2.478101968765259,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 3.486912432268375,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "CW 12, Dem El Begrat, Ben Azouz, Daira Ben Azzouz, Skikda, Algeria",
+                "Population - 1 km": 96,
+                "Population - 5 km": 3488,
+                "Population - 10 km": 24017
+            }
+        },
+        {
+            "id": "8f3823428d246a3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.173852011243654,
+                    35.317974672151756
+                ]
+            },
+            "properties": {
+                "id": "8f3823428d246a3",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 189,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006998043041676283,
+                "Height Above Nearest Drainage (m)": 43.30000305175781,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 0.3788915296879193,
+                "Fine Earth Density (kg / m^3)": 163,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 426.61853667279416,
+                "Nearest Water Type": "river",
+                "place_name": "CW 59A, Ouled Kihal, El Malah District, A\u00efn T\u00e9mouchent, 46013, Algeria",
+                "Population - 1 km": 953,
+                "Population - 5 km": 77985,
+                "Population - 10 km": 117410
+            }
+        },
+        {
+            "id": "8f382d6da2180ad",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.424987084245454,
+                    36.447455460084235
+                ]
+            },
+            "properties": {
+                "id": "8f382d6da2180ad",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 285,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006900276523083448,
+                "Height Above Nearest Drainage (m)": 57.09999084472656,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 4.8738458113486764,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1327.1038035449585,
+                "Nearest Water Type": "stream",
+                "place_name": "Boudjebroun, Merad, Hadjout District, Tipaza, 42200, Algeria",
+                "Population - 1 km": 746,
+                "Population - 5 km": 13469,
+                "Population - 10 km": 98455
+            }
+        },
+        {
+            "id": "8f3829dae516656",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.270328991084402,
+                    36.2665609551064
+                ]
+            },
+            "properties": {
+                "id": "8f3829dae516656",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 363,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.03457982838153839,
+                "Height Above Nearest Drainage (m)": 16.70001220703125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 3.155387466672015,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2234.538846152904,
+                "Nearest Water Type": "ditch",
+                "place_name": "Khemis Milana, Khemis Meliana District, A\u00efn Defla, 44019, Algeria",
+                "Population - 1 km": 897,
+                "Population - 5 km": 80182,
+                "Population - 10 km": 178407
+            }
+        },
+        {
+            "id": "8f38235ab0c388d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.321172822154676,
+                    35.264082030102266
+                ]
+            },
+            "properties": {
+                "id": "8f38235ab0c388d",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 255,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.014005306176841259,
+                "Height Above Nearest Drainage (m)": 10.100021362304688,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 5.2859824584291335,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 4969.287764761287,
+                "Nearest Water Type": "stream",
+                "place_name": "Ain Larebaa, Sidi Safi, Beni Saf District, A\u00efn T\u00e9mouchent, 46025, Algeria",
+                "Population - 1 km": 255,
+                "Population - 5 km": 14747,
+                "Population - 10 km": 63688
+            }
+        },
+        {
+            "id": "8f3804a68270706",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.80049059959412,
+                    34.95119382807859
+                ]
+            },
+            "properties": {
+                "id": "8f3804a68270706",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 746,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007029280532151461,
+                "Height Above Nearest Drainage (m)": 53.60003662109375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 2.3448048584234003,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3544.9463389438124,
+                "Nearest Water Type": "stream",
+                "place_name": "Ballaila, Chettouane Belaila, Ben Badis District, Sidi Bel Abb\u00e8s, Algeria",
+                "Population - 1 km": 168,
+                "Population - 5 km": 6390,
+                "Population - 10 km": 31536
+            }
+        },
+        {
+            "id": "8f3828aa1d1c32c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.881259690288865,
+                    36.23651034386456
+                ]
+            },
+            "properties": {
+                "id": "8f3828aa1d1c32c",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 288,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.006918752565979958,
+                "Height Above Nearest Drainage (m)": 53.10002136230469,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 3.782831682103792,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3570.0664142613637,
+                "Nearest Water Type": "river",
+                "place_name": "Dhaia, Ain Defla, Ain Defla District, A\u00efn Defla, Algeria",
+                "Population - 1 km": 742,
+                "Population - 5 km": 32284,
+                "Population - 10 km": 157055
+            }
+        },
+        {
+            "id": "8f3862a0dbb028e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.398101663370849,
+                    37.02269291477758
+                ]
+            },
+            "properties": {
+                "id": "8f3862a0dbb028e",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 236,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006849463563412428,
+                "Height Above Nearest Drainage (m)": 90.40000915527344,
+                "Landform Type": "Peak/ridge (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 6.510301657546548,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 589.356859083944,
+                "Nearest Water Type": "dam",
+                "place_name": "CW 16, Zaouia, Chetaibi, Chetaibi District, Annaba, 23047, Algeria",
+                "Population - 1 km": 78,
+                "Population - 5 km": 3480,
+                "Population - 10 km": 8970
+            }
+        },
+        {
+            "id": "8f382e1a48d8750",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.137703163564451,
+                    35.83902128031159
+                ]
+            },
+            "properties": {
+                "id": "8f382e1a48d8750",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 109,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006953300442546606,
+                "Height Above Nearest Drainage (m)": 62.79999923706055,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 6.735468329728948,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "CW 24, Hassi Mameche, Hassi Mameche District, Mostaganem, 27018, Algeria",
+                "Population - 1 km": 1843,
+                "Population - 5 km": 39775,
+                "Population - 10 km": 193720
+            }
+        },
+        {
+            "id": "8f38234828d474c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.278025314744168,
+                    35.100238293312856
+                ]
+            },
+            "properties": {
+                "id": "8f38234828d474c",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 209,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007016654126346111,
+                "Height Above Nearest Drainage (m)": 25.099990844726562,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 6.204917904129055,
+                "Fine Earth Density (kg / m^3)": 163,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 158.40444199944807,
+                "Nearest Water Type": "river",
+                "place_name": "Bensekrane, Bensekrane District, Tilimsen, Algeria",
+                "Population - 1 km": 144,
+                "Population - 5 km": 5878,
+                "Population - 10 km": 27886
+            }
+        },
+        {
+            "id": "8f3874d43232606",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.859610115654191,
+                    36.57180808878831
+                ]
+            },
+            "properties": {
+                "id": "8f3874d43232606",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 393,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.0068893455900251865,
+                "Height Above Nearest Drainage (m)": 124.79998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 12.26665150848841,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2003.9934930036925,
+                "Nearest Water Type": "reservoir",
+                "place_name": "route draa sachem, Ait Yahia Moussa, Draa El Mizan District, Tizi Ouzou, 15056, Algeria",
+                "Population - 1 km": 498,
+                "Population - 5 km": 30055,
+                "Population - 10 km": 133328
+            }
+        },
+        {
+            "id": "8f38231566c0c98",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.899722101660619,
+                    35.68072215913737
+                ]
+            },
+            "properties": {
+                "id": "8f38231566c0c98",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 92,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.17417152225971222,
+                "Height Above Nearest Drainage (m)": 16.900001525878906,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 6.136916218048143,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 12.191747972030052,
+                "Nearest Water Type": "stream",
+                "place_name": "El An\u00e7or, A\u00efn Turk District, Oran, Algeria",
+                "Population - 1 km": 426,
+                "Population - 5 km": 14009,
+                "Population - 10 km": 38292
+            }
+        },
+        {
+            "id": "8f38230b17b35ad",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.005920982775305,
+                    35.44832266836267
+                ]
+            },
+            "properties": {
+                "id": "8f38230b17b35ad",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 80,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 1.6561055183410645,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 164,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Misserghin, Boutlelis District, Oran, Algeria",
+                "Population - 1 km": 120,
+                "Population - 5 km": 12176,
+                "Population - 10 km": 64914
+            }
+        },
+        {
+            "id": "8f38758de2c20e5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.56414178736144,
+                    36.745744283485365
+                ]
+            },
+            "properties": {
+                "id": "8f38758de2c20e5",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 74,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 3.5682809352874756,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 13.466423734706407,
+                "Fine Earth Density (kg / m^3)": 108,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 57.90444179107055,
+                "Nearest Water Type": "river",
+                "place_name": "RN 43, Taza, Aftis, El Aouana, El Aouana District, Jijel, Algeria",
+                "Population - 1 km": 61,
+                "Population - 5 km": 3150,
+                "Population - 10 km": 11918
+            }
+        },
+        {
+            "id": "8f386226c30589b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.697747371275406,
+                    36.687610696212715
+                ]
+            },
+            "properties": {
+                "id": "8f386226c30589b",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 38,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.013758361339569092,
+                "Height Above Nearest Drainage (m)": 4.299999237060547,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 2.2961781155800365,
+                "Fine Earth Density (kg / m^3)": 166,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2556.6903113050216,
+                "Nearest Water Type": "pond",
+                "place_name": "RN 84, Ain Berda, Ain Berda District, Annaba, 36200, Algeria",
+                "Population - 1 km": 605,
+                "Population - 5 km": 42509,
+                "Population - 10 km": 96639
+            }
+        },
+        {
+            "id": "8f38749b594ac00",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.847903987353831,
+                    36.782214167501124
+                ]
+            },
+            "properties": {
+                "id": "8f38749b594ac00",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 71,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 10.044896125793457,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 12.978956773984434,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2842.011855728013,
+                "Nearest Water Type": "river",
+                "place_name": "CW 2, Boudjelal El Ghorf, Naciria, Naciria District, Boumerdes, Algeria",
+                "Population - 1 km": 442,
+                "Population - 5 km": 33466,
+                "Population - 10 km": 102569
+            }
+        },
+        {
+            "id": "8f3804894b2db1a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.625048271436967,
+                    34.76867007538369
+                ]
+            },
+            "properties": {
+                "id": "8f3804894b2db1a",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 500,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.007044652011245489,
+                "Height Above Nearest Drainage (m)": 94.10000610351562,
+                "Landform Type": "Peak/ridge (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.600643304109642,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 442.41308066257386,
+                "Nearest Water Type": "river",
+                "place_name": "Sidi Medjahed, B\u00e9ni Boussa\u00efd District, Tilimsen, Algeria",
+                "Population - 1 km": 715,
+                "Population - 5 km": 7167,
+                "Population - 10 km": 22088
+            }
+        },
+        {
+            "id": "8f382356b311cb3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.074797684672535,
+                    35.44519909911625
+                ]
+            },
+            "properties": {
+                "id": "8f382356b311cb3",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 123,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00698723504319787,
+                "Height Above Nearest Drainage (m)": 21.599998474121094,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 3.74365901381636,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2759.926562504703,
+                "Nearest Water Type": "river",
+                "place_name": "Hassi El Ghella, El Amria District, A\u00efn T\u00e9mouchent, 46012, Algeria",
+                "Population - 1 km": 950,
+                "Population - 5 km": 13434,
+                "Population - 10 km": 49295
+            }
+        },
+        {
+            "id": "8f3829b5cb32383",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.349519217227752,
+                    36.632282646529205
+                ]
+            },
+            "properties": {
+                "id": "8f3829b5cb32383",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 104,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.020652247592806816,
+                "Height Above Nearest Drainage (m)": 3.8000030517578125,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.2950549527555852,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 62.78131043772439,
+                "Nearest Water Type": "river",
+                "place_name": "CW 47, Sidi Serhane, Khemis El Khechna, Khemis El Khechna District, Boumerdes, 35010, Algeria",
+                "Population - 1 km": 1507,
+                "Population - 5 km": 84302,
+                "Population - 10 km": 299113
+            }
+        },
+        {
+            "id": "8f3875d2ea13b05",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.008107593801066,
+                    36.78809457099412
+                ]
+            },
+            "properties": {
+                "id": "8f3875d2ea13b05",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 107,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.02061092108488083,
+                "Height Above Nearest Drainage (m)": 16.89999771118164,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 19.207602866786633,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1126.1509103298836,
+                "Nearest Water Type": "coastline",
+                "place_name": "Route de Boulimat, Taourirt, Bejaia, Bejaia District, Bejaia, 06000, Algeria",
+                "Population - 1 km": 1001,
+                "Population - 5 km": 31351,
+                "Population - 10 km": 209015
+            }
+        },
+        {
+            "id": "8f38748a596166b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.011293911952786,
+                    36.70679349869788
+                ]
+            },
+            "properties": {
+                "id": "8f38748a596166b",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 122,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.04126504808664322,
+                "Height Above Nearest Drainage (m)": 63.50000762939453,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 6.4761581959826025,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 964.9258204923558,
+                "Nearest Water Type": "stream",
+                "place_name": "Tizi Ouzou, Tizi Ouzou District, Tizi Ouzou, 15000, Algeria",
+                "Population - 1 km": 2361,
+                "Population - 5 km": 116336,
+                "Population - 10 km": 229230
+            }
+        },
+        {
+            "id": "8f3875b9ea89465",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.752524652615914,
+                    36.77662285498725
+                ]
+            },
+            "properties": {
+                "id": "8f3875b9ea89465",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 105,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.0068712420761585236,
+                "Height Above Nearest Drainage (m)": 32.30000305175781,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 5.448087540995889,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1090.7516177745879,
+                "Nearest Water Type": "basin",
+                "place_name": "El Djarf, Jijel, Jijel District, Jijel, 18000, Algeria",
+                "Population - 1 km": 1058,
+                "Population - 5 km": 118142,
+                "Population - 10 km": 207867
+            }
+        },
+        {
+            "id": "8f38233236944ce",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.546512433790141,
+                    35.67522240143689
+                ]
+            },
+            "properties": {
+                "id": "8f38233236944ce",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 90,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.654973566532135,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 1.1996684449751205,
+                "Fine Earth Density (kg / m^3)": 164,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2163.0044296596143,
+                "Nearest Water Type": "pond",
+                "place_name": "Cit\u00e9 344 logements, Sidi Maarouf, Sidi Chami, Es Senia District, Oran, 31028, Algeria",
+                "Population - 1 km": 11538,
+                "Population - 5 km": 312009,
+                "Population - 10 km": 1092133
+            }
+        },
+        {
+            "id": "8f38631a3db5066",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.111033444851856,
+                    36.85191650175747
+                ]
+            },
+            "properties": {
+                "id": "8f38631a3db5066",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 31,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.006864618510007858,
+                "Height Above Nearest Drainage (m)": 2.299999237060547,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 2.625574745140871,
+                "Fine Earth Density (kg / m^3)": 162,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2159.8671793200524,
+                "Nearest Water Type": "river",
+                "place_name": "Berrihane, Ben M'Hidi District, El Tarf, 36027, Algeria",
+                "Population - 1 km": 144,
+                "Population - 5 km": 6749,
+                "Population - 10 km": 20853
+            }
+        },
+        {
+            "id": "8f38298a6440a96",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.651919929570152,
+                    36.47918282092614
+                ]
+            },
+            "properties": {
+                "id": "8f38298a6440a96",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 84,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.04828270524740219,
+                "Height Above Nearest Drainage (m)": 0.09999847412109375,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 1.5683700904130116,
+                "Fine Earth Density (kg / m^3)": 161,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 85.63612581205271,
+                "Nearest Water Type": "river",
+                "place_name": "Mouzaia, Mouza\u00efa District, Blida, 09200, Algeria",
+                "Population - 1 km": 2133,
+                "Population - 5 km": 80280,
+                "Population - 10 km": 206961
+            }
+        },
+        {
+            "id": "8f3823655058b0e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.581778969469003,
+                    35.205322278775604
+                ]
+            },
+            "properties": {
+                "id": "8f3823655058b0e",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 482,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.007007724605500698,
+                "Height Above Nearest Drainage (m)": 5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 1.5443656442346727,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2205.019865294927,
+                "Nearest Water Type": "river",
+                "place_name": "Boulevard 01 Novembre, Sidi Bel Abb\u00e8s, Sidi Bel Abb\u00e8s District, Sidi Bel Abb\u00e8s, 22068, Algeria",
+                "Population - 1 km": 2100,
+                "Population - 5 km": 140889,
+                "Population - 10 km": 262636
+            }
+        },
+        {
+            "id": "8f382ed83831d6a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.284560075819271,
+                    35.81499431233118
+                ]
+            },
+            "properties": {
+                "id": "8f382ed83831d6a",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 53,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.013910850510001183,
+                "Height Above Nearest Drainage (m)": 34.400001525878906,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 1.8930667695580268,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 887.8457328784857,
+                "Nearest Water Type": "coastline",
+                "place_name": "Camp 6, A\u00efn El Bia, Bethioua District, Oran, 31200, Algeria",
+                "Population - 1 km": 6799,
+                "Population - 5 km": 64036,
+                "Population - 10 km": 141562
+            }
+        }
+    ]
+}

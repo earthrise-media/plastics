@@ -1,0 +1,1505 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f6743ce168e294",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.33679828929458,
+                    10.766030439587112
+                ]
+            },
+            "properties": {
+                "id": "8f6743ce168e294",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 8,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008400345221161842,
+                "Height Above Nearest Drainage (m)": 1.9000000953674316,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.4411491665747737,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1430.6047920749595,
+                "Nearest Water Type": "coastline",
+                "place_name": "Perimetral de Tucacas, El Cuatro, Parroquia Tucacas, Municipio Silva, Falcon State, 2054, Venezuela",
+                "Population - 1 km": 881,
+                "Population - 5 km": 14317,
+                "Population - 10 km": 21581
+            }
+        },
+        {
+            "id": "8f662c9b5470c68",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.85382312866435,
+                    10.60605387833259
+                ]
+            },
+            "properties": {
+                "id": "8f662c9b5470c68",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 76,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.07564250379800797,
+                "Height Above Nearest Drainage (m)": 4.6999969482421875,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.54,
+                "Slope (degrees)": 0.693696911918406,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1012.9908714619489,
+                "Nearest Water Type": "drain",
+                "place_name": "La Concepci\u00f3n, Parroquia La Concepci\u00f3n, Municipio Jes\u00fas Enrique Lossada, Zulia State, 4032, Venezuela",
+                "Population - 1 km": 1135,
+                "Population - 5 km": 31833,
+                "Population - 10 km": 76718
+            }
+        },
+        {
+            "id": "8f67430ae150363",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.21707970289954,
+                    10.523560677562092
+                ]
+            },
+            "properties": {
+                "id": "8f67430ae150363",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 16,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008406901732087135,
+                "Height Above Nearest Drainage (m)": 20.799999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 6.382954111939154,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 544.0609681110056,
+                "Nearest Water Type": "water",
+                "place_name": "Pequiven, Moron, Parroquia Mor\u00f3n, Municipio Juan Jos\u00e9 Mora, Carabobo State, 2051, Venezuela",
+                "Population - 1 km": 641,
+                "Population - 5 km": 17948,
+                "Population - 10 km": 39624
+            }
+        },
+        {
+            "id": "8f66280d5121452",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.0038379113273,
+                    8.968879156556962
+                ]
+            },
+            "properties": {
+                "id": "8f66280d5121452",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 3,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008445389568805695,
+                "Height Above Nearest Drainage (m)": 0.8000001907348633,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.4399290345284835,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2048.0546395301594,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Regional Santa B\u00e1rbara - Encontrados, Encontrados, Parroquia Encontrados, Municipio Catatumbo, Zulia State, Venezuela",
+                "Population - 1 km": 162,
+                "Population - 5 km": 4660,
+                "Population - 10 km": 21013
+            }
+        },
+        {
+            "id": "8f675264b8d860d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.785353403878,
+                    10.632283494959546
+                ]
+            },
+            "properties": {
+                "id": "8f675264b8d860d",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 76,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008403967134654522,
+                "Height Above Nearest Drainage (m)": 10.60000228881836,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.6937089667628693,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 4556.900715868594,
+                "Nearest Water Type": "wastewater",
+                "place_name": "Parroquia La Concepci\u00f3n, Municipio Jes\u00fas Enrique Lossada, Zulia State, Venezuela",
+                "Population - 1 km": 2164,
+                "Population - 5 km": 58757,
+                "Population - 10 km": 292549
+            }
+        },
+        {
+            "id": "8f675c0d16b3331",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.12096291702315,
+                    10.042081499914708
+                ]
+            },
+            "properties": {
+                "id": "8f675c0d16b3331",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 326,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.02525852620601654,
+                "Height Above Nearest Drainage (m)": 5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 5.453379305029636,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1847.3916873888677,
+                "Nearest Water Type": "river",
+                "place_name": "La Lucha, Parroquia Pe\u00f1a, Municipio Pe\u00f1a, Yaracuy State, 3203, Venezuela",
+                "Population - 1 km": 1260,
+                "Population - 5 km": 42072,
+                "Population - 10 km": 102934
+            }
+        },
+        {
+            "id": "8f5f4d8f3984364",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -64.74462193432852,
+                    8.815204321479056
+                ]
+            },
+            "properties": {
+                "id": "8f5f4d8f3984364",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 243,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.01689780130982399,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 1.6671857561041887,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 407.5204154554779,
+                "Nearest Water Type": "lake",
+                "place_name": "El Bajo, Pariagu\u00e1n, Parroquia Pariagu\u00e1n, Municipio Francisco de Miranda, Anzoategui State, 6052, Venezuela",
+                "Population - 1 km": 640,
+                "Population - 5 km": 7598,
+                "Population - 10 km": 15113
+            }
+        },
+        {
+            "id": "8f674ecd877061e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.52809555508574,
+                    10.049667110152898
+                ]
+            },
+            "properties": {
+                "id": "8f674ecd877061e",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 560,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.04209619760513306,
+                "Height Above Nearest Drainage (m)": 19.4000244140625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 3.6635123481106953,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2288.893900564705,
+                "Nearest Water Type": "stream",
+                "place_name": "Los Tanques, Villa de Cura, Parroquia Zamora, Municipio Zamora, Aragua State, 2126, Venezuela",
+                "Population - 1 km": 2908,
+                "Population - 5 km": 42455,
+                "Population - 10 km": 99413
+            }
+        },
+        {
+            "id": "8f5f4b582a6a32d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -63.202501384290734,
+                    10.69106070413228
+                ]
+            },
+            "properties": {
+                "id": "8f5f4b582a6a32d",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 215,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.03360964357852936,
+                "Height Above Nearest Drainage (m)": 108,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 19.365612184653774,
+                "Fine Earth Density (kg / m^3)": 109,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 638.7999019774397,
+                "Nearest Water Type": "coastline",
+                "place_name": "Carretera Regional Car\u00fapano - R\u00edo Caribe, Urb. Los Chaguaramos, Valle Nazareth, Parroquia Rio Caribe, Parroquia Santa Teresa, Municipio Berm\u00fadez, Sucre State, 6164, Venezuela",
+                "Population - 1 km": 563,
+                "Population - 5 km": 28989,
+                "Population - 10 km": 112307
+            }
+        },
+        {
+            "id": "8f662c90b2482d4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.65288202128403,
+                    10.528658250509949
+                ]
+            },
+            "properties": {
+                "id": "8f662c90b2482d4",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 23,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008406773209571838,
+                "Height Above Nearest Drainage (m)": 1.3999996185302734,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.46,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1251.741796874,
+                "Nearest Water Type": "stream",
+                "place_name": "Parroquia El Bajo, Municipio San Francisco, Zulia State, Venezuela",
+                "Population - 1 km": 6283,
+                "Population - 5 km": 184308,
+                "Population - 10 km": 509493
+            }
+        },
+        {
+            "id": "8f675359086ed8d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.47980728769193,
+                    10.569737826608282
+                ]
+            },
+            "properties": {
+                "id": "8f675359086ed8d",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 45,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008405656553804874,
+                "Height Above Nearest Drainage (m)": 10,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 1.1279144687409277,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 3862.9565257400136,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Santa Rita, Parroquia Jos\u00e9 Cenovio Uribarri, Municipio Santa Rita, Zulia State, 4020, Venezuela",
+                "Population - 1 km": 1008,
+                "Population - 5 km": 26972,
+                "Population - 10 km": 60726
+            }
+        },
+        {
+            "id": "8f5f4bb030cc79d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -64.08693074000114,
+                    10.440059826303663
+                ]
+            },
+            "properties": {
+                "id": "8f5f4bb030cc79d",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 66,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.09249989688396454,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 3.0834532835395736,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 953.2005877441558,
+                "Nearest Water Type": "coastline",
+                "place_name": "Via Vertedero, El Pe\u00f1\u00f3n, Parroquia Valent\u00edn Valiente, Municipio Sucre, Sucre State, Venezuela",
+                "Population - 1 km": 2856,
+                "Population - 5 km": 53468,
+                "Population - 10 km": 191247
+            }
+        },
+        {
+            "id": "8f662b6e611b56e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.212930157039,
+                    7.641056229894545
+                ]
+            },
+            "properties": {
+                "id": "8f662b6e611b56e",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 697,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.016946915537118912,
+                "Height Above Nearest Drainage (m)": 86.9000244140625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 23.165075940609544,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 920.8936636818587,
+                "Nearest Water Type": "river",
+                "place_name": "San Josecito, Carretera San Crist\u00f3bal - La Pedrera, San Josecito, Parroquia Capital Torbes, Municipio Torbes, Tachira State, Venezuela",
+                "Population - 1 km": 2205,
+                "Population - 5 km": 54777,
+                "Population - 10 km": 142816
+            }
+        },
+        {
+            "id": "8f6676d6a8ee148",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.20720041810229,
+                    7.814718355190449
+                ]
+            },
+            "properties": {
+                "id": "8f6676d6a8ee148",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 231,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008470036089420319,
+                "Height Above Nearest Drainage (m)": 45.19999694824219,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 2.0769252851708377,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2895.786029942049,
+                "Nearest Water Type": "river",
+                "place_name": "Santa B\u00e1rbara de Barinas, Parroquia Santa Barbara, Municipio Ezequiel Zamora, Barinas State, Venezuela",
+                "Population - 1 km": 482,
+                "Population - 5 km": 11165,
+                "Population - 10 km": 16801
+            }
+        },
+        {
+            "id": "8f675264b2b570e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.78617100016623,
+                    10.622744871596868
+                ]
+            },
+            "properties": {
+                "id": "8f675264b2b570e",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 66,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.016808507964015007,
+                "Height Above Nearest Drainage (m)": 1.0999984741210938,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.49,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 4276.270455573782,
+                "Nearest Water Type": "wastewater",
+                "place_name": "Parroquia La Concepci\u00f3n, Municipio Jes\u00fas Enrique Lossada, Zulia State, Venezuela",
+                "Population - 1 km": 1844,
+                "Population - 5 km": 56541,
+                "Population - 10 km": 271324
+            }
+        },
+        {
+            "id": "8f674cced841ba9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.4999818575785,
+                    10.460219057106187
+                ]
+            },
+            "properties": {
+                "id": "8f674cced841ba9",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 435,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.01681719720363617,
+                "Height Above Nearest Drainage (m)": 41.100006103515625,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 19.535992704170738,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1571.6231755163385,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Vieja Guatire - Caucagua, El Rodeo, Parroquia Bol\u00edvar, Municipio Zamora, Miranda State, 1221, Venezuela",
+                "Population - 1 km": 6192,
+                "Population - 5 km": 96992,
+                "Population - 10 km": 231514
+            }
+        },
+        {
+            "id": "8f5f4b2a050d1a1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -63.82563483916747,
+                    10.959137054099571
+                ]
+            },
+            "properties": {
+                "id": "8f5f4b2a050d1a1",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 3,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 2.1154699325561523,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.9274099368611016,
+                "Fine Earth Density (kg / m^3)": 109,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 441.80080536638945,
+                "Nearest Water Type": "coastline",
+                "place_name": "Calle La Salobre\u00f1a, Campomar, Morro El Palmar, Parroquia Capital Porlamar, Porlamar, Parroquia Mari\u00f1o, Municipio Mari\u00f1o, Nueva Esparta State, 6301, Venezuela",
+                "Population - 1 km": 10806,
+                "Population - 5 km": 120266,
+                "Population - 10 km": 239001
+            }
+        },
+        {
+            "id": "8f662b96418d164",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.71199583415317,
+                    8.553460887259295
+                ]
+            },
+            "properties": {
+                "id": "8f662b96418d164",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 170,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01690930873155594,
+                "Height Above Nearest Drainage (m)": 26.599998474121094,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 18.571605747038575,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 223.07568548916188,
+                "Nearest Water Type": "water",
+                "place_name": "El Vig\u00eda, Parroquia R\u00f3mulo Gallegos, Municipio Alberto Adriani, Merida State, Venezuela",
+                "Population - 1 km": 329,
+                "Population - 5 km": 8977,
+                "Population - 10 km": 65864
+            }
+        },
+        {
+            "id": "8f5f4b573a75190",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -63.43381683112317,
+                    10.646695666427725
+                ]
+            },
+            "properties": {
+                "id": "8f5f4b573a75190",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 16,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.07563300430774689,
+                "Height Above Nearest Drainage (m)": 14.40000057220459,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 2.0000173459649977,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 830.4476269429485,
+                "Nearest Water Type": "coastline",
+                "place_name": "Carretera Nacional Cuman\u00e1 - Car\u00fapano, Parroquia San Jos\u00e9 de Aerocuar, Municipio Andr\u00e9s Mata, Sucre State, Venezuela",
+                "Population - 1 km": 434,
+                "Population - 5 km": 7770,
+                "Population - 10 km": 22348
+            }
+        },
+        {
+            "id": "8f674c8e81498e3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.13703166910233,
+                    10.454816992576992
+                ]
+            },
+            "properties": {
+                "id": "8f674c8e81498e3",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 39,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.00840872060507536,
+                "Height Above Nearest Drainage (m)": 29.600000381469727,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 2.87576706494446,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 3127.74544713038,
+                "Nearest Water Type": "stream",
+                "place_name": "El Pantano, Parroquia Curiepe, Municipio Bri\u00f3n, Miranda State, 1231, Venezuela",
+                "Population - 1 km": 582,
+                "Population - 5 km": 22626,
+                "Population - 10 km": 60285
+            }
+        },
+        {
+            "id": "8f675cb807595a6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.79563333220842,
+                    10.30073407263861
+                ]
+            },
+            "properties": {
+                "id": "8f675cb807595a6",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 423,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.07571464776992798,
+                "Height Above Nearest Drainage (m)": 57.0999755859375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 3.3133529490377094,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1053.8267351973145,
+                "Nearest Water Type": "river",
+                "place_name": "La Libertad, Jaime, Parroquia Cocorote, Municipio Cocorote, Yaracuy State, 3208, Venezuela",
+                "Population - 1 km": 3606,
+                "Population - 5 km": 36645,
+                "Population - 10 km": 113478
+            }
+        },
+        {
+            "id": "8f674ecb56c6d21",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.64723509529188,
+                    10.237612707374808
+                ]
+            },
+            "properties": {
+                "id": "8f674ecb56c6d21",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 435,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008414440788328648,
+                "Height Above Nearest Drainage (m)": 8.20001220703125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 2.25235325932257,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 279.189686135692,
+                "Nearest Water Type": "river",
+                "place_name": "Avenida Capitan Zafrane, Parroquia Los Tacariguas, Municipio Girardot, Aragua State, 1203, Venezuela",
+                "Population - 1 km": 0,
+                "Population - 5 km": 46165,
+                "Population - 10 km": 292435
+            }
+        },
+        {
+            "id": "8f674320cc6dca9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.85115918552081,
+                    10.213731946774693
+                ]
+            },
+            "properties": {
+                "id": "8f674320cc6dca9",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 433,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016830112785100937,
+                "Height Above Nearest Drainage (m)": 3.20001220703125,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.979151587787395,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 906.5668924786638,
+                "Nearest Water Type": "pond",
+                "place_name": "Manorca, Calle Vargas, Yagua, Parroquia Guacara, Municipio Guacara, Carabobo State, 2015, Venezuela",
+                "Population - 1 km": 5241,
+                "Population - 5 km": 124002,
+                "Population - 10 km": 392827
+            }
+        },
+        {
+            "id": "8f674ecb5650313",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.6451425425795,
+                    10.238041745577377
+                ]
+            },
+            "properties": {
+                "id": "8f674ecb5650313",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 433,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008414419367909431,
+                "Height Above Nearest Drainage (m)": 5.300018310546875,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 2.5009546331637362,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 164.3925352042086,
+                "Nearest Water Type": "river",
+                "place_name": "Parroquia Los Tacariguas, Municipio Girardot, Aragua State, 1203, Venezuela",
+                "Population - 1 km": 0,
+                "Population - 5 km": 52053,
+                "Population - 10 km": 300316
+            }
+        },
+        {
+            "id": "8f675ad54c66118",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.25754188615754,
+                    9.242929063417936
+                ]
+            },
+            "properties": {
+                "id": "8f675ad54c66118",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 1301,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008439048193395138,
+                "Height Above Nearest Drainage (m)": 74.800048828125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 7.87839375281543,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1952.8449763115652,
+                "Nearest Water Type": "river",
+                "place_name": "Parroquia Bocon\u00f3, Municipio Bocon\u00f3, Trujillo State, 3103, Venezuela",
+                "Population - 1 km": 1046,
+                "Population - 5 km": 13649,
+                "Population - 10 km": 25308
+            }
+        },
+        {
+            "id": "8f675e891db25a5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.04358204069628,
+                    10.128150799069505
+                ]
+            },
+            "properties": {
+                "id": "8f675e891db25a5",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 499,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00841726828366518,
+                "Height Above Nearest Drainage (m)": 12.20001220703125,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 2.282494798804279,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 4161.010877832072,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Lara - Zulia, Carora, Parroquia Trinidad Samuel, Municipio Torres, Lara State, 3050, Venezuela",
+                "Population - 1 km": 582,
+                "Population - 5 km": 16313,
+                "Population - 10 km": 64111
+            }
+        },
+        {
+            "id": "8f67588b61b5610",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.1729576873879,
+                    9.554718528644296
+                ]
+            },
+            "properties": {
+                "id": "8f67588b61b5610",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 172,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.4131489098072052,
+                "Height Above Nearest Drainage (m)": 6,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.0788876642939766,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 641.0237304545545,
+                "Nearest Water Type": "stream",
+                "place_name": "Callej\u00f3n La Laguna, Durigua, Parroquia P\u00e1ez, Municipio P\u00e1ez, Portuguesa State, 3301, Venezuela",
+                "Population - 1 km": 5739,
+                "Population - 5 km": 102509,
+                "Population - 10 km": 225250
+            }
+        },
+        {
+            "id": "8f674ece6c5d6b0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.50356459052036,
+                    10.166424300405156
+                ]
+            },
+            "properties": {
+                "id": "8f674ece6c5d6b0",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 447,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.3534814417362213,
+                "Height Above Nearest Drainage (m)": 1.399993896484375,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 2.2025355364065295,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1778.2088909053323,
+                "Nearest Water Type": "river",
+                "place_name": "Zona Industrial Corocito Norte, Corocito, Parroquia Jos\u00e9 \u00c1ngel Lamas, Municipio Jos\u00e9 \u00c1ngel Lamas, Aragua State, 2123, Venezuela",
+                "Population - 1 km": 6591,
+                "Population - 5 km": 105575,
+                "Population - 10 km": 514121
+            }
+        },
+        {
+            "id": "8f662cb6c6b5949",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.27281007114892,
+                    10.203616173559208
+                ]
+            },
+            "properties": {
+                "id": "8f662cb6c6b5949",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 7,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.04207660257816315,
+                "Height Above Nearest Drainage (m)": 1.8000001907348633,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 2.219440387013236,
+                "Fine Earth Density (kg / m^3)": 153,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 574.7643832866789,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Ciudad Ojeda, Parroquia Alonso de Ojeda, Municipio Lagunillas, Zulia State, 4019, Venezuela",
+                "Population - 1 km": 4613,
+                "Population - 5 km": 91937,
+                "Population - 10 km": 183378
+            }
+        },
+        {
+            "id": "8f6752283d996aa",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.69137383095588,
+                    10.734908405762996
+                ]
+            },
+            "properties": {
+                "id": "8f6752283d996aa",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 6,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016802359372377396,
+                "Height Above Nearest Drainage (m)": 4.5,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 1.6030202701272183,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 202.80002388244816,
+                "Nearest Water Type": "stream",
+                "place_name": "R-79, Parroquia Idelfonso V\u00e1squez, Santa Cruz de Mara, Parroquia Ricaurte, Municipio Mara, Zulia State, Venezuela",
+                "Population - 1 km": 6654,
+                "Population - 5 km": 213927,
+                "Population - 10 km": 892181
+            }
+        },
+        {
+            "id": "8f660d900da3843",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.95607584283765,
+                    7.547857869883554
+                ]
+            },
+            "properties": {
+                "id": "8f660d900da3843",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 334,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008475270122289658,
+                "Height Above Nearest Drainage (m)": 45.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 10.659585299225922,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 2229.9788738062484,
+                "Nearest Water Type": "river",
+                "place_name": "El Pi\u00f1al, Parroquia Fern\u00e1ndez Feo, Municipio Fern\u00e1ndez Feo, Tachira State, 5032, Venezuela",
+                "Population - 1 km": 585,
+                "Population - 5 km": 10425,
+                "Population - 10 km": 29913
+            }
+        },
+        {
+            "id": "8f674ccd086b4ee",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.62829151077432,
+                    10.4511504867309
+                ]
+            },
+            "properties": {
+                "id": "8f674ccd086b4ee",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 561,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008408835157752037,
+                "Height Above Nearest Drainage (m)": 73.70001220703125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 15.744527743859805,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1021.0153880867882,
+                "Nearest Water Type": "stream",
+                "place_name": "El Tamarindo, Guarenas, Parroquia Guarenas, Municipio Plaza, Miranda State, 1220, Venezuela",
+                "Population - 1 km": 6185,
+                "Population - 5 km": 115455,
+                "Population - 10 km": 322685
+            }
+        },
+        {
+            "id": "8f662c92d2da8f0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.61256176673423,
+                    10.603909055529101
+                ]
+            },
+            "properties": {
+                "id": "8f662c92d2da8f0",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 3,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.03361880034208298,
+                "Height Above Nearest Drainage (m)": 2.8000001907348633,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.4410290872777254,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 165.0709902430747,
+                "Nearest Water Type": "coastline",
+                "place_name": "Avenida 17, Parroquia Cristo de Aranza, Municipio Maracaibo, Zulia State, 4001, Venezuela",
+                "Population - 1 km": 13917,
+                "Population - 5 km": 288977,
+                "Population - 10 km": 1040487
+            }
+        },
+        {
+            "id": "8f5f4bb08560419",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -64.11585267715571,
+                    10.4548207395466
+                ]
+            },
+            "properties": {
+                "id": "8f5f4bb08560419",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 8,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.00840872060507536,
+                "Height Above Nearest Drainage (m)": 4.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.3143795421921912,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 87.80955676348019,
+                "Nearest Water Type": "drain",
+                "place_name": "Brisas del Golfo, Parroquia Valent\u00edn Valiente, Municipio Sucre, Sucre State, Venezuela",
+                "Population - 1 km": 8909,
+                "Population - 5 km": 114303,
+                "Population - 10 km": 258587
+            }
+        },
+        {
+            "id": "8f5f410d675e4e2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -62.88009169882409,
+                    8.256626561683852
+                ]
+            },
+            "properties": {
+                "id": "8f5f410d675e4e2",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 43,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008461005985736847,
+                "Height Above Nearest Drainage (m)": 9.600000381469727,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 2.8494083428342623,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1918.333190810275,
+                "Nearest Water Type": "river",
+                "place_name": "Avenida Norte-Sur 10, UD-525, Parcelamiento Industrial Ca\u00f1averal, Puerto Ordaz, Ciudad Guayana, Parroquia Unare, Municipio Caron\u00ed, Bolivar State, 8050, Venezuela",
+                "Population - 1 km": 737,
+                "Population - 5 km": 27922,
+                "Population - 10 km": 126309
+            }
+        },
+        {
+            "id": "8f674ec60943b53",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.34460548812937,
+                    10.206739263343398
+                ]
+            },
+            "properties": {
+                "id": "8f674ec60943b53",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 613,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.016830500215291977,
+                "Height Above Nearest Drainage (m)": 53.9000244140625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 7.943396888252356,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1374.7940062989096,
+                "Nearest Water Type": "river",
+                "place_name": "Calle La Ceiba, Barrio El Cemeterio, La Victoria, Parroquia Jos\u00e9 F\u00e9lix Ribas, Municipio Jos\u00e9 F\u00e9lix Ribas, Aragua State, 2121, Venezuela",
+                "Population - 1 km": 5774,
+                "Population - 5 km": 91227,
+                "Population - 10 km": 269009
+            }
+        },
+        {
+            "id": "8f674ecf07b3483",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.54562239006181,
+                    10.143987418144377
+                ]
+            },
+            "properties": {
+                "id": "8f674ecf07b3483",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 434,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.05891785770654678,
+                "Height Above Nearest Drainage (m)": 0.5999755859375,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.44069978626703726,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 659.4250195921815,
+                "Nearest Water Type": "drain",
+                "place_name": "R-9, Los Hornos, Las Vegas, Parroquia San Mart\u00edn de Porres, Municipio Libertador, Aragua State, 2117, Venezuela",
+                "Population - 1 km": 1499,
+                "Population - 5 km": 49610,
+                "Population - 10 km": 282607
+            }
+        },
+        {
+            "id": "8f5f4855980a853",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -63.50923534172882,
+                    9.693899092417196
+                ]
+            },
+            "properties": {
+                "id": "8f5f4855980a853",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 187,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008428198285400867,
+                "Height Above Nearest Drainage (m)": 8.399993896484375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.49,
+                "Slope (degrees)": 0.6992985722957522,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 5036.003010190424,
+                "Nearest Water Type": "river",
+                "place_name": "Potrerito, Parroquia Capital Cede\u00f1o, Municipio Cede\u00f1o, Monagas State, 6209, Venezuela",
+                "Population - 1 km": 745,
+                "Population - 5 km": 11074,
+                "Population - 10 km": 61249
+            }
+        },
+        {
+            "id": "8f662c53639dd24",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.31333789369508,
+                    10.306354492837368
+                ]
+            },
+            "properties": {
+                "id": "8f662c53639dd24",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 97,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008412636816501617,
+                "Height Above Nearest Drainage (m)": 13.299995422363281,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 1.991542534031046,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 603.5872625886547,
+                "Nearest Water Type": "stream",
+                "place_name": "Villa del Rosario, Parroquia El Rosario, Municipio Rosario de Perij\u00e1, Zulia State, Venezuela",
+                "Population - 1 km": 2376,
+                "Population - 5 km": 37412,
+                "Population - 10 km": 49784
+            }
+        },
+        {
+            "id": "8f662b4e18a3433",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.41925385391029,
+                    7.954092452760482
+                ]
+            },
+            "properties": {
+                "id": "8f662b4e18a3433",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 548,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.016934502869844437,
+                "Height Above Nearest Drainage (m)": 226.89999389648438,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 7.549383053943323,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1377.258003892005,
+                "Nearest Water Type": "pond",
+                "place_name": "Carretera Ure\u00f1a - San Pedro del R\u00edo, Ure\u00f1a, Parroquia Pedro Mar\u00eda Ure\u00f1a, Municipio Pedro Mar\u00eda Ure\u00f1a, Tachira State, 5048, Venezuela",
+                "Population - 1 km": 719,
+                "Population - 5 km": 28467,
+                "Population - 10 km": 232341
+            }
+        },
+        {
+            "id": "8f67522d318b855",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.6165112889386,
+                    10.63553861184108
+                ]
+            },
+            "properties": {
+                "id": "8f67522d318b855",
+                "Soil Clay Fraction": -1,
+                "Elevation": 3,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008403881452977657,
+                "Height Above Nearest Drainage (m)": 2.700000047683716,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": -1,
+                "Slope (degrees)": 0.4410523332428086,
+                "Fine Earth Density (kg / m^3)": -1,
+                "Soil Great Group": -1,
+                "Distance to Waterway (m)": 57.44576738400016,
+                "Nearest Water Type": "river",
+                "place_name": "Parroquia Chiquinquir\u00e1, Municipio Maracaibo, Zulia State, 4000, Venezuela",
+                "Population - 1 km": 22941,
+                "Population - 5 km": 420449,
+                "Population - 10 km": 1286509
+            }
+        },
+        {
+            "id": "8f67430f40ddac2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.16583730911897,
+                    10.479848640063935
+                ]
+            },
+            "properties": {
+                "id": "8f67430f40ddac2",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 28,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00840805470943451,
+                "Height Above Nearest Drainage (m)": 25.200000762939453,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 3.156048286075203,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1993.664940652552,
+                "Nearest Water Type": "coastline",
+                "place_name": "Avenida Principal de El Palito, Palma Sola, Parroquia Mor\u00f3n, Municipio Juan Jos\u00e9 Mora, Carabobo State, 2051, Venezuela",
+                "Population - 1 km": 1490,
+                "Population - 5 km": 26881,
+                "Population - 10 km": 60521
+            }
+        },
+        {
+            "id": "8f662da3284ca62",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.62578183836347,
+                    9.537803452775826
+                ]
+            },
+            "properties": {
+                "id": "8f662da3284ca62",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 196,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008432019501924515,
+                "Height Above Nearest Drainage (m)": 33.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 3.6377704402222855,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1165.5584601681537,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Motat\u00e1n - Agua Viva, San Miguel, Parroquia Jalisco, Municipio Motat\u00e1n, Trujillo State, Venezuela",
+                "Population - 1 km": 464,
+                "Population - 5 km": 9047,
+                "Population - 10 km": 29202
+            }
+        },
+        {
+            "id": "8f67433698e8d4a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.67475122606508,
+                    10.276907559221913
+                ]
+            },
+            "properties": {
+                "id": "8f67433698e8d4a",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 421,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.5468685030937195,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.6283839950732455,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 708.3119265783185,
+                "Nearest Water Type": "stream",
+                "place_name": "Carretera Nacional Maracay - Mariara, Alezurca, Parroquia Aguas Calientes, Municipio Diego Ibarra, Carabobo State, 2017, Venezuela",
+                "Population - 1 km": 149,
+                "Population - 5 km": 52382,
+                "Population - 10 km": 221832
+            }
+        },
+        {
+            "id": "8f67412684a351a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.78895193537582,
+                    10.490269001684185
+                ]
+            },
+            "properties": {
+                "id": "8f67412684a351a",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 1049,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008407797664403915,
+                "Height Above Nearest Drainage (m)": 130.29998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 5.6495994035915515,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1102.9810766097273,
+                "Nearest Water Type": "stream",
+                "place_name": "Sabenpe, Carretera: Petare - Santa Lucia, Petare Norte, Caracas, Parroquia La Dolorita, Municipio Sucre, Miranda State, 1073, Venezuela",
+                "Population - 1 km": 39641,
+                "Population - 5 km": 430353,
+                "Population - 10 km": 935078
+            }
+        },
+        {
+            "id": "8f6758c650e1222",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.21114417216873,
+                    9.493754319547282
+                ]
+            },
+            "properties": {
+                "id": "8f6758c650e1222",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 192,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008433072827756405,
+                "Height Above Nearest Drainage (m)": 0.79998779296875,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 0.9274099368611016,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3060.4995040381946,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Regional Acarigua - Tur\u00e9n, Parroquia Canelones, Municipio Tur\u00e9n, Parroquia P\u00e1ez, Municipio P\u00e1ez, Portuguesa State, 3301, Venezuela",
+                "Population - 1 km": 291,
+                "Population - 5 km": 18828,
+                "Population - 10 km": 146412
+            }
+        },
+        {
+            "id": "8f5f41722a5400b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -62.835123905847574,
+                    8.283034541558408
+                ]
+            },
+            "properties": {
+                "id": "8f5f41722a5400b",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 22,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.00846043974161148,
+                "Height Above Nearest Drainage (m)": 15.000000953674316,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 3.136349226211929,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1496.3959448097032,
+                "Nearest Water Type": "river",
+                "place_name": "CVG Venalum, Zona Industrial Matanzas, Puerto Ordaz, Ciudad Guayana, Parroquia Unare, Municipio Caron\u00ed, Bolivar State, 8050, Venezuela",
+                "Population - 1 km": 169,
+                "Population - 5 km": 4618,
+                "Population - 10 km": 170257
+            }
+        },
+        {
+            "id": "8f662b83075b91a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.91129268621285,
+                    8.467075199024848
+                ]
+            },
+            "properties": {
+                "id": "8f662b83075b91a",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 123,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.07610901445150375,
+                "Height Above Nearest Drainage (m)": 19.199996948242188,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 9.071932561555533,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 725.7761925732417,
+                "Nearest Water Type": "river",
+                "place_name": "Bocon\u00f3, Parroquia Bocon\u00f3, Municipio Samuel Dar\u00edo Maldonado, Tachira State, Venezuela",
+                "Population - 1 km": 140,
+                "Population - 5 km": 3435,
+                "Population - 10 km": 14489
+            }
+        },
+        {
+            "id": "8f674c42c424b44",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.6711837382964,
+                    10.280951561046344
+                ]
+            },
+            "properties": {
+                "id": "8f674c42c424b44",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 159,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00841330923140049,
+                "Height Above Nearest Drainage (m)": 7.9000091552734375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 6.190918019208464,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 672.2915529229887,
+                "Nearest Water Type": "river",
+                "place_name": "Carretera Santa Luc\u00eda - Santa Teresa del Tuy, Santa Luc\u00eda del Tuy, Municipio Paz Castillo, Miranda State, 1214, Venezuela",
+                "Population - 1 km": 3547,
+                "Population - 5 km": 103368,
+                "Population - 10 km": 235881
+            }
+        },
+        {
+            "id": "8f675e8902062c9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.0481141763383,
+                    10.125241277555444
+                ]
+            },
+            "properties": {
+                "id": "8f675e8902062c9",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 515,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.01683467999100685,
+                "Height Above Nearest Drainage (m)": 7.899993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 6.907490548708729,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 4331.519918740164,
+                "Nearest Water Type": "river",
+                "place_name": "Carora, Parroquia Trinidad Samuel, Municipio Torres, Lara State, 3050, Venezuela",
+                "Population - 1 km": 482,
+                "Population - 5 km": 16258,
+                "Population - 10 km": 64126
+            }
+        }
+    ]
+}
