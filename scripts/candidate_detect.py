@@ -65,7 +65,7 @@ def detect_blobs(source, name, pred_threshold=0.75, min_sigma=3.5, max_sigma=100
     max_val = source.read(1).max()
     for x in range(0, source.shape[0], window_size):
         for y in range(0, source.shape[1], window_size):
-            print(f"Processing row {(x // window_size) + 1} of {int(source.shape[0] / window_size) + 1}, column {(y // window_size) + 1} of {int(source.shape[1] / window_size) + 1}")
+            # print(f"Processing row {(x // window_size) + 1} of {int(source.shape[0] / window_size) + 1}, column {(y // window_size) + 1} of {int(source.shape[1] / window_size) + 1}")
             # Set min and max to analyze a subset of the image
             window = Window.from_slices((x,x + window_size), (y, y + window_size))
             window_median = (source.read(1, window=window) / max_val).astype('float')
@@ -74,7 +74,7 @@ def detect_blobs(source, name, pred_threshold=0.75, min_sigma=3.5, max_sigma=100
             window_median[mask] = 0
 
             blobs = blob_doh(window_median, min_sigma=min_sigma, max_sigma=max_sigma, threshold=area_threshold)
-            print(len(blobs), "candidates detected in window")
+            # print(len(blobs), "candidates detected in window")
             
             overlap_threshold = 0.01
             transform = source.window_transform(window)
@@ -115,7 +115,7 @@ def blob_detect(file, pred_threshold=0.75, min_sigma=3.5, max_sigma=100, area_th
 
     blobs = blob_doh(data, min_sigma=min_sigma, max_sigma=max_sigma, threshold=area_threshold)
     if len(blobs) > 0:
-        print(len(blobs), "candidate(s) detected in window")
+        # print(len(blobs), "candidate(s) detected in window")
         transform = source.transform
         for candidate in blobs:
             lon, lat = (transform * [candidate[1], candidate[0]])
@@ -146,7 +146,7 @@ def detect_blobs_tiled(source_dir, name, model_name, pred_threshold=0.75, min_si
                                             area_threshold=area_threshold, 
                                             save=save)
     
-    site_list = process_map(blob_detect_partial, file_paths)
+    site_list = process_map(blob_detect_partial, file_paths, chunksize=20)
     
     candidate_sites = []
     for tile_sites in site_list:
