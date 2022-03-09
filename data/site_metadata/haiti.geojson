@@ -1,0 +1,275 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f6724871114870",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.67164509124936,
+                    19.14902895742686
+                ]
+            },
+            "properties": {
+                "id": "8f6724871114870",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 121,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.016167283058166504,
+                "Height Above Nearest Drainage (m)": 54.10000228881836,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.48,
+                "Slope (degrees)": 5.054042179646887,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 890.4239735885081,
+                "Nearest Water Type": "canal",
+                "place_name": "Route Nationale # 1, 5e Bocozelle, Terre Noir, Commune de Saint-Marc, Arrondissement de Saint-Marc, Artibonite Department, HT-4310, Haiti",
+                "Population - 1 km": 1232,
+                "Population - 5 km": 47314,
+                "Population - 10 km": 246359
+            }
+        },
+        {
+            "id": "8f6725c0246288c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.33318950468455,
+                    18.609182602894776
+                ]
+            },
+            "properties": {
+                "id": "8f6725c0246288c",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 7,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.01621842198073864,
+                "Height Above Nearest Drainage (m)": 2.9000000953674316,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.0262224671971483,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 273.18205897465396,
+                "Nearest Water Type": "drain",
+                "place_name": "Route Boulevard venesuelien prolonger, Village Rapatrier, 1re Varreux, Commune Cit\u00e9 Soleil, Port-au-Prince, West, SARTHE, Haiti",
+                "Population - 1 km": 28080,
+                "Population - 5 km": 357651,
+                "Population - 10 km": 1858266
+            }
+        },
+        {
+            "id": "8f4c886ee13288a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.03994171686665,
+                    19.66797878571146
+                ]
+            },
+            "properties": {
+                "id": "8f4c886ee13288a",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 14,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.04029171168804169,
+                "Height Above Nearest Drainage (m)": 3.5,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.48,
+                "Slope (degrees)": 0.9848569770760208,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 247.01330666117983,
+                "Nearest Water Type": "ditch",
+                "place_name": "1re Champin, Capette, Commune Caracol, Arrondissement Trou-Du-Nord, Nord-Est Department, Haiti",
+                "Population - 1 km": 272,
+                "Population - 5 km": 21985,
+                "Population - 10 km": 103296
+            }
+        },
+        {
+            "id": "8f4c8b94154ba61",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.68404786852511,
+                    19.516183560589262
+                ]
+            },
+            "properties": {
+                "id": "8f4c8b94154ba61",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 63,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.04839437082409859,
+                "Height Above Nearest Drainage (m)": 7.700000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.831822602420538,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 530.6513800904341,
+                "Nearest Water Type": "river",
+                "place_name": "Dajab\u00f3n, Dominican Republic",
+                "Population - 1 km": 627,
+                "Population - 5 km": 38660,
+                "Population - 10 km": 124389
+            }
+        },
+        {
+            "id": "8f672628b0444ee",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.76385558610706,
+                    18.20721772420636
+                ]
+            },
+            "properties": {
+                "id": "8f672628b0444ee",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 16,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016255637630820274,
+                "Height Above Nearest Drainage (m)": 5.800000190734863,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.4488841380561862,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 432.7297850302187,
+                "Nearest Water Type": "river",
+                "place_name": "Vernet, 1re Bourdet, Carrefour Bourdet, Les Cayes, Arrondissement des Cayes, Sud Department, Haiti",
+                "Population - 1 km": 17417,
+                "Population - 5 km": 93688,
+                "Population - 10 km": 160670
+            }
+        },
+        {
+            "id": "8f4c886856f0d82",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.18570247351859,
+                    19.733909827058593
+                ]
+            },
+            "properties": {
+                "id": "8f4c886856f0d82",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 8,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.20943263173103333,
+                "Height Above Nearest Drainage (m)": 2.3000001907348633,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.3284495024414167,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 135.40596191247224,
+                "Nearest Water Type": "drain",
+                "place_name": "Baby Barber Shop, Route Nationale # 3, Balan, 3e Petite Anse, Cap-Haitien, Commune Cap-Ha\u00eftien, Arrondissement de Cap-Ha\u00eftien, D\u00e9partement du Nord, 1113, Haiti",
+                "Population - 1 km": 26857,
+                "Population - 5 km": 272115,
+                "Population - 10 km": 363315
+            }
+        },
+        {
+            "id": "8f6725c262596a5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.29610974252496,
+                    18.66109221521088
+                ]
+            },
+            "properties": {
+                "id": "8f6725c262596a5",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 12,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008106814697384834,
+                "Height Above Nearest Drainage (m)": 7.299999713897705,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.7560027838904415,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 272.56558142826896,
+                "Nearest Water Type": "canal",
+                "place_name": "1re des Varreux, Croix-des-Bouquets, Commune Croix-des-Bouquets, Arrondissement de Croix-des-Bouquets, West, Haiti",
+                "Population - 1 km": 1043,
+                "Population - 5 km": 51274,
+                "Population - 10 km": 543593
+            }
+        },
+        {
+            "id": "8f6725c72c00568",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24262680736372,
+                    18.574317527587493
+                ]
+            },
+            "properties": {
+                "id": "8f6725c72c00568",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 57,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 301.9124755859375,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.3404994935834151,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1.1370580294210209,
+                "Nearest Water Type": "river",
+                "place_name": "Marassa, 3e Petit Bois, Santo, Commune Croix-des-Bouquets, Arrondissement de Croix-des-Bouquets, West, CANTAVE2, Haiti",
+                "Population - 1 km": 16589,
+                "Population - 5 km": 423853,
+                "Population - 10 km": 1691625
+            }
+        },
+        {
+            "id": "8f6725c5518e259",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.22385143445746,
+                    18.539297399789035
+                ]
+            },
+            "properties": {
+                "id": "8f6725c5518e259",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 105,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 297.66998291015625,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.2787117103342454,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 158.92312979793869,
+                "Nearest Water Type": "river",
+                "place_name": "La Ferronay, 4e Bellevue, Commune de Tabarre, Port-au-Prince, West, HT6141, Haiti",
+                "Population - 1 km": 12778,
+                "Population - 5 km": 306905,
+                "Population - 10 km": 1217368
+            }
+        }
+    ]
+}

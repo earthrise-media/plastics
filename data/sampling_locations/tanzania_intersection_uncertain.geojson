@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 30.743708918537418, "lat": -3.5660530133880006, "name": "tanzania_v0.0.11_2019-01-01_2021-06-01mosaic-median_9" }, "geometry": { "type": "Point", "coordinates": [ 30.743708918537418, -3.566053013388001 ] } },
+{ "type": "Feature", "properties": { "lon": 37.636410565896369, "lat": -6.1709143623421205, "name": "tanzania_v0.0.11_2019-01-01_2021-06-01mosaic-median_84" }, "geometry": { "type": "Point", "coordinates": [ 37.636410565896369, -6.170914362342121 ] } },
+{ "type": "Feature", "properties": { "lon": 39.259255657244779, "lat": -6.8156452776716057, "name": "tanzania_v0.0.11_2019-01-01_2021-06-01mosaic-median_118" }, "geometry": { "type": "Point", "coordinates": [ 39.259255657244779, -6.815645277671606 ] } },
+{ "type": "Feature", "properties": { "lon": 39.220733060384148, "lat": -6.8457155404833001, "name": "tanzania_v0.0.11_2019-01-01_2021-06-01mosaic-median_141" }, "geometry": { "type": "Point", "coordinates": [ 39.220733060384148, -6.8457155404833 ] } },
+{ "type": "Feature", "properties": { "lon": 39.184900214263294, "lat": -6.8730426099997128, "name": "tanzania_v0.0.11_2019-01-01_2021-06-01mosaic-median_255" }, "geometry": { "type": "Point", "coordinates": [ 39.184900214263294, -6.873042609999713 ] } }
+]
+}

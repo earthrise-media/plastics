@@ -1,0 +1,1415 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f82dab44591170",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.964023349226584,
+                    4.935263590921929
+                ]
+            },
+            "properties": {
+                "id": "8f82dab44591170",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 26,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008516799658536911,
+                "Height Above Nearest Drainage (m)": 4.300000190734863,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 0.3103111620327117,
+                "Fine Earth Density (kg / m^3)": 113,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 903.9492233449249,
+                "Nearest Water Type": "pond",
+                "place_name": "Obio/Akpor, Rivers, Nigeria",
+                "Population - 1 km": 2320,
+                "Population - 5 km": 53180,
+                "Population - 10 km": 302104
+            }
+        },
+        {
+            "id": "8f58d2708c43688",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.364532219648487,
+                    5.034612117752056
+                ]
+            },
+            "properties": {
+                "id": "8f58d2708c43688",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 17,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.0425775945186615,
+                "Height Above Nearest Drainage (m)": 11.600000381469727,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 4.493572907012506,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1822.3320608072684,
+                "Nearest Water Type": "river",
+                "place_name": "Ikot Efanga Nkpa, Calabar Municipal, Cross River, Nigeria",
+                "Population - 1 km": 6740,
+                "Population - 5 km": 111823,
+                "Population - 10 km": 293772
+            }
+        },
+        {
+            "id": "8f82da12c40c4d9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.332796301317836,
+                    5.134615401767732
+                ]
+            },
+            "properties": {
+                "id": "8f82da12c40c4d9",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 55,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008514235727488995,
+                "Height Above Nearest Drainage (m)": 6.5,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 4.8432116692552825,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2613.635633935366,
+                "Nearest Water Type": "river",
+                "place_name": "Osisioma Ngwa, Abia, Nigeria",
+                "Population - 1 km": 16885,
+                "Population - 5 km": 406925,
+                "Population - 10 km": 1027763
+            }
+        },
+        {
+            "id": "8f5882249606d71",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.636715794649791,
+                    6.840596405880376
+                ]
+            },
+            "properties": {
+                "id": "8f5882249606d71",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 27,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008488206192851067,
+                "Height Above Nearest Drainage (m)": 2.5,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.55,
+                "Slope (degrees)": 0.8775184056706609,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Ijoko, Shagamu, Ogun, 110271, Nigeria",
+                "Population - 1 km": 11338,
+                "Population - 5 km": 108827,
+                "Population - 10 km": 250851
+            }
+        },
+        {
+            "id": "8f5882a9811d4ab",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.261152087063802,
+                    7.052666321709278
+                ]
+            },
+            "properties": {
+                "id": "8f5882a9811d4ab",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 54,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.02545345015823841,
+                "Height Above Nearest Drainage (m)": 19.200000762939453,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.63,
+                "Slope (degrees)": 2.240050447753641,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Asipa, Ewekoro, Ogun, Nigeria",
+                "Population - 1 km": 1256,
+                "Population - 5 km": 23182,
+                "Population - 10 km": 100190
+            }
+        },
+        {
+            "id": "8f588398a2618dc",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.839545097379698,
+                    7.312007657638778
+                ]
+            },
+            "properties": {
+                "id": "8f588398a2618dc",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 157,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01695943996310234,
+                "Height Above Nearest Drainage (m)": 14.899993896484375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.73,
+                "Slope (degrees)": 4.4950417297656395,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 234.3605877850254,
+                "Nearest Water Type": "stream",
+                "place_name": "Ajakanga, Oluyole, Oyo, Nigeria",
+                "Population - 1 km": 3202,
+                "Population - 5 km": 189494,
+                "Population - 10 km": 989385
+            }
+        },
+        {
+            "id": "8f82da39c79a983",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.036188454578609,
+                    5.464762717518825
+                ]
+            },
+            "properties": {
+                "id": "8f82da39c79a983",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 67,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.017019569873809814,
+                "Height Above Nearest Drainage (m)": 13.099998474121094,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 5.6873463739997545,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 272.29579211013026,
+                "Nearest Water Type": "river",
+                "place_name": "Owerri, Owerri Municipal, Imo, 460242, Nigeria",
+                "Population - 1 km": 13129,
+                "Population - 5 km": 226388,
+                "Population - 10 km": 462858
+            }
+        },
+        {
+            "id": "8f589cb60d268d9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.937061341387502,
+                    6.56432240015363
+                ]
+            },
+            "properties": {
+                "id": "8f589cb60d268d9",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 11,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008492935448884964,
+                "Height Above Nearest Drainage (m)": 1.3000001907348633,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.69,
+                "Slope (degrees)": 1.1168326580113246,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Oko Orisa, Epe, Lagos, Nigeria",
+                "Population - 1 km": 1452,
+                "Population - 5 km": 32461,
+                "Population - 10 km": 103966
+            }
+        },
+        {
+            "id": "8f58f6b8865a463",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.10728496657792,
+                    8.949789055884505
+                ]
+            },
+            "properties": {
+                "id": "8f58f6b8865a463",
+                "Soil Clay Fraction": 0.17,
+                "Elevation": 199,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.1351337730884552,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 2.2752060894932185,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1168.2432521794356,
+                "Nearest Water Type": "river",
+                "place_name": "A2, Madalla, Gwagwalada, Federal Capital Territory, 902101, Nigeria",
+                "Population - 1 km": 8495,
+                "Population - 5 km": 206836,
+                "Population - 10 km": 424390
+            }
+        },
+        {
+            "id": "8f589c951b264c9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.580012317108805,
+                    6.599415114922273
+                ]
+            },
+            "properties": {
+                "id": "8f589c951b264c9",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 20,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.025477077811956406,
+                "Height Above Nearest Drainage (m)": 6.700000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.68,
+                "Slope (degrees)": 2.48824217735619,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Ginti, Ikorodu, Lagos, Nigeria",
+                "Population - 1 km": 6287,
+                "Population - 5 km": 141046,
+                "Population - 10 km": 499735
+            }
+        },
+        {
+            "id": "8f588b05145a948",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.79902286425814,
+                    6.103317869803795
+                ]
+            },
+            "properties": {
+                "id": "8f588b05145a948",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 41,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.025501105934381485,
+                "Height Above Nearest Drainage (m)": 0.2999992370605469,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.5,
+                "Slope (degrees)": 1.7533374026297446,
+                "Fine Earth Density (kg / m^3)": 95,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1337.422623986014,
+                "Nearest Water Type": "stream",
+                "place_name": "Onitsha - Owerri Road, Onitsha, Onitsha North, Anambra, 430231, Nigeria",
+                "Population - 1 km": 16375,
+                "Population - 5 km": 415092,
+                "Population - 10 km": 1035341
+            }
+        },
+        {
+            "id": "8f82db2ea0e120b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.76584685729742,
+                    5.534788277124082
+                ]
+            },
+            "properties": {
+                "id": "8f82db2ea0e120b",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 7,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.017017580568790436,
+                "Height Above Nearest Drainage (m)": 0.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.5,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 178.06926154540477,
+                "Nearest Water Type": "stream",
+                "place_name": "White-Dove Group of Schools, Erubere Street, Ugborikoko, Warri South, Delta, Nigeria",
+                "Population - 1 km": 15964,
+                "Population - 5 km": 302388,
+                "Population - 10 km": 679690
+            }
+        },
+        {
+            "id": "8f82db2c68457ae",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.81648686966639,
+                    5.542532079448576
+                ]
+            },
+            "properties": {
+                "id": "8f82db2c68457ae",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 12,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008508691564202309,
+                "Height Above Nearest Drainage (m)": 3.6000001430511475,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.6,
+                "Slope (degrees)": 0.6938763553670754,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 957.1796064337653,
+                "Nearest Water Type": "river",
+                "place_name": "Ugbenuowhorun, Uvwie, Delta, Nigeria",
+                "Population - 1 km": 5575,
+                "Population - 5 km": 177134,
+                "Population - 10 km": 609614
+            }
+        },
+        {
+            "id": "8f82d84d588ac2e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.059751418469683,
+                    4.839921741882351
+                ]
+            },
+            "properties": {
+                "id": "8f82d84d588ac2e",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 2,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 36.29283905029297,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.58,
+                "Slope (degrees)": 1.9608542363189683,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 52.678958925981114,
+                "Nearest Water Type": "river",
+                "place_name": "Rumurolu, Obio/Akpor, Rivers, 500211, Nigeria",
+                "Population - 1 km": 11596,
+                "Population - 5 km": 250561,
+                "Population - 10 km": 965616
+            }
+        },
+        {
+            "id": "8f588a6db95e882",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.882217694359793,
+                    5.609436304273946
+                ]
+            },
+            "properties": {
+                "id": "8f588a6db95e882",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 23,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008507744409143925,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.6,
+                "Slope (degrees)": 1.314599186720841,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 2172.5062458546195,
+                "Nearest Water Type": "river",
+                "place_name": "Okpe, Delta, 332, Nigeria",
+                "Population - 1 km": 1396,
+                "Population - 5 km": 68977,
+                "Population - 10 km": 253365
+            }
+        },
+        {
+            "id": "8f82da475c61845",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.440948040089832,
+                    5.500386469720952
+                ]
+            },
+            "properties": {
+                "id": "8f82da475c61845",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 110,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008509289473295212,
+                "Height Above Nearest Drainage (m)": 30.699996948242188,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.6,
+                "Slope (degrees)": 4.162672971079305,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Umuahia South, Abia, Nigeria",
+                "Population - 1 km": 3245,
+                "Population - 5 km": 111848,
+                "Population - 10 km": 478886
+            }
+        },
+        {
+            "id": "8f58839002c31a1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.849092189709771,
+                    7.463651328889052
+                ]
+            },
+            "properties": {
+                "id": "8f58839002c31a1",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 224,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008476879447698593,
+                "Height Above Nearest Drainage (m)": 35.19999694824219,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.71,
+                "Slope (degrees)": 4.04169214808101,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 406.82608018524894,
+                "Nearest Water Type": "stream",
+                "place_name": "Ido, Oyo, Nigeria",
+                "Population - 1 km": 1227,
+                "Population - 5 km": 55501,
+                "Population - 10 km": 615942
+            }
+        },
+        {
+            "id": "8f580a4e5411664",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.518728585585752,
+                    12.013344862735226
+                ]
+            },
+            "properties": {
+                "id": "8f580a4e5411664",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 472,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.05018569156527519,
+                "Height Above Nearest Drainage (m)": 6,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 2.2115078512045594,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2.8706588794006875,
+                "Nearest Water Type": "pond",
+                "place_name": "IBB Road, Police Barrack, Fagge D2, Fagge, Kano, 78906, Nigeria",
+                "Population - 1 km": 76756,
+                "Population - 5 km": 1430499,
+                "Population - 10 km": 3327460
+            }
+        },
+        {
+            "id": "8f82db2ec742649",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.76828382759091,
+                    5.504711054957648
+                ]
+            },
+            "properties": {
+                "id": "8f82db2ec742649",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 12,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008509214036166668,
+                "Height Above Nearest Drainage (m)": 0.9000000357627869,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.48,
+                "Slope (degrees)": 1.3874773147408002,
+                "Fine Earth Density (kg / m^3)": 116,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 740.2485125560496,
+                "Nearest Water Type": "river",
+                "place_name": "Wado City, Warri South, Delta, Nigeria",
+                "Population - 1 km": 8062,
+                "Population - 5 km": 247393,
+                "Population - 10 km": 634118
+            }
+        },
+        {
+            "id": "8f589cb103b478d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.788996345632618,
+                    6.470683891369365
+                ]
+            },
+            "properties": {
+                "id": "8f589cb103b478d",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 9,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 2.9050934314727783,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.7,
+                "Slope (degrees)": 0.8771856713369123,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1892.7602956990397,
+                "Nearest Water Type": "lake",
+                "place_name": "Igando Oloja, Ibeju Lekki, Lagos, 105101, Nigeria",
+                "Population - 1 km": 1555,
+                "Population - 5 km": 25972,
+                "Population - 10 km": 69354
+            }
+        },
+        {
+            "id": "8f82da862240b88",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.24638638797223,
+                    4.912090152753702
+                ]
+            },
+            "properties": {
+                "id": "8f82da862240b88",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 25,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.01703418418765068,
+                "Height Above Nearest Drainage (m)": 5.500000953674316,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Quaibo Obuyo, Ukwa West, Abia, Nigeria",
+                "Population - 1 km": 1016,
+                "Population - 5 km": 31109,
+                "Population - 10 km": 144492
+            }
+        },
+        {
+            "id": "8f58aa58509a393",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.445588778757403,
+                    8.465701289881476
+                ]
+            },
+            "properties": {
+                "id": "8f58aa58509a393",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 303,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.025369718670845032,
+                "Height Above Nearest Drainage (m)": 12.800018310546875,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.62,
+                "Slope (degrees)": 1.6802367594807868,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1393.4048791581408,
+                "Nearest Water Type": "river",
+                "place_name": "Tope, Asa, Kwara, Nigeria",
+                "Population - 1 km": 169,
+                "Population - 5 km": 8201,
+                "Population - 10 km": 101065
+            }
+        },
+        {
+            "id": "8f588101ad6431c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.443324844930899,
+                    7.775567883938537
+                ]
+            },
+            "properties": {
+                "id": "8f588101ad6431c",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 309,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.05082487314939499,
+                "Height Above Nearest Drainage (m)": 18.899993896484375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 2.426442039656158,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1950.9124269712213,
+                "Nearest Water Type": "water",
+                "place_name": "Egbedi, Egbedore, Osun, 232121, Nigeria",
+                "Population - 1 km": 1363,
+                "Population - 5 km": 50199,
+                "Population - 10 km": 335503
+            }
+        },
+        {
+            "id": "8f82db2e8513a6e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.766928474438346,
+                    5.51969632673544
+                ]
+            },
+            "properties": {
+                "id": "8f82db2e8513a6e",
+                "Soil Clay Fraction": -1,
+                "Elevation": 8,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008509013801813126,
+                "Height Above Nearest Drainage (m)": 5.5,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": -1,
+                "Slope (degrees)": 0.6938544254282101,
+                "Fine Earth Density (kg / m^3)": -1,
+                "Soil Great Group": -1,
+                "Distance to Waterway (m)": 144.6840177594234,
+                "Nearest Water Type": "river",
+                "place_name": "Wado City, Warri South, Delta, Nigeria",
+                "Population - 1 km": 17267,
+                "Population - 5 km": 278867,
+                "Population - 10 km": 666523
+            }
+        },
+        {
+            "id": "8f82d84c8042c9e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.971849747964787,
+                    4.845473673954386
+                ]
+            },
+            "properties": {
+                "id": "8f82d84c8042c9e",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 13,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.32368096709251404,
+                "Height Above Nearest Drainage (m)": 0.39999961853027344,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.62,
+                "Slope (degrees)": 1.9608694570991294,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1416.0124409048826,
+                "Nearest Water Type": "stream",
+                "place_name": "Mgbu-Oba, Obio/Akpor, Rivers, 500102, Nigeria",
+                "Population - 1 km": 8370,
+                "Population - 5 km": 198115,
+                "Population - 10 km": 835504
+            }
+        },
+        {
+            "id": "8f589c92a322340",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.484988862780644,
+                    6.642691281139093
+                ]
+            },
+            "properties": {
+                "id": "8f589c92a322340",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 7,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.08491601049900055,
+                "Height Above Nearest Drainage (m)": 0.20000028610229492,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.55,
+                "Slope (degrees)": 1.1197842187865374,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 420.1795216619267,
+                "Nearest Water Type": "stream",
+                "place_name": "Ikorodu, Lagos, 104213, Nigeria",
+                "Population - 1 km": 12099,
+                "Population - 5 km": 246214,
+                "Population - 10 km": 748810
+            }
+        },
+        {
+            "id": "8f58d6812176c49",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.541701812008993,
+                    6.454811117030798
+                ]
+            },
+            "properties": {
+                "id": "8f58d6812176c49",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 145,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.06795765459537506,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 0.4386116292444039,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "New Haven Layout Extension, Enugu, Enugu North, Enugu, P. O. BOX 532, Nigeria",
+                "Population - 1 km": 11758,
+                "Population - 5 km": 244010,
+                "Population - 10 km": 746897
+            }
+        },
+        {
+            "id": "8f5882a0b0a9a34",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.365936868205021,
+                    7.187498176869638
+                ]
+            },
+            "properties": {
+                "id": "8f5882a0b0a9a34",
+                "Soil Clay Fraction": 0.14,
+                "Elevation": 92,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008482021279633045,
+                "Height Above Nearest Drainage (m)": 14.700004577636719,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.7,
+                "Slope (degrees)": 3.3296905007303854,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 2582.712216927952,
+                "Nearest Water Type": "stream",
+                "place_name": "Abeokuta, Abeokuta South, Ogun, Nigeria",
+                "Population - 1 km": 9553,
+                "Population - 5 km": 242995,
+                "Population - 10 km": 489026
+            }
+        },
+        {
+            "id": "8f588225905340d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.601093148843671,
+                    6.812259664888064
+                ]
+            },
+            "properties": {
+                "id": "8f588225905340d",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 61,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008488699793815613,
+                "Height Above Nearest Drainage (m)": 20.60000228881836,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.69,
+                "Slope (degrees)": 2.9199531581036196,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Sagamu Road, Konigbagbe, Shagamu, Ogun, 121102, Nigeria",
+                "Population - 1 km": 3305,
+                "Population - 5 km": 56972,
+                "Population - 10 km": 185952
+            }
+        },
+        {
+            "id": "8f588a8e48edab0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.600786906497365,
+                    6.463246727508925
+                ]
+            },
+            "properties": {
+                "id": "8f588a8e48edab0",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 101,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.23784781992435455,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.72,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Akure-Owo Express Road, Obazuwa, Ovia North-East, Edo, Nigeria",
+                "Population - 1 km": 2046,
+                "Population - 5 km": 30607,
+                "Population - 10 km": 191436
+            }
+        },
+        {
+            "id": "8f588b0416104f5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.840858233880038,
+                    6.135485022256054
+                ]
+            },
+            "properties": {
+                "id": "8f588b0416104f5",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 85,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008499864488840103,
+                "Height Above Nearest Drainage (m)": 16.800003051757812,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 3.8197733727672554,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2378.2884191421576,
+                "Nearest Water Type": "stream",
+                "place_name": "Nkpor, Idemili North, Anambra, 430231, Nigeria",
+                "Population - 1 km": 7329,
+                "Population - 5 km": 338178,
+                "Population - 10 km": 1009382
+            }
+        },
+        {
+            "id": "8f58d2062a03c2e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.42156798470108,
+                    5.327544450076286
+                ]
+            },
+            "properties": {
+                "id": "8f58d2062a03c2e",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 198,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008511671796441078,
+                "Height Above Nearest Drainage (m)": 43.40000915527344,
+                "Landform Type": "Peak/ridge (warm)",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 8.977176298980195,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Etikumi, Akamkpa, Cross River, Nigeria",
+                "Population - 1 km": 289,
+                "Population - 5 km": 6219,
+                "Population - 10 km": 28148
+            }
+        },
+        {
+            "id": "8f588b0702e3700",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.774024060312778,
+                    6.156938538133304
+                ]
+            },
+            "properties": {
+                "id": "8f588b0702e3700",
+                "Soil Clay Fraction": -1,
+                "Elevation": 18,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008499538525938988,
+                "Height Above Nearest Drainage (m)": 7.5,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": -1,
+                "Slope (degrees)": 1.8904994713615653,
+                "Fine Earth Density (kg / m^3)": -1,
+                "Soil Great Group": -1,
+                "Distance to Waterway (m)": 207.9455413685114,
+                "Nearest Water Type": "river",
+                "place_name": "Onitsha, Onitsha North, Anambra, 430231, Nigeria",
+                "Population - 1 km": 5439,
+                "Population - 5 km": 202889,
+                "Population - 10 km": 774407
+            }
+        },
+        {
+            "id": "8f82d8489b61199",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.091709350881955,
+                    4.835498186265963
+                ]
+            },
+            "properties": {
+                "id": "8f82d8489b61199",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 21,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.07666215300559998,
+                "Height Above Nearest Drainage (m)": 0.6999998092651367,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 1.3833420906727463,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1674.912261602651,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Akpajo, Eleme, Rivers, Nigeria",
+                "Population - 1 km": 6527,
+                "Population - 5 km": 167301,
+                "Population - 10 km": 774207
+            }
+        },
+        {
+            "id": "8f82da88a2a0a60",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.387602579408071,
+                    5.098692404426578
+                ]
+            },
+            "properties": {
+                "id": "8f82da88a2a0a60",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 52,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.017029445618391037,
+                "Height Above Nearest Drainage (m)": 25.299999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 5.819709740809197,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 201.69190700842773,
+                "Nearest Water Type": "river",
+                "place_name": "Aba North, Abia, Nigeria",
+                "Population - 1 km": 12182,
+                "Population - 5 km": 465989,
+                "Population - 10 km": 992310
+            }
+        },
+        {
+            "id": "8f82db2d1394a0c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.80963415800099,
+                    5.586751088746308
+                ]
+            },
+            "properties": {
+                "id": "8f82db2d1394a0c",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 8,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.025524182245135307,
+                "Height Above Nearest Drainage (m)": 0.19999980926513672,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.55,
+                "Slope (degrees)": 2.4999436585054573,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 85.48673158454777,
+                "Nearest Water Type": "water",
+                "place_name": "Okuokoko, Uvwie, Delta, Nigeria",
+                "Population - 1 km": 6074,
+                "Population - 5 km": 142404,
+                "Population - 10 km": 488829
+            }
+        },
+        {
+            "id": "8f58d258d4cd66b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.936323496391545,
+                    5.047436386285494
+                ]
+            },
+            "properties": {
+                "id": "8f58d258d4cd66b",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 34,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0085153728723526,
+                "Height Above Nearest Drainage (m)": 30.30000114440918,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 5.865939684129113,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Nduetong, Uyo, Akwa Ibom, Nigeria",
+                "Population - 1 km": 8323,
+                "Population - 5 km": 218389,
+                "Population - 10 km": 540801
+            }
+        },
+        {
+            "id": "8f588224b235119",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.633586741458411,
+                    6.82897333788274
+                ]
+            },
+            "properties": {
+                "id": "8f588224b235119",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 21,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.11034898459911346,
+                "Height Above Nearest Drainage (m)": 3.6999988555908203,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 0.9274099368650546,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Sagamu Road, Ijoko, Shagamu, Ogun, 110271, Nigeria",
+                "Population - 1 km": 10166,
+                "Population - 5 km": 106517,
+                "Population - 10 km": 219393
+            }
+        },
+        {
+            "id": "8f58f6a6021a792",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.339278294931075,
+                    9.02844549266579
+                ]
+            },
+            "properties": {
+                "id": "8f58f6a6021a792",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 399,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.00844404473900795,
+                "Height Above Nearest Drainage (m)": 28.29998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.59,
+                "Slope (degrees)": 1.9885432819665156,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1242.446100501353,
+                "Nearest Water Type": "river",
+                "place_name": "Municipal Area Council, Federal Capital Territory, Nigeria",
+                "Population - 1 km": 3121,
+                "Population - 5 km": 105674,
+                "Population - 10 km": 578016
+            }
+        },
+        {
+            "id": "8f588234a8ea8f6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.519595222342328,
+                    6.95530481592401
+                ]
+            },
+            "properties": {
+                "id": "8f588234a8ea8f6",
+                "Soil Clay Fraction": 0.16,
+                "Elevation": 82,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 24.69313621520996,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.74,
+                "Slope (degrees)": 6.790347376005297,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Ariwo, Obafemi Owode, Ogun, Nigeria",
+                "Population - 1 km": 1296,
+                "Population - 5 km": 19983,
+                "Population - 10 km": 55968
+            }
+        },
+        {
+            "id": "8f588eb89133289",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.240190655439122,
+                    7.219764043698029
+                ]
+            },
+            "properties": {
+                "id": "8f588eb89133289",
+                "Soil Clay Fraction": 0.14,
+                "Elevation": 353,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008481419645249844,
+                "Height Above Nearest Drainage (m)": 22.300018310546875,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.71,
+                "Slope (degrees)": 2.421130257372143,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 3271.7235879476557,
+                "Nearest Water Type": "water",
+                "place_name": "Akure North, Ondo, 340223, Nigeria",
+                "Population - 1 km": 1275,
+                "Population - 5 km": 86076,
+                "Population - 10 km": 366250
+            }
+        },
+        {
+            "id": "8f82d84d63b0469",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.082771963003947,
+                    4.862942286416615
+                ]
+            },
+            "properties": {
+                "id": "8f82d84d63b0469",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 18,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00851769745349884,
+                "Height Above Nearest Drainage (m)": 1.1000003814697266,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 1.9552707421038193,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1114.916004099799,
+                "Nearest Water Type": "pond",
+                "place_name": "Enugu - Port Harcourt Expressway, Iriebe, Obio/Akpor, Rivers, P.O.BOX 7242, Nigeria",
+                "Population - 1 km": 5784,
+                "Population - 5 km": 156665,
+                "Population - 10 km": 666265
+            }
+        },
+        {
+            "id": "8f588a8dc292590",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.638224533175147,
+                    6.347910133569108
+                ]
+            },
+            "properties": {
+                "id": "8f588a8dc292590",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 74,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.7222051620483398,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 3.6169918407738684,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 29.834353789796054,
+                "Nearest Water Type": "stream",
+                "place_name": "Benin City, Oredo, Edo, 300241, Nigeria",
+                "Population - 1 km": 9127,
+                "Population - 5 km": 371299,
+                "Population - 10 km": 953102
+            }
+        },
+        {
+            "id": "8f588b3806d642c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.90687095173373,
+                    6.012197084367163
+                ]
+            },
+            "properties": {
+                "id": "8f588b3806d642c",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 113,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.059512145817279816,
+                "Height Above Nearest Drainage (m)": 9.900001525878906,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 3.056076075230267,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1838.5747090619711,
+                "Nearest Water Type": "stream",
+                "place_name": "Nnewi, Nnewi North, Anambra, +234046, Nigeria",
+                "Population - 1 km": 13424,
+                "Population - 5 km": 272154,
+                "Population - 10 km": 892176
+            }
+        },
+        {
+            "id": "8f588abb06e512c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.723936115193658,
+                    6.397101763955281
+                ]
+            },
+            "properties": {
+                "id": "8f588abb06e512c",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 109,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008495685644447803,
+                "Height Above Nearest Drainage (m)": 2.9000015258789062,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.74,
+                "Slope (degrees)": 0.6221769152584866,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Benin City Bypass, Edopa, Uhunmwonde, Edo, Nigeria",
+                "Population - 1 km": 1493,
+                "Population - 5 km": 24535,
+                "Population - 10 km": 122653
+            }
+        },
+        {
+            "id": "8f5891b1bacc229",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.87043911761398,
+                    6.437663846232713
+                ]
+            },
+            "properties": {
+                "id": "8f5891b1bacc229",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 9,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008495031856000423,
+                "Height Above Nearest Drainage (m)": 3,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 1.5517242112207699,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 4923.681541215652,
+                "Nearest Water Type": "coastline",
+                "place_name": "Badagry, Lagos, Nigeria",
+                "Population - 1 km": 2585,
+                "Population - 5 km": 51374,
+                "Population - 10 km": 143252
+            }
+        },
+        {
+            "id": "8f588b020784875",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.655763258008257,
+                    6.189372061646917
+                ]
+            },
+            "properties": {
+                "id": "8f588b020784875",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 87,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.025497041642665863,
+                "Height Above Nearest Drainage (m)": 38.10000228881836,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.73,
+                "Slope (degrees)": 4.812231112341588,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 551.0542395815669,
+                "Nearest Water Type": "stream",
+                "place_name": "Ughoru, Oshimili North, Delta, 320242, Nigeria",
+                "Population - 1 km": 1523,
+                "Population - 5 km": 59700,
+                "Population - 10 km": 199854
+            }
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 9.5965716862968691, "lat": 4.1123974988815313, "name": "cameroon_v0.0.11_2019-01-01_2021-06-01mosaic-median_101" }, "geometry": { "type": "Point", "coordinates": [ 9.596571686296869, 4.112397498881531 ] } }
+]
+}

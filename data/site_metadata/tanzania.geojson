@@ -1,0 +1,305 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f96921824564b2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    36.672152282705284,
+                    -3.426920001914332
+                ]
+            },
+            "properties": {
+                "id": "8f96921824564b2",
+                "Soil Clay Fraction": 0.43,
+                "Elevation": 1278,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.025598663836717606,
+                "Height Above Nearest Drainage (m)": 10.7000732421875,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 1.1151793844380684,
+                "Fine Earth Density (kg / m^3)": 116,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 640.1409407978659,
+                "Nearest Water Type": "river",
+                "place_name": "Sokon I Ward, Arusha Municipal, Arusha, Northern Zone, 23114, Tanzania",
+                "Population - 1 km": 8025,
+                "Population - 5 km": 197458,
+                "Population - 10 km": 570801
+            }
+        },
+        {
+            "id": "8f7b4ea6dc66b0d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.345280135887045,
+                    -5.88020375125989
+                ]
+            },
+            "properties": {
+                "id": "8f7b4ea6dc66b0d",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 23,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.025511298328638077,
+                "Height Above Nearest Drainage (m)": 2.1000003814697266,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.69,
+                "Slope (degrees)": 2.774780929946041,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 925.6296124778539,
+                "Nearest Water Type": "coastline",
+                "place_name": "Kaskazini A, Zanzibar North, Zanzibar, Tanzania",
+                "Population - 1 km": 942,
+                "Population - 5 km": 11796,
+                "Population - 10 km": 70671
+            }
+        },
+        {
+            "id": "8f7b4c84258d18b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.24417424714053,
+                    -6.920352971395189
+                ]
+            },
+            "properties": {
+                "id": "8f7b4c84258d18b",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 67,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.025460436940193176,
+                "Height Above Nearest Drainage (m)": 11.799999237060547,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.63,
+                "Slope (degrees)": 6.646586676204974,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 744.2930644080309,
+                "Nearest Water Type": "stream",
+                "place_name": "Temeke MC, Dar es Salaam, Coastal Zone, 17503, Tanzania",
+                "Population - 1 km": 39585,
+                "Population - 5 km": 881960,
+                "Population - 10 km": 2488877
+            }
+        },
+        {
+            "id": "8f7a653aaa58c96",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.347868886774485,
+                    -3.366854148486035
+                ]
+            },
+            "properties": {
+                "id": "8f7a653aaa58c96",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 776,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 3.6694209575653076,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.6915166053834938,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 85.17368594482802,
+                "Nearest Water Type": "pond",
+                "place_name": "Kalimani Street, Moshi Urban, Kilimanjaro, Northern Zone, 25107, Tanzania",
+                "Population - 1 km": 20110,
+                "Population - 5 km": 201327,
+                "Population - 10 km": 313430
+            }
+        },
+        {
+            "id": "8f7b4c849a68385",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.13060533424214,
+                    -6.929309726201535
+                ]
+            },
+            "properties": {
+                "id": "8f7b4c849a68385",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 75,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008486664853990078,
+                "Height Above Nearest Drainage (m)": 5.899993896484375,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 1.3843931917596715,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 907.357844989265,
+                "Nearest Water Type": "drain",
+                "place_name": "Pugu, Ilala Municipal, Dar es Salaam, Coastal Zone, P.O.BOX 76103, Tanzania",
+                "Population - 1 km": 10863,
+                "Population - 5 km": 188063,
+                "Population - 10 km": 715310
+            }
+        },
+        {
+            "id": "8f7b4c16e934cab",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.207550895211334,
+                    -6.714190021089699
+                ]
+            },
+            "properties": {
+                "id": "8f7b4c16e934cab",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 44,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.05943258851766586,
+                "Height Above Nearest Drainage (m)": 0.1999969482421875,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 1.9559170823730538,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 86.83221352653361,
+                "Nearest Water Type": "drain",
+                "place_name": "CCM Street, Mbezi Juu, Kinondoni Municipal, Dar es Salaam, Coastal Zone, 14128, Tanzania",
+                "Population - 1 km": 20518,
+                "Population - 5 km": 252194,
+                "Population - 10 km": 1094944
+            }
+        },
+        {
+            "id": "8f96920a43b6d8c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    36.59463083966705,
+                    -3.387695181460501
+                ]
+            },
+            "properties": {
+                "id": "8f96920a43b6d8c",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 1375,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.05119922012090683,
+                "Height Above Nearest Drainage (m)": 5.0999755859375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.6648308384500738,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2109.718004290892,
+                "Nearest Water Type": "stream",
+                "place_name": "Arusha, Arusha Municipal, Arusha, Northern Zone, 10086, Tanzania",
+                "Population - 1 km": 1767,
+                "Population - 5 km": 28017,
+                "Population - 10 km": 336848
+            }
+        },
+        {
+            "id": "8f7b4c8e348c90e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.314080985410854,
+                    -6.838617969129176
+                ]
+            },
+            "properties": {
+                "id": "8f7b4c8e348c90e",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 9,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.016976501792669296,
+                "Height Above Nearest Drainage (m)": 0.8000001907348633,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 1.5868889495678535,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 335.2435766547114,
+                "Nearest Water Type": "drain",
+                "place_name": "Tungi, Kigamboni Municipal, Dar es Salaam, Coastal Zone, 3918, Tanzania",
+                "Population - 1 km": 18339,
+                "Population - 5 km": 369118,
+                "Population - 10 km": 2515115
+            }
+        },
+        {
+            "id": "8f979276d94ad50",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    40.20512194029895,
+                    -10.324194972357002
+                ]
+            },
+            "properties": {
+                "id": "8f979276d94ad50",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 59,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008412178605794907,
+                "Height Above Nearest Drainage (m)": 11.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.72,
+                "Slope (degrees)": 6.145626699448799,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2127.7158178616264,
+                "Nearest Water Type": "pond",
+                "place_name": "Mtwara, Mtwara Municipal, Mtwara, Coastal Zone, Tanzania",
+                "Population - 1 km": 543,
+                "Population - 5 km": 47915,
+                "Population - 10 km": 112182
+            }
+        },
+        {
+            "id": "8f7b4c8424c9666",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.238830457414885,
+                    -6.916747823828941
+                ]
+            },
+            "properties": {
+                "id": "8f7b4c8424c9666",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 61,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.067894846200943,
+                "Height Above Nearest Drainage (m)": 13.400001525878906,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.69,
+                "Slope (degrees)": 3.410994597034078,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 544.2188587216366,
+                "Nearest Water Type": "stream",
+                "place_name": "Temeke MC, Dar es Salaam, Coastal Zone, 17503, Tanzania",
+                "Population - 1 km": 24878,
+                "Population - 5 km": 913997,
+                "Population - 10 km": 2621287
+            }
+        }
+    ]
+}
