@@ -1,0 +1,125 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f82d2bae0e5249",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.588715153077372,
+                    4.125112640421931
+                ]
+            },
+            "properties": {
+                "id": "8f82d2bae0e5249",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 34,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008526159450411797,
+                "Height Above Nearest Drainage (m)": 29.399999618530273,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.6,
+                "Slope (degrees)": 1.1165695518828582,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 411.88505325685037,
+                "Nearest Water Type": "drain",
+                "place_name": "Bakoko, Dibombari, Moungo, Littoral, 5405 DLA, Cameroon",
+                "Population - 1 km": 2243,
+                "Population - 5 km": 155828,
+                "Population - 10 km": 588954
+            }
+        },
+        {
+            "id": "8f82d280d143a6a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.749886453756467,
+                    4.02707095100844
+                ]
+            },
+            "properties": {
+                "id": "8f82d280d143a6a",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 32,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.008527177385985851,
+                "Height Above Nearest Drainage (m)": 12.30000114440918,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.55,
+                "Slope (degrees)": 4.637645021081037,
+                "Fine Earth Density (kg / m^3)": 112,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 164.0614519106533,
+                "Nearest Water Type": "drain",
+                "place_name": "Zone Industrielle de Bassa, Ndogmbe, Douala III, Communaut\u00e9 urbaine de Douala, Wouri, Littoral, 2362 DLA, Cameroon",
+                "Population - 1 km": 31850,
+                "Population - 5 km": 740421,
+                "Population - 10 km": 2027673
+            }
+        },
+        {
+            "id": "8f82d280e8e3d08",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.784436208237095,
+                    4.040480100507696
+                ]
+            },
+            "properties": {
+                "id": "8f82d280e8e3d08",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 15,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008527030237019062,
+                "Height Above Nearest Drainage (m)": 13.40000057220459,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 2.7802885155287553,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 467.8671695078104,
+                "Nearest Water Type": "stream",
+                "place_name": "Pindo, Douala III, Communaut\u00e9 urbaine de Douala, Wouri, Littoral, 9137 DLA, Cameroon",
+                "Population - 1 km": 28619,
+                "Population - 5 km": 676431,
+                "Population - 10 km": 1895503
+            }
+        },
+        {
+            "id": "8f58db4d98ae408",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.57261519176545,
+                    3.927561970315165
+                ]
+            },
+            "properties": {
+                "id": "8f58db4d98ae408",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 687,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.017056357115507126,
+                "Height Above Nearest Drainage (m)": 17.0999755859375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 1.3830048886370836,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 445.3218923855241,
+                "Nearest Water Type": "water",
+                "place_name": "Soa, M\u00e9fou-et-Afamba, Centre, 4362, Cameroon",
+                "Population - 1 km": 2060,
+                "Population - 5 km": 45846,
+                "Population - 10 km": 851936
+            }
+        }
+    ]
+}

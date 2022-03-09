@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": -72.67164509124936, "lat": 19.149028957426861, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_55" }, "geometry": { "type": "Point", "coordinates": [ -72.67164509124936, 19.149028957426861 ] } },
+{ "type": "Feature", "properties": { "lon": -72.333189504684555, "lat": 18.609182602894776, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_78" }, "geometry": { "type": "Point", "coordinates": [ -72.333189504684555, 18.609182602894776 ] } },
+{ "type": "Feature", "properties": { "lon": -72.03994171686665, "lat": 19.667978785711458, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_119" }, "geometry": { "type": "Point", "coordinates": [ -72.03994171686665, 19.667978785711458 ] } },
+{ "type": "Feature", "properties": { "lon": -71.684047868525113, "lat": 19.516183560589262, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_186" }, "geometry": { "type": "Point", "coordinates": [ -71.684047868525113, 19.516183560589262 ] } },
+{ "type": "Feature", "properties": { "lon": -73.763855586107056, "lat": 18.207217724206359, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_247" }, "geometry": { "type": "Point", "coordinates": [ -73.763855586107056, 18.207217724206359 ] } },
+{ "type": "Feature", "properties": { "lon": -72.185702473518589, "lat": 19.733909827058593, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_354" }, "geometry": { "type": "Point", "coordinates": [ -72.185702473518589, 19.733909827058593 ] } },
+{ "type": "Feature", "properties": { "lon": -72.296109742524962, "lat": 18.661092215210878, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_410" }, "geometry": { "type": "Point", "coordinates": [ -72.296109742524962, 18.661092215210878 ] } },
+{ "type": "Feature", "properties": { "lon": -72.24321607839596, "lat": 18.576409115976663, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_504" }, "geometry": { "type": "Point", "coordinates": [ -72.24262680736372, 18.574317527587493 ] } },
+{ "type": "Feature", "properties": { "lon": -72.223851434457458, "lat": 18.539297399789035, "name": "haiti_v0.0.11_2019-01-01_2021-06-01mosaic-median_549" }, "geometry": { "type": "Point", "coordinates": [ -72.223851434457458, 18.539297399789035 ] } }
+]
+}

@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 5.7037902450439226, "lat": 6.373793985934511, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_28" }, "geometry": { "type": "Point", "coordinates": [ 5.703790245043923, 6.373793985934511 ] } },
+{ "type": "Feature", "properties": { "lon": 5.7492713745495401, "lat": 5.5083943384630558, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_83" }, "geometry": { "type": "Point", "coordinates": [ 5.74927137454954, 5.508394338463056 ] } },
+{ "type": "Feature", "properties": { "lon": 3.5925011591947218, "lat": 6.8921320492489855, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_92" }, "geometry": { "type": "Point", "coordinates": [ 3.592501159194722, 6.892132049248985 ] } },
+{ "type": "Feature", "properties": { "lon": 7.389047510437587, "lat": 5.1309324280226578, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_130" }, "geometry": { "type": "Point", "coordinates": [ 7.389047510437587, 5.130932428022658 ] } },
+{ "type": "Feature", "properties": { "lon": 4.0385370806630512, "lat": 6.4500655077847142, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_220" }, "geometry": { "type": "Point", "coordinates": [ 4.038537080663051, 6.450065507784714 ] } },
+{ "type": "Feature", "properties": { "lon": 8.5278220900148618, "lat": 5.0730376897806977, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_430" }, "geometry": { "type": "Point", "coordinates": [ 8.527822090014862, 5.073037689780698 ] } },
+{ "type": "Feature", "properties": { "lon": 5.7100574471891266, "lat": 5.5131065092922764, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_431" }, "geometry": { "type": "Point", "coordinates": [ 5.710057447189127, 5.513106509292276 ] } },
+{ "type": "Feature", "properties": { "lon": 8.2551530354060176, "lat": 4.8000805433704654, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_626" }, "geometry": { "type": "Point", "coordinates": [ 8.255153035406018, 4.800080543370465 ] } },
+{ "type": "Feature", "properties": { "lon": 7.0332128096932722, "lat": 5.4849905501030118, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_714" }, "geometry": { "type": "Point", "coordinates": [ 7.033212809693272, 5.484990550103012 ] } },
+{ "type": "Feature", "properties": { "lon": 3.563910658466575, "lat": 6.6479010083617984, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_777" }, "geometry": { "type": "Point", "coordinates": [ 3.563910658466575, 6.647901008361798 ] } },
+{ "type": "Feature", "properties": { "lon": 8.5354331969089081, "lat": 5.0722698036931533, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_787" }, "geometry": { "type": "Point", "coordinates": [ 8.535433196908908, 5.072269803693153 ] } },
+{ "type": "Feature", "properties": { "lon": 3.9760630493209264, "lat": 6.4659549339758779, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_806" }, "geometry": { "type": "Point", "coordinates": [ 3.976063049320926, 6.465954933975878 ] } },
+{ "type": "Feature", "properties": { "lon": 3.5573071692481322, "lat": 6.5898264867420684, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_874" }, "geometry": { "type": "Point", "coordinates": [ 3.557307169248132, 6.589826486742068 ] } },
+{ "type": "Feature", "properties": { "lon": 3.800388580525766, "lat": 6.6843872680827348, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_941" }, "geometry": { "type": "Point", "coordinates": [ 3.800388580525766, 6.684387268082735 ] } },
+{ "type": "Feature", "properties": { "lon": 3.2075232688579183, "lat": 7.5995295714404918, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_1001" }, "geometry": { "type": "Point", "coordinates": [ 3.207523268857918, 7.599529571440492 ] } },
+{ "type": "Feature", "properties": { "lon": 7.0155288955412605, "lat": 6.7297777928924347, "name": "nigeria_v0.0.11_2019-01-01_2021-06-01mosaic-median_1133" }, "geometry": { "type": "Point", "coordinates": [ 7.01552889554126, 6.729777792892435 ] } }
+]
+}

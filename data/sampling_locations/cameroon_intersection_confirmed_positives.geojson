@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lon": 9.5881263581002205, "lat": 4.124338745227413, "name": "cameroon_v0.0.11_2019-01-01_2021-06-01mosaic-median_135" }, "geometry": { "type": "Point", "coordinates": [ 9.588715153077372, 4.125112640421931 ] } },
+{ "type": "Feature", "properties": { "lon": 9.7498864537564671, "lat": 4.0270709510084401, "name": "cameroon_v0.0.11_2019-01-01_2021-06-01mosaic-median_214" }, "geometry": { "type": "Point", "coordinates": [ 9.749886453756467, 4.02707095100844 ] } },
+{ "type": "Feature", "properties": { "lon": 9.7844362082370946, "lat": 4.040480100507696, "name": "cameroon_v0.0.11_2019-01-01_2021-06-01mosaic-median_383" }, "geometry": { "type": "Point", "coordinates": [ 9.784436208237095, 4.040480100507696 ] } },
+{ "type": "Feature", "properties": { "lon": 11.572615191765451, "lat": 3.927561970315165, "name": "cameroon_v0.0.11_2019-01-01_2021-06-01mosaic-median_449" }, "geometry": { "type": "Point", "coordinates": [ 11.572615191765451, 3.927561970315165 ] } }
+]
+}
