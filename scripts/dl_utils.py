@@ -3,8 +3,10 @@ import datetime
 import json
 import os
 
+import ee
 import descarteslabs as dl
 from dateutil.relativedelta import relativedelta
+import geopandas as gpd
 import numpy as np
 from scipy.stats import mode
 import shapely
@@ -39,6 +41,13 @@ def rect_from_point(coord, rect_height):
     rect = shapely.geometry.mapping(shapely.geometry.box(
         lon - lon_w, lat - lat_w, lon + lon_w, lat + lat_w))
     return rect
+
+def get_country_boundary(country_name):
+    ee.Initialize()
+    country = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_na', country_name));
+    country_bounds = gpd.GeoDataFrame.from_features(country.getInfo()['features'], crs='WGS84')
+    country_bounds.to_file(f'../data/boundaries/{country_name.lower()}.geojson')
+    return country_bounds
 
 def get_tiles_from_roi(roi_file, tilesize, pad):
     """Retrieve tile keys covering ROI."""
