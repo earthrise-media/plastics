@@ -7,6 +7,7 @@ from argparse import ArgumentParser
 import descarteslabs as dl
 import json
 from shapely.geometry import mapping
+from tqdm.contrib.concurrent import process_map
 
 
 def read_dlkeys_file(dlkeys_file):
@@ -22,9 +23,9 @@ def dlkey_to_geojson(dlkey):
     return geom
 
 
-def build_feature(geom):
-    feature = {'type': 'Feature', 'geometry': geom}
-    
+def build_feature(dlkey):
+    geom = dlkey_to_geojson(dlkey)
+    feature = {'type': 'Feature', 'geometry': geom, 'properties': {'dlkey': dlkey}}
     return feature
 
 
@@ -37,12 +38,7 @@ def features_to_geojson(features, geojson_file):
 def main(args):
     dlkeys = read_dlkeys_file(args.dlkeys_in)
     print(f"Found {len(dlkeys)} tiles in {args.dlkeys_in}")
-
-    features = list()
-    for dlkey in dlkeys:
-        feature = build_feature(dlkey_to_geojson(dlkey))
-        features.append(feature)
-
+    features = process_map(build_feature, dlkeys, chunksize=500)
     features_to_geojson(features, args.geojson_out)
     print(f"Wrote output file {args.geojson_out}")
 
