@@ -51,13 +51,17 @@ def get_tiles_from_roi(roi_file, tilesize, pad):
 
     all_keys = list()
     ctr =0
+    resolution = 10.0
     for feature in features:
-        tiles = dl.Raster().iter_dltiles_from_shape(10.0, tilesize, pad,
-                                                    feature)
-        for tile in tiles:
-            all_keys.append(tile['properties']['key'])
-            ctr +=1
-            print(ctr, end='\r')
+        keys_iter = dl.scenes.iter_from_shape(shape, 
+                                              resolution, 
+                                              tilesize, 
+                                              pad, 
+                                              keys_only=True)
+        keys = [k for k in keys_iter]
+        all_keys.extend(keys)
+        ctr += len(keys)
+        print(ctr, end='\r')
 
     print('Split ROI into {} tiles'.format(len(all_keys)))
     return all_keys
