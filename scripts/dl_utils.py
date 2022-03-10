@@ -62,7 +62,7 @@ def get_tiles_from_roi(roi_file, tilesize, pad):
     ctr =0
     resolution = 10.0
     for feature in features:
-        keys_iter = dl.scenes.DLTile.iter_from_shape(shape, 
+        keys_iter = dl.scenes.DLTile.iter_from_shape(feature['geometry'], 
                                                      resolution, 
                                                      tilesize, 
                                                      pad, 
