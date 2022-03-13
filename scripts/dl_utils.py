@@ -3,10 +3,8 @@ import datetime
 import json
 import os
 
-import ee
 import descarteslabs as dl
 from dateutil.relativedelta import relativedelta
-import geopandas as gpd
 import numpy as np
 from scipy.stats import mode
 import shapely
@@ -42,13 +40,6 @@ def rect_from_point(coord, rect_height):
         lon - lon_w, lat - lat_w, lon + lon_w, lat + lat_w))
     return rect
 
-def get_country_boundary(country_name):
-    ee.Initialize()
-    country = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_na', country_name));
-    country_bounds = gpd.GeoDataFrame.from_features(country.getInfo()['features'], crs='WGS84')
-    country_bounds.to_file(f'../data/boundaries/{country_name.lower()}.geojson')
-    return country_bounds
-
 def get_tiles_from_roi(roi_file, tilesize, pad):
     """Retrieve tile keys covering ROI."""
     with open(roi_file, 'r') as f:
@@ -60,13 +51,17 @@ def get_tiles_from_roi(roi_file, tilesize, pad):
 
     all_keys = list()
     ctr =0
+    resolution = 10.0
     for feature in features:
-        tiles = dl.Raster().iter_dltiles_from_shape(10.0, tilesize, pad,
-                                                    feature)
-        for tile in tiles:
-            all_keys.append(tile['properties']['key'])
-            ctr +=1
-            print(ctr, end='\r')
+        keys_iter = dl.scenes.DLTile.iter_from_shape(feature['geometry'], 
+                                                     resolution, 
+                                                     tilesize, 
+                                                     pad, 
+                                                     keys_only=True)
+        keys = [k for k in keys_iter]
+        all_keys.extend(keys)
+        ctr += len(keys)
+        print(ctr, end='\r')
 
     print('Split ROI into {} tiles'.format(len(all_keys)))
     return all_keys

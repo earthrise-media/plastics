@@ -1,16 +1,19 @@
+import descarteslabs as dl
 import functools
+import geopandas as gpd
+import h3
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-import geopandas as gpd
 import rasterio as rs
+import shapely
 from rasterio.windows import Window
 from skimage.feature import blob_doh
 from skimage.feature.peak import peak_local_max
 from sklearn.neighbors import KDTree
 from tqdm.contrib.concurrent import process_map
 
-def merge_similar_sites(candidate_sites, name, search_radius=0.0025):
+def merge_similar_sites(candidate_sites, search_radius=0.0025, plot=True):
     """
     This process iteratively moves points closer together by taking the mean position of all
     matched points. It then searches the KD tree using the unique clusters in these new points.
@@ -41,15 +44,15 @@ def merge_similar_sites(candidate_sites, name, search_radius=0.0025):
             mean_coords = np.array(mean_coords)
             break
         num_coords = len(mean_coords)
-        
-    unique_sites = gpd.GeoDataFrame(mean_coords, columns=['lon', 'lat'], geometry=gpd.points_from_xy(*mean_coords.T))
-    unique_sites['name'] = [f"{name}_{i+1}" for i in unique_sites.index]
-    plt.figure(figsize=(10,10), dpi=150, facecolor=(1,1,1))
-    plt.scatter(coords[:,0], coords[:,1], s=5, label='Original')
-    plt.scatter(mean_coords[:,0], mean_coords[:,1], s=3, c='r', label='Unique')
-    plt.axis('equal')
-    plt.legend()
-    plt.show()
+
+    ids = [h3.geo_to_h3(coord[1], coord[0], 15) for coord in mean_coords]
+    unique_sites = gpd.GeoDataFrame({'id': ids}, geometry=gpd.points_from_xy(*mean_coords.T))
+    if plot:
+        plt.figure(figsize=(10,10), dpi=150, facecolor=(1,1,1))
+        plt.scatter(coords[:,0], coords[:,1], s=5, label='Original')
+        plt.scatter(mean_coords[:,0], mean_coords[:,1], s=3, c='r', label='Unique')
+        plt.axis('equal')
+        plt.show()
     
     return unique_sites
 
@@ -203,3 +206,77 @@ def detect_peaks(source, name, threshold_abs=0.85, min_distance=100, window_size
         candidate_gdf.to_file(file_path + '.geojson', driver='GeoJSON')
     
     return candidate_gdf
+
+
+class DescartesDetectRun(object):
+
+    def __init__(self,
+                 product_name,
+                 pred_threshold,
+                 min_sigma,
+                 **kwargs):
+
+        self.product_name = product_name
+        self.pred_threshold = pred_threshold
+        self.min_sigma = min_sigma
+        if self.product_name.startswith('earthrise:'):
+            self.product_id = f"{self.product_name}_blobs_thresh_{self.pred_threshold}_min-sigma_{self.min_sigma}_area-thresh_0.0025"
+        else:
+            self.product_id = f'earthrise:{f"{self.product_name}_blobs_thresh_{self.pred_threshold}_min-sigma_{self.min_sigma}_area-thresh_0.0025"}'
+        self.product = self.init_product()
+        self.raster_client = dl.Raster()
+
+    def init_product(self):
+        """Create or get DL catalog product."""
+        fc_ids = [fc.id for fc in dl.vectors.FeatureCollection.list()]
+        product_id = None
+        for fc in fc_ids:
+            if self.product_id in fc:
+                product_id = fc
+
+        if not product_id:
+            print("Creating product", self.product_id)
+            product = dl.vectors.FeatureCollection.create(product_id=self.product_id,
+                                                          title=self.product_name,
+                                                          description=self.product_name)
+        else:
+            print(f"Product {self.product_id} already exists...")
+            product = dl.vectors.FeatureCollection(product_id)
+        return product
+
+    def download_tile(self, image, band='median'):
+        outfile_name = os.path.join('./', image)
+        try:
+            self.raster_client.raster(inputs = image,
+                                bands = [band],
+                                save=True,
+                                outfile_basename = outfile_name,
+                                srs='WGS84')
+            return outfile_name
+        except dl.client.exceptions.BadRequestError as e:
+            print(f'Warning: {repr(e)}\nContinuing...')
+        except dl.client.exceptions.ServerError as e:
+            print(f'Warning: {repr(e)}\nContinuing...')
+            
+    def detect_candidates(self, tile_path):
+        # Detect candidates from directory of tiles. Multiprocessed
+        blobs = blob_detect(
+            tile_path+'.tif',
+            self.pred_threshold,
+            self.min_sigma
+        )
+        return blobs
+
+    def __call__(self, image):
+        """Detect candidates within a tile"""
+        tile_path = self.download_tile(image)
+        blobs = self.detect_candidates(tile_path)
+        feature_list = []
+        if blobs:
+            for blob in blobs:
+                feature = dl.vectors.Feature(
+                    geometry = shapely.geometry.Point(blob[0], blob[1]),
+                    properties = {'id': h3.geo_to_h3(blob[1], blob[0], 15)}
+                )
+                feature_list.append(feature)
+            self.product.add(feature_list)

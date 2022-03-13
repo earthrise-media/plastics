@@ -1,0 +1,485 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8fbe55c512960cc",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.5775735926801,
+                    -34.73418630019541
+                ]
+            },
+            "properties": {
+                "id": "8fbe55c512960cc",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 174,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.07752356678247452,
+                "Height Above Nearest Drainage (m)": 0.399993896484375,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 0.9274099368650546,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1742.6749449672004,
+                "Nearest Water Type": "lake",
+                "place_name": "Narrandera, Narrandera Shire Council, New South Wales, 2700, Australia",
+                "Population - 1 km": 67,
+                "Population - 5 km": 3763,
+                "Population - 10 km": 3882
+            }
+        },
+        {
+            "id": "8fbe40c0d0098d3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    144.75398751716912,
+                    -36.04391117689156
+                ]
+            },
+            "properties": {
+                "id": "8fbe40c0d0098d3",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 98,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006935492157936096,
+                "Height Above Nearest Drainage (m)": 1.0999984741210938,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 0.49170020332680714,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 4790.100607651563,
+                "Nearest Water Type": "water",
+                "place_name": "Centre Road, Moama, Murray River Council, New South Wales, 2731, Australia",
+                "Population - 1 km": 9,
+                "Population - 5 km": 604,
+                "Population - 10 km": 7786
+            }
+        },
+        {
+            "id": "8fbe1a0ac31c651",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.07941851268953,
+                    -30.32285731856131
+                ]
+            },
+            "properties": {
+                "id": "8fbe1a0ac31c651",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 18,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.014794686809182167,
+                "Height Above Nearest Drainage (m)": 9.200000762939453,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.54,
+                "Slope (degrees)": 1.2872595712359236,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 898.1803097267431,
+                "Nearest Water Type": "water",
+                "place_name": "Englands Road, North Boambee Valley, Coffs Harbour, Coffs Harbour City Council, New South Wales, 2450, Australia",
+                "Population - 1 km": 171,
+                "Population - 5 km": 24127,
+                "Population - 10 km": 41038
+            }
+        },
+        {
+            "id": "8fbe8d9a8b69b12",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.255961329837,
+                    -27.746778751615505
+                ]
+            },
+            "properties": {
+                "id": "8fbe8d9a8b69b12",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 6,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.01516279112547636,
+                "Height Above Nearest Drainage (m)": 3.799999713897705,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 1.7732488266959416,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 194.44542750124933,
+                "Nearest Water Type": "stream",
+                "place_name": "215, Burnside Road, Ormeau, Stapylton, Gold Coast, Queensland, 4207, Australia",
+                "Population - 1 km": 26,
+                "Population - 5 km": 13276,
+                "Population - 10 km": 54736
+            }
+        },
+        {
+            "id": "8fbe73b1dab6728",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    146.8898576714293,
+                    -36.02804146656986
+                ]
+            },
+            "properties": {
+                "id": "8fbe73b1dab6728",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 252,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.020810842514038086,
+                "Height Above Nearest Drainage (m)": 26.5,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.64,
+                "Slope (degrees)": 5.336472370466754,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 534.4163993741954,
+                "Nearest Water Type": "water",
+                "place_name": "Centaur Road, Hamilton Valley, Albury, Albury City Council, New South Wales, 2641, Australia",
+                "Population - 1 km": 18,
+                "Population - 5 km": 13106,
+                "Population - 10 km": 41820
+            }
+        },
+        {
+            "id": "8fa7006d420c78c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.66158750970942,
+                    -28.806064849733094
+                ]
+            },
+            "properties": {
+                "id": "8fa7006d420c78c",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 22,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.007507587783038616,
+                "Height Above Nearest Drainage (m)": 5.19999885559082,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.68,
+                "Slope (degrees)": 2.2750867881113392,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 3151.573594680226,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Narngulu, Geraldton, City Of Greater Geraldton, Western Australia, 6531, Australia",
+                "Population - 1 km": 69,
+                "Population - 5 km": 12987,
+                "Population - 10 km": 27024
+            }
+        },
+        {
+            "id": "8fbe455ac46a02b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    144.30517705518548,
+                    -36.737814269444286
+                ]
+            },
+            "properties": {
+                "id": "8fbe455ac46a02b",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 228,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.006874712184071541,
+                "Height Above Nearest Drainage (m)": 9.29998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.68,
+                "Slope (degrees)": 3.144481830335667,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 831.6445662401879,
+                "Nearest Water Type": "stream",
+                "place_name": "White Hills sediments Geological Reserve, Brickworks Road, East Bendigo, Bendigo, City of Greater Bendigo, Victoria, 3551, Australia",
+                "Population - 1 km": 1247,
+                "Population - 5 km": 39935,
+                "Population - 10 km": 71399
+            }
+        },
+        {
+            "id": "8fbe88b0e93546d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.1006182045545,
+                    -26.684004059774963
+                ]
+            },
+            "properties": {
+                "id": "8fbe88b0e93546d",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 17,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007652938831597567,
+                "Height Above Nearest Drainage (m)": 8.299999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 1.082976378605083,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 316.0270660074527,
+                "Nearest Water Type": "pond",
+                "place_name": "Buderim Resource Recovery Centre, Syd Lingard Drive, Buderim, Sunshine Coast, Queensland, 4557, Australia",
+                "Population - 1 km": 2860,
+                "Population - 5 km": 54734,
+                "Population - 10 km": 97625
+            }
+        },
+        {
+            "id": "8fa726d3428aa30",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.96581912047282,
+                    -32.1955083121266
+                ]
+            },
+            "properties": {
+                "id": "8fa726d3428aa30",
+                "Soil Clay Fraction": 0.16,
+                "Elevation": 27,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007254073861986399,
+                "Height Above Nearest Drainage (m)": 1.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.73,
+                "Slope (degrees)": 0.7181558428462994,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 591.5410203734602,
+                "Nearest Water Type": "water",
+                "place_name": "City of Armadale Landfill and Recycling Facility, Tonkin Highway PSP, Hilbert, Shire Of Serpentine-Jarrahdale, Western Australia, 6122, Australia",
+                "Population - 1 km": 162,
+                "Population - 5 km": 9208,
+                "Population - 10 km": 55714
+            }
+        },
+        {
+            "id": "8fbe8d445043d48",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.0164548494914,
+                    -27.02559526277089
+                ]
+            },
+            "properties": {
+                "id": "8fbe8d445043d48",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 15,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.9843068718910217,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 3.515865780172222,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1243.9758228872242,
+                "Nearest Water Type": "river",
+                "place_name": "Simpson Road, Caboolture, Moreton Bay Regional, Queensland, 4510, Australia",
+                "Population - 1 km": 11,
+                "Population - 5 km": 1191,
+                "Population - 10 km": 23436
+            }
+        },
+        {
+            "id": "8fbe8d9a06660aa",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.32892274854873,
+                    -27.73480850676104
+                ]
+            },
+            "properties": {
+                "id": "8fbe8d9a06660aa",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 4,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.09098679572343826,
+                "Height Above Nearest Drainage (m)": 0.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 1.4200389462947012,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1724.8020129892197,
+                "Nearest Water Type": "pond",
+                "place_name": "Rocky Point Sugar Mill, Mill Road, Steiglitz, Gold Coast, Queensland, Australia",
+                "Population - 1 km": 55,
+                "Population - 5 km": 1035,
+                "Population - 10 km": 16471
+            }
+        },
+        {
+            "id": "8fb9168d64b3574",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    138.6030684745128,
+                    -34.6993662635143
+                ]
+            },
+            "properties": {
+                "id": "8fb9168d64b3574",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 19,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.01410103403031826,
+                "Height Above Nearest Drainage (m)": 0.10000038146972656,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1605.8848841629356,
+                "Nearest Water Type": "drain",
+                "place_name": "Pellew Road, Edinburgh, Adelaide, City of Salisbury, South Australia, 5111, Australia",
+                "Population - 1 km": 43,
+                "Population - 5 km": 7033,
+                "Population - 10 km": 117593
+            }
+        },
+        {
+            "id": "8fbe8d890cd0991",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.2272304754552,
+                    -27.509267413944503
+                ]
+            },
+            "properties": {
+                "id": "8fbe8d890cd0991",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 32,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.007597635500133038,
+                "Height Above Nearest Drainage (m)": 16.30000114440918,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.57,
+                "Slope (degrees)": 3.495100516139147,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 244.8706825588509,
+                "Nearest Water Type": "stream",
+                "place_name": "Birkdale Waste Transfer Station, Old Cleveland Road East, Birkdale, Redland City, Queensland, 4160, Australia",
+                "Population - 1 km": 4419,
+                "Population - 5 km": 61287,
+                "Population - 10 km": 127312
+            }
+        },
+        {
+            "id": "8fbe88aaa164385",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    153.02924227012866,
+                    -26.438250227746103
+                ]
+            },
+            "properties": {
+                "id": "8fbe88aaa164385",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 23,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.09969686716794968,
+                "Height Above Nearest Drainage (m)": 12,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.71,
+                "Slope (degrees)": 1.8331324373006075,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1435.8193383594914,
+                "Nearest Water Type": "stream",
+                "place_name": "Emu Mountain Road, Doonan, Noosa Shire, Queensland, 4566, Australia",
+                "Population - 1 km": 194,
+                "Population - 5 km": 11245,
+                "Population - 10 km": 39265
+            }
+        },
+        {
+            "id": "8fc993496a54d48",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    115.80929307271606,
+                    -32.18766310666697
+                ]
+            },
+            "properties": {
+                "id": "8fc993496a54d48",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 25,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.014509561471641064,
+                "Height Above Nearest Drainage (m)": 14.500000953674316,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.73,
+                "Slope (degrees)": 2.609466974062519,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1476.882901666311,
+                "Nearest Water Type": "water",
+                "place_name": "Postans Road, Hope Valley, City Of Kwinana, Western Australia, 6165, Australia",
+                "Population - 1 km": 17,
+                "Population - 5 km": 4949,
+                "Population - 10 km": 76723
+            }
+        },
+        {
+            "id": "8fbe54a724d68a5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    147.18766089860162,
+                    -34.83565044220796
+                ]
+            },
+            "properties": {
+                "id": "8fbe54a724d68a5",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 233,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.007039018906652927,
+                "Height Above Nearest Drainage (m)": 2.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 0.8142439230242494,
+                "Fine Earth Density (kg / m^3)": 153,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 3547.4686370356603,
+                "Nearest Water Type": "water",
+                "place_name": "Cains Lane, Coolamon, Coolamon Shire Council, New South Wales, 2701, Australia",
+                "Population - 1 km": 10,
+                "Population - 5 km": 1540,
+                "Population - 10 km": 1710
+            }
+        }
+    ]
+}
