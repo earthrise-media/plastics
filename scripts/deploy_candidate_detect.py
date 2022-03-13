@@ -1,8 +1,5 @@
 import argparse
-import os
 
-import h3
-import shapely
 from tqdm import tqdm
 import descarteslabs as dl
 from descarteslabs.catalog import Image, properties
@@ -19,7 +16,7 @@ DL_SYSTEM_PARAMS = {
     'retry_count': 4,
     'task_timeout': 20000,
     'include_modules': ['scripts.dl_utils', 'scripts.candidate_detect'],
-    'requirements': ['skimage', 'tqdm']
+    'requirements': ['scikit-image', 'tqdm', 'h3']
 }
 
 def run_candidates(image_name, **kwargs):

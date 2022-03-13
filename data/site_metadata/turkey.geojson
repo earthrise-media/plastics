@@ -1,0 +1,2195 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f1eca4a55ac782",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.05740672351794,
+                    39.809912462948155
+                ]
+            },
+            "properties": {
+                "id": "8f1eca4a55ac782",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 56,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.046152736991643906,
+                "Height Above Nearest Drainage (m)": 16.700000762939453,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 5.2536737333627865,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 1750.0375724377502,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Bozcaada, Canakkale, Marmara Region, 17680, Turkey",
+                "Population - 1 km": 30,
+                "Population - 5 km": 1871,
+                "Population - 10 km": 3684
+            }
+        },
+        {
+            "id": "8f3f6058c794c4e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.334365282302695,
+                    37.811016575991594
+                ]
+            },
+            "properties": {
+                "id": "8f3f6058c794c4e",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 325,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.31181180477142334,
+                "Height Above Nearest Drainage (m)": 13.600006103515625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 9.875414267948484,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1587.1373362114437,
+                "Nearest Water Type": "lake",
+                "place_name": "Ku\u015fadas\u0131, Ayd\u0131n, Aegean Region, Turkey",
+                "Population - 1 km": 307,
+                "Population - 5 km": 10169,
+                "Population - 10 km": 119864
+            }
+        },
+        {
+            "id": "8f3f644da0ca189",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.93179248260072,
+                    38.61221901160199
+                ]
+            },
+            "properties": {
+                "id": "8f3f644da0ca189",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 31,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006705272011458874,
+                "Height Above Nearest Drainage (m)": 20.100000381469727,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 5.346614220479621,
+                "Fine Earth Density (kg / m^3)": 161,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1800.6788795928223,
+                "Nearest Water Type": "water",
+                "place_name": "\u0130zmir Serbest B\u00f6lgesi, Menemen, Izmir, Aegean Region, 35660, Turkey",
+                "Population - 1 km": 837,
+                "Population - 5 km": 10874,
+                "Population - 10 km": 31498
+            }
+        },
+        {
+            "id": "8f3f644da56c485",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.92286385216726,
+                    38.61466836379242
+                ]
+            },
+            "properties": {
+                "id": "8f3f644da56c485",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 10,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.020114948973059654,
+                "Height Above Nearest Drainage (m)": 3.90000057220459,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.004166498579379,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 803.986538052192,
+                "Nearest Water Type": "water",
+                "place_name": "\u0130zmir Serbest B\u00f6lgesi, Menemen, Izmir, Aegean Region, 35660, Turkey",
+                "Population - 1 km": 861,
+                "Population - 5 km": 10508,
+                "Population - 10 km": 30252
+            }
+        },
+        {
+            "id": "8f3f645424de845",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.936995292704324,
+                    38.94925021837112
+                ]
+            },
+            "properties": {
+                "id": "8f3f645424de845",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 66,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.006674062926322222,
+                "Height Above Nearest Drainage (m)": 65.5999984741211,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 6.598055023387865,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1035.5261540922163,
+                "Nearest Water Type": "stream",
+                "place_name": "\u00c7andarl\u0131 Mahallesi, Dikili, Izmir, Aegean Region, 35980, Turkey",
+                "Population - 1 km": 709,
+                "Population - 5 km": 5319,
+                "Population - 10 km": 8853
+            }
+        },
+        {
+            "id": "8f1eca65b4088b0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.93461970159493,
+                    39.59721299645514
+                ]
+            },
+            "properties": {
+                "id": "8f1eca65b4088b0",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 16,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.3041866719722748,
+                "Height Above Nearest Drainage (m)": 12.5,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 198.86118328334925,
+                "Nearest Water Type": "stream",
+                "place_name": "Ak\u00e7ay, Edremit, Bal\u0131kesir, Marmara Region, 10310, Turkey",
+                "Population - 1 km": 3398,
+                "Population - 5 km": 43066,
+                "Population - 10 km": 108153
+            }
+        },
+        {
+            "id": "8f3f644d1876790",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.902946023563462,
+                    38.667037249025
+                ]
+            },
+            "properties": {
+                "id": "8f3f644d1876790",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 18,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.02010061964392662,
+                "Height Above Nearest Drainage (m)": 9.999999046325684,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 2.0029917768535284,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1818.9109370135095,
+                "Nearest Water Type": "ditch",
+                "place_name": "Kemal Atat\u00fcrk Mahallesi, Fo\u00e7a, Izmir, Aegean Region, 35680, Turkey",
+                "Population - 1 km": 955,
+                "Population - 5 km": 12661,
+                "Population - 10 km": 52142
+            }
+        },
+        {
+            "id": "8f3f644d184374a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.905528298218513,
+                    38.666107630149185
+                ]
+            },
+            "properties": {
+                "id": "8f3f644d184374a",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 29,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.013400644063949585,
+                "Height Above Nearest Drainage (m)": 4.100000381469727,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 3.1644446240744593,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1658.314526287376,
+                "Nearest Water Type": "ditch",
+                "place_name": "Kemal Atat\u00fcrk Mahallesi, Fo\u00e7a, Izmir, Aegean Region, 35680, Turkey",
+                "Population - 1 km": 946,
+                "Population - 5 km": 12273,
+                "Population - 10 km": 51223
+            }
+        },
+        {
+            "id": "8f3f64993a76331",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.973491003782787,
+                    39.486434414867475
+                ]
+            },
+            "properties": {
+                "id": "8f3f64993a76331",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 34,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.03311948478221893,
+                "Height Above Nearest Drainage (m)": 14.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.2996940373232582,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1126.9874612117471,
+                "Nearest Water Type": "river",
+                "place_name": "Cumhuriyet Mah., \u015eark\u00f6y, Burhaniye, Bal\u0131kesir, Marmara Region, 10700, Turkey",
+                "Population - 1 km": 3451,
+                "Population - 5 km": 36051,
+                "Population - 10 km": 56091
+            }
+        },
+        {
+            "id": "8f3f6499e1a9065",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.99002770778783,
+                    39.480090144777485
+                ]
+            },
+            "properties": {
+                "id": "8f3f6499e1a9065",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 35,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.03312206268310547,
+                "Height Above Nearest Drainage (m)": 0.40000152587890625,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.6313268273156596,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 51.65975164947009,
+                "Nearest Water Type": "river",
+                "place_name": "Yunus Mah., Burhaniye, Bal\u0131kesir, Marmara Region, 10700, Turkey",
+                "Population - 1 km": 407,
+                "Population - 5 km": 31780,
+                "Population - 10 km": 53601
+            }
+        },
+        {
+            "id": "8f3f64cd990d809",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.90685111407139,
+                    39.073329703755434
+                ]
+            },
+            "properties": {
+                "id": "8f3f64cd990d809",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 21,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.06662449240684509,
+                "Height Above Nearest Drainage (m)": 17.500001907348633,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 3.5365652606445717,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1459.8588220580507,
+                "Nearest Water Type": "ditch",
+                "place_name": "Sanayi Cd., \u0130smetpa\u015fa Mahallesi, Dikili, Izmir, Aegean Region, 35980, Turkey",
+                "Population - 1 km": 1461,
+                "Population - 5 km": 15078,
+                "Population - 10 km": 21574
+            }
+        },
+        {
+            "id": "8f1eca6f011d42b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.72376269909145,
+                    39.57783310928571
+                ]
+            },
+            "properties": {
+                "id": "8f1eca6f011d42b",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 135,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.033075492829084396,
+                "Height Above Nearest Drainage (m)": 30.99999237060547,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 16.68520518242403,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1238.1805373177203,
+                "Nearest Water Type": "coastline",
+                "place_name": "Alt\u0131noluk, Edremit, Bal\u0131kesir, Marmara Region, 10870, Turkey",
+                "Population - 1 km": 1734,
+                "Population - 5 km": 25667,
+                "Population - 10 km": 36931
+            }
+        },
+        {
+            "id": "8f1ec8d0e86918d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.908287694951134,
+                    41.35034026151771
+                ]
+            },
+            "properties": {
+                "id": "8f1ec8d0e86918d",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 33,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006444897502660751,
+                "Height Above Nearest Drainage (m)": 12.30000114440918,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 5.0155449938207655,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 561.4772627107259,
+                "Nearest Water Type": "river",
+                "place_name": "Kullar Sokak, Pehlivank\u00f6y, K\u0131rklareli, Marmara Region, Turkey",
+                "Population - 1 km": 411,
+                "Population - 5 km": 2500,
+                "Population - 10 km": 6160
+            }
+        },
+        {
+            "id": "8f3f64c3085d745",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.703865452103695,
+                    39.30325076341169
+                ]
+            },
+            "properties": {
+                "id": "8f3f64c3085d745",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 54,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006641024723649025,
+                "Height Above Nearest Drainage (m)": 29.5,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 4.885071829403814,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 817.0104275461978,
+                "Nearest Water Type": "stream",
+                "place_name": "Kaz\u0131m Karabekir, Ayval\u0131k, Bal\u0131kesir, Marmara Region, 10400, Turkey",
+                "Population - 1 km": 782,
+                "Population - 5 km": 28966,
+                "Population - 10 km": 40291
+            }
+        },
+        {
+            "id": "8f1eca8eed9c911",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.6799336557193,
+                    40.44191116527422
+                ]
+            },
+            "properties": {
+                "id": "8f1eca8eed9c911",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 14,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006532947067171335,
+                "Height Above Nearest Drainage (m)": 6.599999904632568,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 2.4645037750034495,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1435.1291644966059,
+                "Nearest Water Type": "coastline",
+                "place_name": "Yaz\u0131c\u0131zade Mahallesi, Gelibolu, Canakkale, Marmara Region, 17500, Turkey",
+                "Population - 1 km": 653,
+                "Population - 5 km": 16815,
+                "Population - 10 km": 25561
+            }
+        },
+        {
+            "id": "8f1eca8e2d0dd18",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.622562491275243,
+                    40.44884614119603
+                ]
+            },
+            "properties": {
+                "id": "8f1eca8e2d0dd18",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 134,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.05225769802927971,
+                "Height Above Nearest Drainage (m)": 52.5,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 13.571752439287698,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 4738.09286807771,
+                "Nearest Water Type": "wastewater",
+                "place_name": "Kavakl\u0131, Gelibolu, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 61,
+                "Population - 5 km": 4192,
+                "Population - 10 km": 19357
+            }
+        },
+        {
+            "id": "8f1eca034813a1c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.54494530611221,
+                    40.1752657515426
+                ]
+            },
+            "properties": {
+                "id": "8f1eca034813a1c",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 95,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.032793350517749786,
+                "Height Above Nearest Drainage (m)": 14.200000762939453,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 16.35390087744905,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1682.7074134272393,
+                "Nearest Water Type": "canal",
+                "place_name": "\u00c7anakkale, I\u015f\u0131klar, \u00c7anakkale Merkez, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 691,
+                "Population - 5 km": 3129,
+                "Population - 10 km": 26084
+            }
+        },
+        {
+            "id": "8f1eca7152481a6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.57974579725138,
+                    39.822033948724965
+                ]
+            },
+            "properties": {
+                "id": "8f1eca7152481a6",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 83,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00659216521307826,
+                "Height Above Nearest Drainage (m)": 1.2000045776367188,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 1.0109716906014279,
+                "Fine Earth Density (kg / m^3)": 153,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 84.83870575503295,
+                "Nearest Water Type": "river",
+                "place_name": "Sa\u00e7akl\u0131, Bayrami\u00e7, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 138,
+                "Population - 5 km": 12634,
+                "Population - 10 km": 15816
+            }
+        },
+        {
+            "id": "8f1ecc4e9d01b63",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.532779470299698,
+                    41.70560092190544
+                ]
+            },
+            "properties": {
+                "id": "8f1ecc4e9d01b63",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 75,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.012819952331483364,
+                "Height Above Nearest Drainage (m)": 42.30000305175781,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 1.7675201516860046,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 329.8546325913109,
+                "Nearest Water Type": "river",
+                "place_name": "22-75, Yeniimaret Mahallesi, Edirne Merkez, Edirne, Marmara Region, 22050, Turkey",
+                "Population - 1 km": 762,
+                "Population - 5 km": 46857,
+                "Population - 10 km": 113491
+            }
+        },
+        {
+            "id": "8f1eca91ed41566",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.44121708734334,
+                    40.63875147816226
+                ]
+            },
+            "properties": {
+                "id": "8f1eca91ed41566",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 128,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006513937842100859,
+                "Height Above Nearest Drainage (m)": 75.60000610351562,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 3.957937144442171,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 1753.6115045095305,
+                "Nearest Water Type": "stream",
+                "place_name": "Dani\u015fment, Ke\u015fan, Edirne, Marmara Region, Turkey",
+                "Population - 1 km": 56,
+                "Population - 5 km": 4391,
+                "Population - 10 km": 8932
+            }
+        },
+        {
+            "id": "8f1eca4e1b9a92c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.302630249910912,
+                    39.7853684198534
+                ]
+            },
+            "properties": {
+                "id": "8f1eca4e1b9a92c",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 94,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.05935957655310631,
+                "Height Above Nearest Drainage (m)": 12.299995422363281,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 4.3200856551460065,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1394.2289811717612,
+                "Nearest Water Type": "stream",
+                "place_name": "Ezine, Canakkale, Marmara Region, 17600, Turkey",
+                "Population - 1 km": 25,
+                "Population - 5 km": 12796,
+                "Population - 10 km": 20953
+            }
+        },
+        {
+            "id": "8f1ed9a2ca82aec",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.311394179572044,
+                    39.50193421970483
+                ]
+            },
+            "properties": {
+                "id": "8f1ed9a2ca82aec",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 94,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.006622373592108488,
+                "Height Above Nearest Drainage (m)": 2,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.8013035424401052,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 119.54315103269093,
+                "Nearest Water Type": "river",
+                "place_name": "Pa\u015fak\u00f6y \u0130\u00e7 Yolu, Ayvac\u0131k, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 15,
+                "Population - 5 km": 1161,
+                "Population - 10 km": 2987
+            }
+        },
+        {
+            "id": "8f3f65c34a73460",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.18634506185256,
+                    39.22313101466614
+                ]
+            },
+            "properties": {
+                "id": "8f3f65c34a73460",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 283,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.013296904042363167,
+                "Height Above Nearest Drainage (m)": 18.600006103515625,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 6.541157160735713,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2154.0803273052356,
+                "Nearest Water Type": "ditch",
+                "place_name": "S\u0131nd\u0131rg\u0131, Bal\u0131kesir, Marmara Region, 10330, Turkey",
+                "Population - 1 km": 259,
+                "Population - 5 km": 11800,
+                "Population - 10 km": 14955
+            }
+        },
+        {
+            "id": "8f3f6446326acd2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.07395262890238,
+                    38.867169091716356
+                ]
+            },
+            "properties": {
+                "id": "8f3f6446326acd2",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 108,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006681677419692278,
+                "Height Above Nearest Drainage (m)": 102.29999542236328,
+                "Landform Type": "Peak/ridge (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 2.3810748314711083,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 545.7393877313237,
+                "Nearest Water Type": "water",
+                "place_name": "Hac\u0131\u00f6merli Mahallesi, Aliaga, Izmir, Aegean Region, 35800, Turkey",
+                "Population - 1 km": 293,
+                "Population - 5 km": 7373,
+                "Population - 10 km": 16831
+            }
+        },
+        {
+            "id": "8f3f63551460692",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.197992039379223,
+                    36.859156748806015
+                ]
+            },
+            "properties": {
+                "id": "8f3f63551460692",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 184,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.013727821409702301,
+                "Height Above Nearest Drainage (m)": 12.899993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.9558112340943121,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1446.522590187959,
+                "Nearest Water Type": "stream",
+                "place_name": "Marmaris, Mu\u011fla, Aegean Region, 48706, Turkey",
+                "Population - 1 km": 82,
+                "Population - 5 km": 15318,
+                "Population - 10 km": 53555
+            }
+        },
+        {
+            "id": "8f3f630ddc06011",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.66410180036167,
+                    36.831933137414296
+                ]
+            },
+            "properties": {
+                "id": "8f3f630ddc06011",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 3,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.013732736930251122,
+                "Height Above Nearest Drainage (m)": 0.8000001907348633,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.3091606457102131,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 182.46041436986775,
+                "Nearest Water Type": "drain",
+                "place_name": "Derin\u00f6z Sokak, Dalyan, Ortaca, Mu\u011fla, Aegean Region, 48840, Turkey",
+                "Population - 1 km": 1457,
+                "Population - 5 km": 14964,
+                "Population - 10 km": 38982
+            }
+        },
+        {
+            "id": "8f3f644550aa55b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.00586370468044,
+                    38.81081978163465
+                ]
+            },
+            "properties": {
+                "id": "8f3f644550aa55b",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 50,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.013373777270317078,
+                "Height Above Nearest Drainage (m)": 38,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 9.520929817468604,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1331.6927104579138,
+                "Nearest Water Type": "river",
+                "place_name": "Yeni Mahalle, Aliaga, Izmir, Aegean Region, 35800, Turkey",
+                "Population - 1 km": 263,
+                "Population - 5 km": 20622,
+                "Population - 10 km": 56306
+            }
+        },
+        {
+            "id": "8f1ec971dc9c591",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.97600574278778,
+                    40.61875858864642
+                ]
+            },
+            "properties": {
+                "id": "8f1ec971dc9c591",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 211,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.013031816110014915,
+                "Height Above Nearest Drainage (m)": 30.600006103515625,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 20.75998815820539,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 1902.0723425502558,
+                "Nearest Water Type": "coastline",
+                "place_name": "Esenk\u00f6y, \u00c7\u0131narc\u0131k, Yalova, Marmara Region, Turkey",
+                "Population - 1 km": 235,
+                "Population - 5 km": 3554,
+                "Population - 10 km": 9205
+            }
+        },
+        {
+            "id": "8f3f60d94590904",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.121867408830166,
+                    38.23326523268599
+                ]
+            },
+            "properties": {
+                "id": "8f3f60d94590904",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 110,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006740122567862272,
+                "Height Above Nearest Drainage (m)": 5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.8456495110864815,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 755.8922151814594,
+                "Nearest Water Type": "stream",
+                "place_name": "Derek\u00f6y Mahallesi, Menderes, Izmir, Aegean Region, 35471, Turkey",
+                "Population - 1 km": 522,
+                "Population - 5 km": 16490,
+                "Population - 10 km": 135156
+            }
+        },
+        {
+            "id": "8f3f60a754dcaf2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.529473786088005,
+                    38.334604123174
+                ]
+            },
+            "properties": {
+                "id": "8f3f60a754dcaf2",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 280,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.006730802357196808,
+                "Height Above Nearest Drainage (m)": 7.79998779296875,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.502923377174914,
+                "Fine Earth Density (kg / m^3)": 153,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 846.3784689099015,
+                "Nearest Water Type": "stream",
+                "place_name": "Ala\u015fehir, Manisa, Aegean Region, 45600, Turkey",
+                "Population - 1 km": 3584,
+                "Population - 5 km": 47653,
+                "Population - 10 km": 63035
+            }
+        },
+        {
+            "id": "8f3f63393ce16a1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.797339632738165,
+                    36.799316106302754
+                ]
+            },
+            "properties": {
+                "id": "8f3f63393ce16a1",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 21,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.027476811781525612,
+                "Height Above Nearest Drainage (m)": 3.700000762939453,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.4576311935386908,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 261.61317647302667,
+                "Nearest Water Type": "wastewater",
+                "place_name": "Alt\u0131ntas, Ak\u00e7ata\u015f, Dalaman, Mu\u011fla, Aegean Region, Turkey",
+                "Population - 1 km": 1025,
+                "Population - 5 km": 29572,
+                "Population - 10 km": 62730
+            }
+        },
+        {
+            "id": "8f3f66b5e6d37ac",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0104924756532,
+                    38.47672155215344
+                ]
+            },
+            "properties": {
+                "id": "8f3f66b5e6d37ac",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 3,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.013435553759336472,
+                "Height Above Nearest Drainage (m)": 1.4000000953674316,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 0.8481244750358677,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1360.1208431447578,
+                "Nearest Water Type": "coastline",
+                "place_name": "Kakl\u0131\u00e7 Mahallesi, \u00c7i\u011fli, Izmir, Aegean Region, 35620, Turkey",
+                "Population - 1 km": 2822,
+                "Population - 5 km": 108461,
+                "Population - 10 km": 465884
+            }
+        },
+        {
+            "id": "8f3f66b4e994881",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.064942678898063,
+                    38.535090520025776
+                ]
+            },
+            "properties": {
+                "id": "8f3f66b4e994881",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 146,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.11411181837320328,
+                "Height Above Nearest Drainage (m)": 44.20000457763672,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 11.600961613804026,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 648.0776244686461,
+                "Nearest Water Type": "stream",
+                "place_name": "Cumhuriyet Mahallesi, \u00c7i\u011fli, Izmir, Aegean Region, 35650, Turkey",
+                "Population - 1 km": 2230,
+                "Population - 5 km": 145222,
+                "Population - 10 km": 497416
+            }
+        },
+        {
+            "id": "8f1ece250134c86",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.641729008738047,
+                    40.923813884882335
+                ]
+            },
+            "properties": {
+                "id": "8f1ece250134c86",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 154,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.0064863767474889755,
+                "Height Above Nearest Drainage (m)": 81,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.28,
+                "Slope (degrees)": 2.312445289720582,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 287.755034532833,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Edirne \u00c7anakkale Yolu, \u0130stasyon Mahallesi, Ke\u015fan, Edirne, Marmara Region, 22800, Turkey",
+                "Population - 1 km": 20,
+                "Population - 5 km": 3671,
+                "Population - 10 km": 42203
+            }
+        },
+        {
+            "id": "8f3f66b81886383",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.72565319081268,
+                    38.43194473300564
+                ]
+            },
+            "properties": {
+                "id": "8f3f66b81886383",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 17,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006721916608512402,
+                "Height Above Nearest Drainage (m)": 15.600000381469727,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 3.9257111086809693,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 96.08549978522376,
+                "Nearest Water Type": "coastline",
+                "place_name": "Mentes TUDES Mareograf \u0130stasyonu (MNTS), Mavi Plaj Caddesi, G\u00fcvendik Mahallesi, Urla, Izmir, Aegean Region, 35450, Turkey",
+                "Population - 1 km": 54,
+                "Population - 5 km": 2768,
+                "Population - 10 km": 7038
+            }
+        },
+        {
+            "id": "8f3f634232a8552",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.13209021740512,
+                    36.802445649519406
+                ]
+            },
+            "properties": {
+                "id": "8f3f634232a8552",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 2,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.006868986412882805,
+                "Height Above Nearest Drainage (m)": 3,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.9274099368650546,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 503.3424910046207,
+                "Nearest Water Type": "coastline",
+                "place_name": "Marmaris Bozburun Yolu, Hisar\u00f6n\u00fc, Marmaris, Mu\u011fla, Aegean Region, Turkey",
+                "Population - 1 km": 379,
+                "Population - 5 km": 2143,
+                "Population - 10 km": 14268
+            }
+        },
+        {
+            "id": "8f3f64c309a9d8c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.696191565199992,
+                    39.30551713478464
+                ]
+            },
+            "properties": {
+                "id": "8f3f64c309a9d8c",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 43,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.013281470164656639,
+                "Height Above Nearest Drainage (m)": 25.000001907348633,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 5.323955496440691,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1137.9821728374488,
+                "Nearest Water Type": "coastline",
+                "place_name": "K\u00fc\u00e7\u00fckk\u00f6y, Ayval\u0131k, Bal\u0131kesir, Marmara Region, 10400, Turkey",
+                "Population - 1 km": 1447,
+                "Population - 5 km": 31260,
+                "Population - 10 km": 39648
+            }
+        },
+        {
+            "id": "8f1ecaae560d65e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.19686310959397,
+                    40.299226890008
+                ]
+            },
+            "properties": {
+                "id": "8f1ecaae560d65e",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 66,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006546681746840477,
+                "Height Above Nearest Drainage (m)": 51.70000076293945,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.4622477415469946,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1748.623637519036,
+                "Nearest Water Type": "stream",
+                "place_name": "Yeni\u00e7iftlik, Biga, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 229,
+                "Population - 5 km": 4417,
+                "Population - 10 km": 37867
+            }
+        },
+        {
+            "id": "8f1ec8a5e2ac724",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.149789003382338,
+                    41.214422924002676
+                ]
+            },
+            "properties": {
+                "id": "8f1ec8a5e2ac724",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 187,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.00645817443728447,
+                "Height Above Nearest Drainage (m)": 6.6999969482421875,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 5.785768754401189,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 2055.5049299488446,
+                "Nearest Water Type": "water",
+                "place_name": "Seymen Mahallesi, Silivri, Istanbul, Marmara Region, Turkey",
+                "Population - 1 km": 1056,
+                "Population - 5 km": 6057,
+                "Population - 10 km": 25694
+            }
+        },
+        {
+            "id": "8f3f606f1ccc143",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.036751189793904,
+                    37.50763603173459
+                ]
+            },
+            "properties": {
+                "id": "8f3f606f1ccc143",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 203,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.09528730064630508,
+                "Height Above Nearest Drainage (m)": 17.400009155273438,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 5.760815280252279,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 228.6335267737725,
+                "Nearest Water Type": "stream",
+                "place_name": "Ak\u00e7aova, \u00c7ine, Ayd\u0131n, Aegean Region, Turkey",
+                "Population - 1 km": 854,
+                "Population - 5 km": 4566,
+                "Population - 10 km": 11092
+            }
+        },
+        {
+            "id": "8f3f4586e9728c4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    29.356490475817402,
+                    36.438062865852096
+                ]
+            },
+            "properties": {
+                "id": "8f3f4586e9728c4",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 191,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00690111517906189,
+                "Height Above Nearest Drainage (m)": 39.19999694824219,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 3.1327783177171886,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 942.3795860355851,
+                "Nearest Water Type": "water",
+                "place_name": "Palamut, Ka\u015f, Antalya, Mediterranean Region, Turkey",
+                "Population - 1 km": 63,
+                "Population - 5 km": 1451,
+                "Population - 10 km": 10987
+            }
+        },
+        {
+            "id": "8f3f64003982250",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.300306377285384,
+                    39.085190681113446
+                ]
+            },
+            "properties": {
+                "id": "8f3f64003982250",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 51,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.23982946574687958,
+                "Height Above Nearest Drainage (m)": 13.699996948242188,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 7.557141979981894,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 616.7289299402119,
+                "Nearest Water Type": "stream",
+                "place_name": "Sucahl\u0131 Mahallesi, K\u0131n\u0131k, Izmir, Aegean Region, 35990, Turkey",
+                "Population - 1 km": 523,
+                "Population - 5 km": 6183,
+                "Population - 10 km": 26809
+            }
+        },
+        {
+            "id": "8f3f628598c0c4d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.292571021644296,
+                    37.48298225164741
+                ]
+            },
+            "properties": {
+                "id": "8f3f628598c0c4d",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 163,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.0068081822246313095,
+                "Height Above Nearest Drainage (m)": 47.69999694824219,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 20.810753365739714,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1737.779188109676,
+                "Nearest Water Type": "pond",
+                "place_name": "Ak-Yenik\u00f6y, Didim, Ayd\u0131n, Aegean Region, Turkey",
+                "Population - 1 km": 168,
+                "Population - 5 km": 3585,
+                "Population - 10 km": 10864
+            }
+        },
+        {
+            "id": "8f3f6285a7265a4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.243977060476055,
+                    37.455257453721714
+                ]
+            },
+            "properties": {
+                "id": "8f3f6285a7265a4",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 94,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.013621573336422443,
+                "Height Above Nearest Drainage (m)": 52.29999923706055,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 4.880284437609882,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2256.1225299311386,
+                "Nearest Water Type": "coastline",
+                "place_name": "Yal\u0131k\u00f6y, Didim, Ayd\u0131n, Aegean Region, Turkey",
+                "Population - 1 km": 49,
+                "Population - 5 km": 2950,
+                "Population - 10 km": 36545
+            }
+        },
+        {
+            "id": "8f1ec86ab042248",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.51129304583803,
+                    40.50665888916707
+                ]
+            },
+            "properties": {
+                "id": "8f1ec86ab042248",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 78,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006526716984808445,
+                "Height Above Nearest Drainage (m)": 72.39999389648438,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 12.671900909082183,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 1016.0053766067143,
+                "Nearest Water Type": "water",
+                "place_name": "Av\u015fa, Marmara, Bal\u0131kesir, Marmara Region, 10940, Turkey",
+                "Population - 1 km": 539,
+                "Population - 5 km": 2834,
+                "Population - 10 km": 3501
+            }
+        },
+        {
+            "id": "8f1ec86abaf0c04",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.51642899656979,
+                    40.51011779476193
+                ]
+            },
+            "properties": {
+                "id": "8f1ec86abaf0c04",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 153,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0065263984724879265,
+                "Height Above Nearest Drainage (m)": 134.3000030517578,
+                "Landform Type": "Peak/ridge",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 2.5049172687337418,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 1066.7846986059699,
+                "Nearest Water Type": "water",
+                "place_name": "Av\u015fa, Marmara, Bal\u0131kesir, Marmara Region, 10940, Turkey",
+                "Population - 1 km": 261,
+                "Population - 5 km": 2848,
+                "Population - 10 km": 3670
+            }
+        },
+        {
+            "id": "8f3f61544c6a220",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    29.05066828624378,
+                    37.86064935037065
+                ]
+            },
+            "properties": {
+                "id": "8f3f61544c6a220",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 339,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.020322468131780624,
+                "Height Above Nearest Drainage (m)": 6.600006103515625,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 6.248178531863679,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3194.346009788432,
+                "Nearest Water Type": "canal",
+                "place_name": "Hac\u0131ey\u00fcpl\u00fc Mahallesi, Merkezefendi, Denizli, Aegean Region, 20050, Turkey",
+                "Population - 1 km": 863,
+                "Population - 5 km": 38801,
+                "Population - 10 km": 325459
+            }
+        },
+        {
+            "id": "8f1ec921b5868db",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    29.52321028839729,
+                    40.66899782228749
+                ]
+            },
+            "properties": {
+                "id": "8f1ec921b5868db",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 191,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006511098239570856,
+                "Height Above Nearest Drainage (m)": 77.60000610351562,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 18.03460483150263,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 1751.902106544085,
+                "Nearest Water Type": "water",
+                "place_name": "\u0130nebeyli, Karam\u00fcrsel, Kocaeli, Marmara Region, Turkey",
+                "Population - 1 km": 256,
+                "Population - 5 km": 20591,
+                "Population - 10 km": 54731
+            }
+        },
+        {
+            "id": "8f1ec898ab84c0d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.261432788874927,
+                    41.44398984199121
+                ]
+            },
+            "properties": {
+                "id": "8f1ec898ab84c0d",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 113,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.00643567880615592,
+                "Height Above Nearest Drainage (m)": 39.400001525878906,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 4.512238801152344,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 630.9322796974103,
+                "Nearest Water Type": "dam",
+                "place_name": "K\u0131r\u0131kk\u00f6y, L\u00fcleburgaz, K\u0131rklareli, Marmara Region, Turkey",
+                "Population - 1 km": 76,
+                "Population - 5 km": 5284,
+                "Population - 10 km": 59416
+            }
+        },
+        {
+            "id": "8f3f60d8e19e136",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.251988568400066,
+                    38.2301120168283
+                ]
+            },
+            "properties": {
+                "id": "8f3f60d8e19e136",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 114,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.006740441080182791,
+                "Height Above Nearest Drainage (m)": 22,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 2.380226308553933,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2844.319262681195,
+                "Nearest Water Type": "lake",
+                "place_name": "\u0130n\u00f6n\u00fc Mahallesi, T\u00fcrkmenk\u00f6y Mahallesi, Torbal\u0131, Izmir, Aegean Region, 35870, Turkey",
+                "Population - 1 km": 908,
+                "Population - 5 km": 32669,
+                "Population - 10 km": 92733
+            }
+        },
+        {
+            "id": "8f3f60c90d280ac",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.230739698821807,
+                    38.07704121303786
+                ]
+            },
+            "properties": {
+                "id": "8f3f60c90d280ac",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 73,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.013508983887732029,
+                "Height Above Nearest Drainage (m)": 3.5,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 4.190143740984399,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 4752.597109861553,
+                "Nearest Water Type": "stream",
+                "place_name": "G\u00f6lova Mahallesi, Menderes, Izmir, Aegean Region, 35471, Turkey",
+                "Population - 1 km": 186,
+                "Population - 5 km": 1661,
+                "Population - 10 km": 8167
+            }
+        },
+        {
+            "id": "8f1eca20cae32a9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.231990080167726,
+                    39.94916955453216
+                ]
+            },
+            "properties": {
+                "id": "8f1eca20cae32a9",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 336,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.00658005615696311,
+                "Height Above Nearest Drainage (m)": 45.399993896484375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.5997177606055906,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1129.6752949510776,
+                "Nearest Water Type": "stream",
+                "place_name": "Davut, Yenice, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 36,
+                "Population - 5 km": 9520,
+                "Population - 10 km": 12559
+            }
+        },
+        {
+            "id": "8f1ecaa45d90446",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.30755378224505,
+                    40.38270039759985
+                ]
+            },
+            "properties": {
+                "id": "8f1ecaa45d90446",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 2,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.0065386551432311535,
+                "Height Above Nearest Drainage (m)": 1.6000001430511475,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 0.5101945812050632,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 83.66701776434182,
+                "Nearest Water Type": "river",
+                "place_name": "Karabiga Airport, 17-08, Karabiga, Biga, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 364,
+                "Population - 5 km": 5499,
+                "Population - 10 km": 8148
+            }
+        },
+        {
+            "id": "8f1ecaa5aa00d5d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.30824306063043,
+                    40.28665169824531
+                ]
+            },
+            "properties": {
+                "id": "8f1ecaa5aa00d5d",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 43,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.006547839846462011,
+                "Height Above Nearest Drainage (m)": 20.200000762939453,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.2006856912213744,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1666.2942470452895,
+                "Nearest Water Type": "stream",
+                "place_name": "E\u011fridere, Biga, Canakkale, Marmara Region, Turkey",
+                "Population - 1 km": 82,
+                "Population - 5 km": 3974,
+                "Population - 10 km": 35149
+            }
+        },
+        {
+            "id": "8f1ec8188a40570",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.355679495657625,
+                    41.040661843953444
+                ]
+            },
+            "properties": {
+                "id": "8f1ec8188a40570",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 143,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.28491947054862976,
+                "Height Above Nearest Drainage (m)": 19.099998474121094,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 5.241114337147403,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 2261.985695100021,
+                "Nearest Water Type": "stream",
+                "place_name": "Banarl\u0131 Mahallesi, S\u00fcleymanpa\u015fa, Tekirda\u011f, Marmara Region, Turkey",
+                "Population - 1 km": 135,
+                "Population - 5 km": 5428,
+                "Population - 10 km": 12793
+            }
+        },
+        {
+            "id": "8f1ec88a8d5b3a0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.352127479519417,
+                    41.37660486735727
+                ]
+            },
+            "properties": {
+                "id": "8f1ec88a8d5b3a0",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 65,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.006442259065806866,
+                "Height Above Nearest Drainage (m)": 8,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.29,
+                "Slope (degrees)": 0.5150896280631425,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1060.446835752717,
+                "Nearest Water Type": "water",
+                "place_name": "\u00c7\u00f6pl\u00fck Yolu, 8 Kas\u0131m Mahallesi, L\u00fcleburgaz, K\u0131rklareli, Marmara Region, 39750, Turkey",
+                "Population - 1 km": 919,
+                "Population - 5 km": 59350,
+                "Population - 10 km": 75941
+            }
+        },
+        {
+            "id": "8f1ecc2daa0a712",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.44681584595707,
+                    41.66800907148689
+                ]
+            },
+            "properties": {
+                "id": "8f1ecc2daa0a712",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 224,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.006413644179701805,
+                "Height Above Nearest Drainage (m)": 45.5,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 2.481653967394206,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 640.5189368145279,
+                "Nearest Water Type": "stream",
+                "place_name": "D020, Kaynarca, P\u0131narhisar, K\u0131rklareli, Marmara Region, 39302, Turkey",
+                "Population - 1 km": 18,
+                "Population - 5 km": 1519,
+                "Population - 10 km": 15221
+            }
+        },
+        {
+            "id": "8f1ec887199b615",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.584068274863473,
+                    41.48286187636393
+                ]
+            },
+            "properties": {
+                "id": "8f1ec887199b615",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 140,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.019295409321784973,
+                "Height Above Nearest Drainage (m)": 3,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 7.027463105392075,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 84.1250622420793,
+                "Nearest Water Type": "stream",
+                "place_name": "Vize - Ahmetbey Yolu, S\u00fctl\u00fcce, P\u0131narhisar, K\u0131rklareli, Marmara Region, Turkey",
+                "Population - 1 km": 24,
+                "Population - 5 km": 3376,
+                "Population - 10 km": 9385
+            }
+        },
+        {
+            "id": "8f3f601b0a6aaa0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.666592569651215,
+                    38.10860396943001
+                ]
+            },
+            "properties": {
+                "id": "8f3f601b0a6aaa0",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 193,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.03375803679227829,
+                "Height Above Nearest Drainage (m)": 62.29998779296875,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 10.873586864044178,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2771.050278832772,
+                "Nearest Water Type": "stream",
+                "place_name": "Karateke Mahallesi, Tire, Izmir, Aegean Region, 35900, Turkey",
+                "Population - 1 km": 81,
+                "Population - 5 km": 15312,
+                "Population - 10 km": 50033
+            }
+        },
+        {
+            "id": "8f3f622c890ba53",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.776526932432695,
+                    36.782408777900706
+                ]
+            },
+            "properties": {
+                "id": "8f3f622c890ba53",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 78,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.020611990243196487,
+                "Height Above Nearest Drainage (m)": 56.20000076293945,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 11.02269755481984,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 84.90378743698548,
+                "Nearest Water Type": "water",
+                "place_name": "Emecik, Dat\u00e7a, Mu\u011fla, Aegean Region, Turkey",
+                "Population - 1 km": 17,
+                "Population - 5 km": 972,
+                "Population - 10 km": 6280
+            }
+        },
+        {
+            "id": "8f3f6420e70d2a1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.853375498509774,
+                    38.89270711450741
+                ]
+            },
+            "properties": {
+                "id": "8f3f6420e70d2a1",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 156,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.0066793616861104965,
+                "Height Above Nearest Drainage (m)": 74,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 2.2036809178693373,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3553.734368573448,
+                "Nearest Water Type": "pond",
+                "place_name": "Akhisar, Manisa, Aegean Region, 45200, Turkey",
+                "Population - 1 km": 832,
+                "Population - 5 km": 62751,
+                "Population - 10 km": 102755
+            }
+        },
+        {
+            "id": "8f1ecb4c8ba6a5b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.851423824744042,
+                    39.61028805498949
+                ]
+            },
+            "properties": {
+                "id": "8f1ecb4c8ba6a5b",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 218,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.03306112810969353,
+                "Height Above Nearest Drainage (m)": 7.1999969482421875,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 5.1636647657744215,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3703.3418823897273,
+                "Nearest Water Type": "ditch",
+                "place_name": "Bal\u0131kesir \u00c7evre Yolu, Orta Mand\u0131ra, Alt\u0131eyl\u00fcl, Bal\u0131kesir, Marmara Region, 10100, Turkey",
+                "Population - 1 km": 928,
+                "Population - 5 km": 103053,
+                "Population - 10 km": 262091
+            }
+        },
+        {
+            "id": "8f3f68104a35cf4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    31.34973006810246,
+                    36.94473454316969
+                ]
+            },
+            "properties": {
+                "id": "8f3f68104a35cf4",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 351,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.006856346968561411,
+                "Height Above Nearest Drainage (m)": 84.60000610351562,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 4.762880155889213,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 3566.8429552247276,
+                "Nearest Water Type": "river",
+                "place_name": "Manavgat, Antalya, Mediterranean Region, Turkey",
+                "Population - 1 km": 86,
+                "Population - 5 km": 455,
+                "Population - 10 km": 3380
+            }
+        },
+        {
+            "id": "8f3f681b4910805",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    31.146789766394146,
+                    36.84690480613945
+                ]
+            },
+            "properties": {
+                "id": "8f3f681b4910805",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 1,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.0549212321639061,
+                "Height Above Nearest Drainage (m)": 0.10000002384185791,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.38633335753669573,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 405.0471502326566,
+                "Nearest Water Type": "drain",
+                "place_name": "Bo\u011fazkent, Serik, Antalya, Mediterranean Region, Turkey",
+                "Population - 1 km": 962,
+                "Population - 5 km": 7797,
+                "Population - 10 km": 45638
+            }
+        },
+        {
+            "id": "8f3f6e2c467335c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    30.576266450116112,
+                    36.57571416944965
+                ]
+            },
+            "properties": {
+                "id": "8f3f6e2c467335c",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 6,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.26866286993026733,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 859.1011709224563,
+                "Nearest Water Type": "coastline",
+                "place_name": "Kiri\u015f Caddesi, Kirish, Kemer, Antalya, Mediterranean Region, 07990, Turkey",
+                "Population - 1 km": 656,
+                "Population - 5 km": 11928,
+                "Population - 10 km": 15359
+            }
+        },
+        {
+            "id": "8f2d3502486da41",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    30.38570943448555,
+                    40.84510247197547
+                ]
+            },
+            "properties": {
+                "id": "8f2d3502486da41",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 101,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.019481942057609558,
+                "Height Above Nearest Drainage (m)": 70.39999389648438,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 10.377944590001093,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 904.5466097802987,
+                "Nearest Water Type": "water",
+                "place_name": "Tekeler Mahallesi, Adapazar\u0131, Sakarya, Marmara Region, Turkey",
+                "Population - 1 km": 2247,
+                "Population - 5 km": 99926,
+                "Population - 10 km": 302145
+            }
+        },
+        {
+            "id": "8f2d358b27942e3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    30.024499072545836,
+                    40.78378572007678
+                ]
+            },
+            "properties": {
+                "id": "8f2d358b27942e3",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 101,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.01949961856007576,
+                "Height Above Nearest Drainage (m)": 86,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 7.649880116330864,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1909.6487334076794,
+                "Nearest Water Type": "river",
+                "place_name": "Alikahya Atat\u00fcrk Mahallesi, \u0130zmit, Kocaeli, Marmara Region, 4130, Turkey",
+                "Population - 1 km": 3644,
+                "Population - 5 km": 135888,
+                "Population - 10 km": 373834
+            }
+        },
+        {
+            "id": "8f2d04cdad0e882",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    32.698168800057026,
+                    41.231243994974065
+                ]
+            },
+            "properties": {
+                "id": "8f2d04cdad0e882",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 395,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.006456551142036915,
+                "Height Above Nearest Drainage (m)": 21,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 6.981103230214881,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1182.784987743121,
+                "Nearest Water Type": "river",
+                "place_name": "Musalla, Safranbolu, Karab\u00fck, Black Sea Region, 78600, Turkey",
+                "Population - 1 km": 858,
+                "Population - 5 km": 53453,
+                "Population - 10 km": 143929
+            }
+        },
+        {
+            "id": "8f3f694841536cd",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    32.2814653264294,
+                    36.27127931131179
+                ]
+            },
+            "properties": {
+                "id": "8f3f694841536cd",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 5,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.020747121423482895,
+                "Height Above Nearest Drainage (m)": 4.200000286102295,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": -1,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 251.4535949171065,
+                "Nearest Water Type": "coastline",
+                "place_name": "Fatih Sultan Mehmet Sokak, K\u0131\u015flabuca\u011f\u0131, Gazipa\u015fa, Antalya, Mediterranean Region, Turkey",
+                "Population - 1 km": 1198,
+                "Population - 5 km": 29089,
+                "Population - 10 km": 37809
+            }
+        },
+        {
+            "id": "8f2d01cc3c00b86",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    35.03998674247321,
+                    41.94862454845339
+                ]
+            },
+            "properties": {
+                "id": "8f2d01cc3c00b86",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 80,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.1021762490272522,
+                "Height Above Nearest Drainage (m)": 18.200000762939453,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 5.013574750548521,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 15,
+                "Distance to Waterway (m)": 2131.6145107818993,
+                "Nearest Water Type": "river",
+                "place_name": "Demirci, Sinop Merkez, Sinop, Black Sea Region, Turkey",
+                "Population - 1 km": 41,
+                "Population - 5 km": 4879,
+                "Population - 10 km": 29101
+            }
+        },
+        {
+            "id": "8f2da4a648f2c19",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    33.39419621191597,
+                    36.14590111144097
+                ]
+            },
+            "properties": {
+                "id": "8f2da4a648f2c19",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 216,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.027706671506166458,
+                "Height Above Nearest Drainage (m)": 162.3000030517578,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 8.549925738153643,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1044.1412730364696,
+                "Nearest Water Type": "coastline",
+                "place_name": "Ayd\u0131nc\u0131k, Mersin, Mediterranean Region, Turkey",
+                "Population - 1 km": 62,
+                "Population - 5 km": 5427,
+                "Population - 10 km": 9846
+            }
+        },
+        {
+            "id": "8f2da5c710ecca1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    33.899854159681944,
+                    36.32967752600166
+                ]
+            },
+            "properties": {
+                "id": "8f2da5c710ecca1",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 13,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.006910569965839386,
+                "Height Above Nearest Drainage (m)": 0.40000057220458984,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 1.5654643444417249,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 272.50289297285934,
+                "Nearest Water Type": "stream",
+                "place_name": "Ta\u015fucu, Bolacal\u0131koyuncu, Silifke, Mersin, Mediterranean Region, 33900, Turkey",
+                "Population - 1 km": 900,
+                "Population - 5 km": 10809,
+                "Population - 10 km": 41853
+            }
+        },
+        {
+            "id": "8f2da9992c35095",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    38.20453740830579,
+                    37.77834100288466
+                ]
+            },
+            "properties": {
+                "id": "8f2da9992c35095",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 764,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.949320375919342,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 2.4717746108297525,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 907.2258176524034,
+                "Nearest Water Type": "ditch",
+                "place_name": "7. Cadde, Organize Sanayi B\u00f6lgesi, T\u00fcrkiye Petrolleri Mah., Adiyaman, Ad\u0131yaman Merkez, Ad\u0131yaman, Southeastern Anatolia Region, 02040, Turkey",
+                "Population - 1 km": 3008,
+                "Population - 5 km": 59242,
+                "Population - 10 km": 173007
+            }
+        }
+    ]
+}
