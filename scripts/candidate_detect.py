@@ -1,17 +1,19 @@
 import descarteslabs as dl
 import functools
+import geopandas as gpd
+import h3
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-import geopandas as gpd
 import rasterio as rs
+import shapely
 from rasterio.windows import Window
 from skimage.feature import blob_doh
 from skimage.feature.peak import peak_local_max
 from sklearn.neighbors import KDTree
 from tqdm.contrib.concurrent import process_map
 
-def merge_similar_sites(candidate_sites, name, search_radius=0.0025):
+def merge_similar_sites(candidate_sites, search_radius=0.0025, plot=True):
     """
     This process iteratively moves points closer together by taking the mean position of all
     matched points. It then searches the KD tree using the unique clusters in these new points.
@@ -42,15 +44,15 @@ def merge_similar_sites(candidate_sites, name, search_radius=0.0025):
             mean_coords = np.array(mean_coords)
             break
         num_coords = len(mean_coords)
-        
-    unique_sites = gpd.GeoDataFrame(mean_coords, columns=['lon', 'lat'], geometry=gpd.points_from_xy(*mean_coords.T))
-    unique_sites['name'] = [f"{name}_{i+1}" for i in unique_sites.index]
-    plt.figure(figsize=(10,10), dpi=150, facecolor=(1,1,1))
-    plt.scatter(coords[:,0], coords[:,1], s=5, label='Original')
-    plt.scatter(mean_coords[:,0], mean_coords[:,1], s=3, c='r', label='Unique')
-    plt.axis('equal')
-    plt.legend()
-    plt.show()
+
+    ids = [h3.geo_to_h3(coord[1], coord[0], 15) for coord in mean_coords]
+    unique_sites = gpd.GeoDataFrame({'id': ids}, geometry=gpd.points_from_xy(*mean_coords.T))
+    if plot:
+        plt.figure(figsize=(10,10), dpi=150, facecolor=(1,1,1))
+        plt.scatter(coords[:,0], coords[:,1], s=5, label='Original')
+        plt.scatter(mean_coords[:,0], mean_coords[:,1], s=3, c='r', label='Unique')
+        plt.axis('equal')
+        plt.show()
     
     return unique_sites
 
@@ -258,7 +260,7 @@ class DescartesDetectRun(object):
             
     def detect_candidates(self, tile_path):
         # Detect candidates from directory of tiles. Multiprocessed
-        blobs = candidate_detect.blob_detect(
+        blobs = blob_detect(
             tile_path+'.tif',
             self.pred_threshold,
             self.min_sigma
