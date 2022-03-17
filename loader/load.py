@@ -40,7 +40,7 @@ def idfunc(feature):
 
 
 def require_positive_area(feature):
-    area_km = feature["properties"][AREA_KEY]
+    area_km = feature["properties"].get(AREA_KEY,0.0)
     return type(area_km) == float and area_km > 0
 
 
@@ -92,7 +92,7 @@ def load_site_file(index, AUTH, API):
 
     old_ids_to_remove = map(lambda site: site['id'], existing_sites)
 
-    # requests.delete(f"{API}/sites", auth=AUTH)
+    #requests.delete(f"{API}/sites", auth=AUTH)
 
     for name, contours in itertools.groupby(
         sorted(index["features"], key=keyfunc), keyfunc
@@ -173,10 +173,15 @@ def add_metadata(csv_file, API):
             coords =  str(bbox[0])+","+str(bbox[1])+","+str(bbox[2])+","+str(bbox[3])  # prob do something more pythonic 
 
             url = API+"/sites?bbox="+coords
-            resp = requests.get(url).json()
+            resp = {}
+            try:
+                resp = requests.get(url).json()
 
-            if len(resp["features"]) == 0:               
-                continue
+                if len(resp["features"]) == 0:               
+                    continue
+            except Exception as ex:
+                print(f'error: {ex}')
+                pass
             
             found += 1
             feature = resp["features"][0] 
@@ -200,7 +205,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Site Data Loader')
     parser.add_argument("--user",required=False,nargs=1,default=["admin"], type=str,help="Username for transactional API operations", dest="user")
     parser.add_argument("--pw",required=False,nargs=1,default=["plastics"], type=str,help="Password for transactional API operations", dest="password")
-    parser.add_argument("--api",required=False,nargs=1,default=["https://api.dev.plastic.watch.earthrise.media"], type=str,help="API Endpoint", dest="api")
+    parser.add_argument("--api",required=False,nargs=1,default=["https://api.plastic.watch.earthrise.media"], type=str,help="API Endpoint", dest="api")
     parser.add_argument("--dir",required=True,nargs=1, type=str, help="Directory to find geojson files", dest="dir")
 
     args = vars(parser.parse_args())
@@ -214,10 +219,10 @@ if __name__ == "__main__":
     except:
         cache_map = {}
 
-    print(f"DELETE (old features)")
-    requests.delete(
-        f"{api}/sites", headers=HEADERS, auth=auth
-        ).raise_for_status()
+    # print(f"DELETE (old features)")
+    # requests.delete(
+    #     f"{api}/sites", headers=HEADERS, auth=auth
+    #     ).raise_for_status()
 
     # get all geojson files in provided directory
     print(auth)
