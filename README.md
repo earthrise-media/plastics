@@ -1,80 +1,43 @@
-# Detecting Plastic Waste using Satellite Imagery
-[Overview of project](https://gpw.earthrise.media/)
-
-![Indonesia V0 Overview copy](https://user-images.githubusercontent.com/13071901/126748336-1587fe8f-4286-4bc5-802d-167e07785411.png)
-![Temesi Contours through Time](./assets/Temesi%202019-2020%20Preds%20Transparent.png)
+# Detecting and Monitoring Plastic Waste Aggregations in Sentinel-2 Imagery
+![Water-Adjacent Dump Sites](./assets/Waterside.jpg)
+[Explore the Data](https://plastic.watch.earthrise.media/). [Read an overview of the project](https://gpw.earthrise.media/). [Read a paper detailing the work](https://example.com)
 
 
 ## Project Structure
-This repo contains the tools for detecting plastics and/or landfills using Sentinel 2 imagery. The pipeline is mostly run through a set of Jupyter notebooks.
+There are three core domains in this repo: Model Training, Site Detection, and Metadata Generation and Site Monitoring. Reference the [GPW Pipeline Diagram](./assets/GPW%20Diagrams%20-%20Full%20Pipeline%20Stacked.pdf) for information on how pipeline components are related. These scripts are run through a series of notebooks.
 
 ### Setup
 
-The code is known to run on Python 3.7 but not 3.6. 
+The code is known to run on Python >= 3.7
 ```
 $ python -m venv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Imports are given relative to the repo base directory, which therefore must be on PYTHONPATH. Either in your .bash_profile or at the end of the file env/bin/activate add:
-
-```
-export PYTHONPATH=/path/to/plastics:$PYTHONPATH
-```
+Imports are given relative to the repo base directory, which therefore must be on PYTHONPATH. Either in your .bash_profile or at the end of the file env/bin/activate add: `export PYTHONPATH=/path/to/plastics:$PYTHONPATH`
 
 The bulk-processing pipeline runs on Descartes Labs. Authorization on your local is handled via the command line helper function: 
-```
-$ descarteslabs auth login
-``` 
+`$ descarteslabs auth login` 
 Follow the link to enter user email and password. If needed, see [further instructions](https://docs.descarteslabs.com/authentication.html) from Descartes.
 
-### Notebooks
-There are two parallel pipelines. One for the pixelwise spectral classifier, and one for the patch-based spatial classifier. The pixel classifier is responsible for generating candidate sites, while the patch classifier is responsible for validating candidates.
+### Model Training
+1. Create pixel and patch Dataset. [`create_spectrogram_dataset.ipynb`](notebooks/create_spectrogram_dataset.ipynb)
+2. Train pixel classifier. [`train_spectrogram_classifier.ipynb`](notebooks/train_spectrogram_classifier.ipynb)
+3. Train weakly-labeled patch classifier. [`train patch classifier.ipynb`](notebooks/Train%20Patch%20Classifier%20Weak%20Labeling%20-%20Ensemble,%20SVM,%201px,%20LARGE.ipynb)
 
-*Pixel Classifier*
+The outputs of model training are a temporal pixel and a patch classifier. These are stored in the [models](models) directory.
 
-- `create_pixel_dataset`: Given a set of sampling locations, generate a set of pixel vectors and labels. These pixel vectors and labels are pickled and saved to `data/training_data/pixel_vectors/`.
-- `train_pixel_classifier`: Train a neural network off of data and labels generated in `create_pixel_dataset`. Model is exported to `models/`.
-- `run_pixel_classifier`: This functionality is duplicated in the script `nn_predict.py` for a single site, and also within the `train_pixel_classifier` notebook. This is a standalone notebook for evaluating a pixel classifier.
+### Site Detection
+1. Generate population-limited area. [`generate_populated_dltiles.ipynb`](notebooks/generate_populated_dltiles.ipynb)
+2. Deploy pixel + patch classifier inference on Descartes. [`descartes_spectrogram_run_withpop.ipynb`](notebooks/descartes_spectrogram_run_withpop.ipynb)
+3. Detect candidates on Descartes. [`descartes_candidate_detect.ipynb`](notebooks/descartes_candidate_detect.ipynb)
+4. Filter pixel candidates by patch classifier intersection. [`query_patch_classifier.ipynb`](notebooks/query_patch_classifier.ipynb)
 
-*Patch Classifier*
+The end product of this site detection flow is a set of intersection candidate points stored in the [`candidate_sites/{model_version}`](data/model_outputs/candidate_sites/) directory. These sites are then manually validated, and saved in the [`sampling_locations`](data/sampling_locations) directory.
 
-- `create_patch_dataset`: Given a set of sampling locations, generate a stack of multispectral images and labels. These are pickled and saved to `data/training_data/patches/`.
-- `train_patch_classifier`: Train a neural network off of data and labels generated in `create_patch_dataset`. Model is exported to `models/`.
-- `run_patch_classifier`: Given a set of candidate sites, run the patch classifier to verify whether the detection is valid. A csv and GeoJSON of confirmed candidate site locations is exported to `data/model_outputs/candidate_sites/`.
+### Metadata and Monitoring
+1. Generate metadata for confirmed sites. [`generate_metadata.ipynb`](notebooks/generate_metadata.ipynb)
+2. Generate contours for confirmed sites on Descartes. [`descartes_contour_run.ipynb`](notebooks/descartes_contour_run.ipynb)
 
-
-*Postprocessing and Monitoring*
-
-- `detect_candidates`: The pixel classifier is run across a larger region on Descartes Labs. It creates a GeoTIFF of per-pixel plastic detection probabilities. `detect_candidates` takes in the heatmap GeoTIFF and isolates "blobs" of high probability predictions. The locations of these blobs are then exported as candidate sites to `data/model_outputs/candidate_sites/`.
-- `generate_contours`: Given a list of sites, monitor how they change through time. Generate a site boundary contour as well as compute surface area. Contours and areas are exported as a GeoJSON to `data/model_outputs/site_contours` and images are site-specific contours are exported to `data/model_outputs/site_contours/monthly_contours`. These monthly contours are not tracked on github.
-
-*Other*
-
-- Notebooks that are not yet part of the core pipeline, but may still be useful are stored in the `notebooks/explorations/` directory.
-- Notebooks used for data visualization are stored in the `notebooks/visualization/` directory.
-
-### Scripts
-Some core functions that are shared across notebooks are defined in `get_s2_data_ee.py` and `viz_tools.py`. 
-Other useful scripts include:
-
-- `nn_predict.py`: Run a pixel classifier on a region of interest.
-- `deploy_nn_v0.py`: Run the pixel classifier on Descartes Labs.
-
-### Data
-- `data/sampling_locations/`: Lists of sampling sites for confirmed positive and negative classes.
-- `data/training_data/patch_histories`: Raw export of data downloaded from GEE. These `patch_histories` are the base data structure for most of the pipeline (e.g. they can be turned into pixel vector datasets or patch datasets). They are structured as a dictionary of arrays in the format `[date][site_name][band][band_img]`. Not tracked on github because of file size.
-- `data/training_data/pixel_vectors/`: Pickled pixel vector files. These are used to train the pixel classifier. Ideally, each new dataset should have a separate pixel vector. These are then combined when training a network. Not tracked on github because of file size.
-- `data/training_data/patches/`: Pickled patch datasets. They are an analogue to the `pixel_vectors` data. Not tracked on github because of file size.
-- `data/model_outputs/`: These are derived products created from models. They include output heatmaps, candidate sites, and site monitoring contours.
-- `data/misc/`: Files that are useful to track on git, but don't have a core function in the pipeline. Oftentimes one-off dataset creations.
-
-### Models
-Pixel and patch classifier models are saved as keras .h5 files to the models directory. Given their small size, they are tracked on github.
-
-### Web Visualizations
-This repo works with github pages. Any `.html` file uploaded to the `/docs/` folder are viewable at `https://earthrise-media.github.io/plastics/page_name.html`.
-
-### Assets
-Miscellaneous files that are useful to track over time, or need to be referenced in the repo. Generally useful visualizations are often saved here.
+These outputs are pushed directly to the API and are not stored locally.
