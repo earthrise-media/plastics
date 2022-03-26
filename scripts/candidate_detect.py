@@ -157,7 +157,7 @@ def detect_blobs_tiled(source_dir, name, model_name, pred_threshold=0.75, min_si
             for site in tile_sites:
                 candidate_sites.append(site)
     print(len(candidate_sites), "sites detected overall")
-    candidate_gdf = merge_similar_sites(candidate_sites, name, search_radius=merge_radius)
+    candidate_gdf = merge_similar_sites(candidate_sites, search_radius=merge_radius)
     
     print(len(candidate_sites) - len(candidate_gdf), "sites merged")
     if save:
