@@ -140,7 +140,7 @@ def detect_blobs_tiled(source_dir, name, model_name, pred_threshold=0.75, min_si
     area_threshold establishes a lower bound on candidate blob size. Reduce to detect smaller blobs
     """
     files = os.listdir(source_dir)
-    file_paths = [os.path.join(source_dir, file) for file in files]
+    file_paths = [os.path.join(source_dir, f) for f in files if '.DS_Store' not in f]
     
     blob_detect_partial = functools.partial(blob_detect, 
                                             pred_threshold=pred_threshold, 
