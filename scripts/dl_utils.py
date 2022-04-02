@@ -1,10 +1,10 @@
-
 import datetime
 import json
 import os
 
 import descarteslabs as dl
 from dateutil.relativedelta import relativedelta
+import geopandas as gpd
 import numpy as np
 from scipy.stats import mode
 import shapely
@@ -120,63 +120,6 @@ def filt_tiles_by_pop(all_keys, pop_thresh):
     print(f"Filtered to {len(keys_filt)}")
     return keys_filt
 
-def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
-                   s2cloud_id='sentinel-2:L1C:dlcloud:v1'):
-    """
-    Download a stack of cloud-masked Sentinel data
-    Inputs:
-        - polygon: Geojson polygon enclosing the region of data to be extracted
-        - start_date/end_date: The time bounds of the search
-    Returns:
-        - A list of images of shape (height, width, channels)
-    """
-    cloud_scenes, _ = dl.scenes.search(
-        polygon,
-        products=[s2cloud_id],
-        start_datetime=start_date,
-        end_datetime=end_date,
-        limit=None
-    )
-
-    scenes, geoctx = dl.scenes.search(
-        polygon,
-        products=[s2_id],
-        start_datetime=start_date,
-        end_datetime=end_date,
-        limit=None
-    )
-
-    # select only scenes that have a cloud mask
-    cloud_dates = [scene.properties.acquired for scene in cloud_scenes]
-    dates = [scene.properties.acquired for scene in scenes]
-    shared_dates = set(cloud_dates) & set(dates)
-    scenes = scenes.filter(
-        lambda x: x.properties.acquired in shared_dates)
-    cloud_scenes = cloud_scenes.filter(
-        lambda x: x.properties.acquired in shared_dates)
-
-    # A cloud stack is an array with shape (num_img, data_band, height, width)
-    # A value of 255 means that the pixel is cloud free, 0 means cloudy
-    cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'], ctx=geoctx)
-
-    img_stack, raster_info = scenes.stack(
-        bands=SENTINEL_BANDS, ctx=geoctx, raster_info=True)
-    cloud_masks = np.repeat(cloud_stack, repeats = 12, axis=1)
-
-    # Add cloud masked pixels to the image mask
-    img_stack.mask[cloud_masks.data == 0] = True
-
-    # Remove fully masked images and reorder to channels last
-    metadata = []
-    for img, info in zip(img_stack, raster_info):
-        if np.sum(img) > 0:
-            metadata.append(info)
-
-    img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
-                     if np.sum(img) > 0]
-
-    return img_stack, metadata
-
 def pad_patch(patch, height, width=None):
     """
     Depending on how a polygon falls across pixel boundaries, it can be slightly
@@ -206,6 +149,76 @@ def pad_patch(patch, height, width=None):
             patch = patch[margin:margin+height, margin:margin+height]
     return patch
 
+def download_patch(polygon, start_date, end_date, s2_id='sentinel-2:L1C',
+                   s2cloud_id='sentinel-2:L1C:dlcloud:v1'):
+    """
+    Download a stack of cloud-masked Sentinel data
+    Inputs:
+        - polygon: Geojson polygon enclosing the region of data to be extracted
+        - start_date/end_date: The time bounds of the search
+    Returns:
+        - A list of images of shape (height, width, channels)
+    """
+    cloud_scenes, _ = dl.scenes.search(
+        polygon,
+        products=[s2cloud_id],
+        start_datetime=start_date,
+        end_datetime=end_date,
+        limit=None
+    )
+    #print([s.properties.cloud_fraction for s in cloud_scenes])
+    #cloud_scenes = cloud_scenes.filter(lambda s: s.properties.cloud_fraction  < 0.5)
+    #print([s.properties.file_sizes[0] for s in cloud_scenes])
+    #cloud_scenes = cloud_scenes.filter(lambda s: s.properties.file_sizes[0] / 2140200 > 0.8)
+    #print(len(cloud_scenes), "scenes after filter for", start_date, end_date)
+    scenes, geoctx = dl.scenes.search(
+        polygon,
+        products=[s2_id],
+        start_datetime=start_date,
+        end_datetime=end_date,
+        limit=None,
+        cloud_fraction=0.3
+    )
+    scenes = scenes.filter(lambda s: s.coverage(geoctx) > 0.9)
+
+    cloud_keys = [scene.properties.key for scene in cloud_scenes]
+    data_keys = [scene.properties.key for scene in scenes]
+    shared_keys = set(cloud_keys) & set(data_keys)
+    scenes = scenes.filter(
+        lambda x: x.properties.key in shared_keys)
+    cloud_scenes = cloud_scenes.filter(
+        lambda x: x.properties.key in shared_keys)
+
+    if len(scenes) > 0 and len(cloud_scenes) > 0:
+        print("Downloading", len(scenes), "scenes at", datetime.datetime.isoformat(datetime.datetime.now())[:19], end='\r')
+        # A cloud stack is an array with shape (num_img, data_band, height, width)
+        # A value of 255 means that the pixel is cloud free, 0 means cloudy
+        cloud_stack = cloud_scenes.stack(bands=['valid_cloudfree'], ctx=geoctx)
+
+        img_stack, raster_info = scenes.stack(
+            bands=SENTINEL_BANDS, ctx=geoctx, raster_info=True)
+        # add date to metadata
+        dates = [scene.properties.acquired[:10] for scene in scenes]
+        for i, date in enumerate(dates):
+            raster_info[i]['date'] = date
+        cloud_masks = np.repeat(cloud_stack, repeats = 12, axis=1)
+        # Add cloud masked pixels to the image mask
+        img_stack.mask[cloud_masks.data == 0] = True
+
+        # Remove fully masked images and reorder to channels last
+        metadata = []
+        for img, info in zip(img_stack, raster_info):
+            if np.sum(img) > 0:
+                metadata.append(info)
+
+        img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
+                        if np.sum(img) > 0]
+
+        return img_stack, metadata
+    
+    else:
+        return [], []
+
 def download_batches(polygon, start_date, end_date, batch_months):
     """Download cloud-masked Sentinel imagery in time-interval batches.
 
@@ -223,10 +236,11 @@ def download_batches(polygon, start_date, end_date, batch_months):
     end = start + delta
     while end <= datetime.date.fromisoformat(end_date):
         try:
+            print("Downloading batch from", start.isoformat(), "to", end.isoformat(), end='\r')
             batch, raster_info = download_patch(polygon, start.isoformat(),
                                                 end.isoformat())
         except IndexError as e:
-            print(f'Failed to retreive month {start.isoformat()}: {repr(e)}')
+            print(f'Failed to retrieve month {start.isoformat()}: {repr(e)}')
             batch, raster_info = [], []
         # Sometimes there are patches with no data. Ignore those
         if len(np.shape(batch)) > 1:
@@ -310,12 +324,12 @@ def pair(mosaics, interval=6, dates=None):
     Args:
         mosaics: A list of masked arrays
         interval: Integer interval between mosaics, in number of mosaic periods
-        dates: Optional arg to return the dates of the pairs
+        dates: Optional arg to return the start dates of the pairs
 
     Returns: A list of lists of images.
     """
     pairs = [[a, b] for a, b in zip(mosaics, mosaics[interval:])
-                  if a is not None and b is not None]
+            if a is not None and b is not None]
     if dates:
         date_list = []
         for date, a,b in zip(dates, mosaics, mosaics[interval:]):
@@ -466,6 +480,178 @@ def patches_from_tile(tile, raster_info, width, stride):
             tile_geometry = [nw_coord, sw_coord, se_coord, ne_coord, nw_coord]
             patch_coords.append(shapely.geometry.Polygon(tile_geometry))
     return patches, patch_coords
+
+def compute_cost(roi, pop_limited=True):
+    """
+    Estimate the cost of a Descartes run. 
+    These numbers are rough, based on values that DL reported for two runs.
+    """
+    tile_cost = 21888 / 73112
+    data_fraction = 0.934
+    area_cost = 21888 / 2278075879720
+    if pop_limited:
+        gdf = gpd.read_file(f'../data/boundaries/{roi}_pop_0.5_dltiles.geojson').to_crs('epsg:3857')
+        #print(f"The DL cost per tile is ${tile_cost:.2f}")
+        print(f"The total cost for {roi.title()} is ${tile_cost * len(gdf):,.0f}")
+        print(f"The data cost is ${tile_cost * len(gdf) * data_fraction:,.0f} and the compute cost is ${tile_cost * len(gdf) * (1 - data_fraction):,.0f}")
+    else:
+        gdf = gpd.read_file(f'../data/boundaries/{roi}.geojson').to_crs('epsg:3857')
+        area = gdf.area.sum()
+        print(f"The total cost for {roi.title()} is ${area_cost * area:,.0f}")
+        print(f"The data cost is ${area_cost * area * data_fraction:,.0f} and the compute cost is ${area_cost * area * (1 - data_fraction):,.0f}")
+
+
+class SentinelData():
+    """
+    A class to search for and download Sentinel data.
+    """
+
+    def __init__(self, polygon, start_date, end_date, mosaic_period, spectrogram_interval, method='min'):
+        """
+        Inputs:
+            - polygon: A shapely polygon feature
+            - start_date: A date string
+            - end_date: A date string
+            - mosaic_period: A string describing the period of time to composite
+            - spectrogram_interval: A string describing the time interval between composites
+            - method: The method to use when compositing images
+        """
+        self.polygon = polygon
+        self.start_date = start_date
+        self.end_date = end_date
+        self.spectrogram_interval = spectrogram_interval
+        self.mosaic_period = mosaic_period
+        self.method = method
+    
+    def search_scenes(self):
+        """
+        Search for Sentinel scenes that cover a polygon for the given date range.
+        Scenes are filtered to limit clouds
+        Returns a list of scenes, cloud_scenes, and a geoctx
+        """
+
+        cloud_scenes, _ = dl.scenes.search(
+            self.polygon,
+            products=['sentinel-2:L1C:dlcloud:v1'],
+            start_datetime=self.start_date,
+            end_datetime=self.end_date,
+            limit=None
+        )
+        
+        scenes, geoctx = dl.scenes.search(
+            self.polygon,
+            products=['sentinel-2:L1C'],
+            start_datetime=self.start_date,
+            end_datetime=self.end_date,
+            limit=None,
+            cloud_fraction=0.3
+        )
+        scenes = scenes.filter(lambda s: s.coverage(geoctx) > 0.9)
+
+        cloud_keys = [scene.properties.key for scene in cloud_scenes]
+        data_keys = [scene.properties.key for scene in scenes]
+        shared_keys = set(cloud_keys) & set(data_keys)
+        scenes = scenes.filter(
+            lambda x: x.properties.key in shared_keys)
+        cloud_scenes = cloud_scenes.filter(
+            lambda x: x.properties.key in shared_keys)
+
+        self.scenes = scenes
+        self.cloud_scenes = cloud_scenes
+        self.geoctx = geoctx
+
+        return scenes, cloud_scenes, geoctx
+
+    def download_scenes(self):
+        """
+        Download the scenes from the search results.
+        Returns a list of scenes and a associated metadata
+        """
+        print("Downloading", len(self.scenes), "scenes at", datetime.datetime.isoformat(datetime.datetime.now())[:19], end='\r')
+        # A cloud stack is an array with shape (num_img, data_band, height, width)
+        # A value of 255 means that the pixel is cloud free, 0 means cloudy
+        cloud_stack = self.cloud_scenes.stack(bands=['valid_cloudfree'], ctx=self.geoctx)
+
+        img_stack, raster_info = self.scenes.stack(
+            bands=SENTINEL_BANDS, ctx=self.geoctx, raster_info=True)
+        # add date to metadata
+        dates = [scene.properties.acquired[:10] for scene in self.scenes]
+        for i, date in enumerate(dates):
+            raster_info[i]['date'] = date
+        cloud_masks = np.repeat(cloud_stack, repeats = 12, axis=1)
+        # Add cloud masked pixels to the image mask
+        img_stack.mask[cloud_masks.data == 0] = True
+
+        # Remove fully masked images and reorder to channels last
+        metadata = []
+        for img, info in zip(img_stack, raster_info):
+            if np.sum(img) > 0:
+                metadata.append(info)
+
+        img_stack = [np.moveaxis(img, 0, -1) for img in img_stack
+                        if np.sum(img) > 0]
+
+        self.img_stack = img_stack
+        self.metadata = metadata
+
+        return img_stack, metadata
+
+    def create_composites(self):
+        """
+        Create composites from the downloaded images over the mosaic period.
+        Returns a list of composites, a list of composite start dates, and composite metadata
+        """
+        delta = relativedelta(months=self.mosaic_period)
+        start = datetime.date.fromisoformat(self.start_date)
+        end = start + delta
+        img_dates = [datetime.date.fromisoformat(d['date']) for d in self.metadata]
+
+        self.composites = []
+        self.composite_dates = []
+        self.composite_metadata = []
+
+        while end <= datetime.date.fromisoformat(self.end_date) + delta:
+            for date in img_dates:
+                # find indices where date is within start and end
+                indices = [i for i, x in enumerate(img_dates) if x >= start and x <= end]
+            if len(indices) > 0:
+                self.composites.append(mosaic([self.img_stack[i] for i in indices], self.method))
+                self.composite_dates.append(start.isoformat()[:10])
+                self.composite_metadata.append(self.metadata[indices[0]])
+            start += delta
+            end += delta
+        
+    def create_pairs(self, enforce_match=False):
+        """
+        Create pairs of composites that are offset by the spectrogram interval.
+        If no pair exists for a pair of months, that pair is skipped.
+        Returns a list of pairs and a list of pair start dates
+        If enforce_match is True, then only pairs with matching cloud masks are returned
+        """
+        self.pairs = []
+        self.pair_starts = []
+        period = relativedelta(months=self.mosaic_period)
+        pair_delta = relativedelta(months=self.spectrogram_interval * self.mosaic_period)
+        start = datetime.date.fromisoformat(self.start_date)
+        end = start + pair_delta
+        img_dates = [datetime.date.fromisoformat(date) for date in self.composite_dates]
+        while end <= datetime.date.fromisoformat(self.end_date):
+            #print(f"Searching for images that start between {start} and {start + period - relativedelta(days=1)} and end between {end} and {end + period - relativedelta(days=1)}")
+            start_index = [i for i, date in enumerate(img_dates) if date >= start and date < start + period - relativedelta(days=1)]
+            end_index = [i for i, date in enumerate(img_dates) if date >= end and date < end + period - relativedelta(days=1)]
+            if len(start_index) > 0 and len(end_index) > 0:
+                start_composite = self.composites[start_index[0]]
+                end_composite = self.composites[end_index[0]]
+                pair = [start_composite, end_composite]
+                if enforce_match:
+                    if masks_match(pair):
+                        self.pairs.append(pair)
+                        self.pair_starts.append(start.isoformat()[:10])
+                else:
+                    self.pairs.append(pair)
+                    self.pair_starts.append(start.isoformat()[:10])
+            start += period
+            end += period
 
 class DescartesRun(object):
     """Class to manage bulk model prediction on the Descartes Labs platform.
