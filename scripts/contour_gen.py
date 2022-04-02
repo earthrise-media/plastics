@@ -2,6 +2,7 @@ import datetime
 import os
 
 import cv2
+from dateutil.relativedelta import relativedelta
 import descarteslabs as dl
 import geopandas as gpd
 import matplotlib.pyplot as plt
@@ -21,7 +22,6 @@ except:
     from scripts import dl_utils
     from scripts.dl_utils import predict_spectrogram, rect_from_point
 
-
 class SiteContours(object):
     def __init__(
         self,
@@ -39,27 +39,17 @@ class SiteContours(object):
         spectrogram_interval=1,
         rect_width=0.01,
     ):
-
-        self.start_date = start_date
-        self.end_date = end_date
-        self.mosaic_period = mosaic_period
-        self.spectrogram_interval = spectrogram_interval
+        polygon = rect_from_point(self.coord, rect_width)
+        self.data = dl_utils.SentinelData(polygon, start_date, end_date, mosaic_period, spectrogram_interval, method='min')
         self.rect_width = rect_width
-
-        # Download data
-        mosaics, metadata = dl_utils.download_mosaics(
-            rect_from_point(self.coord, self.rect_width),
-            self.start_date,
-            self.end_date,
-            self.mosaic_period,
-            method="min",
-        )
-        pairs = dl_utils.pair(mosaics, self.spectrogram_interval)
-        self.pairs = pairs
-        self.all_dates = [m["metadata"][""]["id"][15:25] for m in metadata]
-        self.bounds = [
-            sample["wgs84Extent"]["coordinates"][0][:-1] for sample in metadata
-        ]
+        self.data.search_scenes()
+        self.data.download_scenes()
+        self.data.create_composites()
+        self.data.create_pairs()
+        self.pairs = self.data.pairs
+        self.dates = self.data.pair_starts
+        self.bounds = self.data.metadata[0]["wgs84Extent"]["coordinates"][0][:-1]
+        
 
     def generate_predictions(self, model):
         # Generate predictions
@@ -80,6 +70,8 @@ class SiteContours(object):
         # Create a median prediction mask
         if len(self.preds_t) <= window_size:
             window_size = len(self.preds_t)
+            if window_size == 1:
+                window_size += 1
         padded_preds = pad_preds(self.preds_t, window_size)
         masks = np.array(
             [
@@ -116,7 +108,7 @@ class SiteContours(object):
         contour_list = []
         date_list = []
         hierarchies = []
-        for index, (pred, date) in enumerate(zip(self.masked_preds, self.all_dates)):
+        for index, (pred, date) in enumerate(zip(self.masked_preds, self.dates)):
             # If a scene is masked beyond a threshold, don't generate contours
             masked_percentage = np.sum(pred.mask) / np.size(pred.mask)
             if masked_percentage < 0.1:
@@ -200,11 +192,13 @@ class SiteContours(object):
             - A list of shapely MultiPolygons. One for each coordinate in the input list
         """
         contour_multipolygons = []
-        for contours, bounds, hierarchy in zip(
-            self.contour_list, self.bounds, self.contour_hierarchies
+        for contours, hierarchy in zip(
+            self.contour_list, self.contour_hierarchies
         ):
             # Define patch coordinate bounds to set pixel scale
-            bounds = shapely.geometry.Polygon(bounds).bounds
+            #bounds = shapely.geometry.Polygon(bounds).bounds
+            polygon = rect_from_point(self.coord, self.rect_width)
+            bounds = shapely.geometry.Polygon(polygon['coordinates'][0]).bounds
             transform = rs.transform.from_bounds(
                 *bounds,
                 self.masked_preds[0].shape[0] * self.scale,
@@ -486,18 +480,16 @@ def filter_scattered_contours(contours, polygon_threshold=3, area_threshold=0.00
 
     filtered_contours = contours.copy()
     for i in range(len(contours)):
-        site = contours.iloc[i]
-        if (
-            site["geometry"] != None
-            and type(site["geometry"]) == shapely.geometry.multipolygon.MultiPolygon
-        ):
+        site = contours.set_crs('EPSG:4326').to_crs('epsg:3857').iloc[i]
+        if (site["geometry"] != None and type(site["geometry"]) == shapely.geometry.multipolygon.MultiPolygon):
             num_polygons = len(site["geometry"].geoms)
             area = site["area (km^2)"]
-            if (
-                num_polygons >= polygon_threshold
-                and area / num_polygons < area_threshold
-            ):
-                filtered_contours.iloc[i] = None
+            if (num_polygons >= polygon_threshold and area / num_polygons < area_threshold):
+                [print(poly.area) for poly in site["geometry"].geoms]
+                print(i, len(site))
+                filtered_polygons = [poly for poly in site['geometry'].geoms if poly.area > 100]
+                filtered_contours['geometry'][i] = shapely.geometry.MultiPolygon(filtered_polygons)
+                print(len(filtered_contours['geometry'][i]))
     print(
         sum(filtered_contours["geometry"] == None) -
         sum(contours["geometry"] == None),
@@ -626,6 +618,8 @@ class DescartesContourRun(object):
         Returns: None. Adds contours to API
         """
         site = SiteContours(coord, name)
+        print("Generating contours for site", name)
+        print("Downloading data at", datetime.datetime.isoformat(datetime.datetime.now())[:19])
         site.download_pairs(
             start_date=self.start_date,
             end_date=self.end_date,
@@ -633,38 +627,42 @@ class DescartesContourRun(object):
             spectrogram_interval=self.spectrogram_interval,
             rect_width=self.rect_width
         )
-        site.generate_predictions(self.model)
-        site.threshold_predictions(threshold=0.5)
-        site.mask_predictions(window_size=6, threshold=0.1)
-        site.generate_contours(threshold=0.5, scale=self.scale, plot=False)
-        site.generate_polygons(plot=False)
-        site.compile_contours()
-        #contour_gdf = contour_gdf.append(site.contour_gdf, ignore_index=True)
-        site_endpoint = f'{self.endpoint}/sites/{site.name}/contours'
-        auth = requests.auth.HTTPBasicAuth('admin', 'plastics')
-        delete = requests.delete(site_endpoint, auth=auth)
-        print("delete status", delete.status_code)
-        site.contour_gdf['date'] = [datetime.datetime.isoformat(date) for date in site.contour_gdf['date']]
-        r = requests.post(site_endpoint, site.contour_gdf.to_json())
-        print("request status", r.status_code)
-        """
-        I'm adding sites directly to the API now, so I don't need to add to a DL product.
-        The DL product would throw an error for some geometries.
-        That error would need to be fixed if we did want to go back to DL storage.
-        Keeping this in case we want it in the future
-        feature_list = []
-        for feature in site.contour_gdf.iterfeatures():
-            if feature['geometry'] == None:
-                feature['geometry'] = shapely.geometry.Point(site.coord)
-            feature['properties']['date'] = datetime.datetime.isoformat(
-                feature['properties']['date'])
-            feature_list.append(
-                dl.vectors.Feature(
-                    geometry=feature['geometry'],
-                    properties=feature['properties']
+        if len(site.pairs) > 0:
+            print("Generating predictions at", datetime.datetime.isoformat(datetime.datetime.now())[:19])
+            site.generate_predictions(self.model)
+            print("Preds finished at", datetime.datetime.isoformat(datetime.datetime.now())[:19])
+            site.threshold_predictions(threshold=0.5)
+            site.mask_predictions(window_size=6, threshold=0.1)
+            site.generate_contours(threshold=0.5, scale=self.scale, plot=False)
+            site.generate_polygons(plot=False)
+            site.compile_contours()
+            #contour_gdf = contour_gdf.append(site.contour_gdf, ignore_index=True)
+            site_endpoint = f'{self.endpoint}/sites/{site.name}/contours'
+            auth = requests.auth.HTTPBasicAuth('admin', 'plastics')
+            delete = requests.delete(site_endpoint, auth=auth)
+            print("delete status", delete.status_code)
+            site.contour_gdf['date'] = [datetime.datetime.isoformat(date) for date in site.contour_gdf['date']]
+            r = requests.post(site_endpoint, site.contour_gdf.to_json())
+            print("request status", r.status_code)
+            print("Finished at", datetime.datetime.isoformat(datetime.datetime.now())[:19])
+            """
+            I'm adding sites directly to the API now, so I don't need to add to a DL product.
+            The DL product would throw an error for some geometries.
+            That error would need to be fixed if we did want to go back to DL storage.
+            Keeping this in case we want it in the future
+            feature_list = []
+            for feature in site.contour_gdf.iterfeatures():
+                if feature['geometry'] == None:
+                    feature['geometry'] = shapely.geometry.Point(site.coord)
+                feature['properties']['date'] = datetime.datetime.isoformat(
+                    feature['properties']['date'])
+                feature_list.append(
+                    dl.vectors.Feature(
+                        geometry=feature['geometry'],
+                        properties=feature['properties']
+                    )
                 )
-            )
-        if len(feature_list) > 0:
-            self.product.add(feature_list)
-        """
-        return site.contour_gdf
+            if len(feature_list) > 0:
+                self.product.add(feature_list)
+            """
+            return site.contour_gdf
