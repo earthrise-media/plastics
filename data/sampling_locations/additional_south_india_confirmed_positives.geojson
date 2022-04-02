@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "additional_south_india_confirmed_positives",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_52" }, "geometry": { "type": "Point", "coordinates": [ 80.18667963574778, 13.330871424386956 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_152" }, "geometry": { "type": "Point", "coordinates": [ 79.170646672980922, 11.109406782975908 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_224" }, "geometry": { "type": "Point", "coordinates": [ 79.309054688423359, 10.391937977224154 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_238" }, "geometry": { "type": "Point", "coordinates": [ 77.395580743082604, 9.826604468738335 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_284" }, "geometry": { "type": "Point", "coordinates": [ 79.39237289431999, 10.480169428016389 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_288" }, "geometry": { "type": "Point", "coordinates": [ 79.497469172221386, 11.958216623545036 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_289" }, "geometry": { "type": "Point", "coordinates": [ 79.906412688694431, 13.110500149417943 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_306" }, "geometry": { "type": "Point", "coordinates": [ 78.188565285254981, 11.452150234796129 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_323" }, "geometry": { "type": "Point", "coordinates": [ 78.632799125288031, 12.688411503443373 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_334" }, "geometry": { "type": "Point", "coordinates": [ 79.349964080744087, 12.941739670742329 ] } },
+{ "type": "Feature", "properties": { "name": "tamil_nadu_v0.0.11_2019-01-01_2021-06-01mosaic-median_448" }, "geometry": { "type": "Point", "coordinates": [ 78.619065131993807, 9.632216657727696 ] } }
+]
+}
