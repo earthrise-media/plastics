@@ -1,0 +1,2165 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f69414b2b64aae",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.33153842392643,
+                    14.84480796663467
+                ]
+            },
+            "properties": {
+                "id": "8f69414b2b64aae",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 105,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.049607664346694946,
+                "Height Above Nearest Drainage (m)": 30.499996185302734,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 8.347678814681283,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 616.3537450802822,
+                "Nearest Water Type": "water",
+                "place_name": "Tagumpay, Olongapo, Zambales, Central Luzon, 2200, Philippines",
+                "Population - 1 km": 3049,
+                "Population - 5 km": 100680,
+                "Population - 10 km": 264034
+            }
+        },
+        {
+            "id": "8f684386b5b056a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    125.46274992196402,
+                    8.922512425961562
+                ]
+            },
+            "properties": {
+                "id": "8f684386b5b056a",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 142,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.050678759813308716,
+                "Height Above Nearest Drainage (m)": 81.80000305175781,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 13.960172100993372,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 640.224942990637,
+                "Nearest Water Type": "stream",
+                "place_name": "Dumalagan, Agusan del Norte, Caraga, Philippines",
+                "Population - 1 km": 166,
+                "Population - 5 km": 13204,
+                "Population - 10 km": 140957
+            }
+        },
+        {
+            "id": "8f69432647602a0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.87032175136193,
+                    14.349323051035942
+                ]
+            },
+            "properties": {
+                "id": "8f69432647602a0",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 29,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008286296389997005,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.577459726301519,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 114.67116309124556,
+                "Nearest Water Type": "river",
+                "place_name": "General Trias, Cavite, Calabarzon, 4107, Philippines",
+                "Population - 1 km": 4705,
+                "Population - 5 km": 254549,
+                "Population - 10 km": 1183966
+            }
+        },
+        {
+            "id": "8f694e43302388e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.11559063669813,
+                    14.195518121898088
+                ]
+            },
+            "properties": {
+                "id": "8f694e43302388e",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 92,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.008291834034025669,
+                "Height Above Nearest Drainage (m)": 0.8000030517578125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 1.1389772585733908,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 62.71431248532118,
+                "Nearest Water Type": "stream",
+                "place_name": "Palo Alto, Calamba, Laguna, Calabarzon, 4027, Philippines",
+                "Population - 1 km": 11631,
+                "Population - 5 km": 276993,
+                "Population - 10 km": 948616
+            }
+        },
+        {
+            "id": "8f685e803cb2010",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.50414612621759,
+                    6.675657617594416
+                ]
+            },
+            "properties": {
+                "id": "8f685e803cb2010",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 64,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.04245534539222717,
+                "Height Above Nearest Drainage (m)": 4.600002288818359,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.5454433277795698,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 490.79734617542374,
+                "Nearest Water Type": "river",
+                "place_name": "Ilian, Sultan Kudarat, Soccsksargen, 9806, Philippines",
+                "Population - 1 km": 628,
+                "Population - 5 km": 27374,
+                "Population - 10 km": 111398
+            }
+        },
+        {
+            "id": "8f4b9cd9c0ce1b0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.9778605674827,
+                    20.471834922630244
+                ]
+            },
+            "properties": {
+                "id": "8f4b9cd9c0ce1b0",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 34,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008017858490347862,
+                "Height Above Nearest Drainage (m)": 32.20000076293945,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 3.5197260654769855,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 160.78825450223613,
+                "Nearest Water Type": "coastline",
+                "place_name": "National Road, Basco, Batanes, Cagayan Valley, 3900, Philippines",
+                "Population - 1 km": 204,
+                "Population - 5 km": 7771,
+                "Population - 10 km": 9816
+            }
+        },
+        {
+            "id": "8f68e59b6d140c6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.98859050171609,
+                    6.020877136953185
+                ]
+            },
+            "properties": {
+                "id": "8f68e59b6d140c6",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 152,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008501642383635044,
+                "Height Above Nearest Drainage (m)": 61.30000305175781,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 5.32252515455581,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2394.873160189485,
+                "Nearest Water Type": "river",
+                "place_name": "Sulu, Bangsamoro, 7400, Philippines",
+                "Population - 1 km": 548,
+                "Population - 5 km": 62646,
+                "Population - 10 km": 102554
+            }
+        },
+        {
+            "id": "8f694168ea72c16",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.84538777425809,
+                    14.807243377142337
+                ]
+            },
+            "properties": {
+                "id": "8f694168ea72c16",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 4,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008269407786428928,
+                "Height Above Nearest Drainage (m)": 1.0999999046325684,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.4447869386679816,
+                "Fine Earth Density (kg / m^3)": 103,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 105.34845600686964,
+                "Nearest Water Type": "river",
+                "place_name": "Pitpitan, Matimbo, Bulacan, Central Luzon, 3017, Philippines",
+                "Population - 1 km": 9814,
+                "Population - 5 km": 184032,
+                "Population - 10 km": 634404
+            }
+        },
+        {
+            "id": "8f694ecae0cd741",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.97323912999713,
+                    14.4742133048846
+                ]
+            },
+            "properties": {
+                "id": "8f694ecae0cd741",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 5,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008281731978058815,
+                "Height Above Nearest Drainage (m)": 4.400000095367432,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.44443880298862937,
+                "Fine Earth Density (kg / m^3)": 99,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 92.04790184064595,
+                "Nearest Water Type": "river",
+                "place_name": "C-5 Road Extension, Perpetual Village, Pulanglupa Uno, Las Pi\u00f1as, 1st District, Las Pi\u00f1as, Southern Manila District, Metro Manila, 1742, Philippines",
+                "Population - 1 km": 54330,
+                "Population - 5 km": 1016302,
+                "Population - 10 km": 3215611
+            }
+        },
+        {
+            "id": "8f6871b132ea873",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    122.9966741625743,
+                    10.337042216714938
+                ]
+            },
+            "properties": {
+                "id": "8f6871b132ea873",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 89,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008411841467022896,
+                "Height Above Nearest Drainage (m)": 27.900005340576172,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 12.884915965421197,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 430.84854907177913,
+                "Nearest Water Type": "stream",
+                "place_name": "Villaca\u00f1a, Negros Occidental, Western Visayas, 6131, Philippines",
+                "Population - 1 km": 714,
+                "Population - 5 km": 31616,
+                "Population - 10 km": 91337
+            }
+        },
+        {
+            "id": "8f695d5ad558455",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.68315990953931,
+                    13.176121582095783
+                ]
+            },
+            "properties": {
+                "id": "8f695d5ad558455",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 184,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00832718051970005,
+                "Height Above Nearest Drainage (m)": 134.90000915527344,
+                "Landform Type": "Peak/ridge (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 9.45885669874741,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 1382.7525854187288,
+                "Nearest Water Type": "stream",
+                "place_name": "Fatima, Talabaan, Mamburao, Occidental Mindoro, Mimaropa, Philippines",
+                "Population - 1 km": 105,
+                "Population - 5 km": 5504,
+                "Population - 10 km": 30446
+            }
+        },
+        {
+            "id": "8f694e42256c0c1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.12697569446469,
+                    14.235206009680136
+                ]
+            },
+            "properties": {
+                "id": "8f694e42256c0c1",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 30,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.01658083125948906,
+                "Height Above Nearest Drainage (m)": 9.80000114440918,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 5.3608713725878445,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 71.57157255152306,
+                "Nearest Water Type": "river",
+                "place_name": "Mapagong, Calamba, Laguna, Calabarzon, 4027, Philippines",
+                "Population - 1 km": 18347,
+                "Population - 5 km": 583020,
+                "Population - 10 km": 1174006
+            }
+        },
+        {
+            "id": "8f694b42d2958a9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.0287892702548,
+                    13.714233512085405
+                ]
+            },
+            "properties": {
+                "id": "8f694b42d2958a9",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 26,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008308850228786469,
+                "Height Above Nearest Drainage (m)": 20.399999618530273,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 3.116629249167464,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1233.0064021047365,
+                "Nearest Water Type": "river",
+                "place_name": "Camambugan, Camarines Sur, Bicol Region, 4407, Philippines",
+                "Population - 1 km": 1127,
+                "Population - 5 km": 41043,
+                "Population - 10 km": 132774
+            }
+        },
+        {
+            "id": "8f686e58281d329",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    125.00524594678306,
+                    11.10048612075779
+                ]
+            },
+            "properties": {
+                "id": "8f686e58281d329",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 10,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008391052484512329,
+                "Height Above Nearest Drainage (m)": 23.100000381469727,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 5.856762731722169,
+                "Fine Earth Density (kg / m^3)": 117,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 401.2916358363157,
+                "Nearest Water Type": "river",
+                "place_name": "F. Montejo Road, Buaya, San Miguel, Lapay, Tanauan, Leyte 1st District, Leyte, Eastern Visayas, 6502, Philippines",
+                "Population - 1 km": 2595,
+                "Population - 5 km": 50625,
+                "Population - 10 km": 160080
+            }
+        },
+        {
+            "id": "8f6941689a8440d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.88645688262176,
+                    14.814539508442133
+                ]
+            },
+            "properties": {
+                "id": "8f6941689a8440d",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 7,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.45479586720466614,
+                "Height Above Nearest Drainage (m)": 0.5999999046325684,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 372.8843548505351,
+                "Nearest Water Type": "pond",
+                "place_name": "Bantayan Street, Bulakan, Bulacan, Central Luzon, 03016, Philippines",
+                "Population - 1 km": 7585,
+                "Population - 5 km": 281537,
+                "Population - 10 km": 783275
+            }
+        },
+        {
+            "id": "8f694145b6cb075",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.64032760300591,
+                    14.956568526101156
+                ]
+            },
+            "properties": {
+                "id": "8f694145b6cb075",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 6,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008263789117336273,
+                "Height Above Nearest Drainage (m)": 1.5999999046325684,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.8898384738609093,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 43.72875009851768,
+                "Nearest Water Type": "pond",
+                "place_name": "San Rafael, Guagua, Pampanga, Central Luzon, 2003, Philippines",
+                "Population - 1 km": 10895,
+                "Population - 5 km": 151647,
+                "Population - 10 km": 395915
+            }
+        },
+        {
+            "id": "8f694172a1a3b1e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.77748070058048,
+                    15.100987825600857
+                ]
+            },
+            "properties": {
+                "id": "8f694172a1a3b1e",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 8,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.024774864315986633,
+                "Height Above Nearest Drainage (m)": 0.39999961853027344,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.44510251059015676,
+                "Fine Earth Density (kg / m^3)": 117,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 436.3558128463281,
+                "Nearest Water Type": "river",
+                "place_name": "Villa Luisa Subdivision, Purok 2, Santiago, Pampanga, Central Luzon, 2022, Philippines",
+                "Population - 1 km": 4949,
+                "Population - 5 km": 94870,
+                "Population - 10 km": 370409
+            }
+        },
+        {
+            "id": "8f6940a5160b706",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.02535852707906,
+                    15.396919430143651
+                ]
+            },
+            "properties": {
+                "id": "8f6940a5160b706",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 123,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008246926590800285,
+                "Height Above Nearest Drainage (m)": 54,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 3.208019103626741,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 99.26250602206603,
+                "Nearest Water Type": "pond",
+                "place_name": "Zambales, Central Luzon, Philippines",
+                "Population - 1 km": 96,
+                "Population - 5 km": 4337,
+                "Population - 10 km": 59321
+            }
+        },
+        {
+            "id": "8f685c8f12ceba6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.95734407538579,
+                    7.666414201648781
+                ]
+            },
+            "properties": {
+                "id": "8f685c8f12ceba6",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 271,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.00847296230494976,
+                "Height Above Nearest Drainage (m)": 64.10000610351562,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 19.21320981932221,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 157.34820267642803,
+                "Nearest Water Type": "river",
+                "place_name": "Don Carlos, Bukidnon, Northern Mindanao, 8712, Philippines",
+                "Population - 1 km": 750,
+                "Population - 5 km": 35004,
+                "Population - 10 km": 112732
+            }
+        },
+        {
+            "id": "8f694334e0b524d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.83534927477866,
+                    14.382922262831901
+                ]
+            },
+            "properties": {
+                "id": "8f694334e0b524d",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 8,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008285049349069595,
+                "Height Above Nearest Drainage (m)": 1.5999994277954102,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 2.4595431172290327,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 57.07810490316998,
+                "Nearest Water Type": "river",
+                "place_name": "Amaya I, Santa Cruz, Tanza, Cavite, Calabarzon, 4108, Philippines",
+                "Population - 1 km": 15375,
+                "Population - 5 km": 256465,
+                "Population - 10 km": 703564
+            }
+        },
+        {
+            "id": "8f694e9a238c871",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.08773982254641,
+                    14.916148899405837
+                ]
+            },
+            "properties": {
+                "id": "8f694e9a238c871",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 153,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008265344426035881,
+                "Height Above Nearest Drainage (m)": 63.099998474121094,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 4.931963247108356,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 191.0077632773109,
+                "Nearest Water Type": "river",
+                "place_name": "Bangkal, Baraka, Bulacan, Central Luzon, 3013, Philippines",
+                "Population - 1 km": 561,
+                "Population - 5 km": 53105,
+                "Population - 10 km": 383391
+            }
+        },
+        {
+            "id": "8f694137615e446",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.08450817038879,
+                    15.450675139004035
+                ]
+            },
+            "properties": {
+                "id": "8f694137615e446",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 88,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.02473432756960392,
+                "Height Above Nearest Drainage (m)": 23.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 2.784094872742193,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 464.9262587220149,
+                "Nearest Water Type": "stream",
+                "place_name": "asphalt road, Purok 4, Mapalad, Nueva Ecija, Central Luzon, 3130, Philippines",
+                "Population - 1 km": 1098,
+                "Population - 5 km": 25970,
+                "Population - 10 km": 109583
+            }
+        },
+        {
+            "id": "8f694ed0d94884e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.96965792876289,
+                    14.724141186369767
+                ]
+            },
+            "properties": {
+                "id": "8f694ed0d94884e",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 5,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.00827251747250557,
+                "Height Above Nearest Drainage (m)": 1.2999999523162842,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.3196571868061684,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 108.1346670047068,
+                "Nearest Water Type": "river",
+                "place_name": "Caingin, Meycauayan, Bulacan, Central Luzon, 3020, Philippines",
+                "Population - 1 km": 20635,
+                "Population - 5 km": 727655,
+                "Population - 10 km": 3536210
+            }
+        },
+        {
+            "id": "8f6858c0d0a5805",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    125.41033130802609,
+                    6.581943028426484
+                ]
+            },
+            "properties": {
+                "id": "8f6858c0d0a5805",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 14,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.00849264208227396,
+                "Height Above Nearest Drainage (m)": 2,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.8920225852276278,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1051.9716019173154,
+                "Nearest Water Type": "coastline",
+                "place_name": "Bulacan, Malalag, Davao del Sur, Davao Region, 8010, Philippines",
+                "Population - 1 km": 2378,
+                "Population - 5 km": 25013,
+                "Population - 10 km": 66705
+            }
+        },
+        {
+            "id": "8f694e5a28a8198",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.97263040443818,
+                    14.20672108104111
+                ]
+            },
+            "properties": {
+                "id": "8f694e5a28a8198",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 349,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008291447535157204,
+                "Height Above Nearest Drainage (m)": 7.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 2.252568937850895,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 59.38824438423307,
+                "Nearest Water Type": "river",
+                "place_name": "Adventist International Institute of Advanced Studies, Aguinaldo Highway, Lucsuhin, Silang, Cavite, Calabarzon, 4118, Philippines",
+                "Population - 1 km": 4620,
+                "Population - 5 km": 85596,
+                "Population - 10 km": 422000
+            }
+        },
+        {
+            "id": "8f686326d634ae3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.95829621687467,
+                    11.299545668880453
+                ]
+            },
+            "properties": {
+                "id": "8f686326d634ae3",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 8,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008385403081774712,
+                "Height Above Nearest Drainage (m)": 2.6000003814697266,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.3152717267518347,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 256.70014799682303,
+                "Nearest Water Type": "river",
+                "place_name": "Barangay 97 Cabalawan, Tacloban, Eastern Visayas, 6500, Philippines",
+                "Population - 1 km": 1448,
+                "Population - 5 km": 23018,
+                "Population - 10 km": 177664
+            }
+        },
+        {
+            "id": "8f694b7a54d3769",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.22032402604128,
+                    13.633082232722806
+                ]
+            },
+            "properties": {
+                "id": "8f694b7a54d3769",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 19,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008311650715768337,
+                "Height Above Nearest Drainage (m)": 5.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 494.4167783265966,
+                "Nearest Water Type": "river",
+                "place_name": "Naga, Camarines Sur, Bicol Region, 4400, Philippines",
+                "Population - 1 km": 10972,
+                "Population - 5 km": 236769,
+                "Population - 10 km": 423955
+            }
+        },
+        {
+            "id": "8f69599b6c84695",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.37404153382943,
+                    13.023099935155377
+                ]
+            },
+            "properties": {
+                "id": "8f69599b6c84695",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 73,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008332222700119019,
+                "Height Above Nearest Drainage (m)": 39.100006103515625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 6.779596823369835,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 2185.397759780103,
+                "Nearest Water Type": "river",
+                "place_name": "Bayuin, Oriental Mindoro, Mimaropa, 5207, Philippines",
+                "Population - 1 km": 89,
+                "Population - 5 km": 13337,
+                "Population - 10 km": 51955
+            }
+        },
+        {
+            "id": "8f6845564171211",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.8113032933279,
+                    10.29873746972323
+                ]
+            },
+            "properties": {
+                "id": "8f6845564171211",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 27,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.008412851020693779,
+                "Height Above Nearest Drainage (m)": 14.999999046325684,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 2.6430298493432196,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 794.5031097184387,
+                "Nearest Water Type": "river",
+                "place_name": "Taglibas, Matalom, Leyte 5th District, Leyte, Eastern Visayas, 6526, Philippines",
+                "Population - 1 km": 797,
+                "Population - 5 km": 33324,
+                "Population - 10 km": 81355
+            }
+        },
+        {
+            "id": "8f694ecec2d8b69",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.14287528787649,
+                    14.530617879275987
+                ]
+            },
+            "properties": {
+                "id": "8f694ecec2d8b69",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 2,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.016559286043047905,
+                "Height Above Nearest Drainage (m)": 1.8000001907348633,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.46,
+                "Slope (degrees)": 0.6959051880126992,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 262.21490915081154,
+                "Nearest Water Type": "stream",
+                "place_name": "Coastal Road, Purok 14, Kalayaan, Angono, Rizal, Calabarzon, 1930 RIZAL, Philippines",
+                "Population - 1 km": 30931,
+                "Population - 5 km": 353525,
+                "Population - 10 km": 2546714
+            }
+        },
+        {
+            "id": "8f6851ac201e944",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.28793080577621,
+                    7.353351821438953
+                ]
+            },
+            "properties": {
+                "id": "8f6851ac201e944",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 56,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.050873786211013794,
+                "Height Above Nearest Drainage (m)": 15.39999771118164,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 1.8803169390392307,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 904.4878727948634,
+                "Nearest Water Type": "river",
+                "place_name": "Narciso Ramos Highway, Iranon, Parang, Maguindanao, Bangsamoro, Philippines",
+                "Population - 1 km": 1146,
+                "Population - 5 km": 15599,
+                "Population - 10 km": 41463
+            }
+        },
+        {
+            "id": "8f69416e0431d00",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.92813490690058,
+                    14.89512344048014
+                ]
+            },
+            "properties": {
+                "id": "8f69416e0431d00",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 16,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.09092720597982407,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.2594651061264184,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 172.634790950215,
+                "Nearest Water Type": "stream",
+                "place_name": "Buisan, Bulacan, Central Luzon, Philippines",
+                "Population - 1 km": 1390,
+                "Population - 5 km": 135343,
+                "Population - 10 km": 792310
+            }
+        },
+        {
+            "id": "8f68633917610e3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.58029327179104,
+                    11.121553558728577
+                ]
+            },
+            "properties": {
+                "id": "8f68633917610e3",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 54,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.2684948742389679,
+                "Height Above Nearest Drainage (m)": 6,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.9944168815398777,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 555.5353304878786,
+                "Nearest Water Type": "river",
+                "place_name": "Montebello, Kananga, Leyte 4th District, Leyte, Eastern Visayas, 6531, Philippines",
+                "Population - 1 km": 1502,
+                "Population - 5 km": 34578,
+                "Population - 10 km": 113216
+            }
+        },
+        {
+            "id": "8f685e21cc90396",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    125.07272368195538,
+                    6.186024699245134
+                ]
+            },
+            "properties": {
+                "id": "8f685e21cc90396",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 228,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.05949368700385094,
+                "Height Above Nearest Drainage (m)": 9.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.6657761517009946,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 661.086632725521,
+                "Nearest Water Type": "river",
+                "place_name": "Upper Matin-ao, Magsaysay, South Cotabato, Soccsksargen, 9504, Philippines",
+                "Population - 1 km": 1954,
+                "Population - 5 km": 63108,
+                "Population - 10 km": 168678
+            }
+        },
+        {
+            "id": "8f6865774aae362",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.11228135628556,
+                    12.958184828067733
+                ]
+            },
+            "properties": {
+                "id": "8f6865774aae362",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 28,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008334379643201828,
+                "Height Above Nearest Drainage (m)": 11.800000190734863,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.9274099368650546,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 746.6138803586347,
+                "Nearest Water Type": "stream",
+                "place_name": "Tiris, Sorsogon, Bicol Region, 4710, Philippines",
+                "Population - 1 km": 898,
+                "Population - 5 km": 36382,
+                "Population - 10 km": 90793
+            }
+        },
+        {
+            "id": "8f695962d199a6e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.96953167618872,
+                    12.35757451384894
+                ]
+            },
+            "properties": {
+                "id": "8f695962d199a6e",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 25,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008353659883141518,
+                "Height Above Nearest Drainage (m)": 14.199999809265137,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 3.823850993906765,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2103.639231692179,
+                "Nearest Water Type": "river",
+                "place_name": "Looc, Romblon, Mimaropa, 5507, Philippines",
+                "Population - 1 km": 717,
+                "Population - 5 km": 19489,
+                "Population - 10 km": 49492
+            }
+        },
+        {
+            "id": "8f6943b251549ab",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.47926365920327,
+                    14.814213620356137
+                ]
+            },
+            "properties": {
+                "id": "8f6943b251549ab",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 42,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.016538262367248535,
+                "Height Above Nearest Drainage (m)": 5.200000762939453,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.886146620077627,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1023.6000738851245,
+                "Nearest Water Type": "stream",
+                "place_name": "Pandatung, Bataan, Central Luzon, 2111, Philippines",
+                "Population - 1 km": 2273,
+                "Population - 5 km": 78786,
+                "Population - 10 km": 244075
+            }
+        },
+        {
+            "id": "8f69415492234ac",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.58357498157149,
+                    15.149106857650455
+                ]
+            },
+            "properties": {
+                "id": "8f69415492234ac",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 106,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.016512945294380188,
+                "Height Above Nearest Drainage (m)": 8.800003051757812,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.4222888808648524,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 215.0910699620095,
+                "Nearest Water Type": "river",
+                "place_name": "7-Eleven, Arayat Avenue, Lourdes Northwest, Amsic, Angeles, Central Luzon, 2009, Philippines",
+                "Population - 1 km": 7351,
+                "Population - 5 km": 221683,
+                "Population - 10 km": 652311
+            }
+        },
+        {
+            "id": "8f6941325102b9a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.99303517122138,
+                    15.488498006427822
+                ]
+            },
+            "properties": {
+                "id": "8f6941325102b9a",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 41,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008243327960371971,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 1.566649086897462,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 66.11937697569796,
+                "Nearest Water Type": "ditch",
+                "place_name": "Ireneville, Sunrise Subdivision, Valle Cruz, Nueva Ecija, Central Luzon, 3100, Philippines",
+                "Population - 1 km": 4338,
+                "Population - 5 km": 182788,
+                "Population - 10 km": 335211
+            }
+        },
+        {
+            "id": "8f694e4e4106583",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.22341391631424,
+                    14.163374014017592
+                ]
+            },
+            "properties": {
+                "id": "8f694e4e4106583",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 104,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00829299446195364,
+                "Height Above Nearest Drainage (m)": 46.599998474121094,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 3.4130027680558666,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 766.2118676699904,
+                "Nearest Water Type": "stream",
+                "place_name": "Makiling National Scout Reservation, Jamboree Road, Batong Malake, Los Ba\u00f1os, Laguna, Calabarzon, 4031, Philippines",
+                "Population - 1 km": 2061,
+                "Population - 5 km": 119150,
+                "Population - 10 km": 506777
+            }
+        },
+        {
+            "id": "8f694e43550c972",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.1020444528026,
+                    14.228376770671732
+                ]
+            },
+            "properties": {
+                "id": "8f694e43550c972",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 67,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 8.026671409606934,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 2.163117219843462,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 50.285615275312146,
+                "Nearest Water Type": "river",
+                "place_name": "Canlubang, Calamba, Laguna, Calabarzon, 4028, Philippines",
+                "Population - 1 km": 5408,
+                "Population - 5 km": 349344,
+                "Population - 10 km": 1214125
+            }
+        },
+        {
+            "id": "8f68751a171c283",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.97286415123875,
+                    10.802206436628525
+                ]
+            },
+            "properties": {
+                "id": "8f68751a171c283",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 48,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.016798706725239754,
+                "Height Above Nearest Drainage (m)": 32.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.408482309783578,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 643.1003501688615,
+                "Nearest Water Type": "river",
+                "place_name": "Centro, Pantao, Sibalom, Antique, Western Visayas, 5713, Philippines",
+                "Population - 1 km": 1637,
+                "Population - 5 km": 45649,
+                "Population - 10 km": 130240
+            }
+        },
+        {
+            "id": "8f696ad1d08b106",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.57966592405585,
+                    16.49508585063297
+                ]
+            },
+            "properties": {
+                "id": "8f696ad1d08b106",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 855,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008202699013054371,
+                "Height Above Nearest Drainage (m)": 250.20001220703125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 23.306618387470397,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 433.8388483027046,
+                "Nearest Water Type": "river",
+                "place_name": "Beckes, La Trinidad, Benguet, Cordillera Administrative Region, 2601, Philippines",
+                "Population - 1 km": 438,
+                "Population - 5 km": 68665,
+                "Population - 10 km": 385612
+            }
+        },
+        {
+            "id": "8f685c458a4a6a0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.95713071931162,
+                    7.016810530457521
+                ]
+            },
+            "properties": {
+                "id": "8f685c458a4a6a0",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 93,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008485116064548492,
+                "Height Above Nearest Drainage (m)": 22.699996948242188,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 2.265272590735253,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1094.8658376122735,
+                "Nearest Water Type": "stream",
+                "place_name": "Panabang, Macebolig, Kidapawan, North Cotabato, Soccsksargen, 9400, Philippines",
+                "Population - 1 km": 115,
+                "Population - 5 km": 13760,
+                "Population - 10 km": 86746
+            }
+        },
+        {
+            "id": "8f6842ad64966da",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.60512778681313,
+                    8.395872031617701
+                ]
+            },
+            "properties": {
+                "id": "8f6842ad64966da",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 172,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008458049036562443,
+                "Height Above Nearest Drainage (m)": 19.100006103515625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 4.238966971864001,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 908.4961796733762,
+                "Nearest Water Type": "river",
+                "place_name": "Cabula, Lumbia, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+                "Population - 1 km": 1346,
+                "Population - 5 km": 34446,
+                "Population - 10 km": 214285
+            }
+        },
+        {
+            "id": "8f694e9b10532ee",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.07708348150364,
+                    14.89522218039097
+                ]
+            },
+            "properties": {
+                "id": "8f694e9b10532ee",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 97,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008266125805675983,
+                "Height Above Nearest Drainage (m)": 26.70000457763672,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 1.1266284252587837,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 934.9338162883548,
+                "Nearest Water Type": "river",
+                "place_name": "Holcim Perimeter Road, Holcim Cement, San Jose del Monte, Bulacan, Central Luzon, 3013, Philippines",
+                "Population - 1 km": 7748,
+                "Population - 5 km": 106689,
+                "Population - 10 km": 516682
+            }
+        },
+        {
+            "id": "8f69410a570570d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.63566433827143,
+                    15.256722386794488
+                ]
+            },
+            "properties": {
+                "id": "8f69410a570570d",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 47,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008252330124378204,
+                "Height Above Nearest Drainage (m)": 0.7999992370605469,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 1.142901372142628,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 62.24240869745907,
+                "Nearest Water Type": "river",
+                "place_name": "Bria Homes Magalang, Santo Rosario, Pampanga, Central Luzon, 2010, Philippines",
+                "Population - 1 km": 537,
+                "Population - 5 km": 70031,
+                "Population - 10 km": 468105
+            }
+        },
+        {
+            "id": "8f6844c5a415060",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.6961847548314,
+                    10.179198052977432
+                ]
+            },
+            "properties": {
+                "id": "8f6844c5a415060",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 211,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00841593649238348,
+                "Height Above Nearest Drainage (m)": 92.29999542236328,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 13.533727445499117,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 903.5945761463041,
+                "Nearest Water Type": "river",
+                "place_name": "San Fernando, Cebu, Central Visayas, 6018, Philippines",
+                "Population - 1 km": 2278,
+                "Population - 5 km": 76854,
+                "Population - 10 km": 219561
+            }
+        },
+        {
+            "id": "8f694e52251184c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.02043358876885,
+                    14.346612391513752
+                ]
+            },
+            "properties": {
+                "id": "8f694e52251184c",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 84,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008286381140351295,
+                "Height Above Nearest Drainage (m)": 12.800003051757812,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 3.549976386303586,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 185.66259221972055,
+                "Nearest Water Type": "stream",
+                "place_name": "Narra Road, Summerfield, San Antonio Zone 3, San Pedro, Laguna, Calabarzon, 4023, Philippines",
+                "Population - 1 km": 3769,
+                "Population - 5 km": 578516,
+                "Population - 10 km": 2274923
+            }
+        },
+        {
+            "id": "8f6865cd9ba03a9",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.70270617289353,
+                    13.05344649320663
+                ]
+            },
+            "properties": {
+                "id": "8f6865cd9ba03a9",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 66,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008331234566867352,
+                "Height Above Nearest Drainage (m)": 22.299999237060547,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 3.6709717201144816,
+                "Fine Earth Density (kg / m^3)": 95,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2674.925383186424,
+                "Nearest Water Type": "river",
+                "place_name": "Purok 2, San Vicente Grande, Albay, Bicol Region, 4714, Philippines",
+                "Population - 1 km": 878,
+                "Population - 5 km": 31298,
+                "Population - 10 km": 145073
+            }
+        },
+        {
+            "id": "8f69416d9acc4de",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00842808219272,
+                    14.803877893393219
+                ]
+            },
+            "properties": {
+                "id": "8f69416d9acc4de",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 41,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008269528858363628,
+                "Height Above Nearest Drainage (m)": 8.600000381469727,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.9809737079634397,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 272.94563064710457,
+                "Nearest Water Type": "stream",
+                "place_name": "Looban 2 Road, Marilao, Bulacan, Central Luzon, 3019, Philippines",
+                "Population - 1 km": 7112,
+                "Population - 5 km": 347561,
+                "Population - 10 km": 2198290
+            }
+        },
+        {
+            "id": "8f694ec25261726",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00394912752509,
+                    14.660428809698523
+                ]
+            },
+            "properties": {
+                "id": "8f694ec25261726",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 25,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008274867199361324,
+                "Height Above Nearest Drainage (m)": 8.199999809265137,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.6959918165114538,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 55.65994631676191,
+                "Nearest Water Type": "stream",
+                "place_name": "Nissan Balintawak, EDSA, Apolonio Samson, Balintawak, 6th District, Quezon City, Eastern Manila District, Metro Manila, 1106, Philippines",
+                "Population - 1 km": 85119,
+                "Population - 5 km": 1931535,
+                "Population - 10 km": 6039558
+            }
+        },
+        {
+            "id": "8f6842ca178ed60",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.83036318088902,
+                    8.198873830204143
+                ]
+            },
+            "properties": {
+                "id": "8f6842ca178ed60",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 38,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.033848837018013,
+                "Height Above Nearest Drainage (m)": 2.299999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 0.9785803662379,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1526.332016999489,
+                "Nearest Water Type": "river",
+                "place_name": "Kinangay Norte, Misamis Occidental, Northern Mindanao, 7201, Philippines",
+                "Population - 1 km": 1283,
+                "Population - 5 km": 68990,
+                "Population - 10 km": 193930
+            }
+        },
+        {
+            "id": "8f69416d8470128",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.9747846770809,
+                    14.788044658695942
+                ]
+            },
+            "properties": {
+                "id": "8f69416d8470128",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 26,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.024810263887047768,
+                "Height Above Nearest Drainage (m)": 6.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.5781435137947069,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 324.39027393532695,
+                "Nearest Water Type": "canal",
+                "place_name": "Marilao, Bulacan, Central Luzon, 3019, Philippines",
+                "Population - 1 km": 6052,
+                "Population - 5 km": 372586,
+                "Population - 10 km": 1916696
+            }
+        },
+        {
+            "id": "8f694ed0868d245",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.96673113758439,
+                    14.681369185879998
+                ]
+            },
+            "properties": {
+                "id": "8f694ed0868d245",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 6,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.01654820144176483,
+                "Height Above Nearest Drainage (m)": 2.700000286102295,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.7100019893937738,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 230.95441612228532,
+                "Nearest Water Type": "river",
+                "place_name": "Pinalagad, Malinta, 1st District, Valenzuela, Northern Manila District, Metro Manila, 1478, Philippines",
+                "Population - 1 km": 47491,
+                "Population - 5 km": 1608885,
+                "Population - 10 km": 4409149
+            }
+        },
+        {
+            "id": "8f6845975ba1705",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.91031868808129,
+                    10.998027712208687
+                ]
+            },
+            "properties": {
+                "id": "8f6845975ba1705",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 51,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008393930271267891,
+                "Height Above Nearest Drainage (m)": 12.299999237060547,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.7016421897875149,
+                "Fine Earth Density (kg / m^3)": 100,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 735.5744489993267,
+                "Nearest Water Type": "stream",
+                "place_name": "Gamay, Burauen, Leyte 2nd District, Leyte, Eastern Visayas, 6516, Philippines",
+                "Population - 1 km": 703,
+                "Population - 5 km": 31907,
+                "Population - 10 km": 89642
+            }
+        },
+        {
+            "id": "8f685d5230da51d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    125.7712830011804,
+                    7.414118084881708
+                ]
+            },
+            "properties": {
+                "id": "8f685d5230da51d",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 18,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.016955630853772163,
+                "Height Above Nearest Drainage (m)": 2.499999523162842,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.1210764637342925,
+                "Fine Earth Density (kg / m^3)": 114,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 1005.8407601276602,
+                "Nearest Water Type": "river",
+                "place_name": "Mabaus, Canocotan, Davao del Norte, Davao Region, 8100, Philippines",
+                "Population - 1 km": 2432,
+                "Population - 5 km": 101802,
+                "Population - 10 km": 342606
+            }
+        },
+        {
+            "id": "8f694ed62d322f2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.0178675441576,
+                    14.769602565481916
+                ]
+            },
+            "properties": {
+                "id": "8f694ed62d322f2",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 44,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008270797319710255,
+                "Height Above Nearest Drainage (m)": 10.000001907348633,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.7784532355628793,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 244.10138611911879,
+                "Nearest Water Type": "river",
+                "place_name": "Petron, Bahay Pare Road, Elysian Homes Phase 3, Meycauayan, Bulacan, Central Luzon, 3020, Philippines",
+                "Population - 1 km": 11256,
+                "Population - 5 km": 980372,
+                "Population - 10 km": 2882940
+            }
+        },
+        {
+            "id": "8f696bda02c42a3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.5722156690889,
+                    16.697202571151088
+                ]
+            },
+            "properties": {
+                "id": "8f696bda02c42a3",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 82,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008194224908947945,
+                "Height Above Nearest Drainage (m)": 0.6999969482421875,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 1.674719245845616,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 247.06286742960825,
+                "Nearest Water Type": "ditch",
+                "place_name": "Vista Mall, Maharlika Highway, Santiago, Batal, Isabela, Cagayan Valley, 3311, Philippines",
+                "Population - 1 km": 6384,
+                "Population - 5 km": 106993,
+                "Population - 10 km": 192532
+            }
+        },
+        {
+            "id": "8f684518a261074",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.9671480424021,
+                    10.346460888125153
+                ]
+            },
+            "properties": {
+                "id": "8f684518a261074",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 8,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.042057763785123825,
+                "Height Above Nearest Drainage (m)": 6.199999809265137,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 105,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 256.3988105031344,
+                "Nearest Water Type": "river",
+                "place_name": "Divisoria, Southern Leyte, Eastern Visayas, 6606, Philippines",
+                "Population - 1 km": 2695,
+                "Population - 5 km": 26066,
+                "Population - 10 km": 76891
+            }
+        },
+        {
+            "id": "8f69413a5422961",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.93726901539011,
+                    15.330551815787432
+                ]
+            },
+            "properties": {
+                "id": "8f69413a5422961",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 22,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.016498927026987076,
+                "Height Above Nearest Drainage (m)": 1.1999988555908203,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.9274099368650546,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 855.8471110661249,
+                "Nearest Water Type": "canal",
+                "place_name": "Maharlika Highway, Gapan, Nueva Ecija, Central Luzon, 3105, Philippines",
+                "Population - 1 km": 2150,
+                "Population - 5 km": 103618,
+                "Population - 10 km": 308207
+            }
+        },
+        {
+            "id": "8f694cda44b1845",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.17307663726422,
+                    15.659007189960686
+                ]
+            },
+            "properties": {
+                "id": "8f694cda44b1845",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 96,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.7330583930015564,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.6966873275376925,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 138.90539103530708,
+                "Nearest Water Type": "river",
+                "place_name": "Bongabon, Nueva Ecija, Central Luzon, 3128, Philippines",
+                "Population - 1 km": 286,
+                "Population - 5 km": 27943,
+                "Population - 10 km": 103623
+            }
+        },
+        {
+            "id": "8f6943286904752",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.6695548512843,
+                    14.100135551845375
+                ]
+            },
+            "properties": {
+                "id": "8f6943286904752",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 47,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.016590561717748642,
+                "Height Above Nearest Drainage (m)": 11.999998092651367,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 15.048600230081755,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 81.89395134839073,
+                "Nearest Water Type": "stream",
+                "place_name": "Malapad na Bato, Nasugbu, Batangas, Calabarzon, 4231, Philippines",
+                "Population - 1 km": 2030,
+                "Population - 5 km": 56349,
+                "Population - 10 km": 149653
+            }
+        },
+        {
+            "id": "8f6844c0a9a3115",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.57576304549616,
+                    10.210405492112038
+                ]
+            },
+            "properties": {
+                "id": "8f6844c0a9a3115",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 91,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008415148593485355,
+                "Height Above Nearest Drainage (m)": 58.69999694824219,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 9.516165376673161,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 992.5226905673567,
+                "Nearest Water Type": "river",
+                "place_name": "Tampa-an, Cebu, Central Visayas, 6040, Philippines",
+                "Population - 1 km": 1011,
+                "Population - 5 km": 32516,
+                "Population - 10 km": 102669
+            }
+        },
+        {
+            "id": "8f6844c59909b54",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.72886308285071,
+                    10.224109456866314
+                ]
+            },
+            "properties": {
+                "id": "8f6844c59909b54",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 45,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01682954654097557,
+                "Height Above Nearest Drainage (m)": 16.899999618530273,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 14.244324354458152,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 374.3360660180471,
+                "Nearest Water Type": "water",
+                "place_name": "Mainit, Naga, Cebu, Central Visayas, 86017, Philippines",
+                "Population - 1 km": 2999,
+                "Population - 5 km": 87417,
+                "Population - 10 km": 321801
+            }
+        },
+        {
+            "id": "8f694b6138e13ad",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.37251193330633,
+                    13.543500497472351
+                ]
+            },
+            "properties": {
+                "id": "8f694b6138e13ad",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 35,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008314745500683784,
+                "Height Above Nearest Drainage (m)": 2.200000762939453,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.9803979969381659,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 324.1057723467299,
+                "Nearest Water Type": "river",
+                "place_name": "Ocampo, Camarines Sur, Bicol Region, Philippines",
+                "Population - 1 km": 1235,
+                "Population - 5 km": 30678,
+                "Population - 10 km": 145529
+            }
+        },
+        {
+            "id": "8f68442c0b69025",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.48339797076954,
+                    10.01207178767638
+                ]
+            },
+            "properties": {
+                "id": "8f68442c0b69025",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 70,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008420245721936226,
+                "Height Above Nearest Drainage (m)": 20.000003814697266,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 9.3795605560753,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 388.88553583089373,
+                "Nearest Water Type": "stream",
+                "place_name": "Bohol, Central Visayas, 6315, Philippines",
+                "Population - 1 km": 104,
+                "Population - 5 km": 17818,
+                "Population - 10 km": 66415
+            }
+        },
+        {
+            "id": "8f694b6965b592b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    123.27253070660971,
+                    13.389170582733522
+                ]
+            },
+            "properties": {
+                "id": "8f694b6965b592b",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 82,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.00831998884677887,
+                "Height Above Nearest Drainage (m)": 15.900001525878906,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 4.238347694948043,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 837.2500461911176,
+                "Nearest Water Type": "river",
+                "place_name": "Santiago Nacacale, Camarines Sur, Bicol Region, Philippines",
+                "Population - 1 km": 1057,
+                "Population - 5 km": 34935,
+                "Population - 10 km": 144935
+            }
+        },
+        {
+            "id": "8f694ed0e22e710",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.94971197005107,
+                    14.686477226741282
+                ]
+            },
+            "properties": {
+                "id": "8f694ed0e22e710",
+                "Soil Clay Fraction": -1,
+                "Elevation": 4,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008273900486528873,
+                "Height Above Nearest Drainage (m)": 3.299999952316284,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": -1,
+                "Slope (degrees)": 4.43778741674051,
+                "Fine Earth Density (kg / m^3)": -1,
+                "Soil Great Group": -1,
+                "Distance to Waterway (m)": 129.1457196858328,
+                "Nearest Water Type": "water",
+                "place_name": "North Merville Park I Subdivision, Panghulo, Malabon, Northern Manila District, Metro Manila, 1478, Philippines",
+                "Population - 1 km": 30482,
+                "Population - 5 km": 1092098,
+                "Population - 10 km": 3659474
+            }
+        },
+        {
+            "id": "8f6863b842dcd0e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    124.43176874027588,
+                    11.577232370474727
+                ]
+            },
+            "properties": {
+                "id": "8f6863b842dcd0e",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 120,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008377333171665668,
+                "Height Above Nearest Drainage (m)": 51.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 3.4546820772947924,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 715.4533430805062,
+                "Nearest Water Type": "river",
+                "place_name": "Cabungaan, Biliran, Eastern Visayas, 6543, Philippines",
+                "Population - 1 km": 446,
+                "Population - 5 km": 52211,
+                "Population - 10 km": 82120
+            }
+        },
+        {
+            "id": "8f696d4ec1ab2a0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.66261508273047,
+                    18.083717580770426
+                ]
+            },
+            "properties": {
+                "id": "8f696d4ec1ab2a0",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 35,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008133499883115292,
+                "Height Above Nearest Drainage (m)": 18,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 2.878345535336495,
+                "Fine Earth Density (kg / m^3)": 117,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 1795.602813070786,
+                "Nearest Water Type": "river",
+                "place_name": "Casicallan Norte, Cagayan, Cagayan Valley, 3508, Philippines",
+                "Population - 1 km": 873,
+                "Population - 5 km": 19556,
+                "Population - 10 km": 64119
+            }
+        },
+        {
+            "id": "8f6941b0adaed20",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.896325462299,
+                    15.760359012597096
+                ]
+            },
+            "properties": {
+                "id": "8f6941b0adaed20",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 63,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.04939589276909828,
+                "Height Above Nearest Drainage (m)": 2.700000762939453,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 61.01680837934173,
+                "Nearest Water Type": "river",
+                "place_name": "Linglingay, Mu\u00f1oz, Nueva Ecija, Central Luzon, 3120, Philippines",
+                "Population - 1 km": 1763,
+                "Population - 5 km": 45656,
+                "Population - 10 km": 169447
+            }
+        }
+    ]
+}
