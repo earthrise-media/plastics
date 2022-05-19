@@ -147,7 +147,7 @@
             map.addSource('osm-sites', {
                 type: 'geojson',
                 'tolerance': 0.05,
-                data: 'https://raw.githubusercontent.com/earthrise-media/plastics/main/data/misc/all_osm.geojson?token=GHSAT0AAAAAABTXEIUWXROYHNH2PPBBHGYKYUGWCJA'
+                data: 'https://raw.githubusercontent.com/earthrise-media/plastics/main/docs/all_osm.geojson'
             });
             map.addLayer(
                 {
@@ -165,7 +165,7 @@
                 map.addSource('detected-sites', {
                 type: 'geojson',
                 'tolerance': 0.05,
-                data: 'https://raw.githubusercontent.com/earthrise-media/plastics/main/data/site_metadata/compiled_sites.geojson?token=GHSAT0AAAAAABTXEIUWWXXSR6C42Q2FTVQCYUGV6YQ'
+                data: 'https://raw.githubusercontent.com/earthrise-media/plastics/main/docs/compiled_sites.geojson'
             });
             map.addLayer(
                 {
@@ -180,7 +180,7 @@
                         }
                     }
                 });
-                
+
             map.on('click', function (e) {
                 var coordinates = e.lngLat;
                 navigator.clipboard.writeText(Math.round(coordinates.lat * 1000) / 1000 + ", " + Math.round(coordinates.lng * 1000) / 1000);
