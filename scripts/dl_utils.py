@@ -286,7 +286,7 @@ def download_mosaics(polygon, start_date, end_date, mosaic_period=1,
         w = mode(widths).mode[0]
         mosaics = [np.ma.masked_array(pad_patch(img.data, h, w),
                                         pad_patch(img.mask, h, w)) for img in mosaics]
-    mosaic_info = [next(iter(r)) for r in raster_infos]
+    mosaic_info = [r for r in raster_infos]
     return mosaics, mosaic_info
 
 def mosaic(arrays, method):
@@ -611,9 +611,8 @@ class SentinelData():
         self.composite_metadata = []
 
         while end <= datetime.date.fromisoformat(self.end_date) + delta:
-            for date in img_dates:
-                # find indices where date is within start and end
-                indices = [i for i, x in enumerate(img_dates) if x >= start and x <= end]
+            # find indices where date is within start and end
+            indices = [i for i, x in enumerate(img_dates) if x >= start and x <= end]
             if len(indices) > 0:
                 self.composites.append(mosaic([self.img_stack[i] for i in indices], self.method))
                 self.composite_dates.append(start.isoformat()[:10])
@@ -631,7 +630,7 @@ class SentinelData():
         self.pairs = []
         self.pair_starts = []
         period = relativedelta(months=self.mosaic_period)
-        pair_delta = relativedelta(months=self.spectrogram_interval * self.mosaic_period)
+        pair_delta = relativedelta(months=self.spectrogram_interval * self.mosaic_period) - relativedelta(days=1)
         start = datetime.date.fromisoformat(self.start_date)
         end = start + pair_delta
         img_dates = [datetime.date.fromisoformat(date) for date in self.composite_dates]
@@ -643,7 +642,7 @@ class SentinelData():
                 start_composite = self.composites[start_index[0]]
                 end_composite = self.composites[end_index[0]]
                 pair = [start_composite, end_composite]
-                if enforce_match:
+                if enforce_match==True:
                     if masks_match(pair):
                         self.pairs.append(pair)
                         self.pair_starts.append(start.isoformat()[:10])
@@ -818,26 +817,36 @@ class DescartesRun(object):
         Returns: None. (Uploads raster output to DL storage.)
         """
         tile = dl.scenes.DLTile.from_key(dlkey)
-        mosaics, raster_info = download_mosaics(
-            tile, start_date, end_date, self.mosaic_period, self.mosaic_method)
-        # Spectrogram pixel classifier prediction
-        image_grams = n_gram(mosaics, self.spectrogram_interval)
-        preds = [self.predict(gram) for gram in image_grams]
-        preds.append(mosaic(preds, 'median'))
-        preds = np.ma.stack(preds)
+        self.data = SentinelData(tile,
+                                 start_date,
+                                 end_date,
+                                 self.mosaic_period,
+                                 self.spectrogram_interval,
+                                 self.mosaic_method
+                                 )
 
-        self.band_names = get_starts(
-            start_date, end_date, self.mosaic_period, self.spectrogram_length)
+        self.data.search_scenes()
+        self.data.download_scenes()
+        self.data.create_composites()
+        self.data.create_pairs()
+        self.pairs = self.data.pairs
+        self.dates = self.data.pair_starts
+        self.bounds = self.data.metadata[0]["wgs84Extent"]["coordinates"][0][:-1]
+        self.preds = [predict_spectrogram(pair, self.model) for pair in self.pairs]
+        self.preds.append(mosaic(self.preds, 'median'))
+        self.preds = np.ma.stack(self.preds)
+        self.band_names = self.data.pair_starts
         self.band_names.append('median')
         for band_name in self.band_names:
             self.add_band(band_name)
         self.upload_raster(
-            preds, next(iter(raster_info)), dlkey.replace(':', '_'))
+            self.preds, next(iter(self.data.metadata)), dlkey.replace(':', '_'))
 
         # Spatial patch classifier prediction
 
         # Generate a list of coordinates for the patches within the tile
-        _, patch_coords = patches_from_tile(mosaics[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
+        raster_info = self.data.metadata
+        _, patch_coords = patches_from_tile(self.data.composites[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
 
         # Initialize a dictionary where the patch coordinate boundaries are the keys
         # Each value is an empty list where predictions will be appended
@@ -846,7 +855,7 @@ class DescartesRun(object):
         # Set a threshold for acceptable cloudiness within a patch for a prediction to be valid
         patch_cloud_threshold = 0.1
 
-        for pair in image_grams:
+        for pair in self.data.pairs:
             # generate patches for first image in pair
             patches_0, _ = patches_from_tile(pair[0], raster_info, self.patch_model.input_shape[2], self.patch_stride)
             # generate patches for second image in pair
