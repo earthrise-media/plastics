@@ -44,6 +44,10 @@ def main(*args):
     parser.add_argument('--run_local',
                         action='store_true',
                         help='Run model locally rather than async on DL.')
+    parser.add_argument('--band',
+                        type=str,
+                        default='median',
+                        help='Band to analyze')
     args = parser.parse_args(*args)
 
     product_id = 'earthrise:' + args.product_name
@@ -59,7 +63,7 @@ def main(*args):
     else:
         async_func = dl.Tasks().create_function(
             run_candidates, 
-            name=args.product_name + f'_candidate_detect_thresh_{args.pred_threshold}_min_sigma_{args.min_sigma}', 
+            name=args.product_name + f'_candidate_detect_thresh_{args.pred_threshold}_min_sigma_{args.min_sigma}_band-{args.band}', 
             **DL_SYSTEM_PARAMS
         )
         for image_name in tqdm(image_list):

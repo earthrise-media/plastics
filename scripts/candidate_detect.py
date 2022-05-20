@@ -214,15 +214,17 @@ class DescartesDetectRun(object):
                  product_name,
                  pred_threshold,
                  min_sigma,
+                 band,
                  **kwargs):
 
         self.product_name = product_name
         self.pred_threshold = pred_threshold
         self.min_sigma = min_sigma
+        self.band = band
         if self.product_name.startswith('earthrise:'):
-            self.product_id = f"{self.product_name}_blobs_thresh_{self.pred_threshold}_min-sigma_{self.min_sigma}_area-thresh_0.0025"
+            self.product_id = f"{self.product_name}_blobs_thresh_{self.pred_threshold}_min-sigma_{self.min_sigma}_area-thresh_0.0025_band-{self.band}"
         else:
-            self.product_id = f'earthrise:{f"{self.product_name}_blobs_thresh_{self.pred_threshold}_min-sigma_{self.min_sigma}_area-thresh_0.0025"}'
+            self.product_id = f'earthrise:{self.product_name}_blobs_thresh_{self.pred_threshold}_min-sigma_{self.min_sigma}_area-thresh_0.0025_band-{self.band}'
         self.product = self.init_product()
         self.raster_client = dl.Raster()
 
@@ -269,7 +271,7 @@ class DescartesDetectRun(object):
 
     def __call__(self, image):
         """Detect candidates within a tile"""
-        tile_path = self.download_tile(image)
+        tile_path = self.download_tile(image, self.band)
         blobs = self.detect_candidates(tile_path)
         feature_list = []
         if blobs:
