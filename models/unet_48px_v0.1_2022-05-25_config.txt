@@ -1,0 +1,202 @@
+Input Data:
+	0_data.pkl
+	100_data.pkl
+	10_data.pkl
+	11_data.pkl
+	12_data.pkl
+	13_data.pkl
+	14_data.pkl
+	15_data.pkl
+	16_data.pkl
+	17_data.pkl
+	18_data.pkl
+	19_data.pkl
+	1_data.pkl
+	20_data.pkl
+	21_data.pkl
+	22_data.pkl
+	23_data.pkl
+	24_data.pkl
+	25_data.pkl
+	26_data.pkl
+	27_data.pkl
+	28_data.pkl
+	29_data.pkl
+	2_data.pkl
+	30_data.pkl
+	31_data.pkl
+	32_data.pkl
+	33_data.pkl
+	34_data.pkl
+	35_data.pkl
+	36_data.pkl
+	37_data.pkl
+	38_data.pkl
+	39_data.pkl
+	3_data.pkl
+	40_data.pkl
+	41_data.pkl
+	42_data.pkl
+	43_data.pkl
+	44_data.pkl
+	45_data.pkl
+	46_data.pkl
+	47_data.pkl
+	48_data.pkl
+	49_data.pkl
+	4_data.pkl
+	50_data.pkl
+	51_data.pkl
+	52_data.pkl
+	53_data.pkl
+	54_data.pkl
+	55_data.pkl
+	56_data.pkl
+	57_data.pkl
+	58_data.pkl
+	59_data.pkl
+	5_data.pkl
+	60_data.pkl
+	61_data.pkl
+	62_data.pkl
+	63_data.pkl
+	64_data.pkl
+	65_data.pkl
+	66_data.pkl
+	67_data.pkl
+	68_data.pkl
+	69_data.pkl
+	6_data.pkl
+	70_data.pkl
+	71_data.pkl
+	72_data.pkl
+	73_data.pkl
+	74_data.pkl
+	75_data.pkl
+	76_data.pkl
+	77_data.pkl
+	78_data.pkl
+	79_data.pkl
+	7_data.pkl
+	80_data.pkl
+	81_data.pkl
+	82_data.pkl
+	83_data.pkl
+	84_data.pkl
+	85_data.pkl
+	86_data.pkl
+	87_data.pkl
+	88_data.pkl
+	89_data.pkl
+	8_data.pkl
+	90_data.pkl
+	91_data.pkl
+	92_data.pkl
+	93_data.pkl
+	94_data.pkl
+	95_data.pkl
+	96_data.pkl
+	97_data.pkl
+	98_data.pkl
+	99_data.pkl
+	9_data.pkl
+
+
+Augmentation Parameters:
+{
+ "__class_fullname__": "RandomSizedCrop",
+ "always_apply": false,
+ "p": 1,
+ "min_max_height": [
+  24,
+  38
+ ],
+ "height": 48,
+ "width": 48,
+ "w2h_ratio": 1.0,
+ "interpolation": 1
+}{
+ "__class_fullname__": "HorizontalFlip",
+ "always_apply": false,
+ "p": 0.5
+}{
+ "__class_fullname__": "ShiftScaleRotate",
+ "always_apply": false,
+ "p": 1,
+ "shift_limit_x": [
+  -0.25,
+  0.25
+ ],
+ "shift_limit_y": [
+  -0.25,
+  0.25
+ ],
+ "scale_limit": [
+  -0.5,
+  0.5
+ ],
+ "rotate_limit": [
+  -180,
+  180
+ ],
+ "interpolation": 1,
+ "border_mode": 4,
+ "value": null,
+ "mask_value": null
+}{
+ "__class_fullname__": "VerticalFlip",
+ "always_apply": false,
+ "p": 0.5
+}{
+ "__class_fullname__": "OneOf",
+ "p": 0.8,
+ "transforms": [
+  {
+   "__class_fullname__": "ElasticTransform",
+   "always_apply": false,
+   "p": 0.5,
+   "alpha": 120,
+   "sigma": 6.0,
+   "alpha_affine": 3.5999999999999996,
+   "interpolation": 1,
+   "border_mode": 4,
+   "value": null,
+   "mask_value": null,
+   "approximate": false
+  },
+  {
+   "__class_fullname__": "GridDistortion",
+   "always_apply": false,
+   "p": 0.5,
+   "num_steps": 5,
+   "distort_limit": [
+    -0.3,
+    0.3
+   ],
+   "interpolation": 1,
+   "border_mode": 4,
+   "value": null,
+   "mask_value": null
+  },
+  {
+   "__class_fullname__": "OpticalDistortion",
+   "always_apply": false,
+   "p": 0.1,
+   "distort_limit": [
+    -1,
+    1
+   ],
+   "shift_limit": [
+    -0.5,
+    0.5
+   ],
+   "interpolation": 1,
+   "border_mode": 4,
+   "value": null,
+   "mask_value": null
+  }
+ ]
+}
+Batch Size: 32
+Loss Function: sparse_categorical_crossentropy
+Training Epochs: 100
