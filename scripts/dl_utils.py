@@ -254,7 +254,7 @@ def get_starts(start_date, end_date, mosaic_period, spectrogram_length):
     """Get spectrogram start dates."""
     starts = []
     delta = relativedelta(months=mosaic_period)
-    length = relativedelta(months=spectrogram_length)
+    length = relativedelta(months=spectrogram_length * mosaic_period)
     start = datetime.date.fromisoformat(start_date)
     while start + length <= datetime.date.fromisoformat(end_date):
         starts.append(start.isoformat())
@@ -301,6 +301,7 @@ def mosaic(arrays, method):
 
     Returns: A masked array or None if arrays is an empty list
     """
+    print("array shape", np.shape(arrays))
     if not arrays:
         return
 
@@ -831,12 +832,22 @@ class DescartesRun(object):
         self.data.create_pairs()
         self.pairs = self.data.pairs
         self.dates = self.data.pair_starts
+        starts = get_starts(start_date, end_date, self.mosaic_period, self.spectrogram_interval)
         self.bounds = self.data.metadata[0]["wgs84Extent"]["coordinates"][0][:-1]
         self.preds = [predict_spectrogram(pair, self.model) for pair in self.pairs]
-        self.preds.append(mosaic(self.preds, 'median'))
-        self.preds = np.ma.stack(self.preds)
-        self.band_names = self.data.pair_starts
-        self.band_names.append('median')
+        if len(self.preds) > 0:
+            pred_stack = {}
+            for pred, date in zip(self.preds, self.data.pair_starts):
+                pred_stack[date] = pred
+            for date in starts:
+                if date not in pred_stack.keys():
+                    print(date, "not found. Filling with masked values")
+                    pred_stack[date] = np.ma.masked_array(np.ones(self.preds[0].shape) * -1, mask=True)
+            pred_stack['median'] = mosaic(self.preds, 'median')
+        self.preds = np.ma.stack(pred_stack.values())
+        print("Preds shape:", self.preds.shape)
+        self.band_names = list(pred_stack.keys())
+        print("Band names:", self.band_names)
         for band_name in self.band_names:
             self.add_band(band_name)
         self.upload_raster(
