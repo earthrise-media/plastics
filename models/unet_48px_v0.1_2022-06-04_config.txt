@@ -1,0 +1,304 @@
+Input Data:
+	0_data.pkl
+	100_data.pkl
+	10_data.pkl
+	11_data.pkl
+	12_data.pkl
+	13_data.pkl
+	14_data.pkl
+	15_data.pkl
+	16_data.pkl
+	17_data.pkl
+	18_data.pkl
+	19_data.pkl
+	1_data.pkl
+	20_data.pkl
+	21_data.pkl
+	22_data.pkl
+	23_data.pkl
+	24_data.pkl
+	25_data.pkl
+	26_data.pkl
+	27_data.pkl
+	28_data.pkl
+	29_data.pkl
+	2_data.pkl
+	30_data.pkl
+	31_data.pkl
+	32_data.pkl
+	33_data.pkl
+	34_data.pkl
+	35_data.pkl
+	36_data.pkl
+	37_data.pkl
+	38_data.pkl
+	39_data.pkl
+	3_data.pkl
+	40_data.pkl
+	41_data.pkl
+	42_data.pkl
+	43_data.pkl
+	44_data.pkl
+	45_data.pkl
+	46_data.pkl
+	47_data.pkl
+	48_data.pkl
+	49_data.pkl
+	4_data.pkl
+	50_data.pkl
+	51_data.pkl
+	52_data.pkl
+	53_data.pkl
+	54_data.pkl
+	55_data.pkl
+	56_data.pkl
+	57_data.pkl
+	58_data.pkl
+	59_data.pkl
+	5_data.pkl
+	60_data.pkl
+	61_data.pkl
+	62_data.pkl
+	63_data.pkl
+	64_data.pkl
+	65_data.pkl
+	66_data.pkl
+	67_data.pkl
+	68_data.pkl
+	69_data.pkl
+	6_data.pkl
+	70_data.pkl
+	71_data.pkl
+	72_data.pkl
+	73_data.pkl
+	74_data.pkl
+	75_data.pkl
+	76_data.pkl
+	77_data.pkl
+	78_data.pkl
+	79_data.pkl
+	7_data.pkl
+	80_data.pkl
+	81_data.pkl
+	82_data.pkl
+	83_data.pkl
+	84_data.pkl
+	85_data.pkl
+	86_data.pkl
+	87_data.pkl
+	88_data.pkl
+	89_data.pkl
+	8_data.pkl
+	90_data.pkl
+	91_data.pkl
+	92_data.pkl
+	93_data.pkl
+	94_data.pkl
+	95_data.pkl
+	96_data.pkl
+	97_data.pkl
+	98_data.pkl
+	99_data.pkl
+	9_data.pkl
+	neg_0_data.pkl
+	neg_100_data.pkl
+	neg_10_data.pkl
+	neg_11_data.pkl
+	neg_12_data.pkl
+	neg_13_data.pkl
+	neg_14_data.pkl
+	neg_15_data.pkl
+	neg_16_data.pkl
+	neg_17_data.pkl
+	neg_18_data.pkl
+	neg_19_data.pkl
+	neg_1_data.pkl
+	neg_20_data.pkl
+	neg_21_data.pkl
+	neg_22_data.pkl
+	neg_23_data.pkl
+	neg_24_data.pkl
+	neg_25_data.pkl
+	neg_26_data.pkl
+	neg_27_data.pkl
+	neg_28_data.pkl
+	neg_29_data.pkl
+	neg_2_data.pkl
+	neg_30_data.pkl
+	neg_31_data.pkl
+	neg_32_data.pkl
+	neg_33_data.pkl
+	neg_34_data.pkl
+	neg_35_data.pkl
+	neg_36_data.pkl
+	neg_37_data.pkl
+	neg_38_data.pkl
+	neg_39_data.pkl
+	neg_3_data.pkl
+	neg_40_data.pkl
+	neg_41_data.pkl
+	neg_42_data.pkl
+	neg_43_data.pkl
+	neg_44_data.pkl
+	neg_45_data.pkl
+	neg_46_data.pkl
+	neg_47_data.pkl
+	neg_48_data.pkl
+	neg_49_data.pkl
+	neg_4_data.pkl
+	neg_50_data.pkl
+	neg_51_data.pkl
+	neg_52_data.pkl
+	neg_53_data.pkl
+	neg_54_data.pkl
+	neg_55_data.pkl
+	neg_56_data.pkl
+	neg_57_data.pkl
+	neg_58_data.pkl
+	neg_59_data.pkl
+	neg_5_data.pkl
+	neg_60_data.pkl
+	neg_61_data.pkl
+	neg_62_data.pkl
+	neg_63_data.pkl
+	neg_64_data.pkl
+	neg_65_data.pkl
+	neg_66_data.pkl
+	neg_67_data.pkl
+	neg_68_data.pkl
+	neg_69_data.pkl
+	neg_6_data.pkl
+	neg_70_data.pkl
+	neg_71_data.pkl
+	neg_72_data.pkl
+	neg_73_data.pkl
+	neg_74_data.pkl
+	neg_75_data.pkl
+	neg_76_data.pkl
+	neg_77_data.pkl
+	neg_78_data.pkl
+	neg_79_data.pkl
+	neg_7_data.pkl
+	neg_80_data.pkl
+	neg_81_data.pkl
+	neg_82_data.pkl
+	neg_83_data.pkl
+	neg_84_data.pkl
+	neg_85_data.pkl
+	neg_86_data.pkl
+	neg_87_data.pkl
+	neg_88_data.pkl
+	neg_89_data.pkl
+	neg_8_data.pkl
+	neg_90_data.pkl
+	neg_91_data.pkl
+	neg_92_data.pkl
+	neg_93_data.pkl
+	neg_94_data.pkl
+	neg_95_data.pkl
+	neg_96_data.pkl
+	neg_97_data.pkl
+	neg_98_data.pkl
+	neg_99_data.pkl
+	neg_9_data.pkl
+
+
+Augmentation Parameters:
+{
+ "__class_fullname__": "RandomSizedCrop",
+ "always_apply": false,
+ "p": 1,
+ "min_max_height": [
+  24,
+  38
+ ],
+ "height": 48,
+ "width": 48,
+ "w2h_ratio": 1.0,
+ "interpolation": 1
+}{
+ "__class_fullname__": "HorizontalFlip",
+ "always_apply": false,
+ "p": 0.5
+}{
+ "__class_fullname__": "ShiftScaleRotate",
+ "always_apply": false,
+ "p": 1,
+ "shift_limit_x": [
+  -0.25,
+  0.25
+ ],
+ "shift_limit_y": [
+  -0.25,
+  0.25
+ ],
+ "scale_limit": [
+  -0.5,
+  0.5
+ ],
+ "rotate_limit": [
+  -180,
+  180
+ ],
+ "interpolation": 1,
+ "border_mode": 4,
+ "value": null,
+ "mask_value": null
+}{
+ "__class_fullname__": "VerticalFlip",
+ "always_apply": false,
+ "p": 0.5
+}{
+ "__class_fullname__": "OneOf",
+ "p": 0.8,
+ "transforms": [
+  {
+   "__class_fullname__": "ElasticTransform",
+   "always_apply": false,
+   "p": 0.5,
+   "alpha": 120,
+   "sigma": 6.0,
+   "alpha_affine": 3.5999999999999996,
+   "interpolation": 1,
+   "border_mode": 4,
+   "value": null,
+   "mask_value": null,
+   "approximate": false
+  },
+  {
+   "__class_fullname__": "GridDistortion",
+   "always_apply": false,
+   "p": 0.5,
+   "num_steps": 5,
+   "distort_limit": [
+    -0.3,
+    0.3
+   ],
+   "interpolation": 1,
+   "border_mode": 4,
+   "value": null,
+   "mask_value": null
+  },
+  {
+   "__class_fullname__": "OpticalDistortion",
+   "always_apply": false,
+   "p": 0.1,
+   "distort_limit": [
+    -1,
+    1
+   ],
+   "shift_limit": [
+    -0.5,
+    0.5
+   ],
+   "interpolation": 1,
+   "border_mode": 4,
+   "value": null,
+   "mask_value": null
+  }
+ ]
+}
+Batch Size: 64
+Loss Function: sparse_categorical_crossentropy
+Training Epochs: 50
+Final Loss: 0.029
