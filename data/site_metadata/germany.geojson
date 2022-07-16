@@ -1,0 +1,995 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f1f19c6198cca4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.431139203159207,
+                    52.29702462447808
+                ]
+            },
+            "properties": {
+                "id": "8f1f19c6198cca4",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 88,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.005260463338345289,
+                "Height Above Nearest Drainage (m)": 6.599998474121094,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.58,
+                "Slope (degrees)": 0.7986259004267547,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 14,
+                "Distance to Waterway (m)": 148.75250129242806,
+                "Nearest Water Type": "water",
+                "place_name": "11a, Teichstra\u00dfe, Hohenwalde, Frankfurt (Oder), Brandenburg, 15234, Germany",
+                "Population - 1 km": 110,
+                "Population - 5 km": 8702,
+                "Population - 10 km": 46795
+            }
+        },
+        {
+            "id": "8f1f81d05346c6b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.80603874041382,
+                    48.35975309741295
+                ]
+            },
+            "properties": {
+                "id": "8f1f81d05346c6b",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 153,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.00571146747097373,
+                "Height Above Nearest Drainage (m)": 1.5,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 1.5263288511478772,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 11,
+                "Distance to Waterway (m)": 347.53460206665756,
+                "Nearest Water Type": "stream",
+                "place_name": "15, Archimedesstra\u00dfe, Schwarzwald Gewerbepark West, Zuckerhof, Lahr/Schwarzwald, Verwaltungsgemeinschaft Lahr/Schwarzwald, Ortenaukreis, Baden-W\u00fcrttemberg, 77933, Germany",
+                "Population - 1 km": 1589,
+                "Population - 5 km": 30206,
+                "Population - 10 km": 81801
+            }
+        },
+        {
+            "id": "8f1f144ca6841b5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.513111226482168,
+                    52.830438261655345
+                ]
+            },
+            "properties": {
+                "id": "8f1f144ca6841b5",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 33,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.16630174219608307,
+                "Height Above Nearest Drainage (m)": 3.5999984741210938,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.68,
+                "Slope (degrees)": 1.1955361160756084,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 10,
+                "Distance to Waterway (m)": 486.40329976294584,
+                "Nearest Water Type": "ditch",
+                "place_name": "Hinterm Bahnhof, S\u00f6gel, Samtgemeinde S\u00f6gel, Landkreis Emsland, Lower Saxony, 49751, Germany",
+                "Population - 1 km": 2096,
+                "Population - 5 km": 6755,
+                "Population - 10 km": 17382
+            }
+        },
+        {
+            "id": "8f1f8560c24e94e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.825984033619529,
+                    48.59497290404413
+                ]
+            },
+            "properties": {
+                "id": "8f1f8560c24e94e",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 134,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0056852782145142555,
+                "Height Above Nearest Drainage (m)": 2,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 0.934817849376739,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 9,
+                "Distance to Waterway (m)": 82.39302235909236,
+                "Nearest Water Type": "canal",
+                "place_name": "1, Otto-Hahn-Stra\u00dfe, Auenheim, Kehl, Ortenaukreis, Baden-W\u00fcrttemberg, 77694, Germany",
+                "Population - 1 km": 2463,
+                "Population - 5 km": 88468,
+                "Population - 10 km": 368675
+            }
+        },
+        {
+            "id": "8f1fadb8ba4371d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.947768981636395,
+                    51.24030195094428
+                ]
+            },
+            "properties": {
+                "id": "8f1fadb8ba4371d",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 171,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.005384140647947788,
+                "Height Above Nearest Drainage (m)": 8.900009155273438,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.16,
+                "Slope (degrees)": 1.5454433277795698,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 8,
+                "Distance to Waterway (m)": 139.47226673485804,
+                "Nearest Water Type": "stream",
+                "place_name": "B 4, Greu\u00dfen, Clingen, Greu\u00dfen, Kyffh\u00e4userkreis, Thuringia, 99718, Germany",
+                "Population - 1 km": 761,
+                "Population - 5 km": 5143,
+                "Population - 10 km": 14701
+            }
+        },
+        {
+            "id": "8f1f03a1e1a42ea",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.402227932600587,
+                    53.925592897803824
+                ]
+            },
+            "properties": {
+                "id": "8f1f03a1e1a42ea",
+                "Soil Clay Fraction": 0.11,
+                "Elevation": 13,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.005066260229796171,
+                "Height Above Nearest Drainage (m)": 8.700000762939453,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.59,
+                "Slope (degrees)": 1.6047557947480477,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 16,
+                "Distance to Waterway (m)": 303.66146580809067,
+                "Nearest Water Type": "ditch",
+                "place_name": "Liebenthal, G\u00fctzkow, Z\u00fcssow, Vorpommern-Greifswald, Mecklenburg-Vorpommern, 17506, Germany",
+                "Population - 1 km": 237,
+                "Population - 5 km": 5059,
+                "Population - 10 km": 9354
+            }
+        },
+        {
+            "id": "8f1fac4730ebcb2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.688115839224482,
+                    50.56659862868914
+                ]
+            },
+            "properties": {
+                "id": "8f1fac4730ebcb2",
+                "Soil Clay Fraction": 0.16,
+                "Elevation": 168,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.005461932625621557,
+                "Height Above Nearest Drainage (m)": 3.6999969482421875,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.46,
+                "Slope (degrees)": 0.5765981703425912,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 10,
+                "Distance to Waterway (m)": 47.158944377426074,
+                "Nearest Water Type": "water",
+                "place_name": "Gie\u00dfen Erdkauterweg MTG, Ferniestra\u00dfe, Schiffenberger Tal, Gie\u00dfen, Landkreis Gie\u00dfen, Hesse, 35394, Germany",
+                "Population - 1 km": 4567,
+                "Population - 5 km": 73694,
+                "Population - 10 km": 153994
+            }
+        },
+        {
+            "id": "8f1f8cc75348625",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.675754388725153,
+                    48.44150950195443
+                ]
+            },
+            "properties": {
+                "id": "8f1f8cc75348625",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 723,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.034212879836559296,
+                "Height Above Nearest Drainage (m)": 5.70001220703125,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.26,
+                "Slope (degrees)": 7.016538283735667,
+                "Fine Earth Density (kg / m^3)": 112,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 1082.3689411362143,
+                "Nearest Water Type": "water",
+                "place_name": "1, Fohlenkehlen, Alpaka Dreams Hofstelle, Sontheim, Heroldstatt, Gemeindeverwaltungsverband Laichinger Alb, Alb-Donau-Kreis, Baden-W\u00fcrttemberg, 72535, Germany",
+                "Population - 1 km": 587,
+                "Population - 5 km": 4883,
+                "Population - 10 km": 28061
+            }
+        },
+        {
+            "id": "8f1fad9536dad46",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.519409101172752,
+                    51.41608711762095
+                ]
+            },
+            "properties": {
+                "id": "8f1fad9536dad46",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 279,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01609072834253311,
+                "Height Above Nearest Drainage (m)": 26.500015258789062,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 11.081789040548276,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 500.14472252178643,
+                "Nearest Water Type": "ditch",
+                "place_name": "Halle-Kasseler-Stra\u00dfe, W\u00fclfingerode, Sollstedt, Landkreis Nordhausen, Thuringia, 99759, Germany",
+                "Population - 1 km": 856,
+                "Population - 5 km": 7150,
+                "Population - 10 km": 23388
+            }
+        },
+        {
+            "id": "8f1f141200b4714",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.571164669714003,
+                    53.40540851514884
+                ]
+            },
+            "properties": {
+                "id": "8f1f141200b4714",
+                "Soil Clay Fraction": 0.08,
+                "Elevation": 2,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.04615810513496399,
+                "Height Above Nearest Drainage (m)": 1.3000001907348633,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.75,
+                "Slope (degrees)": 0.6037404306440204,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 10,
+                "Distance to Waterway (m)": 445.56311003445023,
+                "Nearest Water Type": "water",
+                "place_name": "14, Schmiedestra\u00dfe, Gewerbegebiet Mitte, Ostgro\u00dfefehn, Mittegro\u00dfefehn, Gro\u00dfefehn, Landkreis Aurich, Lower Saxony, 26629, Germany",
+                "Population - 1 km": 1198,
+                "Population - 5 km": 8411,
+                "Population - 10 km": 39170
+            }
+        },
+        {
+            "id": "8f1f15c4e1a1c4d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.116049235383032,
+                    53.50206050111232
+                ]
+            },
+            "properties": {
+                "id": "8f1f15c4e1a1c4d",
+                "Soil Clay Fraction": 0.11,
+                "Elevation": 10,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.12793099880218506,
+                "Height Above Nearest Drainage (m)": 7.000000476837158,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 1.676988988782284,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 934.7165103758108,
+                "Nearest Water Type": "ditch",
+                "place_name": "Jacobs GaLaBau, 10, Hansestra\u00dfe, Bremerv\u00f6rde, Landkreis Rotenburg (W\u00fcmme), Lower Saxony, 27432, Germany",
+                "Population - 1 km": 1533,
+                "Population - 5 km": 11416,
+                "Population - 10 km": 22496
+            }
+        },
+        {
+            "id": "8f1f8c71951d8f4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.16026460470329,
+                    48.00872369535255
+                ]
+            },
+            "properties": {
+                "id": "8f1f8c71951d8f4",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 585,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.2817903161048889,
+                "Height Above Nearest Drainage (m)": 0.60003662109375,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.111855999027414,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 12,
+                "Distance to Waterway (m)": 1517.6190288401115,
+                "Nearest Water Type": "stream",
+                "place_name": "Johann-Wugazzer-Weg, Amendingen, Steinheim, Memmingen, Bavaria, 87700, Germany",
+                "Population - 1 km": 2946,
+                "Population - 5 km": 38611,
+                "Population - 10 km": 64751
+            }
+        },
+        {
+            "id": "8f1fac4e3c0aa63",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.635379815155963,
+                    50.47683766933215
+                ]
+            },
+            "properties": {
+                "id": "8f1fac4e3c0aa63",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 246,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.23530830442905426,
+                "Height Above Nearest Drainage (m)": 5.6999969482421875,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 1.4895275186958656,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 11,
+                "Distance to Waterway (m)": 211.2264363174357,
+                "Nearest Water Type": "stream",
+                "place_name": "Kempowski Fruchthof, 14, Am Magna Park, Magna-Park Rhein-Main, Niederkleen, Langg\u00f6ns, Wetteraukreis, Hesse, 35428, Germany",
+                "Population - 1 km": 2145,
+                "Population - 5 km": 18802,
+                "Population - 10 km": 79742
+            }
+        },
+        {
+            "id": "8f1fad322c1d875",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.043031046081971,
+                    51.069833936151
+                ]
+            },
+            "properties": {
+                "id": "8f1fad322c1d875",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 163,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.005403867922723293,
+                "Height Above Nearest Drainage (m)": 3.899993896484375,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 1.0313217947470659,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 9,
+                "Distance to Waterway (m)": 126.71636217151818,
+                "Nearest Water Type": "water",
+                "place_name": "8, Alperstedter Stra\u00dfe, Stotternheim, Erfurt, Thuringia, 99095, Germany",
+                "Population - 1 km": 625,
+                "Population - 5 km": 17703,
+                "Population - 10 km": 95857
+            }
+        },
+        {
+            "id": "8f1f856dc9958dc",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.870789637281198,
+                    48.44698596833633
+                ]
+            },
+            "properties": {
+                "id": "8f1f856dc9958dc",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 154,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.005701806861907244,
+                "Height Above Nearest Drainage (m)": 1.600006103515625,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 2.2126669422156873,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 21,
+                "Distance to Waterway (m)": 398.3984262524104,
+                "Nearest Water Type": "ditch",
+                "place_name": "Abfallannahmestelle Schutterwald-H\u00f6fen, Ortenauer Stra\u00dfe, H\u00f6fen, Schutterwald, Verwaltungsgemeinschaft Offenburg, Ortenaukreis, Baden-W\u00fcrttemberg, 77746, Germany",
+                "Population - 1 km": 687,
+                "Population - 5 km": 23618,
+                "Population - 10 km": 100212
+            }
+        },
+        {
+            "id": "8f1f1eb564a6a6e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.82461964637328,
+                    52.274022452233744
+                ]
+            },
+            "properties": {
+                "id": "8f1f1eb564a6a6e",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 39,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.005263146013021469,
+                "Height Above Nearest Drainage (m)": 3.3000030517578125,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.61,
+                "Slope (degrees)": 0.7984574939511885,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 18,
+                "Distance to Waterway (m)": 58.51460962749831,
+                "Nearest Water Type": "ditch",
+                "place_name": "Feldmark-L\u00fcdersdorf, Burg, Jerichower Land, Saxony-Anhalt, 39288, Germany",
+                "Population - 1 km": 1104,
+                "Population - 5 km": 12273,
+                "Population - 10 km": 24686
+            }
+        },
+        {
+            "id": "8f1fadaa9446daa",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.053456507394795,
+                    51.1868087116498
+                ]
+            },
+            "properties": {
+                "id": "8f1fadaa9446daa",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 143,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.0053903767839074135,
+                "Height Above Nearest Drainage (m)": 8.20001220703125,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.23,
+                "Slope (degrees)": 1.8543341688374633,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 305.3021151867898,
+                "Nearest Water Type": "ditch",
+                "place_name": "B 86, Luthersborn, Wei\u00dfensee, Landkreis S\u00f6mmerda, Thuringia, 99631, Germany",
+                "Population - 1 km": 737,
+                "Population - 5 km": 6108,
+                "Population - 10 km": 28173
+            }
+        },
+        {
+            "id": "8f1f1396c912145",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.64859714081471,
+                    52.31340256299509
+                ]
+            },
+            "properties": {
+                "id": "8f1f1396c912145",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 79,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.010517165996134281,
+                "Height Above Nearest Drainage (m)": 13.199996948242188,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 7.096036207888705,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 11,
+                "Distance to Waterway (m)": 533.5434485685278,
+                "Nearest Water Type": "pond",
+                "place_name": "Binnensalzstelle am Kaliwerk Ronnenberg, Weetzer Kirchweg, Ronnenberg, Region Hannover, Lower Saxony, 30952, Germany",
+                "Population - 1 km": 2901,
+                "Population - 5 km": 53057,
+                "Population - 10 km": 242881
+            }
+        },
+        {
+            "id": "8f1fa8a4960e32a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.688912633830078,
+                    50.3586495422437
+                ]
+            },
+            "properties": {
+                "id": "8f1fa8a4960e32a",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 320,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.016457250341773033,
+                "Height Above Nearest Drainage (m)": 3.399993896484375,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 2.5187124413112874,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 224.52911142408107,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Streufdorf, Straufhain, Heldburger Unterland, Landkreis Hildburghausen, Thuringia, 98646, Germany",
+                "Population - 1 km": 385,
+                "Population - 5 km": 3330,
+                "Population - 10 km": 20639
+            }
+        },
+        {
+            "id": "8f1f8d2eb452748",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.49589012938374,
+                    48.26328552561393
+                ]
+            },
+            "properties": {
+                "id": "8f1f8d2eb452748",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 408,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.3834094703197479,
+                "Height Above Nearest Drainage (m)": 1.100006103515625,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 14,
+                "Distance to Waterway (m)": 1231.3824449766148,
+                "Nearest Water Type": "water",
+                "place_name": "Zehenthof, Mettenheim, Landkreis M\u00fchldorf am Inn, Bavaria, 84562, Germany",
+                "Population - 1 km": 484,
+                "Population - 5 km": 17425,
+                "Population - 10 km": 57461
+            }
+        },
+        {
+            "id": "8f1f13a6180d672",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.377473897024617,
+                    52.135819565122844
+                ]
+            },
+            "properties": {
+                "id": "8f1f13a6180d672",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 103,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.058073997497558594,
+                "Height Above Nearest Drainage (m)": 6.3000030517578125,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 2.5168305433649216,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 9,
+                "Distance to Waterway (m)": 1321.5969540537924,
+                "Nearest Water Type": "stream",
+                "place_name": "Entsorgungszentrum Salzgitter, Diebesstieg, Heerte, Ortschaft West, Salzgitter, Lower Saxony, 38229, Germany",
+                "Population - 1 km": 2241,
+                "Population - 5 km": 39460,
+                "Population - 10 km": 93106
+            }
+        },
+        {
+            "id": "8f1f11430d2b225",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.856899759588224,
+                    52.41529677839766
+                ]
+            },
+            "properties": {
+                "id": "8f1f11430d2b225",
+                "Soil Clay Fraction": 0.08,
+                "Elevation": 57,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.005246526096016169,
+                "Height Above Nearest Drainage (m)": 1.2999992370605469,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 1.0568422800431607,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 12,
+                "Distance to Waterway (m)": 389.3833152813204,
+                "Nearest Water Type": "lake",
+                "place_name": "Moorautobahn, Lahe, Bothfeld-Vahrenheide, Hanover, Region Hannover, Lower Saxony, 30659, Germany",
+                "Population - 1 km": 3607,
+                "Population - 5 km": 86959,
+                "Population - 10 km": 327125
+            }
+        },
+        {
+            "id": "8f1fae48d51e580",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.817774067943287,
+                    49.47572191249754
+                ]
+            },
+            "properties": {
+                "id": "8f1fae48d51e580",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 305,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.0335175022482872,
+                "Height Above Nearest Drainage (m)": 38.70001220703125,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.5,
+                "Slope (degrees)": 9.043502885229701,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 8,
+                "Distance to Waterway (m)": 346.65749888367407,
+                "Nearest Water Type": "basin",
+                "place_name": "Wertstoffhof, Kapiteltal, Mehlingen, Enkenbach-Alsenborn, Landkreis Kaiserslautern, Rhineland-Palatinate, 67657, Germany",
+                "Population - 1 km": 564,
+                "Population - 5 km": 30061,
+                "Population - 10 km": 95396
+            }
+        },
+        {
+            "id": "8f1f1ac42a95156",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.912565515662187,
+                    51.20806680767136
+                ]
+            },
+            "properties": {
+                "id": "8f1f1ac42a95156",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 127,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00538781238719821,
+                "Height Above Nearest Drainage (m)": 12.900001525878906,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.25,
+                "Slope (degrees)": 1.746441137759336,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 235.41423151158307,
+                "Nearest Water Type": "stream",
+                "place_name": "Findberg, Uichteritz, Wei\u00dfenfels, Burgenlandkreis, Saxony-Anhalt, 06667, Germany",
+                "Population - 1 km": 425,
+                "Population - 5 km": 17023,
+                "Population - 10 km": 52102
+            }
+        },
+        {
+            "id": "8f1f8c1b65a200e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.72806826096237,
+                    48.296750989338996
+                ]
+            },
+            "properties": {
+                "id": "8f1f8c1b65a200e",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 508,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.00571847939863801,
+                "Height Above Nearest Drainage (m)": 5,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 9,
+                "Distance to Waterway (m)": 171.51845889822116,
+                "Nearest Water Type": "stream",
+                "place_name": "Gebr. Braig GmbH & Co. KG, Peter-und-Paul-Weg, Berkach, Ehingen (Donau), Gemeindeverwaltungsverband Ehingen (Donau), Alb-Donau-Kreis, Baden-W\u00fcrttemberg, 89584, Germany",
+                "Population - 1 km": 1602,
+                "Population - 5 km": 17468,
+                "Population - 10 km": 40874
+            }
+        },
+        {
+            "id": "8f1f14d6b8528c4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.301105668942979,
+                    53.46773771013382
+                ]
+            },
+            "properties": {
+                "id": "8f1f14d6b8528c4",
+                "Soil Clay Fraction": 0.16,
+                "Elevation": -3,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.2612011432647705,
+                "Height Above Nearest Drainage (m)": 0.20000004768371582,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.62,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 15,
+                "Distance to Waterway (m)": 276.18025413386056,
+                "Nearest Water Type": "canal",
+                "place_name": "Entladestra\u00dfe, Gewerbegebiet Georgsheil, Uthwerdum, S\u00fcdbrookmerland, Landkreis Aurich, Lower Saxony, 26624, Germany",
+                "Population - 1 km": 1641,
+                "Population - 5 km": 9818,
+                "Population - 10 km": 40378
+            }
+        },
+        {
+            "id": "8f1f810a9b84a21",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.491807485994427,
+                    48.0751254631444
+                ]
+            },
+            "properties": {
+                "id": "8f1f810a9b84a21",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 747,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 1.418317198753357,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 0.5564777884135049,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 167.7234490958259,
+                "Nearest Water Type": "water",
+                "place_name": "Am L\u00e4mmlisgrund, Villingen-Schwenningen, Verwaltungsgemeinschaft Villingen-Schwenningen, Schwarzwald-Baar-Kreis, Baden-W\u00fcrttemberg, 78052, Germany",
+                "Population - 1 km": 1257,
+                "Population - 5 km": 51499,
+                "Population - 10 km": 98533
+            }
+        },
+        {
+            "id": "8f1f1e02ec2bc26",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.385020337587838,
+                    51.95485750337362
+                ]
+            },
+            "properties": {
+                "id": "8f1f1e02ec2bc26",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 76,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00530066667124629,
+                "Height Above Nearest Drainage (m)": 5.099998474121094,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.26,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 316.09209204984256,
+                "Nearest Water Type": "ditch",
+                "place_name": "K 1308, Westeregeln, B\u00f6rde-Hakel, Egelner Mulde, Salzlandkreis, Saxony-Anhalt, 39448, Germany",
+                "Population - 1 km": 726,
+                "Population - 5 km": 5280,
+                "Population - 10 km": 15206
+            }
+        },
+        {
+            "id": "8f1f1d16c736314",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.043795114206352,
+                    53.10775247720925
+                ]
+            },
+            "properties": {
+                "id": "8f1f1d16c736314",
+                "Soil Clay Fraction": 0.17,
+                "Elevation": 35,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.00516437366604805,
+                "Height Above Nearest Drainage (m)": 26.19999885559082,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.54,
+                "Slope (degrees)": 3.3598214170024736,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 22,
+                "Distance to Waterway (m)": 463.7220162412866,
+                "Nearest Water Type": "ditch",
+                "place_name": "L 285, Sch\u00f6nermark, Schwedt/Oder, Mark Landin, Uckermark, Brandenburg, 16278, Germany",
+                "Population - 1 km": 34,
+                "Population - 5 km": 1228,
+                "Population - 10 km": 7016
+            }
+        },
+        {
+            "id": "8f1f13070344072",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.840437502392215,
+                    51.803193807338054
+                ]
+            },
+            "properties": {
+                "id": "8f1f13070344072",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 119,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.0053184484131634235,
+                "Height Above Nearest Drainage (m)": 9.5,
+                "Landform Type": "Lower slope",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 19,
+                "Distance to Waterway (m)": 409.90504502465603,
+                "Nearest Water Type": "river",
+                "place_name": "K 510, Pinkler, Hullersen, Einbeck, Landkreis Northeim, Lower Saxony, 37574, Germany",
+                "Population - 1 km": 315,
+                "Population - 5 km": 14816,
+                "Population - 10 km": 28981
+            }
+        },
+        {
+            "id": "8f1fa0b7555a440",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.1312455905039,
+                    50.92384402548903
+                ]
+            },
+            "properties": {
+                "id": "8f1fa0b7555a440",
+                "Soil Clay Fraction": 0.17,
+                "Elevation": 116,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.010841360315680504,
+                "Height Above Nearest Drainage (m)": 2.3000030517578125,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.29,
+                "Slope (degrees)": 0.5797503970273779,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 9,
+                "Distance to Waterway (m)": 1360.7159703636848,
+                "Nearest Water Type": "stream",
+                "place_name": "117, Talstra\u00dfe, \u00dcbach, \u00dcbach-Palenberg, Kreis Heinsberg, North Rhine-Westphalia, 52531, Germany",
+                "Population - 1 km": 3833,
+                "Population - 5 km": 54524,
+                "Population - 10 km": 212313
+            }
+        },
+        {
+            "id": "8f1f1a753a993b4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.51907055836892,
+                    50.845200505025275
+                ]
+            },
+            "properties": {
+                "id": "8f1f1a753a993b4",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 287,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.005429857410490513,
+                "Height Above Nearest Drainage (m)": 33,
+                "Landform Type": "Upper slope",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 2.5196840012515334,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 13,
+                "Distance to Waterway (m)": 162.01736639882594,
+                "Nearest Water Type": "basin",
+                "place_name": "Sch\u00f6nberger Stra\u00dfe, Lipprandis, Glauchau, Zwickau, Saxony, 08371, Germany",
+                "Population - 1 km": 874,
+                "Population - 5 km": 27676,
+                "Population - 10 km": 67600
+            }
+        },
+        {
+            "id": "8f1f8d4360c1d30",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.149692993577313,
+                    48.16679024782247
+                ]
+            },
+            "properties": {
+                "id": "8f1f8d4360c1d30",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 560,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.005732910707592964,
+                "Height Above Nearest Drainage (m)": 5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 1.2364626041759954,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 12,
+                "Distance to Waterway (m)": 1715.274397550528,
+                "Nearest Water Type": "basin",
+                "place_name": "Biotop LBV, St 2054, Bergkirchen, Jesenwang, Verwaltungsgemeinschaft Mammendorf, Landkreis F\u00fcrstenfeldbruck, Bavaria, 82287, Germany",
+                "Population - 1 km": 309,
+                "Population - 5 km": 10878,
+                "Population - 10 km": 67232
+            }
+        }
+    ]
+}
