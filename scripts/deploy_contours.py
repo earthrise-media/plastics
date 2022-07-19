@@ -12,7 +12,7 @@ DL_SYSTEM_PARAMS = {
     'image': ('us.gcr.io/dl-ci-cd/images/tasks/public/' +
               'py3.8:v2020.09.22-5-ga6b4e5fa'),
     'cpus': 1,
-    'maximum_concurrency': 150,
+    'maximum_concurrency': 30,
     'memory': '6Gi',
     'retry_count': 4,
     'task_timeout': 20000,

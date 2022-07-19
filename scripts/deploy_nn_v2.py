@@ -1,6 +1,7 @@
 import argparse
 
 from dateutil.relativedelta import relativedelta
+from datetime import datetime
 import descarteslabs as dl
 from tqdm import tqdm
 import os
@@ -127,6 +128,10 @@ def main(*args):
         dl_utils.write_dlkeys(dlkeys, args.dlkeys_file)
     else:
         dlkeys = dl_utils.read_dlkeys(args.dlkeys_file)
+
+    delta = relativedelta(datetime.fromisoformat(args.end_date), datetime.fromisoformat(args.start_date))
+    time_steps = delta.months + 12 * delta.years + args.mosaic_period
+    print(f"Estimated cost for run: ${0.0007706 * len(dlkeys) * time_steps :.2f}")
 
     # This init handles product creation and model upload.
     runner = dl_utils.DescartesRun(**vars(args))
