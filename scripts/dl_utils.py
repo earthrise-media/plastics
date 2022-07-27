@@ -879,8 +879,8 @@ class DescartesRun(object):
                 model_input = np.zeros((self.patch_model.input_shape[2],
                                         self.patch_model.input_shape[2],
                                         24))
-                model_input[:,:,:12] = pad_patch(unit_norm(patch_0.filled(0)), 28)
-                model_input[:,:,12:] = pad_patch(unit_norm(patch_1.filled(0)), 28)
+                model_input[:,:,:12] = pad_patch(unit_norm(patch_0.filled(0)), self.patch_model.input_shape[2])
+                model_input[:,:,12:] = pad_patch(unit_norm(patch_1.filled(0)), self.patch_model.input_shape[2])
                 # Create a list of patch pairs.
                 # Shape is (model_input_shape, model_input_shape, 24)
                 patch_pairs.append(model_input)
