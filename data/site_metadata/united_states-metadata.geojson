@@ -1,0 +1,2135 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f2ad39452580cc",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.0969401681667,
+                    33.96515788965374
+                ]
+            },
+            "properties": {
+                "id": "8f2ad39452580cc",
+                "Soil Clay Fraction": 0.1,
+                "Elevation": 15,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.014223163016140461,
+                "Height Above Nearest Drainage (m)": 2.40000057220459,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 1.452560655833594,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 532.8443910722143,
+                "Nearest Water Type": "stream",
+                "place_name": "Midway Commons, St. James, Brunswick County, North Carolina, 28461, United States",
+                "Population - 1 km": 35,
+                "Population - 5 km": 7171,
+                "Population - 10 km": 26650
+            }
+        },
+        {
+            "id": "8f44ce5762c9c2d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.44934435259533,
+                    34.55337792194415
+                ]
+            },
+            "properties": {
+                "id": "8f44ce5762c9c2d",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 430,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.007062737829983234,
+                "Height Above Nearest Drainage (m)": 46.800018310546875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 2.6321794048559064,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 186.57573644232812,
+                "Nearest Water Type": "stream",
+                "place_name": "Habersham County, Georgia, 30563, United States",
+                "Population - 1 km": 21,
+                "Population - 5 km": 3816,
+                "Population - 10 km": 22403
+            }
+        },
+        {
+            "id": "8f48b3d1882b6ab",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.58075126521256,
+                    26.03687431642715
+                ]
+            },
+            "properties": {
+                "id": "8f48b3d1882b6ab",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 12,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.007695214822888374,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.6881364373665998,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 171.58266689122644,
+                "Nearest Water Type": "ditch",
+                "place_name": "Barreda Garden Road, Brownsville, Cameron County, Texas, 78520, United States",
+                "Population - 1 km": 53,
+                "Population - 5 km": 8575,
+                "Population - 10 km": 45808
+            }
+        },
+        {
+            "id": "8f44a104b495455",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.213215752583,
+                    26.082887128109473
+                ]
+            },
+            "properties": {
+                "id": "8f44a104b495455",
+                "Soil Clay Fraction": 0.06,
+                "Elevation": 11,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.007692280225455761,
+                "Height Above Nearest Drainage (m)": 3.1000003814697266,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.84,
+                "Slope (degrees)": 2.495568095661909,
+                "Fine Earth Density (kg / m^3)": 117,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 89.88584443626884,
+                "Nearest Water Type": "water",
+                "place_name": "Twin Lakes Mhp, Twin Lakes Mobil Home Park, Davie, Broward County, Florida, 33314, United States",
+                "Population - 1 km": 1401,
+                "Population - 5 km": 93656,
+                "Population - 10 km": 496349
+            }
+        },
+        {
+            "id": "8f44d0290644cf1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.09737113558178,
+                    32.955241821485544
+                ]
+            },
+            "properties": {
+                "id": "8f44d0290644cf1",
+                "Soil Clay Fraction": 0.14,
+                "Elevation": 9,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.007193812634795904,
+                "Height Above Nearest Drainage (m)": 5.3000006675720215,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 1.597836864636063,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 514.0578671874248,
+                "Nearest Water Type": "water",
+                "place_name": "Collins Road, North Charleston, Charleston County, South Carolina, 29420, United States",
+                "Population - 1 km": 4,
+                "Population - 5 km": 57151,
+                "Population - 10 km": 217863
+            }
+        },
+        {
+            "id": "8f44ad1362445a2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.63599860252393,
+                    27.217354574264025
+                ]
+            },
+            "properties": {
+                "id": "8f44ad1362445a2",
+                "Soil Clay Fraction": 0.02,
+                "Elevation": 26,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.5103568434715271,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.93,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 238.1985919602316,
+                "Nearest Water Type": "pond",
+                "place_name": "DeSoto County, Florida, United States",
+                "Population - 1 km": 2,
+                "Population - 5 km": 1976,
+                "Population - 10 km": 2101
+            }
+        },
+        {
+            "id": "8f2836d8d2a44b5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.50353917987375,
+                    37.4035249403859
+                ]
+            },
+            "properties": {
+                "id": "8f2836d8d2a44b5",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 68,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.13630399107933044,
+                "Height Above Nearest Drainage (m)": 2.7999954223632812,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.9939865642922436,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 307.1378185651106,
+                "Nearest Water Type": "ditch",
+                "place_name": "CA 59, Merced, Merced County, California, 95348, United States",
+                "Population - 1 km": 0,
+                "Population - 5 km": 461,
+                "Population - 10 km": 63984
+            }
+        },
+        {
+            "id": "8f4446411885aee",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.97838764821856,
+                    30.01181746904659
+                ]
+            },
+            "properties": {
+                "id": "8f4446411885aee",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 4,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.6529843211174011,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0.927409936863078,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 607.5767605852866,
+                "Nearest Water Type": "water",
+                "place_name": "Old Gentilly Road, New Orleans, Orleans Parish, Louisiana, 70127, United States",
+                "Population - 1 km": 775,
+                "Population - 5 km": 28608,
+                "Population - 10 km": 103999
+            }
+        },
+        {
+            "id": "8f441a6db009262",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.10762997907482,
+                    28.75048367645412
+                ]
+            },
+            "properties": {
+                "id": "8f441a6db009262",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 17,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.015023010782897472,
+                "Height Above Nearest Drainage (m)": 1.7999992370605469,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 1.2251679133825768,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 765.9819914246981,
+                "Nearest Water Type": "canal",
+                "place_name": "I 75, Lake Panasoffkee, Sumter County, Florida, 33585, United States",
+                "Population - 1 km": 524,
+                "Population - 5 km": 5017,
+                "Population - 10 km": 26314
+            }
+        },
+        {
+            "id": "8f44ad2000a3d55",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.81234169413831,
+                    27.793019524347272
+                ]
+            },
+            "properties": {
+                "id": "8f44ad2000a3d55",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 43,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.007578242104500532,
+                "Height Above Nearest Drainage (m)": 3.299999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.9,
+                "Slope (degrees)": 1.9775088640479892,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 2469.917913993184,
+                "Nearest Water Type": "river",
+                "place_name": "US 17;US 98, Fort Meade, Polk County, Florida, 33847, United States",
+                "Population - 1 km": 12,
+                "Population - 5 km": 3663,
+                "Population - 10 km": 12164
+            }
+        },
+        {
+            "id": "8f44455a42f05a5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.0799982578372,
+                    30.23392422566229
+                ]
+            },
+            "properties": {
+                "id": "8f44455a42f05a5",
+                "Soil Clay Fraction": 0.19,
+                "Elevation": 8,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.555288553237915,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.24,
+                "Slope (degrees)": 0.714369129940729,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 6,
+                "Distance to Waterway (m)": 362.6670362256735,
+                "Nearest Water Type": "ditch",
+                "place_name": "Debonaire Street, Scott, Lafayette Parish, Louisiana, 70583, United States",
+                "Population - 1 km": 863,
+                "Population - 5 km": 47114,
+                "Population - 10 km": 151559
+            }
+        },
+        {
+            "id": "8f44a90eda92554",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.38498312196306,
+                    28.61269687915421
+                ]
+            },
+            "properties": {
+                "id": "8f44a90eda92554",
+                "Soil Clay Fraction": 0.05,
+                "Elevation": 42,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007521257270127535,
+                "Height Above Nearest Drainage (m)": 6.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.89,
+                "Slope (degrees)": 0.7115491608567694,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 145.96915370771464,
+                "Nearest Water Type": "water",
+                "place_name": "WESH-TV Channel Two Heliport, Wymore Road, Eatonville, Orange County, Florida, 32751, United States",
+                "Population - 1 km": 2720,
+                "Population - 5 km": 85569,
+                "Population - 10 km": 391147
+            }
+        },
+        {
+            "id": "8f29abb1b594b76",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.19895562552104,
+                    37.063672554618755
+                ]
+            },
+            "properties": {
+                "id": "8f29abb1b594b76",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 71,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.14375926554203033,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 5.486057341244229,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 181.78311510769342,
+                "Nearest Water Type": "ditch",
+                "place_name": "Avenue 21 1/2, Madera County, California, United States",
+                "Population - 1 km": 115,
+                "Population - 5 km": 3161,
+                "Population - 10 km": 23916
+            }
+        },
+        {
+            "id": "8f44a90851ae395",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.20749581590943,
+                    28.493658297141717
+                ]
+            },
+            "properties": {
+                "id": "8f44a90851ae395",
+                "Soil Clay Fraction": 0.02,
+                "Elevation": 34,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.0075296396389603615,
+                "Height Above Nearest Drainage (m)": 11.399999618530273,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.96,
+                "Slope (degrees)": 1.2854979782850302,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1488.6388199726912,
+                "Nearest Water Type": "drain",
+                "place_name": "Curry Ford Road, Andover Lakes, Orange County, Florida, 32829, United States",
+                "Population - 1 km": 83,
+                "Population - 5 km": 35958,
+                "Population - 10 km": 228342
+            }
+        },
+        {
+            "id": "8f446c04851b4d5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.24901568736668,
+                    29.802044736765975
+                ]
+            },
+            "properties": {
+                "id": "8f446c04851b4d5",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 22,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0074358051642775536,
+                "Height Above Nearest Drainage (m)": 2.8000001907348633,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 1.6341065038216833,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 225.40605749839202,
+                "Nearest Water Type": "river",
+                "place_name": "Needham Street, Oates Prairie, Houston, Harris County, Texas, 77013, United States",
+                "Population - 1 km": 1004,
+                "Population - 5 km": 57949,
+                "Population - 10 km": 305859
+            }
+        },
+        {
+            "id": "8f44f41a1daad0a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.06764256491563,
+                    29.0839857012185
+                ]
+            },
+            "properties": {
+                "id": "8f44f41a1daad0a",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 20,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.014975428581237793,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.89,
+                "Slope (degrees)": 2.4089546506822535,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2879.218685341316,
+                "Nearest Water Type": "pond",
+                "place_name": "Southeast 95th Street, Marion County, Florida, 34472, United States",
+                "Population - 1 km": 106,
+                "Population - 5 km": 19153,
+                "Population - 10 km": 86422
+            }
+        },
+        {
+            "id": "8f446e4ca40a96d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.35306668906219,
+                    30.259409897521547
+                ]
+            },
+            "properties": {
+                "id": "8f446e4ca40a96d",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 8,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.007402078714221716,
+                "Height Above Nearest Drainage (m)": 2.6000001430511475,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 1.2389042592244348,
+                "Fine Earth Density (kg / m^3)": 152,
+                "Soil Great Group": 7,
+                "Distance to Waterway (m)": 1817.276622563237,
+                "Nearest Water Type": "drain",
+                "place_name": "Majestic Pines Drive, Calcasieu Parish, Louisiana, 70663, United States",
+                "Population - 1 km": 151,
+                "Population - 5 km": 20049,
+                "Population - 10 km": 37121
+            }
+        },
+        {
+            "id": "8f489e224d14319",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.62130762664322,
+                    30.247018825788075
+                ]
+            },
+            "properties": {
+                "id": "8f489e224d14319",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 129,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 1.2140904664993286,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 3.6270275195543045,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 586.1496702030864,
+                "Nearest Water Type": "river",
+                "place_name": "Farm-to-Market Road 973, Travis County, Texas, 78725, United States",
+                "Population - 1 km": 9,
+                "Population - 5 km": 14528,
+                "Population - 10 km": 124490
+            }
+        },
+        {
+            "id": "8f48826c15700ed",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -98.47676461874812,
+                    28.95954328951141
+                ]
+            },
+            "properties": {
+                "id": "8f48826c15700ed",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 109,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007496667560189962,
+                "Height Above Nearest Drainage (m)": 2.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.48,
+                "Slope (degrees)": 0.6183032897822732,
+                "Fine Earth Density (kg / m^3)": 160,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 147.67593713328978,
+                "Nearest Water Type": "river",
+                "place_name": "4th Street, Pleasanton, Atascosa County, Texas, 78064, United States",
+                "Population - 1 km": 1062,
+                "Population - 5 km": 9378,
+                "Population - 10 km": 16413
+            }
+        },
+        {
+            "id": "8f44d3589183b0e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.32141260643259,
+                    33.45681380495175
+                ]
+            },
+            "properties": {
+                "id": "8f44d3589183b0e",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 4,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007153250277042389,
+                "Height Above Nearest Drainage (m)": 2,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 0.48258783204198497,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 449.80171822636544,
+                "Nearest Water Type": "water",
+                "place_name": "Landfill Drive, Georgetown County, South Carolina, 29442, United States",
+                "Population - 1 km": 4,
+                "Population - 5 km": 1217,
+                "Population - 10 km": 12955
+            }
+        },
+        {
+            "id": "8f44dd10ad7240d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.66321202400067,
+                    34.82542296852219
+                ]
+            },
+            "properties": {
+                "id": "8f44dd10ad7240d",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 301,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007039856165647507,
+                "Height Above Nearest Drainage (m)": 49.100006103515625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 6.691247577559909,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 8,
+                "Distance to Waterway (m)": 538.0964727794169,
+                "Nearest Water Type": "stream",
+                "place_name": "Old Liberty Road, Pickens County, South Carolina, 29641, United States",
+                "Population - 1 km": 243,
+                "Population - 5 km": 14575,
+                "Population - 10 km": 47817
+            }
+        },
+        {
+            "id": "8f446c01cd99c10",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.0401914390966,
+                    29.668144934075254
+                ]
+            },
+            "properties": {
+                "id": "8f446c01cd99c10",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 7,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.9008557200431824,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.9932976304409528,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 17,
+                "Distance to Waterway (m)": 531.78005453232,
+                "Nearest Water Type": "stream",
+                "place_name": "North C Street, La Porte, Harris County, Texas, 77571, United States",
+                "Population - 1 km": 534,
+                "Population - 5 km": 28410,
+                "Population - 10 km": 104527
+            }
+        },
+        {
+            "id": "8f44f6901ba9955",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.35215061079262,
+                    29.032181039026497
+                ]
+            },
+            "properties": {
+                "id": "8f44f6901ba9955",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 13,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.00749145308509469,
+                "Height Above Nearest Drainage (m)": 7.700000286102295,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 4.647326819190752,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 740.1190394290893,
+                "Nearest Water Type": "water",
+                "place_name": "West Minnesota Avenue, Volusia County, Florida, 32720, United States",
+                "Population - 1 km": 196,
+                "Population - 5 km": 19634,
+                "Population - 10 km": 62785
+            }
+        },
+        {
+            "id": "8f44e05884c22e1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.37600254805997,
+                    30.425937774077912
+                ]
+            },
+            "properties": {
+                "id": "8f44e05884c22e1",
+                "Soil Clay Fraction": 0.07,
+                "Elevation": 25,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.029558494687080383,
+                "Height Above Nearest Drainage (m)": 4.80000114440918,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.79,
+                "Slope (degrees)": 1.4338659290472144,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 307.0545474359323,
+                "Nearest Water Type": "pond",
+                "place_name": "Leon County, Florida, 32310, United States",
+                "Population - 1 km": 615,
+                "Population - 5 km": 14864,
+                "Population - 10 km": 109898
+            }
+        },
+        {
+            "id": "8f44f5d964f16b3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.55435045650344,
+                    29.511214979315668
+                ]
+            },
+            "properties": {
+                "id": "8f44f5d964f16b3",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 31,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.02982809953391552,
+                "Height Above Nearest Drainage (m)": 9.399999618530273,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 0.4709332364145483,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 3376.7334615412105,
+                "Nearest Water Type": "pond",
+                "place_name": "Archer Road, Archer, Alachua County, Florida, 32618, United States",
+                "Population - 1 km": 89,
+                "Population - 5 km": 3057,
+                "Population - 10 km": 9721
+            }
+        },
+        {
+            "id": "8f44f401e858602",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.09329016021506,
+                    29.26508642453118
+                ]
+            },
+            "properties": {
+                "id": "8f44f401e858602",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 22,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.6204017996788025,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 1.4250847504060544,
+                "Fine Earth Density (kg / m^3)": 155,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 4913.076872587093,
+                "Nearest Water Type": "water",
+                "place_name": "Northeast 33rd Court, Marion County, Florida, 32617, United States",
+                "Population - 1 km": 147,
+                "Population - 5 km": 14534,
+                "Population - 10 km": 57025
+            }
+        },
+        {
+            "id": "8f44a1b9e31e432",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.35181485345777,
+                    25.860719834659523
+                ]
+            },
+            "properties": {
+                "id": "8f44a1b9e31e432",
+                "Soil Clay Fraction": 0.17,
+                "Elevation": 4,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.015413118526339531,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.69,
+                "Slope (degrees)": 4.012554618787407,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 420.6186843347882,
+                "Nearest Water Type": "lake",
+                "place_name": "Medley, Miami-Dade County, Florida, 3301811, United States",
+                "Population - 1 km": 47,
+                "Population - 5 km": 143970,
+                "Population - 10 km": 421315
+            }
+        },
+        {
+            "id": "8f44dec34452090",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.41457198759166,
+                    33.90746935875113
+                ]
+            },
+            "properties": {
+                "id": "8f44dec34452090",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 54,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.007116346154361963,
+                "Height Above Nearest Drainage (m)": 1.4000015258789062,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.66,
+                "Slope (degrees)": 1.8873603208095022,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2278.235054465356,
+                "Nearest Water Type": "pond",
+                "place_name": "Contractors Court, Sumter, Sumter County, South Carolina, 29154, United States",
+                "Population - 1 km": 642,
+                "Population - 5 km": 22075,
+                "Population - 10 km": 62352
+            }
+        },
+        {
+            "id": "8f441a04b8e8d92",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.56685581970278,
+                    28.37280850489412
+                ]
+            },
+            "properties": {
+                "id": "8f441a04b8e8d92",
+                "Soil Clay Fraction": 0.06,
+                "Elevation": 17,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007538123521953821,
+                "Height Above Nearest Drainage (m)": 0.7000007629394531,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.89,
+                "Slope (degrees)": 1.8872844796977308,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 757.3617193723077,
+                "Nearest Water Type": "pond",
+                "place_name": "Pasco County, Florida, United States",
+                "Population - 1 km": 163,
+                "Population - 5 km": 11040,
+                "Population - 10 km": 80591
+            }
+        },
+        {
+            "id": "8f446c311823b33",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.32301403100605,
+                    29.86311366265172
+                ]
+            },
+            "properties": {
+                "id": "8f446c311823b33",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 23,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.007431279867887497,
+                "Height Above Nearest Drainage (m)": 1.2999992370605469,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.9935460592665604,
+                "Fine Earth Density (kg / m^3)": 165,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 73.25792478452557,
+                "Nearest Water Type": "river",
+                "place_name": "Terrell Street, Calgary Woods, Houston, Harris County, Texas, 77093, United States",
+                "Population - 1 km": 2117,
+                "Population - 5 km": 112619,
+                "Population - 10 km": 364462
+            }
+        },
+        {
+            "id": "8f44f0c68268295",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.84085764736292,
+                    30.030554120286222
+                ]
+            },
+            "properties": {
+                "id": "8f44f0c68268295",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 24,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007418956607580185,
+                "Height Above Nearest Drainage (m)": 2,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2054.976619239726,
+                "Nearest Water Type": "water",
+                "place_name": "Osceola Trail, Clay County, Florida, 32068, United States",
+                "Population - 1 km": 207,
+                "Population - 5 km": 15630,
+                "Population - 10 km": 49981
+            }
+        },
+        {
+            "id": "8f4446413922c35",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.95780112506921,
+                    30.01356538138946
+                ]
+            },
+            "properties": {
+                "id": "8f4446413922c35",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 3,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.007420254405587912,
+                "Height Above Nearest Drainage (m)": 0.9000000953674316,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 1.6355929973228391,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 750.266774156584,
+                "Nearest Water Type": "canal",
+                "place_name": "Almonaster Avenue, New Orleans, Orleans Parish, Louisiana, 70127, United States",
+                "Population - 1 km": 163,
+                "Population - 5 km": 26544,
+                "Population - 10 km": 72987
+            }
+        },
+        {
+            "id": "8f44a935071312a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.61401628699869,
+                    28.793638053419397
+                ]
+            },
+            "properties": {
+                "id": "8f44a935071312a",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 39,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.015016989782452583,
+                "Height Above Nearest Drainage (m)": 13.899999618530273,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.8,
+                "Slope (degrees)": 7.92788531261699,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 797.8943294419141,
+                "Nearest Water Type": "water",
+                "place_name": "Florida Central Railroad, Mount Dora, Lake County, Florida, 32757, United States",
+                "Population - 1 km": 809,
+                "Population - 5 km": 19351,
+                "Population - 10 km": 78682
+            }
+        },
+        {
+            "id": "8f48b3802392960",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -98.04137364744233,
+                    26.14432686966153
+                ]
+            },
+            "properties": {
+                "id": "8f48b3802392960",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 25,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 16.99001121520996,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.6887689152095745,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 63.94476120532494,
+                "Nearest Water Type": "ditch",
+                "place_name": "Soderquist Road, Balli Colonia Number 1, Donna, Hidalgo County, Texas, 78537, United States",
+                "Population - 1 km": 1408,
+                "Population - 5 km": 42297,
+                "Population - 10 km": 139525
+            }
+        },
+        {
+            "id": "8f29ab961cd6248",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.09342791749002,
+                    36.703796771557315
+                ]
+            },
+            "properties": {
+                "id": "8f29ab961cd6248",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 65,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.006877691950649023,
+                "Height Above Nearest Drainage (m)": 1.2999992370605469,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.6613232087023133,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 393.2819847684091,
+                "Nearest Water Type": "water",
+                "place_name": "West Jensen Avenue, Kerman, Fresno County, California, United States",
+                "Population - 1 km": 48,
+                "Population - 5 km": 13927,
+                "Population - 10 km": 18556
+            }
+        },
+        {
+            "id": "8f44f089c4182c8",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.89140435293992,
+                    30.005115471118
+                ]
+            },
+            "properties": {
+                "id": "8f44f089c4182c8",
+                "Soil Clay Fraction": 0.05,
+                "Elevation": 37,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007420859765261412,
+                "Height Above Nearest Drainage (m)": 6.69999885559082,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.89,
+                "Slope (degrees)": 0.927409936863078,
+                "Fine Earth Density (kg / m^3)": 150,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 3102.7278072286103,
+                "Nearest Water Type": "stream",
+                "place_name": "Clay County, Florida, United States",
+                "Population - 1 km": 25,
+                "Population - 5 km": 7467,
+                "Population - 10 km": 31041
+            }
+        },
+        {
+            "id": "8f44a96ce645924",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.06882284360942,
+                    28.989680685498662
+                ]
+            },
+            "properties": {
+                "id": "8f44a96ce645924",
+                "Soil Clay Fraction": 0.01,
+                "Elevation": 21,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007494492456316948,
+                "Height Above Nearest Drainage (m)": 6.600000381469727,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.97,
+                "Slope (degrees)": 0.9390805889526175,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 992.8697631274971,
+                "Nearest Water Type": "water",
+                "place_name": "355, South State Road 415, New Smyrna Beach, Volusia County, Florida, 32168, United States",
+                "Population - 1 km": 78,
+                "Population - 5 km": 1557,
+                "Population - 10 km": 11381
+            }
+        },
+        {
+            "id": "8f4445134cb22ae",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.65242720578398,
+                    30.166920155613973
+                ]
+            },
+            "properties": {
+                "id": "8f4445134cb22ae",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 5,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.04445309191942215,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 0.9939393337504576,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 2544.0785624708615,
+                "Nearest Water Type": "ditch",
+                "place_name": "Highway 102, Jefferson Davis Parish, Louisiana, 70546, United States",
+                "Population - 1 km": 55,
+                "Population - 5 km": 1929,
+                "Population - 10 km": 14154
+            }
+        },
+        {
+            "id": "8f44a1804876810",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.34337825864849,
+                    25.54070826690463
+                ]
+            },
+            "properties": {
+                "id": "8f44a1804876810",
+                "Soil Clay Fraction": 0.15,
+                "Elevation": 8,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.0077269370667636395,
+                "Height Above Nearest Drainage (m)": 4.800000190734863,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.65,
+                "Slope (degrees)": 1.4047413321141389,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 378.9868130916618,
+                "Nearest Water Type": "canal",
+                "place_name": "Southwest 248th Street, Princeton, Miami-Dade County, Florida, 33031:33032, United States",
+                "Population - 1 km": 4,
+                "Population - 5 km": 49600,
+                "Population - 10 km": 179371
+            }
+        },
+        {
+            "id": "8f445908dc9d0b3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.6228325567086,
+                    34.143879827459905
+                ]
+            },
+            "properties": {
+                "id": "8f445908dc9d0b3",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 49,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.007096822839230299,
+                "Height Above Nearest Drainage (m)": 1.2000007629394531,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 1.8915331427885593,
+                "Fine Earth Density (kg / m^3)": 163,
+                "Soil Great Group": 9,
+                "Distance to Waterway (m)": 2751.473052911734,
+                "Nearest Water Type": "water",
+                "place_name": "Palmer Road, Coahoma County, Mississippi, United States",
+                "Population - 1 km": 1,
+                "Population - 5 km": 258,
+                "Population - 10 km": 13693
+            }
+        },
+        {
+            "id": "8f48b3880869580",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.90450266101908,
+                    26.18698727448316
+                ]
+            },
+            "properties": {
+                "id": "8f48b3880869580",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 20,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.023056596517562866,
+                "Height Above Nearest Drainage (m)": 1.0999984741210938,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 0.4628945929603495,
+                "Fine Earth Density (kg / m^3)": 153,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 94.75524349247642,
+                "Nearest Water Type": "river",
+                "place_name": "Clark Road, High Land Colonia, Mercedes, Hidalgo County, Texas, 78570, United States",
+                "Population - 1 km": 753,
+                "Population - 5 km": 21700,
+                "Population - 10 km": 92049
+            }
+        },
+        {
+            "id": "8f2830269636660",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.83010838422521,
+                    38.540789652238395
+                ]
+            },
+            "properties": {
+                "id": "8f2830269636660",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 33,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 2.550309658050537,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.8487715473083193,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 811.5351794144791,
+                "Nearest Water Type": "ditch",
+                "place_name": "Woody Creek Lane, Sonoma County, California, 95492, United States",
+                "Population - 1 km": 2348,
+                "Population - 5 km": 26130,
+                "Population - 10 km": 57073
+            }
+        },
+        {
+            "id": "8f489c54885ed4b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -98.2616201051521,
+                    29.548304513550896
+                ]
+            },
+            "properties": {
+                "id": "8f489c54885ed4b",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 212,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.007454279810190201,
+                "Height Above Nearest Drainage (m)": 1.100006103515625,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 2.1638612677183717,
+                "Fine Earth Density (kg / m^3)": 151,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 204.04711047497563,
+                "Nearest Water Type": "drain",
+                "place_name": "Linda Lee Lane, Schertz, Guadalupe County, Texas, 78154, United States",
+                "Population - 1 km": 1109,
+                "Population - 5 km": 56176,
+                "Population - 10 km": 173900
+            }
+        },
+        {
+            "id": "8f44f4023aae8d6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.17233775074432,
+                    29.210930942723298
+                ]
+            },
+            "properties": {
+                "id": "8f44f4023aae8d6",
+                "Soil Clay Fraction": 0.02,
+                "Elevation": 28,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.007478673942387104,
+                "Height Above Nearest Drainage (m)": 6.399999618530273,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.9,
+                "Slope (degrees)": 0.9927269404073235,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 1377.2412543668665,
+                "Nearest Water Type": "water",
+                "place_name": "Northwest 31st Avenue, Ocala, Marion County, Florida, 34475, United States",
+                "Population - 1 km": 606,
+                "Population - 5 km": 28220,
+                "Population - 10 km": 99104
+            }
+        },
+        {
+            "id": "8f29a864b2b0393",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.75885579691604,
+                    36.686393760105055
+                ]
+            },
+            "properties": {
+                "id": "8f29a864b2b0393",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 92,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.006879224441945553,
+                "Height Above Nearest Drainage (m)": 0.399993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 3.8618151767149898,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 81.02624558599513,
+                "Nearest Water Type": "ditch",
+                "place_name": "South Parkway Drive, Fresno, Fresno County, California, 93725, United States",
+                "Population - 1 km": 16,
+                "Population - 5 km": 47107,
+                "Population - 10 km": 223056
+            }
+        },
+        {
+            "id": "8f2ad5c1601d4f0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.03006630856324,
+                    35.021774601596334
+                ]
+            },
+            "properties": {
+                "id": "8f2ad5c1601d4f0",
+                "Soil Clay Fraction": 0.17,
+                "Elevation": 11,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007023300509899855,
+                "Height Above Nearest Drainage (m)": 2.4000003337860107,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.53,
+                "Slope (degrees)": 0.4879475178200606,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 454.835795512171,
+                "Nearest Water Type": "stream",
+                "place_name": "Big Cypress Road, Craven County, North Carolina, 28562, United States",
+                "Population - 1 km": 176,
+                "Population - 5 km": 7334,
+                "Population - 10 km": 26686
+            }
+        },
+        {
+            "id": "8f44f0733789cc4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.60617805486542,
+                    30.43182408761168
+                ]
+            },
+            "properties": {
+                "id": "8f44f0733789cc4",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 8,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.0073892343789339066,
+                "Height Above Nearest Drainage (m)": 7.900000095367432,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 2.341484785816215,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 367.8914367382582,
+                "Nearest Water Type": "coastline",
+                "place_name": "Eastport Road, Quinlan, Jacksonville, Duval County, Florida, 32218, United States",
+                "Population - 1 km": 66,
+                "Population - 5 km": 15680,
+                "Population - 10 km": 118698
+            }
+        },
+        {
+            "id": "8f446ac1b2ed35e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.36976516063416,
+                    30.870491053205377
+                ]
+            },
+            "properties": {
+                "id": "8f446ac1b2ed35e",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 71,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.007356218993663788,
+                "Height Above Nearest Drainage (m)": 14.299999237060547,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.31,
+                "Slope (degrees)": 4.9189371629692085,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 2068.817009081825,
+                "Nearest Water Type": "dam",
+                "place_name": "Beauregard Parish, Louisiana, United States",
+                "Population - 1 km": 3,
+                "Population - 5 km": 1361,
+                "Population - 10 km": 13623
+            }
+        },
+        {
+            "id": "8f44a1af227189c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.42257508677031,
+                    26.041464243068663
+                ]
+            },
+            "properties": {
+                "id": "8f44a1af227189c",
+                "Soil Clay Fraction": 0.07,
+                "Elevation": 5,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.08464456349611282,
+                "Height Above Nearest Drainage (m)": 0.7000002861022949,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.84,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 259.35245805490075,
+                "Nearest Water Type": "canal",
+                "place_name": "Southwest 206th Drive, Broward County, Florida, 33332, United States",
+                "Population - 1 km": 552,
+                "Population - 5 km": 32171,
+                "Population - 10 km": 148585
+            }
+        },
+        {
+            "id": "8f48b38eac500c0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -98.0817686364903,
+                    26.29510378536137
+                ]
+            },
+            "properties": {
+                "id": "8f48b38eac500c0",
+                "Soil Clay Fraction": 0.2,
+                "Elevation": 27,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.007678466849029064,
+                "Height Above Nearest Drainage (m)": 0.7000007629394531,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.6,
+                "Slope (degrees)": 0.6896624052473439,
+                "Fine Earth Density (kg / m^3)": 162,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 241.9569799909681,
+                "Nearest Water Type": "canal",
+                "place_name": "TX 107, Ruthven Number 1 Colonia, Hidalgo County, Texas, 78558, United States",
+                "Population - 1 km": 2358,
+                "Population - 5 km": 29846,
+                "Population - 10 km": 141605
+            }
+        },
+        {
+            "id": "8f446c3adc55101",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.28544251690018,
+                    29.897181097721813
+                ]
+            },
+            "properties": {
+                "id": "8f446c3adc55101",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 22,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.24515022337436676,
+                "Height Above Nearest Drainage (m)": 4.699999809265137,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.713761373204321,
+                "Fine Earth Density (kg / m^3)": 163,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 146.90819633778582,
+                "Nearest Water Type": "water",
+                "place_name": "Lakeside Drive, Harris County, Texas, 77050, United States",
+                "Population - 1 km": 1776,
+                "Population - 5 km": 61054,
+                "Population - 10 km": 238633
+            }
+        },
+        {
+            "id": "8f444c324001181",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.76926631028624,
+                    32.408263311698065
+                ]
+            },
+            "properties": {
+                "id": "8f444c324001181",
+                "Soil Clay Fraction": 0.24,
+                "Elevation": 50,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.11579539626836777,
+                "Height Above Nearest Drainage (m)": 2.700000762939453,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 0.7185924315516329,
+                "Fine Earth Density (kg / m^3)": 156,
+                "Soil Great Group": 14,
+                "Distance to Waterway (m)": 524.165559603483,
+                "Nearest Water Type": "pond",
+                "place_name": "Gravois Drive, Shreveport, Caddo Parish, Louisiana, 71106, United States",
+                "Population - 1 km": 736,
+                "Population - 5 km": 45641,
+                "Population - 10 km": 142979
+            }
+        },
+        {
+            "id": "8f44ad2511b3c6d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.8809950683449,
+                    27.910859142781593
+                ]
+            },
+            "properties": {
+                "id": "8f44ad2511b3c6d",
+                "Soil Clay Fraction": 0.05,
+                "Elevation": 47,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.02271037921309471,
+                "Height Above Nearest Drainage (m)": 7.099998474121094,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 2.5754674792302743,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 1237.769922531734,
+                "Nearest Water Type": "water",
+                "place_name": "Lyle Corner, Bartow, Polk County, Florida, United States",
+                "Population - 1 km": 216,
+                "Population - 5 km": 15505,
+                "Population - 10 km": 64688
+            }
+        },
+        {
+            "id": "8f441ac5cb15965",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.33244699756986,
+                    27.957575115953173
+                ]
+            },
+            "properties": {
+                "id": "8f441ac5cb15965",
+                "Soil Clay Fraction": 0.05,
+                "Elevation": 20,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007566939108073711,
+                "Height Above Nearest Drainage (m)": 1.7999992370605469,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 0.9339219519494919,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 610.2162209077461,
+                "Nearest Water Type": "water",
+                "place_name": "Fisher Avenue, Hillsborough County, Florida, 33619, United States",
+                "Population - 1 km": 1881,
+                "Population - 5 km": 73440,
+                "Population - 10 km": 253467
+            }
+        },
+        {
+            "id": "8f44a9261d53a4d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.68685813811753,
+                    28.90288901338251
+                ]
+            },
+            "properties": {
+                "id": "8f44a9261d53a4d",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 27,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007500716019421816,
+                "Height Above Nearest Drainage (m)": 3.6999988555908203,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.9,
+                "Slope (degrees)": 0.770958281775365,
+                "Fine Earth Density (kg / m^3)": 147,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 383.63734607482934,
+                "Nearest Water Type": "water",
+                "place_name": "Florida Central Railroad, Umatilla, Lake County, Florida, 32627, United States",
+                "Population - 1 km": 485,
+                "Population - 5 km": 12966,
+                "Population - 10 km": 58909
+            }
+        },
+        {
+            "id": "8f4443698280228",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.77859170413039,
+                    32.343880728763644
+                ]
+            },
+            "properties": {
+                "id": "8f4443698280228",
+                "Soil Clay Fraction": 0.18,
+                "Elevation": 90,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007242415565997362,
+                "Height Above Nearest Drainage (m)": 7,
+                "Landform Type": "Valley (narrow)",
+                "Soil Sand Fraction": 0.27,
+                "Slope (degrees)": 4.095690047191381,
+                "Fine Earth Density (kg / m^3)": 148,
+                "Soil Great Group": 17,
+                "Distance to Waterway (m)": 3347.3154473123886,
+                "Nearest Water Type": "water",
+                "place_name": "Amber Leaf Drive, Warren County, Mississippi, 39180, United States",
+                "Population - 1 km": 277,
+                "Population - 5 km": 5164,
+                "Population - 10 km": 26139
+            }
+        },
+        {
+            "id": "8f441ac60230211",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.38870914338628,
+                    27.891545900150646
+                ]
+            },
+            "properties": {
+                "id": "8f441ac60230211",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 10,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 4.974089622497559,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.8,
+                "Slope (degrees)": 0.6995594326299556,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 44.14292138670721,
+                "Nearest Water Type": "river",
+                "place_name": "South Coast Greenway, Hillsborough County, Florida, 33619, United States",
+                "Population - 1 km": 74,
+                "Population - 5 km": 26520,
+                "Population - 10 km": 169047
+            }
+        },
+        {
+            "id": "8f44a81858e964a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.48144226466923,
+                    27.576207843089758
+                ]
+            },
+            "properties": {
+                "id": "8f44a81858e964a",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 16,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007593100890517235,
+                "Height Above Nearest Drainage (m)": 1.5000004768371582,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 3.5267285494040603,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 506.9897278333341,
+                "Nearest Water Type": "pond",
+                "place_name": "74th Avenue Southwest, Indian River County, Florida, 34591, United States",
+                "Population - 1 km": 653,
+                "Population - 5 km": 6812,
+                "Population - 10 km": 68317
+            }
+        },
+        {
+            "id": "8f44f0d33011918",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.66561533243893,
+                    29.72456473214028
+                ]
+            },
+            "properties": {
+                "id": "8f44f0d33011918",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 16,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.007441483438014984,
+                "Height Above Nearest Drainage (m)": 4.40000057220459,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.89,
+                "Slope (degrees)": 1.2866620335115448,
+                "Fine Earth Density (kg / m^3)": 159,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 1865.2292781484057,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Cow Bay Road, Putnam County, Florida, 32178, United States",
+                "Population - 1 km": 20,
+                "Population - 5 km": 733,
+                "Population - 10 km": 15827
+            }
+        },
+        {
+            "id": "8f441a51a153976",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.98757927941726,
+                    28.06557369219236
+                ]
+            },
+            "properties": {
+                "id": "8f441a51a153976",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 53,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.24189719557762146,
+                "Height Above Nearest Drainage (m)": 4.799999237060547,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.9,
+                "Slope (degrees)": 0.46725399736500756,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 961.2468686012369,
+                "Nearest Water Type": "lake",
+                "place_name": "West Bella Vista Street, Lakeland, Polk County, Florida, 33815, United States",
+                "Population - 1 km": 1853,
+                "Population - 5 km": 59368,
+                "Population - 10 km": 172731
+            }
+        },
+        {
+            "id": "8f44f421c8124f2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.3019662707049,
+                    29.626417020877266
+                ]
+            },
+            "properties": {
+                "id": "8f44f421c8124f2",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 31,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.007448602467775345,
+                "Height Above Nearest Drainage (m)": 3.8000030517578125,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.94,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 696.7160524667879,
+                "Nearest Water Type": "lake",
+                "place_name": "Southeast 29th Avenue, Alachua County, Florida, 32641, United States",
+                "Population - 1 km": 433,
+                "Population - 5 km": 38794,
+                "Population - 10 km": 116953
+            }
+        },
+        {
+            "id": "8f446c15ece8404",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.19233136324277,
+                    29.623666906398302
+                ]
+            },
+            "properties": {
+                "id": "8f446c15ece8404",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 14,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.06703867763280869,
+                "Height Above Nearest Drainage (m)": 1.7999992370605469,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 3.2565210612498885,
+                "Fine Earth Density (kg / m^3)": 158,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 485.0650306125245,
+                "Nearest Water Type": "pond",
+                "place_name": "Genoa Red Bluff Road, Genoa, Houston, Harris County, Texas, 77034, United States",
+                "Population - 1 km": 1888,
+                "Population - 5 km": 102540,
+                "Population - 10 km": 437749
+            }
+        },
+        {
+            "id": "8f44f48088e0798",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.40840534157687,
+                    28.948318283120756
+                ]
+            },
+            "properties": {
+                "id": "8f44f48088e0798",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 16,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.0074974605813622475,
+                "Height Above Nearest Drainage (m)": 9.09999942779541,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 1.1039494185578163,
+                "Fine Earth Density (kg / m^3)": 157,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 3360.797946885962,
+                "Nearest Water Type": "pond",
+                "place_name": "Florida Avenue, Calphos, Citrus County, Florida, 34442, United States",
+                "Population - 1 km": 281,
+                "Population - 5 km": 10006,
+                "Population - 10 km": 46239
+            }
+        },
+        {
+            "id": "8f44f0d064a4552",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.6715400273178,
+                    29.738939401682437
+                ]
+            },
+            "properties": {
+                "id": "8f44f0d064a4552",
+                "Soil Clay Fraction": 0.02,
+                "Elevation": 24,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.0074403733015060425,
+                "Height Above Nearest Drainage (m)": 3.3000011444091797,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.95,
+                "Slope (degrees)": 1.423937970466009,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 2973.5226330718365,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Environmental Boulevard, Putnam County, Florida, United States",
+                "Population - 1 km": 5,
+                "Population - 5 km": 584,
+                "Population - 10 km": 8564
+            }
+        },
+        {
+            "id": "8f4413281d0b599",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.96113883245819,
+                    26.79537985844353
+                ]
+            },
+            "properties": {
+                "id": "8f4413281d0b599",
+                "Soil Clay Fraction": 0.03,
+                "Elevation": 21,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007645598612725735,
+                "Height Above Nearest Drainage (m)": 6.200000286102295,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.92,
+                "Slope (degrees)": 1.886357949278734,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 309.93344839323964,
+                "Nearest Water Type": "pond",
+                "place_name": "Zemel Road, Charlotte County, Florida, 33955, United States",
+                "Population - 1 km": 35,
+                "Population - 5 km": 1332,
+                "Population - 10 km": 24880
+            }
+        },
+        {
+            "id": "8f44a80d51428e6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.48715798433605,
+                    27.830396196891396
+                ]
+            },
+            "properties": {
+                "id": "8f44a80d51428e6",
+                "Soil Clay Fraction": 0.01,
+                "Elevation": 8,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.045454539358615875,
+                "Height Above Nearest Drainage (m)": 0.10000038146972656,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.97,
+                "Slope (degrees)": 1.6775465072542846,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 112.15753454977379,
+                "Nearest Water Type": "pond",
+                "place_name": "Roseland Convenience Center, 7860, 130th Street, Sebastian, Indian River County, Florida, 32958, United States",
+                "Population - 1 km": 842,
+                "Population - 5 km": 11728,
+                "Population - 10 km": 39677
+            }
+        },
+        {
+            "id": "8f44a8c0abac822",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.39854330597129,
+                    27.38378110052589
+                ]
+            },
+            "properties": {
+                "id": "8f44a8c0abac822",
+                "Soil Clay Fraction": 0.06,
+                "Elevation": 9,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.022818462923169136,
+                "Height Above Nearest Drainage (m)": 2.799999952316284,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.91,
+                "Slope (degrees)": 3.8242740662217103,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 82.03709648827416,
+                "Nearest Water Type": "water",
+                "place_name": "I 95, Fort Pierce, Saint Lucie County, Florida, 34981, United States",
+                "Population - 1 km": 0,
+                "Population - 5 km": 16956,
+                "Population - 10 km": 132139
+            }
+        },
+        {
+            "id": "8f4452945d34cb2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.39341484974057,
+                    30.57534173286892
+                ]
+            },
+            "properties": {
+                "id": "8f4452945d34cb2",
+                "Soil Clay Fraction": 0.12,
+                "Elevation": 39,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007378508802503347,
+                "Height Above Nearest Drainage (m)": 24.100000381469727,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.71,
+                "Slope (degrees)": 5.4567493970677825,
+                "Fine Earth Density (kg / m^3)": 154,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 185.10801835191938,
+                "Nearest Water Type": "pond",
+                "place_name": "Beulah Road, Escambia County, Florida, 32533, United States",
+                "Population - 1 km": 26,
+                "Population - 5 km": 3831,
+                "Population - 10 km": 23720
+            }
+        },
+        {
+            "id": "8f44d54ddd027b4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.75390117311903,
+                    32.45745202079538
+                ]
+            },
+            "properties": {
+                "id": "8f44d54ddd027b4",
+                "Soil Clay Fraction": 0.14,
+                "Elevation": 10,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.05063397064805031,
+                "Height Above Nearest Drainage (m)": 1.9000000953674316,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 2.7252746156285643,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 488.1486138857478,
+                "Nearest Water Type": "canal",
+                "place_name": "Billy Hill Road, Beaufort County, South Carolina, 29906, United States",
+                "Population - 1 km": 671,
+                "Population - 5 km": 17917,
+                "Population - 10 km": 48787
+            }
+        },
+        {
+            "id": "8f441e60da21c95",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.53201942771918,
+                    27.53096924072401
+                ]
+            },
+            "properties": {
+                "id": "8f441e60da21c95",
+                "Soil Clay Fraction": 0.04,
+                "Elevation": 5,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.007596167270094156,
+                "Height Above Nearest Drainage (m)": 1.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.92,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 907.5889278011035,
+                "Nearest Water Type": "water",
+                "place_name": "21st Street Court East, Manatee County, Florida, 34221, United States",
+                "Population - 1 km": 1947,
+                "Population - 5 km": 47615,
+                "Population - 10 km": 163265
+            }
+        },
+        {
+            "id": "8f44d07718b642d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.0387175586603,
+                    32.79765111114302
+                ]
+            },
+            "properties": {
+                "id": "8f44d07718b642d",
+                "Soil Clay Fraction": 0.14,
+                "Elevation": 5,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 1.1674222946166992,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.67,
+                "Slope (degrees)": 0.7194078009364403,
+                "Fine Earth Density (kg / m^3)": 141,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 53.40917660764127,
+                "Nearest Water Type": "stream",
+                "place_name": "Ashley Town Center Drive, Charleston, Charleston County, South Carolina, 29414, United States",
+                "Population - 1 km": 2259,
+                "Population - 5 km": 48629,
+                "Population - 10 km": 147471
+            }
+        }
+    ]
+}

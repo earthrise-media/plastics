@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "8f2ad023295c6e1" }, "geometry": { "type": "Point", "coordinates": [ -78.008562572401104, 34.271935593488308 ] } },
+{ "type": "Feature", "properties": { "id": "8f2aa8050358254" }, "geometry": { "type": "Point", "coordinates": [ -76.503708202677871, 38.842723474855354 ] } },
+{ "type": "Feature", "properties": { "id": "8f48b3d5d3a9399" }, "geometry": { "type": "Point", "coordinates": [ -97.748060432321552, 26.143448272511598 ] } },
+{ "type": "Feature", "properties": { "id": "8f44f3993295712" }, "geometry": { "type": "Point", "coordinates": [ -81.608327838904898, 30.887249536647243 ] } },
+{ "type": "Feature", "properties": { "id": "8f446e695c84d84" }, "geometry": { "type": "Point", "coordinates": [ -93.408660499943167, 30.44908798083312 ] } },
+{ "type": "Feature", "properties": { "id": "8f2836c69928343" }, "geometry": { "type": "Point", "coordinates": [ -120.882420479341633, 37.487785995764277 ] } },
+{ "type": "Feature", "properties": { "id": "8f4444263cdb132" }, "geometry": { "type": "Point", "coordinates": [ -92.09304059697638, 30.107705635968511 ] } },
+{ "type": "Feature", "properties": { "id": "8f441e6e67acb96" }, "geometry": { "type": "Point", "coordinates": [ -82.444623300577234, 27.574222152385353 ] } },
+{ "type": "Feature", "properties": { "id": "8f44a80a41b2a50" }, "geometry": { "type": "Point", "coordinates": [ -80.448977564602657, 27.660282858991902 ] } },
+{ "type": "Feature", "properties": { "id": "8f44d39184a5896" }, "geometry": { "type": "Point", "coordinates": [ -80.070867166535137, 33.141603723642369 ] } },
+{ "type": "Feature", "properties": { "id": "8f44f0d346302f4" }, "geometry": { "type": "Point", "coordinates": [ -81.673011786779981, 29.688188388369714 ] } },
+{ "type": "Feature", "properties": { "id": "8f44f0d98ca8a6a" }, "geometry": { "type": "Point", "coordinates": [ -81.502773114314977, 29.833758069653655 ] } }
+]
+}

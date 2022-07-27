@@ -1,0 +1,545 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f5e5d9ae46041e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.71424184438952,
+                    16.321498305120596
+                ]
+            },
+            "properties": {
+                "id": "8f5e5d9ae46041e",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 102,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.02462971955537796,
+                "Height Above Nearest Drainage (m)": 73.9000015258789,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 3.2820656358767906,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 289.6679683513074,
+                "Nearest Water Type": "river",
+                "place_name": "Sainte-Rose, Basse-Terre, Guadeloupe, 97115, France",
+                "Population - 1 km": 811,
+                "Population - 5 km": 13281,
+                "Population - 10 km": 31436
+            }
+        },
+        {
+            "id": "8f5f58a61362102",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.64306889591987,
+                    10.198845358454195
+                ]
+            },
+            "properties": {
+                "id": "8f5f58a61362102",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 25,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.01683088392019272,
+                "Height Above Nearest Drainage (m)": 13.300000190734863,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 2.9273227395863057,
+                "Fine Earth Density (kg / m^3)": 101,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 604.3338062603549,
+                "Nearest Water Type": "coastline",
+                "place_name": "beach, Point Fortin, 700147, Trinidad and Tobago",
+                "Population - 1 km": 657,
+                "Population - 5 km": 15376,
+                "Population - 10 km": 44876
+            }
+        },
+        {
+            "id": "8f5e46814530bb3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.976428179154894,
+                    13.983160460220635
+                ]
+            },
+            "properties": {
+                "id": "8f5e46814530bb3",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 22,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.049796126782894135,
+                "Height Above Nearest Drainage (m)": 27.5,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 1.2768255764609144,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 648.492881059918,
+                "Nearest Water Type": "river",
+                "place_name": "Quatre Chemins, Castries, 67, Saint Lucia",
+                "Population - 1 km": 1546,
+                "Population - 5 km": 51121,
+                "Population - 10 km": 85987
+            }
+        },
+        {
+            "id": "8f4d4ba61b89529",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -63.02327420713585,
+                    18.118099624933414
+                ]
+            },
+            "properties": {
+                "id": "8f4d4ba61b89529",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 20,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.02439560741186142,
+                "Height Above Nearest Drainage (m)": 27.100000381469727,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 7.170861553859219,
+                "Fine Earth Density (kg / m^3)": 135,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 158.991012659398,
+                "Nearest Water Type": "pond",
+                "place_name": "Rue de Grande Caye, Cul de Sac, Saint Martin (France), 97150, France",
+                "Population - 1 km": 423,
+                "Population - 5 km": 14315,
+                "Population - 10 km": 51871
+            }
+        },
+        {
+            "id": "8f45a334e32c30b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.37704403283567,
+                    19.310053745758857
+                ]
+            },
+            "properties": {
+                "id": "8f45a334e32c30b",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 6,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.06460645794868469,
+                "Height Above Nearest Drainage (m)": 1.5999999046325684,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 2.0596379514472423,
+                "Fine Earth Density (kg / m^3)": 103,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 6.6705757471944755,
+                "Nearest Water Type": "water",
+                "place_name": "Esterley Tibbetts Highway, Dog City, The Rock, Whitehall Estate, George Town, KY1-1007, Cayman Islands",
+                "Population - 1 km": 3594,
+                "Population - 5 km": 28994,
+                "Population - 10 km": 49856
+            }
+        },
+        {
+            "id": "8f5e718630ad6f6",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.229347323850604,
+                    13.014927367943727
+                ]
+            },
+            "properties": {
+                "id": "8f5e718630ad6f6",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 73,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.19164671003818512,
+                "Height Above Nearest Drainage (m)": 25.599998474121094,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 7.265584086992133,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 839.943095053386,
+                "Nearest Water Type": "coastline",
+                "place_name": "Port Elizabeth, Grenadines, BQ VC0400, Saint Vincent and the Grenadines",
+                "Population - 1 km": 1463,
+                "Population - 5 km": 4957,
+                "Population - 10 km": 5050
+            }
+        },
+        {
+            "id": "8f5f5824c096a43",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.48379466393488,
+                    10.638142527206275
+                ]
+            },
+            "properties": {
+                "id": "8f5f5824c096a43",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 11,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.02521137148141861,
+                "Height Above Nearest Drainage (m)": 1.8999998569488525,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.48,
+                "Slope (degrees)": 2.4916614379436997,
+                "Fine Earth Density (kg / m^3)": 89,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 709.5077337118422,
+                "Nearest Water Type": "river",
+                "place_name": "Laventille, San Juan-Laventille, N/A, Trinidad and Tobago",
+                "Population - 1 km": 3242,
+                "Population - 5 km": 80903,
+                "Population - 10 km": 207430
+            }
+        },
+        {
+            "id": "8f4cc54c9ba60f1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.0100628698855,
+                    18.09175332965041
+                ]
+            },
+            "properties": {
+                "id": "8f4cc54c9ba60f1",
+                "Soil Clay Fraction": 0.45,
+                "Elevation": 158,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00813312642276287,
+                "Height Above Nearest Drainage (m)": 27.300003051757812,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.28,
+                "Slope (degrees)": 1.6548874112068983,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 5,
+                "Distance to Waterway (m)": 1637.5478249304201,
+                "Nearest Water Type": "river",
+                "place_name": "Guam\u00e1, San Germ\u00e1n, Puerto Rico, 00683-0285, United States",
+                "Population - 1 km": 714,
+                "Population - 5 km": 24154,
+                "Population - 10 km": 61723
+            }
+        },
+        {
+            "id": "8f4ceb860ccd24c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -64.78424779723034,
+                    17.73943897269451
+                ]
+            },
+            "properties": {
+                "id": "8f4ceb860ccd24c",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 36,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008149034343659878,
+                "Height Above Nearest Drainage (m)": 3.4000015258789062,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.9736999011191488,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 456.71966251995605,
+                "Nearest Water Type": "water",
+                "place_name": "Mon Bijou Road, Mon Bijou, Fredensborg, Saint Croix District, United States Virgin Islands, United States",
+                "Population - 1 km": 672,
+                "Population - 5 km": 15567,
+                "Population - 10 km": 34353
+            }
+        },
+        {
+            "id": "8f5f58ac62ae8f2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.45152038133006,
+                    10.316576692879812
+                ]
+            },
+            "properties": {
+                "id": "8f5f58ac62ae8f2",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 7,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008412372320890427,
+                "Height Above Nearest Drainage (m)": 2.299999713897705,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.6284620312781306,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 540.9909287347714,
+                "Nearest Water Type": "drain",
+                "place_name": "Bonne Aventure Road, Pointe-a-Pierre, Gasparillo, Couva-Tabaquite-Talparo, 602905, Trinidad and Tobago",
+                "Population - 1 km": 2895,
+                "Population - 5 km": 53511,
+                "Population - 10 km": 143543
+            }
+        },
+        {
+            "id": "8f5e62d9191b294",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.4583270191161,
+                    12.463618582047523
+                ]
+            },
+            "properties": {
+                "id": "8f5e62d9191b294",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 27,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008350329473614693,
+                "Height Above Nearest Drainage (m)": 15.399999618530273,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 2.88775918515078,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 715.1676553404023,
+                "Nearest Water Type": "coastline",
+                "place_name": "Six Roads, Carriacou and Petite Martinique, Grenada",
+                "Population - 1 km": 338,
+                "Population - 5 km": 3538,
+                "Population - 10 km": 4010
+            }
+        },
+        {
+            "id": "8f5e4605a070b8b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.98102686676926,
+                    14.485965268320868
+                ]
+            },
+            "properties": {
+                "id": "8f5e4605a070b8b",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 24,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008281316608190536,
+                "Height Above Nearest Drainage (m)": 17.700000762939453,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.5638926792115628,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 4,
+                "Distance to Waterway (m)": 60.63758255856449,
+                "Nearest Water Type": "water",
+                "place_name": "D\u00e9ch\u00e8terie, D 7, Sainte-Luce, Le Marin, Martinique, 97228, France",
+                "Population - 1 km": 1128,
+                "Population - 5 km": 18584,
+                "Population - 10 km": 61302
+            }
+        },
+        {
+            "id": "8f5e71bb4703410",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.16758279129548,
+                    13.135775820773897
+                ]
+            },
+            "properties": {
+                "id": "8f5e71bb4703410",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 13,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01665698178112507,
+                "Height Above Nearest Drainage (m)": 13.699999809265137,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 3.1048509481436866,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 1,
+                "Distance to Waterway (m)": 360.0730165933872,
+                "Nearest Water Type": "coastline",
+                "place_name": "Mesopotamia, Saint George, Saint Vincent and the Grenadines",
+                "Population - 1 km": 1669,
+                "Population - 5 km": 25291,
+                "Population - 10 km": 55617
+            }
+        },
+        {
+            "id": "8f5e5d39a3ae913",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.741309812908334,
+                    17.020062846738565
+                ]
+            },
+            "properties": {
+                "id": "8f5e5d39a3ae913",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 30,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.024541446939110756,
+                "Height Above Nearest Drainage (m)": 28.600000381469727,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 8.711224163872613,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 587.0856695877153,
+                "Nearest Water Type": "coastline",
+                "place_name": "St James Drive, English Harbour, Saint Paul, Antigua, Antigua and Barbuda",
+                "Population - 1 km": 285,
+                "Population - 5 km": 4970,
+                "Population - 10 km": 16560
+            }
+        },
+        {
+            "id": "8f5e42a4534022e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.381251918993584,
+                    15.312030218508918
+                ]
+            },
+            "properties": {
+                "id": "8f5e42a4534022e",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 70,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.01650044694542885,
+                "Height Above Nearest Drainage (m)": 40,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 14.57815498351016,
+                "Fine Earth Density (kg / m^3)": 100,
+                "Soil Great Group": 3,
+                "Distance to Waterway (m)": 75.10526261416939,
+                "Nearest Water Type": "stream",
+                "place_name": "Fond Col\u00e9, Roseau, Saint George Parish, 00109-800, Dominica",
+                "Population - 1 km": 4922,
+                "Population - 5 km": 21694,
+                "Population - 10 km": 32600
+            }
+        },
+        {
+            "id": "8f5f5832d06276c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -61.41164491604703,
+                    10.375677587086928
+                ]
+            },
+            "properties": {
+                "id": "8f5f5832d06276c",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 67,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008410817943513393,
+                "Height Above Nearest Drainage (m)": 19.70000457763672,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 6.021088049475131,
+                "Fine Earth Density (kg / m^3)": 144,
+                "Soil Great Group": 8,
+                "Distance to Waterway (m)": 1856.9292514048516,
+                "Nearest Water Type": "river",
+                "place_name": "Kangawood Road, Couva-Tabaquite-Talparo, Trinidad and Tobago",
+                "Population - 1 km": 623,
+                "Population - 5 km": 25191,
+                "Population - 10 km": 116819
+            }
+        },
+        {
+            "id": "8f5e72b2ca58644",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -59.60251251129919,
+                    13.176341008707341
+                ]
+            },
+            "properties": {
+                "id": "8f5e72b2ca58644",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 204,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008327151648700237,
+                "Height Above Nearest Drainage (m)": 76.79998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 1.7032729368159736,
+                "Fine Earth Density (kg / m^3)": 146,
+                "Soil Great Group": 0,
+                "Distance to Waterway (m)": 122.9630649954118,
+                "Nearest Water Type": "water",
+                "place_name": "Scrap Man Recycling, Highway D, Edgehill Terrace, Grand View, Shop Hill, Saint Thomas, BB22020, Barbados",
+                "Population - 1 km": 896,
+                "Population - 5 km": 51286,
+                "Population - 10 km": 143866
+            }
+        },
+        {
+            "id": "8f4cc53ab863075",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.5122367557649,
+                    18.034291004840963
+                ]
+            },
+            "properties": {
+                "id": "8f4cc53ab863075",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 27,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008135737851262093,
+                "Height Above Nearest Drainage (m)": 4.19999885559082,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.32513423006194253,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 2,
+                "Distance to Waterway (m)": 149.2635891172019,
+                "Nearest Water Type": "river",
+                "place_name": "Sabana Llana, Juana D\u00edaz, Puerto Rico, 00795, United States",
+                "Population - 1 km": 935,
+                "Population - 5 km": 38530,
+                "Population - 10 km": 91620
+            }
+        }
+    ]
+}
