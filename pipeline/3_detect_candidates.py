@@ -1,16 +1,12 @@
 import argparse
 import json
-import os
 
-import descarteslabs as dl
-import geopandas as gpd
-from tqdm.notebook import tqdm
-
-from scripts import deploy_candidate_detect, candidate_detect
+from scripts import deploy_candidate_detect
 
 def main(config_path):
-    config = json.load(config_path)
-    
+    with open(config_path, 'r') as f:
+        config = json.load(f)
+
     product_name = config['pixel']['product_name']
     pred_threshold = config['candidate_detect']['pred_threshold']
     min_sigma = config['candidate_detect']['min_sigma']
