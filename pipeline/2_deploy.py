@@ -21,12 +21,13 @@ if module_path not in sys.path:
 from scripts import deploy_nn_v2
 
 def setup_args(config_path):
-    config = json.load(config_path)
+    with open(config_path, 'r') as f:
+        config = json.load(f)
     
     # ROI info
     roi = config['roi']['name']
     roi_file = f'../data/boundaries/{roi}.geojson'
-    dlkeys_file = config['roi']['dlkey file']
+    dlkeys_file = f"../data/boundaries/dlkeys/{config['roi']['dlkey_file']}"
 
     # Time info
     start_date = config['dates']['start']
@@ -37,8 +38,9 @@ def setup_args(config_path):
     model_name = config['pixel']['name']
     model_file = '../models/' + model_name + '.h5'
     product_id = f'earthrise:{roi}_v{model_version}_{start_date}_{end_date}' 
-    product_name = product_id.split(':')[-1]  # Arbitrary string - optionally set this to something more human readable.
     config['pixel']['product_id'] = product_id
+    product_name = product_id.split(':')[-1]  # Arbitrary string - optionally set this to something more human readable.
+    config['pixel']['product_name'] = product_name
 
     # Patch classifier info
     patch_model_version = config['patch']['version']
@@ -55,7 +57,7 @@ def setup_args(config_path):
     run_local = bool(config['run_local'])
 
     with open(config_path, 'w') as f:
-        json.dump(config, f)
+        json.dump(config, f, indent=4)
 
     # If running locally, get results faster by setting smalle tilesize (100?)
     # If running on Descartes, use tilesize 900
@@ -103,8 +105,9 @@ def setup_args(config_path):
         str(padding),
         '--tilesize',
         str((tilesize // patch_input_shape) * patch_input_shape - padding),
+        # TODO: Pop_thresh should be removed
         '--pop_thresh',
-        str(0.25)
+        str(10)
     ]
     if run_local:
         args.append('--run_local')
