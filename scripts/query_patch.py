@@ -1,6 +1,7 @@
 import geopandas as gpd
 # pygeos is required to use geopandas spatial indexing
 gpd.options.use_pygeos = True
+import shapely
 import descarteslabs as dl
 import json
 from tqdm import tqdm
@@ -8,7 +9,7 @@ from tqdm import tqdm
 class DescartesQueryRun(object):
 
     def __init__(self,
-                 roi,
+                 bounds, # [xmin, ymin, xmax, ymax]
                  pixel_product_name,
                  pixel_version,
                  patch_product_name,
@@ -16,7 +17,7 @@ class DescartesQueryRun(object):
                  pred_threshold,
                  **kwargs):
 
-        self.roi = roi
+        self.bounds = bounds
         self.pixel_product_name = pixel_product_name
         self.pixel_version = pixel_version
         self.patch_product_name = patch_product_name
@@ -30,12 +31,10 @@ class DescartesQueryRun(object):
         print("Downloading", self.patch_product_name)
         patch_fc_id = [fc.id for fc in dl.vectors.FeatureCollection.list() if self.patch_product_name in fc.id][0]
         patch_fc = dl.vectors.FeatureCollection(patch_fc_id)
-        region = gpd.GeoDataFrame.from_features(json.loads(self.roi))['geometry']
+        region = gpd.GeoDataFrame(geometry=[shapely.geometry.box(*self.bounds)])
         features = []
-        for i, r in enumerate(region):
-            print("region", i + 1, "of", len(region))
-            for elem in tqdm(patch_fc.filter(r).features()):
-                features.append(elem.geojson)
+        for elem in tqdm(patch_fc.filter(region).features()):
+            features.append(elem.geojson)
         patch = gpd.GeoDataFrame.from_features(features)
         print(len(patch), 'patch features found')
 
@@ -46,11 +45,9 @@ class DescartesQueryRun(object):
         pixel_fc_id = [fc.id for fc in dl.vectors.FeatureCollection.list() if self.pixel_product_name in fc.id][0]
         pixel_fc = dl.vectors.FeatureCollection(pixel_fc_id)
         features = []
-        for i, r in enumerate(region):
-            print("region", i)
-            candidates = pixel_fc.filter(r).features()
-            for elem in tqdm(candidates):
-                features.append(elem.geojson)
+        candidates = pixel_fc.filter(region).features()
+        for elem in tqdm(candidates):
+            features.append(elem.geojson)
         coords = [feat['geometry']['coordinates'] for feat in features]
         merged = self.merge_similar_sites(coords, search_radius=0.01)
 

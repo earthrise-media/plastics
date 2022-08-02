@@ -24,15 +24,17 @@ class GetROI(object):
     
     def get_country_boundary(self):
         if self.region:
-            self.bounds_fc = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('wld_rgn', self.location_name))
+            self.bounds_fc = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('wld_rgn', self.location_name.replace('_', ' ').title()))
         else:
-            self.bounds_fc = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_na', self.location_name))
+            self.bounds_fc = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017').filter(ee.Filter.eq('country_na', self.location_name.replace('_', ' ').title()))
         region_bounds = gpd.GeoDataFrame.from_features(self.bounds_fc.getInfo()['features'], crs='WGS84')
         if len(region_bounds) > 0:
             self.region_bounds = gpd.GeoDataFrame.from_features(self.bounds_fc.getInfo()['features'], crs='WGS84')
-            self.region_file_name = f'{self.location_name.lower()}.geojson'
+            self.region_file_name = f"{self.location_name.lower()}.geojson"
             self.region_bounds.to_file(f'../data/boundaries/{self.region_file_name}')
-        else: self.region_bounds = False
+        else: 
+            print(f"No boundaries found for {self.location_name.replace(' ', '_').title()}")
+            self.region_bounds = False
 
 
     def get_dlkeys(self, tilesize=900, pad=20, resolution=10.0):
