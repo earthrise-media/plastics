@@ -29,7 +29,7 @@ def run_model(dlkey, **kwargs):
 
     Optional kwargs are passed to the instantiation of DescartesRun.
     """
-    import dl_utils
+    from scripts import dl_utils
     runner = dl_utils.DescartesRun(**kwargs)
     runner(dlkey, kwargs['start_date'], kwargs['end_date'])
 

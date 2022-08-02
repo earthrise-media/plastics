@@ -1,6 +1,7 @@
 import argparse
 import descarteslabs as dl
 import geopandas as gpd
+import shapely
 from scripts import query_patch
 
 
@@ -16,9 +17,9 @@ DL_SYSTEM_PARAMS = {
     'requirements': ['tqdm', 'h3', 'geopandas==0.10.2', 'pygeos']
 }
 
-def run_query(roi, **kwargs):
+def run_query(**kwargs):
     import query_patch
-    runner = query_patch.DescartesQueryRun(roi, **kwargs)
+    runner = query_patch.DescartesQueryRun(**kwargs)
     runner()
 
 def main(*args):
@@ -49,9 +50,11 @@ def main(*args):
                         help='Run model locally rather than async on DL.')
 
     args = parser.parse_args(*args)
-    roi = gpd.read_file(f'../data/boundaries/{args.roi_name}.geojson')['geometry']
-    roi = roi.simplify(0.05).buffer(1).to_json()
-    runner = query_patch.DescartesQueryRun(roi, **vars(args))
+    roi = gpd.read_file(f'../data/boundaries/{args.roi_name}.geojson')
+    bounds = roi.total_bounds.tolist()
+    args.bounds = bounds
+    print(args)
+    runner = query_patch.DescartesQueryRun(**vars(args))
     if args.run_local:
         runner()
     else:
@@ -60,7 +63,7 @@ def main(*args):
             name=f"query_patch_{args.pixel_product_name.split('earthrise:')[-1]}_thresh_{args.pred_threshold}", 
             **DL_SYSTEM_PARAMS
         )
-        async_func(roi, **vars(args))
+        async_func(**vars(args))
             
 
 

@@ -20,7 +20,7 @@ DL_SYSTEM_PARAMS = {
 }
 
 def run_candidates(image_name, **kwargs):
-    import candidate_detect
+    from scripts import candidate_detect
     runner = candidate_detect.DescartesDetectRun(**kwargs)
     runner(image_name)
 
