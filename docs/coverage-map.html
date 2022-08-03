@@ -62,6 +62,7 @@
         <div><span style="background-color: hsla(350, 98%, 33%, 0.54)"></span>No sites detected</div>
         <div><span style="background-color: hsla(203, 97%, 28%, 0.54)"></span>Needs to be validated</div>
         <div><span style="background-color: hsl(33, 28%, 93%)"></span>Not run</div>
+        <div><span style="background-color: #404040"></span>Detected sites</div>
     </div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiY2xrcnVzZSIsImEiOiJjaXIxY2M2dGcwMnNiZnZtZzN0Znk3MXRuIn0.MyKHSjxjG-ZcI2BkRUSGJA'
@@ -69,7 +70,7 @@
             container: 'map',
             style: 'mapbox://styles/clkruse/cl6ctwsmr001q14os4nrjd4zg',
             center: [0, 0],
-            zoom: 1.25,
+            zoom: 1.75,
             projection: {
                 name: 'naturalEarth',
                 center: [180, 40],
@@ -78,6 +79,25 @@
             hash: true
         });
         map.on('load', function () {
+
+            map.addSource('detected-sites', {
+                type: 'geojson',
+                'tolerance': 0.05,
+                data: 'https://api.globalplasticwatch.org/sites?apikey=jahsdbvjahsdvaulhsdvoauysdg82973bq&limit=10000'
+            });
+            map.addLayer(
+                {
+                    'id': 'detected',
+                    'type': 'circle',
+                    'source': 'detected-sites',
+                    'paint': {
+                        'circle-color': '#404040',
+                        'circle-opacity': 1.0,
+                        'circle-radius': {
+                            stops: [[2, 1.75], [8, 3], [11, 5], [16, 20]]
+                        }
+                    }
+                });
 
             map.on('click', function (e) {
                 var coordinates = e.lngLat;
