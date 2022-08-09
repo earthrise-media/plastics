@@ -1,0 +1,40 @@
+{
+    "roi": {
+        "name": "iran",
+        "region": false,
+        "region_file": "iran.geojson",
+        "dlkey_file": "iran_pop_0.25_dlkeys.txt",
+        "populated_dltiles_file": "iran_pop_0.25_dltiles.geojson",
+        "tile_count": 8812
+    },
+    "dates": {
+        "start": "2021-01-01",
+        "end": "2022-07-01"
+    },
+    "data": {
+        "mosaic_period": 3,
+        "mosaic_method": "min",
+        "spectrogram_interval": 2
+    },
+    "pixel": {
+        "version": "0.0.11",
+        "name": "spectrogram_v0.0.11_2021-07-13",
+        "product_id": "earthrise:iran_v0.0.11_2021-01-01_2022-07-01",
+        "product_name": "iran_v0.0.11_2021-01-01_2022-07-01"
+    },
+    "patch": {
+        "version": "weak_labels_3.0",
+        "name": "weak_labels_3.0_batchnorm",
+        "stride": 8,
+        "product_id": "earthrise:iran_patch_weak_labels_3.0_2021-01-01_2022-07-01_stride_8"
+    },
+    "candidate_detect": {
+        "pred_threshold": 0.3,
+        "min_sigma": 5.0,
+        "product_id": "iran_v0.0.11_2021-01-01_2022-07-01_blobs_thresh_0.6_min-sigma_5.0_area-thresh_0.0025_band-median"
+    },
+    "run_local": false,
+    "intersect": {
+        "product_id": "earthrise:intersect_iran_v0.0.11_2021-01-01_2022-07-01-iran_patch_weak_labels_3.0_2021-01-01_2022-07-01_stride_8_threshold_0.3.geojson"
+    }
+}

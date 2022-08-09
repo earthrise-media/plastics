@@ -10,17 +10,16 @@ def main(config_path):
     roi_name = config['roi']['name']
     pixel_product_name = config['pixel']['product_name']
     pixel_version = config['pixel']['version']
-    patch_product_name = config['patch']['product_name']
+    patch_product_name = config['patch']['product_id']
     patch_version = config['patch']['version']
-    pred_threshold = config['candidate_detect']['pred_threshold']
-    pred_threshold = config['candidate_detect']['pred_threshold']
+    pred_threshold = config['intersect']['patch_threshold']
     run_local = bool(config['run_local'])
 
-    output_id = f"earthrise:intersect_{pixel_product_name.split('earthrise:')[-1]}-{patch_product_name.split('earthrise:')[-1]}_threshold_{pred_threshold}.geojson"
-    config['intersect']['product_id'] = output_id
+    output_id = f"earthrise:intersect_{pixel_product_name.split('earthrise:')[-1]}-{patch_product_name.split('earthrise:')[-1]}_threshold_{pred_threshold}"
+    config['intersect'] = {'product_id': output_id}
 
     with open(config_path, 'w') as f:
-        json.dump(config, f)
+        json.dump(config, f, indent=4)
 
     args = [
             '--roi_name', roi_name,
@@ -28,7 +27,7 @@ def main(config_path):
             '--pixel_version', pixel_version,
             '--patch_product_name', patch_product_name,
             '--patch_version', patch_version,
-            '--pred_threshold', pred_threshold
+            '--pred_threshold', str(pred_threshold)
         ]
     if run_local:
         args.append('--run_local')

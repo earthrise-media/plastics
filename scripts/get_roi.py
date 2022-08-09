@@ -33,7 +33,7 @@ class GetROI(object):
             self.region_file_name = f"{self.location_name.lower()}.geojson"
             self.region_bounds.to_file(f'../data/boundaries/{self.region_file_name}')
         else: 
-            print(f"No boundaries found for {self.location_name.replace(' ', '_').title()}")
+            print(f"No boundaries found for {self.location_name.replace('_', ' ').title()}")
             self.region_bounds = False
 
 
