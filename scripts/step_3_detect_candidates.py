@@ -17,7 +17,7 @@ def main(config_path):
     run_local = bool(config['run_local'])
 
     with open(config_path, 'w') as f:
-        json.dump(config, f)
+        json.dump(config, f, indent=4)
 
     args = [
         '--product_name',

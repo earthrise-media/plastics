@@ -18,7 +18,7 @@ DL_SYSTEM_PARAMS = {
 }
 
 def run_query(**kwargs):
-    import query_patch
+    from scripts import query_patch
     runner = query_patch.DescartesQueryRun(**kwargs)
     runner()
 
@@ -53,7 +53,6 @@ def main(*args):
     roi = gpd.read_file(f'../data/boundaries/{args.roi_name}.geojson')
     bounds = roi.total_bounds.tolist()
     args.bounds = bounds
-    print(args)
     runner = query_patch.DescartesQueryRun(**vars(args))
     if args.run_local:
         runner()

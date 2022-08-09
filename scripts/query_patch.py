@@ -69,9 +69,9 @@ class DescartesQueryRun(object):
 
         if not product_id:
             print("Creating product", output_id)
-            product = dl.vectors.FeatureCollection.create(product_id=output_id,
-                                                            title=output_id,
-                                                            description=f"intersection of {output_id}")
+            product = dl.vectors.FeatureCollection.create(product_id=output_id[:150],
+                                                            title=output_id[:150],
+                                                            description=f"intersection of {output_id[:150]}")
         else:
             print(f"Product {output_id}_patches already exists...")
             product = dl.vectors.FeatureCollection(product_id)
