@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GPW Coverage Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .legend {
+            background-color: #fff;
+            border-radius: 3px;
+            bottom: 30px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            z-index: 1;
+        }
+
+        .legend h4 {
+            margin: 0 0 10px;
+        }
+
+        .legend div span {
+            border-radius: 50%;
+            display: inline-block;
+            height: 10px;
+            margin-right: 5px;
+            width: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #d1d1d1;">
+    <!--center the header --> 
+    <div id="header" style="text-align: center; font-family: 'Roboto Mono', sans-serif; color:#404040">
+        <h1 >Global Plastic Watch Coverage Map</h1>
+    </div>
+    <div id='map' style='width: 100vw; height: 100vh;'><div>
+    <div id="state-legend" class="legend">
+        <div><span style="background-color: hsla(203, 97%, 28%, 0.54)"></span>Sites detected</div>
+        <div><span style="background-color: hsla(350, 98%, 33%, 0.54)"></span>No sites detected</div>
+        <div><span style="background-color: hsla(48, 100%, 50%, 0.54)"></span>Needs to be validated</div>
+        <div><span style="background-color: hsl(33, 28%, 93%)"></span>Not run</div>
+        <div><span style="background-color: #404040"></span>Detected sites</div>
+    </div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2xrcnVzZSIsImEiOiJjaXIxY2M2dGcwMnNiZnZtZzN0Znk3MXRuIn0.MyKHSjxjG-ZcI2BkRUSGJA'
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/clkruse/cl6p6njum005014mlghpjm4ej',
+            center: [0, 0],
+            zoom: 1.75,
+            projection: {
+                name: 'naturalEarth',
+                center: [180, 40],
+                parallels: [30, 30]
+            },
+            hash: true
+        });
+        map.on('load', function () {
+
+            map.addSource('detected-sites', {
+                type: 'geojson',
+                'tolerance': 0.05,
+                data: 'https://api.globalplasticwatch.org/sites?apikey=jahsdbvjahsdvaulhsdvoauysdg82973bq&limit=10000'
+            });
+            map.addLayer(
+                {
+                    'id': 'detected',
+                    'type': 'circle',
+                    'source': 'detected-sites',
+                    'paint': {
+                        'circle-color': '#404040',
+                        'circle-opacity': 1.0,
+                        'circle-radius': {
+                            stops: [[2, 1.75], [8, 3], [11, 5], [16, 20]]
+                        }
+                    }
+                });
+
+            map.on('click', function (e) {
+                var coordinates = e.lngLat;
+                navigator.clipboard.writeText(Math.round(coordinates.lat * 1000) / 1000 + ", " + Math.round(coordinates.lng * 1000) / 1000);
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(Math.round(coordinates.lat * 1000) / 1000 + ", " + Math.round(coordinates.lng * 1000) / 1000)
+                    .addTo(map);
+            });
+
+            map.on('click', function (e) {
+                var coordinates = e.lngLat;
+                navigator.clipboard.writeText(Math.round(coordinates.lat * 1000) / 1000 + ", " + Math.round(coordinates.lng * 1000) / 1000);
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(Math.round(coordinates.lat * 1000) / 1000 + ", " + Math.round(coordinates.lng * 1000) / 1000)
+                    .addTo(map);
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
