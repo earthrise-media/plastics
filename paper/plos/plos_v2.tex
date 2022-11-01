@@ -222,16 +222,14 @@ Fabien Laurier\textsuperscript{3*},
 Plastic waste is a significant environmental pollutant that is difficult to monitor. We created a system of neural networks to analyze spectral, spatial, and temporal components of Sentinel-2 satellite data to identify terrestrial aggregations of waste. The system works \textcolor{red}{at wide geographic scale, finding waste sites in twelve countries across Southeast Asia}. We evaluated performance in Indonesia and detected 374 waste aggregations, more than double the number of sites found in public databases. The same system deployed in Southeast Asia identifies 996 subsequently confirmed waste sites. For each detected site, we algorithmically monitor waste site footprints through time and cross-reference other datasets to generate physical and social metadata. 19\% of detected waste sites are located within 200 m of a waterway. Numerous sites sit directly on riverbanks, with high risk of ocean leakage.
 
 \linenumbers
-
-% Use "Eq" instead of "Equation" for equation citations.
 \section*{Introduction}
-Plastics are a major pollutant impacting our planet. They are integrated into nearly all aspects of our daily life and are leaking into the environment. Plastic waste has reached the world’s highest points, deepest parts of the ocean, seafloor sediment cores, populated areas, remote islands, and both poles \cite{napper2021abundance}\cite{chiba2018human}\cite{kelly2020microplastic}\cite{brandon2019multidecadal}\cite{lavers2020entrapment}\cite{browne2011accumulation}. On reaching the ocean, plastics persist for decades as an insidious pollutant \cite{lebreton2019global}\cite{worm2017plastic}. Plastics have been found to cause harm to hundreds of species, including all sea turtle species, almost half the cetacean and marine bird species, and damage coral reefs and other ecosystems \cite{harding2016marine}\cite{lamb2018plastic}\cite{beaumont2019global}. \textcolor{red}{It is challenging to identify and monitor the sources of this waste because the problem is so broadly distributed.} With an estimated 11 million metric tons of plastic waste currently entering the ocean each year, a rate that is expected to nearly triple by 2040 \cite{lau2020evaluating}, it is more urgent than ever to address the plastic pollution issue further upstream.
+Plastics are a major pollutant impacting our planet. They are integrated into nearly all aspects of our daily life and are leaking into the environment. Plastic waste has reached the world’s highest points, deepest parts of the ocean, seafloor sediment cores, populated areas, remote islands, and both poles \cite{napper2021abundance}\cite{chiba2018human}\cite{kelly2020microplastic}\cite{brandon2019multidecadal}\cite{lavers2020entrapment}\cite{browne2011accumulation}. On reaching the ocean, plastics persist for decades as an insidious pollutant \cite{lebreton2019global}\cite{worm2017plastic}. Plastics have been found to cause harm to hundreds of species, including all sea turtle species, almost half the cetacean and marine bird species, and damage coral reefs and other ecosystems \cite{harding2016marine}\cite{lamb2018plastic}\cite{beaumont2019global}. An estimated 11 million metric tons of plastic waste currently enters the ocean each year, a rate that is expected to nearly triple by 2040 \cite{lau2020evaluating} \textcolor{red}{Since the sources of environmental plastics are broadly distributed geographically, most studies of pollution pathways have either focused on a selected set of field locations \cite{jambeck2015plastic}, or infer plastic waste density through modeling \cite{lebreton2019future}\cite{SIEGFRIED2017249}.} It is more urgent than ever to actively monitor the sources of plastic pollution issue further upstream.
 
-Previous research has shown that plastic in the environment and ocean is influenced by mismanaged waste on land \cite{jambeck2015plastic}\cite{lebreton2019future}\cite{borrelle2020predicted}. It is estimated that 70-80\% of plastic pollution comes from land-based sources and that 91\% of ocean plastic pollution occurs via watersheds \cite{li2020global}\cite{lebreton2019future}. Additionally, while there are an estimated 1,000 rivers transporting plastic waste to the ocean, the top ten are located in South or Southeast Asia where dumpsites are still commonly used for disposal \cite{meijer2021more}\cite{dhokhikah2012solid}\cite{kaza2018waste}.
+Previous research has shown that plastic in the environment and ocean is influenced by mismanaged waste on land \cite{jambeck2015plastic}\cite{borrelle2020predicted}. It is estimated that 70-80\% of plastic pollution comes from land-based sources and that 91\% of ocean plastic pollution occurs via watersheds \cite{lebreton2019future}. Additionally, while there are an estimated 1,000 rivers transporting plastic waste to the ocean, the top ten are located in South or Southeast Asia where dumpsites are still commonly used for disposal \cite{meijer2021more}\cite{dhokhikah2012solid}\cite{kaza2018waste}. 
 
 Globally, 12\% of municipal solid waste (MSW) is made up of plastics \cite{kaza2018waste}. As such, identifying MSW serves as a key proxy for locating aggregations of plastics in the environment. The development of new and effective plastic management strategies requires an understanding of aggregations of municipal waste, particularly for litter hotspots, illegal dumping, and related high-risk leakage sites. Due to lack of resources to scale, government reporting can be scarce, out of date, and often doesn’t account for informal waste management practices. This work seeks to leverage remote sensing data to fill this information gap, identifying waste aggregation locations in service of reducing the impacts of plastic pollution. With remote detection of waste aggregations, one can measure rather than model waste distributions and monitor waste site development through time, eventually within a globally consistent and comprehensive dataset.
 
-To our knowledge, no operational monitoring system for plastic-bearing municipal solid waste exists. For ocean plastics, conceptual \cite{goddijn2018concept} and small-scale \cite{acuna2018anthropogenic} studies have shown that the spectral signature of floating plastic debris is likely characterizable. Both Biermann et al. \cite{biermann2020finding} and Themistocleous et al. \cite{themistocleous2020investigating} demonstrated that indices derived from multispectral Sentinel-2 data are sufficient to identify floating debris in a marine environment. On land, the spectral diversity of waste and land cover makes it challenging to devise spectral indices that can effectively discriminate waste. More recently, Gill et al. \cite{gill2019detection} developed a method for detecting large, managed landfills in Kuwait using Landsat-derived land surface temperature increases, Page et al. \cite{page2020identification} developed a classification method for both tire and plastic waste in Scotland using Sentinel-1 and Sentinel-2 data, \textcolor{red}{and a proof-of-concept system to detect municipal waste in Da Nang, Vietnam was demonstrated by the Japan Manned Spaced Systems Corporation and the Da Nang Institute for Socio-Economic Development \cite{nguyen_pham_2022}}.
+To our knowledge, no operational monitoring system for plastic-bearing municipal solid waste exists. For ocean plastics, conceptual \cite{goddijn2018concept} and small-scale \cite{acuna2018anthropogenic} studies have shown that the spectral signature of floating plastic debris is likely characterizable. Both Biermann et al. \cite{biermann2020finding} and Themistocleous et al. \cite{themistocleous2020investigating} demonstrated that indices derived from multispectral Sentinel-2 data are sufficient to identify floating debris in a marine environment. On land, the spectral diversity of waste and land cover makes it challenging to devise spectral indices that can effectively discriminate waste. More recently, Gill et al. \cite{gill2019detection} developed a method for detecting large, managed landfills in Kuwait using Landsat-derived land surface temperature increases, Page et al. \cite{page2020identification} developed a classification method for both tire and plastic waste in Scotland using Sentinel-1 and Sentinel-2 data, \textcolor{red}{and a proof-of-concept system to detect municipal waste in Da Nang, Vietnam was demonstrated by the Japan Manned Space Systems Corporation and the Da Nang Institute for Socio-Economic Development \cite{nguyen_pham_2022}}.
 
 Growth of computational infrastructure, architectural innovations, and new training techniques have established neural networks as preeminent systems for image classification. Recent work has shown that neural network systems have the ability to produce global datasets from Earth observation data, classifying and monitoring features at a greater level of specificity, robustness, and scale than ever before \cite{li2020global}\cite{bonafilia2019building}\cite{kruitwagen2021global}\cite{9553499}. We build on this work, creating a novel pipeline of neural networks that parse spectral, structural, and temporal information from Sentinel-2 satellite data to identify plastic waste aggregations on land throughout Southeast Asia.
 
@@ -253,11 +251,11 @@ Unless otherwise denoted, supplied parameter values in the methods are included 
 
 \subsection*{Data}\label{methods:data}
 \subsubsection*{Data Sources}
-The Copernicus Sentinel-2 program of the European Space Agency provides a globally comprehensive, open-access dataset of satellite-based Earth observations, with moderately high spatial resolution (10, 20, or 60 meters / pixel depending on the band), broad multi-spectral range (12 bands between 442 nm and 2186 nm), and frequent temporal revisit rate (~5 days). Sentinel-2 data has been collected continuously since late 2015. High resolution basemap data (Google Earth, Bing, ~30-50 cm / pixel) has proved valuable for site validation, but using the underlying proprietary imagery for detection would involve significant tradeoffs in cost, spectral range, revisit rate, and data standardization and accessibility (Fig \ref{fig:sentinel_data}). We use the radiometrically and geometrically corrected Sentinel-2 L1C Top-of-Atmosphere data product \cite{sentinel2user}.
+The Copernicus Sentinel-2 program of the European Space Agency provides a globally comprehensive, open-access dataset of satellite-based Earth observations, with moderately high spatial resolution (10, 20, or 60 meters / pixel depending on the band), broad multi-spectral range (12 bands between 442 nm and 2186 nm), and frequent temporal revisit rate (~5 days). Sentinel-2 data has been collected continuously since late 2015. High resolution basemap data (Google Earth, Mapbox, Bing, ~30-50 cm / pixel) has proved valuable for site validation, but using the underlying proprietary imagery for detection would involve significant tradeoffs in cost, spectral range, revisit rate, and data standardization and accessibility (Fig \ref{fig:sentinel_data}). We use the radiometrically and geometrically corrected Sentinel-2 L1C Top-of-Atmosphere data product \cite{sentinel2user}.
 
 \begin{figure}[!h]
     \caption{{\bf Comparison of imagery used for validation and detection.}
-    At left, high resolution imagery from Maxar / Google, from Google Earth with the waste site boundary highlighted in red. At right, a red, green, and blue band composite of Sentinel-2 data. As seen here, site identification at 10-meter resolution is challenging for even human evaluators.}
+    At left, high resolution imagery from Maxar Open Data Program \cite{maxar} with the waste site boundary highlighted in red. At right, a red, green, and blue band composite of Sentinel-2 data. As seen here, site identification at 10-meter resolution is challenging for even human evaluators.}
     \label{fig:sentinel_data}
 \end{figure}
 
@@ -266,14 +264,14 @@ The public data portal includes site metadata queried from other publicly availa
 \subsubsection*{Data Labeling}
 We began with a set of ten known waste sites in Bali, Indonesia, with hand-drawn boundaries. We select negative-class sites to capture the distribution of terrain in the target domain, while biasing toward features closer in spectra to waste than the dominant land cover type. In Bali, tropical forest dominates outside urban areas.
 
-After trained models are run on a region, we add confirmed positive sites to the training set, and we evaluate dominant failure modes to select new negative-class sampling locations. In this way, we create a data sampling system that continually incorporates new information as the geographic scope increases. We refer to this generative process as the “data engine.”
+After trained models are run on a region, we add confirmed positive sites to the training set, and we evaluate dominant failure modes to select new negative-class sampling locations. In this way, we create a data sampling system that continually incorporates new information as the geographic scope increases through a bootstrapping process. \textcolor{red}{After thirteen rounds of bootstrapping, the training dataset is made up of 213 locations containing waste and 345 regions without.}
 
 \subsubsection*{Training Data Generation (Stage 1)}
 For each labeled site location, we extract all 2019 Sentinel-2 L1C (top-of-atmosphere) data in a \textcolor{red}{$480\times480$} meter square patch around the site centroid, with Descartes Labs cloud and cloud-shadow masking (stage 1.1). The masks are broadly effective but leave behind residual cloud edges and haze. Haze in particular proved to be a consistent source of false-positive detections for early models. We experimented with various data compositing techniques. Because clouds and haze are bright, we were able to eliminate most wispy clouds and haze that escaped the cloud masks by taking a minimum instead of a median composite. In the final reckoning, the data input to the neural networks is Sentinel-2 L1C data with cloud and cloud-shadow masks, composited across a three-month window by selecting the minimum unmasked value for each pixel. To form a spectrogram, a three-month composite is paired with another composite at the same location, offset by six months. We then normalize the data per-spectral-channel across the training dataset. In total, the labeled patch dataset is composed of 1,770 positive samples and 3,104 negative samples.
 
 The unlabeled dataset (stage 1.2) is constructed similarly but consists of randomly sampled patches from 10x10 km regions that are themselves selected for broad geographic diversity.
 
-Pixel data (stage 1.3) is derived from the labeled patch dataset. Each pixel accompanies its temporal pair, and the two spectral profiles are concatenated into a single spectrogram of shape (2, 12). After multiple iterations of the data engine, the pixel classifier dataset \textcolor{red}{is made up of 13 separately-collected sets of sampling locations and} contains 200,663 and 3,687,725 positive and negative class pixel spectrograms, respectively.
+Pixel data (stage 1.3) is derived from a subset of the labeled patch dataset. Each pixel accompanies its temporal pair, and the two spectral profiles are concatenated into a single spectrogram of shape (2, 12). The pixel classifier training dataset contains 200,663 and 3,687,725 positive and negative class pixel spectrograms, respectively.
 
 For the positive-class data, pixels are selected that fall within hand-drawn waste-site boundaries. This boundary is fixed, but the waste sites are dynamic. In some cases, sites may have dormant periods where vegetation covers the waste. Assigning positive labels to these vegetated pixels in the training dataset would create overlap between the classes. As such, we use an NDVI threshold conservatively set at 0.4 to filter any pixels from the positive-class dataset that may be vegetated. This removes 6.6\% of samples from the positive-class training dataset.
 
@@ -340,7 +338,12 @@ The model is deployed on the Descartes Labs geospatial analytics platform. The D
 \subsubsection*{Pixel Classifier Candidate Detection (Stage 3.2)}
 To identify candidates from the pixel classifier heatmap, we mask any prediction below a threshold and detect connected clusters (“blobs”) of pixels with high-valued predictions using the scikit-image Determinant-of-Hessian blob detection function (DoH) \cite{van2014scikit}. This eliminates single-pixel noise that may be present in the outputs and also produces a single coordinate for each candidate waste site. 
 
-The sensitivity of the candidate detection stage can be tuned by controlling \textcolor{red}{the prediction threshold and the parameters of the DoH algorithm. A higher pixel threshold leaves only regions which are classified as more certain. The min\_sigma parameter is used by the DoH blob detection and controls the minimum standard deviation of the Gaussian blur kernel in the algorithm. A lower min\_sigma parameter means that smaller and fainter blobs can be detected. To put these values in context, a $3\times3$ pixel region with predicted values of 0.7 would be detected as a candidate using a min\_sigma value of 3.5, but would not be identified using a min\_sigma value of 5.0. Similarly, a $2\times3$ pixel region with predictions of 0.7 would not be surfaced at either min\_sigma value, but would be identified using min\_sigma 3.5 should the prediction values be greater than 0.8. The sensitivity modes are described in} Table \ref{table:sensitivity_modes} and fig. \ref{fig:blob_detection}.
+The sensitivity of the candidate detection stage can be tuned by controlling \textcolor{red}{the prediction threshold and the minimum sigma (min\_sigma) value of the DoH algorithm. Tuning these parameters is a tradeoff between the precision and recall of detections. In absence of a database of known waste locations, we were not able to empirically sweep these values to find an optimum. Instead, we developed three sensitivity regimes detailed in Table \ref{table:sensitivity_modes} based on evaluations of candidates surfaced during model detection runs.}
+ 
+\textcolor{red}{A higher classifier threshold leaves only regions which the networks assess as more certain to contain waste. The min\_sigma parameter is used by the DoH blob detection and controls the minimum standard deviation of the Gaussian blur kernel in the algorithm. As such, a lower min\_sigma parameter enables smaller and fainter blobs to be returned as candidates.}
+ 
+\textcolor{red}{To put these values in context, a $3\times3$ pixel region with predicted values of 0.7 would be detected as a candidate using a min\_sigma value of 3.5, but would not be identified using a min\_sigma value of 5.0. Similarly, a $2\times3$ pixel region with predictions of 0.7 would not be surfaced at either min\_sigma value.  If this $2\times3$ region had predicted values of 0.8, it would be identified using a min\_sigma of 3.5. The interplay between classifier thresholds and min\_sigma values are shown in fig. \ref{fig:blob_detection}.}
+
 
 \begin{figure}[!h]
     \caption{{\bf Sensitivity modes of the blob detection stage.}
@@ -370,7 +373,7 @@ Because the pixel classifier has no ability to incorporate spatial information, 
 Each waste site identified by the detection system is evaluated by a trained evaluator. Details on this process are described in the output validation section. Candidates that pass this evaluation process are considered confirmed.
 
 \subsubsection*{Metadata Generation (Stage 3.5)} \label{metadata}
-We generate additional metadata for each confirmed waste site. Geophysical and population data is generated by querying external datasets, listed in the data sources, at the location or region surrounding the waste aggregation. To compute each site’s distance to the nearest waterway, we use the OpenStreetMap API to return all waterways within a 5 km radius. For each waterway found, we compute the nearest distance between the waste site centroid and the geometry of each waterway. The minimum value of this set is returned as the site's nearest distance to a waterway. If no waterways are found within a 5 km radius, this location is assigned a value of >5 km.
+We generate additional metadata for each confirmed waste site. Geophysical and population data is generated by querying external datasets, listed in the data sources, at the location or region surrounding the waste aggregation. To compute each site’s distance to the nearest waterway, we use the OpenStreetMap API to return all waterways within a 5 km radius. For each waterway found, we compute the nearest distance between the waste site centroid and the geometry of each waterway. The minimum value of this set is returned as the site's nearest distance to a waterway. If no waterways are found within a 5 km radius, this location is assigned a value of $>5$ km.
 
 \subsection*{Site Footprint Monitoring (Stage 4)}
 For each confirmed waste aggregation we compute the footprint of the site and how it changes through time. To do so, we extract composited mosaic pairs as previously described (Stage 1.1). The composites are extracted every month for the full extent of the Sentinel-2 catalog, reaching from mid-2017 through January, 2021. A pixel-classifier prediction is computed for every pixel within the patch, which produces a set of heat map predictions of waste locations for each time point in the dataset.
@@ -381,7 +384,7 @@ This masked prediction frame is thresholded, and contours surrounding the binary
 
 \subsection*{Output Validation} 
 \label{sec:validation}
-Points that are positively classified by both networks are denoted as "candidate sites." To confirm the accuracy of the identifications, these candidates are evaluated by a curator using publicly-available data. Predominantly, validation is done through analysis of very-high resolution satellite data \textcolor{red}{hosted on the Google Earth and Mapbox platforms. This imagery is a composite collected from multiple sensing platforms, but Very-High-Resolution imagery (less than 60 cm - 5 m resolution) is available in most cases \cite{lesiv2018characterizing}}. At this resolution, one can identify characteristic traits that are frequently seen in waste sites. These may include a high frequency texture, pale gray or brown coloration, roads and paths leading to active dumping areas, machinery for moving or dumping waste, or plumes from burning. Examples of high-resolution imagery of confirmed waste sites can be seen in Figs. \ref{fig:river_adjacent}, \ref{fig:contours}.
+Points that are positively classified by both networks are denoted as "candidate sites." To confirm the accuracy of the identifications, these candidates are evaluated by a curator using publicly-available data. Predominantly, validation is done through analysis of very-high resolution satellite data \textcolor{red}{hosted on the Google Earth and Mapbox platforms. This imagery is a composite collected from multiple sensing platforms, but Very-High-Resolution imagery (ranging from under 60 cm and up to 5 m in resolution) is available in most cases \cite{lesiv2018characterizing}}. At this resolution, one can identify characteristic traits that are frequently seen in waste sites. These may include a high frequency texture, pale gray or brown coloration, roads and paths leading to active dumping areas, machinery for moving or dumping waste, or plumes from burning.
 
 Depending on availability, sites are may also be verified using other data sources. In Google Street View imagery, reviewers can clearly see the individual waste items as well as the aggregation as a whole. Of the identified sites in Indonesia, 126 sites have nearby Street View imagery. In other cases, data from Planet Planetscope and OpenStreetMap can be used as additional sources of information for site confirmation.
 
@@ -518,7 +521,7 @@ In terms of the mean footprint area across time, 38\% of detected waste sites ar
 
 \begin{figure}[!h]
     \caption{{\bf Cumulative distribution of average site area for detected waste sites in Southeast Asia.}
-    As a reference of waste site area, the areas of four formal waste sites in Bali are plotted (left), and shown (right). All images are shown at the same scale, covering 350 m per side, and are from Maxar / Google, from Google Earth.}
+    As a reference of waste site area, the areas of four formal waste sites in Bali are plotted (left), and shown (right).}
     \label{fig:site_areas}
 \end{figure}
 
@@ -571,7 +574,7 @@ This research establishes the first comprehensive dataset on the distribution an
 
 This work may serve as a template for utilizing deep learning for environmental monitoring and detection systems. In particular, we demonstrate model and system architectures for incorporating multiple dimensions of remotely sensed information. Convolving learnable filters across spatial, spectral, and temporal dimensions combines these signals in ways that would be nearly impossible to envision for handcrafted algorithms and greatly boosts system performance (Table \ref{table:classifier_accuracy}). The neural networks also show a capacity for geographic robustness, functioning in unseen countries across the \textcolor{red}{geographically varied Southeast Asian region} without additional tuning (Table \ref{table:se_asia_stats}).
 
-Labeled data for environmental monitoring is often scarce, and this work demonstrates strategies for training neural networks in data-poor conditions. The work began with only 10 known waste locations, which would typically be considered an insufficient dataset to train heavily-parameterized models like neural networks. We amplified the amount of training data by sampling at multiple time points and continuously adding to the dataset as new detections were validated and new failure modes were identified. This data engine enhanced the quantity and diversity of training data and continually improved the training set through time. Then, the data engine is self-reinforcing as the geographic scope expands and new waste locations are identified.
+Labeled data for environmental monitoring is often scarce, and this work demonstrates strategies for training neural networks in data-poor conditions. The work began with only 10 known waste locations, which would typically be considered an insufficient dataset to train heavily-parameterized models like neural networks. We amplified the amount of training data by sampling at multiple time points and continuously adding to the dataset as new detections were validated and new failure modes were identified. This bootstrapped sampling enhanced the quantity and diversity of training data and continually improved the training set through time. The bootstrapped training dataset is self-reinforcing as the geographic scope expands and new waste locations are identified.
 
 Beginning with a per-pixel classifier architecture facilitated early progress. The classifier is forced to learn spectral and temporal patterns, minimizing bias and overfitting towards waste site structure that would likely have been seen in a spatial classifier. The second-stage temporal patch classifier is able to rule out candidates that spectrally match waste site profiles but are structurally different from waste sites. For example, the single pixel classifier initially identified plastic greenhouses as a plastic aggregation site, but second-stage spatial classification was able to distinguish the difference such that only plastic aggregation sites were identified. Finally, the use of a semi-supervised noisy student distillation process improved the quality of the patch classifier. While distillation is often used to shrink the size of a model, our work showed that it also improved model performance and robustness (Table \ref{table:classifier_accuracy}). Using this technique in cases with limited training data may be useful for application in other earth observation tasks.
 
@@ -579,7 +582,7 @@ Beginning with a per-pixel classifier architecture facilitated early progress. T
 
 \textcolor{red}{In future work, we will run this system globally. In order to accommodate this geographic expansion, we will continue to use the same data engine collection procedure for the new regions. As the domains of evaluation grow, the model sizes may need to increase as well in order to capture the additional training data variance.}
 
-This work has implications for the integration of science into decision-making for plastic pollution and waste management. For example, the data illustrates that waste aggregations are often nearby or adjacent to waterways. More than half of sites are within 750 m, and 19\% are within 200 m of a waterway (Figs. \ref{fig:waterway_distance}, \ref{fig:river_adjacent}). This highlights the role of these areas as a potential link between terrestrial waste aggregations and aquatic plastic pollution. Communities are burdened with waste management. After disposal, waste loses traceability and transparency. By identifying aggregation points, this observation system might help communities better understand pollution pathways. Researchers may also be able to use this data as a complement to other data being collected (e.g., litter data), and/or to validate or improve waste generation and management models, thereby improving estimates.
+This work has implications for the integration of science into decision-making for plastic pollution and waste management. For example, the data illustrates that waste aggregations are often nearby or adjacent to waterways. More than half of sites are within 750 m, and 19\% are within 200 m of a waterway (Fig. \ref{fig:waterway_distance}). This highlights the role of these areas as a potential link between terrestrial waste aggregations and aquatic plastic pollution. Communities are burdened with waste management. After disposal, waste loses traceability and transparency. By identifying aggregation points, this observation system might help communities better understand pollution pathways. Researchers may also be able to use this data as a complement to other data being collected (e.g., litter data), and/or to validate or improve waste generation and management models, thereby improving estimates.
 
 This data may also be used to prioritize remediation of high-risk waste sites. The data illustrates where waste aggregation is already occurring. In many of these cases in South and Southeast Asia, an informal waste management system already exists. Instead of closure, these areas could be targeted for inclusive infrastructure development since there is existing informal collection, aggregation, and management occurring. Informal workers are knowledge-holders that would contribute to both the development of, and participation in, a waste management system that is more protective of their health and the environment. Because the data allows for monthly monitoring of waste site presence and boundaries (Fig \ref{fig:contours}), the effectiveness of management interventions can be measured and monitored.
 
@@ -687,17 +690,17 @@ Lebreton L, Andrady A.
 \newblock Future scenarios of global plastic waste generation and disposal.
 \newblock Palgrave Communications. 2019;5(1):1--11.
 
+\bibitem{SIEGFRIED2017249}
+Siegfried M, Koelmans AA, Besseling E, Kroeze C.
+\newblock Export of microplastics from land to sea. A modelling approach.
+\newblock Water Research. 2017;127:249--257.
+\newblock doi:{https://doi.org/10.1016/j.watres.2017.10.011}.
+
 \bibitem{borrelle2020predicted}
 Borrelle SB, Ringma J, Law KL, Monnahan CC, Lebreton L, McGivern A, et~al.
 \newblock Predicted growth in plastic waste exceeds efforts to mitigate plastic
   pollution.
 \newblock Science. 2020;369(6510):1515--1518.
-
-\bibitem{li2020global}
-Li J, Knapp DE, Fabina NS, Kennedy EV, Larsen K, Lyons MB, et~al.
-\newblock A global coral reef probability map generated using convolutional
-  neural networks.
-\newblock Coral Reefs. 2020;39(6):1805--1815.
 
 \bibitem{meijer2021more}
 Meijer LJ, van Emmerik T, van~der Ent R, Schmidt C, Lebreton L.
@@ -761,6 +764,12 @@ Nguyen L, Pham TA. Remote Sensing Smart City Solution for Municipal Waste
 \newblock Available from:
   \url{https://www.undp.org/vietnam/blog/remote-sensing-smart-city-solution-municipal-waste-management}.
 
+\bibitem{li2020global}
+Li J, Knapp DE, Fabina NS, Kennedy EV, Larsen K, Lyons MB, et~al.
+\newblock A global coral reef probability map generated using convolutional
+  neural networks.
+\newblock Coral Reefs. 2020;39(6):1805--1815.
+
 \bibitem{bonafilia2019building}
 Bonafilia D, Gill J, Basu S, Yang D.
 \newblock Building high resolution maps for humanitarian aid and development
@@ -800,6 +809,11 @@ Hinton G, Vinyals O, Dean J. Distilling the Knowledge in a Neural Network;
 Sentinel E.
 \newblock User Handbook.
 \newblock ESA Standard Document. 2;64.
+
+\bibitem{maxar}
+Maxar Technologies; 2020.
+\newblock Available from:
+  \url{https://maxar-marketing.s3.amazonaws.com/files/downloads/119757_opendataprotocol_2020_04.pdf}.
 
 \bibitem{hengl_tomislav_2019_3274342}
 Hengl T, Wheeler I, MacMillan RA.
@@ -859,7 +873,7 @@ Jordahl K, den Bossche JV, Fleischmann M, Wasserman J, McBride J, Gerard J,
 
 \bibitem{astinfra}
 Infrastructure Distribution of the Ministry of PUPR;.
-\newblock \url={https://sigi.pu.go.id/ast/}.
+\newblock Available from: \url{https://sigi.pu.go.id/ast/}.
 
 \bibitem{indonesia2020indonesian}
 Indonesia BS. Indonesian Statistical (Statistical Yearbook of Indonesian,
@@ -873,6 +887,8 @@ Gorelick N, Hancher M, Dixon M, Ilyushchenko S, Thau D, Moore R.
 \newblock Remote sensing of Environment. 2017;202:18--27.
 
 \end{thebibliography}
+
+
 
 \end{document}
 
