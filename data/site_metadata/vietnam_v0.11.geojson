@@ -1,0 +1,2981 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "8f41642ed8258f4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.14159789141436,
+                    16.041180364184143
+                ]
+            },
+            "properties": {
+                "id": "8f41642ed8258f4",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 35,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.032885581254959106,
+                "Height Above Nearest Drainage (m)": 7,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 10.289293111043408,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 1.3076940774917603,
+                "Distance to Waterway (m)": 1158.6475755066188,
+                "Nearest Water Type": "pond",
+                "place_name": "Ho\u00e0ng V\u0103n Th\u00e1i, Ph\u01b0\u1eddng H\u00f2a Kh\u00e1nh Nam, H\u00f2a Vang District, Da Nang, 84236, Vietnam",
+                "Population - 1 km": 4237,
+                "Population - 5 km": 187406,
+                "Population - 10 km": 730542
+            }
+        },
+        {
+            "id": "8f65b530c7932e1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.64200251269251,
+                    10.377833383672186
+                ]
+            },
+            "properties": {
+                "id": "8f65b530c7932e1",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 1,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.1598055511713028,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 0.7004889274878388,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.1952474117279053,
+                "Distance to Waterway (m)": 1915.9061791918782,
+                "Nearest Water Type": "canal",
+                "place_name": "X\u00e3 Long Ch\u00e1nh, Go Cong Town, Tien Giang province, Vietnam",
+                "Population - 1 km": 2099,
+                "Population - 5 km": 87211,
+                "Population - 10 km": 239035
+            }
+        },
+        {
+            "id": "8f41423aaa32171",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.70709617127868,
+                    20.708203371365034
+                ]
+            },
+            "properties": {
+                "id": "8f41423aaa32171",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 3,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008005641400814056,
+                "Height Above Nearest Drainage (m)": 1.399999976158142,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.45256477061085654,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.246694564819336,
+                "Distance to Waterway (m)": 380.9864097750647,
+                "Nearest Water Type": "ditch",
+                "place_name": "X\u00e3 \u0110\u1ea1i H\u1ee3p, Huy\u1ec7n Ki\u1ebfn Th\u1ee5y, Haiphong, Vietnam",
+                "Population - 1 km": 2510,
+                "Population - 5 km": 58956,
+                "Population - 10 km": 216158
+            }
+        },
+        {
+            "id": "8f65b1414604946",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.52766511327886,
+                    11.699136057475936
+                ]
+            },
+            "properties": {
+                "id": "8f65b1414604946",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 56,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.05024243891239166,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.52,
+                "Slope (degrees)": 0.6942347495299975,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.2247209548950195,
+                "Distance to Waterway (m)": 2642.719331733023,
+                "Nearest Water Type": "river",
+                "place_name": "B\u00ecnh Long Town, H\u1edbn Qu\u1ea3n District, B\u00ecnh Ph\u01b0\u1edbc Province, Vietnam",
+                "Population - 1 km": 400,
+                "Population - 5 km": 11244,
+                "Population - 10 km": 64207
+            }
+        },
+        {
+            "id": "8f65b572e461892",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.93565123028343,
+                    10.692084570589978
+                ]
+            },
+            "properties": {
+                "id": "8f65b572e461892",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 24,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.06721880286931992,
+                "Height Above Nearest Drainage (m)": 4,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.48,
+                "Slope (degrees)": 0.8821359557775891,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 1.9475598335266113,
+                "Distance to Waterway (m)": 3185.036595229409,
+                "Nearest Water Type": "river",
+                "place_name": "Nguy\u1ec5n V\u0103n C\u1eeb, X\u00e3 Ph\u01b0\u1edbc An, Nh\u01a1n Tr\u1ea1ch District, \u0110\u1ed3ng Nai Province, Vietnam",
+                "Population - 1 km": 2413,
+                "Population - 5 km": 52805,
+                "Population - 10 km": 177718
+            }
+        },
+        {
+            "id": "8f65b449414c9ab",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.49748709566767,
+                    11.244814808531698
+                ]
+            },
+            "properties": {
+                "id": "8f65b449414c9ab",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 12,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.02516081929206848,
+                "Height Above Nearest Drainage (m)": 4.699999809265137,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.2759844534220406,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.605863571166992,
+                "Distance to Waterway (m)": 1298.8229976459413,
+                "Nearest Water Type": "stream",
+                "place_name": "H\u1ea3i Xu\u00e2n, B\u1eafc B\u00ecnh District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 1138,
+                "Population - 5 km": 22228,
+                "Population - 10 km": 52505
+            }
+        },
+        {
+            "id": "8f414195126aa43",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.64194055356639,
+                    18.851277154707677
+                ]
+            },
+            "properties": {
+                "id": "8f414195126aa43",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 14,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.00809780415147543,
+                "Height Above Nearest Drainage (m)": 3,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.51,
+                "Slope (degrees)": 2.267855976536758,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.622521162033081,
+                "Distance to Waterway (m)": 950.9846313741726,
+                "Nearest Water Type": "river",
+                "place_name": "Nghi L\u1ed9c District, Ngh\u1ec7 An Province, Vietnam",
+                "Population - 1 km": 852,
+                "Population - 5 km": 26015,
+                "Population - 10 km": 123336
+            }
+        },
+        {
+            "id": "8f6936101c72d58",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.94371123115208,
+                    13.891367229970182
+                ]
+            },
+            "properties": {
+                "id": "8f6936101c72d58",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 714,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.02490784227848053,
+                "Height Above Nearest Drainage (m)": 39.5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 4.312796685435729,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.869382858276367,
+                "Distance to Waterway (m)": 4569.09827558312,
+                "Nearest Water Type": "water",
+                "place_name": "\u0110\u01b0\u1eddng tr\u00e1nh TP.Pleiku, Pleiku, Gia Lai Province, Vietnam",
+                "Population - 1 km": 329,
+                "Population - 5 km": 13045,
+                "Population - 10 km": 83719
+            }
+        },
+        {
+            "id": "8f65a26eb8345b3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.53551571263247,
+                    10.67291093016588
+                ]
+            },
+            "properties": {
+                "id": "8f65a26eb8345b3",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 4,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.00840289331972599,
+                "Height Above Nearest Drainage (m)": 0.09999990463256836,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 1.5629011930268517,
+                "Fine Earth Density (kg / m^3)": 103,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.0700933933258057,
+                "Distance to Waterway (m)": 421.10589311004975,
+                "Nearest Water Type": "river",
+                "place_name": "Tam N\u00f4ng District, Dong Thap Province, Vietnam",
+                "Population - 1 km": 1550,
+                "Population - 5 km": 29089,
+                "Population - 10 km": 71655
+            }
+        },
+        {
+            "id": "8f416101805d740",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.75942499524542,
+                    16.626267472155774
+                ]
+            },
+            "properties": {
+                "id": "8f416101805d740",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 426,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008197193033993244,
+                "Height Above Nearest Drainage (m)": 222.60000610351562,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 7.036157984475764,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 5.382236957550049,
+                "Distance to Waterway (m)": 694.1969764592262,
+                "Nearest Water Type": "stream",
+                "place_name": "Khe Sanh, H\u01b0\u1edbng H\u00f3a District, Quang Tri province, Vietnam",
+                "Population - 1 km": 380,
+                "Population - 5 km": 8660,
+                "Population - 10 km": 20359
+            }
+        },
+        {
+            "id": "8f65b57ac60164a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.97099100627827,
+                    10.831059763248913
+                ]
+            },
+            "properties": {
+                "id": "8f65b57ac60164a",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 33,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.02519562840461731,
+                "Height Above Nearest Drainage (m)": 1.8000011444091797,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 2.240787626280714,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.3428022861480713,
+                "Distance to Waterway (m)": 821.0313795685386,
+                "Nearest Water Type": "reservoir",
+                "place_name": "An Phuoc, Long Th\u00e0nh District, \u0110\u1ed3ng Nai Province, Vietnam",
+                "Population - 1 km": 1356,
+                "Population - 5 km": 58444,
+                "Population - 10 km": 217091
+            }
+        },
+        {
+            "id": "8f65b04ee490c01",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.49316607604067,
+                    11.999837127399111
+                ]
+            },
+            "properties": {
+                "id": "8f65b04ee490c01",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 703,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008364701643586159,
+                "Height Above Nearest Drainage (m)": 102.9000244140625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 12.870045884892797,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.82609486579895,
+                "Distance to Waterway (m)": 1168.3048317523287,
+                "Nearest Water Type": "water",
+                "place_name": "Kien Duc, \u0110\u0103k R'L\u1ea5p District, Tuy \u0110\u1ee9c District, \u0110\u1eafk N\u00f4ng Province, Vietnam",
+                "Population - 1 km": 1201,
+                "Population - 5 km": 26341,
+                "Population - 10 km": 54815
+            }
+        },
+        {
+            "id": "8f65a2d63af3a34",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.27011327277825,
+                    9.94071373160658
+                ]
+            },
+            "properties": {
+                "id": "8f65a2d63af3a34",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 2,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.707451343536377,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.44055919866275894,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.18426513671875,
+                "Distance to Waterway (m)": 848.9107649750349,
+                "Nearest Water Type": "river",
+                "place_name": "C\u00e0ng Long District, Tra Vinh province, Vietnam",
+                "Population - 1 km": 6051,
+                "Population - 5 km": 60915,
+                "Population - 10 km": 224234
+            }
+        },
+        {
+            "id": "8f65b0292db5492",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.02246505172526,
+                    11.839979622730477
+                ]
+            },
+            "properties": {
+                "id": "8f65b0292db5492",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 209,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008369527757167816,
+                "Height Above Nearest Drainage (m)": 35.600006103515625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 5.687829424843965,
+                "Fine Earth Density (kg / m^3)": 112,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.660515785217285,
+                "Distance to Waterway (m)": 663.1127979585958,
+                "Nearest Water Type": "dam",
+                "place_name": "Ph\u01b0\u1edbc S\u01a1n, \u0110\u1ee9c H\u1ea1nh, B\u00f9 Gia M\u1eadp District, B\u00ecnh Ph\u01b0\u1edbc Province, Vietnam",
+                "Population - 1 km": 1212,
+                "Population - 5 km": 35506,
+                "Population - 10 km": 88441
+            }
+        },
+        {
+            "id": "8f4143c5a7aa913",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.11969640876724,
+                    20.429356649394357
+                ]
+            },
+            "properties": {
+                "id": "8f4143c5a7aa913",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 0,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008020041510462761,
+                "Height Above Nearest Drainage (m)": 0.10000002384185791,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.32991100917079536,
+                "Fine Earth Density (kg / m^3)": 117,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.0027849674224854,
+                "Distance to Waterway (m)": 1051.957698768731,
+                "Nearest Water Type": "river",
+                "place_name": "Nam \u0110\u1ecbnh, Nam Dinh province, 42000, Vietnam",
+                "Population - 1 km": 2054,
+                "Population - 5 km": 126578,
+                "Population - 10 km": 395690
+            }
+        },
+        {
+            "id": "8f65b21106a9d94",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.84250618550831,
+                    12.601801520981265
+                ]
+            },
+            "properties": {
+                "id": "8f65b21106a9d94",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 369,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.016691893339157104,
+                "Height Above Nearest Drainage (m)": 26.20001220703125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 5.887324034583153,
+                "Fine Earth Density (kg / m^3)": 134,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.428231716156006,
+                "Distance to Waterway (m)": 3053.3185450643186,
+                "Nearest Water Type": "water",
+                "place_name": "\u0110\u0103k R\u00f4ng, C\u01b0 J\u00fat District, \u0110\u1eafk N\u00f4ng Province, Vietnam",
+                "Population - 1 km": 881,
+                "Population - 5 km": 25080,
+                "Population - 10 km": 97663
+            }
+        },
+        {
+            "id": "8f416e7b36aa98e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.00475591602073,
+                    17.876325694665645
+                ]
+            },
+            "properties": {
+                "id": "8f416e7b36aa98e",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 70,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.08142960071563721,
+                "Height Above Nearest Drainage (m)": 11.299999237060547,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 7.5791336339141715,
+                "Fine Earth Density (kg / m^3)": 82,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.0818710327148438,
+                "Distance to Waterway (m)": 1315.1644119767388,
+                "Nearest Water Type": "water",
+                "place_name": "Dong Le Town, Tuy\u00ean H\u00f3a District, Quang Binh province, Vietnam",
+                "Population - 1 km": 274,
+                "Population - 5 km": 5673,
+                "Population - 10 km": 16831
+            }
+        },
+        {
+            "id": "8f65b66de50961b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.19914737820811,
+                    12.399623233018172
+                ]
+            },
+            "properties": {
+                "id": "8f65b66de50961b",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 448,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008352327160537243,
+                "Height Above Nearest Drainage (m)": 28.5,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.119600745445348,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.3891494274139404,
+                "Distance to Waterway (m)": 2440.0835362162006,
+                "Nearest Water Type": "river",
+                "place_name": "Li\u00ean S\u01a1n, L\u1eafk District, \u0110\u1eafk L\u1eafk province, Vietnam",
+                "Population - 1 km": 576,
+                "Population - 5 km": 14414,
+                "Population - 10 km": 33326
+            }
+        },
+        {
+            "id": "8f6932cc4486855",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.48144445687865,
+                    12.845110767076884
+                ]
+            },
+            "properties": {
+                "id": "8f6932cc4486855",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 451,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008338089101016521,
+                "Height Above Nearest Drainage (m)": 17.29998779296875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 1.9997388693568237,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 4.138969898223877,
+                "Distance to Waterway (m)": 399.5474375710332,
+                "Nearest Water Type": "river",
+                "place_name": "Ea Kar District, \u0110\u1eafk L\u1eafk province, Vietnam",
+                "Population - 1 km": 381,
+                "Population - 5 km": 21422,
+                "Population - 10 km": 79949
+            }
+        },
+        {
+            "id": "8f41414710882a1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.64530535837778,
+                    19.657172840395862
+                ]
+            },
+            "properties": {
+                "id": "8f41414710882a1",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 10,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008058827370405197,
+                "Height Above Nearest Drainage (m)": 1.700000286102295,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.55,
+                "Slope (degrees)": 3.76220138362143,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.22477126121521,
+                "Distance to Waterway (m)": 658.1617027886803,
+                "Nearest Water Type": "river",
+                "place_name": "N\u00f4ng C\u1ed1ng, Thanh Hoa province, Vietnam",
+                "Population - 1 km": 1300,
+                "Population - 5 km": 37451,
+                "Population - 10 km": 141301
+            }
+        },
+        {
+            "id": "8f65b2c05383cea",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.11943638838599,
+                    12.591337743021871
+                ]
+            },
+            "properties": {
+                "id": "8f65b2c05383cea",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": 498,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.025038834661245346,
+                "Height Above Nearest Drainage (m)": 12.399993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 9.468915595099798,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 7.7352614402771,
+                "Distance to Waterway (m)": 1660.37910734257,
+                "Nearest Water Type": "water",
+                "place_name": "C\u01b0 Kuin District, \u0110\u1eafk L\u1eafk province, 02623, Vietnam",
+                "Population - 1 km": 1466,
+                "Population - 5 km": 40391,
+                "Population - 10 km": 123804
+            }
+        },
+        {
+            "id": "8f65b5af5351984",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.68576236580519,
+                    10.18838473762289
+                ]
+            },
+            "properties": {
+                "id": "8f65b5af5351984",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": -3,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.4965217709541321,
+                "Height Above Nearest Drainage (m)": 0.4999999403953552,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.26,
+                "Slope (degrees)": 1.5613281435197945,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.300049066543579,
+                "Distance to Waterway (m)": 1764.3077866208707,
+                "Nearest Water Type": "canal",
+                "place_name": "B\u00ecnh \u0110\u1ea1i, B\u00ecnh \u0110\u1ea1i District, B\u1ebfn Tre Province, Vietnam",
+                "Population - 1 km": 5269,
+                "Population - 5 km": 36976,
+                "Population - 10 km": 95719
+            }
+        },
+        {
+            "id": "8f65a36e655a56c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.4940378812001,
+                    10.402065970872288
+                ]
+            },
+            "properties": {
+                "id": "8f65a36e655a56c",
+                "Soil Clay Fraction": 0.43,
+                "Elevation": 4,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008410131558775902,
+                "Height Above Nearest Drainage (m)": 1.5,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.25,
+                "Slope (degrees)": 0.4408827931293162,
+                "Fine Earth Density (kg / m^3)": 83,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.235283613204956,
+                "Distance to Waterway (m)": 250.51734524450808,
+                "Nearest Water Type": "canal",
+                "place_name": "Ha Tien City, Kien Giang Province, Vietnam",
+                "Population - 1 km": 309,
+                "Population - 5 km": 11184,
+                "Population - 10 km": 32184
+            }
+        },
+        {
+            "id": "8f416e6aab3004b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.8109915597876,
+                    17.941345232247496
+                ]
+            },
+            "properties": {
+                "id": "8f416e6aab3004b",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 88,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.2848982810974121,
+                "Height Above Nearest Drainage (m)": 7,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 13.428744059697076,
+                "Fine Earth Density (kg / m^3)": 110,
+                "Soil Great Group": 7,
+                "Wind Speed (m/s)": 2.657682180404663,
+                "Distance to Waterway (m)": 1015.8884137919539,
+                "Nearest Water Type": "river",
+                "place_name": "Tuy\u00ean H\u00f3a District, Quang Binh province, Vietnam",
+                "Population - 1 km": 232,
+                "Population - 5 km": 4605,
+                "Population - 10 km": 15248
+            }
+        },
+        {
+            "id": "8f6596cab9a300e",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.68942075323339,
+                    14.681103896466837
+                ]
+            },
+            "properties": {
+                "id": "8f6596cab9a300e",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 667,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.008274114690721035,
+                "Height Above Nearest Drainage (m)": 39.39996337890625,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 7.962193676980513,
+                "Fine Earth Density (kg / m^3)": 131,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.803617477416992,
+                "Distance to Waterway (m)": 2475.6735823728864,
+                "Nearest Water Type": "water",
+                "place_name": "Qu\u1ed1c l\u1ed9 14C, H\u00f2a B\u00ecnh, Ngoc Hoi District, Kon Tum province, Vietnam",
+                "Population - 1 km": 962,
+                "Population - 5 km": 19446,
+                "Population - 10 km": 37035
+            }
+        },
+        {
+            "id": "8f69300b306ccf5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    109.08034130753532,
+                    13.83540917847936
+                ]
+            },
+            "properties": {
+                "id": "8f69300b306ccf5",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 48,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.016609303653240204,
+                "Height Above Nearest Drainage (m)": 6.899997711181641,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.5,
+                "Slope (degrees)": 5.588972104867973,
+                "Fine Earth Density (kg / m^3)": 136,
+                "Soil Great Group": 3,
+                "Wind Speed (m/s)": 1.8205450773239136,
+                "Distance to Waterway (m)": 2303.3275575606635,
+                "Nearest Water Type": "river",
+                "place_name": "An Nhon, An Nh\u01a1n District, B\u00ecnh \u0110\u1ecbnh Province, Vietnam",
+                "Population - 1 km": 1674,
+                "Population - 5 km": 44649,
+                "Population - 10 km": 223809
+            }
+        },
+        {
+            "id": "8f65a28de994848",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.94895896777575,
+                    9.965999118864692
+                ]
+            },
+            "properties": {
+                "id": "8f65a28de994848",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 2,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 1.3305740356445312,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.8811016883790224,
+                "Fine Earth Density (kg / m^3)": 109,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.218715190887451,
+                "Distance to Waterway (m)": 740.624761006811,
+                "Nearest Water Type": "canal",
+                "place_name": "M\u1ef9 H\u00f2a, Tr\u00e0 \u00d4n District, Vinh Long province, Vietnam",
+                "Population - 1 km": 2825,
+                "Population - 5 km": 48717,
+                "Population - 10 km": 138222
+            }
+        },
+        {
+            "id": "8f4161c8c02030d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.23685677515483,
+                    16.6579754859895
+                ]
+            },
+            "properties": {
+                "id": "8f4161c8c02030d",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 26,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008195888251066208,
+                "Height Above Nearest Drainage (m)": 15.399999618530273,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 116,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.632222890853882,
+                "Distance to Waterway (m)": 1787.3161623212886,
+                "Nearest Water Type": "water",
+                "place_name": "T\u00e2n Ph\u01b0\u01a1\u0301c, H\u1ea3i L\u0103ng District, Quang Tri province, Vietnam",
+                "Population - 1 km": 209,
+                "Population - 5 km": 15412,
+                "Population - 10 km": 54846
+            }
+        },
+        {
+            "id": "8f4161d8b58b95c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.32565167369381,
+                    16.5798069606381
+                ]
+            },
+            "properties": {
+                "id": "8f4161d8b58b95c",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 28,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008199143223464489,
+                "Height Above Nearest Drainage (m)": 11.199999809265137,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 2.14520399132466,
+                "Fine Earth Density (kg / m^3)": 117,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.118541955947876,
+                "Distance to Waterway (m)": 423.90685138457667,
+                "Nearest Water Type": "reservoir",
+                "place_name": "Phong \u0110i\u1ec1n District, Th\u1eeba Thi\u00ean Hu\u1ebf Province, Vietnam",
+                "Population - 1 km": 210,
+                "Population - 5 km": 9146,
+                "Population - 10 km": 35426
+            }
+        },
+        {
+            "id": "8f65a2b4232a459",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.57010345255537,
+                    9.695505334063153
+                ]
+            },
+            "properties": {
+                "id": "8f65a2b4232a459",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": -1,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008428147993981838,
+                "Height Above Nearest Drainage (m)": 0.10000014305114746,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.28,
+                "Slope (degrees)": 0.9903214751911933,
+                "Fine Earth Density (kg / m^3)": 87,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.265923023223877,
+                "Distance to Waterway (m)": 66.43468994778635,
+                "Nearest Water Type": "ditch",
+                "place_name": "B\u00ecnh Th\u1ea1nh, Ph\u01b0\u1eddng B\u00ecnh Th\u1ea1nh, Long My Town, H\u1eadu Giang Province, Vietnam",
+                "Population - 1 km": 3308,
+                "Population - 5 km": 46371,
+                "Population - 10 km": 116281
+            }
+        },
+        {
+            "id": "8f65a2c2ecc5932",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.30878194250388,
+                    10.099964310571067
+                ]
+            },
+            "properties": {
+                "id": "8f65a2c2ecc5932",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 3,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.2777940630912781,
+                "Height Above Nearest Drainage (m)": 0.20000004768371582,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 1.1199903858034261,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.9618279933929443,
+                "Distance to Waterway (m)": 387.81163700181287,
+                "Nearest Water Type": "canal",
+                "place_name": "M\u1ecf C\u00e0y Nam District, B\u1ebfn Tre Province, Vietnam",
+                "Population - 1 km": 3955,
+                "Population - 5 km": 79250,
+                "Population - 10 km": 169693
+            }
+        },
+        {
+            "id": "8f65b546e29ea55",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.08705839767367,
+                    10.729082519432167
+                ]
+            },
+            "properties": {
+                "id": "8f65b546e29ea55",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 49,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.43687203526496887,
+                "Height Above Nearest Drainage (m)": 4.5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 1.912420076947301,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.2693569660186768,
+                "Distance to Waterway (m)": 2310.26053159419,
+                "Nearest Water Type": "river",
+                "place_name": "Bau Can, Long Th\u00e0nh District, \u0110\u1ed3ng Nai Province, Vietnam",
+                "Population - 1 km": 549,
+                "Population - 5 km": 12541,
+                "Population - 10 km": 97823
+            }
+        },
+        {
+            "id": "8f65a2d65034925",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.2878664783736,
+                    9.90462727380817
+                ]
+            },
+            "properties": {
+                "id": "8f65a2d65034925",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 0,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008422937244176865,
+                "Height Above Nearest Drainage (m)": 0.3999999761581421,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.232924699783325,
+                "Distance to Waterway (m)": 398.15855977583544,
+                "Nearest Water Type": "ditch",
+                "place_name": "Qu\u1ed1c l\u1ed9 60, B\u00ecnh La, Ch\u00e2u Th\u00e0nh District, Tra Vinh province, Vietnam",
+                "Population - 1 km": 1781,
+                "Population - 5 km": 65195,
+                "Population - 10 km": 223661
+            }
+        },
+        {
+            "id": "8f65b012200ea00",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.49721476915454,
+                    11.40330517483259
+                ]
+            },
+            "properties": {
+                "id": "8f65b012200ea00",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 171,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.033529575914144516,
+                "Height Above Nearest Drainage (m)": 10.5,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 9.686250346968949,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 1.4860305786132812,
+                "Distance to Waterway (m)": 1111.9437243166758,
+                "Nearest Water Type": "stream",
+                "place_name": "\u0110\u1ea1 Huoai District, L\u00e2m \u0110\u1ed3ng Province, Vietnam",
+                "Population - 1 km": 692,
+                "Population - 5 km": 21395,
+                "Population - 10 km": 58426
+            }
+        },
+        {
+            "id": "8f6936a1e294934",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.31023596493345,
+                    14.042516388910133
+                ]
+            },
+            "properties": {
+                "id": "8f6936a1e294934",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 743,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008297322317957878,
+                "Height Above Nearest Drainage (m)": 54.0999755859375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.2364626041759954,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 4.371081352233887,
+                "Distance to Waterway (m)": 2635.191286794875,
+                "Nearest Water Type": "river",
+                "place_name": "Mang Yang District, Gia Lai Province, Vietnam",
+                "Population - 1 km": 314,
+                "Population - 5 km": 11662,
+                "Population - 10 km": 34822
+            }
+        },
+        {
+            "id": "8f65a2a222e6a6c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.64083754055521,
+                    9.801647958061313
+                ]
+            },
+            "properties": {
+                "id": "8f65a2a222e6a6c",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 1,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008425543084740639,
+                "Height Above Nearest Drainage (m)": 0.5,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.33,
+                "Slope (degrees)": 0.4404647251041264,
+                "Fine Earth Density (kg / m^3)": 85,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.1638035774230957,
+                "Distance to Waterway (m)": 910.993213967623,
+                "Nearest Water Type": "canal",
+                "place_name": "61, H\u00f2a An, X\u00e3 H\u00f2a An, Ph\u1ee5ng Hi\u1ec7p District, H\u1eadu Giang Province, Vietnam",
+                "Population - 1 km": 2198,
+                "Population - 5 km": 23759,
+                "Population - 10 km": 80968
+            }
+        },
+        {
+            "id": "8f65b47a0552a54",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.1551566523102,
+                    11.092408016428553
+                ]
+            },
+            "properties": {
+                "id": "8f65b47a0552a54",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 39,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008391288109123707,
+                "Height Above Nearest Drainage (m)": 9.700000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 1.3876544244680906,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.2795891761779785,
+                "Distance to Waterway (m)": 1760.0761971676873,
+                "Nearest Water Type": "river",
+                "place_name": "Ma L\u00e2m, H\u00e0m Thu\u1eadn B\u1eafc District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 679,
+                "Population - 5 km": 26742,
+                "Population - 10 km": 75949
+            }
+        },
+        {
+            "id": "8f69305652d9955",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.95589342054146,
+                    13.884505582151027
+                ]
+            },
+            "properties": {
+                "id": "8f69305652d9955",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 38,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.049817927181720734,
+                "Height Above Nearest Drainage (m)": 9.19999885559082,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.49,
+                "Slope (degrees)": 3.41008241435182,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.60990834236145,
+                "Distance to Waterway (m)": 1904.6664061196636,
+                "Nearest Water Type": "stream",
+                "place_name": "G\u1ea1ch ng\u00f3i Ph\u00fa An, T\u00e2y S\u01a1n District, B\u00ecnh \u0110\u1ecbnh Province, Vietnam",
+                "Population - 1 km": 842,
+                "Population - 5 km": 28014,
+                "Population - 10 km": 90429
+            }
+        },
+        {
+            "id": "8f65a20eaaf2c92",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.72762070458543,
+                    10.27984237641513
+                ]
+            },
+            "properties": {
+                "id": "8f65a20eaaf2c92",
+                "Soil Clay Fraction": 0.42,
+                "Elevation": 6,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.0336533822119236,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.22,
+                "Slope (degrees)": 0.8815386239721349,
+                "Fine Earth Density (kg / m^3)": 105,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.1037659645080566,
+                "Distance to Waterway (m)": 198.17085954017597,
+                "Nearest Water Type": "river",
+                "place_name": "Tan Phu Dong, Sa \u0110\u00e9c City, Dong Thap Province, 81800, Vietnam",
+                "Population - 1 km": 2769,
+                "Population - 5 km": 95503,
+                "Population - 10 km": 244422
+            }
+        },
+        {
+            "id": "8f6932da1718223",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.23064776135544,
+                    12.980930912583094
+                ]
+            },
+            "properties": {
+                "id": "8f6932da1718223",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 778,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008333641104400158,
+                "Height Above Nearest Drainage (m)": 87.699951171875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 5.291400969509665,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 5.560812950134277,
+                "Distance to Waterway (m)": 4302.214278059559,
+                "Nearest Water Type": "water",
+                "place_name": "Kr\u00f4ng Buk District, \u0110\u1eafk L\u1eafk province, Vietnam",
+                "Population - 1 km": 1616,
+                "Population - 5 km": 25160,
+                "Population - 10 km": 97404
+            }
+        },
+        {
+            "id": "8f4160a28b3036b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.63719838122942,
+                    16.398050672778975
+                ]
+            },
+            "properties": {
+                "id": "8f4160a28b3036b",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 20,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.11489462107419968,
+                "Height Above Nearest Drainage (m)": 3,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 2.455616419949724,
+                "Fine Earth Density (kg / m^3)": 126,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.2522408962249756,
+                "Distance to Waterway (m)": 209.41915793578013,
+                "Nearest Water Type": "stream",
+                "place_name": "H\u01b0\u01a1ng Th\u1ee7y, Th\u1eeba Thi\u00ean Hu\u1ebf Province, Vietnam",
+                "Population - 1 km": 1281,
+                "Population - 5 km": 34523,
+                "Population - 10 km": 265535
+            }
+        },
+        {
+            "id": "8f65b504d8cc212",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78101054074335,
+                    10.393379362808636
+                ]
+            },
+            "properties": {
+                "id": "8f65b504d8cc212",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 2,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.00841035321354866,
+                "Height Above Nearest Drainage (m)": 0.8999999761581421,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 0.6935989570687515,
+                "Fine Earth Density (kg / m^3)": 93,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.4978926181793213,
+                "Distance to Waterway (m)": 1872.9213697287705,
+                "Nearest Water Type": "canal",
+                "place_name": "Ki\u1ec3ng Ph\u01b0\u1edbc, X\u00e3 Ki\u1ec3ng Ph\u01b0\u1edbc, Go Cong Dong District, Tien Giang province, Vietnam",
+                "Population - 1 km": 1252,
+                "Population - 5 km": 24626,
+                "Population - 10 km": 73356
+            }
+        },
+        {
+            "id": "8f65b69757b0ce3",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.66268405080307,
+                    11.230297502695205
+                ]
+            },
+            "properties": {
+                "id": "8f65b69757b0ce3",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 78,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.05032411217689514,
+                "Height Above Nearest Drainage (m)": 3.899993896484375,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 9.328381512407939,
+                "Fine Earth Density (kg / m^3)": 142,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.9171090126037598,
+                "Distance to Waterway (m)": 1711.9868242838504,
+                "Nearest Water Type": "ditch",
+                "place_name": "Ph\u00fa \u0110i\u1ec1n, Tuy Phong District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 553,
+                "Population - 5 km": 17766,
+                "Population - 10 km": 76886
+            }
+        },
+        {
+            "id": "8f65b04334880db",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.6638788788328,
+                    11.93230354534341
+                ]
+            },
+            "properties": {
+                "id": "8f65b04334880db",
+                "Soil Clay Fraction": 0.35,
+                "Elevation": 599,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008366749621927738,
+                "Height Above Nearest Drainage (m)": 67.10003662109375,
+                "Landform Type": "Peak/ridge (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 8.563822290204799,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.5051939487457275,
+                "Distance to Waterway (m)": 856.8919798228806,
+                "Nearest Water Type": "dam",
+                "place_name": "L\u00ea Th\u00e1nh T\u00f4ng, Gia Nghia, \u0110\u1eafk N\u00f4ng Province, Vietnam",
+                "Population - 1 km": 213,
+                "Population - 5 km": 7062,
+                "Population - 10 km": 58901
+            }
+        },
+        {
+            "id": "8f65a04a6ae88b1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.88720634749845,
+                    9.533500196190408
+                ]
+            },
+            "properties": {
+                "id": "8f65a04a6ae88b1",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 2,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 17.048994064331055,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.38,
+                "Slope (degrees)": 0.8805222212545802,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 3,
+                "Wind Speed (m/s)": 3.3639092445373535,
+                "Distance to Waterway (m)": 1412.6423837095188,
+                "Nearest Water Type": "canal",
+                "place_name": "M\u1ef9 T\u00fa District, Soc Trang province, Vietnam",
+                "Population - 1 km": 1548,
+                "Population - 5 km": 38552,
+                "Population - 10 km": 130856
+            }
+        },
+        {
+            "id": "8f65b54f2b8950a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.22349424862793,
+                    10.936663471040497
+                ]
+            },
+            "properties": {
+                "id": "8f65b54f2b8950a",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 213,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.00839564111083746,
+                "Height Above Nearest Drainage (m)": 34.69999694824219,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 3.9815442329337953,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.827594518661499,
+                "Distance to Waterway (m)": 782.7035364047724,
+                "Nearest Water Type": "lake",
+                "place_name": "Ph\u01b0\u1eddng Su\u1ed1i Tre, Long Kh\u00e1nh City, \u0110\u1ed3ng Nai Province, Vietnam",
+                "Population - 1 km": 3406,
+                "Population - 5 km": 101419,
+                "Population - 10 km": 220086
+            }
+        },
+        {
+            "id": "8f65a201dc09d35",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.85270026578429,
+                    10.224557458366448
+                ]
+            },
+            "properties": {
+                "id": "8f65a201dc09d35",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 2,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.00841478444635868,
+                "Height Above Nearest Drainage (m)": 0.40000009536743164,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 93,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.116399049758911,
+                "Distance to Waterway (m)": 359.05088506937284,
+                "Nearest Water Type": "river",
+                "place_name": "TL. 854, Ph\u00fa H\u1ef1u, X\u00e3 Ph\u00fa H\u1ef1u, Ch\u00e2u Th\u00e0nh District, Dong Thap Province, Vietnam",
+                "Population - 1 km": 1986,
+                "Population - 5 km": 51504,
+                "Population - 10 km": 206188
+            }
+        },
+        {
+            "id": "8f414524556d899",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.70531754724036,
+                    18.51141166451686
+                ]
+            },
+            "properties": {
+                "id": "8f414524556d899",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 6,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008113773539662361,
+                "Height Above Nearest Drainage (m)": 0.20000004768371582,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 0.7216057411932799,
+                "Fine Earth Density (kg / m^3)": 120,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.5079987049102783,
+                "Distance to Waterway (m)": 1000.2793117393734,
+                "Nearest Water Type": "river",
+                "place_name": "Hong Linh town, H\u1ed3ng L\u0129nh, H\u00e0 T\u0129nh Province, Vietnam",
+                "Population - 1 km": 1485,
+                "Population - 5 km": 41460,
+                "Population - 10 km": 127425
+            }
+        },
+        {
+            "id": "8f416150935b336",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.0705359697021,
+                    16.793662366719886
+                ]
+            },
+            "properties": {
+                "id": "8f416150935b336",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 34,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.04095104709267616,
+                "Height Above Nearest Drainage (m)": 8.700000762939453,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 0.6975446798199199,
+                "Fine Earth Density (kg / m^3)": 129,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.3695099353790283,
+                "Distance to Waterway (m)": 1145.1008311456449,
+                "Nearest Water Type": "river",
+                "place_name": "Dong Ha City, Quang Tri province, Vietnam",
+                "Population - 1 km": 1653,
+                "Population - 5 km": 63361,
+                "Population - 10 km": 125048
+            }
+        },
+        {
+            "id": "8f65b214181cc86",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.62750633473769,
+                    12.493920386622968
+                ]
+            },
+            "properties": {
+                "id": "8f65b214181cc86",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 612,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008349355310201645,
+                "Height Above Nearest Drainage (m)": 52,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 1.8343431226099443,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.205094814300537,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "Qu\u1ed1c l\u1ed9 14C, C\u01b0 J\u00fat District, \u0110\u1eafk N\u00f4ng Province, Vietnam",
+                "Population - 1 km": 256,
+                "Population - 5 km": 15784,
+                "Population - 10 km": 78486
+            }
+        },
+        {
+            "id": "8f65a3c00309571",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.1707808676343,
+                    9.877803755292112
+                ]
+            },
+            "properties": {
+                "id": "8f65a3c00309571",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 3,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.00842363853007555,
+                "Height Above Nearest Drainage (m)": 0.7999999523162842,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 0.4405165949633603,
+                "Fine Earth Density (kg / m^3)": 109,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.061305522918701,
+                "Distance to Waterway (m)": 396.9755307075646,
+                "Nearest Water Type": "canal",
+                "place_name": "Minh L\u01b0\u01a1ng, Ch\u00e2u Th\u00e0nh District, Kien Giang Province, Vietnam",
+                "Population - 1 km": 1651,
+                "Population - 5 km": 43828,
+                "Population - 10 km": 160547
+            }
+        },
+        {
+            "id": "8f65a0530a05726",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.96921209224188,
+                    9.29673273715828
+                ]
+            },
+            "properties": {
+                "id": "8f65a0530a05726",
+                "Soil Clay Fraction": 0.48,
+                "Elevation": 2,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008437796495854855,
+                "Height Above Nearest Drainage (m)": 1.7000000476837158,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.21,
+                "Slope (degrees)": 0.9788751823270511,
+                "Fine Earth Density (kg / m^3)": 103,
+                "Soil Great Group": 4,
+                "Wind Speed (m/s)": 3.8110194206237793,
+                "Distance to Waterway (m)": 477.71054768909624,
+                "Nearest Water Type": "canal",
+                "place_name": "L\u00ea Lai, H\u1ea3i Ng\u01b0, X\u00e3 V\u0129nh Tr\u1ea1ch \u0110\u00f4ng, V\u0129nh Ch\u00e2u Town, Soc Trang province, Vietnam",
+                "Population - 1 km": 801,
+                "Population - 5 km": 38484,
+                "Population - 10 km": 75167
+            }
+        },
+        {
+            "id": "8f416ad30105974",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.79338006565405,
+                    18.088666437730726
+                ]
+            },
+            "properties": {
+                "id": "8f416ad30105974",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 46,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008133269846439362,
+                "Height Above Nearest Drainage (m)": 23.600000381469727,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 2.5890897796021637,
+                "Fine Earth Density (kg / m^3)": 116,
+                "Soil Great Group": 3,
+                "Wind Speed (m/s)": 2.821775197982788,
+                "Distance to Waterway (m)": 180.08585126822572,
+                "Nearest Water Type": "water",
+                "place_name": "Ho Chi Minh Highway, C\u1ea7y Tr\u1ea1o, H\u01b0\u01a1ng Kh\u00ea District, H\u00e0 T\u0129nh Province, Vietnam",
+                "Population - 1 km": 276,
+                "Population - 5 km": 4993,
+                "Population - 10 km": 19453
+            }
+        },
+        {
+            "id": "8f65b439ab62a6d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.84267110008967,
+                    10.861581054173906
+                ]
+            },
+            "properties": {
+                "id": "8f65b439ab62a6d",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 38,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008397710509598255,
+                "Height Above Nearest Drainage (m)": 2.6000022888183594,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 2.5168032503689695,
+                "Fine Earth Density (kg / m^3)": 137,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.800478219985962,
+                "Distance to Waterway (m)": 2799.084626836522,
+                "Nearest Water Type": "river",
+                "place_name": "H\u00e0m Thu\u1eadn Nam District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 415,
+                "Population - 5 km": 13588,
+                "Population - 10 km": 33896
+            }
+        },
+        {
+            "id": "8f4161429110913",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.99550273546554,
+                    16.85763137747811
+                ]
+            },
+            "properties": {
+                "id": "8f4161429110913",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 57,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008187470957636833,
+                "Height Above Nearest Drainage (m)": 32.20000076293945,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.47,
+                "Slope (degrees)": 3.1552319515339047,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.889855146408081,
+                "Distance to Waterway (m)": 1377.7195158238528,
+                "Nearest Water Type": "lake",
+                "place_name": "Gio Linh District, Quang Tri province, Vietnam",
+                "Population - 1 km": 294,
+                "Population - 5 km": 10285,
+                "Population - 10 km": 55357
+            }
+        },
+        {
+            "id": "8f415dc5d62c58a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.27535485193926,
+                    21.229227978935008
+                ]
+            },
+            "properties": {
+                "id": "8f415dc5d62c58a",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 38,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.007978301495313644,
+                "Height Above Nearest Drainage (m)": 15.099998474121094,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 2.804421492944212,
+                "Fine Earth Density (kg / m^3)": 125,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.631882905960083,
+                "Distance to Waterway (m)": 1504.4009672100303,
+                "Nearest Water Type": "stream",
+                "place_name": "Thanh Th\u1ee7y District, Phu Tho Province, Vietnam",
+                "Population - 1 km": 565,
+                "Population - 5 km": 17121,
+                "Population - 10 km": 126247
+            }
+        },
+        {
+            "id": "8f65a0410319b9c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.8276859241445,
+                    9.482428400383693
+                ]
+            },
+            "properties": {
+                "id": "8f65a0410319b9c",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 4,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008433358743786812,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.46,
+                "Slope (degrees)": 0.6989476348499121,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.2241010665893555,
+                "Distance to Waterway (m)": 2674.979267496678,
+                "Nearest Water Type": "river",
+                "place_name": "Qu\u1ed1c l\u1ed9 1, Th\u1ea1nh Ph\u00fa, M\u1ef9 Xuy\u00ean District, Soc Trang province, Vietnam",
+                "Population - 1 km": 1258,
+                "Population - 5 km": 27070,
+                "Population - 10 km": 87966
+            }
+        },
+        {
+            "id": "8f65b212196a805",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.81303316962506,
+                    12.467002510419686
+                ]
+            },
+            "properties": {
+                "id": "8f65b212196a805",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 488,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008350221440196037,
+                "Height Above Nearest Drainage (m)": 74.39999389648438,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 5.766210131988689,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.720017671585083,
+                "Distance to Waterway (m)": 2710.1041411695637,
+                "Nearest Water Type": "river",
+                "place_name": "Kr\u00f4ng N\u00f4 District, \u0110\u1eafk N\u00f4ng Province, Vietnam",
+                "Population - 1 km": 242,
+                "Population - 5 km": 9328,
+                "Population - 10 km": 39971
+            }
+        },
+        {
+            "id": "8f65a3719335465",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.61641549556892,
+                    10.255344461188887
+                ]
+            },
+            "properties": {
+                "id": "8f65a3719335465",
+                "Soil Clay Fraction": 0.43,
+                "Elevation": 2,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.00841397512704134,
+                "Height Above Nearest Drainage (m)": 0.40000009536743164,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.21,
+                "Slope (degrees)": 0.8815044095681351,
+                "Fine Earth Density (kg / m^3)": 116,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.132535457611084,
+                "Distance to Waterway (m)": 707.9068639546424,
+                "Nearest Water Type": "ditch",
+                "place_name": "Kien Luong District, Kien Giang Province, Vietnam",
+                "Population - 1 km": 412,
+                "Population - 5 km": 10829,
+                "Population - 10 km": 20818
+            }
+        },
+        {
+            "id": "8f65a3d31d88614",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.34415223209365,
+                    9.746158408658342
+                ]
+            },
+            "properties": {
+                "id": "8f65a3d31d88614",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 1,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.008426916785538197,
+                "Height Above Nearest Drainage (m)": 0.5000001192092896,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.32,
+                "Slope (degrees)": 0.9790071323047412,
+                "Fine Earth Density (kg / m^3)": 95,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.871654510498047,
+                "Distance to Waterway (m)": 85.69641240486695,
+                "Nearest Water Type": "canal",
+                "place_name": "Qu\u1ed1c l\u1ed9 61, Huy\u1ec7n G\u00f2 Quao, Kien Giang Province, Vietnam",
+                "Population - 1 km": 1073,
+                "Population - 5 km": 33249,
+                "Population - 10 km": 109568
+            }
+        },
+        {
+            "id": "8f658485d62a120",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.05715187396552,
+                    10.643773363273695
+                ]
+            },
+            "properties": {
+                "id": "8f658485d62a120",
+                "Soil Clay Fraction": 0.41,
+                "Elevation": 1,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008403659798204899,
+                "Height Above Nearest Drainage (m)": 0.40000009536743164,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.25,
+                "Slope (degrees)": 1.2581019721660147,
+                "Fine Earth Density (kg / m^3)": 62,
+                "Soil Great Group": 5,
+                "Wind Speed (m/s)": 3.1229236125946045,
+                "Distance to Waterway (m)": 238.82985756076008,
+                "Nearest Water Type": "canal",
+                "place_name": "X\u00e3 V\u0129nh T\u1ebf, Chau Doc City, An Giang Province, Vietnam",
+                "Population - 1 km": 712,
+                "Population - 5 km": 27607,
+                "Population - 10 km": 118490
+            }
+        },
+        {
+            "id": "8f65b09110d5b88",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.65435167400122,
+                    11.084482992602481
+                ]
+            },
+            "properties": {
+                "id": "8f65b09110d5b88",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 133,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.025174573063850403,
+                "Height Above Nearest Drainage (m)": 7.900001525878906,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.9450370322622524,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 4,
+                "Wind Speed (m/s)": 1.7282757759094238,
+                "Distance to Waterway (m)": 3313.408269792134,
+                "Nearest Water Type": "river",
+                "place_name": "Gia An, T\u00e1nh Linh District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 400,
+                "Population - 5 km": 19688,
+                "Population - 10 km": 51878
+            }
+        },
+        {
+            "id": "8f6914ca138e425",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    109.12816815696976,
+                    12.008794725462147
+                ]
+            },
+            "properties": {
+                "id": "8f6914ca138e425",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 43,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008364408276975155,
+                "Height Above Nearest Drainage (m)": 15.499998092651367,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 1.3013503826479547,
+                "Fine Earth Density (kg / m^3)": 145,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.342176914215088,
+                "Distance to Waterway (m)": 4700.026368759724,
+                "Nearest Water Type": "water",
+                "place_name": "Li\u00ean Th\u00f4n 2, Cam L\u00e2m District, Kh\u00e1nh H\u00f2a Province, Vietnam",
+                "Population - 1 km": 525,
+                "Population - 5 km": 13070,
+                "Population - 10 km": 96857
+            }
+        },
+        {
+            "id": "8f41643566246a8",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.30388936503724,
+                    15.905150045197548
+                ]
+            },
+            "properties": {
+                "id": "8f41643566246a8",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 10,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008226828649640083,
+                "Height Above Nearest Drainage (m)": 1.3999996185302734,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.0126505837139417,
+                "Fine Earth Density (kg / m^3)": 149,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.847259521484375,
+                "Distance to Waterway (m)": 1759.6791405935971,
+                "Nearest Water Type": "ditch",
+                "place_name": "C\u1ea9m H\u00e0, H\u1ed9i An, Quang Nam Province, 51309, Vietnam",
+                "Population - 1 km": 3516,
+                "Population - 5 km": 96531,
+                "Population - 10 km": 253874
+            }
+        },
+        {
+            "id": "8f65b50db691659",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.85472567483689,
+                    10.661049630403483
+                ]
+            },
+            "properties": {
+                "id": "8f65b50db691659",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 5,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.02520962618291378,
+                "Height Above Nearest Drainage (m)": 1.100000023841858,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 1.9120060355479218,
+                "Fine Earth Density (kg / m^3)": 100,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.393994092941284,
+                "Distance to Waterway (m)": 263.76569350051443,
+                "Nearest Water Type": "river",
+                "place_name": "X\u00e3 Ph\u01b0\u1edbc Kh\u00e1nh, Nh\u01a1n Tr\u1ea1ch District, \u0110\u1ed3ng Nai Province, Vietnam",
+                "Population - 1 km": 593,
+                "Population - 5 km": 24714,
+                "Population - 10 km": 118268
+            }
+        },
+        {
+            "id": "8f65b10c644e260",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.12753209540196,
+                    11.438096667857486
+                ]
+            },
+            "properties": {
+                "id": "8f65b10c644e260",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 22,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008381392806768417,
+                "Height Above Nearest Drainage (m)": 6.899999618530273,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.56,
+                "Slope (degrees)": 1.8543341688374633,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.5957536697387695,
+                "Distance to Waterway (m)": 951.9858799268779,
+                "Nearest Water Type": "canal",
+                "place_name": "T\u00e2n Ch\u00e2u District, Tay Ninh province, Vietnam",
+                "Population - 1 km": 542,
+                "Population - 5 km": 16779,
+                "Population - 10 km": 59512
+            }
+        },
+        {
+            "id": "8f4159734c6a774",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.20662253694087,
+                    22.358471456934467
+                ]
+            },
+            "properties": {
+                "id": "8f4159734c6a774",
+                "Soil Clay Fraction": 0.29,
+                "Elevation": 126,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.09500138461589813,
+                "Height Above Nearest Drainage (m)": 9.699996948242188,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 8.711474678665208,
+                "Fine Earth Density (kg / m^3)": 130,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.591526508331299,
+                "Distance to Waterway (m)": 4759.839640526635,
+                "Nearest Water Type": "river",
+                "place_name": "Bao Thang District, Lao Cai province, Vietnam",
+                "Population - 1 km": 320,
+                "Population - 5 km": 11078,
+                "Population - 10 km": 48467
+            }
+        },
+        {
+            "id": "8f65a29817862ce",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.19586772689276,
+                    9.83019373914518
+                ]
+            },
+            "properties": {
+                "id": "8f65a29817862ce",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 2,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 1.3226958513259888,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 0.979032601292509,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.277125835418701,
+                "Distance to Waterway (m)": 2285.533927619628,
+                "Nearest Water Type": "canal",
+                "place_name": "Ti\u1ec3u C\u1ea7n, Ti\u1ec3u C\u1ea7n District, Tra Vinh province, Vietnam",
+                "Population - 1 km": 2853,
+                "Population - 5 km": 47184,
+                "Population - 10 km": 114871
+            }
+        },
+        {
+            "id": "8f6930c59309619",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.95564634093769,
+                    14.036330740362866
+                ]
+            },
+            "properties": {
+                "id": "8f6930c59309619",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 74,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.01659499481320381,
+                "Height Above Nearest Drainage (m)": 25.300003051757812,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 3.372218741712434,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.6718790531158447,
+                "Distance to Waterway (m)": 4073.893668787738,
+                "Nearest Water Type": "water",
+                "place_name": "T\u00f9ng Ch\u00e1nh, Ph\u00f9 C\u00e1t District, B\u00ecnh \u0110\u1ecbnh Province, Vietnam",
+                "Population - 1 km": 231,
+                "Population - 5 km": 8328,
+                "Population - 10 km": 42330
+            }
+        },
+        {
+            "id": "8f65a662eda92d0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.49119562897428,
+                    9.696041205995105
+                ]
+            },
+            "properties": {
+                "id": "8f65a662eda92d0",
+                "Soil Clay Fraction": 0.4,
+                "Elevation": -1,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.18542177975177765,
+                "Height Above Nearest Drainage (m)": 0.09999990463256836,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.21,
+                "Slope (degrees)": 0,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.3972198963165283,
+                "Distance to Waterway (m)": 30.11979456638241,
+                "Nearest Water Type": "canal",
+                "place_name": "Long Huu, Duyen Hai Town, Tra Vinh province, Vietnam",
+                "Population - 1 km": 1741,
+                "Population - 5 km": 30710,
+                "Population - 10 km": 94334
+            }
+        },
+        {
+            "id": "8f414a4627006cc",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.97270320311353,
+                    21.324187513302697
+                ]
+            },
+            "properties": {
+                "id": "8f414a4627006cc",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 704,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.015946390107274055,
+                "Height Above Nearest Drainage (m)": 35.10003662109375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 10.51855726265364,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 6,
+                "Wind Speed (m/s)": 3.0101888179779053,
+                "Distance to Waterway (m)": -1,
+                "Nearest Water Type": -1,
+                "place_name": "S\u01a1n La, Son La province, Vietnam",
+                "Population - 1 km": 829,
+                "Population - 5 km": 31374,
+                "Population - 10 km": 101967
+            }
+        },
+        {
+            "id": "8f65b6aed0c5768",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.06465354848568,
+                    11.510805725072032
+                ]
+            },
+            "properties": {
+                "id": "8f65b6aed0c5768",
+                "Soil Clay Fraction": 0.37,
+                "Elevation": 972,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008379281498491764,
+                "Height Above Nearest Drainage (m)": 59.20001220703125,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 19.16634693175191,
+                "Fine Earth Density (kg / m^3)": 110,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.63092303276062,
+                "Distance to Waterway (m)": 1825.289392723672,
+                "Nearest Water Type": "stream",
+                "place_name": "Qu\u1ed1c l\u1ed9 28, Di Linh District, L\u00e2m \u0110\u1ed3ng Province, Vietnam",
+                "Population - 1 km": 261,
+                "Population - 5 km": 7233,
+                "Population - 10 km": 55660
+            }
+        },
+        {
+            "id": "8f65a348dacccda",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.96757896391196,
+                    10.42042273329803
+                ]
+            },
+            "properties": {
+                "id": "8f65a348dacccda",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 6,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008409623056650162,
+                "Height Above Nearest Drainage (m)": 3.4000003337860107,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.4408959680670564,
+                "Fine Earth Density (kg / m^3)": 122,
+                "Soil Great Group": 3,
+                "Wind Speed (m/s)": 3.070953607559204,
+                "Distance to Waterway (m)": 674.5742603072099,
+                "Nearest Water Type": "river",
+                "place_name": "X\u00e3 N\u00fai T\u00f4, Tri T\u00f4n District, An Giang Province, Vietnam",
+                "Population - 1 km": 1466,
+                "Population - 5 km": 33515,
+                "Population - 10 km": 88685
+            }
+        },
+        {
+            "id": "8f65b000686c16a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.37608063372357,
+                    11.554675191187124
+                ]
+            },
+            "properties": {
+                "id": "8f65b000686c16a",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 144,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.008377999998629093,
+                "Height Above Nearest Drainage (m)": 13.399993896484375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 8.200328484607464,
+                "Fine Earth Density (kg / m^3)": 118,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.034026622772217,
+                "Distance to Waterway (m)": 79.90376977176696,
+                "Nearest Water Type": "river",
+                "place_name": "C\u00e1t Ti\u00ean District, L\u00e2m \u0110\u1ed3ng Province, Vietnam",
+                "Population - 1 km": 2294,
+                "Population - 5 km": 29720,
+                "Population - 10 km": 57705
+            }
+        },
+        {
+            "id": "8f65b181069981b",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.43007144272947,
+                    10.9648628610515
+                ]
+            },
+            "properties": {
+                "id": "8f65b181069981b",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 1,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.016789721325039864,
+                "Height Above Nearest Drainage (m)": 0.8000001907348633,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 0.9446515660256145,
+                "Fine Earth Density (kg / m^3)": 133,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.1677842140197754,
+                "Distance to Waterway (m)": 409.46273165834066,
+                "Nearest Water Type": "river",
+                "place_name": "Tam T\u00e1n, Thai My Commune, C\u1ee7 Chi District, Ho Chi Minh City, 82719, Vietnam",
+                "Population - 1 km": 1878,
+                "Population - 5 km": 52045,
+                "Population - 10 km": 245318
+            }
+        },
+        {
+            "id": "8f65b1d36665359",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8485499794192,
+                    11.138360116332313
+                ]
+            },
+            "properties": {
+                "id": "8f65b1d36665359",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 56,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.04194969683885574,
+                "Height Above Nearest Drainage (m)": 7.200000762939453,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.43,
+                "Slope (degrees)": 4.684168706066446,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.0075623989105225,
+                "Distance to Waterway (m)": 579.3378089562985,
+                "Nearest Water Type": "stream",
+                "place_name": "T\u00e2n Th\u00e0nh, B\u1eafc T\u00e2n Uy\u00ean District, Binh Duong province, Vietnam",
+                "Population - 1 km": 1914,
+                "Population - 5 km": 27658,
+                "Population - 10 km": 98811
+            }
+        },
+        {
+            "id": "8f415cb36ad5aa4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.1362961538998,
+                    21.033759150380064
+                ]
+            },
+            "properties": {
+                "id": "8f415cb36ad5aa4",
+                "Soil Clay Fraction": 0.22,
+                "Elevation": 3,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.007988611236214638,
+                "Height Above Nearest Drainage (m)": 1.1000001430511475,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.45,
+                "Slope (degrees)": 3.5029237170001326,
+                "Fine Earth Density (kg / m^3)": 111,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.2580716609954834,
+                "Distance to Waterway (m)": 4146.498741381108,
+                "Nearest Water Type": "ditch",
+                "place_name": "Gia B\u00ecnh District, Bac Ninh province, Vietnam",
+                "Population - 1 km": 1882,
+                "Population - 5 km": 82440,
+                "Population - 10 km": 287874
+            }
+        },
+        {
+            "id": "8f65a2a69521581",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.40382606917183,
+                    9.743262714144139
+                ]
+            },
+            "properties": {
+                "id": "8f65a2a69521581",
+                "Soil Clay Fraction": 0.31,
+                "Elevation": 3,
+                "Drainage Direction": "north",
+                "Upstream Drainage Area (km^2)": 0.008426988497376442,
+                "Height Above Nearest Drainage (m)": 1,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.35,
+                "Slope (degrees)": 0.4404255469064112,
+                "Fine Earth Density (kg / m^3)": 99,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.162409782409668,
+                "Distance to Waterway (m)": 1162.6871879748287,
+                "Nearest Water Type": "river",
+                "place_name": "Qu\u1ed1c l\u1ed9 61, X\u00e3 T\u00e2n Ti\u1ebfn, V\u1ecb Thanh, H\u1eadu Giang Province, Vietnam",
+                "Population - 1 km": 2751,
+                "Population - 5 km": 34452,
+                "Population - 10 km": 109000
+            }
+        },
+        {
+            "id": "8f65a0558c7294c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.73159670007534,
+                    9.328448478459999
+                ]
+            },
+            "properties": {
+                "id": "8f65a0558c7294c",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": -1,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.02531108446419239,
+                "Height Above Nearest Drainage (m)": 0.39999985694885254,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.49,
+                "Slope (degrees)": 0.6931401153995504,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 3,
+                "Wind Speed (m/s)": 3.307691812515259,
+                "Distance to Waterway (m)": 201.39556581854836,
+                "Nearest Water Type": "canal",
+                "place_name": "Ch\u00e2u H\u01b0ng, V\u0129nh L\u1ee3i District, B\u1ea1c Li\u00eau Province, 97000, Vietnam",
+                "Population - 1 km": 1773,
+                "Population - 5 km": 100504,
+                "Population - 10 km": 217806
+            }
+        },
+        {
+            "id": "8f6914d23aecb4d",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    109.06125282130971,
+                    12.273285972160993
+                ]
+            },
+            "properties": {
+                "id": "8f6914d23aecb4d",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 24,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.050138041377067566,
+                "Height Above Nearest Drainage (m)": 19.800003051757812,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.36,
+                "Slope (degrees)": 5.502063954185686,
+                "Fine Earth Density (kg / m^3)": 143,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 1.3815279006958008,
+                "Distance to Waterway (m)": 764.8360427984368,
+                "Nearest Water Type": "river",
+                "place_name": "Tinh Lo 8, Di\u00ean Kh\u00e1nh, Di\u00ean Kh\u00e1nh District, Kh\u00e1nh H\u00f2a Province, Vietnam",
+                "Population - 1 km": 1963,
+                "Population - 5 km": 55020,
+                "Population - 10 km": 146372
+            }
+        },
+        {
+            "id": "8f415da6394c022",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.59987393785755,
+                    20.85552856180439
+                ]
+            },
+            "properties": {
+                "id": "8f415da6394c022",
+                "Soil Clay Fraction": 0.34,
+                "Elevation": 805,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.015995947644114494,
+                "Height Above Nearest Drainage (m)": 49,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.34,
+                "Slope (degrees)": 11.381450302199044,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.0321455001831055,
+                "Distance to Waterway (m)": 1815.5329382420387,
+                "Nearest Water Type": "stream",
+                "place_name": "Moc Chau, M\u1ed9c Ch\u00e2u District, Son La province, 34719, Vietnam",
+                "Population - 1 km": 961,
+                "Population - 5 km": 10560,
+                "Population - 10 km": 32619
+            }
+        },
+        {
+            "id": "8f65a2516458285",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.31239699266365,
+                    10.488939126071141
+                ]
+            },
+            "properties": {
+                "id": "8f65a2516458285",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 1,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008407811634242535,
+                "Height Above Nearest Drainage (m)": 0.2999999523162842,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 119,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.549823522567749,
+                "Distance to Waterway (m)": 1422.955036881505,
+                "Nearest Water Type": "canal",
+                "place_name": "X\u00e3 T\u00e2n L\u1eadp 1, Tien Giang province, Vietnam",
+                "Population - 1 km": 677,
+                "Population - 5 km": 44571,
+                "Population - 10 km": 192163
+            }
+        },
+        {
+            "id": "8f65a26695b2d0c",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.48498276329191,
+                    10.507559104935666
+                ]
+            },
+            "properties": {
+                "id": "8f65a26695b2d0c",
+                "Soil Clay Fraction": 0.27,
+                "Elevation": 4,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.00840732455253601,
+                "Height Above Nearest Drainage (m)": 2.500000238418579,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.42,
+                "Slope (degrees)": 0.9432253045885945,
+                "Fine Earth Density (kg / m^3)": 115,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 2.9283852577209473,
+                "Distance to Waterway (m)": 134.399870812713,
+                "Nearest Water Type": "canal",
+                "place_name": "M\u1ef9 Lu\u00f4ng, Ch\u1ee3 M\u1edbi District, An Giang Province, Vietnam",
+                "Population - 1 km": 8041,
+                "Population - 5 km": 71003,
+                "Population - 10 km": 245040
+            }
+        },
+        {
+            "id": "8f65848114a0058",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.27798675307142,
+                    10.694374656142257
+                ]
+            },
+            "properties": {
+                "id": "8f65848114a0058",
+                "Soil Clay Fraction": 0.39,
+                "Elevation": 3,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.008402306586503983,
+                "Height Above Nearest Drainage (m)": 1.7000001668930054,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.3,
+                "Slope (degrees)": 0.7010690518995596,
+                "Fine Earth Density (kg / m^3)": 89,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.059033155441284,
+                "Distance to Waterway (m)": 707.1479108423209,
+                "Nearest Water Type": "river",
+                "place_name": "Ph\u00fa Th\u1ea1nh, X\u00e3 Ph\u00fa Th\u1ea1nh, Ph\u00fa T\u00e2n District, An Giang Province, Vietnam",
+                "Population - 1 km": 802,
+                "Population - 5 km": 34603,
+                "Population - 10 km": 171351
+            }
+        },
+        {
+            "id": "8f65b1caa30b8da",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.66657924820191,
+                    11.385632848814737
+                ]
+            },
+            "properties": {
+                "id": "8f65b1caa30b8da",
+                "Soil Clay Fraction": 0.25,
+                "Elevation": 48,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.2431052178144455,
+                "Height Above Nearest Drainage (m)": 8.299999237060547,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.53,
+                "Slope (degrees)": 1.8117634700921281,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.3455817699432373,
+                "Distance to Waterway (m)": 1902.5450766484942,
+                "Nearest Water Type": "canal",
+                "place_name": "Ch\u01a1n Th\u00e0nh Town, B\u00ecnh Ph\u01b0\u1edbc Province, Vietnam",
+                "Population - 1 km": 219,
+                "Population - 5 km": 14429,
+                "Population - 10 km": 82229
+            }
+        },
+        {
+            "id": "8f6932a464a14c2",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    109.21736594524526,
+                    13.272703115608081
+                ]
+            },
+            "properties": {
+                "id": "8f6932a464a14c2",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 45,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.058268167078495026,
+                "Height Above Nearest Drainage (m)": 9.200000762939453,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 4.317082765790048,
+                "Fine Earth Density (kg / m^3)": 127,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.4521288871765137,
+                "Distance to Waterway (m)": 3664.130576757234,
+                "Nearest Water Type": "river",
+                "place_name": "Chi Thanh Town, Tuy An District, Phu Yen province, Vietnam",
+                "Population - 1 km": 479,
+                "Population - 5 km": 24834,
+                "Population - 10 km": 90300
+            }
+        },
+        {
+            "id": "8f693215ec11085",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.8684413185409,
+                    13.000921709849917
+                ]
+            },
+            "properties": {
+                "id": "8f693215ec11085",
+                "Soil Clay Fraction": 0.33,
+                "Elevation": 211,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 0.008332975208759308,
+                "Height Above Nearest Drainage (m)": 38.899993896484375,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.4,
+                "Slope (degrees)": 3.3020933937715125,
+                "Fine Earth Density (kg / m^3)": 139,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.6786386966705322,
+                "Distance to Waterway (m)": 1677.304322673469,
+                "Nearest Water Type": "river",
+                "place_name": "Bu\u00f4n B\u1ea7u, S\u00f4ng Hinh District, Phu Yen province, Vietnam",
+                "Population - 1 km": 292,
+                "Population - 5 km": 6171,
+                "Population - 10 km": 21756
+            }
+        },
+        {
+            "id": "8f65b2d5c6b6b24",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.07318121454911,
+                    12.505540067418048
+                ]
+            },
+            "properties": {
+                "id": "8f65b2d5c6b6b24",
+                "Soil Clay Fraction": 0.38,
+                "Elevation": 461,
+                "Drainage Direction": "southeast",
+                "Upstream Drainage Area (km^2)": 0.008348975330591202,
+                "Height Above Nearest Drainage (m)": 19,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 3.844316449867152,
+                "Fine Earth Density (kg / m^3)": 138,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 3.5550246238708496,
+                "Distance to Waterway (m)": 2334.6119583422883,
+                "Nearest Water Type": "water",
+                "place_name": "Bu\u00f4n Tr\u1ea5p, Kr\u00f4ng Ana District, \u0110\u1eafk L\u1eafk province, Vietnam",
+                "Population - 1 km": 648,
+                "Population - 5 km": 31968,
+                "Population - 10 km": 86855
+            }
+        },
+        {
+            "id": "8f4143cac61e92a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.33219080675147,
+                    20.470836121128904
+                ]
+            },
+            "properties": {
+                "id": "8f4143cac61e92a",
+                "Soil Clay Fraction": 0.3,
+                "Elevation": 1,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.008017873391509056,
+                "Height Above Nearest Drainage (m)": 1.8000000715255737,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.39,
+                "Slope (degrees)": 0.6183032897835913,
+                "Fine Earth Density (kg / m^3)": 123,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.5210635662078857,
+                "Distance to Waterway (m)": 377.8848001948328,
+                "Nearest Water Type": "river",
+                "place_name": "Th\u00e1i B\u00ecnh, Thai Binh province, 06118, Vietnam",
+                "Population - 1 km": 5954,
+                "Population - 5 km": 167263,
+                "Population - 10 km": 419675
+            }
+        },
+        {
+            "id": "8f415c806489445",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.41917565762144,
+                    21.11807157800004
+                ]
+            },
+            "properties": {
+                "id": "8f415c806489445",
+                "Soil Clay Fraction": 0.26,
+                "Elevation": 2,
+                "Drainage Direction": "east",
+                "Upstream Drainage Area (km^2)": 23.1835994720459,
+                "Height Above Nearest Drainage (m)": 0,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 1.1398498630090759,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 3.5328171253204346,
+                "Distance to Waterway (m)": 818.3243542690874,
+                "Nearest Water Type": "river",
+                "place_name": "Ch\u00ed Linh, H\u1ea3i D\u01b0\u01a1ng Province, Vietnam",
+                "Population - 1 km": 2821,
+                "Population - 5 km": 67850,
+                "Population - 10 km": 160064
+            }
+        },
+        {
+            "id": "8f4159d80574445",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.82414040068828,
+                    22.094935581486197
+                ]
+            },
+            "properties": {
+                "id": "8f4159d80574445",
+                "Soil Clay Fraction": 0.32,
+                "Elevation": 86,
+                "Drainage Direction": "northeast",
+                "Upstream Drainage Area (km^2)": 0.03172536939382553,
+                "Height Above Nearest Drainage (m)": 10.799995422363281,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.41,
+                "Slope (degrees)": 2.2840231808848857,
+                "Fine Earth Density (kg / m^3)": 128,
+                "Soil Great Group": 3,
+                "Wind Speed (m/s)": 1.0050511360168457,
+                "Distance to Waterway (m)": 948.9873142484807,
+                "Nearest Water Type": "river",
+                "place_name": "L\u1ee5c Y\u00ean District, Yen Bai Province, Vietnam",
+                "Population - 1 km": 629,
+                "Population - 5 km": 13149,
+                "Population - 10 km": 43471
+            }
+        },
+        {
+            "id": "8f65b40d355e455",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.05259778177484,
+                    10.90209453236981
+                ]
+            },
+            "properties": {
+                "id": "8f65b40d355e455",
+                "Soil Clay Fraction": 0.21,
+                "Elevation": 85,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.016793202608823776,
+                "Height Above Nearest Drainage (m)": 21.89999771118164,
+                "Landform Type": "Upper slope (flat)",
+                "Soil Sand Fraction": 0.53,
+                "Slope (degrees)": 1.2758935170859937,
+                "Fine Earth Density (kg / m^3)": 140,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.7339181900024414,
+                "Distance to Waterway (m)": 1935.7433169116455,
+                "Nearest Water Type": "river",
+                "place_name": "X\u00e3 Ti\u1ebfn Th\u00e0nh, Phan Thi\u1ebft City, H\u00e0m Thu\u1eadn Nam District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 1338,
+                "Population - 5 km": 39274,
+                "Population - 10 km": 154968
+            }
+        },
+        {
+            "id": "8f41452e4641614",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.79391987782161,
+                    18.619235048638302
+                ]
+            },
+            "properties": {
+                "id": "8f41452e4641614",
+                "Soil Clay Fraction": 0.23,
+                "Elevation": 6,
+                "Drainage Direction": "south",
+                "Upstream Drainage Area (km^2)": 0.008108765818178654,
+                "Height Above Nearest Drainage (m)": 0.7999997138977051,
+                "Landform Type": "Lower slope (flat)",
+                "Soil Sand Fraction": 0.44,
+                "Slope (degrees)": 0.3091606457115311,
+                "Fine Earth Density (kg / m^3)": 124,
+                "Soil Great Group": 1,
+                "Wind Speed (m/s)": 2.9439024925231934,
+                "Distance to Waterway (m)": 1571.3729944328131,
+                "Nearest Water Type": "river",
+                "place_name": "Linh Tr\u1ee5ng, Nghi Xu\u00e2n District, H\u00e0 T\u0129nh Province, Vietnam",
+                "Population - 1 km": 883,
+                "Population - 5 km": 18506,
+                "Population - 10 km": 74364
+            }
+        },
+        {
+            "id": "8f65a3c264a8acb",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.23351947984392,
+                    9.83665921482022
+                ]
+            },
+            "properties": {
+                "id": "8f65a3c264a8acb",
+                "Soil Clay Fraction": 0.36,
+                "Elevation": -1,
+                "Drainage Direction": "west",
+                "Upstream Drainage Area (km^2)": 0.01684930920600891,
+                "Height Above Nearest Drainage (m)": 0.2999999523162842,
+                "Landform Type": "Lower slope (warm)",
+                "Soil Sand Fraction": 0.24,
+                "Slope (degrees)": 0.6933521305017638,
+                "Fine Earth Density (kg / m^3)": 101,
+                "Soil Great Group": 0,
+                "Wind Speed (m/s)": 2.9764528274536133,
+                "Distance to Waterway (m)": 241.3833967031657,
+                "Nearest Water Type": "canal",
+                "place_name": "Gi\u1ed3ng Ri\u1ec1ng District, Kien Giang Province, Vietnam",
+                "Population - 1 km": 2679,
+                "Population - 5 km": 33243,
+                "Population - 10 km": 98271
+            }
+        },
+        {
+            "id": "8f65b0806aac230",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    107.5478624424386,
+                    11.158058863705584
+                ]
+            },
+            "properties": {
+                "id": "8f65b0806aac230",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": 141,
+                "Drainage Direction": "northwest",
+                "Upstream Drainage Area (km^2)": 0.016778867691755295,
+                "Height Above Nearest Drainage (m)": 7.1999969482421875,
+                "Landform Type": "Upper slope (warm)",
+                "Soil Sand Fraction": 0.5,
+                "Slope (degrees)": 4.498855571232533,
+                "Fine Earth Density (kg / m^3)": 132,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 1.4440786838531494,
+                "Distance to Waterway (m)": 3535.4867076086803,
+                "Nearest Water Type": "ditch",
+                "place_name": "\u0110\u1ee9c Linh District, Binh Thuan province, Vietnam",
+                "Population - 1 km": 546,
+                "Population - 5 km": 39425,
+                "Population - 10 km": 94018
+            }
+        },
+        {
+            "id": "8f65a62c6628b2a",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.14099348713157,
+                    9.520472350106525
+                ]
+            },
+            "properties": {
+                "id": "8f65a62c6628b2a",
+                "Soil Clay Fraction": 0.28,
+                "Elevation": -3,
+                "Drainage Direction": "southwest",
+                "Upstream Drainage Area (km^2)": 0.05059440806508064,
+                "Height Above Nearest Drainage (m)": 0.09999990463256836,
+                "Landform Type": "Valley",
+                "Soil Sand Fraction": 0.37,
+                "Slope (degrees)": 0.9898595596170484,
+                "Fine Earth Density (kg / m^3)": 121,
+                "Soil Great Group": 2,
+                "Wind Speed (m/s)": 3.417497158050537,
+                "Distance to Waterway (m)": 104.57314894023162,
+                "Nearest Water Type": "canal",
+                "place_name": "\u0110H.28, L\u1ecbch H\u1ed9i Th\u01b0\u1ee3ng, Tr\u1ea7n \u0110\u1ec1 District, Soc Trang province, Vietnam",
+                "Population - 1 km": 738,
+                "Population - 5 km": 31647,
+                "Population - 10 km": 121466
+            }
+        }
+    ]
+}
