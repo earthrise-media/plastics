@@ -239,6 +239,9 @@ class SiteContours(object):
             )
             gdf["h3_id"] = [self.name for _ in range(len(self.date_list))]
             self.contour_gdf = gdf
+        else:
+            self.contour_gdf = []
+            print("No contours found")
 
 
 def load_ensemble(folder_path):
@@ -636,33 +639,38 @@ class DescartesContourRun(object):
             site.generate_contours(threshold=0.5, scale=self.scale, plot=False)
             site.generate_polygons(plot=False)
             site.compile_contours()
-            #contour_gdf = contour_gdf.append(site.contour_gdf, ignore_index=True)
-            site_endpoint = f'{self.endpoint}/sites/{site.name}/contours'
-            auth = requests.auth.HTTPBasicAuth('admin', 'plastics')
-            delete = requests.delete(site_endpoint, auth=auth)
-            print("delete status", delete.status_code)
-            site.contour_gdf['date'] = [datetime.datetime.isoformat(date) for date in site.contour_gdf['date']]
-            r = requests.post(site_endpoint, site.contour_gdf.to_json())
-            print("request status", r.status_code)
-            print("Finished at", datetime.datetime.isoformat(datetime.datetime.now())[:19])
-            """
-            I'm adding sites directly to the API now, so I don't need to add to a DL product.
-            The DL product would throw an error for some geometries.
-            That error would need to be fixed if we did want to go back to DL storage.
-            Keeping this in case we want it in the future
-            feature_list = []
-            for feature in site.contour_gdf.iterfeatures():
-                if feature['geometry'] == None:
-                    feature['geometry'] = shapely.geometry.Point(site.coord)
-                feature['properties']['date'] = datetime.datetime.isoformat(
-                    feature['properties']['date'])
-                feature_list.append(
-                    dl.vectors.Feature(
-                        geometry=feature['geometry'],
-                        properties=feature['properties']
+            if len(site.contour_gdf) > 0:
+                print(len(site.contour_gdf), "contours generated")
+                site_endpoint = f'{self.endpoint}/sites/{site.name}/contours'
+                auth = requests.auth.HTTPBasicAuth('admin', 'plastics')
+                params = {'apikey': 'jahsdbvjahsdvaulhsdvoauysdg82973bq'}
+                #delete = requests.delete(site_endpoint, auth=auth, params=params)
+                #print("delete status", delete.status_code)
+                site.contour_gdf['date'] = [datetime.datetime.isoformat(date) for date in site.contour_gdf['date']]
+                r = requests.post(site_endpoint, site.contour_gdf.to_json(), auth=auth, params=params)
+                print("request status", r.status_code)
+                print("Finished at", datetime.datetime.isoformat(datetime.datetime.now())[:19])
+                """
+                I'm adding sites directly to the API now, so I don't need to add to a DL product.
+                The DL product would throw an error for some geometries.
+                That error would need to be fixed if we did want to go back to DL storage.
+                Keeping this in case we want it in the future
+                feature_list = []
+                for feature in site.contour_gdf.iterfeatures():
+                    if feature['geometry'] == None:
+                        feature['geometry'] = shapely.geometry.Point(site.coord)
+                    feature['properties']['date'] = datetime.datetime.isoformat(
+                        feature['properties']['date'])
+                    feature_list.append(
+                        dl.vectors.Feature(
+                            geometry=feature['geometry'],
+                            properties=feature['properties']
+                        )
                     )
-                )
-            if len(feature_list) > 0:
-                self.product.add(feature_list)
-            """
+                if len(feature_list) > 0:
+                    self.product.add(feature_list)
+                """
+            else:
+                print("No contours found for site")
+            
             return site.contour_gdf
